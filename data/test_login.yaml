@@ -1,16 +1,13 @@
-- test:
-    name: get case
-    request:
-      url: ""
-      method: POST
-      headers:
-        Content-Type: application/json
-        User-Agent: python-requests/2.18.4
-      params:
-        id:
-          - {{rand_str()}}
-    validate:
-      - eq: [$.code, 400000]
+test_demo:
+    print: hello
 
-#    extract:
-#      token: $.token
+test_login:
+    request:
+        url: http://124.70.221.221:8201/api/v1/login/
+        method: POST
+        headers:
+            Content-Type: application/json
+            User-Agent: python-requests/2.18.4
+        json:
+            username: test
+            password: 123456
