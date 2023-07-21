@@ -1,4 +1,4 @@
-from requests import request
+from core.http_handler import HttpHandler
 
 
 class PytestRunner(object):
@@ -13,7 +13,8 @@ class PytestRunner(object):
             def function_template(*args, **kwargs):
                 for step_key, step_value in value.items():
                     if step_key == 'request':
-                        res = request(**step_value)
+                        request = HttpHandler(**step_value)
+                        response = request.request()
                     else:
                         eval(step_key)(step_value)
 
