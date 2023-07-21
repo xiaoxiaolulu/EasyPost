@@ -1,0 +1,16 @@
+- test:
+    name: get case
+    request:
+      url: ""
+      method: POST
+      headers:
+        Content-Type: application/json
+        User-Agent: python-requests/2.18.4
+      params:
+        id:
+          - {{rand_str()}}
+    validate:
+      - eq: [$.code, 400000]
+
+#    extract:
+#      token: $.token
