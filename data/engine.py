@@ -25,7 +25,7 @@ class PytestRunner(object):
                     else:
                         try:
                             eval(step_key)(step_value)
-                        except NameError:
+                        except (NameError, KeyError, ValueError, AttributeError):
                             continue
 
             setattr(self.module, function_name, function_template)
