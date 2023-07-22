@@ -25,7 +25,7 @@ def length_gt(exp, act):
 
 
 def length_ge(exp, act):
-    assert exp >= len(act), "预期数量: {exp} >= 实际数量: {len(act)}"
+    assert exp >= len(act), f"预期数量: {exp} >= 实际数量: {len(act)}"
 
 
 def length_le(exp, act):
