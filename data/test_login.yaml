@@ -1,13 +1,12 @@
-test_demo:
-    print: hello
-
 test_login:
     request:
-        url: http://124.70.221.221:8201/api/v1/login/
-        method: POST
+        url: "http://124.70.221.221:8201/api/v1/login/"
+        method: "POST"
         headers:
-            Content-Type: application/json
-            User-Agent: python-requests/2.18.4
+            Content-Type: "application/json"
+            User-Agent: "python-requests/2.18.4"
         json:
-            username: test
-            password: 123456
+            username: "test"
+            password: "123456"
+    validate:
+        - eq: [ $.msg, success ]
