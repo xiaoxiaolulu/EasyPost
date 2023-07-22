@@ -27,6 +27,7 @@ class PytestRunner(object):
                             eval(step_key)(step_value)
                         except NameError:
                             continue
+
             setattr(self.module, function_name, function_template)
 
     @staticmethod
