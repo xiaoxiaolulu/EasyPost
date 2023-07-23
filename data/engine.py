@@ -1,6 +1,9 @@
 import jsonpath
 from core.http_handler import HttpHandler
-from data import validator
+from data import (
+    validator,
+    super_builtins
+)
 
 
 class PytestRunner(object):
@@ -8,8 +11,12 @@ class PytestRunner(object):
     def __init__(self, raw, module):
         self.raw = raw
         self.module = module
+        self.context = {}
 
     def run(self):
+        self.context.update(__builtins__)  # noqa
+        self.context.update(super_builtins.__dict__)
+
         for function_name, value in self.raw.items():
 
             def function_template(*args, **kwargs):
