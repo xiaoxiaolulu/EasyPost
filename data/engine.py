@@ -1,6 +1,6 @@
 import jsonpath
 from core.http_handler import HttpHandler
-from data.validator import equal
+from data import validator
 
 
 class PytestRunner(object):
@@ -35,8 +35,30 @@ class PytestRunner(object):
 
         for check in validate_check:
             for check_type, check_value in dict(check).items():
+
+                yaml_result = check_value[0]
+                actual_result = jsonpath.jsonpath(response, yaml_result).pop()
+                expect_result = check_value[1]
+
                 if check_type in ["eq", "equal"]:
-                    yaml_result = check_value[0]
-                    actual_result = jsonpath.jsonpath(response, yaml_result).pop()
-                    expect_result = check_value[1]
-                    equal(expect_result, actual_result)
+                    validator.assert_equal(expect_result, actual_result)
+                if check_type in ["ne", "not_equal"]:
+                    validator.assert_not_equal(expect_result, actual_result)
+                if check_type in ["in", "contain", "contains"]:
+                    validator.assert_in(expect_result, actual_result)
+                if check_type in ["ni", "not_in", "not_contain"]:
+                    validator.assert_not_in(expect_result, actual_result)
+                if check_type in ["is"]:
+                    validator.assert_is(expect_result, actual_result)
+                if check_type in ["in", "is_not"]:
+                    validator.assert_is_not(expect_result, actual_result)
+                if check_type in ["ec", "equal_count"]:
+                    validator.assert_equal_count(expect_result, actual_result)
+                if check_type in ["gt", "greater"]:
+                    validator.assert_greater(expect_result, actual_result)
+                if check_type in ["ge", "greater_equal"]:
+                    validator.assert_greater_equal(expect_result, actual_result)
+                if check_type in ["le", "less_equal"]:
+                    validator.assert_less_equal(expect_result, actual_result)
+                if check_type in ["le", "less"]:
+                    validator.assert_less(expect_result, actual_result)
