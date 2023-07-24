@@ -27,6 +27,7 @@ class PytestRunner(object):
 
                         http_request = HttpHandler(step_value)
                         response = http_request.request()
+                        print(response)
                     if step_key == 'validate':
                         self.assert_response(response, step_value)
                     else:
