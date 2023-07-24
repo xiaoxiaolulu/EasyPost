@@ -1,4 +1,6 @@
-test_login:
+teststeps:
+-
+    name: logon
     request:
         url: "http://124.70.221.221:8201/api/v1/login/"
         method: "POST"
@@ -8,5 +10,25 @@ test_login:
         json:
             username: "test"
             password: "123456"
+    validate:
+        - eq: [ $.msg, success ]
+
+    extract:
+      statusCode: $.statusCode
+      token: $..token
+
+
+-
+    name: l222222
+    request:
+        url: "http://124.70.221.221:8201/api/v1/login/"
+        method: "POST"
+        headers:
+            Content-Type: "application/json"
+            User-Agent: "python-requests/2.18.4"
+        json:
+            username: "test"
+            password: "123456"
+            statusCode: ${statusCode}
     validate:
         - eq: [ $.msg, success ]

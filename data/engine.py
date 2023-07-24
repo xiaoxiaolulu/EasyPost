@@ -1,9 +1,13 @@
+import ast
+from typing import Any
 import jsonpath
 from core.http_handler import HttpHandler
 from data import (
     validator,
     super_builtins
 )
+from data.extract import extract_by_object
+from data.render_template_obj import render_template_context
 
 
 class PytestRunner(object):
@@ -14,29 +18,45 @@ class PytestRunner(object):
         self.context = {}
 
     def run(self):
-        self.context.update(__builtins__)  # noqa
-        self.context.update(super_builtins.__dict__)
+        # self.context.update(__builtins__)  # noqa
+        # self.context.update(super_builtins.__dict__)
+        teststeps = self.raw.get('teststeps', [])  # noqa
 
-        for function_name, value in self.raw.items():
+        def function_template(*args, **kwargs):
 
-            def function_template(*args, **kwargs):
+            response = None
+            for step in teststeps:
+                for step_key, step_value in step.items():
 
-                response = None
-                for step_key, step_value in value.items():
                     if step_key == 'request':
 
-                        http_request = HttpHandler(step_value)
+                        request_body = render_template_context(f'''{step_value}''', **self.context)
+                        http_request = HttpHandler(ast.literal_eval(request_body))    # noqa
                         response = http_request.request()
-                        print(response)
+
                     if step_key == 'validate':
                         self.assert_response(response, step_value)
+
+                    if step_key == "extract":
+                        extract_collections = self.extract_to_result(response, step_value)
+                        self.context.update(extract_collections)
                     else:
                         try:
                             eval(step_key)(step_value)
                         except (NameError, KeyError, ValueError, AttributeError):
                             continue
 
-            setattr(self.module, function_name, function_template)
+        setattr(self.module, str(self.module.__name__), function_template)
+
+    @staticmethod
+    def extract_to_result(response: Any, extract_values: dict) -> dict:
+
+        extract_collections = {
+            extract_key: extract_by_object(response, extract_value)[-1]
+            for extract_key, extract_value in extract_values.items()
+            if isinstance(extract_values, dict)
+        }
+        return extract_collections
 
     @staticmethod
     def assert_response(response, validate_check):

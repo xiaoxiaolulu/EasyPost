@@ -1,10 +1,9 @@
 from typing import Any
 import jmespath
 import jsonpath
-from requests import Response
 
 
-def extract_by_object(response: Response.raw, extract_expression: str) -> Any:
+def extract_by_object(response: Any, extract_expression: str) -> Any:
 
     if extract_expression.startswith("$."):
         try:
