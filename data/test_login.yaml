@@ -1,15 +1,7 @@
 teststeps:
 -
     name: logon
-    request:
-        url: "http://124.70.221.221:8201/api/v1/login/"
-        method: "POST"
-        headers:
-            Content-Type: "application/json"
-            User-Agent: "python-requests/2.18.4"
-        json:
-            username: "test"
-            password: "123456"
+    api: data/login.yaml
     validate:
         - eq: [ $.msg, success ]
 

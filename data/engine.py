@@ -1,6 +1,12 @@
 import ast
+import copy
+import pathlib
 from typing import Any
 import jsonpath
+import yaml
+from requests import Response
+
+from config.settings import BASE_DIR
 from core.http_handler import HttpHandler
 from data import (
     validator,
@@ -28,11 +34,14 @@ class PytestRunner(object):
             for step in teststeps:
                 for step_key, step_value in step.items():
 
-                    if step_key == 'request':
+                    if step_key == 'api':
+                        api_root = pathlib.Path(BASE_DIR).joinpath(step_value)
+                        raw_dict = yaml.safe_load(api_root.open(encoding='utf-8'))
+                        copy_value = copy.deepcopy(raw_dict.get('request'))
+                        response = self.run_request(copy_value, self.context)
 
-                        request_body = render_template_context(f'''{step_value}''', **self.context)
-                        http_request = HttpHandler(ast.literal_eval(request_body))    # noqa
-                        response = http_request.request()
+                    if step_key == 'request':
+                        response = self.run_request(step_value, self.context)
 
                     if step_key == 'validate':
                         self.assert_response(response, step_value)
@@ -47,6 +56,13 @@ class PytestRunner(object):
                             continue
 
         setattr(self.module, str(self.module.__name__), function_template)
+
+    @staticmethod
+    def run_request(request_body: dict, ctx: dict) -> Any:
+        request_body = render_template_context(f'''{request_body}''', **ctx)
+        http_request = HttpHandler(ast.literal_eval(request_body))  # noqa
+        response = http_request.request()
+        return response
 
     @staticmethod
     def extract_to_result(response: Any, extract_values: dict) -> dict:
