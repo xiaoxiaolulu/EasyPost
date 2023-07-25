@@ -1,6 +1,6 @@
-2023-07-25 17:12:23 [INFO]: 执行文件-> test_login.yaml
-2023-07-25 17:12:23 [INFO]: 用例步骤：1 -> 登录2
-2023-07-25 17:12:23 [INFO]: --------  request info ----------
+2023-07-25 17:23:09 [INFO]: 执行文件-> test_login.yaml
+2023-07-25 17:23:09 [INFO]: 用例步骤：1 -> 登录2
+2023-07-25 17:23:09 [INFO]: --------  request info ----------
 {
     "url": "http://124.70.221.221:8201/api/v1/login/",
     "method": "POST",
@@ -13,7 +13,7 @@
         "password": "123456"
     }
 }
-2023-07-25 17:12:23 [INFO]: --------  response info ----------
+2023-07-25 17:23:09 [INFO]: --------  response info ----------
 status: True
 msg: success
 statusCode: 200
@@ -21,7 +21,7 @@ responseHeaders:
 [
     {
         "name": "Date",
-        "value": "Tue, 25 Jul 2023 09:12:23 GMT"
+        "value": "Tue, 25 Jul 2023 09:23:09 GMT"
     },
     {
         "name": "Server",
@@ -49,7 +49,7 @@ responseHeaders:
     },
     {
         "name": "Set-Cookie",
-        "value": "sessionid=p2hdno17ryhtpxjcrxvv4brx8v6yyhfq; expires=Tue, 08-Aug-2023 09:12:23 GMT; HttpOnly; Max-Age=1209600; Path=/"
+        "value": "sessionid=sb3c71633gpmikcjgjysa6rt5y7hp6cs; expires=Tue, 08-Aug-2023 09:23:09 GMT; HttpOnly; Max-Age=1209600; Path=/"
     }
 ]
 responseBody:
@@ -57,18 +57,18 @@ responseBody:
     "code": 0,
     "msg": "login success!",
     "username": "test",
-    "token": "511ae1109526688727c4ca38a49b862d5d025bc3"
+    "token": "2cb181071456a2a6aa7142fe4b467df460af40fa"
 }
-cookies: [{'name': 'sessionid', 'value': 'p2hdno17ryhtpxjcrxvv4brx8v6yyhfq'}]
-cost: 2122ms
-cookie: <RequestsCookieJar[<Cookie sessionid=p2hdno17ryhtpxjcrxvv4brx8v6yyhfq for 124.70.221.221/>]>
-2023-07-25 17:12:23 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
-2023-07-25 17:12:23 [INFO]: 参数提取 -> {
+cookies: [{'name': 'sessionid', 'value': 'sb3c71633gpmikcjgjysa6rt5y7hp6cs'}]
+cost: 2162ms
+cookie: <RequestsCookieJar[<Cookie sessionid=sb3c71633gpmikcjgjysa6rt5y7hp6cs for 124.70.221.221/>]>
+2023-07-25 17:23:09 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-07-25 17:23:09 [INFO]: 参数提取 -> {
     "statusCode": 200,
-    "token": "511ae1109526688727c4ca38a49b862d5d025bc3"
+    "token": "2cb181071456a2a6aa7142fe4b467df460af40fa"
 }
-2023-07-25 17:12:23 [INFO]: 用例步骤：2 -> 登录1
-2023-07-25 17:12:23 [INFO]: --------  request info ----------
+2023-07-25 17:23:09 [INFO]: 用例步骤：2 -> 登录1
+2023-07-25 17:23:09 [INFO]: --------  request info ----------
 {
     "url": "http://124.70.221.221:8201/api/v1/login/",
     "method": "POST",
@@ -79,11 +79,11 @@ cookie: <RequestsCookieJar[<Cookie sessionid=p2hdno17ryhtpxjcrxvv4brx8v6yyhfq fo
     "json": {
         "username": "test",
         "password": "123456",
-        "code": "1729793",
+        "code": "1772706",
         "statusCode": "200"
     }
 }
-2023-07-25 17:12:24 [INFO]: --------  response info ----------
+2023-07-25 17:23:10 [INFO]: --------  response info ----------
 status: True
 msg: success
 statusCode: 200
@@ -91,7 +91,7 @@ responseHeaders:
 [
     {
         "name": "Date",
-        "value": "Tue, 25 Jul 2023 09:12:24 GMT"
+        "value": "Tue, 25 Jul 2023 09:23:09 GMT"
     },
     {
         "name": "Server",
@@ -119,7 +119,7 @@ responseHeaders:
     },
     {
         "name": "Set-Cookie",
-        "value": "sessionid=55df1ijwtze5173hjgdyh51buqccxr2u; expires=Tue, 08-Aug-2023 09:12:24 GMT; HttpOnly; Max-Age=1209600; Path=/"
+        "value": "sessionid=2sgng7qdlu9992v3f12rlpsvpv0a277o; expires=Tue, 08-Aug-2023 09:23:09 GMT; HttpOnly; Max-Age=1209600; Path=/"
     }
 ]
 responseBody:
@@ -127,9 +127,9 @@ responseBody:
     "code": 0,
     "msg": "login success!",
     "username": "test",
-    "token": "191123c6b699aef836ab97f58afbe1b8226125ab"
+    "token": "577527b1aa0e570b4255cd1e430a279cf04e3c8e"
 }
-cookies: [{'name': 'sessionid', 'value': '55df1ijwtze5173hjgdyh51buqccxr2u'}]
-cost: 2116ms
-cookie: <RequestsCookieJar[<Cookie sessionid=55df1ijwtze5173hjgdyh51buqccxr2u for 124.70.221.221/>]>
-2023-07-25 17:12:24 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+cookies: [{'name': 'sessionid', 'value': '2sgng7qdlu9992v3f12rlpsvpv0a277o'}]
+cost: 2164ms
+cookie: <RequestsCookieJar[<Cookie sessionid=2sgng7qdlu9992v3f12rlpsvpv0a277o for 124.70.221.221/>]>
+2023-07-25 17:23:10 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]

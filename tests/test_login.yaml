@@ -1,7 +1,7 @@
 teststeps:
 -
     name: 登录2
-    api: data/login.yaml
+    api: tests/login.yaml
     validate:
         - eq: [ $.msg, success ]
     extract:
