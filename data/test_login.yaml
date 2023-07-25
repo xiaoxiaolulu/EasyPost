@@ -1,6 +1,6 @@
 teststeps:
 -
-    name: logon
+    name: 登录2
     api: data/login.yaml
     validate:
         - eq: [ $.msg, success ]
@@ -10,7 +10,7 @@ teststeps:
 
 
 -
-    name: l222222
+    name: 登录1
     request:
         url: "http://124.70.221.221:8201/api/v1/login/"
         method: "POST"

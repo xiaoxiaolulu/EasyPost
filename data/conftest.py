@@ -3,6 +3,7 @@ from pathlib import Path
 import yaml
 from _pytest.python import Module
 from data.engine import PytestRunner
+from data.log import set_log_format
 
 
 def pytest_collect_file(file_path: Path, parent):
@@ -17,3 +18,7 @@ def pytest_collect_file(file_path: Path, parent):
 
         pytest_module._getobj = lambda: module  # noqa
         return pytest_module
+
+
+def pytest_configure(config):
+    set_log_format(config)

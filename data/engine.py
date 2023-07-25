@@ -1,8 +1,13 @@
 import ast
 import copy
+import json
 import pathlib
+from datetime import datetime, date
 from typing import Any
+from uuid import UUID
+
 import jsonpath
+import numpy as np
 import yaml
 from requests_toolbelt import MultipartEncoder
 from config.settings import BASE_DIR
@@ -12,6 +17,7 @@ from data import (
     super_builtins
 )
 from data.extract import extract_by_object
+from data.log import log
 from data.render_template_obj import render_template_context
 
 
@@ -29,9 +35,14 @@ class PytestRunner(object):
 
         def function_template(*args, **kwargs):
 
+            log.info(f'执行文件-> {self.module.__name__}.yaml')
+
             response = None
-            for step in teststeps:
+            for index, step in enumerate(teststeps):
                 for step_key, step_value in step.items():
+
+                    if step_key == "name":
+                        log.info(f'用例步骤：{index + 1} -> {step_value}')
 
                     if step_key == 'api':
                         api_root = pathlib.Path(BASE_DIR).joinpath(step_value)
@@ -43,11 +54,16 @@ class PytestRunner(object):
                         response = self.run_request(step_value, self.context)
 
                     if step_key == 'validate':
+                        log.info(f'断言 -> {step_value}')
                         self.assert_response(response, step_value)
 
                     if step_key == "extract":
                         extract_collections = self.extract_to_result(response, step_value)
                         self.context.update(extract_collections)
+
+                        log.info('参数提取 -> {}'.format(
+                            json.dumps(extract_collections, indent=4, ensure_ascii=False)
+                        ))
                     else:
                         try:
                             eval(step_key)(step_value)
@@ -60,8 +76,28 @@ class PytestRunner(object):
         request_body = render_template_context(f'''{request_body}''', **ctx)
         request_body = ast.literal_eval(request_body)
         request_body = self.multipart_encoder_request(request_body)
+
+        log.info(
+            f"--------  request info ----------\n"
+            "{}".format(json.dumps(request_body, indent=4, ensure_ascii=False))
+        )
+
         http_request = HttpHandler(request_body)  # noqa
         response = http_request.request()
+
+        log.info(
+            f"--------  response info ----------\n"
+            f"status: {response.get('status')}\n"
+            f"msg: {response.get('msg')}\n"
+            f"statusCode: {response.get('statusCode')}\n"
+            f"responseHeaders:\n"
+            f"{json.dumps(response.get('responseHeaders'), indent=4, ensure_ascii=False)}\n"
+            f"responseBody:\n"
+            f"{json.dumps(response.get('responseBody'), indent=4, ensure_ascii=False)}\n"
+            f"cookies: {response.get('cookies')}\n"
+            f"cost: {response.get('cost')}\n"
+            f"cookie: {response.get('cookie')}"
+        )
         return response
 
     @staticmethod
