@@ -1,0 +1,135 @@
+2023-07-25 17:12:23 [INFO]: 执行文件-> test_login.yaml
+2023-07-25 17:12:23 [INFO]: 用例步骤：1 -> 登录2
+2023-07-25 17:12:23 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "json": {
+        "username": "test",
+        "password": "123456"
+    }
+}
+2023-07-25 17:12:23 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Tue, 25 Jul 2023 09:12:23 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "109"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=p2hdno17ryhtpxjcrxvv4brx8v6yyhfq; expires=Tue, 08-Aug-2023 09:12:23 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 0,
+    "msg": "login success!",
+    "username": "test",
+    "token": "511ae1109526688727c4ca38a49b862d5d025bc3"
+}
+cookies: [{'name': 'sessionid', 'value': 'p2hdno17ryhtpxjcrxvv4brx8v6yyhfq'}]
+cost: 2122ms
+cookie: <RequestsCookieJar[<Cookie sessionid=p2hdno17ryhtpxjcrxvv4brx8v6yyhfq for 124.70.221.221/>]>
+2023-07-25 17:12:23 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-07-25 17:12:23 [INFO]: 参数提取 -> {
+    "statusCode": 200,
+    "token": "511ae1109526688727c4ca38a49b862d5d025bc3"
+}
+2023-07-25 17:12:23 [INFO]: 用例步骤：2 -> 登录1
+2023-07-25 17:12:23 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "json": {
+        "username": "test",
+        "password": "123456",
+        "code": "1729793",
+        "statusCode": "200"
+    }
+}
+2023-07-25 17:12:24 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Tue, 25 Jul 2023 09:12:24 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "109"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=55df1ijwtze5173hjgdyh51buqccxr2u; expires=Tue, 08-Aug-2023 09:12:24 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 0,
+    "msg": "login success!",
+    "username": "test",
+    "token": "191123c6b699aef836ab97f58afbe1b8226125ab"
+}
+cookies: [{'name': 'sessionid', 'value': '55df1ijwtze5173hjgdyh51buqccxr2u'}]
+cost: 2116ms
+cookie: <RequestsCookieJar[<Cookie sessionid=55df1ijwtze5173hjgdyh51buqccxr2u for 124.70.221.221/>]>
+2023-07-25 17:12:24 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
