@@ -7,14 +7,12 @@ import jsonpath
 import yaml
 from requests_toolbelt import MultipartEncoder
 from config.settings import BASE_DIR
-from core.http_handler import HttpHandler
-from data import (
-    validator,
-    super_builtins
-)
-from data.extract import extract_by_object
-from data.log import log
-from data.render_template_obj import render_template_context
+from core.request.http_handler import HttpHandler
+from core.request import validator
+from utils import super_builtins
+from core.request.extract import extract_by_object
+from utils.log import log
+from utils.render_template_obj import render_template_context
 
 
 class PytestRunner(object):

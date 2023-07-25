@@ -9,7 +9,7 @@ import requests
 import simplejson
 from urllib import parse
 from urllib3.exceptions import InsecureRequestWarning
-from core.recursion import GetJsonParams
+from utils.recursion import GetJsonParams
 
 urllib3.disable_warnings(InsecureRequestWarning)
 
