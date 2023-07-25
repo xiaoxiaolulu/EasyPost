@@ -29,6 +29,7 @@ teststeps:
         json:
             username: "test"
             password: "123456"
+            code: ${rand_str()}
             statusCode: ${statusCode}
     validate:
         - eq: [ $.msg, success ]

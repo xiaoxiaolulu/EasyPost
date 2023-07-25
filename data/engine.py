@@ -18,8 +18,8 @@ class PytestRunner(object):
         self.context = {}
 
     def run(self):
-        # self.context.update(__builtins__)  # noqa
-        # self.context.update(super_builtins.__dict__)
+        self.context.update(__builtins__)  # noqa
+        self.context.update(super_builtins.__dict__)
         teststeps = self.raw.get('teststeps', [])  # noqa
 
         def function_template(*args, **kwargs):
