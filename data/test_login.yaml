@@ -4,7 +4,6 @@ teststeps:
     api: data/login.yaml
     validate:
         - eq: [ $.msg, success ]
-
     extract:
       statusCode: $.statusCode
       token: $..token

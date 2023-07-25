@@ -4,8 +4,7 @@ import pathlib
 from typing import Any
 import jsonpath
 import yaml
-from requests import Response
-
+from requests_toolbelt import MultipartEncoder
 from config.settings import BASE_DIR
 from core.http_handler import HttpHandler
 from data import (
@@ -57,12 +56,36 @@ class PytestRunner(object):
 
         setattr(self.module, str(self.module.__name__), function_template)
 
-    @staticmethod
-    def run_request(request_body: dict, ctx: dict) -> Any:
+    def run_request(self, request_body: dict, ctx: dict) -> Any:
         request_body = render_template_context(f'''{request_body}''', **ctx)
-        http_request = HttpHandler(ast.literal_eval(request_body))  # noqa
+        request_body = ast.literal_eval(request_body)
+        request_body = self.multipart_encoder_request(request_body)
+        http_request = HttpHandler(request_body)  # noqa
         response = http_request.request()
         return response
+
+    @staticmethod
+    def multipart_encoder_request(request_body):
+        """
+        FIXME  测试地址 http://httpbin.org/post
+        """
+
+        if 'files' in request_body.keys():
+
+            for key, value in request_body.get('files', {}).items():
+                if pathlib.Path(BASE_DIR).joinpath(value).is_file():
+                    with open(pathlib.Path(BASE_DIR).joinpath(value), 'rb') as f:
+                        encoder = MultipartEncoder(fields={'file': ('filename', f)})
+
+            request_body.pop('files')
+            request_body['data'] = encoder
+            new_headers = request_body.get('headers', {})
+            new_headers.update({'Content-Type': encoder.content_type})
+            request_body['headers'] = new_headers
+
+            return request_body
+        else:
+            return request_body
 
     @staticmethod
     def extract_to_result(response: Any, extract_values: dict) -> dict:
