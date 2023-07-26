@@ -2,6 +2,7 @@ import ast
 import copy
 import json
 import pathlib
+from inspect import Parameter
 from typing import (
     Any,
     Callable
@@ -13,6 +14,7 @@ from config.settings import (
     BASE_DIR,
     DATABASES
 )
+from core.request.create_function import create_function_from_parameters
 from core.request.http_handler import HttpHandler
 from core.request import validator
 from utils import super_builtins
@@ -71,6 +73,14 @@ class PytestRunner(object):
                             eval(step_key)(step_value)
                         except (NameError, KeyError, ValueError, AttributeError):
                             continue
+        # TODO 参数化
+        f = create_function_from_parameters(
+            func=function_template,
+            parameters=[Parameter('parameters', Parameter.POSITIONAL_OR_KEYWORD), ],
+            documentation=self.module.__name__,
+            func_name=self.module.__name__,
+            func_filename=f"{self.module.__name__}.py",
+        )
 
         setattr(self.module, str(self.module.__name__), function_template)
 

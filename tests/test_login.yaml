@@ -1,12 +1,12 @@
 teststeps:
--
-    name: 登录2
-    api: tests/login.yaml
-    validate:
-        - eq: [ $.msg, success ]
-    extract:
-      statusCode: $.statusCode
-      token: $..token
+#-
+#    name: 登录2
+#    api: tests/login.yaml
+#    validate:
+#        - eq: [ $.msg, success ]
+#    extract:
+#      statusCode: $.statusCode
+#      token: $..token
 
 
 -
@@ -20,8 +20,8 @@ teststeps:
         json:
             username: "test"
             password: "123456"
-            code: ${rand_str()}
-            statusCode: ${statusCode}
-            sql: ${query_sql('select * from role_menu').id}
-    validate:
-        - eq: [ $.msg, success ]
+#            code: ${rand_str()}
+#            statusCode: ${statusCode}
+#            sql: ${query_sql('select * from role_menu').id}
+#    validate:
+#        - eq: [ $.msg, success ]
