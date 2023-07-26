@@ -2,15 +2,16 @@ import ast
 import copy
 import json
 import pathlib
-from typing import Any
+from typing import Any, Dict, Callable, Tuple
 import jsonpath
 import yaml
 from requests_toolbelt import MultipartEncoder
-from config.settings import BASE_DIR
+from config.settings import BASE_DIR, DATABASES
 from core.request.http_handler import HttpHandler
 from core.request import validator
 from utils import super_builtins
 from core.request.extract import extract_by_object
+from utils.db import OperateMysql
 from utils.log import log
 from utils.render_template_obj import render_template_context
 
@@ -25,6 +26,7 @@ class PytestRunner(object):
     def run(self):
         self.context.update(__builtins__)  # noqa
         self.context.update(super_builtins.__dict__)
+        self.context.update(**self.execute_sql())
         teststeps = self.raw.get('teststeps', [])  # noqa
 
         def function_template(*args, **kwargs):
@@ -65,6 +67,31 @@ class PytestRunner(object):
                             continue
 
         setattr(self.module, str(self.module.__name__), function_template)
+
+    def execute_sql(self) -> dict[str, Callable[[Any], Any] | Callable[[Any], Any]] | dict[
+        str, Callable[[tuple[Any, ...], dict[str, Any]], None | tuple[Any, ...] | tuple[tuple[Any, ...], ...]]]: # noqa
+        setting = DATABASES.get("default")
+        none_obj = self.none_connect_obj()
+
+        setting_obj = type('Setting', (object,), setting)
+        if not hasattr(setting_obj, 'database'):
+            return none_obj
+        try:
+            db = OperateMysql(setting)
+            return {
+                "query_sql": db.execute
+            }
+        except Exception as err:
+            log.error(f"Mysql Not connected {err}")
+            return none_obj
+
+    @staticmethod
+    def none_connect_obj() -> dict[str, Callable[[Any], Any] | Callable[[Any], Any]]:
+        none_obj = {
+            "query_sql": lambda x: log.error("MYSQL_HOST not found in config.py"),
+            "execute_sql": lambda x: log.error("MYSQL_HOST not found in config.py")
+        }
+        return none_obj
 
     def run_request(self, request_body: dict, ctx: dict) -> Any:
         request_body = render_template_context(f'''{request_body}''', **ctx)

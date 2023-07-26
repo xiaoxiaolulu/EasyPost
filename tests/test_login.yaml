@@ -22,5 +22,6 @@ teststeps:
             password: "123456"
             code: ${rand_str()}
             statusCode: ${statusCode}
+            sql: ${query_sql('select * from role_menu').id}
     validate:
         - eq: [ $.msg, success ]
