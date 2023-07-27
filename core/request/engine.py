@@ -6,7 +6,7 @@ from inspect import Parameter
 from typing import (
     Any,
     Callable,
-    List
+    List, Dict
 )
 import jsonpath
 import yaml
@@ -44,6 +44,7 @@ class PytestRunner(object):
         def function_template(*args):
 
             log.info(f'执行文件-> {self.module.__name__}.yaml')
+            log.info(f'参数化数据-> {self.ass_parameters(fixtures, params)}')
 
             response = None
             for index, step in enumerate(teststeps):
@@ -147,7 +148,26 @@ class PytestRunner(object):
 
         return parameters_collections
 
+    @staticmethod
+    def ass_parameters(fixtures: str, parameters: List[List[Any]]) -> list[dict] | list[Any]:
+
+        if isinstance(fixtures, str) and isinstance(parameters, list) and len(parameters) > 1:
+            fixtures = [item.strip() for item in fixtures.split(',')]
+
+            ass_params_collections = [{
+                fixtures[index]: value
+                for index, value in enumerate(param)
+            } for param in parameters]
+
+        else:
+            ass_params_collections = []
+
+        return ass_params_collections
+
     def run_request(self, args, request_body: dict, ctx: dict) -> Any:
+
+        log.info(f"当前用例引用参数化数据-> {args[0]}")
+
         self.context.update(args[0])
         request_body = render_template_context(f'''{request_body}''', **ctx)
         request_body = ast.literal_eval(request_body)
