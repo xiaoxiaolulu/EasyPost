@@ -12,7 +12,19 @@ def create_function_from_parameters(
         func_name=None,
         func_filename=None
 ) -> FunctionType:
+    """
+    This function creates a new function from given parameters.
 
+    Args:
+        func: The original function.
+        parameters: The parameters for the new function.
+        documentation: The documentation for the new function.
+        func_name: The name of the new function.
+        func_filename: The filename of the new function.
+
+    Returns:
+        The new function created from the given parameters.
+    """
     new_signature = Signature(parameters)
 
     def pass_locals():
