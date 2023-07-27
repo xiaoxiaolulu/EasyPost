@@ -30,7 +30,7 @@ class OperateMysql(object):
     def execute(self, *args, **kwargs) -> None | tuple[Any, ...] | tuple[tuple[Any, ...], ...]:
 
         conn = pymysql.connect(**self.connect_setting)
-        cursor = conn.cursor(cursor=pymysql.cursors.DictCursor)
+        cursor = conn.cursor(cursor=pymysql.cursors.DictCursor) # noqa
         try:
             cursor.execute(*args, **kwargs)
             conn.commit()
