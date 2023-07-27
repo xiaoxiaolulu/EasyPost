@@ -3,7 +3,7 @@ config:
   fixtures: username, password
   parameters:
     - [ test1, '123456' ]
-    - [ test2, 'abcdefg' ]
+    - [ test2, 'abdxxx' ]
 
 teststeps:
 #-

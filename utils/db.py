@@ -1,6 +1,7 @@
 from typing import Any
 import pymysql
 from utils.log import log
+from contextlib import closing
 
 
 class OperateMysql(object):
@@ -12,10 +13,10 @@ class OperateMysql(object):
     def is_connect(self) -> bool:
 
         try:
-            self.conn = pymysql.connect(**self.connect_setting)
-            if str(self.conn).__contains__('pymysql.connections.Connection object'):
-                log.info(f'mysql connect success -> {self.connect_setting.get("db")}')
-                return True
+            with closing(pymysql.connect(**self.connect_setting)) as conn:
+                if isinstance(conn, pymysql.connections.Connection):
+                    log.info(f'mysql connect success -> {self.connect_setting.get("db")}')
+                    return True
         except Exception as err:
             log.error(f"mysql connect error -> {err}")
             return False
