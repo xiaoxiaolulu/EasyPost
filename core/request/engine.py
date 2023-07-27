@@ -78,7 +78,6 @@ class PytestRunner(object):
                         except (NameError, KeyError, ValueError, AttributeError):
                             continue
 
-        # TODO 参数化
         f = create_function_from_parameters(
             func=function_template,
             parameters=self.fixture_parameters(config_fixtures),
