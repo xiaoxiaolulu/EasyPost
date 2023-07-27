@@ -48,9 +48,9 @@ class GetJsonParams(object):
         """
         parent_level = cls.get_value(my_dict=my_dict, key=parent_key)
         for index, content in enumerate(parent_level):
-            for key, value in content.items():
+            for key, value in content.items(): # noqa
                 if key == sibling_key and value == int(sibling_value):
-                    return_value = cls.get_value(my_dict=my_dict, key=parent_key)[index][same_key]
+                    return_value = cls.get_value(my_dict=my_dict, key=parent_key)[index][same_key]  # noqa
                     return return_value
 
     @classmethod
@@ -64,7 +64,7 @@ class GetJsonParams(object):
         :return:
         """
         child_dict = cls.get_value(my_dict=my_dict, key=parent_key)[child_index]
-        return cls.get_value(dict(child_dict), child_key)
+        return cls.get_value(dict(child_dict), child_key)  # noqa
 
     @classmethod
     def for_keys_to_dict(cls, *args: tuple, my_dict: dict, value_type: bool = False) -> dict:
