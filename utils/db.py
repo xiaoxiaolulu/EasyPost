@@ -49,13 +49,3 @@ class OperateMysql(object):
             del cursor
             conn.close()
             del conn
-
-
-if __name__ == '__main__':
-    from config.settings import DATABASES
-    env_obj = DATABASES.get("default")
-    print(env_obj)
-    print(env_obj.get("database"))
-
-    e = type('Setting', (object,), env_obj)
-    print(hasattr(e, 'da1tabase'))

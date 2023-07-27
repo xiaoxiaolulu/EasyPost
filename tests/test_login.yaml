@@ -1,3 +1,10 @@
+config:
+  name: post示例
+  fixtures: username, password
+  parameters:
+    - [ test1, '123456' ]
+    - [ test2, 'abcdefg' ]
+
 teststeps:
 #-
 #    name: 登录2
@@ -18,8 +25,8 @@ teststeps:
             Content-Type: "application/json"
             User-Agent: "python-requests/2.18.4"
         json:
-            username: "test"
-            password: "123456"
+            username: ${username}
+            password: ${password}
 #            code: ${rand_str()}
 #            statusCode: ${statusCode}
 #            sql: ${query_sql('select * from role_menu').id}

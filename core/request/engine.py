@@ -5,7 +5,8 @@ import pathlib
 from inspect import Parameter
 from typing import (
     Any,
-    Callable
+    Callable,
+    List
 )
 import jsonpath
 import yaml
@@ -21,7 +22,7 @@ from utils import super_builtins
 from core.request.extract import extract_by_object
 from utils.db import OperateMysql
 from utils.log import log
-from utils.render_template_obj import render_template_context
+from utils.render_template_obj import *
 
 
 class PytestRunner(object):
@@ -36,8 +37,11 @@ class PytestRunner(object):
         self.context.update(super_builtins.__dict__)
         self.context.update(**self.execute_sql())
         teststeps = self.raw.get('teststeps', [])  # noqa
+        fixtures = self.raw.get('config').get('fixtures', [])
+        params = self.raw.get('config').get('parameters', [])
+        config_fixtures, config_params = self.parameters(fixtures, params)
 
-        def function_template(*args, **kwargs):
+        def function_template(*args):
 
             log.info(f'执行文件-> {self.module.__name__}.yaml')
 
@@ -52,10 +56,10 @@ class PytestRunner(object):
                         api_root = pathlib.Path(BASE_DIR).joinpath(step_value)
                         raw_dict = yaml.safe_load(api_root.open(encoding='utf-8'))
                         copy_value = copy.deepcopy(raw_dict.get('request'))
-                        response = self.run_request(copy_value, self.context)
+                        response = self.run_request(args, copy_value, self.context)
 
                     if step_key == 'request':
-                        response = self.run_request(step_value, self.context)
+                        response = self.run_request(args, step_value, self.context)
 
                     if step_key == 'validate':
                         log.info(f'断言 -> {step_value}')
@@ -73,19 +77,23 @@ class PytestRunner(object):
                             eval(step_key)(step_value)
                         except (NameError, KeyError, ValueError, AttributeError):
                             continue
+
         # TODO 参数化
         f = create_function_from_parameters(
             func=function_template,
-            parameters=[Parameter('parameters', Parameter.POSITIONAL_OR_KEYWORD), ],
+            parameters=self.fixture_parameters(config_fixtures),
             documentation=self.module.__name__,
             func_name=self.module.__name__,
             func_filename=f"{self.module.__name__}.py",
         )
 
-        setattr(self.module, str(self.module.__name__), function_template)
+        setattr(self.module, str(self.module.__name__), f)
+
+        if config_params:
+            setattr(self.module, 'params_data', config_params)
 
     def execute_sql(self) -> dict[str, Callable[[Any], Any] | Callable[[Any], Any]] | dict[
-        str, Callable[[tuple[Any, ...], dict[str, Any]], None | tuple[Any, ...] | tuple[tuple[Any, ...], ...]]]: # noqa
+        str, Callable[[tuple[Any, ...], dict[str, Any]], None | tuple[Any, ...] | tuple[tuple[Any, ...], ...]]]:  # noqa
         setting = DATABASES.get("default")
         none_obj = self.none_connect_obj()
 
@@ -109,7 +117,39 @@ class PytestRunner(object):
         }
         return none_obj
 
-    def run_request(self, request_body: dict, ctx: dict) -> Any:
+    @staticmethod
+    def fixture_parameters(config_fixtures: str) -> list[Parameter]:
+
+        fixture_collections = [
+            Parameter('request', Parameter.POSITIONAL_OR_KEYWORD)
+        ]
+        for fixture in config_fixtures:
+            if fixture not in ['requests_function', 'requests_module']:
+                fixture_collections.append(
+                    Parameter(fixture, Parameter.POSITIONAL_OR_KEYWORD),
+                )
+        return fixture_collections
+
+    @staticmethod
+    def parameters(fixtures: str, parameters: List[List[Any]]) -> tuple[list[str], list[list[Any]]] | tuple[
+        list[str], list[Any]]:  # noqa
+        """
+        "fixtures": "username, password",
+        "parameters": [["test1", "123456"], ["test2", "123456"]]:
+        """
+
+        if isinstance(fixtures, str):
+            fixtures = [item.strip() for item in fixtures.split(',')]
+
+        if isinstance(parameters, list) and len(parameters) > 1:
+            parameters_collections = fixtures, parameters
+        else:
+            parameters_collections = fixtures, []
+
+        return parameters_collections
+
+    def run_request(self, args, request_body: dict, ctx: dict) -> Any:
+        self.context.update(args[0])
         request_body = render_template_context(f'''{request_body}''', **ctx)
         request_body = ast.literal_eval(request_body)
         request_body = self.multipart_encoder_request(request_body)
@@ -171,7 +211,7 @@ class PytestRunner(object):
         return extract_collections
 
     @staticmethod
-    def assert_response(response, validate_check):
+    def assert_response(response: Any, validate_check: List[dict[Any]]) -> None:
 
         for check in validate_check:
             for check_type, check_value in dict(check).items():
