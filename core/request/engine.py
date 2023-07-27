@@ -6,7 +6,7 @@ from inspect import Parameter
 from typing import (
     Any,
     Callable,
-    List, Dict
+    List
 )
 import jsonpath
 import yaml
