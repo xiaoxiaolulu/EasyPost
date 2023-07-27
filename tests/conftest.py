@@ -25,12 +25,10 @@ def pytest_configure(config):
 
 def pytest_generate_tests(metafunc):
 
-    if hasattr(metafunc.module, 'params_data'):
-        params_data = getattr(metafunc.module, 'params_data')
+    params_data = getattr(metafunc.module, 'params_data', None)
 
-        params_len = 0
-        if isinstance(params_data, list):
-            params_len = len(params_data[0])
+    if params_data is not None:
+        params_len = len(params_data[0]) if isinstance(params_data, list) else 0
 
         params_args = metafunc.fixturenames[-params_len:]
         metafunc.parametrize(
