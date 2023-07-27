@@ -1,8 +1,16 @@
 import sys
 import types
 from types import FunctionType
-from typing import Any, Callable, Mapping, Sequence
-from inspect import Parameter, Signature
+from typing import (
+    Any,
+    Callable,
+    Mapping,
+    Sequence
+)
+from inspect import (
+    Parameter,
+    Signature
+)
 
 
 def create_function_from_parameters(
