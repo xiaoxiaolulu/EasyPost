@@ -3,6 +3,7 @@ from pathlib import Path
 import yaml
 from _pytest.python import Module
 from core.request.engine import PytestRunner
+from utils import super_builtins
 from utils.log import set_log_format
 
 
@@ -36,3 +37,15 @@ def pytest_generate_tests(metafunc):
             params_data,
             scope="function"
         )
+
+
+def func1():
+    print('-----------------前置条件----------------------')
+
+
+def func2():
+    print('-----------------后置条件----------------------')
+
+
+super_builtins.func1 = func1
+super_builtins.func2 = func2
