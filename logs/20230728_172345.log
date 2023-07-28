@@ -1,0 +1,152 @@
+2023-07-28 17:23:45 [INFO]: 执行文件-> test_login.yaml
+2023-07-28 17:23:45 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-07-28 17:23:45 [INFO]: 用例步骤：1 -> 登录1
+2023-07-28 17:23:45 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function test_login[test1-123456]>>, 'username': 'test1', 'password': '123456'}
+2023-07-28 17:23:45 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1",
+            "func2"
+        ],
+        "response_hooks": [
+            "func2",
+            "func1"
+        ]
+    },
+    "json": {
+        "username": "test1",
+        "password": "123456"
+    }
+}
+2023-07-28 17:23:45 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 28 Jul 2023 09:23:45 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "110"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=rkcn318glu6vob80b24bo8qrl00uxeiv; expires=Fri, 11-Aug-2023 09:23:45 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 0,
+    "msg": "login success!",
+    "username": "test1",
+    "token": "d5fe3ca33d4d3dc6df33e8af25cc76d55a44ce41"
+}
+cookies: [{'name': 'sessionid', 'value': 'rkcn318glu6vob80b24bo8qrl00uxeiv'}]
+cost: 2052ms
+cookie: <RequestsCookieJar[<Cookie sessionid=rkcn318glu6vob80b24bo8qrl00uxeiv for 124.70.221.221/>]>
+2023-07-28 17:23:45 [INFO]: 执行文件-> test_login.yaml
+2023-07-28 17:23:45 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-07-28 17:23:45 [INFO]: 用例步骤：1 -> 登录1
+2023-07-28 17:23:45 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function test_login[test2-abdxxx]>>, 'username': 'test2', 'password': 'abdxxx'}
+2023-07-28 17:23:45 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1",
+            "func2"
+        ],
+        "response_hooks": [
+            "func2",
+            "func1"
+        ]
+    },
+    "json": {
+        "username": "test2",
+        "password": "abdxxx"
+    }
+}
+2023-07-28 17:23:45 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 28 Jul 2023 09:23:45 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "76"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=mmgc9wbtu4w46fxxn9hrbdso8aqqzw08; expires=Fri, 11-Aug-2023 09:23:45 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 3003,
+    "msg": "账号或密码不正确",
+    "username": "test2",
+    "token": ""
+}
+cookies: [{'name': 'sessionid', 'value': 'mmgc9wbtu4w46fxxn9hrbdso8aqqzw08'}]
+cost: 1901ms
+cookie: <RequestsCookieJar[<Cookie sessionid=mmgc9wbtu4w46fxxn9hrbdso8aqqzw08 for 124.70.221.221/>]>

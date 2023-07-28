@@ -1,5 +1,6 @@
 import ast
 import copy
+import inspect
 import json
 import pathlib
 from inspect import Parameter
@@ -178,6 +179,14 @@ class PytestRunner(object):
             "{}".format(json.dumps(request_body, indent=4, ensure_ascii=False))
         )
 
+        #  前置
+        request_pre = request_body.get('hooks').get('request_hooks', [])
+        self.request_hooks(request_pre)
+        log.info(
+            "f--------  执行前置条件 ----------\n"
+            "{}".format("".join(request_pre))
+        )
+
         http_request = HttpHandler(request_body)  # noqa
         response = http_request.request()
 
@@ -194,7 +203,36 @@ class PytestRunner(object):
             f"cost: {response.get('cost')}\n"
             f"cookie: {response.get('cookie')}"
         )
+
+        # 后置
+        response_pos = request_body.get('hooks').get('response_hooks', [])
+        self.request_hooks(response_pos)
+        log.info(
+            "f--------  执行后置条件 ----------\n"
+            "{}".format("".join(response_pos))
+        )
+
         return response
+
+    def request_hooks(self, request_pre: list) -> None:
+
+        if isinstance(request_pre, list) and len(request_pre) >= 1:
+
+            hook_args = None
+            for pre in request_pre:
+
+                func = self.context.get(pre)
+                argsname = [argsname for argsname, value in inspect.signature(func).parameters.items()] # noqa
+                if "request_args" in argsname:
+                    args = self.context.get("request_args")
+                    hook_args = func(args)
+
+                else:
+                    hook_args = func()
+
+            self.context.update(hook_args) if hook_args is not None else None
+        else:
+            return None
 
     @staticmethod
     def multipart_encoder_request(request_body):

@@ -24,6 +24,9 @@ teststeps:
         headers:
             Content-Type: "application/json"
             User-Agent: "python-requests/2.18.4"
+        hooks:
+          request_hooks: [ 'func1']
+          response_hooks: [ 'func2']
         json:
             username: ${username}
             password: ${password}
