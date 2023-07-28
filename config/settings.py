@@ -76,17 +76,12 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.mysql',
-        # 'NAME': 'easypost',
-        # 'USER': 'root',
-        # 'PASSWORD': '123456',
-        # 'HOST': '127.0.0.1',
-        # 'PORT': '3306',
-        'database': 'easychat',
-        'user': 'root',
-        'password': '123456',
-        'host': 'localhost',
-        'port': 3306,
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'easypost',
+        'USER': 'root',
+        'PASSWORD': '123456',
+        'HOST': '127.0.0.1',
+        'PORT': '3306'
     }
 }
 
@@ -128,3 +123,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Custom authentication
+AUTH_USER_MODEL = "api.User"

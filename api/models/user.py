@@ -82,6 +82,7 @@ class User(AbstractUser):
     class Meta:
         verbose_name = _("User")
         verbose_name_plural = verbose_name
+        app_label = 'api'
 
     def __str__(self):
         return self.username
@@ -110,6 +111,7 @@ class VerifyCode(Model):
     class Meta:
         verbose_name = _("Verify Code")
         verbose_name_plural = verbose_name
+        app_label = 'api'
 
     def __str__(self):
         return self.code
