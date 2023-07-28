@@ -36,3 +36,11 @@ class UserDao:
         except Exception as err:
             UserDao.log.error(f"用户获取验证码失败 -> {str(err)}")
             raise Exception(f"用户获取验证码失败 -> {err}")
+
+
+if __name__ == '__main__':
+    import os
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
+    import django
+    django.setup()
+    UserDao.register_code_validate("13564957378", "email")
