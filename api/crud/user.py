@@ -47,6 +47,13 @@ class UserDao:
 
     @staticmethod
     def register_code_validate(account: str, account_type: str, code: str) -> None:
+        """
+        注册验证码验证
+        :param account: 账号, str object.
+        :param account_type: 账号类型, str object.
+        :param code: 验证码, str object.
+        :return: None
+        """
 
         existed = VerifyCode.objects.filter(account_type=account_type, account=account).order_by('-add_time')
         if existed:
@@ -65,6 +72,11 @@ class UserDao:
 
     @staticmethod
     def get_username(username: str) -> Any | None:
+        """
+        校验用户是否注册
+        :param username: 用户名
+        :return: User.objects
+        """
 
         try:
             user = User.objects.get(Q(username=username) | Q(mobile=username) | Q(email=username))
