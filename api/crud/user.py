@@ -36,3 +36,21 @@ class UserDao:
         except Exception as err:
             UserDao.log.error(f"用户获取验证码失败 -> {str(err)}")
             raise Exception(f"用户获取验证码失败 -> {err}")
+
+    @staticmethod
+    def register_code_validate(account: str, account_type: str, code: str) -> None:
+
+        existed = VerifyCode.objects.filter(account_type=account_type, account=account).order_by('-add_time')
+        if existed:
+            last_recode = existed[0]
+            one_minutes_ago = datetime.now() - timedelta(hours=0, minutes=1, seconds=0)
+
+            if one_minutes_ago > last_recode.add_time:
+                UserDao.log.error("验证码已过期!")
+                raise Exception('验证码过期')
+            if last_recode.code != code:
+                UserDao.log.error(f"验证码错误 -> {code}")
+                raise Exception('验证码错误')
+        else:
+            UserDao.log.error(f"账号不存在 -> {account}")
+            raise Exception('账号不存在')
