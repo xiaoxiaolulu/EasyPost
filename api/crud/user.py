@@ -99,6 +99,11 @@ class UserDao:
 
     @staticmethod
     def query_user_by_email(email: str) -> Any | None:
+        """
+        根据邮箱获取用户
+        :param email: 注册邮箱, str object.
+        :return: User.objects
+        """
 
         try:
             user = User.objects.get(email=email).first()
@@ -107,7 +112,13 @@ class UserDao:
             return None
 
     @staticmethod
-    def rest_password(username: str, password: str) -> Any | None:
+    def rest_password(username: str, password: str) -> None:
+        """
+        重置验证码
+        :param username: 账号, str object.
+        :param password: 密码, str object.
+        :return: None
+        """
 
         try:
             user = User.objects.get(Q(username=username) | Q(mobile=username) | Q(email=username))
