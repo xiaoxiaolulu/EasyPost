@@ -66,3 +66,9 @@ class UserDao:
             return user
         except (User.DoesNotExist, ImproperlyConfigured):
             return None
+
+    @staticmethod
+    def get_register_code(account: str, account_type: str, code: str) -> None:
+
+        verify_code = VerifyCode(code=code, account=account, account_type=account_type)
+        verify_code.save()
