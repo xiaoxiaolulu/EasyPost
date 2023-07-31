@@ -72,3 +72,13 @@ class UserDao:
 
         verify_code = VerifyCode(code=code, account=account, account_type=account_type)
         verify_code.save()
+
+    @staticmethod
+    def query_user_by_email(email: str) -> Any | None:
+
+        try:
+            user = User.objects.get(email=email).first()
+            return user
+        except (User.DoesNotExist, ImproperlyConfigured):
+            return None
+
