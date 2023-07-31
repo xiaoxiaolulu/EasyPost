@@ -17,6 +17,12 @@ class UserDao:
 
     @staticmethod
     def register_user_validate(account: str, account_type: str) -> None:
+        """
+        注册用户验证
+        :param account:  注册账号, str object.
+        :param account_type: 账号类型, str object.
+        :return: None
+        """
         try:
             user = User.objects.filter(Q(mobile=account) | Q(email=account)).first()
 
