@@ -1,5 +1,8 @@
 import re
 from datetime import datetime, timedelta
+from typing import Any
+
+from django.core.exceptions import ImproperlyConfigured
 from django.db.models import Q
 from django.db.models.functions import Log
 from api.models.user import User, VerifyCode
@@ -54,3 +57,12 @@ class UserDao:
         else:
             UserDao.log.error(f"账号不存在 -> {account}")
             raise Exception('账号不存在')
+
+    @staticmethod
+    def get_username(username: str) -> Any | None:
+
+        try:
+            user = User.objects.get(Q(username=username) | Q(mobile=username) | Q(email=username))
+            return user
+        except (User.DoesNotExist, ImproperlyConfigured):
+            return None
