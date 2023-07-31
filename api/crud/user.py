@@ -1,7 +1,6 @@
 import re
 from datetime import datetime, timedelta
 from typing import Any
-
 from django.core.exceptions import ImproperlyConfigured
 from django.db.models import Q
 from django.db.models.functions import Log
@@ -82,3 +81,16 @@ class UserDao:
         except (User.DoesNotExist, ImproperlyConfigured):
             return None
 
+    @staticmethod
+    def rest_password(username: str, password: str) -> Any | None:
+
+        try:
+            user = User.objects.get(Q(username=username) | Q(mobile=username) | Q(email=username))
+
+            if user:
+                user = User.objects.get(username=username)
+                user.set_password(password)
+                user.save()
+
+        except (User.DoesNotExist, ImproperlyConfigured):
+            return None
