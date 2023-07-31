@@ -14,7 +14,7 @@ class UserDao:
     log = Log("UserDao")
 
     @staticmethod
-    def register_code_validate(account: str, account_type: str) -> None:
+    def register_user_validate(account: str, account_type: str) -> None:
         try:
             user = User.objects.filter(Q(mobile=account) | Q(email=account)).first()
 
@@ -36,11 +36,3 @@ class UserDao:
         except Exception as err:
             UserDao.log.error(f"用户获取验证码失败 -> {str(err)}")
             raise Exception(f"用户获取验证码失败 -> {err}")
-
-
-if __name__ == '__main__':
-    import os
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
-    import django
-    django.setup()
-    UserDao.register_code_validate("13564957378", "email")
