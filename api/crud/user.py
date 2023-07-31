@@ -86,6 +86,13 @@ class UserDao:
 
     @staticmethod
     def get_register_code(account: str, account_type: str, code: str) -> None:
+        """
+        获取注册验证码
+        :param account: 账号, str object.
+        :param account_type: 账号类型, str object.
+        :param code: 验证码, str object.
+        :return: None
+        """
 
         verify_code = VerifyCode(code=code, account=account, account_type=account_type)
         verify_code.save()
