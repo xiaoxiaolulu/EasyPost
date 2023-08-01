@@ -1,9 +1,9 @@
-import router from 'web/src/router'
+import router from '@/router'
 import type { RouteLocationNormalizedLoaded } from 'vue-router'
-import { getRawRoute } from 'web/src/utils/routerHelper'
+import { getRawRoute } from '@/utils/routerHelper'
 import { defineStore } from 'pinia'
 import { store } from '../index'
-import { findIndex } from 'web/src/utils'
+import { findIndex } from '@/utils'
 
 export interface TagsViewState {
   visitedViews: RouteLocationNormalizedLoaded[]

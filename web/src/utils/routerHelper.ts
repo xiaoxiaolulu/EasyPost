@@ -6,13 +6,13 @@ import type {
   RouteMeta,
   RouteRecordRaw
 } from 'vue-router'
-import { isUrl } from 'web/src/utils/is'
+import { isUrl } from '@/utils/is'
 import { omit, cloneDeep } from 'lodash-es'
 
 const modules = import.meta.glob('../views/**/*.{vue,tsx}')
 
 /* Layout */
-export const Layout = () => import('web/src/layout/Layout.vue')
+export const Layout = () => import('@/layout/Layout.vue')
 
 export const getParentLayout = () => {
   return () =>
