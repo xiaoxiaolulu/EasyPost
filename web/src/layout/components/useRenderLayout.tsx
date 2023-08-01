@@ -1,13 +1,13 @@
 import { computed } from 'vue'
-import { useAppStore } from 'web/src/store/modules/app'
-import { Menu } from 'web/src/components/Menu'
-import { TabMenu } from 'web/src/components/TabMenu'
-import { TagsView } from 'web/src/components/TagsView'
-import { Logo } from 'web/src/components/Logo'
+import { useAppStore } from '@/store/modules/app'
+import { Menu } from '@/components/Menu'
+import { TabMenu } from '@/components/TabMenu'
+import { TagsView } from '@/components/TagsView'
+import { Logo } from '@/components/Logo'
 import AppView from './AppView.vue'
 import ToolHeader from './ToolHeader.vue'
 import { ElScrollbar } from 'element-plus'
-import { useDesign } from 'web/src/hooks/web/useDesign'
+import { useDesign } from '@/hooks/web/useDesign'
 
 const { getPrefixCls } = useDesign()
 

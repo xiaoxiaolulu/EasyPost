@@ -1,10 +1,10 @@
 import { ElSubMenu, ElMenuItem } from 'element-plus'
 import type { RouteMeta } from 'vue-router'
 import { hasOneShowingChild } from '../helper'
-import { isUrl } from 'web/src/utils/is'
+import { isUrl } from '@/utils/is'
 import { useRenderMenuTitle } from './useRenderMenuTitle'
-import { useDesign } from 'web/src/hooks/web/useDesign'
-import { pathResolve } from 'web/src/utils/routerHelper'
+import { useDesign } from '@/hooks/web/useDesign'
+import { pathResolve } from '@/utils/routerHelper'
 
 export const useRenderMenuItem = (
   // allRouters: AppRouteRecordRaw[] = [],

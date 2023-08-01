@@ -1,9 +1,9 @@
 import type { App, Directive, DirectiveBinding } from 'vue'
-import { useI18n } from 'web/src/hooks/web/useI18n'
-import { useCache } from 'web/src/hooks/web/useCache'
+import { useI18n } from '@/hooks/web/useI18n'
+import { useCache } from '@/hooks/web/useCache'
 import { intersection } from 'lodash-es'
-import { isArray } from 'web/src/utils/is'
-import { useAppStoreWithOut } from 'web/src/store/modules/app'
+import { isArray } from '@/utils/is'
+import { useAppStoreWithOut } from '@/store/modules/app'
 
 const { t } = useI18n()
 const { wsCache } = useCache()
