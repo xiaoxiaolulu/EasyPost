@@ -1,10 +1,11 @@
-import { Table, TableExpose } from 'web/src/components/Table'
+import { Table, TableExpose } from '@/components/Table'
 import { ElTable, ElMessageBox, ElMessage } from 'element-plus'
 import { ref, reactive, watch, computed, unref, nextTick } from 'vue'
 import { get } from 'lodash-es'
-import type { TableProps } from 'web/src/components/Table/src/types'
-import { useI18n } from 'web/src/hooks/web/useI18n'
-import { TableSetPropsType } from 'web/src/types/table'
+import type { TableProps } from '@/components/Table/src/types'
+import { useI18n } from '@/hooks/web/useI18n'
+import { TableSetPropsType } from '@/types/table'
+
 
 const { t } = useI18n()
 

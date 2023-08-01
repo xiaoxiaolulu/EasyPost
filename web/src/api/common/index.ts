@@ -1,4 +1,5 @@
-import request from 'web/src/config/axios'
+import request from '@/config/axios'
+
 
 // 获取所有字典
 export const getDictApi = (): Promise<IResponse> => {

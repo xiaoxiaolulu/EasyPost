@@ -1,8 +1,8 @@
 import {createRouter, createWebHashHistory} from 'vue-router'
 import type {RouteRecordRaw} from 'vue-router'
 import type {App} from 'vue'
-import {Layout} from 'web/src/utils/routerHelper'
-import {useI18n} from 'web/src/hooks/web/useI18n'
+import {Layout} from '@/utils/routerHelper'
+import {useI18n} from '@/hooks/web/useI18n'
 
 const {t} = useI18n()
 
@@ -24,7 +24,7 @@ export const constantRouterMap: AppRouteRecordRaw[] = [
             {
                 path: '/redirect/:path(.*)',
                 name: 'Redirect',
-                component: () => import('web/src/views/Redirect/Redirect.vue'),
+                component: () => import('@/views/Redirect/Redirect.vue'),
                 meta: {}
             }
         ],
@@ -35,7 +35,7 @@ export const constantRouterMap: AppRouteRecordRaw[] = [
     },
     {
         path: '/login',
-        component: () => import('web/src/views/Login/Login.vue'),
+        component: () => import('@/views/Login/Login.vue'),
         name: 'Login',
         meta: {
             hidden: true,
@@ -45,7 +45,7 @@ export const constantRouterMap: AppRouteRecordRaw[] = [
     },
     {
         path: '/404',
-        component: () => import('web/src/views/Error/404.vue'),
+        component: () => import('@/views/Error/404.vue'),
         name: 'NoFind',
         meta: {
             hidden: true,
@@ -69,15 +69,16 @@ export const asyncRouterMap: AppRouteRecordRaw[] = [
         children: [
             {
                 path: 'workplace',
-                component: () => import('web/src/views/Dashboard/Workplace.vue'),
+                component: () => import('@/views/Dashboard/Workplace.vue'),
                 name: 'Workplace',
                 meta: {
                     title: t('router.workplace'),
                     noCache: true
                 }
-            }, {
+            },
+            {
                 path: 'analysis',
-                component: () => import('web/src/views/Dashboard/Analysis.vue'),
+                component: () => import('@/views/Dashboard/Analysis.vue'),
                 name: 'Analysis',
                 meta: {
                     title: t('router.analysis'),
@@ -86,7 +87,36 @@ export const asyncRouterMap: AppRouteRecordRaw[] = [
                 }
             }
         ]
-    }
+    },
+    // {
+    //   path: '/authorization',
+    //   component: Layout,
+    //   redirect: '/authorization/user',
+    //   name: 'Authorization',
+    //   meta: {
+    //     title: t('router.authorization'),
+    //     icon: 'eos-icons:role-binding',
+    //     alwaysShow: true
+    //   },
+    //   children: [
+    //     {
+    //       path: 'user',
+    //       component: () => import('@/views/Authorization/User.vue'),
+    //       name: 'User',
+    //       meta: {
+    //         title: t('router.user')
+    //       }
+    //     },
+    //     {
+    //       path: 'role',
+    //       component: () => import('@/views/Authorization/Role.vue'),
+    //       name: 'Role',
+    //       meta: {
+    //         title: t('router.role')
+    //       }
+    //     }
+    //   ]
+    // }
 ]
 
 const router = createRouter({

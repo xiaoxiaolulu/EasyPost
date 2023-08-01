@@ -1,6 +1,6 @@
 import { useTimeAgo as useTimeAgoCore, UseTimeAgoMessages } from '@vueuse/core'
 import { computed, unref } from 'vue'
-import { useLocaleStoreWithOut } from 'web/src/store/modules/locale'
+import { useLocaleStoreWithOut } from '@/store/modules/locale'
 
 const TIME_AGO_MESSAGE_MAP: {
   'zh-CN': UseTimeAgoMessages

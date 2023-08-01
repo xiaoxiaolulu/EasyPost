@@ -1,4 +1,5 @@
-import request from 'web/src/config/axios'
+import request from '@/config/axios'
+
 import type { UserType } from './types'
 
 interface RoleParams {

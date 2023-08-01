@@ -1,13 +1,13 @@
 import router from './router'
-import { useAppStoreWithOut } from 'web/src/store/modules/app'
-import { useCache } from 'web/src/hooks/web/useCache'
+import { useAppStoreWithOut } from '@/store/modules/app'
+import { useCache } from '@/hooks/web/useCache'
 import type { RouteRecordRaw } from 'vue-router'
-import { useTitle } from 'web/src/hooks/web/useTitle'
-import { useNProgress } from 'web/src/hooks/web/useNProgress'
-import { usePermissionStoreWithOut } from 'web/src/store/modules/permission'
-import { useDictStoreWithOut } from 'web/src/store/modules/dict'
-import { usePageLoading } from 'web/src/hooks/web/usePageLoading'
-import { getDictApi } from 'web/src/api/common'
+import { useTitle } from '@/hooks/web/useTitle'
+import { useNProgress } from '@/hooks/web/useNProgress'
+import { usePermissionStoreWithOut } from '@/store/modules/permission'
+import { useDictStoreWithOut } from '@/store/modules/dict'
+import { usePageLoading } from '@/hooks/web/usePageLoading'
+import { getDictApi } from '@/api/common'
 
 const permissionStore = usePermissionStoreWithOut()
 

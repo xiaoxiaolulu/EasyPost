@@ -1,8 +1,9 @@
 import type { App } from 'vue'
 import { createI18n } from 'vue-i18n'
-import { useLocaleStoreWithOut } from 'web/src/store/modules/locale'
+import { useLocaleStoreWithOut } from '@/store/modules/locale'
 import type { I18n, I18nOptions } from 'vue-i18n'
 import { setHtmlPageLang } from './helper'
+
 
 export let i18n: ReturnType<typeof createI18n>
 

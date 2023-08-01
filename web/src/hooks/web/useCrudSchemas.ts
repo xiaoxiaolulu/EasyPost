@@ -1,12 +1,12 @@
 import { reactive } from 'vue'
-import { eachTree, treeMap, filter } from 'web/src/utils/tree'
-import { findIndex } from 'web/src/utils'
-import { useDictStoreWithOut } from 'web/src/store/modules/dict'
-import { useI18n } from 'web/src/hooks/web/useI18n'
+import { eachTree, treeMap, filter } from '@/utils/tree'
+import { findIndex } from '@/utils'
+import { useDictStoreWithOut } from '@/store/modules/dict'
+import { useI18n } from '@/hooks/web/useI18n'
 import type { AxiosPromise } from 'axios'
-import { FormSchema } from 'web/src/types/form'
-import { TableColumn } from 'web/src/types/table'
-import { DescriptionsSchema } from 'web/src/types/descriptions'
+import { FormSchema } from '@/types/form'
+import { TableColumn } from '@/types/table'
+import { DescriptionsSchema } from '@/types/descriptions'
 
 export type CrudSchema = Omit<TableColumn, 'children'> & {
   search?: CrudSearchParams
