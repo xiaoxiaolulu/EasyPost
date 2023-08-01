@@ -1,4 +1,4 @@
-import { config } from '../新建文件夹/web/src/config/axios/config'
+import { config } from '@/config/axios/config'
 import { MockMethod } from 'vite-plugin-mock'
 
 const { result_code } = config
