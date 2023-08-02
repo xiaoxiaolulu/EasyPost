@@ -40,9 +40,8 @@ class CustomJsonWebToken(ObtainJSONWebToken):
 
         if serializer.is_valid():
             user = serializer.object.get('user') or request.user
-
             token = serializer.object.get('token')
-            jwt_response_payload_handler(token, user, request)
+            # jwt_response_payload_handler(token, user, request)
 
             response = ResponseStandard.model_to_dict(user, exclude="password")
             response = Response(ResponseStandard.success(dict(token=token, userInfo=response, roles=[user.role])))
