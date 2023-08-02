@@ -46,13 +46,7 @@ class CustomJsonWebToken(ObtainJSONWebToken):
 
             response = ResponseStandard.model_to_dict(user, exclude="password")
             response = Response(ResponseStandard.success(dict(token=token, userInfo=response, roles=[user.role])))
-            # if api_settings.JWT_AUTH_COOKIE:
-            #     expiration = (datetime.utcnow() +
-            #                   api_settings.JWT_EXPIRATION_DELTA)
-            #     response.set_cookie(api_settings.JWT_AUTH_COOKIE,
-            #                         token,
-            #                         expires=expiration,
-            #                         httponly=True)
+
             return response
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
