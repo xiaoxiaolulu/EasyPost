@@ -1,4 +1,4 @@
-import { pathResolve } from 'web/src/utils/routerHelper'
+import { pathResolve } from '@/utils/routerHelper'
 import type { RouteMeta } from 'vue-router'
 
 export const filterBreadcrumb = (

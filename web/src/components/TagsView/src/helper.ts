@@ -1,5 +1,5 @@
 import type { RouteMeta, RouteLocationNormalizedLoaded } from 'vue-router'
-import { pathResolve } from 'web/src/utils/routerHelper'
+import { pathResolve } from '@/utils/routerHelper'
 
 export const filterAffixTags = (routes: AppRouteRecordRaw[], parentPath = '') => {
   let tags: RouteLocationNormalizedLoaded[] = []

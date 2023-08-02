@@ -1,6 +1,6 @@
-import { getAllParentPath } from 'web/src/components/Menu/src/helper'
+import { getAllParentPath } from '@/components/Menu/src/helper'
 import type { RouteMeta } from 'vue-router'
-import { isUrl } from 'web/src/utils/is'
+import { isUrl } from '@/utils/is'
 import { cloneDeep } from 'lodash-es'
 import { reactive } from 'vue'
 
