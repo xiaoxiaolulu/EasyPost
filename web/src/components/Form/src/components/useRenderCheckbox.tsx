@@ -1,4 +1,4 @@
-import { FormSchema } from 'web/src/types/form'
+import { FormSchema } from '@/types/form'
 import { ElCheckbox, ElCheckboxButton } from 'element-plus'
 import { defineComponent } from 'vue'
 

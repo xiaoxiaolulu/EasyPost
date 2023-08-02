@@ -1,9 +1,9 @@
-import { useI18n } from 'web/src/hooks/web/useI18n'
+import { useI18n } from '@/hooks/web/useI18n'
 import type { Slots } from 'vue'
-import { getSlot } from 'web/src/utils/tsxHelper'
+import { getSlot } from '@/utils/tsxHelper'
 import { PlaceholderMoel } from './types'
-import { FormSchema } from 'web/src/types/form'
-import { ColProps } from 'web/src/types/components'
+import { FormSchema } from '@/types/form'
+import { ColProps } from '@/types/components'
 
 const { t } = useI18n()
 

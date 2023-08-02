@@ -18,9 +18,9 @@ import {
   ElAutocomplete,
   ElDivider
 } from 'element-plus'
-import { InputPassword } from 'web/src/components/InputPassword'
-import { Editor } from 'web/src/components/Editor'
-import { ComponentName } from 'web/src/types/components'
+import { InputPassword } from '@/components/InputPassword'
+import { Editor } from '@/components/Editor'
+import { ComponentName } from '@/types/components'
 
 const componentMap: Recordable<Component, ComponentName> = {
   Radio: ElRadioGroup,
