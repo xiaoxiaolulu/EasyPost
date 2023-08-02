@@ -1,16 +1,15 @@
-from datetime import datetime
 from django.contrib.auth import get_user_model
 from django.contrib.auth.backends import ModelBackend
 from django.core.exceptions import ImproperlyConfigured
 from django.db.models import Q
 from rest_framework import status
 from rest_framework.response import Response
-from rest_framework.settings import api_settings
 from rest_framework_jwt.views import (
     ObtainJSONWebToken,
     jwt_response_payload_handler
 )
 
+from utils.fatcory import ResponseStandard
 
 User = get_user_model()
 
@@ -41,25 +40,19 @@ class CustomJsonWebToken(ObtainJSONWebToken):
 
         if serializer.is_valid():
             user = serializer.object.get('user') or request.user
-            print("测试")
-            print(user)
-            print("测试")
 
             token = serializer.object.get('token')
-            print(token)
-            print("c11111")
-            response_data = jwt_response_payload_handler(token, user, request)
-            response_data.update({"username": user.username, "nickname": user.nickname, "userid": user.pk})
-            response = Response(response_data)
-            print(response_data)
-            print(2222222222222)
-            if api_settings.JWT_AUTH_COOKIE:
-                expiration = (datetime.utcnow() +
-                              api_settings.JWT_EXPIRATION_DELTA)
-                response.set_cookie(api_settings.JWT_AUTH_COOKIE,
-                                    token,
-                                    expires=expiration,
-                                    httponly=True)
+            jwt_response_payload_handler(token, user, request)
+
+            response = ResponseStandard.model_to_dict(user, exclude="password")
+            response = Response(ResponseStandard.success(dict(token=token, userInfo=response, roles=[user.role])))
+            # if api_settings.JWT_AUTH_COOKIE:
+            #     expiration = (datetime.utcnow() +
+            #                   api_settings.JWT_EXPIRATION_DELTA)
+            #     response.set_cookie(api_settings.JWT_AUTH_COOKIE,
+            #                         token,
+            #                         expires=expiration,
+            #                         httponly=True)
             return response
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

@@ -3,7 +3,10 @@ from datetime import datetime, timedelta
 from typing import Any
 from django.core.exceptions import ImproperlyConfigured
 from django.db.models import Q
-from api.models.user import User, VerifyCode
+from api.models.user import (
+    User,
+    VerifyCode
+)
 
 # 手机号码正则表达式
 REGEX_MOBILE = "^1[358]\d{9}$|^147\d{8}$|^176\d{8}$" # noqa
