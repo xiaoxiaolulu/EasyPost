@@ -31,7 +31,6 @@ class Defaults(object):
     DEPT = "Quality Testing Department"
     GENDER = "male"
     INTRODUCTION = "The user is lazy and didn't write anything..."
-    IS_VALID = 1
 
     ACCOUNT_TYPE_CHOICES = (
         ("email", "邮箱"),
@@ -74,8 +73,6 @@ class User(AbstractUser):
     gender = CharField(verbose_name=_('User Gender'), choices=Defaults.GENDER_CHOICES, max_length=6,
                        default=Defaults.GENDER)
     dept = CharField(blank=True, null=True, verbose_name=_('User Dept'), max_length=125, default=Defaults.DEPT)
-    is_valid = CharField(verbose_name=_('User IsValid'), choices=Defaults.IS_VALID_CHOICES, max_length=10,
-                         default=Defaults.IS_VALID)
     # 临时
     role = CharField(max_length=20, null=True, blank=True, verbose_name=_('User Role'))
 

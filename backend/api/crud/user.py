@@ -3,7 +3,6 @@ from datetime import datetime, timedelta
 from typing import Any
 from django.core.exceptions import ImproperlyConfigured
 from django.db.models import Q
-from django.db.models.functions import Log
 from api.models.user import User, VerifyCode
 
 # 手机号码正则表达式
@@ -12,8 +11,6 @@ REGEX_EMAIL = "/^[a-zA-Z0-9_\.]+@[a-zA-Z0-9-]+[\.a-zA-Z]+$/" # noqa
 
 
 class UserDao:
-
-    log = Log("UserDao")
 
     @staticmethod
     def register_user_validate(account: str, account_type: str) -> None:
@@ -42,7 +39,6 @@ class UserDao:
                 raise Exception("距离上一次发送未超过60s")
 
         except Exception as err:
-            UserDao.log.error(f"用户获取验证码失败 -> {str(err)}")
             raise Exception(f"用户获取验证码失败 -> {err}")
 
     @staticmethod
@@ -61,13 +57,10 @@ class UserDao:
             one_minutes_ago = datetime.now() - timedelta(hours=0, minutes=1, seconds=0)
 
             if one_minutes_ago > last_recode.add_time:
-                UserDao.log.error("验证码已过期!")
                 raise Exception('验证码过期')
             if last_recode.code != code:
-                UserDao.log.error(f"验证码错误 -> {code}")
                 raise Exception('验证码错误')
         else:
-            UserDao.log.error(f"账号不存在 -> {account}")
             raise Exception('账号不存在')
 
     @staticmethod
