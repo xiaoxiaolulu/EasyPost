@@ -171,50 +171,56 @@
           </div>
           <div v-show="ParameterType === 3">
             <div>
-              <!--                <code-editor :content="codeContent" :language="codeType" class="flow-detail"-->
-              <!--                             v-model="form.codeContent">-->
-              <!--                </code-editor>-->
+              <mirror-code v-model="form.codeContent" :disabled="disabled"
+                           :constModelData="codeContent"></mirror-code>
             </div>
           </div>
         </el-tab-pane>
       </el-tabs>
-              <!-- 接口Response返回信息 -->
-      <!--        <el-tabs @tab-click="handleClick" v-model="responseActiveName">-->
-      <!--          <el-tab-pane label="实时响应" name="1">-->
-      <!--            <div class="responseToolBar" v-show="ResponseContent">-->
-      <!--              <el-button type="text" size="mini" class="distinct" icon="el-icon-lollipop"></el-button>-->
-      <!--              <el-button type="text" size="mini" class="distinct" icon="el-icon-bangzhu"></el-button>-->
-      <!--              <el-button type="text" size="mini" class="distinct" icon="el-icon-key"></el-button>-->
-      <!--            </div>-->
-      <!--            <div class="resultMsg" v-show="statusCode&&resultTimes">-->
-      <!--                                <span>Status: <span-->
-      <!--                                    :class="statusCode===200? 'green': 'red'">{{ statusCode }}&nbsp&nbsp</span></span>-->
-      <!--              <span>Times: <span class="green">{{ resultTimes }}s</span></span>-->
-      <!--            </div>-->
-      <!--            <div v-show="ResponseContent">-->
-      <!--&lt;!&ndash;              <code-mirror :content="ResponseContent" :language="codeType" class="flow-detail">&ndash;&gt;-->
-      <!--&lt;!&ndash;              </code-mirror>&ndash;&gt;-->
-      <!--            </div>-->
-      <!--            <div class="unResponse" v-show="!ResponseContent">-->
-      <!--              <div class="raw">Hit Send to get a response</div>-->
-      <!--              <img :src="unResponse" alt="" class="gray">-->
-      <!--            </div>-->
-      <!--          </el-tab-pane>-->
-      <!--          <el-tab-pane name="2" v-bind:disabled="resDisable">-->
-      <!--            <span slot="label">响应头<span class='highlight'>({{ resHeaderCount }})</span></span>-->
-      <!--            <el-table :data="resultHead" border v-if="headerTable">-->
-      <!--              <el-table-column label="Key" prop="name"></el-table-column>-->
-      <!--              <el-table-column label="Value" prop="value"></el-table-column>-->
-      <!--            </el-table>-->
-      <!--          </el-tab-pane>-->
-      <!--          <el-tab-pane name="3" v-bind:disabled="resDisable">-->
-      <!--            <span slot="label">Cookie<span class='highlight'>({{ cookiesCount }})</span></span>-->
-      <!--            <el-table :data="resultCookies" border v-if="cookiesTable">-->
-      <!--              <el-table-column label="Key" prop="name"></el-table-column>-->
-      <!--              <el-table-column label="Value" prop="value"></el-table-column>-->
-      <!--            </el-table>-->
-      <!--          </el-tab-pane>-->
-      <!--        </el-tabs>-->
+      <el-tabs @tab-click="handleClick" v-model="responseActiveName">
+        <el-tab-pane label="实时响应" name="1">
+          <div class="responseToolBar" v-show="ResponseContent">
+            <el-button link class="distinct" icon="Lollipop"></el-button>
+            <el-button link class="distinct" icon="Orange"></el-button>
+            <el-button link class="distinct" icon="Key"></el-button>
+          </div>
+          <div class="resultMsg" v-show="statusCode&&resultTimes">
+                              <span>Status: <span
+                                  :class="statusCode===200? 'green': 'red'">{{ statusCode }}&nbsp&nbsp</span></span>
+            <span>Times: <span class="green">{{ resultTimes }}s</span></span>
+          </div>
+          <div v-show="ResponseContent">
+            <mirror-code :disabled="disabled"
+                         :constModelData="ResponseContent" class="flow-detail"></mirror-code>
+          </div>
+          <div class="unResponse" v-show="!ResponseContent">
+            <div class="raw">Hit Send to get a response</div>
+            <img :src="unResponse" alt="" class="gray">
+          </div>
+        </el-tab-pane>
+        <el-tab-pane name="2" v-bind:disabled="resDisable">
+          <template #label>
+            <span>
+              <span>响应头<span class='highlight'>({{ resHeaderCount }})</span></span>
+            </span>
+          </template>
+          <el-table :data="resultHead" border v-if="headerTable">
+            <el-table-column label="Key" prop="name"></el-table-column>
+            <el-table-column label="Value" prop="value"></el-table-column>
+          </el-table>
+        </el-tab-pane>
+        <el-tab-pane name="3" v-bind:disabled="resDisable">
+          <template #label>
+            <span>
+              <span>Cookie<span class='highlight'>({{ cookiesCount}})</span></span>
+            </span>
+          </template>
+          <el-table :data="resultCookies" border v-if="cookiesTable">
+            <el-table-column label="Key" prop="name"></el-table-column>
+            <el-table-column label="Value" prop="value"></el-table-column>
+          </el-table>
+        </el-tab-pane>
+      </el-tabs>
     </el-form>
   </div>
 </template>
@@ -223,7 +229,8 @@
 import {ref, reactive, onMounted, watch} from 'vue'
 import {FormInstance, ElTable} from "element-plus";
 import type {TabsPaneContext} from 'element-plus'
-import unResponse from  '@/assets/image/none-response.jpg'
+import unResponse from '@/assets/image/none-response.jpg'
+import MirrorCode from "@/components/MirrorCode/index.vue";
 
 const multipleTableRef = ref<InstanceType<typeof ElTable>>()
 
@@ -246,6 +253,8 @@ const radio = ref("none")
 const ParameterType = ref(1)
 
 const codeContent = ref("")
+
+const disabled = ref(false)
 
 const codeType = ref("json")
 
@@ -379,7 +388,9 @@ const addHead = () => {
 }
 
 const beautify = () => {
-  form.codeContent = JSON.stringify(eval("(" + form.codeContent + ")"), null, 4)
+  if(form.codeContent.length){
+    form.codeContent = JSON.stringify(eval("(" + form.codeContent + ")"), null, 4)
+  }
 }
 
 const delFormParams = (index: number) => {
@@ -397,7 +408,7 @@ const addFormParams = () => {
 
 const changeParameterType = () => {
   if (radio.value === 'none') {
-     ParameterType.value = 1
+    ParameterType.value = 1
   }
   if (radio.value === 'form-data') {
     ParameterType.value = 2
@@ -407,7 +418,7 @@ const changeParameterType = () => {
   }
 }
 
-onMounted(()=>{
+onMounted(() => {
   // toggleSelection(form.head);
   // toggleSelection(form.formParams);
   // toggleSelection(form.queryParams)

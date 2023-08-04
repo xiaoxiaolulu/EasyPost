@@ -15,6 +15,7 @@
     "lint:prettier": "prettier --write  \"src/**/*.{js,json,tsx,css,less,scss,vue,html,md}\""
   },
   "dependencies": {
+    "monaco-editor": "^0.41.0",
     "@better-scroll/core": "^2.4.2",
     "@vueuse/core": "^9.1.1",
     "@wangeditor/editor": "^5.1.14",
