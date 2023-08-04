@@ -16,10 +16,12 @@ import othersRouter from './modules/other'
 import externalLink from './modules/externalLink'
 import formRouter from './modules/form'
 import functionPageRouter from './modules/functionPage'
+import httpsRouter from "@/routers/modules/https";
 
 
 // 异步组件
 export const asyncRoutes = [
+    ...httpsRouter,
     ...dataScreenRouter,
     ...echartsRouter,
     ...tableRouter,
