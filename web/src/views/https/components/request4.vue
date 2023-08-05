@@ -190,7 +190,7 @@
             <span>Times: <span class="green">{{ resultTimes }}s</span></span>
           </div>
           <div v-show="ResponseContent">
-            <mirror-code :disabled="disabled"
+            <mirror-code :disabled="disabled" v-model="ResponseContent"
                          :constModelData="ResponseContent" class="flow-detail"></mirror-code>
           </div>
           <div class="unResponse" v-show="!ResponseContent">
@@ -227,10 +227,11 @@
 
 <script setup lang="ts">
 import {ref, reactive, onMounted, watch} from 'vue'
-import {FormInstance, ElTable} from "element-plus";
+import {FormInstance, ElTable, ElNotification} from "element-plus";
 import type {TabsPaneContext} from 'element-plus'
 import unResponse from '@/assets/image/none-response.jpg'
 import MirrorCode from "@/components/MirrorCode/index.vue";
+import {getTimeStateStr} from "@/utils";
 
 const multipleTableRef = ref<InstanceType<typeof ElTable>>()
 
@@ -339,6 +340,31 @@ const checkRequest = () => {
 }
 
 const fastTest = (formEl: FormInstance | undefined) => {
+  if (!formEl) return
+  formEl.validate((valid) => {
+    if (valid) {
+      loadingSend.value = true
+      console.log("测试")
+      console.log(form)
+      console.log("测试")
+      // setTimeout(async ()=>{
+      //   await UserStore.login(ruleForm)
+      //   await router.push({
+      //     path: '/',
+      //   })
+      //   ElNotification({
+      //     title: getTimeStateStr(),
+      //     message: "欢迎登录 Vue Admin Perfect",
+      //     type: "success",
+      //     duration: 3000
+      //   });
+      //   loadingSend.value = true
+      // },1000)
+    } else {
+      console.log('error submit!')
+      return false
+    }
+  })
 }
 
 const handleClick = (tab: TabsPaneContext, event: Event) => {

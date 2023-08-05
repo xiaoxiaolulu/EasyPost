@@ -104,3 +104,27 @@ class HttpHandler(object):
 
         except Exception as e:
             return self.response(response, self.request_body, elapsed, msg=str(e))
+
+if __name__ == '__main__':
+    d = {
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test1",
+        "password": "123456"
+    }
+}
+    h = HttpHandler(d)
+    print(h.request())
