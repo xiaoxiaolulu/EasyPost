@@ -20,7 +20,7 @@ service.interceptors.request.use((config:AxiosRequestConfig)=>{
     const userStore = useUserStore();
     const token: string = userStore.token;
     // 自定义请求头
-    if(token){ config.headers['Authorization'] = token}
+    if(token){ config.headers['Authorization'] = `JWT ${token}`}
     return config
 },(error: AxiosError) => {
     // 请求错误，这里可以用全局提示框进行提示

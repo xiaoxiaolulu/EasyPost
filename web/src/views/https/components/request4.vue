@@ -187,7 +187,7 @@
           <div class="resultMsg" v-show="statusCode&&resultTimes">
                               <span>Status: <span
                                   :class="statusCode===200? 'green': 'red'">{{ statusCode }}&nbsp&nbsp</span></span>
-            <span>Times: <span class="green">{{ resultTimes }}s</span></span>
+            <span>Times: <span class="green">{{ resultTimes }}</span></span>
           </div>
           <div v-show="ResponseContent">
             <mirror-code :disabled="disabled" v-model="ResponseContent"
@@ -231,6 +231,9 @@ import {FormInstance, ElTable, ElNotification} from "element-plus";
 import type {TabsPaneContext} from 'element-plus'
 import unResponse from '@/assets/image/none-response.jpg'
 import MirrorCode from "@/components/MirrorCode/index.vue";
+import {requestParser} from "@/views/https/components/RequestParser";
+import {http} from "@/api/http";
+import {login} from "@/api/user";
 import {getTimeStateStr} from "@/utils";
 
 const multipleTableRef = ref<InstanceType<typeof ElTable>>()
@@ -341,25 +344,23 @@ const checkRequest = () => {
 
 const fastTest = (formEl: FormInstance | undefined) => {
   if (!formEl) return
-  formEl.validate((valid) => {
+  formEl.validate(async (valid) => {
     if (valid) {
       loadingSend.value = true
-      console.log("测试")
-      console.log(form)
-      console.log("测试")
-      // setTimeout(async ()=>{
-      //   await UserStore.login(ruleForm)
-      //   await router.push({
-      //     path: '/',
-      //   })
-      //   ElNotification({
-      //     title: getTimeStateStr(),
-      //     message: "欢迎登录 Vue Admin Perfect",
-      //     type: "success",
-      //     duration: 3000
-      //   });
-      //   loadingSend.value = true
-      // },1000)
+      let requestBody = requestParser(form)
+      const ret = await http(requestBody)
+      const {code, data} = ret.data
+      resDisable.value = false;
+      loadingSend.value = false;
+      headerTable.value = true;
+      cookiesTable.value = true;
+      resHeaderCount.value = data.responseHeaders.length;
+      resultHead.value = data.responseHeaders;
+      cookiesCount.value = data.cookies.length;
+      resultCookies.value = data.cookies;
+      statusCode.value = data.statusCode;
+      resultTimes.value = data.cost;
+      ResponseContent.value = JSON.stringify(data.responseBody, null, 4)
     } else {
       console.log('error submit!')
       return false
