@@ -15,12 +15,18 @@ export const requestParser = (body: any) => {
                 break
             case "head":
                 if (body[key][0].name.length != 0) {
-                    req["headers"] = body[key].reduce((headers: any, header: any) => ({...headers, [header.name]: header.value}), {})
+                    req["headers"] = body[key].reduce((headers: any, header: any) => ({
+                        ...headers,
+                        [header.name]: header.value
+                    }), {})
                 }
                 break
             case "formParams":
                 if (body[key][0].name.length != 0) {
-                    req["data"] = body[key].reduce((formData: any, formParam: any) => ({...formData, [formParam.name]: formParam.value}), {})
+                    req["data"] = body[key].reduce((formData: any, formParam: any) => ({
+                        ...formData,
+                        [formParam.name]: formParam.value
+                    }), {})
                 }
                 break
             case 'codeContent':
