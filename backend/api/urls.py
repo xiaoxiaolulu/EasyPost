@@ -1,9 +1,13 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from api.views.https import ApiFastView
-from api.views.user import CustomJsonWebToken
+from api.service.https import ApiFastView
+from api.service.project import ProjectViewSet, ProjectListViewSet
+from api.service.user import CustomJsonWebToken
 
 router = DefaultRouter()
+
+router.register('project', ProjectViewSet)
+
 
 app_urls = [
     # API
@@ -11,7 +15,9 @@ app_urls = [
     # API Authentication
     path("login/", CustomJsonWebToken.as_view()),
 
-    path("http/", ApiFastView.as_view())
+    path("http/", ApiFastView.as_view()),
+
+    path("st", ProjectListViewSet.as_view())
 ]
 
 

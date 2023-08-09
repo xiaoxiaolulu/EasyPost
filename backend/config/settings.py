@@ -95,6 +95,22 @@ DATABASES = {
     }
 }
 
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        # redis主机地址和链接信息
+        "LOCATION": "redis://101.35.3.10:6379/1",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+            "AUTH": "123456",
+            "SOCKET_CONNECT_TIMEOUT": 5,
+            "SOCKET_TIMEOUT": 5,
+        }
+    }
+}
+
+
 # Static
 # https://docs.djangoproject.com/en/dev/ref/settings/#static-url
 STATIC_URL = "/static/"
@@ -137,7 +153,7 @@ LOGOUT_URL = "rest_framework:logout"
 
 # Authentication
 AUTHENTICATION_BACKENDS = [
-    "api.views.user.CustomAuthenticateBackend"
+    "api.service.user.CustomAuthenticateBackend"
 ]
 
 # Password validation
@@ -176,7 +192,7 @@ JWT_AUTH = {
 REST_FRAMEWORK = {
     "DATETIME_FORMAT": "%Y-%m-%dT%H:%M:%S%z",
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 3,
+    'PAGE_SIZE': 20,
     'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.URLPathVersioning',
     'VERSION_PARAM': 'version',
     'DEFAULT_AUTHENTICATION_CLASSES': [

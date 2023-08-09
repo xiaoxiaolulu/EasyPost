@@ -5,6 +5,7 @@ DESCRIPTION：系统配置模型
  * table-Project: 项目配置
 """
 from django.contrib.auth import get_user_model
+from django.core.cache import cache
 from django.db.models import (
     Model,
     CharField,
@@ -15,6 +16,7 @@ from django.db.models import (
     ImageField,
     IntegerField
 )
+from django.db.models.signals import pre_save, post_delete
 from django.utils.translation import ugettext_lazy as _
 
 User = get_user_model()
@@ -75,3 +77,33 @@ class Project(Model):
 
     def __str__(self):
         return self.name
+
+
+def _generate_cache_key(sender, instance):
+    instance = instance
+
+    old_instance = Project.objects.get(
+            pk=instance.pk)
+    cache_key = f"{old_instance.user} - {sender._meta.model_name}" # noqa
+
+    return cache_key
+
+
+def _update_cache(sender, **kwargs):
+
+    instance = kwargs.get('instance')
+    cache_key = _generate_cache_key(sender, instance)
+
+    cache_response = cache.get(cache_key)
+    if cache_response:
+        cache.delete(cache_key)
+
+
+def _delete_cache(sender, **kwargs):
+    instance = kwargs.get('instance')
+    cache_key = _generate_cache_key(sender, instance)
+    cache.delete(cache_key)
+
+
+pre_save.connect(_update_cache, sender=Project)
+post_delete.connect(_delete_cache, sender=Project)
