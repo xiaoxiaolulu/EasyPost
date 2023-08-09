@@ -12,7 +12,7 @@ from api.schema.project import (
     ProjectSerializers,
     UpdateAvatarSerializers
 )
-from utils.fatcory import ListAPI
+from utils.fatcory import MagicListAPI
 
 
 class ProjectViewSet(viewsets.ModelViewSet):
@@ -35,7 +35,7 @@ class ProjectViewSet(viewsets.ModelViewSet):
             return ProjectSerializers
 
 
-class ProjectListViewSet(ListAPI):
+class ProjectListViewSet(MagicListAPI):
 
     queryset = Project.objects.all()
     serializer_class = ProjectSerializers

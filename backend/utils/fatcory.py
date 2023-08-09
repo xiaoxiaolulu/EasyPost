@@ -40,23 +40,33 @@ class ResponseStandard:
         return dict(code=code, msg=str(msg), data=data)
 
 
-class ListAPI(generics.ListAPIView):
+class MagicListAPI(generics.ListAPIView):
     def list(self, request, *args, **kwargs):
 
-        queryset = self.filter_queryset(self.get_queryset())
-        cache_key = f"{request.user} - {queryset.model._meta.model_name}"  # noqa
+        try:
+            queryset = self.filter_queryset(self.get_queryset())
+            cache_key = f"{request.user} - {queryset.model._meta.model_name}"  # noqa
 
-        page = self.paginate_queryset(queryset)
-        cache_response = self.get_cache(cache_key)
+            page = self.paginate_queryset(queryset)
+            cache_response = self.get_cache(cache_key)
 
-        if not cache_response:
+            if not cache_response:
 
-            serializer = self.get_serializer(page, many=True)
-            cache_response = self.get_cache(cache_key, serializer.data)
+                serializer = self.get_serializer(page, many=True)
+                cache_response = self.get_cache(cache_key, serializer.data)
 
-        response = self.get_paginated_response(cache_response)
-        response._headers['cache-control'] = ('Cache-Control', 'max-age=600')  # noqa
-        return response
+            jsonresponse = dict() # noqa
+            jsonresponse['code'] = 0
+            jsonresponse['msg'] = '操作成功'
+            response = self.get_paginated_response(cache_response)
+            response._headers['cache-control'] = ('Cache-Control', 'max-age=600')  # noqa
+            jsonresponse.update(**response.data)
+            response.data = jsonresponse
+            return response
+
+        except Exception as err:
+            response = ResponseStandard.failed(err)
+            return response
 
     @staticmethod
     def get_cache(cache_key, response=None):

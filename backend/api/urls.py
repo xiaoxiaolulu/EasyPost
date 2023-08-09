@@ -17,7 +17,7 @@ app_urls = [
 
     path("http/", ApiFastView.as_view()),
 
-    path("st", ProjectListViewSet.as_view())
+    path("project/list", ProjectListViewSet.as_view())
 ]
 
 
