@@ -20,6 +20,7 @@ app_urls = [
 
     path("http/", ApiFastView.as_view()),
 
+    # 项目管理
     path("project/list", ProjectListViewSet.as_view()),
     path("project/delete/<int:pk>", ProjectDestroyViewSet.as_view()),
     path("project/update/<int:pk>", ProjectUpdateViewSet.as_view()),

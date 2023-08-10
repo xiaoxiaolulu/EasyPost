@@ -17,6 +17,30 @@ from django.conf.global_settings import MEDIA_ROOT
 from django.contrib import admin
 from django.urls import path, include, re_path
 from django.views.static import serve
+from drf_yasg import openapi
+from drf_yasg.views import get_schema_view
+from rest_framework import permissions
+
+swagger_info = openapi.Info(
+    title="Snippets API",
+    default_version='v1',
+    description="""EasyPost.
+
+The `swagger-ui` view can be found [here](/swagger).
+The `ReDoc` view can be found [here](/redoc).
+The swagger YAML document can be found [here](/swagger/?format=openapi).
+
+You can log in using the pre-existing `admin` user with password `passwordadmin`.""",  # noqa
+    terms_of_service="https://www.google.com/policies/terms/",
+    contact=openapi.Contact(email="contact@snippets.local"),
+    license=openapi.License(name="BSD License"),
+)
+
+SchemaView = get_schema_view(
+    validators=['ssv', 'flex'],
+    public=True,
+    permission_classes=[permissions.AllowAny],
+)
 
 
 urlpatterns = [
@@ -28,4 +52,8 @@ urlpatterns = [
     path("api/", include("api.urls", "api")),
 
     re_path(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
+
+    re_path(r'^swagger(?P<format>.json|.yaml)$', SchemaView.without_ui(cache_timeout=0), name='schema-json'),
+    path('swagger/', SchemaView.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+    path('redoc/', SchemaView.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
 ]

@@ -29,6 +29,7 @@ LOCAL_APPS = [
 ]
 
 THIRD_PARTY_APPS = [
+    "drf_yasg",
     "rest_framework",
     "rest_framework.authtoken",
     "django_filters",
@@ -208,4 +209,31 @@ REST_FRAMEWORK = {
     ],
 
     'EXCEPTION_HANDLER': 'api.response.exception_handler.exception_handler',
+}
+
+
+SWAGGER_SETTINGS = {
+    'LOGIN_URL': '/admin/login',
+    'LOGOUT_URL': '/admin/logout',
+    'PERSIST_AUTH': True,
+    'REFETCH_SCHEMA_WITH_AUTH': True,
+    'REFETCH_SCHEMA_ON_LOGOUT': True,
+
+    'DEFAULT_INFO': 'config.urls.swagger_info',  # 这里注意，更改为自己的项目路径
+
+    'SECURITY_DEFINITIONS': {
+        'Basic': {
+            'type': 'basic'
+        },
+        'Bearer': {
+            'type': 'apiKey',
+            'name': 'authorization',
+            'in': 'header'
+        },
+        'Query': {
+            'type': 'apiKey',
+            'name': 'auth',
+            'in': 'query'
+        }
+    }
 }
