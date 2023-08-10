@@ -5,11 +5,10 @@ from django.db.models import Q
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework_jwt.views import (
-    ObtainJSONWebToken,
-    jwt_response_payload_handler
+    ObtainJSONWebToken
 )
 
-from utils.fatcory import ResponseStandard
+from api.response.fatcory import ResponseStandard
 
 User = get_user_model()
 

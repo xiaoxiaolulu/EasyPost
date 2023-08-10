@@ -5,7 +5,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 from core.request.http_handler import HttpHandler
-from utils.fatcory import ResponseStandard
+from api.response.fatcory import ResponseStandard
 
 
 class ApiFastView(APIView):

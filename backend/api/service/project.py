@@ -12,7 +12,11 @@ from api.schema.project import (
     ProjectSerializers,
     UpdateAvatarSerializers
 )
-from utils.fatcory import MagicListAPI
+from api.response.fatcory import (
+    MagicListAPI,
+    MagicDestroyApi,
+    MagicUpdateApi
+)
 
 
 class ProjectViewSet(viewsets.ModelViewSet):
@@ -45,3 +49,19 @@ class ProjectListViewSet(MagicListAPI):
     filterset_class = ProjectFilter
     search_fields = ['name']
     ordering_fields = ['create_time']
+
+
+class ProjectDestroyViewSet(MagicDestroyApi):
+
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializers
+    permission_classes = [IsAuthenticated]
+    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
+
+
+class ProjectUpdateViewSet(MagicUpdateApi):
+
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializers
+    permission_classes = [IsAuthenticated]
+    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]

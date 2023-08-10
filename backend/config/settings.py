@@ -95,7 +95,6 @@ DATABASES = {
     }
 }
 
-
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
@@ -109,7 +108,6 @@ CACHES = {
         }
     }
 }
-
 
 # Static
 # https://docs.djangoproject.com/en/dev/ref/settings/#static-url
@@ -150,7 +148,6 @@ AUTH_USER_MODEL = "api.User"
 LOGIN_URL = "rest_framework:login"
 LOGOUT_URL = "rest_framework:logout"
 
-
 # Authentication
 AUTHENTICATION_BACKENDS = [
     "api.service.user.CustomAuthenticateBackend"
@@ -179,7 +176,7 @@ CORS_ORIGN_ALLOW_ALL = True
 # 服务端允许跨域
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_HEADERS = ('*',)
-CORS_ALLOW_METHODS = ("*", )
+CORS_ALLOW_METHODS = ("*",)
 CORS_ALLOW_CREDENTIALS = True
 
 # JWT
@@ -208,5 +205,7 @@ REST_FRAMEWORK = {
         'rest_framework.parsers.FormParser',
         'rest_framework.parsers.MultiPartParser',
         'rest_framework.parsers.FileUploadParser'
-    ]
+    ],
+
+    'EXCEPTION_HANDLER': 'api.response.exception_handler.exception_handler',
 }

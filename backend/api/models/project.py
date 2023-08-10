@@ -13,10 +13,12 @@ from django.db.models import (
     DateTimeField,
     ForeignKey,
     SET_NULL,
-    ImageField,
-    IntegerField
+    ImageField
 )
-from django.db.models.signals import pre_save, post_delete
+from django.db.models.signals import (
+    post_delete,
+    post_save
+)
 from django.utils.translation import ugettext_lazy as _
 
 User = get_user_model()
@@ -81,10 +83,7 @@ class Project(Model):
 
 def _generate_cache_key(sender, instance):
     instance = instance
-
-    old_instance = Project.objects.get(
-            pk=instance.pk)
-    cache_key = f"{old_instance.user} - {sender._meta.model_name}" # noqa
+    cache_key = f"{instance.user} - {sender._meta.model_name}" # noqa
 
     return cache_key
 
@@ -105,5 +104,5 @@ def _delete_cache(sender, **kwargs):
     cache.delete(cache_key)
 
 
-pre_save.connect(_update_cache, sender=Project)
+post_save.connect(_update_cache, sender=Project)
 post_delete.connect(_delete_cache, sender=Project)
