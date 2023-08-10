@@ -15,7 +15,8 @@ from api.response.fatcory import (
     MagicListAPI,
     MagicDestroyApi,
     MagicUpdateApi,
-    MagicCreateApi
+    MagicCreateApi,
+    MagicRetrieveApi
 )
 
 
@@ -53,6 +54,14 @@ class ProjectUpdateViewSet(MagicUpdateApi):
 
 
 class ProjectCreateViewSet(MagicCreateApi):
+
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializers
+    permission_classes = [IsAuthenticated]
+    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
+
+
+class ProjectRetrieveApi(MagicRetrieveApi):
 
     queryset = Project.objects.all()
     serializer_class = ProjectSerializers

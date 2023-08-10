@@ -119,3 +119,11 @@ class MagicCreateApi(generics.CreateAPIView):
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response(ResponseStandard.success(data=serializer.data))
+
+
+class MagicRetrieveApi(generics.RetrieveAPIView):
+
+    def retrieve(self, request, *args, **kwargs):
+        instance = self.get_object()
+        serializer = self.get_serializer(instance)
+        return Response(ResponseStandard.success(data=serializer.data))
