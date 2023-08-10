@@ -16,24 +16,24 @@ def exception_handler(exc, context):
     :param context: 抛出异常的上下文（包含request请求对象和view视图对象）
     :return: Response响应对象
     """
-    def inner_exception_handler(ex, con):
-        if isinstance(ex, Http404):
-            ex = exceptions.NotFound()
-        elif isinstance(ex, PermissionDenied):
-            ex = exceptions.PermissionDenied()
+    def inner_exception_handler(inner_exc, inner_context):
+        if isinstance(inner_exc, Http404):
+            inner_exc = exceptions.NotFound()
+        elif isinstance(inner_exc, PermissionDenied):
+            inner_exc = exceptions.PermissionDenied()
 
-        if isinstance(ex, exceptions.APIException):
+        if isinstance(inner_exc, exceptions.APIException):
             headers = {}
-            if getattr(exc, 'auth_header', None):
-                headers['WWW-Authenticate'] = exc.auth_header
-            if getattr(exc, 'wait', None):
-                headers['Retry-After'] = '%d' % exc.wait
+            if getattr(inner_exc, 'auth_header', None):
+                headers['WWW-Authenticate'] = inner_exc.auth_header # noqa
+            if getattr(inner_exc, 'wait', None):
+                headers['Retry-After'] = '%d' % inner_exc.wait  # noqa
 
-            if isinstance(exc.detail, (list, dict)):
-                data = exc.detail
+            if isinstance(inner_exc.detail, (list, dict)):
+                data = inner_exc.detail
                 data = "".join([f"{key} {value}" for key, value in data.items()])
             else:
-                data = {'detail': exc.detail}
+                data = {'detail': inner_exc.detail}
 
             set_rollback()
             return Response(ResponseStandard.failed(msg=data))
