@@ -1,7 +1,6 @@
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import (
-    filters,
-    viewsets
+    filters
 )
 from rest_framework.authentication import SessionAuthentication
 from rest_framework.permissions import IsAuthenticated
@@ -15,28 +14,9 @@ from api.schema.project import (
 from api.response.fatcory import (
     MagicListAPI,
     MagicDestroyApi,
-    MagicUpdateApi
+    MagicUpdateApi,
+    MagicCreateApi
 )
-
-
-class ProjectViewSet(viewsets.ModelViewSet):
-
-    queryset = Project.objects.all()
-    serializer_class = ProjectSerializers
-    permission_classes = [IsAuthenticated]
-    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
-    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
-    filterset_class = ProjectFilter
-    search_fields = ['name']
-    ordering_fields = ['create_time']
-
-    def get_serializer_class(self):
-        if self.action == 'update':
-            if 'avatar' in self.request.data:
-                return UpdateAvatarSerializers
-            return ProjectSerializers
-        else:
-            return ProjectSerializers
 
 
 class ProjectListViewSet(MagicListAPI):
@@ -60,6 +40,19 @@ class ProjectDestroyViewSet(MagicDestroyApi):
 
 
 class ProjectUpdateViewSet(MagicUpdateApi):
+
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializers
+    permission_classes = [IsAuthenticated]
+    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
+
+    def get_serializer_class(self):
+        if 'avatar' in self.request.data:
+            return UpdateAvatarSerializers
+        return ProjectSerializers
+
+
+class ProjectCreateViewSet(MagicCreateApi):
 
     queryset = Project.objects.all()
     serializer_class = ProjectSerializers

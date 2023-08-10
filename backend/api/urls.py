@@ -4,13 +4,12 @@ from api.service.https import ApiFastView
 from api.service.project import (
     ProjectListViewSet,
     ProjectDestroyViewSet,
-    ProjectViewSet,
-    ProjectUpdateViewSet
+    ProjectUpdateViewSet,
+    ProjectCreateViewSet
 )
 from api.service.user import CustomJsonWebToken
 
 router = DefaultRouter()
-router.register('project', ProjectViewSet)
 
 app_urls = [
     # API
@@ -22,7 +21,8 @@ app_urls = [
 
     path("project/list", ProjectListViewSet.as_view()),
     path("project/delete/<int:pk>", ProjectDestroyViewSet.as_view()),
-    path("project/update/<int:pk>", ProjectUpdateViewSet.as_view())
+    path("project/update/<int:pk>", ProjectUpdateViewSet.as_view()),
+    path("project/create", ProjectCreateViewSet.as_view())
 ]
 
 
