@@ -4,10 +4,9 @@ from django.core.exceptions import ImproperlyConfigured
 from django.db.models import Q
 from rest_framework import status
 from rest_framework.response import Response
-from rest_framework_jwt.views import (
-    ObtainJSONWebToken
-)
+from rest_framework_jwt.views import ObtainJSONWebToken
 
+from api.response.exception_handler import jwt_response_payload_error_handler
 from api.response.fatcory import ResponseStandard
 
 User = get_user_model()
@@ -47,4 +46,5 @@ class CustomJsonWebToken(ObtainJSONWebToken):
 
             return response
 
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        response = jwt_response_payload_error_handler(serializer, request)
+        return response

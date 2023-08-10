@@ -183,7 +183,8 @@ CORS_ALLOW_CREDENTIALS = True
 # JWT
 JWT_AUTH = {
     'JWT_EXPIRATION_DELTA': datetime.timedelta(days=7),  # or seconds=20
-    'JWT_AUTH_HEADER_PREFIX': 'JWT'
+    'JWT_AUTH_HEADER_PREFIX': 'JWT',
+    'JWT_RESPONSE_PAYLOAD_ERROR_HANDLER': 'api.response.exception_handler.jwt_response_payload_error_handler',
 }
 
 # Django Rest Framework
