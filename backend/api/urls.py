@@ -25,7 +25,7 @@ app_urls = [
     path("project/delete/<int:pk>", ProjectDestroyViewSet.as_view()),
     path("project/update/<int:pk>", ProjectUpdateViewSet.as_view()),
     path("project/create", ProjectCreateViewSet.as_view()),
-    path("prject/detail/<int:pk>", ProjectRetrieveApi.as_view())
+    path("project/detail/<int:pk>", ProjectRetrieveApi.as_view())
 ]
 
 

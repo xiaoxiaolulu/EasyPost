@@ -9,7 +9,8 @@ from api.filters.project import ProjectFilter
 from api.models.project import Project
 from api.schema.project import (
     ProjectSerializers,
-    UpdateAvatarSerializers
+    UpdateAvatarSerializers,
+    ProjectListSerializers
 )
 from api.response.fatcory import (
     MagicListAPI,
@@ -23,7 +24,7 @@ from api.response.fatcory import (
 class ProjectListViewSet(MagicListAPI):
 
     queryset = Project.objects.all()
-    serializer_class = ProjectSerializers
+    serializer_class = ProjectListSerializers
     permission_classes = [IsAuthenticated]
     authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
@@ -47,13 +48,13 @@ class ProjectUpdateViewSet(MagicUpdateApi):
     permission_classes = [IsAuthenticated]
     authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
 
-    def get_serializer_class(self):
-        if 'avatar' in self.request.data:
-            return UpdateAvatarSerializers
-        return ProjectSerializers
+    # def get_serializer_class(self):
+    #     if 'avatar' in self.request.data:
+    #         return UpdateAvatarSerializers
+    #     return ProjectSerializers
 
 
-class ProjectCreateViewSet(MagicCreateApi):
+class ProjectCreateViewSet(MagicCreateApi):  # noqa
 
     queryset = Project.objects.all()
     serializer_class = ProjectSerializers

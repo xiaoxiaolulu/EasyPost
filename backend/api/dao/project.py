@@ -1,4 +1,4 @@
-from api.models.project import Project
+from api.models.project import Project, ProjectRole
 
 
 class ProjectDao:
@@ -13,3 +13,14 @@ class ProjectDao:
                 return True
         except (Project.DoesNotExist, ):
             return False
+
+    @staticmethod
+    def create_project_role(validated_data):
+
+        try:
+            instance = Project.objects.create(**validated_data)
+            ProjectRole.objects.create(project_id=instance.id, user_id=instance.user.id, rode_id=0)
+            return instance
+
+        except(Project.DoesNotExist, ProjectRole.DoesNotExist):
+            pass

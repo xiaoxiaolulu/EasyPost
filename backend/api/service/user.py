@@ -2,10 +2,8 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.backends import ModelBackend
 from django.core.exceptions import ImproperlyConfigured
 from django.db.models import Q
-from rest_framework import status
 from rest_framework.response import Response
 from rest_framework_jwt.views import ObtainJSONWebToken
-
 from api.response.exception_handler import jwt_response_payload_error_handler
 from api.response.fatcory import ResponseStandard
 

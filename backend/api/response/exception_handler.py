@@ -29,11 +29,11 @@ def exception_handler(exc, context):
             if getattr(inner_exc, 'wait', None):
                 headers['Retry-After'] = '%d' % inner_exc.wait  # noqa
 
-            if isinstance(inner_exc.detail, (list, dict)):
+            if isinstance(inner_exc.detail, dict):
                 data = inner_exc.detail
                 data = "".join([f"{key} {value}" for key, value in data.items()])
             else:
-                data = {'detail': inner_exc.detail}
+                data = inner_exc.detail
 
             set_rollback()
             return Response(ResponseStandard.failed(msg=data))

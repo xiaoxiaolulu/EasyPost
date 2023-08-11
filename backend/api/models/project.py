@@ -81,6 +81,13 @@ class Project(Model):
         return self.name
 
 
+class ProjectRole(Model):
+
+    user = ForeignKey(User, null=True, on_delete=SET_NULL, verbose_name=_('User'))
+    project = ForeignKey(Project, null=True, on_delete=SET_NULL, related_name='roles', verbose_name=_('Project'))
+    rode_id = CharField(max_length=50, null=True, blank=True, verbose_name=_('ProjectRoleId'))
+
+
 def _generate_cache_key(sender, instance):
     instance = instance
     cache_key = f"{instance.user} - {sender._meta.model_name}" # noqa
