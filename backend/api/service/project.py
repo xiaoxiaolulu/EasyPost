@@ -10,14 +10,17 @@ from rest_framework.views import APIView
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 from api.dao.project import ProjectDao
 from api.filters.project import ProjectFilter
-from api.models.project import Project, ProjectRole
+from api.models.project import (
+    Project,
+    ProjectRole
+)
 from api.schema.project import (
     ProjectSerializers,
     UpdateAvatarSerializers,
     ProjectListSerializers,
     ProjectRoleSerializers
 )
-from api.response.fatcory import (
+from api.response.magic import (
     MagicListAPI,
     MagicDestroyApi,
     MagicUpdateApi,
