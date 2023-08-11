@@ -6,7 +6,9 @@ from api.service.project import (
     ProjectDestroyViewSet,
     ProjectUpdateViewSet,
     ProjectCreateViewSet,
-    ProjectRetrieveApi
+    ProjectRetrieveApi,
+    ProjectRoleDestroyViewSet,
+    ProjectRoleUpdateViewSet
 )
 from api.service.user import CustomJsonWebToken
 
@@ -25,7 +27,9 @@ app_urls = [
     path("project/delete/<int:pk>", ProjectDestroyViewSet.as_view()),
     path("project/update/<int:pk>", ProjectUpdateViewSet.as_view()),
     path("project/create", ProjectCreateViewSet.as_view()),
-    path("project/detail/<int:pk>", ProjectRetrieveApi.as_view())
+    path("project/detail/<int:pk>", ProjectRetrieveApi.as_view()),
+    path("project/role/delete", ProjectRoleDestroyViewSet.as_view()),
+    path("project/role/add", ProjectRoleUpdateViewSet.as_view())
 ]
 
 

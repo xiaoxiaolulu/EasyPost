@@ -1,3 +1,5 @@
+from django.db.models import Q
+
 from api.models.project import (
     Project,
     ProjectRole
@@ -27,3 +29,33 @@ class ProjectDao:
 
         except(Project.DoesNotExist, ProjectRole.DoesNotExist):
             pass
+
+    @staticmethod
+    def check_user_role_exist(project_id, user_id):
+        try:
+            instance = ProjectRole.objects.filter(Q(project_id=project_id) & Q(user_id=user_id)).first()
+
+            if instance is not None:
+                return True
+        except(ProjectRole.DoesNotExist, Exception):
+            return False
+
+    @staticmethod
+    def check_judge_permission(project_id, user_id):
+        try:
+            instance = Project.objects.get(pk=project_id)
+            owner = instance.user.id
+            permission = False if owner != user_id else True
+
+            return permission
+        except(Project.DoesNotExist, Exception):
+
+            raise Exception("项目未找到")
+
+    @staticmethod
+    def search_user_role(project_id, user_id):
+        try:
+            instance = ProjectRole.objects.filter(Q(project_id=project_id) & Q(user_id=user_id))
+            return instance
+        except(ProjectRole.DoesNotExist, Exception):
+            raise Exception("该项目未找到该角色权限！")
