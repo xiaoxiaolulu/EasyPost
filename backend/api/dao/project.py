@@ -1,5 +1,4 @@
 from django.db.models import Q
-
 from api.models.project import (
     Project,
     ProjectRole
