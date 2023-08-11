@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.conf.global_settings import MEDIA_ROOT
 from django.contrib import admin
-from django.urls import path, include, re_path
+from django.urls import (
+    path,
+    include,
+    re_path
+)
 from django.views.static import serve
 from drf_yasg import openapi
 from drf_yasg.views import get_schema_view

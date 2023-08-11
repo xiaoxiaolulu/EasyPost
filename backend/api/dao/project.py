@@ -1,4 +1,7 @@
-from api.models.project import Project, ProjectRole
+from api.models.project import (
+    Project,
+    ProjectRole
+)
 
 
 class ProjectDao:
