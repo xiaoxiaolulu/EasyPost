@@ -1,5 +1,4 @@
 import json
-
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import (
     filters
@@ -9,21 +8,22 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
-
 from api.dao.project import ProjectDao
 from api.filters.project import ProjectFilter
 from api.models.project import Project, ProjectRole
 from api.schema.project import (
     ProjectSerializers,
     UpdateAvatarSerializers,
-    ProjectListSerializers, ProjectRoleSerializers
+    ProjectListSerializers,
+    ProjectRoleSerializers
 )
 from api.response.fatcory import (
     MagicListAPI,
     MagicDestroyApi,
     MagicUpdateApi,
     MagicCreateApi,
-    MagicRetrieveApi, ResponseStandard
+    MagicRetrieveApi,
+    ResponseStandard
 )
 
 
@@ -38,7 +38,7 @@ class ProjectListViewSet(MagicListAPI):
     ordering_fields = ['create_time']
 
 
-class ProjectDestroyViewSet(MagicDestroyApi):
+class ProjectDestroyViewSet(MagicDestroyApi): # noqa
     queryset = Project.objects.all()
     serializer_class = ProjectSerializers
     permission_classes = [IsAuthenticated]
