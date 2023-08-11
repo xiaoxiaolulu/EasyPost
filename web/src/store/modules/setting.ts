@@ -1,5 +1,5 @@
 import {defineStore} from 'pinia'
-import {PRIMARY_COLOR} from "../../config";
+import {PRIMARY_COLOR} from "@/config";
 
 
 export const useSettingStore = defineStore({

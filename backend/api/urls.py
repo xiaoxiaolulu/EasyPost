@@ -19,7 +19,7 @@ app_urls = [
     path("", include(router.urls)),
     # API Authentication
     path("login/", CustomJsonWebToken.as_view()),
-
+    # 接口测试
     path("http/", ApiFastView.as_view()),
 
     # 项目管理

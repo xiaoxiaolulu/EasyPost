@@ -9,7 +9,7 @@
     <el-button @click="setWaterMarker(4)" type="primary">取消水印</el-button>
 
     <el-descriptions title="配置项 " :column="1" border class="descriptions">
-      <el-descriptions-item label="content"> 水印内容，默认为 'Vue Admin Perfect' </el-descriptions-item>
+      <el-descriptions-item label="content"> 水印内容，默认为 'EasyPost' </el-descriptions-item>
       <el-descriptions-item label="container"> 水印容器，默认生成在 document.body 下面 </el-descriptions-item>
       <el-descriptions-item label="globalAlpha"> 设置图形和图像透明度的值，默认为 0.3 </el-descriptions-item>
       <el-descriptions-item label="height"> 水印高度，默认为 240 </el-descriptions-item>

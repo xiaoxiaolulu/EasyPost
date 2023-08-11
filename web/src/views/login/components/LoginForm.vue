@@ -95,7 +95,7 @@ const submitForm = (formEl: FormInstance | undefined) => {
         })
         ElNotification({
           title: getTimeStateStr(),
-          message: "欢迎登录 Vue Admin Perfect",
+          message: "欢迎登录 EasyPost",
           type: "success",
           duration: 3000
         });
