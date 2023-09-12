@@ -26,7 +26,7 @@ from drf_yasg.views import get_schema_view
 from rest_framework import permissions
 
 swagger_info = openapi.Info(
-    title="Snippets API",
+    title="EasyPost API",
     default_version='v1',
     description="""EasyPost.
 
