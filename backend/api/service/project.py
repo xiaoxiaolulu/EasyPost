@@ -31,6 +31,7 @@ from api.response.magic import (
 
 
 class ProjectListViewSet(MagicListAPI):
+
     queryset = Project.objects.all()
     serializer_class = ProjectListSerializers
     permission_classes = [IsAuthenticated]

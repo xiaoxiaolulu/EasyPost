@@ -1,4 +1,6 @@
 from django.db.models import Q
+
+from api.models.https import Relation
 from api.models.project import (
     Project,
     ProjectRole
@@ -24,6 +26,22 @@ class ProjectDao:
         try:
             instance = Project.objects.create(**validated_data)
             ProjectRole.objects.create(project_id=instance.id, user_id=instance.user.id, rode_id=0)
+
+            tree_template = [{  # noqa
+                "id": 1,
+                "label": "全部",
+                "nodeTier": 1,
+                "children": [],
+                "parent": 0
+            }]
+
+            try:
+                tree = Relation.objects.get(project=instance)
+            except Relation.DoesNotExist:
+                Relation.objects.create(
+                    project=instance,
+                    tree=tree_template
+                )
             return instance
 
         except(Project.DoesNotExist, ProjectRole.DoesNotExist):
