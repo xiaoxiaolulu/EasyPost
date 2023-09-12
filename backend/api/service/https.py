@@ -1,16 +1,16 @@
 import json
 from django.core.exceptions import ObjectDoesNotExist
-from rest_framework import status
+from rest_framework import status, mixins, viewsets
 from rest_framework.authentication import SessionAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
-from api.models.https import Relation
-from api.schema.https import RelationSerializer
+from api.models.https import Relation, Api
+from api.schema.https import RelationSerializer, ApiSerializer
 from core.request.http_handler import HttpHandler
 from api.response.fatcory import ResponseStandard
-from utils.trees import get_tree_max_id
+from utils.trees import get_tree_max_id, get_relation_tree, collections_directory_id
 
 
 class ApiFastView(APIView):
@@ -72,3 +72,68 @@ class TreeView(APIView):
             return Response(ResponseStandard.failed())
 
         return Response(ResponseStandard.success(data=serializer))
+
+
+class ApiTestListView(mixins.ListModelMixin, viewsets.GenericViewSet):
+
+    serializer_class = ApiSerializer
+    queryset = Api.objects
+    permission_classes = [IsAuthenticated]
+    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
+
+    def list(self, request, *args, **kwargs):
+        context = {
+            "request": request,
+        }
+        serializer = ApiSerializer(data=request.query_params, context=context)
+        if serializer.is_valid():
+            project = request.query_params.get("project")
+            node = int(request.query_params.get("node"))
+            name = request.query_params.get("name")
+            queryset = self.get_queryset().filter(project__id=project).order_by('-update_time')
+
+            tree = Relation.objects.get(project__id=project)
+            tree = eval(tree.tree)
+
+            match node:
+                case 1:
+                    queryset = queryset
+                case _:
+                    children_tree = get_relation_tree(tree, node)
+                    directory_ids = collections_directory_id(children_tree, node)
+                    queryset = queryset.filter(project__id=project, directory_id__in=directory_ids)
+
+            if name:
+                queryset = queryset.filter(name=name)
+
+            page = self.paginate_queryset(queryset)
+            if page is not None:
+                serializer = self.get_serializer(page, many=True)
+                return self.get_paginated_response(serializer.data)
+
+            serializer = self.get_serializer(queryset, many=True)
+            return Response(ResponseStandard.success(serializer.data))
+        else:
+            return Response(ResponseStandard.failed(data=serializer.errors))
+
+
+class ApiDetailView(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
+
+    serializer_class = ApiSerializer
+    queryset = Api.objects.all()
+    permission_classes = [IsAuthenticated]
+    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
+
+
+class DelApiView(APIView):
+
+    permission_classes = [IsAuthenticated]
+    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
+
+    @staticmethod
+    def delete(request, **kwargs):
+        try:
+            Api.objects.filter(id=kwargs['pk']).delete()
+            return Response(ResponseStandard.success())
+        except Exception as err:
+            return Response(ResponseStandard.failed(data=str(err)))
