@@ -42,6 +42,7 @@ class TestEnvironmentDestroyViewSet(MagicDestroyApi): # noqa
 
 
 class TestEnvironmentUpdateViewSet(MagicUpdateApi):
+
     queryset = TestEnvironment.objects.all()
     serializer_class = TestEnvironmentSerializers
     permission_classes = [IsAuthenticated]

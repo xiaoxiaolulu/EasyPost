@@ -1,6 +1,12 @@
-from django.urls import path, include
+from django.urls import (
+    path,
+    include
+)
 from rest_framework.routers import DefaultRouter
-from api.service.https import ApiFastView, TreeView
+from api.service.https import (
+    ApiFastView,
+    TreeView
+)
 from api.service.project import (
     ProjectListViewSet,
     ProjectDestroyViewSet,
@@ -9,6 +15,16 @@ from api.service.project import (
     ProjectRetrieveApi,
     ProjectRoleDestroyViewSet,
     ProjectRoleUpdateViewSet
+)
+from api.service.setting import (
+    TestEnvironmentListViewSet,
+    TestEnvironmentDestroyViewSet,
+    TestEnvironmentUpdateViewSet,
+    TestEnvironmentCreateViewSet,
+    AddressListViewSet,
+    AddressDestroyViewSet,
+    AddressUpdateViewSet,
+    AddressCreateViewSet
 )
 from api.service.user import CustomJsonWebToken
 
@@ -28,6 +44,16 @@ app_urls = [
     path("project/detail/<int:pk>", ProjectRetrieveApi.as_view()),
     path("project/role/delete", ProjectRoleDestroyViewSet.as_view()),
     path("project/role/add", ProjectRoleUpdateViewSet.as_view()),
+
+    # 测试配置
+    path("env/list", TestEnvironmentListViewSet.as_view()),
+    path("env/delete/<int:pk>", TestEnvironmentDestroyViewSet.as_view()),
+    path("env/update/<int:pk>", TestEnvironmentUpdateViewSet.as_view()),
+    path("env/create", TestEnvironmentCreateViewSet.as_view()),
+    path("address/list", AddressListViewSet.as_view()),
+    path("address/delete/<int:pk>", AddressDestroyViewSet.as_view()),
+    path("address/update/<int:pk>", AddressUpdateViewSet.as_view()),
+    path("address/create", AddressCreateViewSet.as_view()),
 
     # 接口测试
     path("http/", ApiFastView.as_view()),
