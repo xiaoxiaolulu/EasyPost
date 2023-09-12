@@ -1,5 +1,4 @@
 from rest_framework import serializers
-
 from api.models.https import Relation
 
 
