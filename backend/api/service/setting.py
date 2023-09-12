@@ -13,7 +13,7 @@ from api.models.setting import (
 )
 from api.response.magic import (
     MagicListAPI,
-    MagicUpdateApi
+    MagicUpdateApi, MagicDestroyApi, MagicCreateApi
 )
 from api.schema.setting import (
     TestEnvironmentSerializers,
@@ -33,7 +33,7 @@ class TestEnvironmentListViewSet(MagicListAPI): # noqa
     ordering_fields = ['create_time']
 
 
-class TestEnvironmentDestroyViewSet(MagicDestroyApi): # noqa
+class TestEnvironmentDestroyViewSet(MagicDestroyApi):
 
     queryset = TestEnvironment.objects.all()
     serializer_class = TestEnvironmentSerializers
@@ -49,7 +49,7 @@ class TestEnvironmentUpdateViewSet(MagicUpdateApi):
     authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
 
 
-class TestEnvironmentCreateViewSet(MagicCreateApi):  # noqa
+class TestEnvironmentCreateViewSet(MagicCreateApi):
 
     queryset = TestEnvironment.objects.all()
     serializer_class = TestEnvironmentSerializers
