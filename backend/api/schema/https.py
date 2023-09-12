@@ -7,3 +7,5 @@ class RelationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Relation
         fields = '__all__'
+
+
