@@ -1,5 +1,8 @@
 import re
-from datetime import datetime, timedelta
+from datetime import (
+    datetime,
+    timedelta
+)
 from typing import Any
 from django.core.exceptions import ImproperlyConfigured
 from django.db.models import Q

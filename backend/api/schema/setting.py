@@ -13,7 +13,7 @@ REGEX_URL_PATH = "(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&
 
 class TestEnvironmentSerializers(serializers.ModelSerializer):
 
-    id = serializers.IntegerField(read_only=True)
+    id = serializers.IntegerField(read_only=True)  # noqa
     user = UserSimpleSerializers(required=False, default=serializers.CurrentUserDefault())
     create_time = serializers.DateTimeField(read_only=True)
     update_time = serializers.DateTimeField(read_only=True)

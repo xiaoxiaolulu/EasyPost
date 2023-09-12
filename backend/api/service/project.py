@@ -16,9 +16,7 @@ from api.models.project import (
 )
 from api.schema.project import (
     ProjectSerializers,
-    UpdateAvatarSerializers,
-    ProjectListSerializers,
-    ProjectRoleSerializers
+    ProjectListSerializers
 )
 from api.response.magic import (
     MagicListAPI,
@@ -30,14 +28,14 @@ from api.response.magic import (
 )
 
 
-class ProjectListViewSet(MagicListAPI):
+class ProjectListViewSet(MagicListAPI):  # noqa
 
     queryset = Project.objects.all()
     serializer_class = ProjectListSerializers
     permission_classes = [IsAuthenticated]
     authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
-    filterset_class = ProjectFilter
+    filterset_class = ProjectFilter  # noqa
     search_fields = ['name']
     ordering_fields = ['create_time']
 
