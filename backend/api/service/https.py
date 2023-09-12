@@ -95,13 +95,13 @@ class ApiTestListView(mixins.ListModelMixin, viewsets.GenericViewSet):
             tree = Relation.objects.get(project__id=project)
             tree = eval(tree.tree)
 
-            match node:
-                case 1:
-                    queryset = queryset
-                case _:
-                    children_tree = get_relation_tree(tree, node)
-                    directory_ids = collections_directory_id(children_tree, node)
-                    queryset = queryset.filter(project__id=project, directory_id__in=directory_ids)
+            if node == 1:
+                queryset = queryset
+
+            if node != 1:
+                children_tree = get_relation_tree(tree, node)
+                directory_ids = collections_directory_id(children_tree, node)
+                queryset = queryset.filter(project__id=project, directory_id__in=directory_ids)
 
             if name:
                 queryset = queryset.filter(name=name)
