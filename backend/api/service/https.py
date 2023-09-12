@@ -55,7 +55,7 @@ class TreeView(APIView):
             "maxId": get_tree_max_id(node),
             "success": status.HTTP_200_OK
         }
-        return Response(serializer)
+        return Response(ResponseStandard.success(data=serializer))
 
     @staticmethod
     def get(request, **kwargs):
@@ -69,6 +69,6 @@ class TreeView(APIView):
                 "success": status.HTTP_200_OK
             }
         except ObjectDoesNotExist:
-            return Response(status=status.HTTP_404_NOT_FOUND)
+            return Response(ResponseStandard.failed())
 
-        return Response(serializer)
+        return Response(ResponseStandard.success(data=serializer))

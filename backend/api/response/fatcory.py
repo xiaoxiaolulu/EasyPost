@@ -34,5 +34,5 @@ class ResponseStandard:
         return ResponseStandard.encode_json(dict(code=code, msg=msg, data=data), *exclude)
 
     @staticmethod
-    def failed(msg, code=110, data=None):
+    def failed(msg="操作失败", code=110, data=None):
         return dict(code=code, msg=str(msg), data=data)
