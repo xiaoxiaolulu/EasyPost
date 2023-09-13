@@ -1,5 +1,11 @@
-from api.models.https import Relation, Api
-from utils.trees import collections_directory_id, get_relation_tree
+from api.models.https import (
+    Relation,
+    Api
+)
+from utils.trees import (
+    collections_directory_id,
+    get_relation_tree
+)
 
 
 class HttpDao:

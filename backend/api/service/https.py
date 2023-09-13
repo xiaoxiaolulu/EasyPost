@@ -1,17 +1,27 @@
 import json
 from django.core.exceptions import ObjectDoesNotExist
-from rest_framework import status, mixins, viewsets
+from rest_framework import (
+    status,
+    mixins,
+    viewsets
+)
 from rest_framework.authentication import SessionAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 from api.dao.https import HttpDao
-from api.models.https import Relation, Api
-from api.schema.https import RelationSerializer, ApiSerializer
+from api.models.https import (
+    Relation,
+    Api
+)
+from api.schema.https import (
+    RelationSerializer,
+    ApiSerializer
+)
 from core.request.http_handler import HttpHandler
 from api.response.fatcory import ResponseStandard
-from utils.trees import get_tree_max_id, get_relation_tree, collections_directory_id
+from utils.trees import get_tree_max_id
 
 
 class ApiFastView(APIView):
