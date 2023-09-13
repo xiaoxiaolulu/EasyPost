@@ -6,7 +6,6 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
-
 from api.dao.https import HttpDao
 from api.models.https import Relation, Api
 from api.schema.https import RelationSerializer, ApiSerializer
@@ -92,7 +91,7 @@ class ApiTestListView(mixins.ListModelMixin, viewsets.GenericViewSet):
             project = request.query_params.get("project")
             node = int(request.query_params.get("node"))
             name = request.query_params.get("name")
-            queryset = self.get_queryset().filter(project__id=project).order_by('-update_time')
+            queryset = HttpDao.get_directory_case(project)
 
             HttpDao.list_test_case(queryset, node, project, name)
             page = self.paginate_queryset(queryset)
