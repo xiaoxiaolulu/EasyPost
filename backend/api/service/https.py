@@ -6,6 +6,8 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
+
+from api.dao.https import HttpDao
 from api.models.https import Relation, Api
 from api.schema.https import RelationSerializer, ApiSerializer
 from core.request.http_handler import HttpHandler
@@ -92,20 +94,7 @@ class ApiTestListView(mixins.ListModelMixin, viewsets.GenericViewSet):
             name = request.query_params.get("name")
             queryset = self.get_queryset().filter(project__id=project).order_by('-update_time')
 
-            tree = Relation.objects.get(project__id=project)
-            tree = eval(tree.tree)
-
-            if node == 1:
-                queryset = queryset
-
-            if node != 1:
-                children_tree = get_relation_tree(tree, node)
-                directory_ids = collections_directory_id(children_tree, node)
-                queryset = queryset.filter(project__id=project, directory_id__in=directory_ids)
-
-            if name:
-                queryset = queryset.filter(name=name)
-
+            HttpDao.list_test_case(queryset, node, project, name)
             page = self.paginate_queryset(queryset)
             if page is not None:
                 serializer = self.get_serializer(page, many=True)
