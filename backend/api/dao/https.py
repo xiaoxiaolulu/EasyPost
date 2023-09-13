@@ -22,8 +22,11 @@ class HttpDao:
             raise Exception("获取测试用例失败")
 
     @classmethod
-    def list_test_case(cls, queryset, node: int, project_id: int, name: str = ""):
+    def list_test_case(cls, node: int, project_id: int, name: str = ""):
         try:
+
+            queryset = cls.get_directory_case(project_id)
+
             if project_id:
 
                 if node == 1:

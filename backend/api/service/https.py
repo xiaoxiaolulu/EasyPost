@@ -91,9 +91,8 @@ class ApiTestListView(mixins.ListModelMixin, viewsets.GenericViewSet):
             project = request.query_params.get("project")
             node = int(request.query_params.get("node"))
             name = request.query_params.get("name")
-            queryset = HttpDao.get_directory_case(project)
 
-            HttpDao.list_test_case(queryset, node, project, name)
+            queryset = HttpDao.list_test_case(node, project, name)
             page = self.paginate_queryset(queryset)
             if page is not None:
                 serializer = self.get_serializer(page, many=True)
