@@ -1,21 +1,22 @@
 <template>
   <div class="app-container">
     <div class="header-body">
-      <el-form :inline="true" :model="queryParams" ref="queryParams">
+      <el-form :inline="true" :model="queryParams">
         <el-form-item>
           <el-button
               type="primary"
-              icon="Plus"
+              icon="el-icon-plus"
               @click="addProject">
             创建项目
           </el-button>
         </el-form-item>
-        <el-form-item prop="name" style="float: right">
-          <el-input prefix-icon="el-icon-search"
-                    clearable
-                    v-model.trim="queryParams.name"
-                    placeholder="请输入项目名称"
-                    @keyup.enter.native="queryList"></el-input>
+        <el-form-item style="float: right">
+          <el-input
+              :suffix-icon="Search"
+              clearable
+              v-model.trim="queryParams.name"
+              placeholder="请输入项目名称"
+              @keyup.enter.native="queryList"></el-input>
         </el-form-item>
       </el-form>
     </div>
@@ -23,7 +24,8 @@
       <el-row>
         <el-col :span="6" v-for="(item) in tableData" :key="item.id">
           <div style="width: 95%; margin-top: 20px; margin-left: 5px; cursor: pointer">
-            <el-card shadow="hover" @click.native="editProject(item)">
+            <el-card shadow="hover">
+              <!--            <el-card shadow="hover" @click.native="editProject(item)">-->
               <div class="card-meta-avatar">
                 <span class="avatar avatar-image">
                                       <img :src=item.avatar alt="">
@@ -34,15 +36,21 @@
                   <div style="font-size: 16px; font-weight: bold; color: rgb(65, 74, 105);">
                     {{ item.name }}
                     <el-dropdown style="float: right; color: #b6c1d0">
-                      <i class="el-icon-more"></i>
-                      <el-dropdown-menu size="mini" slot="dropdown">
-                        <el-dropdown-item @click.native="deleteProjectData(item)">
-                          <template slot-scope="scope">
-                            <i style="color: red" icon="Delete"></i>
-                            <span>删除项目</span>
-                          </template>
-                        </el-dropdown-item>
-                      </el-dropdown-menu>
+                      <el-icon>
+                        <component :is="More"/>
+                      </el-icon>
+                      <template #dropdown>
+                        <el-dropdown-menu size="mini">
+                          <el-dropdown-item @click.native="deleteProjectData(item)">
+                            <template #default="scope">
+                              <el-icon style="color: red">
+                                <component :is="Delete"/>
+                              </el-icon>
+                              <span>删除项目</span>
+                            </template>
+                          </el-dropdown-item>
+                        </el-dropdown-menu>
+                      </template>
                     </el-dropdown>
                   </div>
                 </div>
@@ -73,8 +81,7 @@ import {projectList, projectDelete} from "@/api/project";
 import {ElMessage, ElMessageBox, ElPagination} from "element-plus";
 import {useRouter} from "vue-router";
 import {parseTime} from "@/utils";
-import ByteArray from "vue-qr/src/lib/gif.js/GIFEncoder";
-import pageSize = ByteArray.pageSize;
+import {More, Delete, Search} from "@element-plus/icons-vue";
 // import addDialog from './components/addDialog.vue'
 
 const queryParams = reactive({
@@ -130,7 +137,8 @@ const deleteProjectData = (row: any) => {
   console.log(row)
   ElMessageBox.confirm(`确认删除项目数据 - ${row.name}?`).then(_ => {
     projectDelete({id: row.id}).then((response) => {
-      if (response.status === 204) {
+      const {data, code} = response.data
+      if (code === 0) {
         ElMessage.success("删除成功");
         queryList();
       }
@@ -217,5 +225,9 @@ const deleteProjectData = (row: any) => {
   color: rgba(0, 0, 0, .45);
   margin-top: 15px;
   clear: both
+}
+
+:deep(:focus-visible) {
+  outline: none;
 }
 </style>
