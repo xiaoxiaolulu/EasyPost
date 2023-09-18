@@ -24,7 +24,7 @@
         <el-col :span="6" v-for="(item) in tableData" :key="item.id">
           <div style="width: 95%; margin-top: 20px; margin-left: 5px; cursor: pointer">
             <el-card shadow="hover" @click.native="editProject(item)">
-              <div class="card-meta-avatar">l
+              <div class="card-meta-avatar">
                 <span class="avatar avatar-image">
                                       <img :src=item.avatar alt="">
                                     </span>
@@ -139,49 +139,10 @@ const deleteProjectData = (row: any) => {
     ElMessage.error("项目删除失败请重试");
   })
 }
-//
-// export default {
-//     name: 'Project',
-//     components: {
-//         editDialog,
-//         addDialog
-//     },
-//     data() {
-//         return {
-
-//             loading: false,
-//             tableData: null,
-//             tableLoading: false,
-//             count: null,
-//             rowData: null,
-//             addDialogVisible: false
-//         }
-//     },
-//     created() {
-//         this.queryList()
-//     },
-//
-//     methods: {
-//
-
-// }
 </script>
 
 <style scoped lang="scss">
-///deep/ {
-//  .el-input-number {
-//    .el-input__inner {
-//      text-align: left;
-//    }
-//  }
-//}
-//
-//.el-form {
-//  /deep/ .el-form-item--small.el-form-item {
-//    margin-bottom: 0;
-//  }
-//}
-//
+
 .crud-opts {
   padding: 4px 0;
   display: -webkit-flex;
