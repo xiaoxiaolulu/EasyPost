@@ -9,36 +9,38 @@ class MagicListAPI(generics.ListAPIView):
 
         try:
             queryset = self.filter_queryset(self.get_queryset())
-            cache_key = f"{request.user} - {queryset.model._meta.model_name}"  # noqa
 
-            page = self.paginate_queryset(queryset)
+            # get cache
+            cache_key = f"{request.user} - {queryset.model._meta.model_name}"  # noqa
             cache_response = self.get_cache(cache_key)
 
             if not cache_response:
+                page = self.paginate_queryset(queryset)
+                if page is not None:
+                    serializer = self.get_serializer(page, many=True)
+                    return self.get_paginated_response(serializer.data)
 
-                serializer = self.get_serializer(page, many=True)
-                cache_response = self.get_cache(cache_key, serializer.data)
+                serializer = self.get_serializer(queryset, many=True)
+                response = self.set_catch(cache_key, serializer.data)
+            else:
+                response = cache_response
 
-            jsonresponse = dict() # noqa
-            jsonresponse['code'] = 0
-            jsonresponse['msg'] = '操作成功'
-            response = self.get_paginated_response(cache_response)
-            response._headers['cache-control'] = ('Cache-Control', 'max-age=600')  # noqa
-            jsonresponse.update(**response.data)
-            response.data = jsonresponse
-            return response
+            return Response(ResponseStandard.success(response))
 
         except Exception as err:
             response = ResponseStandard.failed(err)
-            return response
+            return Response(response)
 
     @staticmethod
-    def get_cache(cache_key, response=None):
+    def get_cache(cache_key):
         cache_response = cache.get(cache_key)
 
-        if not cache_response:
-            cache.set(cache_key, response)
-            cache_response = cache.get(cache_key)
+        return cache_response
+
+    @staticmethod
+    def set_catch(cache_key, response):
+        cache.set(cache_key, response)
+        cache_response = cache.get(cache_key)
 
         return cache_response
 

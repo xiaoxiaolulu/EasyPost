@@ -1,10 +1,10 @@
 import request from './request'
 
-export function projectList(data: any) {
+export function projectList(params: any) {
     return request({
-        url: '/api/project/list',
+        url: `/api/project/list`,
         method: 'get',
-        data
+        params
     })
 }
 

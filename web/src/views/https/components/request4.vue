@@ -392,8 +392,6 @@ const toggleSelection = (rows: any) => {
 }
 
 const handleSelectionChange = (val: any) => {
-  console.log("想")
-  console.log(val)
   multipleSelection.value = val
 }
 

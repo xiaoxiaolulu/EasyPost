@@ -6,7 +6,7 @@ const httpsRouter = [{
     path: '/project',
     component: Layout,
     redirect: '/tool/404',
-    name: '/project',
+    name: 'project',
     meta: {
         title: '项目管理',
         icon: 'ElementPlus'
@@ -15,7 +15,7 @@ const httpsRouter = [{
         {
             path: '/project/list',
             component: () => import('@/views/project/index.vue'),
-            name: 'project',
+            name: 'projectList',
             meta: { title: '项目管理', icon: 'FolderRemove'  }
         }
     ]

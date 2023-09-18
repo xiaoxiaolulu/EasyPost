@@ -86,6 +86,14 @@ body{
   box-sizing: border-box;
 }
 
+.header-body {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  padding: 14px;
+}
+
 .layout-horizontal{
   .header-icon{
     color:#bfcbd9!important;
