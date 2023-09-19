@@ -86,6 +86,7 @@ import {useRouter} from "vue-router";
 import {parseTime} from "@/utils";
 import {More, Delete, Search} from "@element-plus/icons-vue";
 import addDialog from './components/addDialog.vue'
+import {showErrMessage} from "@/utils/element";
 
 
 const isShow = ref(false);
@@ -143,11 +144,9 @@ const editProject = (row: any) => {
 const deleteProjectData = (row: any) => {
   ElMessageBox.confirm(`确认删除项目数据 - ${row.name}?`).then(_ => {
     projectDelete({id: row.id}).then((response) => {
-      const {data, code} = response.data
-      if (code === 0) {
-        ElMessage.success("删除成功");
-        queryList();
-      }
+      const {data, code, msg} = response.data
+      showErrMessage(code.toString(), msg)
+      queryList();
     })
   }).catch(_ => {
     ElMessage.error("项目删除失败请重试");
