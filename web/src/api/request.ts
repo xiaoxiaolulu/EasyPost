@@ -1,5 +1,4 @@
 import axios, { AxiosInstance, AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios'
-import { ElMessage } from "element-plus";
 import {useUserStore} from "@/store/modules/user"
 // 创建axios实例 进行基本参数配置
 const service = axios.create({
@@ -37,21 +36,5 @@ service.interceptors.response.use((response: AxiosResponse) =>{
 },(error: AxiosError) => {
     return Promise.reject(error)
 })
-
-
-/**
- * @description 显示错误消息
- * opt 传入参数
- * err 错误信息
- * type 消息类型
- * duration 消息持续时间
- */
-function showErrMessage (opt, err, type:any= 'error', duration:number = 5000){
-    ElMessage({
-        message: err.msg,
-        type:type,
-        duration: duration
-    })
-}
 
 export default service

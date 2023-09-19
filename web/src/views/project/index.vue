@@ -16,7 +16,8 @@
               clearable
               v-model.trim="queryParams.name"
               placeholder="请输入项目名称"
-              @keyup.enter.native="queryList"></el-input>
+              @keyup.enter.native="queryList">
+          </el-input>
         </el-form-item>
       </el-form>
     </div>
@@ -55,8 +56,10 @@
                   </div>
                 </div>
                 <div class="card-description">{{ item.desc }}</div>
-                <div class="card-description">负责人：{{ item.user.username }}</div>
-                <div class="card-description">更新时间：{{ parseTime(item.create_time) }}</div>
+                <div class="card-description">负责人：
+                  <span style="color:rgb(22, 119, 255)">{{ item.user.username }}</span>
+                </div>
+                <div class="card-description">更新时间：{{ parseTime(item.create_time) }}</div>  
               </div>
             </el-card>
           </div>
@@ -71,7 +74,7 @@
         :total="count"
         @current-change="handlePageChange">
     </el-pagination>
-    <!--    <addDialog v-model="addDialogVisible" :dialogData="rowData"></addDialog>-->
+    <add-dialog v-model="isShow"  @onChangeDialog="onChangeDialog"/>
   </div>
 </template>
 
@@ -82,7 +85,18 @@ import {ElMessage, ElMessageBox, ElPagination} from "element-plus";
 import {useRouter} from "vue-router";
 import {parseTime} from "@/utils";
 import {More, Delete, Search} from "@element-plus/icons-vue";
-// import addDialog from './components/addDialog.vue'
+import addDialog from './components/addDialog.vue'
+
+
+const isShow = ref(false);
+
+const addProject = () => {
+  isShow.value = true;
+};
+const onChangeDialog = (val: any) => {
+  isShow.value = false;
+  queryList()
+};
 
 const queryParams = reactive({
   name: '',
@@ -93,18 +107,11 @@ const router = useRouter()
 
 const rowData = ref(null)
 
-const addDialogVisible = ref(false)
-
 const tableLoading = ref(false)
 
 const tableData = ref(null)
 
 const count = ref(0)
-
-const addProject = (row: any) => {
-  rowData.value = row
-  addDialogVisible.value = true
-}
 
 const handlePageChange = (newPage: any) => {
   queryParams.page = newPage
@@ -134,7 +141,6 @@ const editProject = (row: any) => {
 }
 
 const deleteProjectData = (row: any) => {
-  console.log(row)
   ElMessageBox.confirm(`确认删除项目数据 - ${row.name}?`).then(_ => {
     projectDelete({id: row.id}).then((response) => {
       const {data, code} = response.data
@@ -147,6 +153,7 @@ const deleteProjectData = (row: any) => {
     ElMessage.error("项目删除失败请重试");
   })
 }
+
 </script>
 
 <style scoped lang="scss">

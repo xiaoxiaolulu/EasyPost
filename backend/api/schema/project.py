@@ -57,7 +57,7 @@ class UpdateAvatarSerializers(serializers.ModelSerializer):
 
 class ProjectListSerializers(serializers.ModelSerializer):
 
-    id = serializers.IntegerField(read_only=True)
+    id = serializers.IntegerField(read_only=True)  # noqa
     user = UserSimpleSerializers(required=False, default=serializers.CurrentUserDefault())
     create_time = serializers.DateTimeField(read_only=True)
     update_time = serializers.DateTimeField(read_only=True)
