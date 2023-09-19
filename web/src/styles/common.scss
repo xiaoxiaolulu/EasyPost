@@ -94,6 +94,30 @@ body{
   padding: 14px 14px 0 14px;
 }
 
+.header-container {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px 5px;
+
+  .filter-item {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 3px 10px 0;
+
+    input {
+      height: 30.5px;
+      line-height: 30.5px;
+    }
+  }
+
+  .filter-button-item {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
 .layout-horizontal{
   .header-icon{
     color:#bfcbd9!important;

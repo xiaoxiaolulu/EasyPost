@@ -66,8 +66,6 @@ const rules = reactive({
   desc: [{required: true, trigger: "blur", message: "请输入项目描述！"}]
 })
 
-const title = ref("")
-
 const isShow = computed({
   get() {
     return props.modelValue;
