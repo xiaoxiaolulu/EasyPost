@@ -17,6 +17,13 @@ const httpsRouter = [{
             component: () => import('@/views/project/index.vue'),
             name: 'projectList',
             meta: { title: '项目管理', icon: 'FolderRemove'  }
+        },
+        {
+            path: '/project/detail',
+            component: () => import('@/views/project/components/editProject.vue'),
+            name: 'projectDetail',
+            hidden: true,
+            meta: { title: '项目详情', icon: 'FolderRemove'  }
         }
     ]
 }]

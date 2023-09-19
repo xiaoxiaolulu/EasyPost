@@ -1,35 +1,35 @@
 <template>
-    <div>
+    <div class="app-container">
         <div class="header-container">
             <div class="card-head-title">
                 <div class="card-description">
-                    <span class="page-header-back-button el-icon-back" @click="goProjectList"></span>
+                    <span class="page-header-back-button el-icon-back" @click=""></span>
                     <span class="page-header-heading-title">{{projectName}}</span>
                 </div>
             </div>
         </div>
         <div class="container">
-            <el-tabs v-model="activeName" @tab-click="handleClick">
+            <el-tabs v-model="activeName" @tab-click="">
                 <el-tab-pane label="项目设置" name="1">
                     <div style="text-align: center; margin-bottom: 24px; row-gap: 0px;">
                                 <span class="avatar project-avatar-image">
-                                    <myUpload
-                                            v-model="show"
-                                            @crop-success="cropSuccess"
-                                            @crop-upload-success="cropUploadSuccess"
-                                            @crop-upload-fail="cropUploadFail"
-                                            :headers="headers"
-                                            field="avatar"
-                                            :url="imgUrl"
-                                            method="PUT"
-                                            langType='zh'
-                                            :noRotate='false'
-                                    />
-                                <img v-if="AvatarType" :src="formData.avatar != null ? formData.avatar : Avatar"
-                                     title="点击上传头像"
-                                     class="avatar" @click="toggleShow" alt="">
-                                <img v-if="!AvatarType" :src="imgDataUrl != null ? imgDataUrl : Avatar" class="avatar"
-                                     @click="toggleShow" alt="">
+<!--                                    <myUpload-->
+<!--                                            v-model="show"-->
+<!--                                            @crop-success="cropSuccess"-->
+<!--                                            @crop-upload-success="cropUploadSuccess"-->
+<!--                                            @crop-upload-fail="cropUploadFail"-->
+<!--                                            :headers="headers"-->
+<!--                                            field="avatar"-->
+<!--                                            :url="imgUrl"-->
+<!--                                            method="PUT"-->
+<!--                                            langType='zh'-->
+<!--                                            :noRotate='false'-->
+<!--                                    />-->
+<!--                                <img v-if="AvatarType" :src="formData.avatar != null ? formData.avatar : Avatar"-->
+<!--                                     title="点击上传头像"-->
+<!--                                     class="avatar" @click="toggleShow" alt="">-->
+<!--                                <img v-if="!AvatarType" :src="imgDataUrl != null ? imgDataUrl : Avatar" class="avatar"-->
+<!--                                     @click="toggleShow" alt="">-->
                                 </span>
                     </div>
                     <div style="padding-left: 400px">
@@ -63,21 +63,21 @@
 </template>
 
 <script>
-    import {updateProject, projectDetail} from "@/api/api";
-    import myUpload from 'vue-image-crop-upload'
-    import Avatar from '@/assets/images/avatar.png'
+    // import {updateProject, projectDetail} from "@/api/api";
+    // import myUpload from 'vue-image-crop-upload'
+    // import Avatar from '@/assets/images/avatar.png'
 
     export default {
-        components: {myUpload},
+        // components: {myUpload},
         data() {
             return {
                 show: false,
                 AvatarType: true,
                 imgUrl: null,
                 imgDataUrl: null,
-                Avatar: Avatar,
+                // Avatar: Avatar,
                 headers: {
-                    'Authorization': `JWT ${this.$store.state.userInfo.token}`
+                    // 'Authorization': `JWT ${this.$store.state.userInfo.token}`
                 },
                 activeName: "1",
                 type: [
@@ -101,25 +101,25 @@
             }
         },
         mounted() {
-            const pk = this.$route.query.id;
-            projectDetail({id: pk}).then(res => {
-                const response = res.data;
-                this.projectName = response.name;
-                this.formData = {
-                    avatar: response.avatar,
-                    name: response.name,
-                    type: response.type,
-                    desc: response.desc
-                }
-                this.imgUrl = process.env.VUE_APP_URL + "/api/project/" + pk + "/";
-            }).catch(res => {
-                console.log(res);
-            });
+            // const pk = this.$route.query.id;
+            // projectDetail({id: pk}).then(res => {
+            //     const response = res.data;
+            //     this.projectName = response.name;
+            //     this.formData = {
+            //         avatar: response.avatar,
+            //         name: response.name,
+            //         type: response.type,
+            //         desc: response.desc
+            //     }
+            //     this.imgUrl = process.env.VUE_APP_URL + "/api/project/" + pk + "/";
+            // }).catch(res => {
+            //     console.log(res);
+            // });
         },
         watch: {
             value(val) {
                 this.editDialogVisible = val;
-                this.formData = {...this.$parent.rowData}
+                // this.formData = {...this.$parent.rowData}
             },
             editDialogVisible(val) {
                 this.$emit('input', val)
@@ -129,49 +129,49 @@
             toggleShow() {
                 this.show = !this.show
             },
-            cropSuccess(imgDataUrl, field) {
-                console.log('-------- crop success --------', imgDataUrl, field);
-            },
-            cropUploadSuccess(jsonData, field) {
-                console.log('-------- upload success --------');
-                this.imgDataUrl = jsonData.avatar;
-                this.show = false;
-                this.AvatarType = false;
-                console.log('field: ' + field);
-            },
-            cropUploadFail(status, field) {
-                console.log('-------- upload fail --------');
-                console.log('field: ' + field);
-            },
-            handleClick(tab, event) {
-                console.log(tab, event);
-            },
-            goProjectList() {
-                this.$router.push({
-                    name: "project"
-                });
-            },
+            // cropSuccess(imgDataUrl, field) {
+            //     console.log('-------- crop success --------', imgDataUrl, field);
+            // },
+            // cropUploadSuccess(jsonData, field) {
+            //     console.log('-------- upload success --------');
+            //     this.imgDataUrl = jsonData.avatar;
+            //     this.show = false;
+            //     this.AvatarType = false;
+            //     console.log('field: ' + field);
+            // },
+            // cropUploadFail(status, field) {
+            //     console.log('-------- upload fail --------');
+            //     console.log('field: ' + field);
+            // },
+            // handleClick(tab, event) {
+            //     console.log(tab, event);
+            // },
+            // goProjectList() {
+            //     this.$router.push({
+            //         name: "project"
+            //     });
+            // },
             submitForm(formName) {
-                this.$refs[formName].validate((valid) => {
-                    if (valid) {
-                        updateProject({
-                            id: this.$route.query.id,
-                            name: this.formData.name,
-                            type: this.formData.type,
-                            desc: this.formData.desc,
-                        }).then((response) => {
-                            this.projectName = response.data.name;
-                            console.log(response.data);
-                            this.$message.success("项目编辑成功!");
-                        }).catch((err) => {
-                            console.log(err)
-                            this.$message.error("项目编辑失败请重试!");
-                        })
-                    } else {
-                        console.log('error submit!!');
-                        return false
-                    }
-                })
+                // this.$refs[formName].validate((valid) => {
+                //     if (valid) {
+                //         updateProject({
+                //             id: this.$route.query.id,
+                //             name: this.formData.name,
+                //             type: this.formData.type,
+                //             desc: this.formData.desc,
+                //         }).then((response) => {
+                //             this.projectName = response.data.name;
+                //             console.log(response.data);
+                //             this.$message.success("项目编辑成功!");
+                //         }).catch((err) => {
+                //             console.log(err)
+                //             this.$message.error("项目编辑失败请重试!");
+                //         })
+                //     } else {
+                //         console.log('error submit!!');
+                //         return false
+                //     }
+                // })
             },
         }
     }

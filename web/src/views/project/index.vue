@@ -25,8 +25,7 @@
       <el-row>
         <el-col :span="6" v-for="(item) in tableData" :key="item.id">
           <div style="width: 95%; margin-top: 20px; margin-left: 5px; cursor: pointer">
-            <el-card shadow="hover">
-              <!--            <el-card shadow="hover" @click.native="editProject(item)">-->
+            <el-card shadow="hover" @click.native="editProject(item)">
               <div class="card-meta-avatar">
                 <span class="avatar avatar-image">
                                       <img :src=item.avatar alt="">
@@ -136,7 +135,7 @@ queryList()
 const editProject = (row: any) => {
   rowData.value = row;
   router.push({
-    name: "project/detail",
+    name: "projectDetail",
     query: {id: row.id}
   });
 }
