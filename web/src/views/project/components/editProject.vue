@@ -3,7 +3,7 @@
     <div class="header-container">
       <div class="card-head-title">
         <div class="card-description">
-                    <span class="page-header-back-button el-icon-back" @click="">
+                    <span class="page-header-back-button el-icon-back" @click="goProjectList">
                       <el-icon>
                         <component :is="Back"/>
                       </el-icon>
@@ -37,7 +37,7 @@
                                 </span>
           </div>
           <div style="padding-left: 400px">
-            <el-form autoComplete="on" :model="formData" :rules="resetRules" ref="formData"
+            <el-form autoComplete="on" :model="form" :rules="rules" ref="ruleFormRef"
                      class="lk-form"
                      label-position="right"
                      label-width="100px"
@@ -57,7 +57,7 @@
               </el-form-item>
             </el-form>
             <div class="pull-right">
-              <el-button :loading="loading" class="el-icon-receiving" type="primary" @click="submitForm('form')">确
+              <el-button :loading="loading" :icon="Collection" type="primary" @click="submitForm(ruleFormRef)">确
                 认
               </el-button>
             </div>
@@ -69,8 +69,13 @@
 </template>
 
 <script lang="ts" setup>
-import {ref, reactive} from 'vue'
+import {ref, reactive, onMounted} from 'vue'
 import {Back} from "@element-plus/icons-vue";
+import {projectCreate, projectDetail, projectUpdate} from "@/api/project";
+import {Collection} from "@element-plus/icons-vue";
+import {useRouter} from "vue-router";
+import {showErrMessage} from "@/utils/element";
+import {ElMessage, FormInstance} from "element-plus";
 
 const show = ref(false)
 
@@ -89,14 +94,16 @@ const type = ref([
   'MiniProgram'
 ])
 
-const projectName = ref("3333")
+const projectName = ref("")
+
+const ruleFormRef = ref<FormInstance>()
 
 let form = reactive({
   name: '',
+  avatar: '',
   type: '',
   desc: ''
 })
-
 
 const rules = reactive({
   name: [{required: true, trigger: "blur", message: "请输入项目名称！"}],
@@ -106,6 +113,45 @@ const rules = reactive({
 
 const loading = ref(false)
 
+const router = useRouter()
+
+const goProjectList = () => {
+  router.push({
+    name: "projectList",
+  })
+}
+
+onMounted(()=>{
+  const pk = router.currentRoute.value.query.id
+  projectDetail({id: pk}).then(res => {
+    const {code, data, msg} = res.data
+    // showErrMessage(code.toString(), msg)
+    projectName.value = data.name
+    form.name = data.name;
+    form.avatar = data.avatar
+    form.type = data.type;
+    form.desc = data.desc;
+  }).catch(res => {
+    console.log(res);
+  });
+})
+
+const submitForm = (formName: FormInstance | undefined) => {
+  if (!formName) return
+  formName.validate(async (valid) => {
+    if (valid) {
+      form["id"] = router.currentRoute.value.query.id
+      delete form.avatar
+      const ret = await projectUpdate(form)
+      const {code, data, msg} = ret.data
+      showErrMessage(code.toString(), msg)
+    } else {
+      console.log('error submit!')
+      ElMessage.error("项目更新失败请重试!")
+      return false
+    }
+  })
+}
 </script>
 
 <style lang="scss">
