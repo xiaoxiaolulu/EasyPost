@@ -284,7 +284,7 @@ const handleDelete = (index: number, row: object) => {
       "user_id": row.user.id
     }).then((response) => {
       const {data, code, msg} = response.data
-      tableData.value.splice(index, 1)
+      tableData.splice(index, 1)
       showErrMessage(code.toString(), msg)
     })
   }).catch(_ => {
@@ -301,7 +301,7 @@ const handleAdd = () => {
   }).then((response) => {
     const {data, code, msg} = response.data
     if(data){
-      tableData.value.push(data)
+      tableData.push(data)
     }
     showErrMessage(code.toString(), msg)
     dialogVisible.value = false
