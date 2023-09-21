@@ -82,7 +82,7 @@
             </el-form>
           </div>
           <div>
-            <el-table :data="tableData" style="width: 100%">
+            <el-table :data="filterTableData" style="width: 100%">
               <el-table-column label="" prop="user.username">
                 <template #default="scope">
                   <div style="margin-inline-end:16px;display:inline">
@@ -156,7 +156,7 @@
 </template>
 
 <script lang="ts" setup>
-import {ref, reactive, onMounted, watch} from 'vue'
+import {ref, reactive, onMounted, watch, computed} from 'vue'
 import {Back, Delete} from "@element-plus/icons-vue";
 import {projectDetail, projectUpdate, projectRoleDelete, projectRoleAdd} from "@/api/project";
 import {userList} from "@/api/user";
@@ -170,9 +170,7 @@ const search = ref('')
 
 const dialogVisible = ref(false)
 
-const tableData = ref([])
-
-const oldTableData = ref([])
+const tableData = reactive([])
 
 const activeName = ref("1")
 
@@ -232,7 +230,7 @@ onMounted(() => {
     form.desc = data.desc;
     form.private = data.private
     form.avatar = imgDataUrl.value = data.avatar
-    tableData.value = oldTableData.value = data.roles
+    tableData.push(...data.roles)
   }).catch(res => {
     console.log(res);
   });
@@ -287,7 +285,6 @@ const handleDelete = (index: number, row: object) => {
     }).then((response) => {
       const {data, code, msg} = response.data
       tableData.value.splice(index, 1)
-      oldTableData.value.slice(index, 1)
       showErrMessage(code.toString(), msg)
     })
   }).catch(_ => {
@@ -313,22 +310,13 @@ const handleAdd = () => {
   })
 }
 
-const roleFilter = () => {
-  if (search.value == "") {
-    tableData.value = oldTableData.value
-  } else {
-    const newTableList = []
-    const obj = oldTableData.value.find((o) => o.user.username == search.value)
-    if (obj) {
-      newTableList.push(obj)
-    }
-    tableData.value = newTableList
-  }
-}
-
-watch(search, (newName, oldName) => {
-  roleFilter()
-});
+const filterTableData = computed(() =>
+    tableData.filter(
+        (data) =>
+            !search.value ||
+            data.user.username.toLowerCase().includes(search.value.toLowerCase())
+    )
+)
 
 watch(tableData, (newName, oldName) => {
   console.log(`tableData ${newName} -> ${oldName}`)
