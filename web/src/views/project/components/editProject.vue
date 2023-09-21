@@ -277,7 +277,7 @@ const handleChange = (rawFile: any) => {
   return true
 }
 
-const handleDelete = (index: number, row: object) => {
+const handleDelete = (index: number, row: any) => {
   ElMessageBox.confirm(`确认删除成员权限 - ${row.user.username}?`).then(_ => {
     projectRoleDelete({
       "project_id": row.project,
