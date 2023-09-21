@@ -15,26 +15,19 @@
     <div class="container">
       <el-tabs v-model="activeName" @tab-click="">
         <el-tab-pane label="项目设置" name="1">
-          <div style="text-align: center; margin-bottom: 24px; row-gap: 0px;">
-                                <span class="avatar project-avatar-image">
-<!--                                    <myUpload-->
-                                  <!--                                            v-model="show"-->
-                                  <!--                                            @crop-success="cropSuccess"-->
-                                  <!--                                            @crop-upload-success="cropUploadSuccess"-->
-                                  <!--                                            @crop-upload-fail="cropUploadFail"-->
-                                  <!--                                            :headers="headers"-->
-                                  <!--                                            field="avatar"-->
-                                  <!--                                            :url="imgUrl"-->
-                                  <!--                                            method="PUT"-->
-                                  <!--                                            langType='zh'-->
-                                  <!--                                            :noRotate='false'-->
-                                  <!--                                    />-->
-                                  <!--                                <img v-if="AvatarType" :src="formData.avatar != null ? formData.avatar : Avatar"-->
-                                  <!--                                     title="点击上传头像"-->
-                                  <!--                                     class="avatar" @click="toggleShow" alt="">-->
-                                  <!--                                <img v-if="!AvatarType" :src="imgDataUrl != null ? imgDataUrl : Avatar" class="avatar"-->
-                                  <!--                                     @click="toggleShow" alt="">-->
-                                </span>
+          <div style="text-align: center; margin-bottom: 24px; row-gap: 0;">
+            <span class="avatar project-avatar-image">
+              <el-upload
+                  ref="uploadRefs"
+                  :auto-upload="false"
+                  :on-change="handleChange"
+                  :show-file-list="false"
+                  v-model:file-list="form.fileList"
+              >
+                <img v-if="imgDataUrl" :src="imgDataUrl" class="avatar" alt="">
+                <el-icon v-else><Plus/></el-icon>
+              </el-upload>
+            </span>
           </div>
           <div style="padding-left: 400px">
             <el-form autoComplete="on" :model="form" :rules="rules" ref="ruleFormRef"
@@ -43,7 +36,7 @@
                      label-width="100px"
             >
               <el-form-item label="项目名称" :required="true" prop="name">
-                <el-input v-model="form.name" style="width: 350px;"></el-input>
+                <el-input v-model="form.name" style="width: 350px;" placeholder="请输入项目名称"></el-input>
               </el-form-item>
               <el-form-item label="项目类型" :required="true" prop="type">
                 <el-select type="type" v-model="form.type" v-loading="loading"
@@ -52,8 +45,18 @@
                   </el-option>
                 </el-select>
               </el-form-item>
-              <el-form-item label="项目描述" :required="true" prop="desc">
-                <el-input v-model="form.desc" style="width: 350px;"></el-input>
+              <el-form-item label="项目描述" prop="desc">
+                <el-input v-model="form.desc" style="width: 350px;"
+                          :rows="2"
+                          type="textarea"
+                          placeholder="请输入项目描述">
+                </el-input>
+              </el-form-item>
+              <el-form-item label="是否私有" :required="true" prop="private">
+               <el-switch v-model="form.private"
+                          :active-value="0"
+                          :inactive-value="1">
+               </el-switch>
               </el-form-item>
             </el-form>
             <div class="pull-right">
@@ -63,27 +66,98 @@
             </div>
           </div>
         </el-tab-pane>
+        <el-tab-pane label="成员列表" name="2">
+          <div>
+            <el-form :inline="true">
+              <el-form-item>
+                <el-button
+                    :icon="Plus"
+                    size="default"
+                    type="primary"
+                    icon="el-icon-plus"
+                    @click="">
+                  添加成员
+                </el-button>
+              </el-form-item>
+            </el-form>
+          </div>
+          <div>
+            <el-table :data="tableData" style="width: 100%">
+              <el-table-column label="" prop="user.username">
+                <template #default="scope">
+                  <span>{{scope.row.user.username}}</span>
+                </template>
+              </el-table-column>
+              <el-table-column label="" prop="rode_id" >
+                <template #default="scope">
+                  <el-popover effect="light" trigger="hover" placement="top" width="auto">
+                    <template #reference>
+                      <el-tag :type="scope.row.rode_id=='0'?'':'success'"
+                      >{{ scope.row.rode_id=='0'?'负责人':'组员'}}</el-tag>
+                    </template>
+                  </el-popover>
+                </template>
+              </el-table-column>
+              <el-table-column align="right">
+                <template #header>
+                  <el-input v-model="search" size="small" placeholder="搜索用户名" />
+                </template>
+                <template #default="scope">
+                  <el-button size="small" @click="handleEdit(scope.$index, scope.row)"
+                  >Edit</el-button
+                  >
+                  <el-button
+                      size="small"
+                      type="danger"
+                      @click="handleDelete(scope.$index, scope.row)"
+                  >Delete</el-button
+                  >
+                </template>
+              </el-table-column>
+            </el-table>
+          </div>
+        </el-tab-pane>
       </el-tabs>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import {ref, reactive, onMounted} from 'vue'
+import {ref, reactive, onMounted, watch} from 'vue'
 import {Back} from "@element-plus/icons-vue";
-import {projectCreate, projectDetail, projectUpdate} from "@/api/project";
-import {Collection} from "@element-plus/icons-vue";
+import {projectDetail, projectUpdate} from "@/api/project";
+import {Collection, Plus} from "@element-plus/icons-vue";
 import {useRouter} from "vue-router";
 import {showErrMessage} from "@/utils/element";
 import {ElMessage, FormInstance} from "element-plus";
+import type {UploadInstance} from 'element-plus'
 
-const show = ref(false)
+const search = ref('')
 
-const AvatarType = ref(true)
+const handleEdit = (index: number, row) => {
+  console.log(index, row)
+}
+const handleDelete = (index: number, row) => {
+  console.log(index, row)
+}
 
-const imgUrl = ref(null)
+const roleFilter = () => {
+  if(search.value==""){
+    tableData.value = oldTableData.value
+  }
+  else {
+    const newTableList = []
+    const obj = oldTableData.value.find((o) => o.user.username == search.value)
+    if (obj){
+      newTableList.push(obj)
+    }
+    tableData.value = newTableList
+  }
+}
 
-const imgDataUrl = ref(null)
+const tableData  = ref([])
+
+const oldTableData = ref([])
 
 const activeName = ref("1")
 
@@ -98,17 +172,23 @@ const projectName = ref("")
 
 const ruleFormRef = ref<FormInstance>()
 
-let form = reactive({
+const uploadRefs = ref<UploadInstance>()
+
+const imgDataUrl = ref("")
+
+let form = reactive<any>({
   name: '',
   avatar: '',
   type: '',
-  desc: ''
+  desc: '',
+  private: 1,
+  fileList: []
 })
 
 const rules = reactive({
   name: [{required: true, trigger: "blur", message: "请输入项目名称！"}],
   type: [{required: true, trigger: "blur", message: "请选择项目类型！"}],
-  desc: [{required: true, trigger: "blur", message: "请输入项目描述！"}]
+  private: [{required: true, trigger: "blur", message: "请选择项目是否私有！"}]
 })
 
 const loading = ref(false)
@@ -121,16 +201,17 @@ const goProjectList = () => {
   })
 }
 
-onMounted(()=>{
+onMounted(() => {
   const pk = router.currentRoute.value.query.id
   projectDetail({id: pk}).then(res => {
     const {code, data, msg} = res.data
-    // showErrMessage(code.toString(), msg)
     projectName.value = data.name
     form.name = data.name;
-    form.avatar = data.avatar
     form.type = data.type;
     form.desc = data.desc;
+    form.private = data.private
+    form.avatar = imgDataUrl.value= data.avatar
+    tableData.value = oldTableData.value = data.roles
   }).catch(res => {
     console.log(res);
   });
@@ -141,7 +222,7 @@ const submitForm = (formName: FormInstance | undefined) => {
   formName.validate(async (valid) => {
     if (valid) {
       form["id"] = router.currentRoute.value.query.id
-      delete form.avatar
+      form.avatar = form.fileList[0]!=null?form.fileList[0].raw:URL.revokeObjectURL(form.avatar)
       const ret = await projectUpdate(form)
       const {code, data, msg} = ret.data
       showErrMessage(code.toString(), msg)
@@ -152,6 +233,22 @@ const submitForm = (formName: FormInstance | undefined) => {
     }
   })
 }
+
+const handleChange = (rawFile: any) => {
+  if (rawFile.raw.type !== 'image/jpeg') {
+    ElMessage.error('Avatar picture must be JPG format!')
+    return false
+  } else if (rawFile.raw.size / 1024 / 1024 > 2) {
+    ElMessage.error('Avatar picture size can not exceed 2MB!')
+    return false
+  }
+  imgDataUrl.value = URL.createObjectURL(rawFile.raw!)
+  return true
+}
+
+watch(search, (newName, oldName) => {
+  roleFilter()
+});
 </script>
 
 <style lang="scss">

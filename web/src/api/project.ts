@@ -28,6 +28,7 @@ export function projectUpdate(data: any) {
     return request({
         url: `/api/project/update/${data.id}`,
         method: 'put',
+        headers: {'Content-Type': 'multipart/form-data'},
         data
     })
 }

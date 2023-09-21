@@ -69,6 +69,13 @@ body{
   box-shadow: 0 0 10px $primaryColor, 0 0 5px $primaryColor !important;
 }
 
+.container {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 14px;
+}
+
 .app-container {
   height: 100%;
   width: 100%;
