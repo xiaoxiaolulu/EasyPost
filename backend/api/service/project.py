@@ -1,7 +1,8 @@
 import json
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import (
-    filters
+    filters,
+    generics
 )
 from rest_framework.authentication import SessionAuthentication
 from rest_framework.permissions import IsAuthenticated
@@ -16,10 +17,9 @@ from api.models.project import (
 )
 from api.schema.project import (
     ProjectSerializers,
-    ProjectListSerializers, ProjectRoleSerializers
+    ProjectRoleSerializers
 )
 from api.response.magic import (
-    MagicListAPI,
     MagicDestroyApi,
     MagicUpdateApi,
     MagicCreateApi,
@@ -28,10 +28,8 @@ from api.response.magic import (
 )
 
 
-class ProjectListViewSet(MagicListAPI):  # noqa
-
-    queryset = Project.objects.all()
-    serializer_class = ProjectListSerializers
+class ProjectListViewSet(generics.ListAPIView):
+    serializer_class = ProjectSerializers
     permission_classes = [IsAuthenticated]
     authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
@@ -39,8 +37,26 @@ class ProjectListViewSet(MagicListAPI):  # noqa
     search_fields = ['name']
     ordering_fields = ['create_time']
 
+    def list(self, request, *args, **kwargs):
 
-class ProjectDestroyViewSet(MagicDestroyApi): # noqa
+        try:
+            queryset = self.filter_queryset(ProjectDao.get_project_list(request.user.id))
+
+            page = self.paginate_queryset(queryset) # noqa
+            if page is not None:
+                serializer = self.get_serializer(page, many=True)
+                return self.get_paginated_response(serializer.data)
+
+            serializer = self.get_serializer(queryset, many=True)
+
+            return Response(ResponseStandard.success(serializer.data))
+
+        except Exception as err:
+            response = ResponseStandard.failed(err)
+            return Response(response)
+
+
+class ProjectDestroyViewSet(MagicDestroyApi):  # noqa
     queryset = Project.objects.all()
     serializer_class = ProjectSerializers
     permission_classes = [IsAuthenticated]
@@ -100,7 +116,6 @@ class ProjectRoleDestroyViewSet(APIView):
 
 
 class ProjectRoleUpdateViewSet(APIView):
-
     permission_classes = [IsAuthenticated]  # noqa
     authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
 

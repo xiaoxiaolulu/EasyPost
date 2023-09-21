@@ -9,6 +9,19 @@ from api.models.project import (
 class ProjectDao:
 
     @staticmethod
+    def get_project_list(user_id):
+        """
+        查看用户具有权限的项目
+        """
+        try:
+            queryset = ProjectRole.objects.filter(user_id=user_id).all()
+            queryset = Project.objects.filter(
+                Q(id__in=[instance.project_id for instance in queryset]) | Q(private=1) | Q(user_id=user_id))
+            return queryset
+        except(ProjectRole.DoesNotExist, Exception):
+            raise Exception("获取用户项目列表失败!")
+
+    @staticmethod
     def project_name_validate(name: str) -> bool:
 
         try:
@@ -16,7 +29,7 @@ class ProjectDao:
 
             if model_object:
                 return True
-        except (Project.DoesNotExist, ):
+        except (Project.DoesNotExist,):
             return False
 
     @staticmethod

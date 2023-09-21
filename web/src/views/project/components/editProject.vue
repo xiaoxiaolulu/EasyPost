@@ -108,8 +108,9 @@
                   <el-button v-show="scope.row.rode_id=='1'"
                              size="small"
                              type="danger"
+                             :icon="Delete"
                              @click="handleDelete(scope.$index, scope.row)"
-                  >Delete
+                  >
                   </el-button
                   >
                 </template>
@@ -156,7 +157,7 @@
 
 <script lang="ts" setup>
 import {ref, reactive, onMounted, watch} from 'vue'
-import {Back} from "@element-plus/icons-vue";
+import {Back, Delete} from "@element-plus/icons-vue";
 import {projectDetail, projectUpdate, projectRoleDelete, projectRoleAdd} from "@/api/project";
 import {userList} from "@/api/user";
 import {Collection, Plus} from "@element-plus/icons-vue";
