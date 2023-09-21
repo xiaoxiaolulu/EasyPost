@@ -2,8 +2,13 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.backends import ModelBackend
 from django.core.exceptions import ImproperlyConfigured
 from django.db.models import Q
+from rest_framework.authentication import SessionAuthentication
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
+from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 from rest_framework_jwt.views import ObtainJSONWebToken
+from api.response.magic import MagicListAPI
+from api.schema.user import UserSimpleSerializers
 from core.exception.exception_handler import jwt_response_payload_error_handler
 from api.response.fatcory import ResponseStandard
 
@@ -46,3 +51,13 @@ class CustomJsonWebToken(ObtainJSONWebToken):
 
         response = jwt_response_payload_error_handler(serializer, request)
         return response
+
+
+class UserListViewSet(MagicListAPI):
+
+    queryset = User.objects.all()
+    serializer_class = UserSimpleSerializers
+    permission_classes = [IsAuthenticated]
+    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
+    ordering_fields = ['create_time']
+

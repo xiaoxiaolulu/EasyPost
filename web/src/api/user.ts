@@ -7,3 +7,11 @@ export function login(data: any) {
         data
     })
 }
+
+export function userList(data: any) {
+    return request({
+        url: '/api/user/list',
+        method: 'get',
+        data
+    })
+}

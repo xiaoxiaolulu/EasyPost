@@ -16,7 +16,7 @@ from api.models.project import (
 )
 from api.schema.project import (
     ProjectSerializers,
-    ProjectListSerializers
+    ProjectListSerializers, ProjectRoleSerializers
 )
 from api.response.magic import (
     MagicListAPI,
@@ -119,11 +119,12 @@ class ProjectRoleUpdateViewSet(APIView):
             if exist:
                 return Response(ResponseStandard.failed(msg="当前角色已填权限!"))
             else:
-                ProjectRole.objects.create(
+                ret = ProjectRole.objects.create(
                     project_id=project_pk,
                     user_id=user_pk,
                     rode_id=roles
                 )
-                return Response(ResponseStandard.success())
+                serializer = ProjectRoleSerializers(ret, context={'request': request})
+                return Response(ResponseStandard.success(data=serializer.data))
         except Exception as err:
             return Response(ResponseStandard.failed(msg=str(err)))

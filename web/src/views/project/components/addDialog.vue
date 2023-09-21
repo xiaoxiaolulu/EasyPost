@@ -7,7 +7,7 @@
              label-position="right"
              label-width="100px">
       <el-form-item label="项目名称" :required="true" prop="name">
-        <el-input v-model="form.name"></el-input>
+        <el-input v-model="form.name" placeholder="请输入项目名称"></el-input>
       </el-form-item>
       <el-form-item label="项目类型" :required="true" prop="type">
         <el-select type="type" v-model="form.type"
@@ -17,7 +17,17 @@
         </el-select>
       </el-form-item>
       <el-form-item label="项目描述" :required="true" prop="desc">
-        <el-input v-model="form.desc"></el-input>
+        <el-input v-model="form.desc" style="width: 350px;"
+                  :rows="2"
+                  type="textarea"
+                  placeholder="请输入项目描述">
+        </el-input>
+      </el-form-item>
+      <el-form-item label="是否私有" :required="true" prop="private">
+        <el-switch v-model="form.private"
+                   :active-value="0"
+                   :inactive-value="1">
+        </el-switch>
       </el-form-item>
     </el-form>
     <div class="pull-right">
@@ -55,7 +65,8 @@ const type = ref([
 let form = reactive({
   name: '',
   type: '',
-  desc: ''
+  desc: '',
+  private: ''
 })
 
 const ruleFormRef = ref<FormInstance>()
@@ -96,7 +107,7 @@ const onSureClick = (formName: FormInstance | undefined) => {
 <style lang="scss">
 .proWidth {
   width: 30%;
-  height: 40%
+  height: 50%
 }
 
 .pull-right {

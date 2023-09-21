@@ -26,7 +26,10 @@ from api.service.setting import (
     AddressUpdateViewSet,
     AddressCreateViewSet
 )
-from api.service.user import CustomJsonWebToken
+from api.service.user import (
+    CustomJsonWebToken,
+    UserListViewSet
+)
 
 router = DefaultRouter()
 
@@ -35,6 +38,7 @@ app_urls = [
     path("", include(router.urls)),
     # API Authentication
     path("login/", CustomJsonWebToken.as_view()),
+    path("user/list", UserListViewSet.as_view()),
 
     # 项目管理
     path("project/list", ProjectListViewSet.as_view()),

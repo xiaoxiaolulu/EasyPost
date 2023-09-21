@@ -53,10 +53,10 @@
                 </el-input>
               </el-form-item>
               <el-form-item label="是否私有" :required="true" prop="private">
-               <el-switch v-model="form.private"
-                          :active-value="0"
-                          :inactive-value="1">
-               </el-switch>
+                <el-switch v-model="form.private"
+                           :active-value="0"
+                           :inactive-value="1">
+                </el-switch>
               </el-form-item>
             </el-form>
             <div class="pull-right">
@@ -75,7 +75,7 @@
                     size="default"
                     type="primary"
                     icon="el-icon-plus"
-                    @click="">
+                    @click="dialogVisible = true">
                   添加成员
                 </el-button>
               </el-form-item>
@@ -85,29 +85,32 @@
             <el-table :data="tableData" style="width: 100%">
               <el-table-column label="" prop="user.username">
                 <template #default="scope">
-                  <span>{{scope.row.user.username}}</span>
+                  <div style="margin-inline-end:16px;display:inline">
+                    <img v-if="scope.row.user.avatar" :src="scope.row.user.avatar" class="avatar" alt="">
+                  </div>
+                  <div style="display:inline;color: rgba(0, 0, 0, 0.88);">
+                    <span>{{ scope.row.user.username }}</span>
+                  </div>
                 </template>
               </el-table-column>
-              <el-table-column label="" prop="rode_id" >
+              <el-table-column label="" prop="rode_id">
                 <template #default="scope">
-                  <el-popover effect="light" trigger="hover" placement="top" width="auto">
-                    <template #reference>
-                      <el-tag :type="scope.row.rode_id=='0'?'':'success'"
-                      >{{ scope.row.rode_id=='0'?'负责人':'组员'}}</el-tag>
-                    </template>
-                  </el-popover>
+                  <el-tag :type="scope.row.rode_id=='0'?'':'success'"
+                  >{{ scope.row.rode_id == '0' ? '负责人' : '组员' }}
+                  </el-tag>
                 </template>
               </el-table-column>
               <el-table-column align="right">
                 <template #header>
-                  <el-input v-model="search" size="small" placeholder="搜索用户名" />
+                  <el-input v-model="search" size="small" placeholder="搜索用户名"/>
                 </template>
                 <template #default="scope">
                   <el-button v-show="scope.row.rode_id=='1'"
-                      size="small"
-                      type="danger"
-                      @click="handleDelete(scope.$index, scope.row)"
-                  >Delete</el-button
+                             size="small"
+                             type="danger"
+                             @click="handleDelete(scope.$index, scope.row)"
+                  >Delete
+                  </el-button
                   >
                 </template>
               </el-table-column>
@@ -116,6 +119,38 @@
         </el-tab-pane>
       </el-tabs>
     </div>
+    <el-dialog
+        v-model="dialogVisible"
+        title="添加成员"
+        width="30%"
+    >
+      <el-form autoComplete="on" :model="memberForm"
+               label-position="right"
+               label-width="100px">
+        <el-form-item label="用户" :required="true" prop="user_id">
+          <el-select
+              class="selectOpt" v-model="memberForm.user_id" placeholder="请选择"
+              :popper-append-to-body="false"
+              style="width: 150px;"
+          >
+            <el-option
+                v-for="item in userListData"
+                :key="item.value"
+                :label="item.label"
+                :value="item.value">
+            </el-option>
+          </el-select>
+        </el-form-item>
+      </el-form>
+        <template #footer>
+          <span class="dialog-footer">
+            <el-button @click="dialogVisible = false">取消</el-button>
+            <el-button type="primary" @click="handleAdd">
+              确认
+            </el-button>
+          </span>
+        </template>
+    </el-dialog>
   </div>
 </template>
 
@@ -123,49 +158,18 @@
 import {ref, reactive, onMounted, watch} from 'vue'
 import {Back} from "@element-plus/icons-vue";
 import {projectDetail, projectUpdate, projectRoleDelete, projectRoleAdd} from "@/api/project";
+import {userList} from "@/api/user";
 import {Collection, Plus} from "@element-plus/icons-vue";
 import {useRouter} from "vue-router";
 import {showErrMessage} from "@/utils/element";
 import {ElMessage, ElMessageBox, FormInstance} from "element-plus";
 import type {UploadInstance} from 'element-plus'
-import {error} from "echarts/types/src/util/log";
 
 const search = ref('')
 
-const handleEdit = (index: number, row) => {
-  console.log(index, row)
-}
-const handleDelete = (index: number, row: object) => {
-  ElMessageBox.confirm(`确认删除成员权限 - ${row.user.username}?`).then(_ => {
-    projectRoleDelete({
-      "project_id": row.project,
-      "user_id": row.user.id
-    }).then((response) => {
-      const {data, code, msg} = response.data
-      tableData.value.splice(index, 1)
-      oldTableData.value.slice(index, 1)
-      showErrMessage(code.toString(), msg)
-    })
-  }).catch(_ => {
-    ElMessage.error("删除成员权限失败请重试");
-  })
-}
+const dialogVisible = ref(false)
 
-const roleFilter = () => {
-  if(search.value==""){
-    tableData.value = oldTableData.value
-  }
-  else {
-    const newTableList = []
-    const obj = oldTableData.value.find((o) => o.user.username == search.value)
-    if (obj){
-      newTableList.push(obj)
-    }
-    tableData.value = newTableList
-  }
-}
-
-const tableData  = ref([])
+const tableData = ref([])
 
 const oldTableData = ref([])
 
@@ -186,6 +190,8 @@ const uploadRefs = ref<UploadInstance>()
 
 const imgDataUrl = ref("")
 
+const userListData = ref([])
+
 let form = reactive<any>({
   name: '',
   avatar: '',
@@ -193,6 +199,10 @@ let form = reactive<any>({
   desc: '',
   private: 1,
   fileList: []
+})
+
+const memberForm = reactive({
+  user_id: ''
 })
 
 const rules = reactive({
@@ -220,11 +230,23 @@ onMounted(() => {
     form.type = data.type;
     form.desc = data.desc;
     form.private = data.private
-    form.avatar = imgDataUrl.value= data.avatar
+    form.avatar = imgDataUrl.value = data.avatar
     tableData.value = oldTableData.value = data.roles
   }).catch(res => {
     console.log(res);
   });
+
+  userList({}).then(res => {
+    let ret = res.data.results
+    for (let i = 0; i < ret.length; i++) {
+      userListData.value.push({
+        "label": ret[i]["username"],
+        "value": ret[i]["id"]
+      })
+    }
+  }).catch(res => {
+    console.log(res)
+  })
 })
 
 const submitForm = (formName: FormInstance | undefined) => {
@@ -232,7 +254,7 @@ const submitForm = (formName: FormInstance | undefined) => {
   formName.validate(async (valid) => {
     if (valid) {
       form["id"] = router.currentRoute.value.query.id
-      form.avatar = form.fileList[0]!=null?form.fileList[0].raw:URL.revokeObjectURL(form.avatar)
+      form.avatar = form.fileList[0] != null ? form.fileList[0].raw : URL.revokeObjectURL(form.avatar)
       const ret = await projectUpdate(form)
       const {code, data, msg} = ret.data
       showErrMessage(code.toString(), msg)
@@ -254,6 +276,53 @@ const handleChange = (rawFile: any) => {
   }
   imgDataUrl.value = URL.createObjectURL(rawFile.raw!)
   return true
+}
+
+const handleDelete = (index: number, row: object) => {
+  ElMessageBox.confirm(`确认删除成员权限 - ${row.user.username}?`).then(_ => {
+    projectRoleDelete({
+      "project_id": row.project,
+      "user_id": row.user.id
+    }).then((response) => {
+      const {data, code, msg} = response.data
+      tableData.value.splice(index, 1)
+      oldTableData.value.slice(index, 1)
+      showErrMessage(code.toString(), msg)
+    })
+  }).catch(_ => {
+    ElMessage.error("删除成员权限失败请重试");
+  })
+}
+
+const handleAdd = () => {
+  const pk = router.currentRoute.value.query.id
+  projectRoleAdd({
+    "project_id": pk,
+    "user_id": memberForm.user_id,
+    "roles": 1
+  }).then((response) => {
+    const {data, code, msg} = response.data
+    if(data){
+      tableData.value.push(data)
+    }
+    showErrMessage(code.toString(), msg)
+    dialogVisible.value = false
+  }).catch(_ => {
+    ElMessage.error("添加成员权限失败请重试");
+  })
+}
+
+const roleFilter = () => {
+  if (search.value == "") {
+    tableData.value = oldTableData.value
+  } else {
+    const newTableList = []
+    const obj = oldTableData.value.find((o) => o.user.username == search.value)
+    if (obj) {
+      newTableList.push(obj)
+    }
+    tableData.value = newTableList
+  }
 }
 
 watch(search, (newName, oldName) => {
