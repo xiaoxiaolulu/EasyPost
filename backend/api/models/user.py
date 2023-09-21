@@ -67,7 +67,7 @@ class User(AbstractUser):
     mobile = CharField(max_length=11, null=True, blank=True, verbose_name=_('User Mobile'))
     email = CharField(max_length=125, null=True, blank=True, verbose_name=_('User Email'))
     introduction = TextField(blank=True, null=True, verbose_name=_('User Introduction'), default=Defaults.INTRODUCTION)
-    avatar = ImageField(upload_to='users/avatars/', null=True, blank=True, verbose_name=_('User Avatar'))
+    avatar = ImageField(upload_to='avatar/', default="avatar/default.png", null=True, blank=True, verbose_name=_('User Avatar'))
     address = CharField(max_length=100, null=True, blank=True, verbose_name=_('User Address'))
     birthday = DateField(verbose_name=_('User Birthday'), blank=True, null=True, default=timezone.now)
     gender = CharField(verbose_name=_('User Gender'), choices=Defaults.GENDER_CHOICES, max_length=6,

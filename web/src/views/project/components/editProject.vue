@@ -103,10 +103,7 @@
                   <el-input v-model="search" size="small" placeholder="搜索用户名" />
                 </template>
                 <template #default="scope">
-                  <el-button size="small" @click="handleEdit(scope.$index, scope.row)"
-                  >Edit</el-button
-                  >
-                  <el-button
+                  <el-button v-show="scope.row.rode_id=='1'"
                       size="small"
                       type="danger"
                       @click="handleDelete(scope.$index, scope.row)"
@@ -125,20 +122,33 @@
 <script lang="ts" setup>
 import {ref, reactive, onMounted, watch} from 'vue'
 import {Back} from "@element-plus/icons-vue";
-import {projectDetail, projectUpdate} from "@/api/project";
+import {projectDetail, projectUpdate, projectRoleDelete, projectRoleAdd} from "@/api/project";
 import {Collection, Plus} from "@element-plus/icons-vue";
 import {useRouter} from "vue-router";
 import {showErrMessage} from "@/utils/element";
-import {ElMessage, FormInstance} from "element-plus";
+import {ElMessage, ElMessageBox, FormInstance} from "element-plus";
 import type {UploadInstance} from 'element-plus'
+import {error} from "echarts/types/src/util/log";
 
 const search = ref('')
 
 const handleEdit = (index: number, row) => {
   console.log(index, row)
 }
-const handleDelete = (index: number, row) => {
-  console.log(index, row)
+const handleDelete = (index: number, row: object) => {
+  ElMessageBox.confirm(`确认删除成员权限 - ${row.user.username}?`).then(_ => {
+    projectRoleDelete({
+      "project_id": row.project,
+      "user_id": row.user.id
+    }).then((response) => {
+      const {data, code, msg} = response.data
+      tableData.value.splice(index, 1)
+      oldTableData.value.slice(index, 1)
+      showErrMessage(code.toString(), msg)
+    })
+  }).catch(_ => {
+    ElMessage.error("删除成员权限失败请重试");
+  })
 }
 
 const roleFilter = () => {
@@ -249,6 +259,10 @@ const handleChange = (rawFile: any) => {
 watch(search, (newName, oldName) => {
   roleFilter()
 });
+
+watch(tableData, (newName, oldName) => {
+  console.log(`tableData ${newName} -> ${oldName}`)
+})
 </script>
 
 <style lang="scss">
