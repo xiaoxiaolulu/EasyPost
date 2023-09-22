@@ -8,10 +8,16 @@ const systemRouter = [{
     redirect: '/system/user',
     name: 'system',
     meta: {
-        title: '系统管理',
+        title: '测试配置',
         icon: 'Setting',
     },
     children: [
+        {
+            path: '/system/environment',
+            component: () => import('@/views/system/env/index.vue'),
+            name: 'env',
+            meta: { title: '环境管理' , icon: 'MenuIcon'}
+        },
         {
             path: '/system/user',
             component: () => import('@/views/system/user/index.vue'),

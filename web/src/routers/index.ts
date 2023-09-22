@@ -23,6 +23,7 @@ import projectRouter from "@/routers/modules/project"
 // 异步组件
 export const asyncRoutes = [
     ...projectRouter,
+    ...systemRouter,
     ...httpsRouter,
     ...dataScreenRouter,
     ...echartsRouter,
@@ -34,7 +35,6 @@ export const asyncRoutes = [
     ...nestedRouter,
     ...excelRouter,
     ...externalLink,
-    ...systemRouter,
 ]
 
 /**
