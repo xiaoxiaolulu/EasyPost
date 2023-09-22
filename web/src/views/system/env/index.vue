@@ -46,7 +46,7 @@
         </el-table-column>
         <el-table-column label="操作" width="150px" align="center">
           <template #default="scope">
-            <el-button @click="" type="primary" link>编辑</el-button>
+            <el-button @click="editEnv(scope.row)" type="primary" link>编辑</el-button>
             <el-button @click="deleteEnvData(scope.row)" type="primary" link>删除</el-button>
           </template>
         </el-table-column>
@@ -61,8 +61,8 @@
           @current-change="handlePageChange"
       />
     </div>
-    <!--        <add-dialog v-model="addDialogVisible" :dialogData="rowData"></add-dialog>-->
-    <!--        <edit-dialog v-model="editDialogVisible" :dialogData='rowData'></edit-dialog>-->
+    <add-dialog v-model="isShow" @onChangeDialog="onChangeDialog"/>
+    <edit-dialog v-model="editShow" :rowData="rowData" @onChangeDialog="onChangeDialog"></edit-dialog>
   </div>
 </template>
 
@@ -73,6 +73,8 @@ import {envList, envDelete} from "@/api/setting";
 import {parseTime} from "@/utils";
 import {ElMessage, ElMessageBox, ElPagination} from "element-plus";
 import {showErrMessage} from "@/utils/element";
+import addDialog from './components/addDialog.vue'
+import editDialog from './components/editDialog.vue'
 
 const queryParams = reactive({
   name: '',
@@ -87,19 +89,24 @@ const tableLoading = ref(false)
 
 const count = ref(0)
 
-const rowData = ref(null)
-
-const addDialogVisible = ref(false)
-
-const editDialogVisible = ref(false)
-
 const isShow = ref(false);
+
+const editShow = ref(false);
+
+const rowData = ref({})
 
 const addEnv = () => {
   isShow.value = true;
 };
+
+const editEnv = (row: any) => {
+  editShow.value = true
+  rowData.value = row
+};
+
 const onChangeDialog = (val: any) => {
   isShow.value = false;
+  editShow.value = false;
   queryList()
 };
 
