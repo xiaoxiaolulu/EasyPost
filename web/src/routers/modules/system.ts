@@ -19,6 +19,12 @@ const systemRouter = [{
             meta: { title: '环境管理' , icon: 'MenuIcon'}
         },
         {
+            path: '/system/address',
+            component: () => import('@/views/system/address/index.vue'),
+            name: 'address',
+            meta: { title: '地址管理' , icon: 'MenuIcon'}
+        },
+        {
             path: '/system/user',
             component: () => import('@/views/system/user/index.vue'),
             name: 'user',
