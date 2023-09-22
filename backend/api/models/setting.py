@@ -8,7 +8,10 @@ from django.db.models import (
     SET_NULL,
     TextField
 )
-from django.db.models.signals import post_save, post_delete
+from django.db.models.signals import (
+    post_save,
+    post_delete
+)
 from django.utils.translation import ugettext_lazy as _
 
 User = get_user_model()
@@ -68,13 +71,12 @@ class Address(Model):
 
 def _generate_cache_key(sender, instance):  # noqa
     instance = instance
-    cache_key = f"{instance.user} - {sender._meta.model_name}" # noqa
+    cache_key = f"{instance.user} - {sender._meta.model_name}"  # noqa
 
     return cache_key
 
 
 def _update_cache(sender, **kwargs):
-
     instance = kwargs.get('instance')
     cache_key = _generate_cache_key(sender, instance)
 

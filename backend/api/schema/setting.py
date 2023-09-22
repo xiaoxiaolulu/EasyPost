@@ -37,6 +37,7 @@ class TestEnvironmentSerializers(serializers.ModelSerializer):
 class AddressSerializers(serializers.ModelSerializer):
     id = serializers.IntegerField(read_only=True)
     user = UserSimpleSerializers(required=False, default=serializers.CurrentUserDefault())
+    env = TestEnvironmentSerializers(read_only=True)
     create_time = serializers.DateTimeField(read_only=True)
     update_time = serializers.DateTimeField(read_only=True)
 
