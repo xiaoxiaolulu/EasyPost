@@ -84,23 +84,20 @@ const count = ref(0)
 
 const rowData = ref({})
 
-const addDialogVisible = ref(false)
-
-const editDialogVisible = ref(false)
-
 const isShow = ref(false)
 
 const editShow = ref(false)
 
 const editAddress = (row: any) => {
   editShow.value = true
+  row["envPk"] = row.env.id
   rowData.value = row
 };
 
 
 const onChangeDialog = (val: any) => {
   isShow.value = false;
-  // editShow.value = false;
+  editShow.value = false;
   queryList()
 };
 

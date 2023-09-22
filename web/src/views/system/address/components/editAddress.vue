@@ -21,10 +21,10 @@
         </el-select>
       </el-form-item>
       <el-form-item label="地址名称" :required="true" prop="name">
-        <el-input v-model="form.name"></el-input>
+        <el-input v-model="form.name" placeholder="请输入地址名称"></el-input>
       </el-form-item>
       <el-form-item label="服务地址" :required="true" prop="host">
-        <el-input v-model="form.host"></el-input>
+        <el-input v-model="form.host" placeholder="请输入服务名称">></el-input>
       </el-form-item>
     </el-form>
     <div class="pull-right">
@@ -124,7 +124,7 @@ queryList()
 watch(() => props.rowData, () => {
   form.name = props.rowData.name
   form.host = props.rowData.host
-  form.env = props.rowData.env
+  form.env = props.rowData.envPk
   pk.value = props.rowData.id
 }, {deep: true, immediate: true})
 

@@ -16,13 +16,13 @@ const systemRouter = [{
             path: '/system/environment',
             component: () => import('@/views/system/env/index.vue'),
             name: 'env',
-            meta: { title: '环境管理' , icon: 'MenuIcon'}
+            meta: { title: '环境管理' , icon: 'Eleme'}
         },
         {
             path: '/system/address',
             component: () => import('@/views/system/address/index.vue'),
             name: 'host',
-            meta: { title: '地址管理' , icon: 'MenuIcon'}
+            meta: { title: '地址管理' , icon: 'AddLocation'}
         },
         {
             path: '/system/user',
