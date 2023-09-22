@@ -21,7 +21,7 @@ const systemRouter = [{
         {
             path: '/system/address',
             component: () => import('@/views/system/address/index.vue'),
-            name: 'address',
+            name: 'host',
             meta: { title: '地址管理' , icon: 'MenuIcon'}
         },
         {

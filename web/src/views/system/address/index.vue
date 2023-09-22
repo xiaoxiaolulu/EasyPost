@@ -34,12 +34,12 @@
         <el-table-column prop="name" label="地址名称"></el-table-column>
         <el-table-column prop="host" label="服务地址">
           <template #default="scope">
-            <a :href="scope.row.host" target="_blank">{{ scope.row.host | ellipsis }}</a>
+            <a :href="scope.row.host" target="_blank">{{ scope.row.host }}</a>
           </template>
         </el-table-column>
         <el-table-column label="操作" width="150px" align="center">
           <template #default="scope">
-<!--            <el-button @click="editEnv(scope.row)" type="primary" link>编辑</el-button>-->
+            <el-button @click="editAddress(scope.row)" type="primary" link>编辑</el-button>
             <el-button @click="deleteAddressData(scope.row)" type="primary" link>删除</el-button>
           </template>
         </el-table-column>
@@ -55,8 +55,8 @@
           @current-change="handlePageChange"
       />
     </div>
-<!--    <add-dialog v-model="isShow" @onChangeDialog="onChangeDialog"/>-->
-    <!--        <edit-dialog v-model="editDialogVisible" :dialogData='rowData'></edit-dialog>-->
+    <create-address v-model="isShow" @onChangeDialog="onChangeDialog"/>
+    <update-address v-model="editShow" :rowData="rowData" @onChangeDialog="onChangeDialog"/>
   </div>
 </template>
 
@@ -65,7 +65,8 @@ import {reactive, ref} from "vue";
 import {Plus, Search} from "@element-plus/icons-vue";
 import {addressList, addressDelete} from "@/api/setting";
 import {ElMessage, ElMessageBox, ElPagination} from "element-plus";
-import addDialog from './components/addDialog.vue'
+import createAddress from './components/addAddress.vue'
+import updateAddress from './components/editAddress.vue'
 import {showErrMessage} from "@/utils/element";
 
 const queryParams = reactive({
@@ -91,9 +92,15 @@ const isShow = ref(false)
 
 const editShow = ref(false)
 
+const editAddress = (row: any) => {
+  editShow.value = true
+  rowData.value = row
+};
+
+
 const onChangeDialog = (val: any) => {
   isShow.value = false;
-  editShow.value = false;
+  // editShow.value = false;
   queryList()
 };
 

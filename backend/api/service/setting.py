@@ -17,7 +17,7 @@ from api.response.magic import (
 )
 from api.schema.setting import (
     TestEnvironmentSerializers,
-    AddressSerializers
+    AddressSerializers, AddressWriteSerializers
 )
 
 
@@ -80,7 +80,7 @@ class AddressDestroyViewSet(MagicDestroyApi):  # noqa
 class AddressUpdateViewSet(MagicUpdateApi):
 
     queryset = Address.objects.all()
-    serializer_class = AddressSerializers
+    serializer_class = AddressWriteSerializers
     permission_classes = [IsAuthenticated]
     authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
 
@@ -88,6 +88,6 @@ class AddressUpdateViewSet(MagicUpdateApi):
 class AddressCreateViewSet(MagicCreateApi):  # noqa
 
     queryset = Address.objects.all()
-    serializer_class = AddressSerializers
+    serializer_class = AddressWriteSerializers
     permission_classes = [IsAuthenticated]
     authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]

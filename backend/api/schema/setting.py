@@ -41,6 +41,17 @@ class AddressSerializers(serializers.ModelSerializer):
     create_time = serializers.DateTimeField(read_only=True)
     update_time = serializers.DateTimeField(read_only=True)
 
+    class Meta:
+        model = Address
+        fields = "__all__"
+
+
+class AddressWriteSerializers(serializers.ModelSerializer):
+    id = serializers.IntegerField(read_only=True)
+    user = UserSimpleSerializers(required=False, default=serializers.CurrentUserDefault())
+    create_time = serializers.DateTimeField(read_only=True)
+    update_time = serializers.DateTimeField(read_only=True)
+
     def validate(self, attrs):
         # 验证url是否合法
         host_address = attrs.get('host')
