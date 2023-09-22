@@ -2,7 +2,7 @@
   <div class="app-container">
     <div class="container">
       <div>
-        <el-form :inline="true" :model="queryParams" ref="queryParams">
+        <el-form :inline="true" :model="queryParams">
           <el-form-item>
             <el-button
                 type="primary"
@@ -11,12 +11,14 @@
               创建环境
             </el-button>
           </el-form-item>
-          <el-form-item prop="name" style="float: right">
-            <el-input prefix-icon="el-icon-search"
-                      clearable type="name"
-                      v-model.trim="queryParams.name"
-                      placeholder="请输入项目名称"
-                      @keyup.enter.native="queryList"></el-input>
+          <el-form-item style="float: right">
+            <el-input
+                :suffix-icon="Search"
+                clearable
+                v-model.trim="queryParams.name"
+                placeholder="请输入环境名称"
+                @keyup.enter.native="queryList">
+            </el-input>
           </el-form-item>
         </el-form>
       </div>
@@ -65,7 +67,7 @@
 </template>
 
 <script lang="ts" setup>
-import {Plus} from "@element-plus/icons-vue";
+import {Plus, Search} from "@element-plus/icons-vue";
 import {ref, reactive} from 'vue'
 import {envList, envDelete} from "@/api/setting";
 import {parseTime} from "@/utils";
