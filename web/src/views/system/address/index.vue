@@ -63,7 +63,7 @@
 <script lang="ts" setup>
 import {reactive, ref} from "vue";
 import {Plus, Search} from "@element-plus/icons-vue";
-import {addressList, addressDelete} from "@/api/setting";
+import {addressList, addressDelete, envList} from "@/api/setting";
 import {ElMessage, ElMessageBox, ElPagination} from "element-plus";
 import createAddress from './components/addAddress.vue'
 import updateAddress from './components/editAddress.vue'
@@ -84,25 +84,32 @@ const count = ref(0)
 
 const rowData = ref({})
 
-const isShow = ref(false)
+const isShow = ref({
+  show: false,
+  envList: []
+})
 
 const editShow = ref(false)
+
+const envOption = ref([])
 
 const editAddress = (row: any) => {
   editShow.value = true
   row["envPk"] = row.env.id
+  row["envList"] = envOption.value
   rowData.value = row
+};
+
+const addAddress = () => {
+  isShow.value.show = true
+  isShow.value.envList = envOption.value
 };
 
 
 const onChangeDialog = (val: any) => {
-  isShow.value = false;
+  isShow.value.show = false;
   editShow.value = false;
   queryList()
-};
-
-const addAddress = () => {
-  isShow.value = true;
 };
 
 const ellipsis = (value: string) => {
@@ -129,6 +136,23 @@ const queryList = () => {
 }
 
 queryList()
+
+const getEnvList = () => {
+  envList({}).then((res) => {
+    let envList= res.data.results;
+    for (let i = 0; i < envList.length; i++) {
+      envOption.value.push({
+        "label": envList[i]["name"],
+        "value": envList[i]["id"]
+      })
+    }
+  }).catch((error) => {
+    // console.log(error.response)
+    ElMessage.error("获取环境列表数据失败")
+  })
+}
+
+getEnvList()
 
 const handlePageChange = (newPage: any) => {
   queryParams.page = newPage

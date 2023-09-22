@@ -1,6 +1,6 @@
 <template>
     <el-dialog title="新增地址"
-               v-model="isShow"
+               v-model="isShow.show"
                :show-close="false"
                class="addressWidth">
         <el-form autoComplete="on" :model="form" :rules="rules" ref="ruleFormRef"
@@ -13,7 +13,7 @@
                         style="width: 150px;"
                 >
                     <el-option
-                            v-for="item in envOption"
+                            v-for="item in isShow.envList"
                             :key="item.value"
                             :label="item.label"
                             :value="item.value">
@@ -29,7 +29,7 @@
         </el-form>
         <div class="pull-right">
           <el-button type="primary" @click="onSureClick(ruleFormRef)">确 认</el-button>
-          <el-button @click="isShow = false">取 消</el-button>
+          <el-button @click="isShow.show = false">取 消</el-button>
         </div>
     </el-dialog>
 </template>
@@ -38,18 +38,17 @@
 
 import {computed, reactive, ref} from "vue";
 import {ElMessage, FormInstance} from "element-plus";
-import {addressCreate, envList} from "@/api/setting";
+import {addressCreate} from "@/api/setting";
 import {showErrMessage} from "@/utils/element";
-
-const propsCxt: any = null
 
 const emits = defineEmits(['update:modelValue', 'onChangeDialog'])
 
 const props = defineProps({
   modelValue: {
-    default: propsCxt,
-    type: [Object, Boolean]
-  }
+    type: [Object, Boolean],
+    default:() =>{
+    }
+  },
 })
 
 const isShow = computed({
@@ -67,8 +66,6 @@ let form = reactive({
   env: '',
   host: '',
 })
-
-const envOption = ref([])
 
 const ruleFormRef = ref<FormInstance>()
 
@@ -95,23 +92,6 @@ const onSureClick = (formName: FormInstance | undefined) => {
     }
   })
 }
-
-const queryList = () => {
-  envList({}).then((res) => {
-    let envList= res.data.results;
-    for (let i = 0; i < envList.length; i++) {
-      envOption.value.push({
-        "label": envList[i]["name"],
-        "value": envList[i]["id"]
-      })
-    }
-  }).catch((error) => {
-    // console.log(error.response)
-    ElMessage.error("获取环境列表数据失败")
-  })
-}
-
-queryList()
 </script>
 
 <style lang="scss">

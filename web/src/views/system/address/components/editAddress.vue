@@ -38,7 +38,7 @@
 
 import {computed, reactive, ref, watch} from "vue";
 import {ElMessage, FormInstance} from "element-plus";
-import {addressUpdate, envList} from "@/api/setting";
+import {addressUpdate} from "@/api/setting";
 import {showErrMessage} from "@/utils/element";
 
 const propsCxt: any = null
@@ -104,28 +104,12 @@ const onSureClick = (formName: FormInstance | undefined) => {
   })
 }
 
-const queryList = () => {
-  envList({}).then((res) => {
-    let envList= res.data.results;
-    for (let i = 0; i < envList.length; i++) {
-      envOption.value.push({
-        "label": envList[i]["name"],
-        "value": envList[i]["id"]
-      })
-    }
-  }).catch((error) => {
-    // console.log(error.response)
-    ElMessage.error("获取环境列表数据失败")
-  })
-}
-
-queryList()
-
 watch(() => props.rowData, () => {
   form.name = props.rowData.name
   form.host = props.rowData.host
   form.env = props.rowData.envPk
   pk.value = props.rowData.id
+  envOption.value = props.rowData.envList
 }, {deep: true, immediate: true})
 
 </script>
