@@ -6,8 +6,8 @@
           <el-form-item>
             <el-button
                 type="primary"
-                icon="el-icon-plus"
-                @click="">
+                :icon="Plus"
+                @click="addEnv">
               创建环境
             </el-button>
           </el-form-item>
@@ -21,35 +21,43 @@
         </el-form>
       </div>
       <el-table :data="tableData"
-                border
                 v-loading="tableLoading"
                 element-loading-text="拼命加载中"
                 style="width: 100%">
         <el-table-column type="index" width="55" label="id"></el-table-column>
         <el-table-column prop="name" label="环境名称"></el-table-column>
         <el-table-column prop="desc" label="备注"></el-table-column>
-        <el-table-column prop="user.username" label="创建者"></el-table-column>
-        <el-table-column prop="create_time" label="创建日期">
-          <template slot-scope="scope">
-            <span>{{ parseTime(scope.row.create_time) }}</span>
+        <el-table-column prop="user.username" label="创建者">
+          <template #default="scope">
+            <div style="margin-inline-end:16px;display:inline">
+              <img v-if="scope.row.user.avatar" :src="scope.row.user.avatar" class="avatar" alt="">
+            </div>
+            <div style="display:inline;color: rgba(0, 0, 0, 0.88);">
+              <span style="color:rgb(22, 119, 255)">{{ scope.row.user.username }}</span>
+            </div>
+          </template>
+        </el-table-column>
+        <el-table-column prop="create_time" label="更新日期">
+          <template #default="scope">
+            <span>{{ parseTime(scope.row.update_time) }}</span>
           </template>
         </el-table-column>
         <el-table-column label="操作" width="150px" align="center">
-          <template slot-scope="scope">
-            <el-button @click="" type="text">编辑</el-button>
-            <el-button @click="" type="text">删除</el-button>
+          <template #default="scope">
+            <el-button @click="" type="primary" link>编辑</el-button>
+            <el-button @click="deleteEnvData(scope.row)" type="primary" link>删除</el-button>
           </template>
         </el-table-column>
       </el-table>
-      <!--分页组件-->
       <el-pagination
           style="margin-top: 8px;"
-          @current-change="queryList"
-          :current-page.sync="queryParams.page"
+          v-model:currentPage="queryParams.page"
           :page-size="20"
+          :pager-count="11"
+          layout=">, total, prev, pager, next, jumper"
           :total="count"
-          layout="->, total, prev, pager, next, jumper">
-      </el-pagination>
+          @current-change="handlePageChange"
+      />
     </div>
     <!--        <add-dialog v-model="addDialogVisible" :dialogData="rowData"></add-dialog>-->
     <!--        <edit-dialog v-model="editDialogVisible" :dialogData='rowData'></edit-dialog>-->
@@ -57,9 +65,12 @@
 </template>
 
 <script lang="ts" setup>
+import {Plus} from "@element-plus/icons-vue";
 import {ref, reactive} from 'vue'
 import {envList, envDelete} from "@/api/setting";
 import {parseTime} from "@/utils";
+import {ElMessage, ElMessageBox, ElPagination} from "element-plus";
+import {showErrMessage} from "@/utils/element";
 
 const queryParams = reactive({
   name: '',
@@ -72,13 +83,55 @@ const tableData = ref(null)
 
 const tableLoading = ref(false)
 
-const count = ref(null)
+const count = ref(0)
 
 const rowData = ref(null)
 
 const addDialogVisible = ref(false)
 
 const editDialogVisible = ref(false)
+
+const isShow = ref(false);
+
+const addEnv = () => {
+  isShow.value = true;
+};
+const onChangeDialog = (val: any) => {
+  isShow.value = false;
+  queryList()
+};
+
+const queryList = () => {
+  tableLoading.value = true;
+  envList(queryParams).then((response) => {
+    tableLoading.value = false;
+    tableData.value = response.data.results;
+    count.value = response.data.count;
+  }).catch((error) => {
+    // console.log(error.response)
+    ElMessage.error("获取环境列表数据失败;请重试！")
+  })
+}
+
+queryList()
+
+const handlePageChange = (newPage: any) => {
+  queryParams.page = newPage
+  queryList()
+}
+
+const deleteEnvData = (row: any) => {
+  ElMessageBox.confirm(`确认删除环境数据 - ${row.name}?`).then(_ => {
+    envDelete({id: row.id}).then((response) => {
+      const {data, code, msg} = response.data
+      showErrMessage(code.toString(), msg)
+      queryList();
+    })
+  }).catch(_ => {
+    ElMessage.error("环境删除失败请重试");
+  })
+}
+
 </script>
 
 <style lang="scss" scoped>
@@ -93,4 +146,26 @@ const editDialogVisible = ref(false)
   max-width: 20%;
 }
 
+.avatar {
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, .85);
+  font-size: 13px;
+  font-variant: tabular-nums;
+  line-height: 1.5715;
+  list-style: none;
+  font-feature-settings: "tnum", "tnum";
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  color: #fff;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: middle;
+  background: #ccc;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 50%
+}
 </style>
