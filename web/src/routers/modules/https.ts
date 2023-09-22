@@ -16,7 +16,7 @@ const httpsRouter = [{
             path: '/tool/request',
             component: () => import('@/views/https/index.vue'),
             name: 'request',
-            meta: { title: 'HTTP测试', icon: 'Basketball'  }
+            meta: { title: 'HTTP测试', icon: 'Lightning'  }
         }
     ]
 }]
