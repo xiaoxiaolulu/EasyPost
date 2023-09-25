@@ -55,8 +55,7 @@
           @current-change="handlePageChange"
       />
     </div>
-    <create-address v-model="isShow" @onChangeDialog="onChangeDialog"/>
-    <update-address v-model="editShow" :rowData="rowData" @onChangeDialog="onChangeDialog"/>
+    <address-dialog ref="dialog" :row-data="rowData" @queryList="queryList"/>
   </div>
 </template>
 
@@ -65,8 +64,7 @@ import {reactive, ref} from "vue";
 import {Plus, Search} from "@element-plus/icons-vue";
 import {addressList, addressDelete, envList} from "@/api/setting";
 import {ElMessage, ElMessageBox, ElPagination} from "element-plus";
-import createAddress from './components/addAddress.vue'
-import updateAddress from './components/editAddress.vue'
+import addressDialog from"./components/addressDialog.vue"
 import {showErrMessage} from "@/utils/element";
 
 const queryParams = reactive({
@@ -84,32 +82,19 @@ const count = ref(0)
 
 const rowData = ref({})
 
-const isShow = ref({
-  show: false,
-  envList: []
-})
-
-const editShow = ref(false)
-
 const envOption = ref([])
 
+const dialog = ref(null)
+
 const editAddress = (row: any) => {
-  editShow.value = true
-  row["envPk"] = row.env.id
   row["envList"] = envOption.value
   rowData.value = row
+  dialog.value.show(row)
 };
 
 const addAddress = () => {
-  isShow.value.show = true
-  isShow.value.envList = envOption.value
-};
-
-
-const onChangeDialog = (val: any) => {
-  isShow.value.show = false;
-  editShow.value = false;
-  queryList()
+  rowData.value["envList"] = envOption.value
+  dialog.value.show(rowData)
 };
 
 const ellipsis = (value: string) => {
@@ -147,7 +132,6 @@ const getEnvList = () => {
       })
     }
   }).catch((error) => {
-    // console.log(error.response)
     ElMessage.error("获取环境列表数据失败")
   })
 }

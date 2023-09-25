@@ -1,6 +1,8 @@
 <template>
-  <el-dialog title="编辑地址"
-             v-model="isShow"
+  <el-dialog
+             @close="close"
+             v-model="dialog"
+             :title="title"
              :show-close="false"
              class="addressWidth">
     <el-form autoComplete="on" :model="form" :rules="rules" ref="ruleFormRef"
@@ -29,7 +31,7 @@
     </el-form>
     <div class="pull-right">
       <el-button type="primary" @click="onSureClick(ruleFormRef)">确 认</el-button>
-      <el-button @click="isShow = false">取 消</el-button>
+      <el-button @click="dialog = false">取消</el-button>
     </div>
   </el-dialog>
 </template>
@@ -38,18 +40,12 @@
 
 import {computed, reactive, ref, watch} from "vue";
 import {ElMessage, FormInstance} from "element-plus";
-import {addressUpdate} from "@/api/setting";
+import {addressCreate, addressUpdate} from "@/api/setting";
 import {showErrMessage} from "@/utils/element";
 
-const propsCxt: any = null
-
-const emits = defineEmits(['update:modelValue', 'onChangeDialog'])
+const dialog = ref<boolean>(false)
 
 const props = defineProps({
-  modelValue: {
-    default: propsCxt,
-    type: [Object, Boolean]
-  },
   rowData: {
     type: Object,
     default: () => {
@@ -57,15 +53,7 @@ const props = defineProps({
   }
 })
 
-const isShow = computed({
-  get() {
-    return props.modelValue;
-  },
-  set(val) {
-    emits('update:modelValue', val);
-  }
-});
-
+const envOption = ref([])
 
 let form = reactive({
   name: '',
@@ -73,11 +61,11 @@ let form = reactive({
   host: '',
 })
 
-const envOption = ref([])
-
 const ruleFormRef = ref<FormInstance>()
 
 const pk = ref()
+
+const title = ref()
 
 const rules = reactive({
   name: [{required: true, trigger: "blur", message: "请输入环境名称！"}],
@@ -85,32 +73,62 @@ const rules = reactive({
   host: [{required: true, trigger: "blur", message: "请输入服务地址！"}],
 })
 
+const emits = defineEmits(['queryList'])
+
+function close() {
+  ruleFormRef.value.resetFields()
+  Object.keys(form).forEach(key=>{
+    form[key] = null
+  })
+  emits('queryList');
+}
 
 const onSureClick = (formName: FormInstance | undefined) => {
   if (!formName) return
   formName.validate(async (valid) => {
     if (valid) {
-      form["id"] = pk.value
-      const ret = await addressUpdate(form)
+      let ret: any = null
+      console.log(pk.value)
+      if(pk.value){
+        form["id"] = pk.value
+        ret = await addressUpdate(form)
+      } else {
+        ret = await addressCreate(form)
+
+      }
       const {code, data, msg} = ret.data
-      emits('onChangeDialog', true);
+      dialog.value = false
       showErrMessage(code.toString(), msg)
       formName.resetFields()
     } else {
       console.log('error submit!')
-      ElMessage.error("地址编辑失败请重试!")
+      ElMessage.error("地址新增失败请重试!")
       return false
     }
   })
 }
 
+const show = (item={})=>{
+  title.value = '新增地址'
+  if(item.id){
+    title.value = '编辑地址'
+    pk.value = item.id
+    Object.keys(item).forEach(key=>{
+      form.name = item.name
+      form.host = item.host
+      form.env = item.env.id
+    })
+  }
+  dialog.value = true
+}
+
 watch(() => props.rowData, () => {
-  form.name = props.rowData.name
-  form.host = props.rowData.host
-  form.env = props.rowData.envPk
-  pk.value = props.rowData.id
   envOption.value = props.rowData.envList
 }, {deep: true, immediate: true})
+
+defineExpose({
+  show,
+})
 
 </script>
 
