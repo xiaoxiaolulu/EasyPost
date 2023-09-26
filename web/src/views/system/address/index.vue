@@ -94,19 +94,9 @@ const editAddress = (row: any) => {
 
 const addAddress = () => {
   rowData.value["envList"] = envOption.value
+  rowData.value["treeData"] = tableData.value
   dialog.value.show(rowData)
 };
-
-const ellipsis = (value: string) => {
-  if (!value) {
-    return "";
-  }
-  if (value.length > 35) {
-    return value.slice(0, 35) + "...";
-  } else {
-    return value;
-  }
-}
 
 const queryList = () => {
   tableLoading.value = true;

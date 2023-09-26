@@ -231,7 +231,7 @@ import {FormInstance, ElTable, ElNotification} from "element-plus";
 import type {TabsPaneContext} from 'element-plus'
 import unResponse from '@/assets/image/none-response.jpg'
 import MirrorCode from "@/components/MirrorCode/index.vue";
-import {requestParser} from "@/views/https/components/RequestParser";
+import {requestParser} from "@/views/tools/components/RequestParser";
 import {http} from "@/api/http";
 
 const multipleTableRef = ref<InstanceType<typeof ElTable>>()

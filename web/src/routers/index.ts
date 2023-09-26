@@ -16,8 +16,9 @@ import othersRouter from './modules/other'
 import externalLink from './modules/externalLink'
 import formRouter from './modules/form'
 import functionPageRouter from './modules/functionPage'
-import httpsRouter from "@/routers/modules/https";
-import projectRouter from "@/routers/modules/project"
+import toolsRouter  from "./modules/tools"
+import projectRouter from "./modules/project"
+import httpsRouter from "./modules/https"
 
 
 // 异步组件
@@ -25,6 +26,7 @@ export const asyncRoutes = [
     ...projectRouter,
     ...systemRouter,
     ...httpsRouter,
+    ...toolsRouter,
     ...dataScreenRouter,
     ...echartsRouter,
     ...tableRouter,

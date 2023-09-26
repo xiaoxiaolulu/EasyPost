@@ -42,9 +42,7 @@ class ProjectDao:
             tree_template = [{  # noqa
                 "id": 1,
                 "label": "全部",
-                "nodeTier": 1,
-                "children": [],
-                "parent": 0
+                "children": []
             }]
 
             try:

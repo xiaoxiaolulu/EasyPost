@@ -49,24 +49,28 @@ class TreeView(APIView):
     authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
 
     @staticmethod
-    def patch(request, **kwargs):
+    def put(request, **kwargs):
         """
         修改树形结构，ID不能重复
         """
-        body = request.data['body']
+        try:
+            body = request.data['body']
 
-        relation = Relation.objects.get(id=kwargs['pk'])
-        relation.tree = body
-        relation.save()
+            relation = Relation.objects.get(id=kwargs['pk'])
+            relation.tree = body
+            relation.save()
 
-        node = relation.tree
-        serializer = {
-            "tree": node,
-            "id": relation.id,
-            "maxId": get_tree_max_id(node),
-            "success": status.HTTP_200_OK
-        }
-        return Response(ResponseStandard.success(data=serializer))
+            tree = Relation.objects.get(id=kwargs['pk'])
+            node = eval(tree.tree)
+            serializer = {
+                "tree": node,
+                "id": relation.id,
+                "maxId": get_tree_max_id(node),
+                "success": status.HTTP_200_OK
+            }
+            return Response(ResponseStandard.success(data=serializer))
+        except ObjectDoesNotExist:
+            return Response(ResponseStandard.failed())
 
     @staticmethod
     def get(request, **kwargs):

@@ -3,21 +3,21 @@
 import Layout from "@/layout/index.vue";
 
 const httpsRouter = [{
-    path: '/tool',
+    path: '/https',
     component: Layout,
-    redirect: '/tool/404',
-    name: 'tool',
+    redirect: '/https/404',
+    name: 'https',
     meta: {
-        title: '实用工具',
+        title: '接口测试',
         icon: 'ElementPlus'
     },
     children: [
         {
-            path: '/tool/request',
-            component: () => import('@/views/https/index.vue'),
-            name: 'request',
-            meta: { title: 'HTTP测试', icon: 'Lightning'  }
-        }
+            path: '/https/apis',
+            component: () => import('@/views/https/api/index.vue'),
+            name: 'apis',
+            meta: { title: '接口管理', icon: 'Lightning'  }
+        },
     ]
 }]
 
