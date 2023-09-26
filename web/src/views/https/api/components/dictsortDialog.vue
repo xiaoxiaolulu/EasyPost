@@ -19,12 +19,9 @@
   </el-dialog>
 </template>
 <script lang="ts" setup>
-import { ElMessageBox, ElMessage, FormInstance } from 'element-plus'
+import {ElMessage, FormInstance } from 'element-plus'
 import {reactive, ref} from "vue";
 import {updateTree} from "@/api/http";
-import {watch} from "vue/dist/vue";
-import {addressCreate, addressUpdate} from "@/api/setting";
-import {showErrMessage} from "@/utils/element";
 
 const props = defineProps({
   rowData: {
@@ -42,6 +39,8 @@ const title = ref('新增字典项')
 
 const pk = ref()
 
+const editPk = ref(0)
+
 const rules = reactive({
   name: [{required: true, trigger: "blur", message: "请输入名称！"}],
 })
@@ -53,6 +52,8 @@ const ruleForm = reactive({
 const treeData = ref([])
 
 const currentNode = ref()
+
+const currentData = ref()
 
 const minId = ref(0)
 
@@ -69,12 +70,16 @@ const show = (item={})=>{
   title.value = '新增字典项'
   if(item.id){
     title.value = '编辑字典项'
+    editPk.value = item.id
+    ruleForm.name = item.currentNode.label
+    console.log("xxxxxx")
+    console.log(item.id)
   }
   Object.keys(item).forEach(key=>{
-    // ruleForm[key] = item[key]
     pk.value = item.pk
     treeData.value = item.treeData
     currentNode.value = item.currentNode
+    currentData.value = item.currentData
     minId.value = item.maxId
   })
   dialogVisible.value = true
@@ -91,6 +96,7 @@ const append = (data: any) => {
   const newChild = {
     id: ++pk,
     label: ruleForm.name,
+    parent: data.value.id,
     children: []
   };
 
@@ -98,10 +104,6 @@ const append = (data: any) => {
     treeData.value.push(newChild) ;
     return
   }
-  // if (pk > 3) {
-  //   ElMessage.error("分组最多支持3级");
-  //   return;
-  // }
   if (!data.value.children) {
     data.value.children = []
   }
@@ -109,14 +111,24 @@ const append = (data: any) => {
   ElMessage.success("添加分组成功");
 }
 
+
 const handleClose = (formName: FormInstance | undefined) => {
   if (!formName) return
   formName.validate(async (valid) => {
     if (valid) {
-      append(currentNode);
-      updateTrees()
+      if(editPk.value!=0){
+        const parent = currentData.value.parent;
+        const children = parent.data.children || parent.data;
+        const index = children.findIndex(d => d.id === currentNode.value.id);
+        children[index]["label"] = ruleForm.name
+        updateTrees(pk.value, treeData.value);
+      }else {
+        append(currentNode);
+        updateTrees(pk.value, treeData.value)
+      }
+      formName.resetFields()
       dialogVisible.value = false
-      console.log('submit!', ruleForm)
+      editPk.value = 0
     } else {
       ElMessage.error("更新目录失败请重试!")
       return false
@@ -125,28 +137,23 @@ const handleClose = (formName: FormInstance | undefined) => {
 }
 
 
-const updateTrees = () => {
+const updateTrees = (pk, treeData) => {
   updateTree({
-    id: pk.value,
-    body: treeData.value,
+    id: pk,
+    body: treeData,
   }).then((response) => {
     const {data, code, msg} = response.data
     maxId.value = data.maxId
     treeData.value = data.tree
   }).catch((error) => {
-    console.log(error.response)
+    console.log(error)
     ElMessage.error("更新树形结构数据失败;请重试!");
   })
 }
 
-// watch(() => props.rowData, () => {
-//   pk.value = props.rowData.pk
-//   treeData.value = props.rowData.treeData
-//   currentNode.value = props.rowData.currentNode
-// }, {deep: true, immediate: true})
-
 defineExpose({
-  show
+  show,
+  updateTrees
 })
 
 </script>

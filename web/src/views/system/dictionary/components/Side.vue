@@ -107,4 +107,5 @@ const remove = (node,data)=>{
 
 <style lang="scss" scoped>
 @import "../index.scss";
+
 </style>

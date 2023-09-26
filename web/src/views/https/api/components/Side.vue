@@ -41,9 +41,9 @@
                 <i><el-icon><More/></el-icon></i>
                 <template #dropdown>
                   <el-dropdown-menu size="mini">
-                  <el-dropdown-item @click.native="addDictsort(data)">
+                  <el-dropdown-item @click.native="addDictsort">
                     <template #default="scope">
-                      <i style="color: blue"><el-icon><Plus /></el-icon></i>
+                      <i style="color: blue"><el-icon><Plus/></el-icon></i>
                       <span>添加目录</span>
                     </template>
                   </el-dropdown-item>
@@ -89,6 +89,7 @@ interface Tree {
   id: string
   label: string
   children?: Tree[]
+  parent: string
 }
 
 const filterText = ref('')
@@ -107,7 +108,9 @@ const currentProjectName = ref()
 
 const switchProjectItem = ref(false)
 
-const currentNode = ref({})
+const currentNode = ref()
+
+const currentData = ref()
 
 const pk = ref()
 
@@ -128,13 +131,15 @@ const getProjectList = () => {
     currentProject.value = projectList[0]["id"]
     currentAvatar.value = projectList[0]["avatar"]
     switchProjectItem.value = false
+
+    queryList()
   }).catch((error) => {
     ElMessage.error("获取项目列表数据失败")
   })
 }
 
 const queryList = () => {
-  getTree({id: 155}).then((response) => {
+  getTree({id: currentProject.value}).then((response) => {
     const {data, code, msg} = response.data
     tableData.value = data.tree
     pk.value = data.id
@@ -145,7 +150,6 @@ const queryList = () => {
 }
 
 getProjectList()
-queryList()
 
 // 监听输入
 watch(filterText, (val) => {
@@ -158,6 +162,7 @@ watch(projectItem, (value) => {
   currentProjectName.value = currentProjectList[0]
   currentProject.value = currentProjectList[1]
   currentAvatar.value = currentProjectList[2]
+  queryList()
 })
 
 // 搜索
@@ -176,11 +181,14 @@ const addDictsort = () => {
   dialog.value.show(item)
 }
 
-const editDictsort = (item) => {
+const editDictsort = (data: any) => {
+  let item = {}
   item["pk"] = pk.value
   item["currentNode"] = currentNode.value
+  item["currentData"] = currentData.value
   item["treeData"] = tableData.value
   item["maxId"] = maxId.value
+  item["id"] = data.id
   dialog.value.show(item)
 }
 
@@ -189,23 +197,43 @@ const selectAction = (node, data) => {
   console.log('node, data============', node, data)
 }
 
-const handleNodeClick = (node, data) => {
+const handleNodeClick = (node: any, data: any) => {
   currentNode.value = node
+  currentData.value = data
   console.log('node, data============', node, data)
 }
 
-const remove = (node, data) => {
+const remove = (node: any, data: any) => {
   ElMessageBox.confirm('你确定要删除当前项吗?', '温馨提示', {
     confirmButtonText: '确定',
     cancelButtonText: '取消',
     type: 'warning',
     draggable: true,
+  }).then(() => {
+    if (currentNode.value === '') {
+      ElMessage.info('请选择一个节点')
+      return
+    } else {
+      if (currentNode.value.label == '全部'){
+        ElMessage.warning('根节点不可删除！')
+        return
+      }
+      if (currentNode.value.children.length !== 0 ) {
+        ElMessage.warning('此节点有子节点，不可删除！')
+        return
+      }
+      else {
+        const parent = node.parent;
+        const children = parent.data.children || parent.data;
+        const index = children.findIndex(d => d.id === data.id);
+        children.splice(index, 1);
+        dialog.value.updateTrees(pk.value, tableData.value)
+        ElMessage.success("删除分组成功");
+      }
+    }
+  }).catch(() => {
+    ElMessage.error("取消删除分组");
   })
-      .then(() => {
-      })
-      .catch(() => {
-      })
-
   console.log('data===', node, data)
 }
 </script>
@@ -246,5 +274,9 @@ img {
 
 .avatar-image {
   background: transparent;
+}
+
+:deep(:focus-visible) {
+  outline: none;
 }
 </style>
