@@ -60,8 +60,8 @@ class TreeView(APIView):
             relation.tree = body
             relation.save()
 
-            tree = Relation.objects.get(id=kwargs['pk'])
-            node = eval(tree.tree)
+            node = relation.tree
+
             serializer = {
                 "tree": node,
                 "id": relation.id,
@@ -70,7 +70,7 @@ class TreeView(APIView):
             }
             return Response(ResponseStandard.success(data=serializer))
         except ObjectDoesNotExist:
-            return Response(ResponseStandard.failed())
+            Response(ResponseStandard.failed())
 
     @staticmethod
     def get(request, **kwargs):

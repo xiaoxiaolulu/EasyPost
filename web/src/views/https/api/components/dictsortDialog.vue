@@ -1,13 +1,13 @@
 <template>
-  <el-dialog @close="close" v-model="dialogVisible" :title="title" width="50%">
+  <el-dialog @close="close" v-model="dialogVisible" :title="title" width="25%">
     <el-form
         ref="ruleFormRef"
         :model="ruleForm"
         :rules="rules"
         label-width="100px"
     >
-      <el-form-item label="字典名称" prop="name">
-        <el-input v-model="ruleForm.name" placeholder="请输入字典项名称"/>
+      <el-form-item label="分组名称" prop="name">
+        <el-input v-model="ruleForm.name" placeholder="请输入分组名称"/>
       </el-form-item>
     </el-form>
     <template #footer>
