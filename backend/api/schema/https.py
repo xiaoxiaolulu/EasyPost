@@ -1,5 +1,8 @@
 from rest_framework import serializers
-from api.models.https import Relation, Api
+from api.models.https import (
+    Relation,
+    Api
+)
 from api.schema.user import UserSimpleSerializers
 
 

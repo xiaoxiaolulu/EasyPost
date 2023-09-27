@@ -14,7 +14,7 @@ from typing import (
     List
 )
 from pydantic import BaseModel
-from pydantic.json import ENCODERS_BY_TYPE
+from pydantic.json import ENCODERS_BY_TYPE  # noqa
 
 
 SetIntStr = Set[Union[int, str]]
@@ -25,7 +25,7 @@ TupleIntStr = Tuple[str]
 def generate_encoders_by_class_tuples(
         type_encoder_map: Dict[Any, Callable[[Any], Any]]
 ) -> Dict[Callable[[Any], Any], Tuple[Any, ...]]:
-    encoders_by_class_tuples: Dict[Callable[[Any], Any], Tuple[Any, ...]] = defaultdict(
+    encoders_by_class_tuples: Dict[Callable[[Any], Any], Tuple[Any, ...]] = defaultdict(   # noqa
         tuple
     )
     for type_, encoder in type_encoder_map.items():
