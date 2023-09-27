@@ -38,8 +38,8 @@ class PytestRunner(object):
         self.context.update(super_builtins.__dict__)
         self.context.update(**self.execute_sql())
         teststeps = self.raw.get('teststeps', [])  # noqa
-        fixtures = self.raw.get('config').get('fixtures', [])
-        params = self.raw.get('config').get('parameters', [])
+        fixtures = self.raw.get('config', {}).get('fixtures', [])
+        params = self.raw.get('config', {}).get('parameters', [])
         config_fixtures, config_params = self.parameters(fixtures, params)
 
         def function_template(*args):
@@ -57,7 +57,7 @@ class PytestRunner(object):
                     if step_key == 'api':
                         api_root = pathlib.Path(BASE_DIR).joinpath(step_value)
                         raw_dict = yaml.safe_load(api_root.open(encoding='utf-8'))
-                        copy_value = copy.deepcopy(raw_dict.get('request'))
+                        copy_value = copy.deepcopy(raw_dict.get('request', {}))
                         response = self.run_request(args, copy_value, self.context)
 
                     if step_key == 'request':
@@ -95,7 +95,7 @@ class PytestRunner(object):
 
     def execute_sql(self) -> dict[str, Callable[[Any], Any] | Callable[[Any], Any]] | dict[
         str, Callable[[tuple[Any, ...], dict[str, Any]], None | tuple[Any, ...] | tuple[tuple[Any, ...], ...]]]:  # noqa
-        setting = DATABASES.get("default")
+        setting = DATABASES.get("default", {})
         none_obj = self.none_connect_obj()
 
         setting_obj = type('Setting', (object,), setting)
@@ -180,7 +180,7 @@ class PytestRunner(object):
         )
 
         #  前置
-        request_pre = request_body.get('hooks').get('request_hooks', [])
+        request_pre = request_body.get('hooks', {}).get('request_hooks', [])
         self.request_hooks(request_pre)
         log.info(
             "f--------  执行前置条件 ----------\n"
@@ -192,20 +192,20 @@ class PytestRunner(object):
 
         log.info(
             f"--------  response info ----------\n"
-            f"status: {response.get('status')}\n"
-            f"msg: {response.get('msg')}\n"
-            f"statusCode: {response.get('statusCode')}\n"
+            f"status: {response.get('status', None)}\n"
+            f"msg: {response.get('msg', None)}\n"
+            f"statusCode: {response.get('statusCode', None)}\n"
             f"responseHeaders:\n"
-            f"{json.dumps(response.get('responseHeaders'), indent=4, ensure_ascii=False)}\n"
+            f"{json.dumps(response.get('responseHeaders', {}), indent=4, ensure_ascii=False)}\n"
             f"responseBody:\n"
-            f"{json.dumps(response.get('responseBody'), indent=4, ensure_ascii=False)}\n"
-            f"cookies: {response.get('cookies')}\n"
-            f"cost: {response.get('cost')}\n"
-            f"cookie: {response.get('cookie')}"
+            f"{json.dumps(response.get('responseBody', {}), indent=4, ensure_ascii=False)}\n"
+            f"cookies: {response.get('cookies', None)}\n"
+            f"cost: {response.get('cost', None)}\n"
+            f"cookie: {response.get('cookie', None)}"
         )
 
         # 后置
-        response_pos = request_body.get('hooks').get('response_hooks', [])
+        response_pos = request_body.get('hooks', {}).get('response_hooks', [])
         self.request_hooks(response_pos)
         log.info(
             "f--------  执行后置条件 ----------\n"
@@ -221,10 +221,10 @@ class PytestRunner(object):
             hook_args = None
             for pre in request_pre:
 
-                func = self.context.get(pre)
+                func = self.context.get(pre, {})
                 argsname = [argsname for argsname, value in inspect.signature(func).parameters.items()] # noqa
                 if "request_args" in argsname:
-                    args = self.context.get("request_args")
+                    args = self.context.get("request_args", {})
                     hook_args = func(args)
 
                 else:

@@ -12,6 +12,9 @@ def pytest_collect_file(file_path: Path, parent):
         pytest_module = Module.from_parent(parent, path=file_path)
         module = types.ModuleType(file_path.stem)
         raw_dict = yaml.safe_load(file_path.open(encoding='utf-8'))
+        print("cccccc")
+        print(raw_dict)
+        print("cccccc")
 
         runner = PytestRunner(raw_dict, module)
         runner.run()
