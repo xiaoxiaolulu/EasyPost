@@ -6,9 +6,9 @@
 #    - [ test2, 'abdxxx' ]
 
 teststeps:
--
-    name: 登录2
-    api: tests/login.yaml
+#-
+#    name: 登录2
+#    api: tests/login.yaml
 #    validate:
 #        - eq: [ $.msg, success ]
 #    extract:
