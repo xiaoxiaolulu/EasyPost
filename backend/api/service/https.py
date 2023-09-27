@@ -107,7 +107,7 @@ class ApiTestListView(mixins.ListModelMixin, viewsets.GenericViewSet):
             name = request.query_params.get("name")
 
             queryset = HttpDao.list_test_case(node, project, name)
-            page = self.paginate_queryset(queryset)
+            page = self.paginate_queryset(queryset)  # noqa
             if page is not None:
                 serializer = self.get_serializer(page, many=True)
                 return self.get_paginated_response(serializer.data)
@@ -147,4 +147,10 @@ class AddApiView(APIView):
 
     @staticmethod
     def post(request, **kwargs):
-        body = request.data['request']
+
+        try:
+            api = request.data['request']
+            HttpDao.add_api_data(api, request)
+            return Response(ResponseStandard.success())
+        except Exception as err:
+            return Response(ResponseStandard.failed(msg=str(err)))

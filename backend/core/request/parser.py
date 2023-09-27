@@ -25,6 +25,7 @@ class Format(object):
         try:
             self.name = request_body.get('name', None)
             self.url = request_body.get('url', None)
+            self.method = request_body.get('method', None)
             self.headers = request_body.get('headers', {})
             self.hooks = request_body.get('hooks', {})
             self.json = request_body.get('json', {})
@@ -32,5 +33,10 @@ class Format(object):
             self.params = request_body.get('params', None)
             self.validate = request_body.get('validate', [])
             self.extract = request_body.get('extract', {})
+
+            # 额外参数
+            self.gateway = request_body.get('gateway', None)
+            self.directory_id = request_body.get('directory_id', None)
+            self.project = request_body.get('project', None)
         except (KeyError, ValueError, AttributeError):
             pass

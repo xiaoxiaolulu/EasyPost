@@ -1,7 +1,11 @@
+from typing import Any
 from api.models.https import (
     Relation,
     Api
 )
+from api.models.project import Project
+from api.models.setting import Address
+from core.request.parser import Format
 from utils.trees import (
     collections_directory_id,
     get_relation_tree
@@ -25,7 +29,7 @@ class HttpDao:
             queryset = Api.objects.filter(project__id=project_id).order_by('-update_time')
             return queryset
         except (Api.DoesNotExist, Exception):
-            raise Exception("获取测试用例失败")
+            raise Exception("获取测试接口失败")
 
     @classmethod
     def list_test_case(cls, node: int, project_id: int, name: str = ""):
@@ -49,4 +53,30 @@ class HttpDao:
                 return queryset
 
         except (Api.DoesNotExist, Exception):
-            raise Exception("获取测试用例失败")
+            raise Exception("获取测试接口失败")
+
+    @staticmethod
+    def add_api_data(api: dict, request: Any):
+
+        api = Format(api) # noqa
+
+        request_body = {
+            'name': api.name,
+            'gateway': Address.objects.get(id=api.gateway),
+            'method': api.method,
+            'url': api.url,
+            'headers': api.headers,
+            'json': api.json,
+            'params': api.params,
+            'data': api.data,
+            'hooks': api.hooks,
+            'validate': api.validate,
+            'directory_id': api.directory_id,
+            'extract': api.extract,
+            'project': Project.objects.get(id=api.project),
+            'user': request.user
+        }
+        try:
+            Api.objects.create(**request_body)
+        except (Api.DoesNotExist, Exception):
+            raise Exception("添加测试接口失败")
