@@ -5,7 +5,7 @@ from django.urls import (
 from rest_framework.routers import DefaultRouter
 from api.service.https import (
     ApiFastView,
-    TreeView
+    TreeView, AddApiView, DelApiView, ApiDetailView, ApiTestListView
 )
 from api.service.project import (
     ProjectListViewSet,
@@ -62,6 +62,10 @@ app_urls = [
     # 接口测试
     path("http/", ApiFastView.as_view()),
     path("tree/<int:pk>", TreeView.as_view()),
+    path("api/add", AddApiView.as_view()),
+    path("api/delete/<int:pk>", DelApiView.as_view()),
+    path("api/detail/<int:pk>", ApiDetailView.as_view()),
+    path("api/list", ApiTestListView.as_view())
 ]
 
 
