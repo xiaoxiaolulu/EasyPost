@@ -15,6 +15,7 @@ from api.models.https import (
     Relation,
     Api
 )
+from api.response.magic import MagicRetrieveApi
 from api.schema.https import (
     RelationSerializer,
     ApiSerializer
@@ -118,7 +119,7 @@ class ApiTestListView(mixins.ListModelMixin, viewsets.GenericViewSet):
             return Response(ResponseStandard.failed(data=serializer.errors))
 
 
-class ApiDetailView(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
+class ApiDetailView(MagicRetrieveApi):
 
     serializer_class = ApiSerializer
     queryset = Api.objects.all()

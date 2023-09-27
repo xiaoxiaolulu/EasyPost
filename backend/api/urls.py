@@ -69,7 +69,9 @@ app_urls = [
     path("api/add", AddApiView.as_view()),
     path("api/delete/<int:pk>", DelApiView.as_view()),
     path("api/detail/<int:pk>", ApiDetailView.as_view()),
-    path("api/list", ApiTestListView.as_view())
+    path("api/list", ApiTestListView.as_view({
+        'get': 'list'
+    }))
 ]
 
 
