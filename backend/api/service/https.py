@@ -138,3 +138,13 @@ class DelApiView(APIView):
             return Response(ResponseStandard.success())
         except Exception as err:
             return Response(ResponseStandard.failed(data=str(err)))
+
+
+class AddApiView(APIView):
+
+    permission_classes = [IsAuthenticated]
+    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
+
+    @staticmethod
+    def post(request, **kwargs):
+        body = request.data['request']
