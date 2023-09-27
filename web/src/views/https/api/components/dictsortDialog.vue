@@ -35,7 +35,7 @@ const ruleFormRef = ref<FormInstance>()
 
 const dialogVisible = ref<boolean>(false)
 
-const title = ref('新增字典项')
+const title = ref('新增分组')
 
 const pk = ref()
 
@@ -67,9 +67,9 @@ function close() {
 }
 
 const show = (item={})=>{
-  title.value = '新增字典项'
+  title.value = '新增分组'
   if(item.id){
-    title.value = '编辑字典项'
+    title.value = '编辑分组'
     editPk.value = item.id
     ruleForm.name = item.currentNode.label
     console.log("xxxxxx")
