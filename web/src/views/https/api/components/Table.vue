@@ -15,7 +15,7 @@
       <div class="util">
         <el-button type="primary" @click="addHandler">
           <el-icon><Plus /></el-icon>
-          新增字典项
+          新建接口
         </el-button>
       </div>
       <div class="table-inner">
@@ -55,20 +55,20 @@
       </div>
     </div>
 
-    <DictionaryEntryDialog ref="dictionaryEntryDialog"/>
+    <ApiDrawer ref="roleDrawer"/>
   </div>
 </template>
 <script lang="ts" setup>
 import { ElMessageBox, ElMessage, FormInstance } from 'element-plus'
-import {Search } from '@element-plus/icons-vue'
+import {Search, Plus } from '@element-plus/icons-vue'
 import {onMounted, reactive, ref} from 'vue'
 import { dictionaryDetailData } from '@/mock/system'
-import UserDialog from './userDialog.vue'
-import DictionaryEntryDialog from './dictionaryEntryDialog.vue'
+import ApiDrawer from './apiDrawer.vue'
+import {watch} from "vue/dist/vue";
 
 const tableData = ref(dictionaryDetailData[0].children)
 const dialogVisible = ref(false)
-const dictionaryEntryDialog = ref()
+const roleDrawer = ref()
 const ruleFormRef = ref<FormInstance>()
 const formInline = reactive({})
 const loading = ref(true)
@@ -105,10 +105,10 @@ const getList = (data)=>{
 
 
 const addHandler = () => {
-  dictionaryEntryDialog.value.show()
+  roleDrawer.value.show()
 }
 const editHandler = (row) => {
-  dictionaryEntryDialog.value.show(row)
+  roleDrawer.value.show(row)
 }
 
 const del = (row) => {

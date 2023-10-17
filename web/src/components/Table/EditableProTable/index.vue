@@ -79,7 +79,7 @@
               icon="CircleCheckFilled"
               @click="confirmEdit(scope.row)"
           >
-            保存
+            锁定
           </el-button>
           <el-button
               v-else
