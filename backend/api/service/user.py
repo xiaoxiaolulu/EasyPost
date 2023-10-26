@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.contrib.auth import get_user_model
 from django.contrib.auth.backends import ModelBackend
 from django.core.exceptions import ImproperlyConfigured
@@ -6,6 +8,8 @@ from rest_framework.authentication import SessionAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
+from rest_framework_jwt.settings import api_settings
+from rest_framework_jwt.utils import jwt_response_payload_handler
 from rest_framework_jwt.views import ObtainJSONWebToken
 from api.response.magic import MagicListAPI
 from api.schema.user import UserSimpleSerializers
@@ -42,15 +46,19 @@ class CustomJsonWebToken(ObtainJSONWebToken):
         if serializer.is_valid():
             user = serializer.object.get('user') or request.user
             token = serializer.object.get('token')
-            # jwt_response_payload_handler(token, user, request)
 
-            response = ResponseStandard.model_to_dict(user, exclude="password")
-            response = Response(ResponseStandard.success(dict(token=token, userInfo=response, roles=[user.role])))
+            token = jwt_response_payload_handler(token, user, request)
+            response = {"username": user.username, "nickname": user.nickname, "userid": user.pk}
+            response = Response(ResponseStandard.success(dict(token, userInfo=response, roles=[user.role])))
 
+            if api_settings.JWT_AUTH_COOKIE:
+                expiration = (datetime.utcnow() +
+                              api_settings.JWT_EXPIRATION_DELTA)
+                response.set_cookie(api_settings.JWT_AUTH_COOKIE,
+                                    token,
+                                    expires=expiration,
+                                    httponly=True)
             return response
-
-        response = jwt_response_payload_error_handler(serializer, request)
-        return response
 
 
 class UserListViewSet(MagicListAPI):
