@@ -9,25 +9,21 @@ from core.request.http_handler import HttpHandler
 
 
 class Headers(BaseModel):
-
     content_type: str = 'application/json'
 
 
 class Source(BaseModel):
-
     icon_url: str = None
     desc: str = 'EasyPost'
     desc_color: int = 0
 
 
 class MainTitle(BaseModel):
-
     title: str = None
     desc: str = None
 
 
 class ContentList(BaseModel):
-
     keyname: str = None
     value: str = None
 
@@ -39,7 +35,6 @@ class Action(BaseModel):
 
 
 class TemplateCard(BaseModel):
-
     card_type: str = 'text_notice'
     source: Source
     main_title: MainTitle
@@ -50,13 +45,11 @@ class TemplateCard(BaseModel):
 
 
 class Params(BaseModel):
-
     msgtype: str = 'template_card'
     template_card: TemplateCard
 
 
 class Webhook(BaseModel):
-
     url: str = None
     method: str = 'POST'
     headers: Headers
@@ -132,4 +125,4 @@ if __name__ == '__main__':
                   }
               }
           }
-        )
+          )
