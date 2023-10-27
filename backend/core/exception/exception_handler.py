@@ -36,7 +36,7 @@ def exception_handler(exc, context):
                 data = inner_exc.detail
 
             set_rollback()
-            return Response(ResponseStandard.failed(msg=data))
+            return Response(ResponseStandard.failed(msg=data), status=inner_exc.status_code)
 
         return None
 

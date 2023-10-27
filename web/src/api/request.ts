@@ -1,5 +1,10 @@
 import axios, { AxiosInstance, AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios'
 import {useUserStore} from "@/store/modules/user"
+import {useRouter} from "vue-router";
+import {ElMessage} from "element-plus";
+
+const router = useRouter()
+
 // 创建axios实例 进行基本参数配置
 const service = axios.create({
     // 默认请求地址，根据环境的不同可在.env 文件中进行修改
@@ -31,8 +36,6 @@ service.interceptors.response.use((response: AxiosResponse) =>{
     // 直接返回res，当然你也可以只返回res.data
     // 系统如果有自定义code也可以在这里处理
     return response
-
-
 },(error: AxiosError) => {
     return Promise.reject(error)
 })
