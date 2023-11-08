@@ -1,7 +1,7 @@
-import axios, { AxiosInstance, AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios'
+import axios, {AxiosInstance, AxiosError, AxiosRequestConfig, AxiosResponse} from 'axios'
 import {useUserStore} from "@/store/modules/user"
+import {ElMessageBox, ElMessage} from "element-plus";
 import {useRouter} from "vue-router";
-import {ElMessage} from "element-plus";
 
 const router = useRouter()
 
@@ -16,7 +16,7 @@ const service = axios.create({
 })
 
 //  request interceptor 接口请求拦截
-service.interceptors.request.use((config:AxiosRequestConfig)=>{
+service.interceptors.request.use((config: AxiosRequestConfig) => {
     /**
      * 用户登录之后获取服务端返回的token,后面每次请求都在请求头中带上token进行JWT校验
      * token 存储在本地储存中（storage）、vuex、pinia
@@ -24,20 +24,47 @@ service.interceptors.request.use((config:AxiosRequestConfig)=>{
     const userStore = useUserStore();
     const token: string = userStore.token;
     // 自定义请求头
-    if(token){ config.headers['Authorization'] = `JWT ${token}`}
+    if (token) {
+        config.headers['Authorization'] = `JWT ${token}`
+    }
     return config
-},(error: AxiosError) => {
+}, (error: AxiosError) => {
     // 请求错误，这里可以用全局提示框进行提示
     return Promise.reject(error);
 })
 
 //  response interceptor 接口响应拦截
-service.interceptors.response.use((response: AxiosResponse) =>{
-    // 直接返回res，当然你也可以只返回res.data
-    // 系统如果有自定义code也可以在这里处理
-    return response
-},(error: AxiosError) => {
-    return Promise.reject(error)
-})
-
+service.interceptors.response.use(
+    (response) => {
+        // 对响应数据做点什么
+        const res = response.data;
+        if (res.code && res.code !== 0) {
+            // `token` 过期或者账号已在别处登录
+            if (res.code === 11000) {
+                ElMessageBox.confirm('登录信息已失效，是否重新登录？', '提示', {
+                    confirmButtonText: '确认',
+                    cancelButtonText: '取消',
+                    type: 'warning',
+                })
+                    .then(() => {
+                        window.localStorage.removeItem('userState');
+                        window.sessionStorage.clear();
+                        window.location.href = '/login'; // 去登录页
+                        return false
+                    })
+                    .catch(() => {
+                    });
+            } else {
+                ElMessage.error('接口错误！');
+            }
+            return Promise.reject(service.interceptors.response);
+        } else {
+            return response;
+        }
+    },
+    (error) => {
+        // 对响应错误做点什么
+        return Promise.reject(error);
+    }
+);
 export default service

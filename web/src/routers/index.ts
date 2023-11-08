@@ -107,4 +107,14 @@ const router = createRouter({
   routes:constantRoutes
 })
 
+
+router.beforeEach(async (to, from, next) => {
+    const token = window.localStorage.getItem('userState');
+    if (!token && to.path !== '/login') {
+        next(`/login?redirect=${to.fullPath}`);
+    } else {
+        next()
+    }
+});
+
 export default router

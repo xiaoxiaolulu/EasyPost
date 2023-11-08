@@ -117,7 +117,7 @@ const queryList = () => {
     tableData.value = response.data.results;
     count.value = response.data.count;
   }).catch((error) => {
-    // console.log(error.response)
+    console.log(error)
     ElMessage.error("获取环境列表数据失败;请重试！")
   })
 }
