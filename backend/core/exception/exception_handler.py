@@ -36,6 +36,7 @@ def exception_handler(exc, context):
                 data = inner_exc.detail
 
             set_rollback()
+
             # 捕获401鉴权失败，直接返回 11000
             if inner_exc.status_code == 401:
                 return Response(ResponseStandard.failed(msg=data, code=11000))

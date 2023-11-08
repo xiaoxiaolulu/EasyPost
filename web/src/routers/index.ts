@@ -19,6 +19,7 @@ import functionPageRouter from './modules/functionPage'
 import toolsRouter  from "./modules/tools"
 import projectRouter from "./modules/project"
 import httpsRouter from "./modules/https"
+import {useUserStore} from "@/store/modules/user";
 
 
 // 异步组件
@@ -106,15 +107,5 @@ const router = createRouter({
   history: createWebHashHistory(), // hash
   routes:constantRoutes
 })
-
-
-router.beforeEach(async (to, from, next) => {
-    const token = window.localStorage.getItem('userState');
-    if (!token && to.path !== '/login') {
-        next(`/login?redirect=${to.fullPath}`);
-    } else {
-        next()
-    }
-});
 
 export default router

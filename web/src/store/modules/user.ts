@@ -56,7 +56,6 @@ export const useUserStore = defineStore({
                 resolve(null)
             })
         },
-
     },
     // 进行持久化存储
     persist: {

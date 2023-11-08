@@ -15,7 +15,7 @@ router.beforeEach(async(to, from, next) => {
   NProgress.start()
   // 设置标题
   if(typeof(to.meta.title) === 'string'){
-      document.title = to.meta.title ||'EasyPost'
+      document.title = `${to.meta.title} | EasyPost`;
   }
 
   const UserStore = useUserStore();
