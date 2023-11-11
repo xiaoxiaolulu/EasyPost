@@ -88,7 +88,7 @@ def rsa_encrypt(msg, server_pub):
     """
     msg = msg.encode('utf-8')
     pub_key = server_pub.encode("utf-8")
-    public_key_obj = rsa.PublicKey.load_pkcs1_openssl_pem(pub_key)  #
-    cryto_msg = rsa.encrypt(msg, public_key_obj)  # 生成加密文本
+    public_key_obj = rsa.PublicKey.load_pkcs1_openssl_pem(pub_key)
+    cryto_msg = rsa.encrypt(msg, public_key_obj)  # noqa
     cipher_base64 = base64.b64encode(cryto_msg)  # 将加密文本转化为 base64 编码
     return cipher_base64.decode()
