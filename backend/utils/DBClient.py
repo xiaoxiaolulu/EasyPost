@@ -24,7 +24,7 @@ class DBMysql:
 
 class DBClient:
 
-    def init_connect(self, DB):
+    def init_connect(self, DB): # noqa
         if isinstance(DB, dict):
             self.create_db_connect(DB)
         else:
@@ -32,8 +32,10 @@ class DBClient:
                 self.create_db_connect(config)
 
     def create_db_connect(self, config):
-        if not config: return
-        if not config.get('name'): raise ValueError('数据库配置的name字段不能为空！')
+        if not config:
+            return
+        if not config.get('name'):
+            raise ValueError('数据库配置的name字段不能为空！')
 
         if config.get('type').lower() == 'mysql' and config.get('config'):
             dbc = DBMysql(config.get('config'))
