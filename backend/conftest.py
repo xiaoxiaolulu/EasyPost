@@ -1,29 +1,27 @@
+import os.path
+import pathlib
 import types
-from pathlib import Path
-import yaml
 from _pytest.python import Module
+from config.settings import BASE_DIR
 from core.request.engine import PytestRunner
-from utils import super_builtins
+from utils import builtin
 from utils.log import set_log_format
 
 
-def pytest_collect_file(file_path: Path, parent):
-    if file_path.suffix == ".yaml" and file_path.name.startswith("test"):
-        pytest_module = Module.from_parent(parent, path=file_path)
-        module = types.ModuleType(file_path.stem)
-        raw_dict = yaml.safe_load(file_path.open(encoding='utf-8'))
-        # print("cccccc")
-        # print(raw_dict)
-        # from utils.log import log
-        # import json
-        # log.info(json.dumps(raw_dict, indent=4, ensure_ascii=False))
-        # print("cccccc")
+def pytest_collect_file(parent):
+    from django.core.cache import cache
+    raw_dict = cache.get('runner')
+    file_path = pathlib.WindowsPath(os.path.join(BASE_DIR, 'testnull.yaml'))
+    pytest_module = Module.from_parent(parent, path=file_path)
 
-        runner = PytestRunner(raw_dict, module)
-        runner.run()
+    module = types.ModuleType(file_path.stem)
+    # raw_dict = yaml.safe_load(file_path.open(encoding='utf-8'))
+    #
+    runner = PytestRunner(raw_dict, module)
+    runner.run()
 
-        pytest_module._getobj = lambda: module  # noqa
-        return pytest_module
+    pytest_module._getobj = lambda: module  # noqa
+    return pytest_module
 
 
 def pytest_configure(config):

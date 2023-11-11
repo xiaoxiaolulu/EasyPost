@@ -1,0 +1,4406 @@
+2023-11-10 17:14:57 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:14:57 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:14:57 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:14:57 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test1-123456]>>, 'username': 'test1', 'password': '123456'}
+2023-11-10 17:14:57 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:14:57 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test1",
+        "password": "123456",
+        "code": "1081691",
+        "sql": ""
+    }
+}
+2023-11-10 17:14:57 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:14:57 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:06 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "110"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=s2iyacmt962dsrx472pgjpq1dfq2wsx6; expires=Fri, 24-Nov-2023 09:15:06 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 0,
+    "msg": "login success!",
+    "username": "test1",
+    "token": "54d97595bda09a3af7faecc1d4fa668270ea97f4"
+}
+cookies: [{'name': 'sessionid', 'value': 's2iyacmt962dsrx472pgjpq1dfq2wsx6'}]
+cost: 2260ms
+cookie: <RequestsCookieJar[<Cookie sessionid=s2iyacmt962dsrx472pgjpq1dfq2wsx6 for 124.70.221.221/>]>
+2023-11-10 17:14:57 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:14:57 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:14:57 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:14:57 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:14:57 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:14:57 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test2-abdxxx]>>, 'username': 'test2', 'password': 'abdxxx'}
+2023-11-10 17:14:57 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:14:57 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test2",
+        "password": "abdxxx",
+        "code": "1494304",
+        "sql": ""
+    }
+}
+2023-11-10 17:14:57 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:14:58 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:06 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "76"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=5vjrvwfz8v2ubw0v8ms5a69brjd1oi3x; expires=Fri, 24-Nov-2023 09:15:06 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 3003,
+    "msg": "账号或密码不正确",
+    "username": "test2",
+    "token": ""
+}
+cookies: [{'name': 'sessionid', 'value': '5vjrvwfz8v2ubw0v8ms5a69brjd1oi3x'}]
+cost: 2418ms
+cookie: <RequestsCookieJar[<Cookie sessionid=5vjrvwfz8v2ubw0v8ms5a69brjd1oi3x for 124.70.221.221/>]>
+2023-11-10 17:14:58 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:14:58 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:14:58 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:14:58 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:14:58 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:14:58 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test1-123456]>>, 'username': 'test1', 'password': '123456'}
+2023-11-10 17:14:58 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:14:58 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test1",
+        "password": "123456",
+        "code": "1364121",
+        "sql": ""
+    }
+}
+2023-11-10 17:14:58 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:14:58 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:07 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "110"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=fqiogt1jditmnay0rluc346frr0w3zdr; expires=Fri, 24-Nov-2023 09:15:07 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 0,
+    "msg": "login success!",
+    "username": "test1",
+    "token": "19fba906262e012aacea7dc181de12fbd6ae386a"
+}
+cookies: [{'name': 'sessionid', 'value': 'fqiogt1jditmnay0rluc346frr0w3zdr'}]
+cost: 2111ms
+cookie: <RequestsCookieJar[<Cookie sessionid=fqiogt1jditmnay0rluc346frr0w3zdr for 124.70.221.221/>]>
+2023-11-10 17:14:58 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:14:58 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:14:58 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:14:58 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:14:58 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:14:58 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test2-abdxxx]>>, 'username': 'test2', 'password': 'abdxxx'}
+2023-11-10 17:14:58 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:14:58 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test2",
+        "password": "abdxxx",
+        "code": "1400128",
+        "sql": ""
+    }
+}
+2023-11-10 17:14:58 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:14:58 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:07 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "76"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=xejql9guth7modvidu2jj6lqzs2nhorv; expires=Fri, 24-Nov-2023 09:15:07 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 3003,
+    "msg": "账号或密码不正确",
+    "username": "test2",
+    "token": ""
+}
+cookies: [{'name': 'sessionid', 'value': 'xejql9guth7modvidu2jj6lqzs2nhorv'}]
+cost: 2278ms
+cookie: <RequestsCookieJar[<Cookie sessionid=xejql9guth7modvidu2jj6lqzs2nhorv for 124.70.221.221/>]>
+2023-11-10 17:14:58 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:14:58 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:14:58 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:14:58 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:14:58 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:14:58 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test1-123456]>>, 'username': 'test1', 'password': '123456'}
+2023-11-10 17:14:58 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:14:58 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test1",
+        "password": "123456",
+        "code": "1874428",
+        "sql": ""
+    }
+}
+2023-11-10 17:14:58 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:14:58 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:14:58 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:14:58 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:14:58 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test1-123456]>>, 'username': 'test1', 'password': '123456'}
+2023-11-10 17:14:58 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:14:58 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test1",
+        "password": "123456",
+        "code": "1308693",
+        "sql": ""
+    }
+}
+2023-11-10 17:14:58 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:14:58 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:07 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "110"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=jfyyezkc17b1ul5haexg6fmk8fqfcerw; expires=Fri, 24-Nov-2023 09:15:07 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 0,
+    "msg": "login success!",
+    "username": "test1",
+    "token": "81479a5ab4753b742c685188101738594cd96817"
+}
+cookies: [{'name': 'sessionid', 'value': 'jfyyezkc17b1ul5haexg6fmk8fqfcerw'}]
+cost: 3248ms
+cookie: <RequestsCookieJar[<Cookie sessionid=jfyyezkc17b1ul5haexg6fmk8fqfcerw for 124.70.221.221/>]>
+2023-11-10 17:14:58 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:14:58 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:14:58 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:14:58 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:14:58 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:14:58 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test2-abdxxx]>>, 'username': 'test2', 'password': 'abdxxx'}
+2023-11-10 17:14:58 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:14:58 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test2",
+        "password": "abdxxx",
+        "code": "1591610",
+        "sql": ""
+    }
+}
+2023-11-10 17:14:58 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:14:58 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:07 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "110"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=75e87iez6jxxbcs8hrkeri9md2twistv; expires=Fri, 24-Nov-2023 09:15:07 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 0,
+    "msg": "login success!",
+    "username": "test1",
+    "token": "402f483730d7516936bb2df48749d876cc42df17"
+}
+cookies: [{'name': 'sessionid', 'value': '75e87iez6jxxbcs8hrkeri9md2twistv'}]
+cost: 3330ms
+cookie: <RequestsCookieJar[<Cookie sessionid=75e87iez6jxxbcs8hrkeri9md2twistv for 124.70.221.221/>]>
+2023-11-10 17:14:58 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:14:58 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:14:58 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:14:58 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:14:58 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:14:58 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test2-abdxxx]>>, 'username': 'test2', 'password': 'abdxxx'}
+2023-11-10 17:14:58 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:14:58 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test2",
+        "password": "abdxxx",
+        "code": "1712657",
+        "sql": ""
+    }
+}
+2023-11-10 17:14:58 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:14:59 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:07 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "76"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=4tvwwwa8pwpd8sk89i4byxlyrunlt8f1; expires=Fri, 24-Nov-2023 09:15:07 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 3003,
+    "msg": "账号或密码不正确",
+    "username": "test2",
+    "token": ""
+}
+cookies: [{'name': 'sessionid', 'value': '4tvwwwa8pwpd8sk89i4byxlyrunlt8f1'}]
+cost: 2192ms
+cookie: <RequestsCookieJar[<Cookie sessionid=4tvwwwa8pwpd8sk89i4byxlyrunlt8f1 for 124.70.221.221/>]>
+2023-11-10 17:14:59 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:14:59 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:14:59 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:14:59 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:14:59 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:14:59 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test1-123456]>>, 'username': 'test1', 'password': '123456'}
+2023-11-10 17:14:59 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:14:59 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test1",
+        "password": "123456",
+        "code": "1964416",
+        "sql": ""
+    }
+}
+2023-11-10 17:14:59 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:14:59 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:08 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "76"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=4jwsmtdfmcyd0mmpyuajnjulj76bm7za; expires=Fri, 24-Nov-2023 09:15:08 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 3003,
+    "msg": "账号或密码不正确",
+    "username": "test2",
+    "token": ""
+}
+cookies: [{'name': 'sessionid', 'value': '4jwsmtdfmcyd0mmpyuajnjulj76bm7za'}]
+cost: 3342ms
+cookie: <RequestsCookieJar[<Cookie sessionid=4jwsmtdfmcyd0mmpyuajnjulj76bm7za for 124.70.221.221/>]>
+2023-11-10 17:14:59 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:14:59 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:14:59 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:14:59 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:14:59 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:14:59 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test1-123456]>>, 'username': 'test1', 'password': '123456'}
+2023-11-10 17:14:59 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:14:59 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test1",
+        "password": "123456",
+        "code": "1056218",
+        "sql": ""
+    }
+}
+2023-11-10 17:14:59 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:14:59 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:08 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "110"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=oq8kpqlbhhsxqmi4u5my80q3jrvgi8kv; expires=Fri, 24-Nov-2023 09:15:08 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 0,
+    "msg": "login success!",
+    "username": "test1",
+    "token": "1a437d948c948a0be0796f1ad6a8414ba51817a4"
+}
+cookies: [{'name': 'sessionid', 'value': 'oq8kpqlbhhsxqmi4u5my80q3jrvgi8kv'}]
+cost: 3058ms
+cookie: <RequestsCookieJar[<Cookie sessionid=oq8kpqlbhhsxqmi4u5my80q3jrvgi8kv for 124.70.221.221/>]>
+2023-11-10 17:14:59 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:14:59 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:14:59 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:14:59 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:14:59 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:14:59 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test2-abdxxx]>>, 'username': 'test2', 'password': 'abdxxx'}
+2023-11-10 17:14:59 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:14:59 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test2",
+        "password": "abdxxx",
+        "code": "1879877",
+        "sql": ""
+    }
+}
+2023-11-10 17:14:59 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:14:59 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:08 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "110"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=l69eemn7d6pifw4uqqgshx2684r9qyht; expires=Fri, 24-Nov-2023 09:15:08 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 0,
+    "msg": "login success!",
+    "username": "test1",
+    "token": "3a6628207414976cf8e1482079cadbdca19fa3c5"
+}
+cookies: [{'name': 'sessionid', 'value': 'l69eemn7d6pifw4uqqgshx2684r9qyht'}]
+cost: 3673ms
+cookie: <RequestsCookieJar[<Cookie sessionid=l69eemn7d6pifw4uqqgshx2684r9qyht for 124.70.221.221/>]>
+2023-11-10 17:14:59 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:14:59 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:14:59 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:14:59 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:14:59 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:14:59 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test2-abdxxx]>>, 'username': 'test2', 'password': 'abdxxx'}
+2023-11-10 17:14:59 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:14:59 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test2",
+        "password": "abdxxx",
+        "code": "1010638",
+        "sql": ""
+    }
+}
+2023-11-10 17:14:59 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:14:59 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:08 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "76"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=yvotiraazdwdvmwul76sbquj2uf3br1o; expires=Fri, 24-Nov-2023 09:15:08 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 3003,
+    "msg": "账号或密码不正确",
+    "username": "test2",
+    "token": ""
+}
+cookies: [{'name': 'sessionid', 'value': 'yvotiraazdwdvmwul76sbquj2uf3br1o'}]
+cost: 2153ms
+cookie: <RequestsCookieJar[<Cookie sessionid=yvotiraazdwdvmwul76sbquj2uf3br1o for 124.70.221.221/>]>
+2023-11-10 17:14:59 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:14:59 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:14:59 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:14:59 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:14:59 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:14:59 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test1-123456]>>, 'username': 'test1', 'password': '123456'}
+2023-11-10 17:14:59 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:14:59 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test1",
+        "password": "123456",
+        "code": "1956258",
+        "sql": ""
+    }
+}
+2023-11-10 17:14:59 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:14:59 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:08 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "76"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=log72wcm0wtxn4mx4r79hagqgm8qfnvc; expires=Fri, 24-Nov-2023 09:15:08 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 3003,
+    "msg": "账号或密码不正确",
+    "username": "test2",
+    "token": ""
+}
+cookies: [{'name': 'sessionid', 'value': 'log72wcm0wtxn4mx4r79hagqgm8qfnvc'}]
+cost: 2968ms
+cookie: <RequestsCookieJar[<Cookie sessionid=log72wcm0wtxn4mx4r79hagqgm8qfnvc for 124.70.221.221/>]>
+2023-11-10 17:14:59 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:14:59 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:14:59 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:14:59 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:14:59 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:14:59 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test1-123456]>>, 'username': 'test1', 'password': '123456'}
+2023-11-10 17:14:59 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:14:59 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test1",
+        "password": "123456",
+        "code": "1860247",
+        "sql": ""
+    }
+}
+2023-11-10 17:14:59 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:14:59 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:08 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "110"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=t0ekcttrpswu6tc87ffd9ejltnd3wb5g; expires=Fri, 24-Nov-2023 09:15:08 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 0,
+    "msg": "login success!",
+    "username": "test1",
+    "token": "8b648dacae63223fa60952d90a78af170a895132"
+}
+cookies: [{'name': 'sessionid', 'value': 't0ekcttrpswu6tc87ffd9ejltnd3wb5g'}]
+cost: 3064ms
+cookie: <RequestsCookieJar[<Cookie sessionid=t0ekcttrpswu6tc87ffd9ejltnd3wb5g for 124.70.221.221/>]>
+2023-11-10 17:14:59 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:14:59 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:14:59 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:14:59 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:14:59 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:14:59 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test2-abdxxx]>>, 'username': 'test2', 'password': 'abdxxx'}
+2023-11-10 17:14:59 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:14:59 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test2",
+        "password": "abdxxx",
+        "code": "1583882",
+        "sql": ""
+    }
+}
+2023-11-10 17:14:59 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:00 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:09 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "110"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=ndzrzildjkkd3tky2mbz11txfxfn445n; expires=Fri, 24-Nov-2023 09:15:09 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 0,
+    "msg": "login success!",
+    "username": "test1",
+    "token": "f9a74ae33397f905f782c2286be8fd668352f8fd"
+}
+cookies: [{'name': 'sessionid', 'value': 'ndzrzildjkkd3tky2mbz11txfxfn445n'}]
+cost: 3229ms
+cookie: <RequestsCookieJar[<Cookie sessionid=ndzrzildjkkd3tky2mbz11txfxfn445n for 124.70.221.221/>]>
+2023-11-10 17:15:00 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:00 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:00 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:00 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:09 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "76"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=ps7gfn0ive0wi50msaaddgdhcjizw6q4; expires=Fri, 24-Nov-2023 09:15:09 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 3003,
+    "msg": "账号或密码不正确",
+    "username": "test2",
+    "token": ""
+}
+cookies: [{'name': 'sessionid', 'value': 'ps7gfn0ive0wi50msaaddgdhcjizw6q4'}]
+cost: 2970ms
+cookie: <RequestsCookieJar[<Cookie sessionid=ps7gfn0ive0wi50msaaddgdhcjizw6q4 for 124.70.221.221/>]>
+2023-11-10 17:15:00 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:00 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:00 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:00 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:00 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:00 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:00 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:00 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test1-123456]>>, 'username': 'test1', 'password': '123456'}
+2023-11-10 17:15:00 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:00 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test1",
+        "password": "123456",
+        "code": "1969028",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:00 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test2-abdxxx]>>, 'username': 'test2', 'password': 'abdxxx'}
+2023-11-10 17:15:00 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:00 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:00 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test2",
+        "password": "abdxxx",
+        "code": "1304806",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:00 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:00 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:09 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "76"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=b376jqh3daknx2z91roje5ja57vhxhdh; expires=Fri, 24-Nov-2023 09:15:09 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 3003,
+    "msg": "账号或密码不正确",
+    "username": "test2",
+    "token": ""
+}
+cookies: [{'name': 'sessionid', 'value': 'b376jqh3daknx2z91roje5ja57vhxhdh'}]
+cost: 2828ms
+cookie: <RequestsCookieJar[<Cookie sessionid=b376jqh3daknx2z91roje5ja57vhxhdh for 124.70.221.221/>]>
+2023-11-10 17:15:00 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:00 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:00 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:00 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:00 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:00 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test1-123456]>>, 'username': 'test1', 'password': '123456'}
+2023-11-10 17:15:00 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:00 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test1",
+        "password": "123456",
+        "code": "1077209",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:00 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:00 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:09 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "110"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=7lzbawhhhmprl7j73yjtd41ot33zdm6s; expires=Fri, 24-Nov-2023 09:15:09 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 0,
+    "msg": "login success!",
+    "username": "test1",
+    "token": "3fd2117a0fb52dfdddc42835996921e7a7759ff7"
+}
+cookies: [{'name': 'sessionid', 'value': '7lzbawhhhmprl7j73yjtd41ot33zdm6s'}]
+cost: 3170ms
+cookie: <RequestsCookieJar[<Cookie sessionid=7lzbawhhhmprl7j73yjtd41ot33zdm6s for 124.70.221.221/>]>
+2023-11-10 17:15:00 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:00 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:00 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:00 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:00 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:00 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test2-abdxxx]>>, 'username': 'test2', 'password': 'abdxxx'}
+2023-11-10 17:15:00 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:00 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test2",
+        "password": "abdxxx",
+        "code": "1659539",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:00 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:00 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:09 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "76"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=idff018jze8enpsfhrn293otgjqgl1lp; expires=Fri, 24-Nov-2023 09:15:09 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 3003,
+    "msg": "账号或密码不正确",
+    "username": "test2",
+    "token": ""
+}
+cookies: [{'name': 'sessionid', 'value': 'idff018jze8enpsfhrn293otgjqgl1lp'}]
+cost: 2831ms
+cookie: <RequestsCookieJar[<Cookie sessionid=idff018jze8enpsfhrn293otgjqgl1lp for 124.70.221.221/>]>
+2023-11-10 17:15:00 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:00 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:00 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:00 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:00 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:00 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test1-123456]>>, 'username': 'test1', 'password': '123456'}
+2023-11-10 17:15:00 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:00 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test1",
+        "password": "123456",
+        "code": "1203511",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:00 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:09 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "110"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=zk6hoau6wd5uhl8lh466pvoa7891h35f; expires=Fri, 24-Nov-2023 09:15:09 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 0,
+    "msg": "login success!",
+    "username": "test1",
+    "token": "3f62fe162a61b3f16b69408a5eaa9cdc6e9e8855"
+}
+cookies: [{'name': 'sessionid', 'value': 'zk6hoau6wd5uhl8lh466pvoa7891h35f'}]
+cost: 3161ms
+cookie: <RequestsCookieJar[<Cookie sessionid=zk6hoau6wd5uhl8lh466pvoa7891h35f for 124.70.221.221/>]>
+2023-11-10 17:15:00 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:00 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:00 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:00 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:00 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:00 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:00 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test2-abdxxx]>>, 'username': 'test2', 'password': 'abdxxx'}
+2023-11-10 17:15:00 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:00 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test2",
+        "password": "abdxxx",
+        "code": "1958287",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:00 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:01 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:10 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "110"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=14ge9ou1igt0xua6yi2687f30hfsdy9w; expires=Fri, 24-Nov-2023 09:15:10 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 0,
+    "msg": "login success!",
+    "username": "test1",
+    "token": "86d07969c0df24c7005b3d06bfb0c08d415ca3dc"
+}
+cookies: [{'name': 'sessionid', 'value': '14ge9ou1igt0xua6yi2687f30hfsdy9w'}]
+cost: 3458ms
+cookie: <RequestsCookieJar[<Cookie sessionid=14ge9ou1igt0xua6yi2687f30hfsdy9w for 124.70.221.221/>]>
+2023-11-10 17:15:01 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:01 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:01 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:01 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:01 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:01 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test2-abdxxx]>>, 'username': 'test2', 'password': 'abdxxx'}
+2023-11-10 17:15:01 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:01 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test2",
+        "password": "abdxxx",
+        "code": "1363460",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:01 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:01 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:10 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "76"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=paj4npm891qwdmu1l3lmhaky9vu5f5kc; expires=Fri, 24-Nov-2023 09:15:10 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 3003,
+    "msg": "账号或密码不正确",
+    "username": "test2",
+    "token": ""
+}
+cookies: [{'name': 'sessionid', 'value': 'paj4npm891qwdmu1l3lmhaky9vu5f5kc'}]
+cost: 3386ms
+cookie: <RequestsCookieJar[<Cookie sessionid=paj4npm891qwdmu1l3lmhaky9vu5f5kc for 124.70.221.221/>]>
+2023-11-10 17:15:01 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:01 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:01 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:01 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:01 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:01 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test1-123456]>>, 'username': 'test1', 'password': '123456'}
+2023-11-10 17:15:01 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:01 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test1",
+        "password": "123456",
+        "code": "1628959",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:01 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:01 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:10 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "76"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=j52ni4o9a2fxxkbzkdrey8z7kygmh7er; expires=Fri, 24-Nov-2023 09:15:10 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 3003,
+    "msg": "账号或密码不正确",
+    "username": "test2",
+    "token": ""
+}
+cookies: [{'name': 'sessionid', 'value': 'j52ni4o9a2fxxkbzkdrey8z7kygmh7er'}]
+cost: 5948ms
+cookie: <RequestsCookieJar[<Cookie sessionid=j52ni4o9a2fxxkbzkdrey8z7kygmh7er for 124.70.221.221/>]>
+2023-11-10 17:15:01 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:01 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:01 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:01 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:01 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:01 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test1-123456]>>, 'username': 'test1', 'password': '123456'}
+2023-11-10 17:15:01 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:01 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test1",
+        "password": "123456",
+        "code": "1864386",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:01 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:10 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "110"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=kvrag0nwwr18pqtya5b70tpltqrd0zun; expires=Fri, 24-Nov-2023 09:15:10 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 0,
+    "msg": "login success!",
+    "username": "test1",
+    "token": "f80c8467df1d22e15ee5c27fd0dbc3ced714e0dc"
+}
+cookies: [{'name': 'sessionid', 'value': 'kvrag0nwwr18pqtya5b70tpltqrd0zun'}]
+cost: 6044ms
+cookie: <RequestsCookieJar[<Cookie sessionid=kvrag0nwwr18pqtya5b70tpltqrd0zun for 124.70.221.221/>]>
+2023-11-10 17:15:01 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:01 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:01 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:01 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:01 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:01 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test2-abdxxx]>>, 'username': 'test2', 'password': 'abdxxx'}
+2023-11-10 17:15:01 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:01 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:01 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test2",
+        "password": "abdxxx",
+        "code": "1611686",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:01 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:02 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:10 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "76"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=l7ysp0r1frggddqh8zptp619erre8o3x; expires=Fri, 24-Nov-2023 09:15:10 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 3003,
+    "msg": "账号或密码不正确",
+    "username": "test2",
+    "token": ""
+}
+cookies: [{'name': 'sessionid', 'value': 'l7ysp0r1frggddqh8zptp619erre8o3x'}]
+cost: 2721ms
+cookie: <RequestsCookieJar[<Cookie sessionid=l7ysp0r1frggddqh8zptp619erre8o3x for 124.70.221.221/>]>
+2023-11-10 17:15:02 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:02 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:02 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:02 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:02 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:02 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test1-123456]>>, 'username': 'test1', 'password': '123456'}
+2023-11-10 17:15:02 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:02 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test1",
+        "password": "123456",
+        "code": "1920120",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:02 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:02 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:11 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "110"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=vybobsz8mxi46zai308w2w3jt10hmy9b; expires=Fri, 24-Nov-2023 09:15:11 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 0,
+    "msg": "login success!",
+    "username": "test1",
+    "token": "8ad42f54675a79cf038d6490b5cd95806cff3620"
+}
+cookies: [{'name': 'sessionid', 'value': 'vybobsz8mxi46zai308w2w3jt10hmy9b'}]
+cost: 2916ms
+cookie: <RequestsCookieJar[<Cookie sessionid=vybobsz8mxi46zai308w2w3jt10hmy9b for 124.70.221.221/>]>
+2023-11-10 17:15:02 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:02 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:02 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:02 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:02 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:02 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test2-abdxxx]>>, 'username': 'test2', 'password': 'abdxxx'}
+2023-11-10 17:15:02 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:02 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test2",
+        "password": "abdxxx",
+        "code": "1314305",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:02 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:02 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:11 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "76"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=zwk22qexawndv8r88pnh3sp8r15nrewi; expires=Fri, 24-Nov-2023 09:15:11 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 3003,
+    "msg": "账号或密码不正确",
+    "username": "test2",
+    "token": ""
+}
+cookies: [{'name': 'sessionid', 'value': 'zwk22qexawndv8r88pnh3sp8r15nrewi'}]
+cost: 4728ms
+cookie: <RequestsCookieJar[<Cookie sessionid=zwk22qexawndv8r88pnh3sp8r15nrewi for 124.70.221.221/>]>
+2023-11-10 17:15:02 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:02 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:02 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:02 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:02 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:02 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test1-123456]>>, 'username': 'test1', 'password': '123456'}
+2023-11-10 17:15:02 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:02 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test1",
+        "password": "123456",
+        "code": "1186648",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:02 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:11 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "110"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=bi8yjgiad0r6jvz3fxc0wjq9btdw7x7j; expires=Fri, 24-Nov-2023 09:15:11 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 0,
+    "msg": "login success!",
+    "username": "test1",
+    "token": "17dd3276fa58f351728a17d5d3d39fe0e913e549"
+}
+cookies: [{'name': 'sessionid', 'value': 'bi8yjgiad0r6jvz3fxc0wjq9btdw7x7j'}]
+cost: 4904ms
+cookie: <RequestsCookieJar[<Cookie sessionid=bi8yjgiad0r6jvz3fxc0wjq9btdw7x7j for 124.70.221.221/>]>
+2023-11-10 17:15:02 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:02 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:02 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:02 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:02 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:02 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:02 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test2-abdxxx]>>, 'username': 'test2', 'password': 'abdxxx'}
+2023-11-10 17:15:02 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:02 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test2",
+        "password": "abdxxx",
+        "code": "1301969",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:02 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:03 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:11 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "76"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=arb8rrlq28g3d6pwuzvc4cjfpycpa7lh; expires=Fri, 24-Nov-2023 09:15:11 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 3003,
+    "msg": "账号或密码不正确",
+    "username": "test2",
+    "token": ""
+}
+cookies: [{'name': 'sessionid', 'value': 'arb8rrlq28g3d6pwuzvc4cjfpycpa7lh'}]
+cost: 3086ms
+cookie: <RequestsCookieJar[<Cookie sessionid=arb8rrlq28g3d6pwuzvc4cjfpycpa7lh for 124.70.221.221/>]>
+2023-11-10 17:15:03 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:11 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "110"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=fxhd0mes5mklhl83gpxsq64tbf8ilpbo; expires=Fri, 24-Nov-2023 09:15:11 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 0,
+    "msg": "login success!",
+    "username": "test1",
+    "token": "6ec88ce449e79bac14c6703b84c709660e642f16"
+}
+cookies: [{'name': 'sessionid', 'value': 'fxhd0mes5mklhl83gpxsq64tbf8ilpbo'}]
+cost: 3227ms
+cookie: <RequestsCookieJar[<Cookie sessionid=fxhd0mes5mklhl83gpxsq64tbf8ilpbo for 124.70.221.221/>]>
+2023-11-10 17:15:03 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:03 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:03 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:03 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:03 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:03 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:03 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:03 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:03 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:03 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test1-123456]>>, 'username': 'test1', 'password': '123456'}
+2023-11-10 17:15:03 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:03 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:03 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test2-abdxxx]>>, 'username': 'test2', 'password': 'abdxxx'}
+2023-11-10 17:15:03 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test1",
+        "password": "123456",
+        "code": "1076249",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:03 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:03 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:03 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test2",
+        "password": "abdxxx",
+        "code": "1056418",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:03 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:03 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:12 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "76"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=59jmqrk72k2c2nkq0lvhuiozgtc0qykv; expires=Fri, 24-Nov-2023 09:15:12 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 3003,
+    "msg": "账号或密码不正确",
+    "username": "test2",
+    "token": ""
+}
+cookies: [{'name': 'sessionid', 'value': '59jmqrk72k2c2nkq0lvhuiozgtc0qykv'}]
+cost: 4643ms
+cookie: <RequestsCookieJar[<Cookie sessionid=59jmqrk72k2c2nkq0lvhuiozgtc0qykv for 124.70.221.221/>]>
+2023-11-10 17:15:03 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:03 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:03 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:12 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "110"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=2c4zd9hnqno2r0fpxj950ak413oibq4a; expires=Fri, 24-Nov-2023 09:15:12 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 0,
+    "msg": "login success!",
+    "username": "test1",
+    "token": "f7d6462a015cfc5697d86c8397be93877dc65b2d"
+}
+cookies: [{'name': 'sessionid', 'value': '2c4zd9hnqno2r0fpxj950ak413oibq4a'}]
+cost: 4647ms
+cookie: <RequestsCookieJar[<Cookie sessionid=2c4zd9hnqno2r0fpxj950ak413oibq4a for 124.70.221.221/>]>
+2023-11-10 17:15:03 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:03 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:03 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:03 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:03 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:03 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:03 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:03 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:03 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test1-123456]>>, 'username': 'test1', 'password': '123456'}
+2023-11-10 17:15:03 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test2-abdxxx]>>, 'username': 'test2', 'password': 'abdxxx'}
+2023-11-10 17:15:03 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:03 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:03 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test1",
+        "password": "123456",
+        "code": "1640337",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:03 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test2",
+        "password": "abdxxx",
+        "code": "1737419",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:03 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:03 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:03 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:12 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "76"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=ehlsczdtslo1mhbm5so6aksmr8x7qeld; expires=Fri, 24-Nov-2023 09:15:12 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 3003,
+    "msg": "账号或密码不正确",
+    "username": "test2",
+    "token": ""
+}
+cookies: [{'name': 'sessionid', 'value': 'ehlsczdtslo1mhbm5so6aksmr8x7qeld'}]
+cost: 3005ms
+cookie: <RequestsCookieJar[<Cookie sessionid=ehlsczdtslo1mhbm5so6aksmr8x7qeld for 124.70.221.221/>]>
+2023-11-10 17:15:03 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:03 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:03 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:12 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "110"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=973wc5zp8rxacl9r8l6w0d4bfa4qfm28; expires=Fri, 24-Nov-2023 09:15:12 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 0,
+    "msg": "login success!",
+    "username": "test1",
+    "token": "eee8c223c21e0c640837e366cff04a0336fd5d35"
+}
+cookies: [{'name': 'sessionid', 'value': '973wc5zp8rxacl9r8l6w0d4bfa4qfm28'}]
+cost: 3050ms
+cookie: <RequestsCookieJar[<Cookie sessionid=973wc5zp8rxacl9r8l6w0d4bfa4qfm28 for 124.70.221.221/>]>
+2023-11-10 17:15:03 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:03 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:03 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:03 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:03 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test1-123456]>>, 'username': 'test1', 'password': '123456'}
+2023-11-10 17:15:03 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:03 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test1",
+        "password": "123456",
+        "code": "1408123",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:03 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:03 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:03 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:03 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:03 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:03 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test2-abdxxx]>>, 'username': 'test2', 'password': 'abdxxx'}
+2023-11-10 17:15:03 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:03 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test2",
+        "password": "abdxxx",
+        "code": "1840315",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:03 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:04 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:12 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "76"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=egwwfh6xnrbgqgl7j495tpec2ju8q3k0; expires=Fri, 24-Nov-2023 09:15:12 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 3003,
+    "msg": "账号或密码不正确",
+    "username": "test2",
+    "token": ""
+}
+cookies: [{'name': 'sessionid', 'value': 'egwwfh6xnrbgqgl7j495tpec2ju8q3k0'}]
+cost: 2782ms
+cookie: <RequestsCookieJar[<Cookie sessionid=egwwfh6xnrbgqgl7j495tpec2ju8q3k0 for 124.70.221.221/>]>
+2023-11-10 17:15:04 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:04 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:04 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:04 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:04 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:04 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test1-123456]>>, 'username': 'test1', 'password': '123456'}
+2023-11-10 17:15:04 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:04 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:12 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "110"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=irckwl9anxhg7vf947sjnp2m03suph9y; expires=Fri, 24-Nov-2023 09:15:12 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 0,
+    "msg": "login success!",
+    "username": "test1",
+    "token": "ca86612c546ef76e8e5562c914b97ab826f9194c"
+}
+cookies: [{'name': 'sessionid', 'value': 'irckwl9anxhg7vf947sjnp2m03suph9y'}]
+cost: 2948ms
+cookie: <RequestsCookieJar[<Cookie sessionid=irckwl9anxhg7vf947sjnp2m03suph9y for 124.70.221.221/>]>
+2023-11-10 17:15:04 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test1",
+        "password": "123456",
+        "code": "1074550",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:04 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:04 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:04 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:04 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:04 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:04 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:04 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test2-abdxxx]>>, 'username': 'test2', 'password': 'abdxxx'}
+2023-11-10 17:15:04 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:04 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test2",
+        "password": "abdxxx",
+        "code": "1755986",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:04 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:04 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:13 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "76"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=s7dqwv2tpuxg6t88x34xsoztxwsvs2xa; expires=Fri, 24-Nov-2023 09:15:13 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 3003,
+    "msg": "账号或密码不正确",
+    "username": "test2",
+    "token": ""
+}
+cookies: [{'name': 'sessionid', 'value': 's7dqwv2tpuxg6t88x34xsoztxwsvs2xa'}]
+cost: 2522ms
+cookie: <RequestsCookieJar[<Cookie sessionid=s7dqwv2tpuxg6t88x34xsoztxwsvs2xa for 124.70.221.221/>]>
+2023-11-10 17:15:04 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:04 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:04 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:04 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:04 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:04 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test1-123456]>>, 'username': 'test1', 'password': '123456'}
+2023-11-10 17:15:04 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:04 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test1",
+        "password": "123456",
+        "code": "1145155",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:04 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:04 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:13 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "110"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=h78tif18neya387ciovkadp2c7okh172; expires=Fri, 24-Nov-2023 09:15:13 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 0,
+    "msg": "login success!",
+    "username": "test1",
+    "token": "c6c5020471ad240551ef67bdab8a58b32252e20c"
+}
+cookies: [{'name': 'sessionid', 'value': 'h78tif18neya387ciovkadp2c7okh172'}]
+cost: 2868ms
+cookie: <RequestsCookieJar[<Cookie sessionid=h78tif18neya387ciovkadp2c7okh172 for 124.70.221.221/>]>
+2023-11-10 17:15:04 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:04 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:04 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:04 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:04 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:04 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test2-abdxxx]>>, 'username': 'test2', 'password': 'abdxxx'}
+2023-11-10 17:15:04 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:04 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test2",
+        "password": "abdxxx",
+        "code": "1743047",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:04 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:04 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:13 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "76"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=3iws5mds1lxab4cybsrlw6o81curnu18; expires=Fri, 24-Nov-2023 09:15:13 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 3003,
+    "msg": "账号或密码不正确",
+    "username": "test2",
+    "token": ""
+}
+cookies: [{'name': 'sessionid', 'value': '3iws5mds1lxab4cybsrlw6o81curnu18'}]
+cost: 2770ms
+cookie: <RequestsCookieJar[<Cookie sessionid=3iws5mds1lxab4cybsrlw6o81curnu18 for 124.70.221.221/>]>
+2023-11-10 17:15:04 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:04 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:04 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:04 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:04 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:04 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test1-123456]>>, 'username': 'test1', 'password': '123456'}
+2023-11-10 17:15:04 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:04 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test1",
+        "password": "123456",
+        "code": "1802991",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:04 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:04 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:13 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "110"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=oswazvyn160o2atjm1jpt9hqcj8pbug1; expires=Fri, 24-Nov-2023 09:15:13 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 0,
+    "msg": "login success!",
+    "username": "test1",
+    "token": "7c87a6cc929810baa837d8f8de78e1437b68962d"
+}
+cookies: [{'name': 'sessionid', 'value': 'oswazvyn160o2atjm1jpt9hqcj8pbug1'}]
+cost: 3250ms
+cookie: <RequestsCookieJar[<Cookie sessionid=oswazvyn160o2atjm1jpt9hqcj8pbug1 for 124.70.221.221/>]>
+2023-11-10 17:15:04 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:04 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:04 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:04 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:04 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:04 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test2-abdxxx]>>, 'username': 'test2', 'password': 'abdxxx'}
+2023-11-10 17:15:04 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:04 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test2",
+        "password": "abdxxx",
+        "code": "1661813",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:04 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:05 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:13 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "76"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=jyiqo3xlvomx7okcvygkv8ln1j9lvg7x; expires=Fri, 24-Nov-2023 09:15:13 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 3003,
+    "msg": "账号或密码不正确",
+    "username": "test2",
+    "token": ""
+}
+cookies: [{'name': 'sessionid', 'value': 'jyiqo3xlvomx7okcvygkv8ln1j9lvg7x'}]
+cost: 2598ms
+cookie: <RequestsCookieJar[<Cookie sessionid=jyiqo3xlvomx7okcvygkv8ln1j9lvg7x for 124.70.221.221/>]>
+2023-11-10 17:15:05 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:05 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:05 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:05 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:05 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:05 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test1-123456]>>, 'username': 'test1', 'password': '123456'}
+2023-11-10 17:15:05 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:05 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test1",
+        "password": "123456",
+        "code": "1526256",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:05 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:05 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:13 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "110"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=v2ol1udad8kif44nfxaslxrngvvva0es; expires=Fri, 24-Nov-2023 09:15:13 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 0,
+    "msg": "login success!",
+    "username": "test1",
+    "token": "862287c3e9929c2fb203856a6b4dc4093385d183"
+}
+cookies: [{'name': 'sessionid', 'value': 'v2ol1udad8kif44nfxaslxrngvvva0es'}]
+cost: 2868ms
+cookie: <RequestsCookieJar[<Cookie sessionid=v2ol1udad8kif44nfxaslxrngvvva0es for 124.70.221.221/>]>
+2023-11-10 17:15:05 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:05 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:05 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:05 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:05 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:05 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test2-abdxxx]>>, 'username': 'test2', 'password': 'abdxxx'}
+2023-11-10 17:15:05 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:05 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test2",
+        "password": "abdxxx",
+        "code": "1647241",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:05 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:05 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:14 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "76"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=v40sbx8j1cte83uhvpo4tv9ko80s0yyn; expires=Fri, 24-Nov-2023 09:15:14 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 3003,
+    "msg": "账号或密码不正确",
+    "username": "test2",
+    "token": ""
+}
+cookies: [{'name': 'sessionid', 'value': 'v40sbx8j1cte83uhvpo4tv9ko80s0yyn'}]
+cost: 2808ms
+cookie: <RequestsCookieJar[<Cookie sessionid=v40sbx8j1cte83uhvpo4tv9ko80s0yyn for 124.70.221.221/>]>
+2023-11-10 17:15:05 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:05 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:05 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:05 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:05 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:05 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test1-123456]>>, 'username': 'test1', 'password': '123456'}
+2023-11-10 17:15:05 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:05 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test1",
+        "password": "123456",
+        "code": "1352507",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:05 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:14 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "110"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=svqj5nsutodmfzzoovkd4dl5d2na0t4j; expires=Fri, 24-Nov-2023 09:15:14 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 0,
+    "msg": "login success!",
+    "username": "test1",
+    "token": "9b49d15d5f3f6c65e0b364dda1a47039f1dc480d"
+}
+cookies: [{'name': 'sessionid', 'value': 'svqj5nsutodmfzzoovkd4dl5d2na0t4j'}]
+cost: 2997ms
+cookie: <RequestsCookieJar[<Cookie sessionid=svqj5nsutodmfzzoovkd4dl5d2na0t4j for 124.70.221.221/>]>
+2023-11-10 17:15:05 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:05 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:05 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:05 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:05 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:05 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:05 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test2-abdxxx]>>, 'username': 'test2', 'password': 'abdxxx'}
+2023-11-10 17:15:05 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:05 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test2",
+        "password": "abdxxx",
+        "code": "1385313",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:05 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:05 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:14 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "76"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=j1e4a4293pw1eskfr55y0hkqqbz12rcs; expires=Fri, 24-Nov-2023 09:15:14 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 3003,
+    "msg": "账号或密码不正确",
+    "username": "test2",
+    "token": ""
+}
+cookies: [{'name': 'sessionid', 'value': 'j1e4a4293pw1eskfr55y0hkqqbz12rcs'}]
+cost: 3130ms
+cookie: <RequestsCookieJar[<Cookie sessionid=j1e4a4293pw1eskfr55y0hkqqbz12rcs for 124.70.221.221/>]>
+2023-11-10 17:15:05 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:05 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:05 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:05 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:05 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:05 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test1-123456]>>, 'username': 'test1', 'password': '123456'}
+2023-11-10 17:15:05 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:05 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test1",
+        "password": "123456",
+        "code": "1342604",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:05 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:05 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:14 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "110"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=gs4gvrlb4x3p3iixcp228fjc6nrujszs; expires=Fri, 24-Nov-2023 09:15:14 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 0,
+    "msg": "login success!",
+    "username": "test1",
+    "token": "7362d87dc06b367976db7306be46d60f54c244f8"
+}
+cookies: [{'name': 'sessionid', 'value': 'gs4gvrlb4x3p3iixcp228fjc6nrujszs'}]
+cost: 3307ms
+cookie: <RequestsCookieJar[<Cookie sessionid=gs4gvrlb4x3p3iixcp228fjc6nrujszs for 124.70.221.221/>]>
+2023-11-10 17:15:05 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:05 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:05 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:05 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:05 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:05 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test2-abdxxx]>>, 'username': 'test2', 'password': 'abdxxx'}
+2023-11-10 17:15:05 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:05 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test2",
+        "password": "abdxxx",
+        "code": "1629537",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:05 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:05 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:14 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "76"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=yz2tg8s7a7jrndsktb7rrgwvtteplf2b; expires=Fri, 24-Nov-2023 09:15:14 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 3003,
+    "msg": "账号或密码不正确",
+    "username": "test2",
+    "token": ""
+}
+cookies: [{'name': 'sessionid', 'value': 'yz2tg8s7a7jrndsktb7rrgwvtteplf2b'}]
+cost: 2557ms
+cookie: <RequestsCookieJar[<Cookie sessionid=yz2tg8s7a7jrndsktb7rrgwvtteplf2b for 124.70.221.221/>]>
+2023-11-10 17:15:05 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:05 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:05 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:05 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:05 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:05 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test1-123456]>>, 'username': 'test1', 'password': '123456'}
+2023-11-10 17:15:05 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:05 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test1",
+        "password": "123456",
+        "code": "1702534",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:05 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:05 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:14 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "110"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=zbvlqw8b21wtxmxrdgy3kmnnu6byjgjc; expires=Fri, 24-Nov-2023 09:15:14 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 0,
+    "msg": "login success!",
+    "username": "test1",
+    "token": "38236a2677e15f3ed3b42e04bd777f76d420f6e8"
+}
+cookies: [{'name': 'sessionid', 'value': 'zbvlqw8b21wtxmxrdgy3kmnnu6byjgjc'}]
+cost: 2999ms
+cookie: <RequestsCookieJar[<Cookie sessionid=zbvlqw8b21wtxmxrdgy3kmnnu6byjgjc for 124.70.221.221/>]>
+2023-11-10 17:15:05 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:05 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:05 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:05 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:05 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:05 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test2-abdxxx]>>, 'username': 'test2', 'password': 'abdxxx'}
+2023-11-10 17:15:05 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:05 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test2",
+        "password": "abdxxx",
+        "code": "1001181",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:05 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:06 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:15 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "110"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=43ql6dni97xrpaeyo7m44ovzd4oyccnz; expires=Fri, 24-Nov-2023 09:15:14 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 0,
+    "msg": "login success!",
+    "username": "test1",
+    "token": "e40c4e8c1bcd4a708017d3650da74ec8ccf9d9ae"
+}
+cookies: [{'name': 'sessionid', 'value': '43ql6dni97xrpaeyo7m44ovzd4oyccnz'}]
+cost: 3050ms
+cookie: <RequestsCookieJar[<Cookie sessionid=43ql6dni97xrpaeyo7m44ovzd4oyccnz for 124.70.221.221/>]>
+2023-11-10 17:15:06 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:06 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:06 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:06 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:06 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:06 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test2-abdxxx]>>, 'username': 'test2', 'password': 'abdxxx'}
+2023-11-10 17:15:06 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:06 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test2",
+        "password": "abdxxx",
+        "code": "1457797",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:06 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:06 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:15 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "76"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=kjdooafnbdsk7mbcdzyreecum0lvtbb6; expires=Fri, 24-Nov-2023 09:15:15 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 3003,
+    "msg": "账号或密码不正确",
+    "username": "test2",
+    "token": ""
+}
+cookies: [{'name': 'sessionid', 'value': 'kjdooafnbdsk7mbcdzyreecum0lvtbb6'}]
+cost: 2859ms
+cookie: <RequestsCookieJar[<Cookie sessionid=kjdooafnbdsk7mbcdzyreecum0lvtbb6 for 124.70.221.221/>]>
+2023-11-10 17:15:06 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:06 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:06 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:06 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:06 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:06 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test1-123456]>>, 'username': 'test1', 'password': '123456'}
+2023-11-10 17:15:06 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:06 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test1",
+        "password": "123456",
+        "code": "1145741",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:06 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:06 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:15 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "76"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=ug84wytmjoh8l2b7e1fp13rhdvyg16x6; expires=Fri, 24-Nov-2023 09:15:15 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 3003,
+    "msg": "账号或密码不正确",
+    "username": "test2",
+    "token": ""
+}
+cookies: [{'name': 'sessionid', 'value': 'ug84wytmjoh8l2b7e1fp13rhdvyg16x6'}]
+cost: 3138ms
+cookie: <RequestsCookieJar[<Cookie sessionid=ug84wytmjoh8l2b7e1fp13rhdvyg16x6 for 124.70.221.221/>]>
+2023-11-10 17:15:06 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:06 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:06 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:06 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:06 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:06 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test1-123456]>>, 'username': 'test1', 'password': '123456'}
+2023-11-10 17:15:06 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:06 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test1",
+        "password": "123456",
+        "code": "1693940",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:06 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:06 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:15 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "110"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=1dt78ceysilqg6ih15tqrwy4uxenn1cl; expires=Fri, 24-Nov-2023 09:15:15 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 0,
+    "msg": "login success!",
+    "username": "test1",
+    "token": "e9e5e8742441f44de6ad1dea0fa9a753428600eb"
+}
+cookies: [{'name': 'sessionid', 'value': '1dt78ceysilqg6ih15tqrwy4uxenn1cl'}]
+cost: 3320ms
+cookie: <RequestsCookieJar[<Cookie sessionid=1dt78ceysilqg6ih15tqrwy4uxenn1cl for 124.70.221.221/>]>
+2023-11-10 17:15:06 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:06 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:06 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:06 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:06 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:06 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test2-abdxxx]>>, 'username': 'test2', 'password': 'abdxxx'}
+2023-11-10 17:15:06 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:06 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test2",
+        "password": "abdxxx",
+        "code": "1013975",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:06 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:06 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:15 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "110"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=5a2zabpe5hsextnrtj7vx48l6iy26hai; expires=Fri, 24-Nov-2023 09:15:15 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 0,
+    "msg": "login success!",
+    "username": "test1",
+    "token": "14fb0d2e9a8367ef865d5e889c8c5aa3b28cf668"
+}
+cookies: [{'name': 'sessionid', 'value': '5a2zabpe5hsextnrtj7vx48l6iy26hai'}]
+cost: 3234ms
+cookie: <RequestsCookieJar[<Cookie sessionid=5a2zabpe5hsextnrtj7vx48l6iy26hai for 124.70.221.221/>]>
+2023-11-10 17:15:06 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:06 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:06 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:06 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:06 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:06 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test2-abdxxx]>>, 'username': 'test2', 'password': 'abdxxx'}
+2023-11-10 17:15:06 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:06 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test2",
+        "password": "abdxxx",
+        "code": "1820253",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:06 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-11-10 17:15:06 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Fri, 10 Nov 2023 09:15:15 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "76"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=4feowawoph4kbcm91zqg6qo8yzvblv8h; expires=Fri, 24-Nov-2023 09:15:15 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 3003,
+    "msg": "账号或密码不正确",
+    "username": "test2",
+    "token": ""
+}
+cookies: [{'name': 'sessionid', 'value': '4feowawoph4kbcm91zqg6qo8yzvblv8h'}]
+cost: 3048ms
+cookie: <RequestsCookieJar[<Cookie sessionid=4feowawoph4kbcm91zqg6qo8yzvblv8h for 124.70.221.221/>]>
+2023-11-10 17:15:06 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-11-10 17:15:06 [INFO]: 断言 -> [{'eq': ['$.msg', 'success']}]
+2023-11-10 17:15:06 [INFO]: 执行文件-> testnull.yaml
+2023-11-10 17:15:06 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-11-10 17:15:06 [INFO]: 用例步骤：1 -> 登录1
+2023-11-10 17:15:06 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function testnull[test1-123456]>>, 'username': 'test1', 'password': '123456'}
+2023-11-10 17:15:06 [ERROR]: MYSQL_HOST not found in config.py
+2023-11-10 17:15:06 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test1",
+        "password": "123456",
+        "code": "1558370",
+        "sql": ""
+    }
+}
+2023-11-10 17:15:06 [INFO]: f--------  执行前置条件 ----------
+func1

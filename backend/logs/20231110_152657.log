@@ -1,0 +1,37 @@
+2023-11-10 15:26:57 [INFO]: 数据
+2023-11-10 15:26:57 [INFO]: {
+    "name": "登录1",
+    "request": {
+        "url": "http://124.70.221.221:8201/api/v1/login/",
+        "method": "POST",
+        "headers": {
+            "Content-Type": "application/json",
+            "User-Agent": "python-requests/2.18.4"
+        },
+        "hooks": {
+            "request_hooks": [
+                "func1"
+            ],
+            "response_hooks": [
+                "func2"
+            ]
+        },
+        "json": {
+            "username": "test",
+            "password": "123456",
+            "code": "${rand_str()}",
+            "sql": "${query_sql('select * from role_menu').id}"
+        }
+    },
+    "validate": [
+        {
+            "eq": [
+                "$.msg",
+                "success"
+            ]
+        }
+    ]
+}
+2023-11-10 15:26:57 [INFO]: 数据
+2023-11-10 15:26:57 [INFO]: 执行文件-> testlogin.yaml
+2023-11-10 15:26:57 [INFO]: 参数化数据-> []

@@ -40,6 +40,62 @@ class ProjectListViewSet(generics.ListAPIView):
     def list(self, request, *args, **kwargs):
 
         try:
+            from django.core.cache import cache
+            cache.set('runner', {
+    "config": {
+        "name": "post示例",
+        "fixtures": "username, password",
+        "parameters": [
+            [
+                "test1",
+                "123456"
+            ],
+            [
+                "test2",
+                "abdxxx"
+            ]
+        ]
+    },
+    "teststeps": [
+        {
+            "name": "登录1",
+            "request": {
+                "url": "http://124.70.221.221:8201/api/v1/login/",
+                "method": "POST",
+                "headers": {
+                    "Content-Type": "application/json",
+                    "User-Agent": "python-requests/2.18.4"
+                },
+                "hooks": {
+                    "request_hooks": [
+                        "func1"
+                    ],
+                    "response_hooks": [
+                        "func2"
+                    ]
+                },
+                "json": {
+                    "username": "${username}",
+                    "password": "${password}",
+                    "code": "${rand_str()}",
+                    "sql": "${query_sql('select * from role_menu').id}"
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "$.msg",
+                        "success"
+                    ]
+                }
+            ]
+        }
+    ]
+})
+            import pytest
+            print(11111)
+            pytest.main(["-s", "-v"])
+            print(11111)
             queryset = self.filter_queryset(ProjectDao.get_project_list(request.user.id))
 
             page = self.paginate_queryset(queryset) # noqa

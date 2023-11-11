@@ -19,7 +19,7 @@ from config.settings import (
 from core.request.create_function import create_function_from_parameters
 from core.request.http_handler import HttpHandler
 from core.request import validator
-from utils import super_builtins
+from utils import builtin
 from core.request.extract import extract_by_object
 from utils.db import OperateMysql
 from utils.log import log
