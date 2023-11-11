@@ -1,6 +1,5 @@
 from core.request.cases import run_test
 
-
 if __name__ == '__main__':
     # 测试数据(详细结构说明看下一节)
     case_data = [{
@@ -21,7 +20,7 @@ if __name__ == '__main__':
             },
             'setup_script': "print('前置脚本123')",
             'teardown_script': "test.assertion('相等',200,response.status_code)"
-        },{
+        }, {
             "title": "测试用例3",
             "host": "http://httpbin.org/post",
             "interface": {
@@ -48,7 +47,7 @@ if __name__ == '__main__':
     result, a = run_test(
         case_data=case_data,
         env_config=config,
-        )
+    )
     import json
-    print(json.dumps(result))
 
+    print(json.dumps(result))

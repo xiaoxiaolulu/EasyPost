@@ -1,16 +1,20 @@
-import datetime
+from requests import Response
+import importlib
 import json
 import os
 import re
 import unittest
-from numbers import Number
-import importlib
-import requests
-from requests_toolbelt import MultipartEncoder
 from functools import wraps
+from numbers import Number
+from typing import (
+    Callable,
+    Any
+)
+from unittest import TestSuite
+import requests
 from jsonpath import jsonpath
+from requests_toolbelt import MultipartEncoder
 from core.request.runner import TestRunner
-
 from utils.DBClient import DBClient
 
 
@@ -40,7 +44,7 @@ session = requests.Session()
 class GenerateCase:
     """解析数据创建测试用例"""
 
-    def data_to_suite(self, datas):
+    def data_to_suite(self, datas) -> TestSuite:
         """
         根据用例数据生成测试套件
         :param datas:
@@ -50,10 +54,10 @@ class GenerateCase:
         load = unittest.TestLoader()
         for item in datas:
             cls = self.create_test_class(item)
-            suite.addTest(load.loadTestsFromTestCase(cls))
+            suite.addTest(load.loadTestsFromTestCase(cls)) # noqa
         return suite
 
-    def create_test_class(self, item):
+    def create_test_class(self, item) -> type:
         """创建测试类"""
         cls_name = item.get('name') or 'Demo'
         cases = item.get('cases')
@@ -67,17 +71,17 @@ class GenerateCase:
             setattr(cls, test_name, new_test_func)
         return cls
 
-    def create_test_func(self, func, case_):
+    def create_test_func(self, func, case_) -> Callable[[Any], None]:
         """创建测试方法"""
 
         @wraps(func)
-        def wrapper(self):
+        def wrapper(self):  # noqa
             func(self, case_)
 
         return wrapper
 
     @staticmethod
-    def create_test_name(index, length):
+    def create_test_name(index, length) -> str:
         """生成测试方法名"""
         n = (len(str(length)) // len(str(index))) - 1
         test_name = 'test_{}'.format("0" * n + str(index + 1))
@@ -85,40 +89,40 @@ class GenerateCase:
 
 
 class CaseRunLog:
-    def save_log(self, message, level):
+    def save_log(self, message, level) -> None:
         if not hasattr(self, 'log_data'):
             setattr(self, 'log_data', [])
         info = "【{}】 |: {}".format(level, message)
         getattr(self, 'log_data').append((level, info))
         print(info)
 
-    def print(self, *args):
+    def print(self, *args) -> None:
         args = [str(i) for i in args]
         message = ' '.join(args)
         getattr(self, 'log_data').append(('INFO', message))
 
-    def debug_log(self, *args):
+    def debug_log(self, *args) -> None:
         if DEBUG:
             message = ''.join(args)
             self.save_log(message, 'DEBUG')
 
-    def info_log(self, *args):
+    def info_log(self, *args) -> None:
         message = ''.join(args)
         self.save_log(message, 'INFO')
 
-    def warning_log(self, *args):
+    def warning_log(self, *args) -> None:
         message = ''.join(args)
         self.save_log(message, 'WARNING')
 
-    def error_log(self, *args):
+    def error_log(self, *args) -> None:
         message = ''.join(args)
         self.save_log(message, 'ERROR')
 
-    def exception_log(self, *args):
+    def exception_log(self, *args) -> None:
         message = ''.join(args)
         self.save_log(message, 'ERROR')
 
-    def critical_log(self, *args):
+    def critical_log(self, *args) -> None:
         message = ''.join(args)
         self.save_log(message, 'CRITICAL')
 
@@ -133,7 +137,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         else:
             cls.session = requests.Session()
 
-    def perform(self, data):
+    def perform(self, data) -> None:
         """执行单条用例的主函数"""
         self.__run_log()
         # 执行前置脚本
@@ -143,7 +147,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         # 执行后置脚本
         self.__run_teardown_script(response)
 
-    def __run_log(self):
+    def __run_log(self) -> None:
         """输出当前环境变量数据的日志"""
         self.l_env = ['\t{}:{}\n'.format(k, repr(v)) for k, v in self.env.items()]
         self.g_env = ['\t{}:{}\n'.format(k, repr(v)) for k, v in ENV.items()]
@@ -151,7 +155,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
                       "临时变量：\n{}".format(''.join(self.l_env)),
                       "全局变量：\n{}".format(''.join(self.g_env)))
 
-    def __request_log(self):
+    def __request_log(self) -> None:
         """请求信息日志输出"""
         self.debug_log("请求头：\n{}".format(self.requests_header))
         self.debug_log("请求体：\n{}".format(self.requests_body))
@@ -159,7 +163,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         self.debug_log("响应体：\n{}".format(self.response_body))
         self.info_log('请求响应状态码:{}'.format(self.status_cede))
 
-    def __send_request(self, data):
+    def __send_request(self, data) -> Response:
         """发送请求"""
         request_info = self.__handler_request_data(data)
         self.info_log('发送请求[{}]:{}：'.format(request_info['method'].upper(), request_info['url']))
@@ -176,19 +180,19 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         try:
             response_body = response.json()
             self.response_body = json.dumps(response_body, ensure_ascii=False, indent=2)
-        except (Exception, ):
+        except (Exception,):
             body = response.content
             self.response_body = body.decode('utf-8') if body else ''
         try:
             request_body = json.loads(response.request.body.decode('utf-8'))
             self.requests_body = json.dumps(request_body, ensure_ascii=False, indent=2)
-        except (Exception, ):
+        except (Exception,):
             body = response.request.body
             self.requests_body = body or ''
         self.__request_log()
         return response
 
-    def __handler_request_data(self, data):
+    def __handler_request_data(self, data) -> dict[str | Any, Any]:
         """处理请求数据"""
         # 获取请求头
         if ENV.get('headers'):
@@ -236,7 +240,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         request_params['headers'] = data['headers']
         return request_params
 
-    def __parser_variable(self, data):
+    def __parser_variable(self, data) -> str | None | Any:
         """替换变量"""
         pattern = r'\${{(.+?)}}'
         old_data = data
@@ -249,7 +253,8 @@ class BaseTest(unittest.TestCase, CaseRunLog):
                 value = ENV.get(attr) if self.env.get(attr) is None else self.env.get(attr)
                 if value is None:
                     raise ValueError('变量引用错误:\n{}中的变量{},在当前运行环境中未找到'.format(data, attr))
-                if item == data: return value
+                if item == data:
+                    return value
                 data = data.replace(item, str(value))
             return data
         elif isinstance(data, list) or isinstance(data, dict):
@@ -275,7 +280,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         else:
             return data
 
-    def save_env_variable(self, name, value):
+    def save_env_variable(self, name, value) -> None:
         self.info_log('设置临时变量\n变量名:{}\n变量值:{}'.format(name, value))
         if DEBUG:
             self.debug_log('提示调试模式运行,设置的临时变量均保存到全局变量中')
@@ -283,21 +288,21 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         else:
             self.env[name] = value
 
-    def save_global_variable(self, name, value):
+    def save_global_variable(self, name, value) -> None:
         self.info_log('设置全局变量\n变量名:{}\n变量值:{}'.format(name, value))
         ENV[name] = value
 
-    def delete_env_variable(self, name):
+    def delete_env_variable(self, name) -> None:
         """删除临时变量"""
         self.info_log('删除临时变量:{}'.format(name, ))
         del self.env[name]
 
-    def delete_global_variable(self, name):
+    def delete_global_variable(self, name) -> None:
         """删除全局变量"""
         self.info_log('删除全局变量:{}'.format(name))
         del ENV[name]
 
-    def json_extract(self, obj, ext):
+    def json_extract(self, obj, ext) -> Any:
         """jsonpath数据提取"""
         self.info_log('jsonpath提取数据')
         value = jsonpath(obj, ext)
@@ -305,7 +310,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         self.info_log('\n提取表达式：{}'.format(ext), '\n提取结果:{}'.format(value))
         return value
 
-    def re_extract(self, string, ext):
+    def re_extract(self, string, ext) -> Any:
         """正则表达式提取数据提取"""
         self.info_log('正则提取数据')
         value = re.search(ext, string)
@@ -313,7 +318,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         self.info_log('\n提取表达式：{}'.format(ext), '\n提取结果:{}'.format(value))
         return value
 
-    def assertion(self, methods, expected, actual):
+    def assertion(self, methods, expected, actual) -> None:
         """
         断言
         :param methods: 比较方式
@@ -329,14 +334,14 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         if assert_method:
             try:
                 assert_method(expected, actual)
-            except AttributeError as e:
+            except AttributeError:
                 self.warning_log('断言失败!')
             else:
                 self.info_log("断言通过!")
         else:
             raise TypeError('断言比较方法{},不支持!'.format(methods))
 
-    def __run_script(test, data): # noqa
+    def __run_script(test, data) -> None:  # noqa
         print = test.print  # noqa
         env = test.env  # noqa
         setup_script = data.get('setup_script')
@@ -357,7 +362,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
                 raise
         yield
 
-    def __run_teardown_script(self, response):
+    def __run_teardown_script(self, response) -> None:
         """执行后置脚本"""
         self.info_log('执行后置脚本')
         self.hook_gen.send(response)
@@ -366,11 +371,11 @@ class BaseTest(unittest.TestCase, CaseRunLog):
     def __run_setup_script(self, data):
         """执行前置脚本"""
         self.info_log('执行前置脚本')
-        self.hook_gen = self.__run_script(data)
-        next(self.hook_gen)
+        self.hook_gen = self.__run_script(data) # noqa
+        next(self.hook_gen)  # noqa
 
 
-def run_test(case_data, env_config, thread_count=1, debug=True):
+def run_test(case_data, env_config, thread_count=1, debug=True) -> tuple[Any, dict[Any, Any]] | Any:
     """
     :param case_data: 测试套件数据
     :param env_config: 用例执行的环境配置
@@ -387,7 +392,7 @@ def run_test(case_data, env_config, thread_count=1, debug=True):
     global global_func, db, DEBUG, ENV  # noqa
     global_func_file = env_config.get('global_func', b'')
     if global_func:
-        with open('global_func.py', 'w',encoding='utf-8') as f:
+        with open('global_func.py', 'w', encoding='utf-8') as f:
             f.write(global_func_file)
     # 更新运行环境
     global_func = importlib.reload(global_func)
