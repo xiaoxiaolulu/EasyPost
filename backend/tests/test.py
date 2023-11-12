@@ -19,7 +19,16 @@ if __name__ == '__main__':
                 'json': {"mobile_phone": "${{user_mobile}}", "pwd": "lemonban"},
             },
             'setup_script': "print('前置脚本123')",
-            'teardown_script': "test.assertion('相等',200,response.status_code)"
+            # 'teardown_script': "test.assertion('相等',200,response.status_code)",
+            'validators': [{
+                'method': '相等',
+                'actual': 'http://httpbin.org/post',
+                'expect': '$.url'
+            }, {
+                'method': '相等',
+                'actual': '112.64.0.1561',
+                'expect': '$.origin'
+            }]
         }]
     }]
     # 运行环境数据(详细结构说明看第三节)
@@ -28,11 +37,9 @@ if __name__ == '__main__':
         'db': [{}, {}],
         'global_func': "print('前置脚本123')"
     }
-    result = run_test(
+    result= run_test(
         case_data=case_data,
         env_config=config,
         debug=False
     )
-    # import json
-    #
-    # print(json.dumps(result))
+    print(result)

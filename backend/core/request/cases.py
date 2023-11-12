@@ -8,7 +8,7 @@ from functools import wraps
 from numbers import Number
 from typing import (
     Callable,
-    Any
+    Any, List
 )
 from unittest import TestSuite
 import requests
@@ -144,8 +144,21 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         self.__run_setup_script(data)
         # 发送请求
         response = self.__send_request(data)
+        # 断言
+        checks = data.get('validators')
+        self.validators(response.json(), checks)
+
         # 执行后置脚本
         self.__run_teardown_script(response)
+
+    def validators(self, response: Any, validate_check: List[dict[Any]]) -> None:
+
+        for check in validate_check:
+            methods = check.get('method', None)
+            expect = check.get('expect', None)
+            expect_result = self.json_extract(response, expect)
+            actual = check.get('actual', None)
+            self.assertion(methods, expect_result, actual)
 
     def __run_log(self) -> None:
         """输出当前环境变量数据的日志"""
@@ -343,8 +356,9 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         if assert_method:
             try:
                 assert_method(expected, actual)
-            except AttributeError:
+            except Exception as err:
                 self.warning_log('断言失败!')
+                raise self.failureException(err)
             else:
                 self.info_log("断言通过!")
         else:
