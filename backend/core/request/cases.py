@@ -328,6 +328,15 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         """
         methods_map = {
             "相等": self.assertEqual,
+            "不相等": self.assertNotEqual,
+            "约等于": self.assertAlmostEqual,
+            "不约等于": self.assertNotAlmostEqual,
+            "大于": self.assertGreater,
+            "大于等于": self.assertGreaterEqual,
+            "小于": self.assertLess,
+            "小于等于": self.assertLessEqual,
+            "包含": self.assertIn,
+            "不包含": self.assertNotIn
         }
         self.info_log('断言方法:{}\n预期结果:{}\n实际结果:{}'.format(methods, expected, actual))
         assert_method = methods_map.get(methods)
