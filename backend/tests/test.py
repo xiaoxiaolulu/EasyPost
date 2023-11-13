@@ -1,3 +1,6 @@
+import importlib
+
+from api.response.fatcory import ResponseStandard
 from core.request.cases import run_test
 
 if __name__ == '__main__':
@@ -42,4 +45,6 @@ if __name__ == '__main__':
         env_config=config,
         debug=False
     )
-    print(result)
+    import json
+    r = json.dumps(ResponseStandard.encode_json(result), ensure_ascii=False)
+    print(r)

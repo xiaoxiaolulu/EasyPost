@@ -89,12 +89,19 @@ class GenerateCase:
 
 
 class CaseRunLog:
+
     def save_log(self, message, level) -> None:
         if not hasattr(self, 'log_data'):
             setattr(self, 'log_data', [])
         info = "【{}】 |: {}".format(level, message)
-        getattr(self, 'log_data').append((level, info))
+        getattr(self, 'log_data').append(info)
         print(info)
+
+    def save_validators(self, methods, expected, actual, result) -> None:
+        if not hasattr(self, 'validate_extractor'):
+            setattr(self, 'validate_extractor', [])
+        info = "预期结果: {} {} 实际结果: {} {}".format(expected, methods, actual, result)
+        getattr(self, 'validate_extractor').append(info)
 
     def print(self, *args) -> None:
         args = [str(i) for i in args]
@@ -358,9 +365,11 @@ class BaseTest(unittest.TestCase, CaseRunLog):
                 assert_method(expected, actual)
             except Exception as err:
                 self.warning_log('断言失败!')
+                self.save_validators(methods, expected, actual, '【❌】')
                 raise self.failureException(err)
             else:
                 self.info_log("断言通过!")
+                self.save_validators(methods, expected, actual, '【✔】')
         else:
             raise TypeError('断言比较方法{},不支持!'.format(methods))
 
