@@ -1,5 +1,3 @@
-import importlib
-
 from api.response.fatcory import ResponseStandard
 from core.request.cases import run_test
 
@@ -8,6 +6,7 @@ if __name__ == '__main__':
     case_data = [{
         'name': "测试场景名称1",
         'cases': [{
+            "timer": 10,
             "title": "测试用例2",
             "host": "http://httpbin.org/post",
             "interface": {
@@ -40,7 +39,7 @@ if __name__ == '__main__':
         'db': [{}, {}],
         'global_func': "print('前置脚本123')"
     }
-    result= run_test(
+    result = run_test(
         case_data=case_data,
         env_config=config,
         debug=False

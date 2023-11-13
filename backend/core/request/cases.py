@@ -1,3 +1,5 @@
+import time
+
 from requests import Response
 import importlib
 import json
@@ -144,8 +146,16 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         else:
             cls.session = requests.Session()
 
+    def timer(self, second) -> None:
+        time.sleep(second)
+        self.info_log('强制等待:{}秒'.format(second))
+
     def perform(self, data) -> None:
         """执行单条用例的主函数"""
+        # 强制等待
+        sleep = data.get('timer', 0)
+        self.timer(sleep)
+        # 日志记录
         self.__run_log()
         # 执行前置脚本
         self.__run_setup_script(data)
@@ -154,7 +164,6 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         # 断言
         checks = data.get('validators')
         self.validators(response.json(), checks)
-
         # 执行后置脚本
         self.__run_teardown_script(response)
 
