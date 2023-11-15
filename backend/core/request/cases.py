@@ -1,6 +1,4 @@
-import sys
 import time
-
 from requests import Response
 import importlib
 import json
@@ -11,7 +9,7 @@ from functools import wraps
 from numbers import Number
 from typing import (
     Callable,
-    Any, List
+    Any
 )
 from unittest import TestSuite
 import requests
@@ -166,17 +164,17 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         # 执行前置脚本
         self.__run_setup_script(data)
         # 发送请求
-        # response = self.__send_request(data)
+        response = self.__send_request(data)
         # 断言
-        # checks = data.get('validators')
-        # self.validators(response.json(), checks)
-        print("ifelsexxx")
-        if_e = data.get('if', None)
-        print(if_e)
-        self.validators(4, if_e, method=True)
-        print("跳过了")
+        checks = data.get('validators')
+        self.validators(response.json(), checks)
+        # print("ifelsexxx")
+        # if_e = data.get('if', None)
+        # print(if_e)
+        # self.validators(4, if_e, method=True)
+        # print("跳过了")
         # 执行后置脚本
-        #self.__run_teardown_script(response)
+        self.__run_teardown_script(response)
 
     def validators(self, response: Any, validate_check, method=False) -> None:
 
@@ -441,7 +439,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         next(self.hook_gen)  # noqa
 
 
-def run_test(case_data, env_config, thread_count=1, debug=True) -> tuple[Any, dict[Any, Any]] | Any:
+def run_test(case_data, env_config, tester='测试员', thread_count=1, debug=True) -> tuple[Any, dict[Any, Any]] | Any:
     """
     :param case_data: 测试套件数据
     :param env_config: 用例执行的环境配置
@@ -452,6 +450,7 @@ def run_test(case_data, env_config, thread_count=1, debug=True) -> tuple[Any, di
         }
     :param thread_count: 运行线程数
     :param debug: 单接口调试用debug模式
+    :param tester: 测试员
     :return:
         debug模式：会返回本次运行的结果和 本次运行设置的全局变量，
     """
@@ -468,7 +467,7 @@ def run_test(case_data, env_config, thread_count=1, debug=True) -> tuple[Any, di
     # 生成测试用例
     suite = GenerateCase().data_to_suite(case_data)
     # 运行测试用例
-    runner = TestRunner(suite=suite)
+    runner = TestRunner(suite=suite, tester=tester)
     result = runner.run(thread_count=thread_count)
     if global_func:
         os.remove('global_func.py')

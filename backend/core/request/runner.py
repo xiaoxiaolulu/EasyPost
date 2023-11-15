@@ -18,7 +18,7 @@ class TestResult(unittest.TestResult):
             "error": 0,
             "cases": [],
             "res": "",
-            "name": "",
+            "name": ""
         }
 
     def startTest(self, test):
@@ -91,10 +91,12 @@ class TestResult(unittest.TestResult):
 class TestRunner:
     """测试运行器"""
 
-    def __init__(self, suite):
+    def __init__(self, suite, tester='测试员'):
         """套件"""
         self.suite = suite
+        self.tester = tester
         self.result_list = []
+        self.starttime = time.time()
 
     def __classification_suite(self):
         """
@@ -121,7 +123,11 @@ class TestRunner:
             "all": 0,
             "success": 0,
             "error": 0,
-            "fail": 0
+            "fail": 0,
+            "runtime": "",
+            "argtime": "",
+            "begin_time": "",
+            "pass_rate": 0
         }
         for cls in self.result_list:
             cases_info = cls.result['cases']
@@ -133,7 +139,14 @@ class TestRunner:
             cls.result['cases'] = [{k: v for k, v in res.__dict__.items() if not k.startswith('_')} for res in
                                    cases_info]
             result['class_list'].append(cls.result)
-
+        result['runtime'] = '{:.2f}s'.format(time.time() - self.starttime)
+        result['argtime'] = '{:.2f}s'.format(round((time.time() - self.starttime)/result.get('all', 0), 2))
+        result["begin_time"] = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(self.starttime))
+        result["tester"] = self.tester
+        if result['all'] != 0:
+            result['pass_rate'] = "{:.2f}%".format(result['success'] / result['all'] * 100) # noqa
+        else:
+            result['pass_rate'] = 0
         return result
 
     def run(self, thread_count=1):
