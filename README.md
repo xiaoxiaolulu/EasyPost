@@ -9,3 +9,6 @@
 - [x] 🎲 Nginx(反向代理，https配置等)
 
 ## ☕ 说明
+
+
+[![Stargazers over time](https://starchart.cc/Bian-Sh/UniJoystick.svg)](https://starchart.cc/Bian-Sh/UniJoystick)
