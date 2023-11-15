@@ -51,5 +51,5 @@ def func2():
     print('-----------------后置条件----------------------')
 
 
-super_builtins.func1 = func1
-super_builtins.func2 = func2
+builtin.func1 = func1
+builtin.func2 = func2

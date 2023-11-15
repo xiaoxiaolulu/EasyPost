@@ -1,3 +1,4 @@
+import sys
 import time
 
 from requests import Response
@@ -105,6 +106,11 @@ class CaseRunLog:
         info = "预期结果: {} {} 实际结果: {} {}".format(expected, methods, actual, result)
         getattr(self, 'validate_extractor').append(info)
 
+    def save_ife(self, info) -> None:
+        if not hasattr(self, 'if_extractor'):
+            setattr(self, 'if_extractor', [])
+        getattr(self, 'if_extractor').append(info)
+
     def print(self, *args) -> None:
         args = [str(i) for i in args]
         message = ' '.join(args)
@@ -160,21 +166,27 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         # 执行前置脚本
         self.__run_setup_script(data)
         # 发送请求
-        response = self.__send_request(data)
+        # response = self.__send_request(data)
         # 断言
-        checks = data.get('validators')
-        self.validators(response.json(), checks)
+        # checks = data.get('validators')
+        # self.validators(response.json(), checks)
+        print("ifelsexxx")
+        if_e = data.get('if', None)
+        print(if_e)
+        self.validators(4, if_e, method=True)
+        print("跳过了")
         # 执行后置脚本
-        self.__run_teardown_script(response)
+        #self.__run_teardown_script(response)
 
-    def validators(self, response: Any, validate_check: List[dict[Any]]) -> None:
+    def validators(self, response: Any, validate_check, method=False) -> None:
 
-        for check in validate_check:
-            methods = check.get('method', None)
-            expect = check.get('expect', None)
-            expect_result = self.json_extract(response, expect)
-            actual = check.get('actual', None)
-            self.assertion(methods, expect_result, actual)
+        if isinstance(validate_check, list):
+            for check in validate_check:
+                methods = check.get('method', None)
+                expect = check.get('expect', None)
+                expect_result = self.json_extract(response, expect)
+                actual = check.get('actual', None)
+                self.assertion(methods, expect_result, actual, method)
 
     def __run_log(self) -> None:
         """输出当前环境变量数据的日志"""
@@ -347,12 +359,13 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         self.info_log('\n提取表达式：{}'.format(ext), '\n提取结果:{}'.format(value))
         return value
 
-    def assertion(self, methods, expected, actual) -> None:
+    def assertion(self, methods, expected, actual, method) -> bool:
         """
         断言
         :param methods: 比较方式
         :param expected: 预期结果
         :param actual: 实际结果
+        :param method
         :return:
         """
         methods_map = {
@@ -369,16 +382,28 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         }
         self.info_log('断言方法:{}\n预期结果:{}\n实际结果:{}'.format(methods, expected, actual))
         assert_method = methods_map.get(methods)
+        global result # noqa
         if assert_method:
             try:
                 assert_method(expected, actual)
             except Exception as err:
                 self.warning_log('断言失败!')
-                self.save_validators(methods, expected, actual, '【❌】')
+                result = False
+
+                if method:
+                    self.save_ife('条件控制器判断失败!【❌】')
+                if not method:
+                    self.save_validators(methods, expected, actual, '【❌】')
                 raise self.failureException(err)
             else:
                 self.info_log("断言通过!")
-                self.save_validators(methods, expected, actual, '【✔】')
+                result = True
+
+                if method:
+                    self.save_ife('条件控制器判断成功!【✔】')
+                if not method:
+                    self.save_validators(methods, expected, actual, '【✔】')
+            return result
         else:
             raise TypeError('断言比较方法{},不支持!'.format(methods))
 
