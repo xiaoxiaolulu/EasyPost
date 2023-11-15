@@ -88,6 +88,66 @@ class TestResult(unittest.TestResult):
         getattr(test, 'error_log')(''.join(traceback.format_exception(*err)))
 
 
+class ReRunResult(TestResult):
+
+    def __init__(self, count, interval):
+        super().__init__()
+        self.count = count
+        self.interval = interval
+        self.run_cases = []
+
+    def startTest(self, test):
+        if not hasattr(test, "count"):
+            super().startTest(test)
+
+    def stopTest(self, test):
+        if test not in self.run_cases:
+            self.run_cases.append(test)
+            super().stopTest(test)
+
+    def addFailure(self, test, err):
+        """
+        :param test: 测试用例
+        :param err:  错误信息
+        :return:
+        """
+        if not hasattr(test, 'count'):
+            test.count = 0
+        if test.count < self.count:
+            test.count += 1
+            getattr(test, 'warning_log')("{}执行——>【失败Failure】\n".format(test))
+            for string in traceback.format_exception(*err):
+                getattr(test, 'warning_log')(string)
+            getattr(test, 'warning_log')("开始第{}次重运行\n".format(test.count))
+            time.sleep(self.interval)
+            test.run(self)
+        else:
+            super().addFailure(test, err)
+            if test.count != 0:
+                getattr(test, 'warning_log')("重运行{}次完毕\n".format(test.count))
+
+    def addError(self, test, err):
+        """
+        修改错误用例的状态
+        :param test: 测试用例
+        :param err:错误信息
+        :return:
+        """
+        if not hasattr(test, 'count'):
+            test.count = 0
+        if test.count < self.count:
+            test.count += 1
+            getattr(test, 'error_log')("{}执行——>【错误Error】\n".format(test))
+            getattr(test, 'exception_log')(err[1])
+            getattr(test, 'error_log')("================{}重运行第{}次================\n".format(test, test.count))
+            time.sleep(self.interval)
+            test.run(self)
+        else:
+            super().addError(test, err)
+            if test.count != 0:
+                getattr(test, 'info_log')("================重运行{}次完毕================\n".format(test.count))
+
+
 class TestRunner:
     """测试运行器"""
 
@@ -149,18 +209,20 @@ class TestRunner:
             result['pass_rate'] = 0
         return result
 
-    def run(self, thread_count=1):
+    def run(self, thread_count=1, rerun=0, interval=2):
         """
         支持多线程执行
         注意点：如果多个测试类共用某一个全局变量，由于资源竞争可能会出现错误
         :param thread_count:线程数量，默认位1
+        :param rerun:
+        :param interval:
         :return:测试运行结果
         """
         # 将测试套件按照用例类进行拆分
         suites = self.__classification_suite()
         with ThreadPoolExecutor(max_workers=thread_count) as ts:
             for i in suites:
-                res = TestResult()
+                res = ReRunResult(count=rerun, interval=interval)
                 self.result_list.append(res)
                 ts.submit(i.run, result=res).add_done_callback(res.stopTestRun)
         result = self.__parser_results()

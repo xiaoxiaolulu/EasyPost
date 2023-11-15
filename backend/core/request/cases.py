@@ -184,7 +184,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
                 expect = check.get('expect', None)
                 expect_result = self.json_extract(response, expect)
                 actual = check.get('actual', None)
-                self.assertion(methods, expect_result, actual, method)
+                self.assertion(methods, expect_result, actual)
 
     def __run_log(self) -> None:
         """输出当前环境变量数据的日志"""
@@ -357,13 +357,12 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         self.info_log('\n提取表达式：{}'.format(ext), '\n提取结果:{}'.format(value))
         return value
 
-    def assertion(self, methods, expected, actual, method) -> bool:
+    def assertion(self, methods, expected, actual) -> None:
         """
         断言
         :param methods: 比较方式
         :param expected: 预期结果
         :param actual: 实际结果
-        :param method
         :return:
         """
         methods_map = {
@@ -386,22 +385,11 @@ class BaseTest(unittest.TestCase, CaseRunLog):
                 assert_method(expected, actual)
             except Exception as err:
                 self.warning_log('断言失败!')
-                result = False
-
-                if method:
-                    self.save_ife('条件控制器判断失败!【❌】')
-                if not method:
-                    self.save_validators(methods, expected, actual, '【❌】')
+                self.save_validators(methods, expected, actual, '【❌】')
                 raise self.failureException(err)
             else:
                 self.info_log("断言通过!")
-                result = True
-
-                if method:
-                    self.save_ife('条件控制器判断成功!【✔】')
-                if not method:
-                    self.save_validators(methods, expected, actual, '【✔】')
-            return result
+                self.save_validators(methods, expected, actual, '【✔】')
         else:
             raise TypeError('断言比较方法{},不支持!'.format(methods))
 
@@ -464,11 +452,13 @@ def run_test(case_data, env_config, tester='测试员', thread_count=1, debug=Tr
     DEBUG = debug
     ENV = {**env_config.get('ENV', {})}
     db.init_connect(env_config.get('db', []))
+    # 失败重跑
+    rerun = env_config.get('rerun', 0)
     # 生成测试用例
     suite = GenerateCase().data_to_suite(case_data)
     # 运行测试用例
     runner = TestRunner(suite=suite, tester=tester)
-    result = runner.run(thread_count=thread_count)
+    result = runner.run(thread_count=thread_count, rerun=rerun)
     if global_func:
         os.remove('global_func.py')
     # 断开数据库连接

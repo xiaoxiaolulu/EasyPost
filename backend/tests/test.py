@@ -5,26 +5,27 @@ if __name__ == '__main__':
     # 测试数据(详细结构说明看下一节)
     case_data = [{
         'name': "测试场景名称1",
-        'cases': [            {
-            "title": "测试用例2",
-            "host": "http://httpbin.org/post",
-            "interface": {
-                "url": "/post",
-                "name": "登录",
-                "method": "post",
-            },
-            "headers": {
-                'content-Type': "application/json"
-            },
-            "request": {
-                'json': {"mobile_phone": "${{user_mobile}}", "pwd": "lemonban"},
-            },
-            'setup_script': "print('前置脚本123')",
-            # 'teardown_script': "test.assertion('相等',200,response.status_code)",
-            'validators': [{
-                'method': '相等',
-                'actual': 'http://httpbin.org/post',
-                'expect': '$.url'}]},
+        'cases': [
+            # {
+            # "title": "测试用例2",
+            # "host": "http://httpbin.org/post",
+            # "interface": {
+            #     "url": "/post",
+            #     "name": "登录",
+            #     "method": "post",
+            # },
+            # "headers": {
+            #     'content-Type': "application/json"
+            # },
+            # "request": {
+            #     'json': {"mobile_phone": "${{user_mobile}}", "pwd": "lemonban"},
+            # },
+            # 'setup_script': "print('前置脚本123')",
+            # # 'teardown_script': "test.assertion('相等',200,response.status_code)",
+            # 'validators': [{
+            #     'method': '相等',
+            #     'actual': 'http://httpbin.org/post',
+            #     'expect': '$.url'}]},
             {
             "title": "测试用例2",
             "host": "http://httpbin.org/post",
@@ -43,7 +44,7 @@ if __name__ == '__main__':
             # 'teardown_script': "test.assertion('相等',200,response.status_code)",
             'validators': [{
                 'method': '相等',
-                'actual': 'http://httpbin.org/post',
+                'actual': 'http://httpbin.org/post44444444',
                 'expect': '$.url'}]}
             # {
             #     "title": "xxx",
@@ -58,7 +59,8 @@ if __name__ == '__main__':
     config = {
         'ENV': {"host": 'http://httpbin.org/post', 'user_mobile': 13564957378},
         'db': [{}, {}],
-        'global_func': "print('前置脚本123')"
+        'global_func': "print('前置脚本123')",
+        'rerun': 1
     }
     result = run_test(
         case_data=case_data,
