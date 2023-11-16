@@ -87,6 +87,17 @@ class TestResult(unittest.TestResult):
         getattr(test, 'error_log')("{}执行——>【错误Error】\n".format(getattr(test, '_testMethodDoc')))
         getattr(test, 'error_log')(''.join(traceback.format_exception(*err)))
 
+    def addSkip(self, test, reason):
+        """
+        修改跳过用例的状态
+        :param test:测试用例
+        :param reason: 相关信息
+        :return: None
+        """
+        super().addSkip(test, reason)
+        test.state = '跳过'
+        getattr(test, 'info_log')("{}执行--【跳过Skip】\n".format(getattr(test, '_testMethodDoc')))
+
 
 class ReRunResult(TestResult):
 

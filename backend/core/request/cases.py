@@ -1,4 +1,5 @@
 import time
+
 from requests import Response
 import importlib
 import json
@@ -45,6 +46,9 @@ session = requests.Session()
 class GenerateCase:
     """解析数据创建测试用例"""
 
+    def __init__(self):
+        self.controller = BaseTest()
+
     def data_to_suite(self, datas) -> TestSuite:
         """
         根据用例数据生成测试套件
@@ -66,10 +70,18 @@ class GenerateCase:
         cls = type(cls_name, (BaseTest,), {})
         # 遍历数据生成,动态添加测试方法
         for index, case_ in enumerate(cases):
+            if_request_obj = case_.get('IF', None)
             test_name = self.create_test_name(index, len(cases))
-            new_test_func = self.create_test_func(getattr(cls, 'perform'), case_)
+            new_test_func = self.create_test_func(getattr(cls, 'step'), case_)
             new_test_func.__doc__ = case_.get('title') or new_test_func.__doc__
             setattr(cls, test_name, new_test_func)
+
+            if if_request_obj:
+                test_item = getattr(cls, test_name)
+                condition = if_request_obj.get('condition', True)
+                reason = if_request_obj.get('reason', '跳过')
+                self.controller.skipIf(condition, reason, test_item)
+
         return cls
 
     def create_test_func(self, func, case_) -> Callable[[Any], None]:
@@ -142,6 +154,23 @@ class CaseRunLog:
 
 class BaseTest(unittest.TestCase, CaseRunLog):
 
+    def timer(self, second) -> None:
+        """
+        等待控制器
+        """
+        time.sleep(second)
+        self.info_log('强制等待:{}秒'.format(second))
+
+    @staticmethod
+    def skipIf(condition, reason, item):
+        """
+        条件控制器
+        """
+        if condition:
+            item.__unittest_skip__ = True
+            item.__unittest_skip_why__ = reason
+        return item
+
     @classmethod
     def setUpClass(cls) -> None:
         cls.env = BaseEnv()
@@ -150,11 +179,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         else:
             cls.session = requests.Session()
 
-    def timer(self, second) -> None:
-        time.sleep(second)
-        self.info_log('强制等待:{}秒'.format(second))
-
-    def perform(self, data) -> None:
+    def step(self, data) -> None:
         """执行单条用例的主函数"""
         # 强制等待
         sleep = data.get('timer', 0)
@@ -176,7 +201,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         # 执行后置脚本
         self.__run_teardown_script(response)
 
-    def validators(self, response: Any, validate_check, method=False) -> None:
+    def validators(self, response: Any, validate_check) -> None:
 
         if isinstance(validate_check, list):
             for check in validate_check:

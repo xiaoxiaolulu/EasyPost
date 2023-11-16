@@ -28,6 +28,7 @@ if __name__ == '__main__':
             #     'expect': '$.url'}]},
             {
             "title": "测试用例2",
+            # "IF": {"condition": 100>99},
             "host": "http://httpbin.org/post",
             "interface": {
                 "url": "/post",
@@ -44,7 +45,7 @@ if __name__ == '__main__':
             # 'teardown_script': "test.assertion('相等',200,response.status_code)",
             'validators': [{
                 'method': '相等',
-                'actual': 'http://httpbin.org/post44444444',
+                'actual': 'http://httpbin.org/post',
                 'expect': '$.url'}]}
             # {
             #     "title": "xxx",
@@ -71,3 +72,13 @@ if __name__ == '__main__':
 
     r = json.dumps(ResponseStandard.encode_json(result), ensure_ascii=False)
     print(r)
+
+    # import unittest
+
+    # class Test(unittest.TestCase):
+    #
+    #     @unittest.skipIf(100>99, '跳过')
+    #     def test1(self):
+    #         pass
+    #
+    # unittest.main()
