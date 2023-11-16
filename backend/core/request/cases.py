@@ -1,5 +1,4 @@
 import time
-
 from requests import Response
 import importlib
 import json
@@ -195,11 +194,6 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         # 断言
         checks = data.get('validators')
         self.validators(response.json(), checks)
-        # print("ifelsexxx")
-        # if_e = data.get('if', None)
-        # print(if_e)
-        # self.validators(4, if_e, method=True)
-        # print("跳过了")
         # 执行后置脚本
         self.__run_teardown_script(response)
 
@@ -388,10 +382,10 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         """
         数据提取
         :param response: response对象
-        :param item: 要提数据的数据，列表嵌套字典
+        :param case: 要提数据的数据，列表嵌套字典
         :return:
         """
-        exts = case.get('extract') or getattr(self, 'extract', None)
+        exts = case.get('extract') or getattr(self, 'extract', None)  # noqa
         if not (isinstance(exts, dict) and exts): return
         self.info_log("从响应结果中开始提取数据")
         self.extras = []
@@ -501,7 +495,7 @@ def run_test(case_data, env_config, tester='测试员', thread_count=1, debug=Tr
     :return:
         debug模式：会返回本次运行的结果和 本次运行设置的全局变量，
     """
-    global global_func, db, DEBUG, ENV  # noqa
+    global global_func, db, DEBUG, ENV, result # noqa
     global_func_file = env_config.get('global_func', b'')
     if global_func:
         with open('global_func.py', 'w', encoding='utf-8') as f:
