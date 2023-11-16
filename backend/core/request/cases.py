@@ -190,6 +190,8 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         self.__run_setup_script(data)
         # 发送请求
         response = self.__send_request(data)
+        # 数据提取
+        self.data_extraction(response.json(), data)
         # 断言
         checks = data.get('validators')
         self.validators(response.json(), checks)
@@ -381,6 +383,38 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         value = value.group(1) if value else ''
         self.info_log('\n提取表达式：{}'.format(ext), '\n提取结果:{}'.format(value))
         return value
+
+    def data_extraction(self, response, case):
+        """
+        数据提取
+        :param response: response对象
+        :param item: 要提数据的数据，列表嵌套字典
+        :return:
+        """
+        exts = case.get('extract') or getattr(self, 'extract', None)
+        if not (isinstance(exts, dict) and exts): return
+        self.info_log("从响应结果中开始提取数据")
+        self.extras = []
+        # 遍历要提取的数据
+        for name, ext in exts.items():
+            # 判断提取数据的方式
+            if len(ext) == 3 and ext[1] == "jsonpath":
+                value = self.json_extract(response, ext[2])
+            elif len(ext) == 3 and ext[1] == "re":
+                value = self.re_extract(response, ext[2])
+            else:
+                self.error_log("变量{},的提取表达式 :{}格式不对！".format(name, ext))
+                self.extras.append((name, ext, '提取失败！'))
+                break
+            if ext[0] == 'ENV':
+                ENV[name] = value
+            elif ext[0] == 'env':
+                self.env[name] = value
+            else:
+                self.error_log("错误的变量级别，变量提取表达式中的变量级别只能为ENV，或者env".format(ext[1]))
+                continue
+            self.extras.append((name, ext, value))
+            self.info_log("提取变量：{},提取方式【{}】,提取表达式:{},提取值为:{}".format(name, ext[1], ext[2], value))
 
     def assertion(self, methods, expected, actual) -> None:
         """
