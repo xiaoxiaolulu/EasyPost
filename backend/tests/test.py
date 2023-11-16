@@ -29,6 +29,7 @@ if __name__ == '__main__':
             {
             "title": "测试用例2",
             # "IF": {"condition": 100>99},
+            'LOOP': {"actual": 1, "expect": 2},
             "host": "http://httpbin.org/post",
             "interface": {
                 "url": "/post",

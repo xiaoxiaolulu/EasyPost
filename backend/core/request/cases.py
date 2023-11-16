@@ -71,6 +71,7 @@ class GenerateCase:
         # 遍历数据生成,动态添加测试方法
         for index, case_ in enumerate(cases):
             if_request_obj = case_.get('IF', None)
+            loop_request_obj = case_.get('LOOP', None)
             test_name = self.create_test_name(index, len(cases))
             new_test_func = self.create_test_func(getattr(cls, 'step'), case_)
             new_test_func.__doc__ = case_.get('title') or new_test_func.__doc__
