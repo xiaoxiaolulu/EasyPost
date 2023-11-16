@@ -1,6 +1,4 @@
 from functools import wraps
-import json
-import yaml
 
 
 def _create_test_name(index, name):

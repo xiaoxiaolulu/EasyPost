@@ -120,7 +120,7 @@ class ReRunResult(TestResult):
         """
         :param test: 测试用例
         :param err:  错误信息
-        :return:
+        :return:err
         """
         if not hasattr(test, 'count'):
             test.count = 0
