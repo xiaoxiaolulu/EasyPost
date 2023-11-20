@@ -13,7 +13,7 @@
     </div>
     <div class="footer">
       <div class="util">
-        <el-button type="primary" @click="addHandler">
+        <el-button type="primary" @click="add">
           <el-icon><Plus /></el-icon>
           新建接口
         </el-button>
@@ -55,7 +55,6 @@
       </div>
     </div>
 
-    <ApiDrawer ref="roleDrawer"/>
   </div>
 </template>
 <script lang="ts" setup>
@@ -65,14 +64,16 @@ import {onMounted, reactive, ref} from 'vue'
 import { dictionaryDetailData } from '@/mock/system'
 import ApiDrawer from './apiDrawer.vue'
 import {watch} from "vue/dist/vue";
+import {useRouter} from "vue-router";
 
 const tableData = ref(dictionaryDetailData[0].children)
 const dialogVisible = ref(false)
-const roleDrawer = ref()
 const ruleFormRef = ref<FormInstance>()
 const formInline = reactive({})
 const loading = ref(true)
 const currentPage1 = ref(1)
+const rowData = ref(null)
+const router = useRouter()
 
 const onSubmit = () => {
   console.log('submit!', formInline)
@@ -103,12 +104,10 @@ const getList = (data)=>{
   },500)
 }
 
-
-const addHandler = () => {
-  roleDrawer.value.show()
-}
-const editHandler = (row) => {
-  roleDrawer.value.show(row)
+const add = () => {
+  router.push({
+    name: "httpDetail"
+  });
 }
 
 const del = (row) => {

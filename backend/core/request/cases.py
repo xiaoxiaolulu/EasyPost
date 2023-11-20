@@ -15,7 +15,7 @@ from unittest import TestSuite
 import requests
 from jsonpath import jsonpath
 from requests_toolbelt import MultipartEncoder
-from core.request.runner import TestRunner, ReRunResult
+from core.request.runner import TestRunner
 from utils.DBClient import DBClient
 
 

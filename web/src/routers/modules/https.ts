@@ -18,6 +18,13 @@ const httpsRouter = [{
             name: 'apis',
             meta: { title: '接口管理', icon: 'Lightning'  }
         },
+        {
+            path: '/http/detail',
+            component: () => import('@/views/https/api/components/detail.vue'),
+            name: 'httpDetail',
+            hidden: true,
+            meta: { title: '接口详情', icon: 'FolderRemove'  }
+        }
     ]
 }]
 
