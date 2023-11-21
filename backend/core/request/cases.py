@@ -446,16 +446,16 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         else:
             raise TypeError('断言比较方法{},不支持!'.format(methods))
 
-    def __run_script(test, data) -> None:  # noqa
-        print = test.print  # noqa
-        env = test.env  # noqa
+    def __run_script(ep, data) -> None:  # noqa
+        print = ep.print  # noqa
+        env = ep.env  # noqa
         setup_script = data.get('setup_script')
         if setup_script:
             try:
                 exec(setup_script)
             except Exception as e:
-                test.error_log('前置脚本执行错误:\n{}'.format(e))
-                delattr(test, 'hook_gen')
+                ep.error_log('前置脚本执行错误:\n{}'.format(e))
+                delattr(ep, 'hook_gen')
                 raise
         response = yield  # noqa
         teardown_script = data.get('teardown_script')
@@ -463,7 +463,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             try:
                 exec(teardown_script)
             except Exception as e:
-                test.error_log('后置脚本执行错误:\n{}'.format(e))
+                ep.error_log('后置脚本执行错误:\n{}'.format(e))
                 raise
         yield
 
