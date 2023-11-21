@@ -48,61 +48,82 @@
               <el-button>调试</el-button>
             </div>
           </el-col>
-        </el-row >
+        </el-row>
         <div class="api-body">
           <el-row>
             <el-form :inline="true" autoComplete="on" :model="ruleForm" :rules="rules" ref="ruleFormRef"
                      label-width="auto"
                      label-position="right">
-              <el-form-item label="接口名称" prop="name">
-                <el-input v-model.trim="ruleForm.name"
-                          style="width: 100%;"
-                          clearable
-                          size="small"
-                          placeholder="请输入接口名称"></el-input>
-              </el-form-item>
-              <el-form-item label="状态" prop="status">
-                <el-select v-model="ruleForm.status" filterable placeholder="请选择接口当前状态" size="small">
-                  <template #prefix>
-                    <span :class="`${statusClass}`"></span>
-                  </template>
-                  <el-option
-                      v-for="item in status"
-                      :key="item.value"
-                      :label="item.label"
-                      :value="item.value">
-                    <span :class="`status-${item.type}`"></span>
-                    <span>&nbsp;&nbsp;{{ item.label }}</span>
-                  </el-option>
-                </el-select>
-              </el-form-item>
-              <el-form-item label="接口标签" prop="tag">
-                <!--                  <el-tag-->
-                <!--                      v-for="tag in state.form.tags"-->
-                <!--                      :key="tag"-->
-                <!--                      size="default"-->
-                <!--                      type="success"-->
-                <!--                      closable-->
-                <!--                      style="{margin-left: 0.25rem;margin-right: 0.25rem;}"-->
-                <!--                      :disable-transitions="false"-->
-                <!--                      @close="removeTag(tag)"-->
-                <!--                  >{{ tag }}-->
-                <!--                  </el-tag>-->
+              <el-col>
+                <el-form-item label="接口名称" prop="name">
+                  <el-input v-model.trim="ruleForm.name"
+                            style="width: 100%;"
+                            size="small"
+                            placeholder="请输入接口名称"></el-input>
+                </el-form-item>
+                <el-form-item label="状态" prop="status">
+                  <el-select v-model="ruleForm.status" filterable placeholder="请选择接口当前状态" size="small">
+                    <template #prefix>
+                      <span :class="`${statusClass}`"></span>
+                    </template>
+                    <el-option
+                        v-for="item in status"
+                        :key="item.value"
+                        :label="item.label"
+                        :value="item.value">
+                      <span :class="`status-${item.type}`"></span>
+                      <span>&nbsp;&nbsp;{{ item.label }}</span>
+                    </el-option>
+                  </el-select>
+                </el-form-item>
+                <el-form-item label="接口标签" prop="tag">
+                  <!--                  <el-tag-->
+                  <!--                      v-for="tag in state.form.tags"-->
+                  <!--                      :key="tag"-->
+                  <!--                      size="default"-->
+                  <!--                      type="success"-->
+                  <!--                      closable-->
+                  <!--                      style="{margin-left: 0.25rem;margin-right: 0.25rem;}"-->
+                  <!--                      :disable-transitions="false"-->
+                  <!--                      @close="removeTag(tag)"-->
+                  <!--                  >{{ tag }}-->
+                  <!--                  </el-tag>-->
 
-                <!--                  <el-input-->
-                <!--                      v-if="state.editTag"-->
-                <!--                      ref="caseTagInputRef"-->
-                <!--                      v-model="state.tagValue"-->
-                <!--                      class="ml-1 w-20"-->
-                <!--                      size="small"-->
-                <!--                      @keyup.enter="addTag"-->
-                <!--                      @blur="addTag"-->
-                <!--                      style="width: 100px"-->
-                <!--                  />-->
-                <el-button size="small">
-                  + New Tag
+                  <!--                  <el-input-->
+                  <!--                      v-if="state.editTag"-->
+                  <!--                      ref="caseTagInputRef"-->
+                  <!--                      v-model="state.tagValue"-->
+                  <!--                      class="ml-1 w-20"-->
+                  <!--                      size="small"-->
+                  <!--                      @keyup.enter="addTag"-->
+                  <!--                      @blur="addTag"-->
+                  <!--                      style="width: 100px"-->
+                  <!--                  />-->
+                  <el-button size="small">
+                    + New Tag
+                  </el-button>
+                </el-form-item>
+              </el-col>
+              <el-col style="margin-bottom: 20px">
+                <el-button type="primary" link style="margin-left:10px" id="closeSearchBtn" @click="closeSetting">
+                  {{ word }}
+                  <el-icon v-if="showAll">
+                    <ArrowUp/>
+                  </el-icon>
+                  <el-icon v-else>
+                    <ArrowDown/>
+                  </el-icon>
                 </el-button>
-              </el-form-item>
+              </el-col>
+              <el-col>
+                <el-form-item label="描述" prop="" id="showSettingBox">
+                  <el-input size="default"
+                            type="textarea"
+                            v-model.trim="ruleForm.remarks"
+                            style="width: 500px;"
+                            placeholder="请输入用例描述"></el-input>
+                </el-form-item>
+              </el-col>
             </el-form>
           </el-row>
         </div>
@@ -112,9 +133,9 @@
 </template>
 
 <script setup lang="ts">
-import {Back} from "@element-plus/icons-vue";
+import {Back, ArrowUp, ArrowDown} from "@element-plus/icons-vue";
 import {useRouter} from "vue-router";
-import {onMounted, reactive, ref, watch} from "vue";
+import {onMounted, reactive, ref, watch, computed} from "vue";
 import {FormInstance} from "element-plus";
 
 const router = useRouter()
@@ -131,7 +152,8 @@ const ruleForm = reactive({
   'url': '',
   'method': 'POST',
   'name': '',
-  'status': ''
+  'status': '',
+  'remarks': ''
 })
 
 const status = ref([{
@@ -149,6 +171,27 @@ const status = ref([{
 }])
 
 const statusClass = ref()
+
+const showSetting = ref(false);
+
+const word = computed(() => {
+  if (showSetting.value == false) {
+    //对文字进行处理
+    return "更多设置";
+  } else {
+    return "收起设置";
+  }
+})
+
+const closeSetting = () => {
+  showSetting.value = !showSetting.value
+  var showSettingBox = document.getElementById("showSettingBox");
+  if (showSetting.value == true) {
+    showSettingBox.style.visibility = 'visible'
+  } else {
+    showSettingBox.style.visibility = "hidden";
+  }
+}
 
 const goBack = () => {
   router.push({
@@ -182,11 +225,10 @@ const methodChange = (method: any) => {
 }
 
 const setData = (form: any) => {
-  console.log("测试")
   methodChange(form.method)
 }
 
-onMounted(()=>{
+onMounted(() => {
   setData(ruleForm)
 })
 
@@ -290,5 +332,9 @@ watch(() => ruleForm.status, (newVal, oldVal) => {
 
 .api-body {
   margin-top: 20px;
+}
+
+#showSettingBox {
+  visibility: hidden;
 }
 </style>

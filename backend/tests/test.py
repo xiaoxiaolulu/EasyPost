@@ -8,7 +8,7 @@ if __name__ == '__main__':
         'cases': [
             {
             "title": "测试用例2",
-            "IF": {"condition": 100>99},
+            # "IF": {"condition": 100>99},
             # 'LOOP': {"condition": 100>99, "count": 12},
             "host": "http://httpbin.org/post",
             "interface": {
