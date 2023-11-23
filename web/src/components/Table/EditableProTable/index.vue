@@ -1,11 +1,11 @@
 <template>
   <div class="m-edit-table">
     <div style="margin-top: 15px; margin-bottom: 15px" v-if="mode !== 'hide' && mode !== 'bottom'">
-      <el-button style="width: 100%" @click="add">
+      <el-button style="width: 100%" @click="add" size="small">
         <el-icon style="margin-right: 4px"><plus /></el-icon> 添加一行数据</el-button
       >
     </div>
-    <el-table :data="transData" style="width: 100%" row-key="id" border>
+    <el-table :data="transData" style="width: 100%" row-key="id" border size="small">
       <template v-for="item in columns">
         <el-table-column
             v-if="item.type"
@@ -30,6 +30,7 @@
               </template>
               <template v-else-if="item.valueType === 'select'">
                 <el-select
+                    size="small"
                     clearable
                     :placeholder="`请选择`"
                     v-model="scope.row[item.name]"
@@ -47,6 +48,7 @@
 
               <template v-else-if="item.valueType === 'date'">
                 <el-date-picker
+                    size="small"
                     v-model="scope.row[item.name]"
                     type="date"
                     value-format="YYYY-MM-DD"
@@ -58,6 +60,7 @@
               </template>
               <template v-else>
                 <el-input
+                    size="small"
                     clearable
                     placeholder="请输入"
                     v-model="scope.row[item.name]"
@@ -95,6 +98,7 @@
               v-model:visible="scope.row.visible"
               placement="top"
               :width="160"
+              size="small"
           >
             <p style="display: flex; align-items: center; margin-bottom: 10px">
               <el-icon color="#faad14" style="margin-right: 10px"><warning-filled /></el-icon>
@@ -125,7 +129,7 @@
       </el-table-column>
     </el-table>
     <div style="margin-top: 15px" v-if="mode !== 'hide' && mode !== 'top'">
-      <el-button style="width: 100%" @click="add">
+      <el-button style="width: 100%" @click="add" size="small">
         <el-icon style="margin-right: 4px"><plus /></el-icon> 添加一行数据</el-button
       >
     </div>

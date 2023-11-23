@@ -131,19 +131,55 @@
       <el-card style="margin-top: 20px">
         <template #header>
           <div>
-            <strong>Request</strong>
+            <strong>请求信息</strong>
           </div>
         </template>
         <div>
           <el-tabs v-model="activeName" style="overflow-y: auto">
+            <el-tab-pane name='ApiRequestHeader'>
+              <template #label>
+                <strong>Header</strong>
+              </template>
+              <div>
+                <request-headers></request-headers>
+              </div>
+            </el-tab-pane>
             <el-tab-pane name='ApiRequestBody'>
               <template #label>
-                <strong>请求体</strong>
+                <strong>Body</strong>
               </template>
+              <div>
+                <request-body></request-body>
+              </div>
             </el-tab-pane>
-            <div>
-              <request-body></request-body>
-            </div>
+            <el-tab-pane name='ApiRequestExtractor'>
+              <template #label>
+                <strong>Extractor</strong>
+              </template>
+              <div>
+              </div>
+            </el-tab-pane>
+            <el-tab-pane name='ApiRequestSetup'>
+              <template #label>
+                <strong>SetupScript</strong>
+              </template>
+              <div>
+              </div>
+            </el-tab-pane>
+            <el-tab-pane name='ApiRequestTeardown'>
+              <template #label>
+                <strong>TeardownScript</strong>
+              </template>
+              <div>
+              </div>
+            </el-tab-pane>
+            <el-tab-pane name='ApiRequestValidators'>
+              <template #label>
+                <strong>Validator</strong>
+              </template>
+              <div>
+              </div>
+            </el-tab-pane>
           </el-tabs>
         </div>
       </el-card>
@@ -157,7 +193,7 @@ import {useRouter} from "vue-router";
 import {onMounted, reactive, ref, watch, computed} from "vue";
 import {FormInstance} from "element-plus";
 import RequestBody from "@/views/https/api/components/requestBody.vue";
-
+import RequestHeaders from "@/views/https/api/components/requestHeaders.vue";
 const router = useRouter()
 
 const title = ref('新增')
