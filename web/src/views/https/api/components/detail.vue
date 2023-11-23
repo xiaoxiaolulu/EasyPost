@@ -105,9 +105,9 @@
                 </el-form-item>
               </el-col>
               <el-col style="margin-bottom: 20px">
-                <el-button type="primary" link style="margin-left:10px" id="closeSearchBtn" @click="closeSetting">
-                  {{ word }}
-                  <el-icon v-if="showAll">
+                <el-button  size="default" type="primary" link style="margin-left:10px" id="closeSearchBtn" @click="closeSetting">
+                  {{ settings }}
+                  <el-icon v-if="showSetting">
                     <ArrowUp/>
                   </el-icon>
                   <el-icon v-else>
@@ -116,7 +116,7 @@
                 </el-button>
               </el-col>
               <el-col>
-                <el-form-item label="描述" prop="" id="showSettingBox">
+                <el-form-item label="描述" prop="" v-show="showSetting">
                   <el-input size="default"
                             type="textarea"
                             v-model.trim="ruleForm.remarks"
@@ -134,6 +134,18 @@
             <strong>Request</strong>
           </div>
         </template>
+        <div>
+          <el-tabs v-model="activeName" style="overflow-y: auto">
+            <el-tab-pane name='ApiRequestBody'>
+              <template #label>
+                <strong>请求体</strong>
+              </template>
+            </el-tab-pane>
+            <div>
+              <request-body></request-body>
+            </div>
+          </el-tabs>
+        </div>
       </el-card>
     </div>
   </div>
@@ -144,6 +156,7 @@ import {Back, ArrowUp, ArrowDown} from "@element-plus/icons-vue";
 import {useRouter} from "vue-router";
 import {onMounted, reactive, ref, watch, computed} from "vue";
 import {FormInstance} from "element-plus";
+import RequestBody from "@/views/https/api/components/requestBody.vue";
 
 const router = useRouter()
 
@@ -179,11 +192,12 @@ const status = ref([{
 
 const statusClass = ref()
 
-const showSetting = ref(false);
+const showSetting = ref(false)
 
-const word = computed(() => {
+const activeName =  ref('ApiRequestBody')
+
+const settings = computed(() => {
   if (showSetting.value == false) {
-    //对文字进行处理
     return "更多设置";
   } else {
     return "收起设置";
@@ -192,12 +206,6 @@ const word = computed(() => {
 
 const closeSetting = () => {
   showSetting.value = !showSetting.value
-  var showSettingBox = document.getElementById("showSettingBox");
-  if (showSetting.value == true) {
-    showSettingBox.style.visibility = 'visible'
-  } else {
-    showSettingBox.style.visibility = "hidden";
-  }
 }
 
 const goBack = () => {
@@ -339,9 +347,5 @@ watch(() => ruleForm.status, (newVal, oldVal) => {
 
 .api-body {
   margin-top: 20px;
-}
-
-#showSettingBox {
-  visibility: hidden;
 }
 </style>
