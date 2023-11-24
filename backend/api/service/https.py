@@ -155,3 +155,19 @@ class AddApiView(APIView):
             return Response(ResponseStandard.success())
         except Exception as err:
             return Response(ResponseStandard.failed(msg=str(err)))
+
+
+class RunApiView(APIView):
+
+    permission_classes = [IsAuthenticated]
+    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
+
+    @staticmethod
+    def post(request, **kwargs):
+
+        try:
+            api = request.data['request']
+            response = HttpDao.run_api_doc(api)
+            return Response(ResponseStandard.success(data=response))
+        except Exception as err:
+            return Response(ResponseStandard.failed(msg=str(err)))

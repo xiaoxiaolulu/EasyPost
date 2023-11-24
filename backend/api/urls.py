@@ -9,7 +9,8 @@ from api.service.https import (
     AddApiView,
     DelApiView,
     ApiDetailView,
-    ApiTestListView
+    ApiTestListView,
+    RunApiView
 )
 from api.service.project import (
     ProjectListViewSet,
@@ -71,7 +72,8 @@ app_urls = [
     path("api/detail/<int:pk>", ApiDetailView.as_view()),
     path("api/list", ApiTestListView.as_view({
         'get': 'list'
-    }))
+    })),
+    path('api/run', RunApiView.as_view())
 ]
 
 
