@@ -4,7 +4,6 @@ from api.models.https import (
     Api
 )
 from api.models.project import Project
-from api.models.setting import Address
 from core.request.parser import Format
 from utils.trees import (
     collections_directory_id,
@@ -56,7 +55,7 @@ class HttpDao:
             raise Exception("获取测试接口失败")
 
     @staticmethod
-    def add_api_data(api: dict, request: Any):
+    def parser_api_data(api: dict, request: Any):
 
         api = Format(api) # noqa
 
@@ -81,6 +80,14 @@ class HttpDao:
             'user': request.user
         }
         try:
+            return request_body
+        except (Exception, ):
+            raise Exception("解析测试接口失败")
+
+    @classmethod
+    def create_api(cls, api: dict, request: Any):
+        try:
+            request_body = cls.parser_api_data(api, request)
             Api.objects.create(**request_body)
-        except (Api.DoesNotExist, Exception):
-            raise Exception("添加测试接口失败")
+        except (Exception, Api.DoesNotExist):
+            raise Exception("创建测试接口失败")

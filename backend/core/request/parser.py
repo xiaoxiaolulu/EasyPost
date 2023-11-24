@@ -47,3 +47,4 @@ class Format(object):
             self.extract = request_body.get('extract', {})
         except (KeyError, ValueError, AttributeError):
             pass
+

@@ -151,7 +151,7 @@ class AddApiView(APIView):
 
         try:
             api = request.data['request']
-            HttpDao.add_api_data(api, request)
+            HttpDao.create_api(api, request)
             return Response(ResponseStandard.success())
         except Exception as err:
             return Response(ResponseStandard.failed(msg=str(err)))
