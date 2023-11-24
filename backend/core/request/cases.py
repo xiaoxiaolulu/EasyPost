@@ -293,7 +293,12 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             if k in params_fields:
                 request_params[k] = v
         # 请求地址
-        request_params['url'] = ENV.get('host') + data.get('interface').get('url')
+        # request_params['url'] = data.get('host') or ENV.get('host') + data.get('interface').get('url')
+        if ENV.get('host'):
+            request_params['url'] = ENV.get('host') + data.get('interface').get('url')
+        else:
+            request_params['url'] = data.get('interface').get('url')
+
         # 请求方法
         request_params['method'] = data.get('interface').get('method')
         # 请求头
@@ -480,7 +485,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         next(self.hook_gen)  # noqa
 
 
-def run_test(case_data, env_config, tester='测试员', thread_count=1, debug=True) -> tuple[Any, dict[Any, Any]] | Any:
+def run_test(case_data, env_config={}, tester='测试员', thread_count=1, debug=True) -> tuple[Any, dict[Any, Any]] | Any:
     """
     :param case_data: 测试套件数据
     :param env_config: 用例执行的环境配置
@@ -497,9 +502,10 @@ def run_test(case_data, env_config, tester='测试员', thread_count=1, debug=Tr
     """
     global global_func, db, DEBUG, ENV, result # noqa
     global_func_file = env_config.get('global_func', b'')
-    if global_func:
+    if global_func_file:
         with open('global_func.py', 'w', encoding='utf-8') as f:
-            f.write(global_func_file)
+            f.write(global_func_file)  # noqa
+
     # 更新运行环境
     global_func = importlib.reload(global_func)
     DEBUG = debug
@@ -512,7 +518,7 @@ def run_test(case_data, env_config, tester='测试员', thread_count=1, debug=Tr
     # 运行测试用例
     runner = TestRunner(suite=suite, tester=tester)
     result = runner.run(thread_count=thread_count, rerun=rerun)
-    if global_func:
+    if global_func and global_func_file:
         os.remove('global_func.py')
     # 断开数据库连接
     db.close_connect()

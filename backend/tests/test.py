@@ -43,9 +43,9 @@ if __name__ == '__main__':
             # },
             {
                 "title": "测试用例44442",
-                "host": "http://httpbin.org/post",
+                # "host": "http://httpbin.org/post",
                 "interface": {
-                    "url": "/post",
+                    "url": "http://httpbin.org/post",
                     "name": "登录",
                     "method": "post",
                 },
@@ -71,11 +71,7 @@ if __name__ == '__main__':
         'global_func': "print('前置脚本123')",
         'rerun': 1
     }
-    result = run_test(
-        case_data=case_data,
-        env_config=config,
-        debug=False
-    )
+    result = run_test(case_data=case_data, debug=False)
     import json
 
     r = json.dumps(ResponseStandard.encode_json(result), ensure_ascii=False)

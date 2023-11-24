@@ -97,21 +97,9 @@ class HttpDao:
     def run_api_doc(cls, api: dict):
 
         try:
-            # 默认空配置
-            config = {
-                'ENV': {},
-                'db': [],
-                'global_func': "",
-                'rerun': 1
-            }
-
             api = Format(api)
             case_data = api.create_step_template()
-            result = run_test(
-                case_data=case_data,
-                env_config=config,
-                debug=False
-            )
+            result = run_test(case_data=case_data, debug=False)
             return result
         except (Exception, ):
             raise Exception("调试测试接口失败")
