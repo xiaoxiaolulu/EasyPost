@@ -48,3 +48,32 @@ class Format(object):
         except (KeyError, ValueError, AttributeError):
             pass
 
+    def create_step_template(self):
+        step_step_template = dict()
+        step_step_template['title'] = self.name
+        step_step_template['interface']['url'] = self.url
+        step_step_template['interface']['name'] = self.name
+        step_step_template['interface']['method'] = self.method
+        step_step_template['headers'] = self.headers
+
+        match self.body_type:
+            case 0:
+                step_step_template['request'] = dict()
+            case 1:
+                step_step_template['request']['json'] = self.json
+            case 2:
+                step_step_template['request']['data'] = self.data
+            case 3:
+                step_step_template['request']['params'] = self.params
+
+        step_step_template['setup_script'] = self.setup_script
+        step_step_template['teardown_script'] = self.teardown_script
+        step_step_template['extract'] = self.extract
+        step_step_template['validators'] = self.validate
+
+        step_collection = [{
+            'name': '调试接口文档',
+            'cases': [step_step_template]
+        }]
+
+        return step_collection

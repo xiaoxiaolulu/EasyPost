@@ -4,6 +4,7 @@ from api.models.https import (
     Api
 )
 from api.models.project import Project
+from core.request.cases import run_test
 from core.request.parser import Format
 from utils.trees import (
     collections_directory_id,
@@ -91,3 +92,26 @@ class HttpDao:
             Api.objects.create(**request_body)
         except (Exception, Api.DoesNotExist):
             raise Exception("创建测试接口失败")
+
+    @classmethod
+    def run_api_doc(cls, api: dict):
+
+        try:
+            # 默认空配置
+            config = {
+                'ENV': {},
+                'db': [],
+                'global_func': "",
+                'rerun': 1
+            }
+
+            api = Format(api)
+            case_data = api.create_step_template()
+            result = run_test(
+                case_data=case_data,
+                env_config=config,
+                debug=False
+            )
+            return result
+        except (Exception, ):
+            raise Exception("调试测试接口失败")

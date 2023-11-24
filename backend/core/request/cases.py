@@ -293,7 +293,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             if k in params_fields:
                 request_params[k] = v
         # 请求地址
-        request_params['url'] = data.get('host') or ENV.get('host') + data.get('interface').get('url')
+        request_params['url'] = ENV.get('host') + data.get('interface').get('url')
         # 请求方法
         request_params['method'] = data.get('interface').get('method')
         # 请求头
