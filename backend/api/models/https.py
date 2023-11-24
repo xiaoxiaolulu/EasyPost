@@ -19,12 +19,21 @@ class Defaults(object):
     """
     默认字段
     """
-    BODY_DEFAULT_TYPE = 'json'
+    STATUS_TYPE = 0
+
+    STATUS_CHOICES = (
+        (0, 0),
+        (1, 1),
+        (2, 2)
+    )
+
+    BODY_TYPE = 0
 
     BODY_TYPE_CHOICES = (
-        ('none', 'none'),
-        ('json', 'json'),
-        ('data', 'data'),
+        (0, 0),
+        (1, 1),
+        (2, 2),
+        (3, 3)
     )
 
 
@@ -68,15 +77,21 @@ class Api(Model):
 
     name = CharField(max_length=50, null=True, blank=True, verbose_name=_('Api Name'))
     project = ForeignKey(Project, on_delete=CASCADE, db_constraint=False)
-    gateway = ForeignKey(Address, null=True, on_delete=SET_NULL, verbose_name=_('Api Gateway'))
+    directory_id = CharField(max_length=50, null=True, blank=True, verbose_name=_('Api DirectoryId'))
     method = CharField(max_length=50, null=True, blank=True, verbose_name=_('Api Method'))
     url = TextField(verbose_name=_('Api Url'), null=False, default=None)
+    tags = TextField(verbose_name=_('Api Tags'), null=False, default=None)
+    status = CharField(max_length=50, verbose_name=_('Api Status'), choices=Defaults.STATUS_CHOICES,
+                       default=Defaults.STATUS_TYPE)
+    desc = TextField(null=True, blank=True, verbose_name=_('Api Desc'))
     headers = TextField(verbose_name=_('Api Headers'), null=False, default=None)
+    body_type = CharField(max_length=50, verbose_name=_('Api BodyType'), choices=Defaults.BODY_TYPE_CHOICES,
+                          default=Defaults.BODY_TYPE)
     params = TextField(verbose_name=_('Api Params'), null=False, default=None)
     data = TextField(verbose_name=_('Api Data'), null=False, default=None)
     json = TextField(verbose_name=_('Api Json'), null=False,  default=None)
-    hooks = TextField(verbose_name=_('Api Hooks'), null=False,  default=None)
-    directory_id = CharField(max_length=50, null=True, blank=True, verbose_name=_('Api DirectoryId'))
+    setup_script = TextField(verbose_name=_('Api SetupScript'), null=False,  default=None)
+    teardown_script = TextField(verbose_name=_('Api TeardownScript'), null=False, default=None)
     validate = TextField(verbose_name=_('Api Validate'), null=False, default=None)
     extract = TextField(verbose_name=_('Api Extract'), null=False, default=None)
     user = ForeignKey(User, related_name="api_creator", null=True, on_delete=SET_NULL, verbose_name=_('User'))
