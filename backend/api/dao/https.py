@@ -62,18 +62,22 @@ class HttpDao:
 
         request_body = {
             'name': api.name,
-            'gateway': Address.objects.get(id=api.gateway),
+            'project': Project.objects.get(id=api.project),
+            'directory_id': api.directory_id,
             'method': api.method,
             'url': api.url,
+            'tags': api.tags,
+            'status': api.status,
+            'desc': api.desc,
             'headers': api.headers,
+            'body_type': api.body_type,
             'json': api.json,
             'params': api.params,
             'data': api.data,
-            'hooks': api.hooks,
+            'setup_script': api.setup_script,
+            'teardown_script': api.teardown_script,
             'validate': api.validate,
-            'directory_id': api.directory_id,
             'extract': api.extract,
-            'project': Project.objects.get(id=api.project),
             'user': request.user
         }
         try:
