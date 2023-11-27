@@ -9,12 +9,12 @@ if __name__ == '__main__':
         'cases': [
             {
             "title": "测试用例2",
-            #"If": {"condition": 100<99},
-            'Loop': 3,
+            "If": {"condition": 100<99},
+            #'Loop': 3,
                 'children': [
                             {
-                                #"If": {"condition": 100 > 99},
-                                'Loop':2,
+                                "If": {"condition": 100 > 99},
+                                #'Loop':2,
                                 "title": "测试用例2",
                                 "host": "http://httpbin.org/post",
                                 "interface": {

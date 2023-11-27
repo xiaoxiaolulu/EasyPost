@@ -102,7 +102,7 @@ class GenerateCase:
                 # 计算当前执行用例循环次数
                 loop_count = self.loop_strategy(loop_obj, loop_request_obj)
                 # 计算当前执行用例是否跳过
-                if_tag = self.skip_strategy(if_obj, if_request_obj)
+                if_object = self.skip_strategy(if_obj, if_request_obj)
 
                 test_name = self.create_test_name(index, len(cases))
                 new_test_func = self.create_test_func(getattr(cls, 'step'), case_)
@@ -113,7 +113,7 @@ class GenerateCase:
 
                 test_name = [name for name in cls.__dict__.keys() if name.__contains__('test_')]
 
-                self.controller.skipIf(if_tag, cls, str(test_name.pop()))
+                self.controller.skipIf(if_object, cls, str(test_name.pop()))
 
     @staticmethod
     def loop_strategy(before, after):
@@ -138,16 +138,16 @@ class GenerateCase:
         if控制器策略
         """
 
-        global if_object # noqa
+        global tag # noqa
 
         if before is None:
-            if_object = after
+            tag = after
         if before is not None:
-            if_object = before
+            tag = before
         if before is not None and after is not None:
-            if_object = after
+            tag = before if before.get('condition') is True else after
 
-        return if_object
+        return tag
 
     def create_test_func(self, func, case_) -> Callable[[Any], None]:
         """创建测试方法"""
