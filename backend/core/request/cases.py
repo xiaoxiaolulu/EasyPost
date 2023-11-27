@@ -64,25 +64,40 @@ class GenerateCase:
     def create_test_class(self, item) -> type:
         """创建测试类"""
         cls_name = item.get('name') or 'Demo'
+
         cases = item.get('cases')
         # 创建测试类
         cls = type(cls_name, (BaseTest,), {})
         # 遍历数据生成,动态添加测试方法
-        for index, case_ in enumerate(cases):
-            if_request_obj = case_.get('If', None)
-            loop_request_obj = case_.get('Loop', None)
-            test_name = self.create_test_name(index, len(cases))
-            new_test_func = self.create_test_func(getattr(cls, 'step'), case_)
-            new_test_func.__doc__ = case_.get('title') or new_test_func.__doc__
-
-            # 循环当前用例, 默认1次
-            self.controller.loop(loop_request_obj, cls, test_name, new_test_func)
-
-            test_name = [name for name in cls.__dict__.keys() if name.__contains__('test_')]
-
-            self.controller.skipIf(if_request_obj, cls, str(test_name.pop()))
+        self.create_case_func(cls, cases)
 
         return cls
+
+    def create_case_func(self, cls, cases, if_obj=None, loop_obj=None):
+        for index, case_ in enumerate(cases):
+            global children # noqa
+            try:
+                children = case_.get('children', None)
+            except AttributeError:
+                pass
+
+            if children:
+                if_obj = case_.get('If', None)
+                loop_obj = case_.get('Loop', None)
+                self.create_case_func(cls, children, if_obj, loop_obj)
+            else:
+                if_request_obj = case_.get('If', None) if if_obj is None else if_obj
+                loop_request_obj = case_.get('Loop', None) if loop_obj is None else loop_obj
+                test_name = self.create_test_name(index, len(cases))
+                new_test_func = self.create_test_func(getattr(cls, 'step'), case_)
+                new_test_func.__doc__ = case_.get('title') or new_test_func.__doc__
+
+                # 循环当前用例, 默认1次
+                self.controller.loop(loop_request_obj, cls, test_name, new_test_func)
+
+                test_name = [name for name in cls.__dict__.keys() if name.__contains__('test_')]
+
+                self.controller.skipIf(if_request_obj, cls, str(test_name.pop()))
 
     def create_test_func(self, func, case_) -> Callable[[Any], None]:
         """创建测试方法"""

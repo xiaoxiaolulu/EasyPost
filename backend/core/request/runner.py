@@ -219,7 +219,7 @@ class TestRunner:
                                    cases_info]
             result['class_list'].append(cls.result)
         result['runtime'] = '{:.2f}s'.format(time.time() - self.starttime)
-        result['argtime'] = '{:.2f}s'.format(round((time.time() - self.starttime)/result.get('all', 0), 2))
+#        result['argtime'] = '{:.2f}s'.format(round((time.time() - self.starttime)/result.get('all', 0), 2))
         result["begin_time"] = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(self.starttime))
         result["tester"] = self.tester
         if result['all'] != 0:
