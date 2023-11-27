@@ -69,17 +69,18 @@ class GenerateCase:
         cls = type(cls_name, (BaseTest,), {})
         # 遍历数据生成,动态添加测试方法
         for index, case_ in enumerate(cases):
-            if_request_obj = case_.get('IF', None)
+            if_request_obj = case_.get('If', None)
+            loop_request_obj = case_.get('Loop', None)
             test_name = self.create_test_name(index, len(cases))
             new_test_func = self.create_test_func(getattr(cls, 'step'), case_)
             new_test_func.__doc__ = case_.get('title') or new_test_func.__doc__
-            setattr(cls, test_name, new_test_func)
 
-            if if_request_obj:
-                test_item = getattr(cls, test_name)
-                condition = if_request_obj.get('condition', True)
-                reason = if_request_obj.get('reason', '跳过')
-                self.controller.skipIf(condition, reason, test_item)
+            # 循环当前用例, 默认1次
+            self.controller.loop(loop_request_obj, cls, test_name, new_test_func)
+
+            test_name = [name for name in cls.__dict__.keys() if name.__contains__('test_')]
+
+            self.controller.skipIf(if_request_obj, cls, str(test_name.pop()))
 
         return cls
 
@@ -161,14 +162,28 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         self.info_log('强制等待:{}秒'.format(second))
 
     @staticmethod
-    def skipIf(condition, reason, item):
+    def skipIf(if_obj, cls, test_name):
         """
         条件控制器
         """
-        if condition:
-            item.__unittest_skip__ = True
-            item.__unittest_skip_why__ = reason
-        return item
+        if if_obj:
+            test_item = getattr(cls, test_name)
+            condition = if_obj.get('condition', True)
+            reason = if_obj.get('reason', '跳过')
+
+            if condition:
+                test_item.__unittest_skip__ = True
+                test_item.__unittest_skip_why__ = reason
+            return test_item
+
+    def loop(self, loop_obj, cls, test_name, new_test_func):
+        """循环控制器"""
+
+        count = 1 if loop_obj is None else loop_obj
+        for c in range(int(count)):
+            tag = f'_NoLooP_' if loop_obj is None else f'_Loop_{c + 1}'
+            self.info_log('用例第{}次循环'.format(c+1))
+            setattr(cls, test_name + tag, new_test_func)
 
     @classmethod
     def setUpClass(cls) -> None:
