@@ -69,11 +69,11 @@ class GenerateCase:
         # 创建测试类
         cls = type(cls_name, (BaseTest,), {})
         # 遍历数据生成,动态添加测试方法
-        self.create_case_func(cls, cases)
+        self.create_case_content(cls, cases)
 
         return cls
 
-    def create_case_func(self, cls, cases, if_obj=None, loop_obj=None):
+    def create_case_content(self, cls, cases, if_obj=None, loop_obj=None):
         for index, case_ in enumerate(cases):
             global children # noqa
             try:
@@ -84,7 +84,7 @@ class GenerateCase:
             if children:
                 if_obj = case_.get('If', None)
                 loop_obj = case_.get('Loop', None)
-                self.create_case_func(cls, children, if_obj, loop_obj)
+                self.create_case_content(cls, children, if_obj, loop_obj)
             else:
                 if_request_obj = case_.get('If', None) if if_obj is None else if_obj
                 loop_request_obj = case_.get('Loop', None) if loop_obj is None else loop_obj
