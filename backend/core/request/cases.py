@@ -74,6 +74,16 @@ class GenerateCase:
         return cls
 
     def create_case_content(self, cls, cases, if_obj=None, loop_obj=None):
+        """
+        生成用例内容模版, 目前支持嵌套循环控制器与if控制器(不超过2层)
+        {
+         Loop: 3,
+         children: [
+            Loop: 2,
+            ....
+         ]
+        }
+        """
         for index, case_ in enumerate(cases):
             global children # noqa
             try:
@@ -86,18 +96,58 @@ class GenerateCase:
                 loop_obj = case_.get('Loop', None)
                 self.create_case_content(cls, children, if_obj, loop_obj)
             else:
-                if_request_obj = case_.get('If', None) if if_obj is None else if_obj
-                loop_request_obj = case_.get('Loop', None) if loop_obj is None else loop_obj
+                if_request_obj = case_.get('If', None)
+                loop_request_obj = case_.get('Loop', None)
+
+                # 计算当前执行用例循环次数
+                loop_count = self.loop_strategy(loop_obj, loop_request_obj)
+                # 计算当前执行用例是否跳过
+                if_tag = self.skip_strategy(if_obj, if_request_obj)
+
                 test_name = self.create_test_name(index, len(cases))
                 new_test_func = self.create_test_func(getattr(cls, 'step'), case_)
                 new_test_func.__doc__ = case_.get('title') or new_test_func.__doc__
 
                 # 循环当前用例, 默认1次
-                self.controller.loop(loop_request_obj, cls, test_name, new_test_func)
+                self.controller.loop(loop_count, cls, test_name, new_test_func)
 
                 test_name = [name for name in cls.__dict__.keys() if name.__contains__('test_')]
 
-                self.controller.skipIf(if_request_obj, cls, str(test_name.pop()))
+                self.controller.skipIf(if_tag, cls, str(test_name.pop()))
+
+    @staticmethod
+    def loop_strategy(before, after):
+        """
+        循环控制器策略
+        """
+
+        global count # noqa
+
+        if before is None:
+            count = after
+        if before is not None:
+            count = before
+        if before is not None and after is not None:
+            count = before * after
+
+        return count
+
+    @staticmethod
+    def skip_strategy(before, after):
+        """
+        if控制器策略
+        """
+
+        global if_object # noqa
+
+        if before is None:
+            if_object = after
+        if before is not None:
+            if_object = before
+        if before is not None and after is not None:
+            if_object = after
+
+        return if_object
 
     def create_test_func(self, func, case_) -> Callable[[Any], None]:
         """创建测试方法"""
