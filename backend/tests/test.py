@@ -1,5 +1,5 @@
 from api.response.fatcory import ResponseStandard
-from core.request.cases import run_test
+from core.engine.session_runner import run_test
 
 if __name__ == '__main__':
     # 测试数据(详细结构说明看下一节)

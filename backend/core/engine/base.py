@@ -1,119 +1,79 @@
 import time
 from requests import Response
-import importlib
 import json
 import os
 import re
 import unittest
-from functools import wraps
 from numbers import Number
-from typing import (
-    Callable,
-    Any
-)
-from unittest import TestSuite
+from typing import Any
 import requests
 from jsonpath import jsonpath
 from requests_toolbelt import MultipartEncoder
-from core.request.runner import TestRunner
-from utils.DBClient import DBClient
+from core.engine.env import (
+    BaseEnv,
+    DEBUG,
+    session,
+    ENV
+)
+from core.engine.log import CaseRunLog
 
 
-try:
-    global_func = importlib.import_module('global_func')
-except ModuleNotFoundError:
-    from utils import builtin as global_func
+class BaseTest(unittest.TestCase, CaseRunLog):
 
+    """用例执行逻辑"""
 
-class BaseEnv(dict):
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
-
-    def __setattr__(self, key, value):
-        super().__setitem__(key, value)
-
-    def __getattr__(self, item):
-        return super().__getitem__(item)
-
-
-ENV = BaseEnv()
-db = DBClient()
-DEBUG = True
-session = requests.Session()
-
-
-class GenerateCase:
-    """解析数据创建测试用例"""
-
-    def __init__(self):
-        self.controller = BaseTest()
-
-    def data_to_suite(self, datas) -> TestSuite:
+    def timer(self, second) -> None:
         """
-        根据用例数据生成测试套件
-        :param datas:
-        :return:
+        等待控制器
         """
-        suite = unittest.TestSuite()
-        load = unittest.TestLoader()
-        for item in datas:
-            cls = self.create_test_class(item)
-            suite.addTest(load.loadTestsFromTestCase(cls)) # noqa
-        return suite
+        time.sleep(second)
+        self.info_log('强制等待:{}秒'.format(second))
 
-    def create_test_class(self, item) -> type:
-        """创建测试类"""
-        cls_name = item.get('name') or 'Demo'
-
-        cases = item.get('cases')
-        # 创建测试类
-        cls = type(cls_name, (BaseTest,), {})
-        # 遍历数据生成,动态添加测试方法
-        self.create_case_content(cls, cases)
-
-        return cls
-
-    def create_case_content(self, cls, cases, if_obj=None, loop_obj=None):
+    @staticmethod
+    def skipIf(if_obj, cls, test_name):
         """
-        生成用例内容模版, 目前支持嵌套循环控制器与if控制器(不超过2层)
-        {
-         Loop: 3,
-         children: [
-            Loop: 2,
-            ....
-         ]
-        }
+        条件控制器
         """
-        for index, case_ in enumerate(cases):
-            global children # noqa
-            try:
-                children = case_.get('children', None)
-            except AttributeError:
-                pass
+        if if_obj:
+            test_item = getattr(cls, test_name)
+            condition = if_obj.get('condition', True)
+            reason = if_obj.get('reason', '跳过')
 
-            if children:
-                if_obj = case_.get('If', None)
-                loop_obj = case_.get('Loop', None)
-                self.create_case_content(cls, children, if_obj, loop_obj)
-            else:
-                if_request_obj = case_.get('If', None)
-                loop_request_obj = case_.get('Loop', None)
+            if condition:
+                test_item.__unittest_skip__ = True
+                test_item.__unittest_skip_why__ = reason
+            return test_item
 
-                # 计算当前执行用例循环次数
-                loop_count = self.loop_strategy(loop_obj, loop_request_obj)
-                # 计算当前执行用例是否跳过
-                if_object = self.skip_strategy(if_obj, if_request_obj)
+    def loop(self, loop_obj, cls, test_name, new_test_func):
+        """循环控制器"""
 
-                test_name = self.create_test_name(index, len(cases))
-                new_test_func = self.create_test_func(getattr(cls, 'step'), case_)
-                new_test_func.__doc__ = case_.get('title') or new_test_func.__doc__
+        count = 1 if loop_obj is None else loop_obj # noqa
+        for c in range(int(count)):
+            tag = f'_NoLooP_' if loop_obj is None else f'_Loop_{c + 1}'  # noqa
+            self.info_log('用例第{}次循环'.format(c+1))
+            setattr(cls, test_name + tag, new_test_func)
 
-                # 循环当前用例, 默认1次
-                self.controller.loop(loop_count, cls, test_name, new_test_func)
+    def save_env_variable(self, name, value) -> None:
+        self.info_log('设置临时变量\n变量名:{}\n变量值:{}'.format(name, value))
+        if DEBUG:
+            self.debug_log('提示调试模式运行,设置的临时变量均保存到全局变量中')
+            ENV[name] = value
+        else:
+            self.env[name] = value
 
-                test_name = [name for name in cls.__dict__.keys() if name.__contains__('test_')]
+    def save_global_variable(self, name, value) -> None:
+        self.info_log('设置全局变量\n变量名:{}\n变量值:{}'.format(name, value))
+        ENV[name] = value
 
-                self.controller.skipIf(if_object, cls, str(test_name.pop()))
+    def delete_env_variable(self, name) -> None:
+        """删除临时变量"""
+        self.info_log('删除临时变量:{}'.format(name, ))
+        del self.env[name]
+
+    def delete_global_variable(self, name) -> None:
+        """删除全局变量"""
+        self.info_log('删除全局变量:{}'.format(name))
+        del ENV[name]
 
     @staticmethod
     def loop_strategy(before, after):
@@ -148,107 +108,6 @@ class GenerateCase:
             tag = before if before.get('condition') is True else after
 
         return tag
-
-    def create_test_func(self, func, case_) -> Callable[[Any], None]:
-        """创建测试方法"""
-
-        @wraps(func)
-        def wrapper(self):  # noqa
-            func(self, case_)
-
-        return wrapper
-
-    @staticmethod
-    def create_test_name(index, length) -> str:
-        """生成测试方法名"""
-        n = (len(str(length)) // len(str(index))) - 1
-        test_name = 'test_{}'.format("0" * n + str(index + 1))
-        return test_name
-
-
-class CaseRunLog:
-
-    def save_log(self, message, level) -> None:
-        if not hasattr(self, 'log_data'):
-            setattr(self, 'log_data', [])
-        info = "【{}】 |: {}".format(level, message)
-        getattr(self, 'log_data').append(info)
-        print(info)
-
-    def save_validators(self, methods, expected, actual, result) -> None:
-        if not hasattr(self, 'validate_extractor'):
-            setattr(self, 'validate_extractor', [])
-        info = "预期结果: {} {} 实际结果: {} {}".format(expected, methods, actual, result)
-        getattr(self, 'validate_extractor').append(info)
-
-    def save_ife(self, info) -> None:
-        if not hasattr(self, 'if_extractor'):
-            setattr(self, 'if_extractor', [])
-        getattr(self, 'if_extractor').append(info)
-
-    def print(self, *args) -> None:
-        args = [str(i) for i in args]
-        message = ' '.join(args)
-        getattr(self, 'log_data').append(('INFO', message))
-
-    def debug_log(self, *args) -> None:
-        if DEBUG:
-            message = ''.join(args)
-            self.save_log(message, 'DEBUG')
-
-    def info_log(self, *args) -> None:
-        message = ''.join(args)
-        self.save_log(message, 'INFO')
-
-    def warning_log(self, *args) -> None:
-        message = ''.join(args)
-        self.save_log(message, 'WARNING')
-
-    def error_log(self, *args) -> None:
-        message = ''.join(args)
-        self.save_log(message, 'ERROR')
-
-    def exception_log(self, *args) -> None:
-        message = ''.join(args)
-        self.save_log(message, 'ERROR')
-
-    def critical_log(self, *args) -> None:
-        message = ''.join(args)
-        self.save_log(message, 'CRITICAL')
-
-
-class BaseTest(unittest.TestCase, CaseRunLog):
-
-    def timer(self, second) -> None:
-        """
-        等待控制器
-        """
-        time.sleep(second)
-        self.info_log('强制等待:{}秒'.format(second))
-
-    @staticmethod
-    def skipIf(if_obj, cls, test_name):
-        """
-        条件控制器
-        """
-        if if_obj:
-            test_item = getattr(cls, test_name)
-            condition = if_obj.get('condition', True)
-            reason = if_obj.get('reason', '跳过')
-
-            if condition:
-                test_item.__unittest_skip__ = True
-                test_item.__unittest_skip_why__ = reason
-            return test_item
-
-    def loop(self, loop_obj, cls, test_name, new_test_func):
-        """循环控制器"""
-
-        count = 1 if loop_obj is None else loop_obj
-        for c in range(int(count)):
-            tag = f'_NoLooP_' if loop_obj is None else f'_Loop_{c + 1}'
-            self.info_log('用例第{}次循环'.format(c+1))
-            setattr(cls, test_name + tag, new_test_func)
 
     @classmethod
     def setUpClass(cls) -> None:
@@ -425,28 +284,6 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         else:
             return data
 
-    def save_env_variable(self, name, value) -> None:
-        self.info_log('设置临时变量\n变量名:{}\n变量值:{}'.format(name, value))
-        if DEBUG:
-            self.debug_log('提示调试模式运行,设置的临时变量均保存到全局变量中')
-            ENV[name] = value
-        else:
-            self.env[name] = value
-
-    def save_global_variable(self, name, value) -> None:
-        self.info_log('设置全局变量\n变量名:{}\n变量值:{}'.format(name, value))
-        ENV[name] = value
-
-    def delete_env_variable(self, name) -> None:
-        """删除临时变量"""
-        self.info_log('删除临时变量:{}'.format(name, ))
-        del self.env[name]
-
-    def delete_global_variable(self, name) -> None:
-        """删除全局变量"""
-        self.info_log('删除全局变量:{}'.format(name))
-        del ENV[name]
-
     def json_extract(self, obj, ext) -> Any:
         """jsonpath数据提取"""
         self.info_log('jsonpath提取数据')
@@ -563,46 +400,3 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         self.info_log('执行前置脚本')
         self.hook_gen = self.__run_script(data) # noqa
         next(self.hook_gen)  # noqa
-
-
-def run_test(case_data, env_config={}, tester='测试员', thread_count=1, debug=True) -> tuple[Any, dict[Any, Any]] | Any:
-    """
-    :param case_data: 测试套件数据
-    :param env_config: 用例执行的环境配置
-        env_config:{
-        'ENV':{"host":'http//:127.0.0.1'},
-        'db':[{},{}],
-        'FuncTools':'工具函数文件'
-        }
-    :param thread_count: 运行线程数
-    :param debug: 单接口调试用debug模式
-    :param tester: 测试员
-    :return:
-        debug模式：会返回本次运行的结果和 本次运行设置的全局变量，
-    """
-    global global_func, db, DEBUG, ENV, result # noqa
-    global_func_file = env_config.get('global_func', b'')
-    if global_func_file:
-        with open('global_func.py', 'w', encoding='utf-8') as f:
-            f.write(global_func_file)  # noqa
-
-    # 更新运行环境
-    global_func = importlib.reload(global_func)
-    DEBUG = debug
-    ENV = {**env_config.get('ENV', {})}
-    db.init_connect(env_config.get('db', []))
-    # 失败重跑
-    rerun = env_config.get('rerun', 0)
-    # 生成测试用例
-    suite = GenerateCase().data_to_suite(case_data)
-    # 运行测试用例
-    runner = TestRunner(suite=suite, tester=tester)
-    result = runner.run(thread_count=thread_count, rerun=rerun)
-    if global_func and global_func_file:
-        os.remove('global_func.py')
-    # 断开数据库连接
-    db.close_connect()
-    if debug:
-        return result, ENV
-    else:
-        return result

@@ -3,7 +3,7 @@ import pathlib
 import types
 from _pytest.python import Module
 from config.settings import BASE_DIR
-from core.request.engine import PytestRunner
+from core.engine.engine import PytestRunner
 from utils import builtin
 from utils.log import set_log_format
 
