@@ -54,6 +54,9 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             setattr(cls, test_name + tag, new_test_func)
 
     def save_env_variable(self, name, value) -> None:
+        """
+        设置一个环境变量
+        """
         self.info_log('设置临时变量\n变量名:{}\n变量值:{}'.format(name, value))
         if DEBUG:
             self.debug_log('提示调试模式运行,设置的临时变量均保存到全局变量中')
@@ -61,7 +64,23 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         else:
             self.env[name] = value
 
+    def get_env_variable(self, name) -> str:
+        """
+        获取一个环境变量
+        """
+        self.info_log('获取临时变量\n变量名:{}'.format(name))
+        if DEBUG:
+            return ENV[name]
+        else:
+            return self.env[name]
+
+    def get_pre_url(self) -> str:
+        """获取当前环境的url"""
+        pre_url = self.get_env_variable('url')
+        return pre_url
+
     def save_global_variable(self, name, value) -> None:
+        """设置全局环境变量"""
         self.info_log('设置全局变量\n变量名:{}\n变量值:{}'.format(name, value))
         ENV[name] = value
 
