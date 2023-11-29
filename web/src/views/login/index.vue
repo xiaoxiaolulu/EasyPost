@@ -8,7 +8,7 @@
       <el-col :span="8">
         <div class="top">
           <div class="headerContent">
-            <span class="title">天工开物</span>
+            <span class="title">EasyPost</span>
           </div>
           <div class="desc">
             一站式测试质量协作平台
