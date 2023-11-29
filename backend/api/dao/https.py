@@ -4,7 +4,7 @@ from api.models.https import (
     Api
 )
 from api.models.project import Project
-from core.request.cases import run_test
+from core.engine.session_runner import run_test
 from core.request.parser import Format
 from utils.trees import (
     collections_directory_id,
