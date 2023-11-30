@@ -14,7 +14,9 @@
     <div class="footer">
       <div class="util">
         <el-button type="primary" @click="add">
-          <el-icon><Plus /></el-icon>
+          <el-icon>
+            <Plus/>
+          </el-icon>
           新建接口
         </el-button>
       </div>
@@ -58,10 +60,10 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { ElMessageBox, ElMessage, FormInstance } from 'element-plus'
-import {Search, Plus } from '@element-plus/icons-vue'
+import {ElMessageBox, ElMessage, FormInstance} from 'element-plus'
+import {Search, Plus} from '@element-plus/icons-vue'
 import {onMounted, reactive, ref} from 'vue'
-import { dictionaryDetailData } from '@/mock/system'
+import {dictionaryDetailData} from '@/mock/system'
 import ApiDrawer from './apiDrawer.vue'
 import {watch} from "vue/dist/vue";
 import {useRouter} from "vue-router";
@@ -81,41 +83,41 @@ const nodeId = ref()
 const onSubmit = () => {
   console.log('submit!', formInline)
   loading.value = true
-  setTimeout(()=>{
+  setTimeout(() => {
     loading.value = false
-  },1000)
+  }, 1000)
 }
 
 const reset = (formEl: FormInstance | undefined) => {
   loading.value = true
-  setTimeout(()=>{
+  setTimeout(() => {
     loading.value = false
-  },1000)
+  }, 1000)
 }
 
-const getList = (data)=>{
+const getList = (data) => {
   currentProject.value = data.currentProject
   nodeId.value = data.node
   loading.value = true
-  if(!data.id){
+  if (!data.id) {
     tableData.value = []
-  }else {
-    let obj = dictionaryDetailData.find(item=>item.id===data.id)
+  } else {
+    let obj = dictionaryDetailData.find(item => item.id === data.id)
     tableData.value = obj.children
   }
 
-  setTimeout(()=>{
+  setTimeout(() => {
     loading.value = false
-  },500)
+  }, 500)
 }
 
 const add = () => {
   let node = nodeId.value
   let project = currentProject.value
-  if(node&&project){
+  if (node && project) {
     router.push({
       name: "httpDetail",
-      query: {project: project, node: node}
+      query: {editType: 'save', project: project, node: node}
     });
   } else {
     ElMessage.error("项目未选择或未选择相关目录树节点, 无法添加接口!");
@@ -129,8 +131,10 @@ const del = (row) => {
     type: 'warning',
     draggable: true,
   })
-      .then(() => {})
-      .catch(() => {})
+      .then(() => {
+      })
+      .catch(() => {
+      })
 }
 const changeStatus = (row) => {
   ElMessageBox.confirm(
@@ -142,7 +146,8 @@ const changeStatus = (row) => {
         type: 'warning',
       },
   )
-      .then(async () => {})
+      .then(async () => {
+      })
       .catch(() => {
         row.status = !row.status
       })
@@ -156,10 +161,10 @@ const handleCurrentChange = (val: number) => {
   currentPage1.value = val
 }
 
-onMounted(()=>{
-  setTimeout(()=>{
+onMounted(() => {
+  setTimeout(() => {
     loading.value = false
-  },1000)
+  }, 1000)
 })
 
 defineExpose({

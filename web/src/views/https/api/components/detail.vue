@@ -8,7 +8,9 @@
                         <component :is="Back"/>
                       </el-icon>
                     </span>
-          <span class="page-header-heading-title">{{ title }}</span>
+          <span class="page-header-heading-title">
+            {{ route.query.editType === 'update' ? "更新" : "新增" }}
+          </span>
         </div>
       </div>
     </div>
@@ -189,14 +191,14 @@
 
 <script setup lang="ts">
 import {Back, ArrowUp, ArrowDown} from "@element-plus/icons-vue";
-import {useRouter} from "vue-router";
+import {useRouter,useRoute} from "vue-router";
 import {onMounted, reactive, ref, watch, computed} from "vue";
 import {FormInstance} from "element-plus";
 import RequestBody from "@/views/https/api/components/requestBody.vue";
 import RequestHeaders from "@/views/https/api/components/requestHeaders.vue";
-const router = useRouter()
 
-const title = ref('新增')
+const route = useRoute()
+const router = useRouter()
 
 const methodRef = ref()
 
