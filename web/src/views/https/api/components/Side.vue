@@ -92,6 +92,7 @@ interface Tree {
   parent: string
 }
 
+
 const filterText = ref('')
 
 const treeRef = ref<InstanceType<typeof ElTree>>()
@@ -116,6 +117,8 @@ const pk = ref()
 
 const maxId = ref()
 
+const queryParams = ref({})
+
 const getProjectList = () => {
 
   projectList({}).then((res) => {
@@ -131,6 +134,7 @@ const getProjectList = () => {
     currentProject.value = projectList[0]["id"]
     currentAvatar.value = projectList[0]["avatar"]
     switchProjectItem.value = false
+    queryParams.value['currentProject'] = projectList[0]["id"]
 
     queryList()
   }).catch((error) => {
@@ -167,7 +171,6 @@ watch(projectItem, (value) => {
 
 // 搜索
 const filterNode = (value: string, data: Tree) => {
-  console.log(data)
   if (!value) return true
   return data.label.includes(value)
 }
@@ -193,13 +196,16 @@ const editDictsort = (data: any) => {
 }
 
 const selectAction = (node, data) => {
-  emit('change', data)
+  // emit('change', data)
   console.log('node, data============', node, data)
 }
 
 const handleNodeClick = (node: any, data: any) => {
   currentNode.value = node
   currentData.value = data
+  queryParams.value['node'] = node.id
+  queryParams.value['date'] = data
+  emit('change', queryParams)
   console.log('node, data============', node, data)
 }
 

@@ -11,9 +11,11 @@
   import { ref } from "vue";
 
   const table = ref()
+  const queryParams = ref()
 
   const changeAction = (data)=>{
-    table.value.getList(data)
+    queryParams.value = data.value
+    table.value.getList(queryParams.value)
   }
 </script>
 

@@ -66,6 +66,7 @@ import ApiDrawer from './apiDrawer.vue'
 import {watch} from "vue/dist/vue";
 import {useRouter} from "vue-router";
 
+
 const tableData = ref(dictionaryDetailData[0].children)
 const dialogVisible = ref(false)
 const ruleFormRef = ref<FormInstance>()
@@ -74,6 +75,8 @@ const loading = ref(true)
 const currentPage1 = ref(1)
 const rowData = ref(null)
 const router = useRouter()
+const currentProject = ref()
+const nodeId = ref()
 
 const onSubmit = () => {
   console.log('submit!', formInline)
@@ -91,6 +94,8 @@ const reset = (formEl: FormInstance | undefined) => {
 }
 
 const getList = (data)=>{
+  currentProject.value = data.currentProject
+  nodeId.value = data.node
   loading.value = true
   if(!data.id){
     tableData.value = []
@@ -105,9 +110,16 @@ const getList = (data)=>{
 }
 
 const add = () => {
-  router.push({
-    name: "httpDetail"
-  });
+  let node = nodeId.value
+  let project = currentProject.value
+  if(node&&project){
+    router.push({
+      name: "httpDetail",
+      query: {project: project, node: node}
+    });
+  } else {
+    ElMessage.error("项目未选择或未选择相关目录树节点, 无法添加接口!");
+  }
 }
 
 const del = (row) => {
