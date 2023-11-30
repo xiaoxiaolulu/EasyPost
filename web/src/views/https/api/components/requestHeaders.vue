@@ -65,8 +65,6 @@ const add = (row) => {
 }
 const dataSource = ref(headers.params)
 const onChange = (val) => {
-  console.log('xxxxx')
-  console.log(dataSource.value)
   dataSource.value = val
 }
 
