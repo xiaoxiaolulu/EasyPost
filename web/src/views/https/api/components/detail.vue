@@ -46,7 +46,7 @@
           </el-col>
           <el-col :xs="6" :sm="6" :md="6" :lg="6" :xl="6">
             <div style="padding-left: 12px">
-              <el-button>保存</el-button>
+              <el-button type="primary" @click="onSureClick(ruleFormRef)">保存</el-button>
               <el-button>调试</el-button>
             </div>
           </el-col>
@@ -130,6 +130,7 @@
           </el-row>
         </div>
       </el-card>
+      
       <el-card style="margin-top: 20px">
         <template #header>
           <div>
@@ -193,9 +194,11 @@
 import {Back, ArrowUp, ArrowDown} from "@element-plus/icons-vue";
 import {useRouter,useRoute} from "vue-router";
 import {onMounted, reactive, ref, watch, computed} from "vue";
-import {FormInstance} from "element-plus";
+import {ElMessage, FormInstance} from "element-plus";
 import RequestBody from "@/views/https/api/components/requestBody.vue";
 import RequestHeaders from "@/views/https/api/components/requestHeaders.vue";
+import {projectCreate} from "@/api/project";
+import {showErrMessage} from "@/utils/element";
 
 const route = useRoute()
 const router = useRouter()
@@ -279,6 +282,25 @@ const methodChange = (method: any) => {
 
 const setData = (form: any) => {
   methodChange(form.method)
+}
+
+const onSureClick = (formName: FormInstance | undefined) => {
+  if (!formName) return
+  formName.validate(async (valid) => {
+    if (valid) {
+      console.log("表单测试")
+      console.log(ruleForm)
+      console.log("表单测试")
+      // const ret = await projectCreate(form)
+      // const {code, data, msg} = ret.data
+      // showErrMessage(code.toString(), msg)
+      // formName.resetFields()
+    } else {
+      console.log('error submit!')
+      ElMessage.error("新增接口失败请重试!")
+      return false
+    }
+  })
 }
 
 onMounted(() => {
