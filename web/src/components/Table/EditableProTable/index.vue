@@ -272,6 +272,7 @@ const add = () => {
   if (props.mode === 'top') {
     transData.value.unshift(obj1)
   }
+  emit('add', obj1)
 }
 
 const filterOption = (item, scope) => {

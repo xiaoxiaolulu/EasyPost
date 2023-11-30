@@ -150,6 +150,16 @@
               </div>
             </el-tab-pane>
 
+            <!--地址参数-->
+            <el-tab-pane name='ApiRequestQuery'>
+              <template #label>
+                <strong>Query</strong>
+              </template>
+              <div>
+                <request-query ref="RequestQueryRef" @updateRouter="updateRouter"></request-query>
+              </div>
+            </el-tab-pane>
+
             <el-tab-pane name='ApiRequestBody'>
               <template #label>
                 <strong>Body</strong>
@@ -194,14 +204,13 @@
 </template>
 
 <script setup lang="ts">
-import {Back, ArrowUp, ArrowDown} from "@element-plus/icons-vue";
-import {useRouter,useRoute} from "vue-router";
-import {onMounted, reactive, ref, watch, computed} from "vue";
+import {ArrowDown, ArrowUp, Back} from "@element-plus/icons-vue";
+import {useRoute, useRouter} from "vue-router";
+import {computed, onMounted, reactive, ref, watch} from "vue";
 import {ElMessage, FormInstance} from "element-plus";
 import RequestBody from "@/views/https/api/components/requestBody.vue";
 import RequestHeaders from "@/views/https/api/components/requestHeaders.vue";
-import {projectCreate} from "@/api/project";
-import {showErrMessage} from "@/utils/element";
+import RequestQuery from "@/views/https/api/components/requestQuery.vue";
 
 const route = useRoute()
 const router = useRouter()
@@ -241,6 +250,8 @@ const showSetting = ref(false)
 const activeName =  ref('ApiRequestBody')
 
 const RequestHeadersRef = ref()
+
+const RequestQueryRef = ref()
 
 const settings = computed(() => {
   if (showSetting.value == false) {
@@ -289,6 +300,19 @@ const setData = (form: any) => {
   methodChange(form.method)
 }
 
+const updateRouter = (newValue: any) => {
+  initialize()
+  ruleForm.url += newValue
+}
+
+const initialize = () => {
+  // 初始化逻辑
+  if(ruleForm.url.includes('?')){
+    ruleForm.url = ruleForm.url.split('?')[0]
+  }
+  console.log('Initialized:', ruleForm.url);
+};
+
 const onSureClick = (formName: FormInstance | undefined) => {
   if (!formName) return
   formName.validate(async (valid) => {
@@ -296,8 +320,9 @@ const onSureClick = (formName: FormInstance | undefined) => {
       try{
         console.log("表单测试")
         // console.log(ruleForm)
-        console.log(RequestHeadersRef.value.getData())
-        console.log("表单测试")
+        //console.log(RequestHeadersRef.value.getData())
+        console.log(RequestQueryRef.value.getData())
+        // console.log("表单测试")
         // const ret = await projectCreate(form)
         // const {code, data, msg} = ret.data
         // showErrMessage(code.toString(), msg)

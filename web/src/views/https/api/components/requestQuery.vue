@@ -2,11 +2,11 @@
   <EditableProTable
       :mode="radio"
       :columns="column"
-      :data="headers.params"
-      @add="add"
+      :data="query.params"
       ref="table"
       @onChange="onChange"
       @del="deleteAction"
+      @add="addAction"
   />
 </template>
 
@@ -14,14 +14,18 @@
 import EditableProTable from "@/components/Table/EditableProTable/index.vue";
 import {ref, reactive} from "vue";
 import {ElMessage} from "element-plus";
-import {deepObjClone} from "@/utils";
+import {deepObjClone} from "@/utils"
 
-const headers = reactive({
+const emit = defineEmits(['updateRouter'])
+
+const query = reactive({
   params: []
 });
 const radio = ref('bottom')
 
 const table = ref()
+
+const routerPath = ref()
 
 const column = [
   {name: 'name', label: '参数名', width: 160},
@@ -61,27 +65,51 @@ const column = [
   {name: 'description', label: '参数描述', valueType: 'input'}
 ]
 
-const add = (row) => {
-}
-const dataSource = ref(headers.params)
+const dataSource = ref(query.params)
 const onChange = (val) => {
-  console.log('xxxxx')
-  console.log(dataSource.value)
   dataSource.value = val
+  let obj = dataSource.value
+  if (obj.length){
+    let newRouter = []
+    let routerAdd = function(key: any, value: any) {
+      return key + '=' + value
+    }
+    for (let i = 0; i < obj.length; i++) {
+      console.log(query.params[i])
+      newRouter.push(routerAdd(obj[i]['name'], obj[i]['value']))
+    }
+    routerPath.value = '?' + newRouter.join('&')
+    emit('updateRouter', routerPath.value)
+  }
 }
 
 const deleteAction = (row) => {
-  console.log('删除', row)
+  let newRouter = []
+  let newRout = routerPath.value.split('?')[1]
+  let tagRout = row['name'] + '=' + row['value']
+  let arrRout = newRout.split("&")
+  for (let i = 0; i < arrRout.length; i++) {
+    if (arrRout[i] != tagRout && arrRout.length>1) {
+      newRouter.push(arrRout[i])
+    }
+  }
+  routerPath.value = '?' + newRouter.join('&')
+  emit('updateRouter', routerPath.value)
   ElMessage.success('点击删除')
 }
 
+const addAction = (row) => {
+  console.log('添加', row)
+  ElMessage.success('点击添加')
+}
+
 const setData = (data) => {
-  headers.params = data ? data : []
+  query.params = data ? data : []
 }
 
 const getData = () => {
-  headers.params = deepObjClone(dataSource.value)
-  return headers.params
+  query.params = deepObjClone(dataSource.value)
+  return query.params
 }
 
 defineExpose({
