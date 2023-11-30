@@ -130,7 +130,7 @@
           </el-row>
         </div>
       </el-card>
-      
+
       <el-card style="margin-top: 20px">
         <template #header>
           <div>
@@ -139,14 +139,17 @@
         </template>
         <div>
           <el-tabs v-model="activeName" style="overflow-y: auto">
+
+            <!--请求头-->
             <el-tab-pane name='ApiRequestHeader'>
               <template #label>
                 <strong>Header</strong>
               </template>
               <div>
-                <request-headers></request-headers>
+                <request-headers ref="RequestHeadersRef"></request-headers>
               </div>
             </el-tab-pane>
+
             <el-tab-pane name='ApiRequestBody'>
               <template #label>
                 <strong>Body</strong>
@@ -237,6 +240,8 @@ const showSetting = ref(false)
 
 const activeName =  ref('ApiRequestBody')
 
+const RequestHeadersRef = ref()
+
 const settings = computed(() => {
   if (showSetting.value == false) {
     return "更多设置";
@@ -288,13 +293,19 @@ const onSureClick = (formName: FormInstance | undefined) => {
   if (!formName) return
   formName.validate(async (valid) => {
     if (valid) {
-      console.log("表单测试")
-      console.log(ruleForm)
-      console.log("表单测试")
-      // const ret = await projectCreate(form)
-      // const {code, data, msg} = ret.data
-      // showErrMessage(code.toString(), msg)
-      // formName.resetFields()
+      try{
+        console.log("表单测试")
+        // console.log(ruleForm)
+        console.log(RequestHeadersRef.value.getData())
+        console.log("表单测试")
+        // const ret = await projectCreate(form)
+        // const {code, data, msg} = ret.data
+        // showErrMessage(code.toString(), msg)
+        // formName.resetFields()
+      } catch (e) {
+        console.log(e)
+      }
+
     } else {
       console.log('error submit!')
       ElMessage.error("新增接口失败请重试!")

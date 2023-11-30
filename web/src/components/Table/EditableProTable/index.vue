@@ -152,10 +152,6 @@ let props = defineProps({
     type: Array,
     default: () => [],
   },
-  editableKeys: {
-    type: Array,
-    default: () => [],
-  },
   mode: {
     type: String,
     default: 'bottom',
@@ -193,9 +189,7 @@ for (let item of props.columns) {
 const reset = () => {
   transData.value = props.data
   for (let item of transData.value) {
-    if (props.editableKeys.includes(item.id)) {
-      item.edit = true
-    }
+    item.edit = true
   }
   getData()
 }
@@ -208,9 +202,7 @@ onMounted(() => {
         transData.value = deepObjClone(val)
         // 存储一个临时变量
         for (let item of transData.value) {
-          if (props.editableKeys.includes(item.id)) {
-            item.edit = true
-          }
+          item.edit = true
           for (let attr in item) {
             let temp = `${attr}te__mp`
             item[temp] = item[attr]
@@ -240,6 +232,7 @@ const confirmEdit = (row) => {
       row[attr] = row[attr.replace('te__mp', '')]
     }
   }
+
   getData()
 }
 // 取消

@@ -2,10 +2,9 @@
   <EditableProTable
       :mode="radio"
       :columns="column"
-      :data="list"
+      :data="headers.params"
       @add="add"
       ref="table"
-      :editableKeys="editableKeys"
       @onChange="onChange"
       @del="deleteAction"
   />
@@ -13,9 +12,15 @@
 
 <script setup lang="ts">
 import EditableProTable from "@/components/Table/EditableProTable/index.vue";
-import {ref} from "vue";
+import {ref, reactive} from "vue";
 import {ElMessage} from "element-plus";
+import {deepObjClone} from "@/utils";
 
+const emit = defineEmits(['addHeaders'])
+
+const headers = reactive({
+  params: []
+});
 const radio = ref('bottom')
 
 const table = ref()
@@ -58,58 +63,12 @@ const column = [
   {name: 'description', label: '参数描述', valueType: 'input'}
 ]
 
-
-let data = [
-  {
-    id: 6247418504,
-    title: '活动名称一',
-    readonly: '活动名称一',
-    decs: '这个活动真好玩',
-    state: 1,
-    created_at: '2020-05-26',
-    update_at: '2020-05-26',
-  },
-  {
-    id: 6246921229,
-    title: '活动名称二',
-    readonly: '活动名称二',
-    decs: '这个活动真好玩',
-    state: 0,
-    created_at: '2020-05-26',
-    update_at: '2020-05-26',
-  },
-  {
-    id: 6242991229,
-    title: '活动名称三',
-    readonly: '活动名称三',
-    decs: '这个活动真好玩',
-    state: 1,
-    created_at: '2020-05-26',
-    update_at: '2020-05-26',
-  },
-  {
-    id: 6242981229,
-    title: '活动名称四',
-    readonly: '活动名称四',
-    decs: '这个活动真好玩',
-    state: 1,
-    created_at: '2020-05-26',
-    update_at: '2020-05-26',
-  },
-
-]
-
-let arrKeys = data
-    .map((item) => item.id)
-    .filter((item) => ![6247418504, 6246921229].includes(item))
-let editableKeys = ref(arrKeys)
-
-const list = ref(data)
-
 const add = (row) => {
 }
-const dataSource = ref(data)
+const dataSource = ref(headers.params)
 const onChange = (val) => {
+  console.log('xxxxx')
+  console.log(dataSource.value)
   dataSource.value = val
 }
 
@@ -118,6 +77,19 @@ const deleteAction = (row) => {
   ElMessage.success('点击删除')
 }
 
+const setData = (data) => {
+  headers.params = data ? data : []
+}
+
+const getData = () => {
+  headers.params = deepObjClone(dataSource.value)
+  return headers.params
+}
+
+defineExpose({
+  setData,
+  getData
+})
 </script>
 
 <style scoped lang="scss">
