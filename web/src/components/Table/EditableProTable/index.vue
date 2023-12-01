@@ -73,7 +73,7 @@
           </template>
         </el-table-column>
       </template>
-      <el-table-column prop="operator" label="操作" width="250px" fixed="right">
+      <el-table-column prop="operator" label="操作" width="300px" fixed="right">
         <template #default="scope">
           <el-button
               v-if="scope.row.edit"

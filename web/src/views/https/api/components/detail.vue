@@ -173,6 +173,7 @@
                 <strong>Extractor</strong>
               </template>
               <div>
+                <extract ref="RequestExtractor"></extract>
               </div>
             </el-tab-pane>
             <el-tab-pane name='ApiRequestSetup'>
@@ -194,6 +195,7 @@
                 <strong>Validator</strong>
               </template>
               <div>
+                <validator ref="RequestValidators"></validator>
               </div>
             </el-tab-pane>
           </el-tabs>
@@ -210,8 +212,9 @@ import {computed, onMounted, reactive, ref, watch} from "vue";
 import {ElMessage, FormInstance} from "element-plus";
 import RequestBody from "@/views/https/api/components/requestBody.vue";
 import RequestQuery from "@/views/https/api/components/requestQuery.vue";
-import RequestData from "@/views/https/api/components/requestData.vue";
 import RequestHeaders from "@/views/https/api/components/requestHeaders.vue";
+import Extract from "@/views/https/api/components/extract.vue";
+import Validator from "@/views/https/api/components/validator.vue";
 
 const route = useRoute()
 const router = useRouter()
@@ -255,6 +258,10 @@ const RequestHeadersRef = ref()
 const RequestQueryRef = ref()
 
 const RequestBodyRef = ref()
+
+const RequestExtractor = ref()
+
+const RequestValidators = ref()
 
 const settings = computed(() => {
   if (showSetting.value == false) {
@@ -328,9 +335,11 @@ const onSureClick = (formName: FormInstance | undefined) => {
       try{
         console.log("表单测试")
         // console.log(ruleForm)
-        console.log(RequestHeadersRef.value.getData())
+        //console.log(RequestHeadersRef.value.getData())
         // console.log(RequestQueryRef.value.getData())
         //console.log(RequestBodyRef.value.getData())
+        // console.log(RequestExtractor.value.getData())
+        // RequestValidators.value.getData()
         // console.log("表单测试")
         // const ret = await projectCreate(form)
         // const {code, data, msg} = ret.data

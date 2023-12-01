@@ -47,6 +47,7 @@
     <div v-if="mode === 'x_www_form_urlencoded'" style="text-align: center; padding-top: 10px">
       <request-data ref="RequestFormUrlencodedRef"></request-data>
     </div>
+
     <!--raw-->
     <div v-if="mode === 'raw'" style="text-align: center; padding-top: 10px">
       {{state.rawData}}
