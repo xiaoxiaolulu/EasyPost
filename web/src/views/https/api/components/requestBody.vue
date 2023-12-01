@@ -5,6 +5,7 @@
         <el-radio-group
             size="small"
             v-model="mode"
+            @change="radioChange"
         >
           <el-radio label="none">none</el-radio>
           <el-radio label="form_data">form-data</el-radio>
@@ -91,6 +92,11 @@ const setData = (data) => {
   }
 }
 
+const radioChange = (value: any) => {
+  mode.value = value
+  updateContentType(value === 'none' || value === 'form_data')
+}
+
 const getData = () => {
   let requestData = {
     'mode': '',
@@ -110,7 +116,6 @@ const getData = () => {
 }
 
 const handleLanguage = (language: any) => {
-  // rawPopoverRef.value.hide()
   state.language = language
   updateContentType()
 }
