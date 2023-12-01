@@ -79,7 +79,7 @@ const updateContentType = (mode: any, language: any, remove: any) => {
       contentType = param.name;
     }
   });
-
+  // 切换Raw更新原本Content-Type
   if (contentType) {
     data.params = data.params.filter(obj => Object.values(obj).every(value => value !== "Content-Type"))
   }
