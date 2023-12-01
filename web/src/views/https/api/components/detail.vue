@@ -317,6 +317,7 @@ const initialize = () => {
 };
 
 const updateContentType = (mode: any, language: any, remove: any) => {
+  RequestHeadersRef.value.getData()
   RequestHeadersRef.value.updateContentType(mode, language, remove)
 }
 
@@ -347,8 +348,12 @@ const onSureClick = (formName: FormInstance | undefined) => {
   })
 }
 
+const initApi = () => {
+}
+
 onMounted(() => {
   setData(ruleForm)
+  initApi()
 })
 
 defineExpose({

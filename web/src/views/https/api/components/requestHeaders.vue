@@ -12,7 +12,7 @@
 
 <script setup lang="ts">
 import EditableProTable from "@/components/Table/EditableProTable/index.vue";
-import {ref, reactive} from "vue";
+import {reactive, ref} from "vue";
 import {ElMessage} from "element-plus";
 import {deepObjClone} from "@/utils";
 
@@ -80,17 +80,8 @@ const updateContentType = (mode: any, language: any, remove: any) => {
     }
   });
 
-  console.log("有没")
-  console.log(contentType)
-  console.log(data.params)
   if (contentType) {
-    console.log("过来前")
-    console.log(data.params)
-    let filterArr = data.params.filter(obj => Object.values(obj).every(value => value !== "Content-Type"));
-    console.log("过滤后")
-    console.log(filterArr)
-    data.params = filterArr
-    console.log(data.params)
+    data.params = data.params.filter(obj => Object.values(obj).every(value => value !== "Content-Type"))
   }
   if (headerValue) {
     data.params.unshift({name: "Content-Type", value: headerValue, description: ""})
