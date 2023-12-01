@@ -20,14 +20,65 @@
     </div>
 
     <!--form-data-->
+    <div v-if="mode === 'form_data'" style="text-align: center; padding-top: 10px">
+      <span style="color: darkgray">hahahha</span>
+    </div>
 
+    <!--x_www_form_urlencoded-->
+    <div v-if="mode === 'x_www_form_urlencoded'" style="text-align: center; padding-top: 10px">
+      <span style="color: darkgray">4444444</span>
+    </div>
   </el-form>
 </template>
 
 <script setup lang="ts">
-import {ref} from "vue";
+import {ref, reactive} from "vue";
+import {deepObjClone} from "@/utils";
 
 const mode = ref('none')
+
+const state = reactive({
+  // formData
+  formData: [],
+  // x_www_form_urlencoded
+  x_www_form_urlencoded: [],
+});
+
+const setData = (data) => {
+  if (!data) return
+  switch (mode.value) {
+    case 'form_data':
+      state.formData = data.data ? data.data : []
+      break
+    case 'x_www_form_urlencoded':
+      state.x_www_form_urlencoded = data.data ? data.data : []
+    default:
+      break
+  }
+}
+
+const getData = () => {
+  let requestData = {
+    'mode': '',
+    'data': []
+  }
+  requestData.mode = mode.value
+  if (mode.value === 'form_data') {
+    requestData.data = state.formData.filter((e) => e.key !== "" || e.value !== "")
+  }
+  if (mode.value === 'x_www_form_urlencoded') {
+    requestData.data = state.x_www_form_urlencoded.filter((e) => e.key !== "" || e.value !== "")
+  }
+  if (mode.value === 'none') {
+    requestData.data = null
+  }
+  return requestData
+}
+
+defineExpose({
+  setData,
+  getData
+})
 </script>
 
 

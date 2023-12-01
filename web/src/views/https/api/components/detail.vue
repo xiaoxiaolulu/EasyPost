@@ -146,7 +146,7 @@
                 <strong>Header</strong>
               </template>
               <div>
-                <request-headers ref="RequestHeadersRef"></request-headers>
+                <request-data ref="RequestHeadersRef"></request-data>
               </div>
             </el-tab-pane>
 
@@ -165,7 +165,7 @@
                 <strong>Body</strong>
               </template>
               <div>
-                <request-body></request-body>
+                <request-body ref="RequestBodyRef"></request-body>
               </div>
             </el-tab-pane>
             <el-tab-pane name='ApiRequestExtractor'>
@@ -209,8 +209,8 @@ import {useRoute, useRouter} from "vue-router";
 import {computed, onMounted, reactive, ref, watch} from "vue";
 import {ElMessage, FormInstance} from "element-plus";
 import RequestBody from "@/views/https/api/components/requestBody.vue";
-import RequestHeaders from "@/views/https/api/components/requestHeaders.vue";
 import RequestQuery from "@/views/https/api/components/requestQuery.vue";
+import RequestData from "@/views/https/api/components/requestData.vue";
 
 const route = useRoute()
 const router = useRouter()
@@ -252,6 +252,8 @@ const activeName =  ref('ApiRequestBody')
 const RequestHeadersRef = ref()
 
 const RequestQueryRef = ref()
+
+const RequestBodyRef = ref()
 
 const settings = computed(() => {
   if (showSetting.value == false) {
@@ -321,7 +323,8 @@ const onSureClick = (formName: FormInstance | undefined) => {
         console.log("表单测试")
         // console.log(ruleForm)
         //console.log(RequestHeadersRef.value.getData())
-        console.log(RequestQueryRef.value.getData())
+        // console.log(RequestQueryRef.value.getData())
+        console.log(RequestBodyRef.value.getData())
         // console.log("表单测试")
         // const ret = await projectCreate(form)
         // const {code, data, msg} = ret.data
