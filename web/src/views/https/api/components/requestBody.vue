@@ -46,14 +46,20 @@
     <div v-if="mode === 'x_www_form_urlencoded'" style="text-align: center; padding-top: 10px">
       <request-data ref="RequestFormUrlencodedRef"></request-data>
     </div>
+    <!--raw-->
+    <div v-if="mode === 'raw'" style="text-align: center; padding-top: 10px">
+      {{state.rawData}}
+    </div>
   </el-form>
 </template>
 
 <script setup lang="ts">
-import {ref, reactive} from "vue";
+import {ref, reactive, watch} from "vue";
 import {deepObjClone} from "@/utils";
 import {ArrowDown} from '@element-plus/icons-vue'
 import RequestData from "@/views/https/api/components/requestData.vue";
+
+const emit = defineEmits(['updateContentType'])
 
 const mode = ref('none')
 
@@ -63,8 +69,9 @@ const state = reactive({
   // x_www_form_urlencoded
   x_www_form_urlencoded: [],
   // raw
+  rawData: [],
   language: 'json',
-  languageList: ['json', 'text', 'Xml', 'html'],
+  languageList: ['json', 'text', 'xml', 'html'],
 });
 
 const RequestFromDataRef = ref()
@@ -105,7 +112,24 @@ const getData = () => {
 const handleLanguage = (language: any) => {
   // rawPopoverRef.value.hide()
   state.language = language
+  updateContentType()
 }
+
+
+const updateContentType = (remove = false) => {
+  emit('updateContentType', mode.value, state.language, remove)
+}
+
+watch(() => state.rawData, (val) => {
+      if (val) {
+        updateContentType()
+      } else {
+        updateContentType(true)
+      }
+    }, {
+      deep: true
+    }
+);
 
 defineExpose({
   setData,

@@ -26,38 +26,6 @@ const table = ref()
 const column = [
   {name: 'name', label: '参数名', width: 160},
   {name: 'value', label: '参数值', width: 160},
-  {
-    name: 'type',
-    label: '类型',
-    options: [
-      {
-        value: 'Boolean',
-        label: 'Boolean',
-      },
-      {
-        value: 'Date',
-        label: 'Date',
-      },
-      {
-        value: 'Number',
-        label: 'Number',
-      },
-      {
-        value: 'Float',
-        label: 'Float',
-      },
-      {
-        value: 'Integer',
-        label: 'Integer',
-      },
-      {
-        value: 'String',
-        label: 'String',
-      },
-    ],
-    valueType: 'select',
-    width: 120
-  },
   {name: 'description', label: '参数描述', valueType: 'input'}
 ]
 
@@ -82,9 +50,60 @@ const getData = () => {
   return data.params
 }
 
+const updateContentType = (mode: any, language: any, remove: any) => {
+  let headerValue = ""
+  switch (mode) {
+    case "form_data":
+      headerValue = ""
+      break
+    case "x_www_form_urlencoded":
+      headerValue = "application/x-www-form-urlencoded"
+      break
+    case "raw":
+      language = language.toLowerCase()
+      if (language === "json") {
+        headerValue = "application/json"
+      } else if (language === "xml") {
+        headerValue = "application/xml"
+      } else if (language === "html") {
+        headerValue = "text/html"
+      } else if (language === "text") {
+        headerValue = "text/plain"
+      }
+      break
+  }
+  // 查找带有Content-Type的请求头
+  let contentType = '';
+  data.params.find(param => {
+    if (param.name.toLowerCase() === 'content-type') {
+      contentType = param.name;
+    }
+  });
+
+  console.log("有没")
+  console.log(contentType)
+  console.log(data.params)
+  if (contentType) {
+    console.log("过来前")
+    console.log(data.params)
+    let filterArr = data.params.filter(obj => Object.values(obj).every(value => value !== "Content-Type"));
+    console.log("过滤后")
+    console.log(filterArr)
+    data.params = filterArr
+    console.log(data.params)
+  }
+  if (headerValue) {
+    data.params.unshift({name: "Content-Type", value: headerValue, description: ""})
+  }
+  if (remove) {
+    data.params =  data.params.filter(obj => Object.values(obj).every(value => value !== "Content-Type"));
+  }
+}
+
 defineExpose({
   setData,
-  getData
+  getData,
+  updateContentType
 })
 </script>
 

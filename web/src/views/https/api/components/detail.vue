@@ -165,7 +165,7 @@
                 <strong>Body</strong>
               </template>
               <div>
-                <request-body ref="RequestBodyRef"></request-body>
+                <request-body ref="RequestBodyRef" @updateContentType="updateContentType"></request-body>
               </div>
             </el-tab-pane>
             <el-tab-pane name='ApiRequestExtractor'>
@@ -316,6 +316,10 @@ const initialize = () => {
   console.log('Initialized:', ruleForm.url);
 };
 
+const updateContentType = (mode: any, language: any, remove: any) => {
+  RequestHeadersRef.value.updateContentType(mode, language, remove)
+}
+
 const onSureClick = (formName: FormInstance | undefined) => {
   if (!formName) return
   formName.validate(async (valid) => {
@@ -323,9 +327,9 @@ const onSureClick = (formName: FormInstance | undefined) => {
       try{
         console.log("表单测试")
         // console.log(ruleForm)
-        //console.log(RequestHeadersRef.value.getData())
+        console.log(RequestHeadersRef.value.getData())
         // console.log(RequestQueryRef.value.getData())
-        console.log(RequestBodyRef.value.getData())
+        //console.log(RequestBodyRef.value.getData())
         // console.log("表单测试")
         // const ret = await projectCreate(form)
         // const {code, data, msg} = ret.data
