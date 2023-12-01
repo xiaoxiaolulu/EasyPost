@@ -68,14 +68,14 @@
       </el-scrollbar>
 
     </div>
-    <DictsortDialog ref="dialog"/>
+    <groupDialog ref="dialog"/>
   </el-card>
 </template>
 
 <script lang="ts" setup>
 import {ref, watch} from 'vue'
 import {ElMessage, ElMessageBox, ElTree} from "element-plus";
-import DictsortDialog from './dictsortDialog.vue'
+import groupDialog from './groupDialog.vue'
 import {Plus, Sort, Folder, More, Delete, Edit} from "@element-plus/icons-vue";
 import {getTree} from "@/api/http";
 import {projectList} from "@/api/project";
