@@ -21,12 +21,12 @@
 
     <!--form-data-->
     <div v-if="mode === 'form_data'" style="text-align: center; padding-top: 10px">
-      <span style="color: darkgray">hahahha</span>
+      <request-data ref="RequestFromDataRef"></request-data>
     </div>
 
     <!--x_www_form_urlencoded-->
     <div v-if="mode === 'x_www_form_urlencoded'" style="text-align: center; padding-top: 10px">
-      <span style="color: darkgray">4444444</span>
+      <request-data ref="RequestFormUrlencodedRef"></request-data>
     </div>
   </el-form>
 </template>
@@ -34,6 +34,7 @@
 <script setup lang="ts">
 import {ref, reactive} from "vue";
 import {deepObjClone} from "@/utils";
+import RequestData from "@/views/https/api/components/requestData.vue";
 
 const mode = ref('none')
 
@@ -43,6 +44,10 @@ const state = reactive({
   // x_www_form_urlencoded
   x_www_form_urlencoded: [],
 });
+
+const RequestFromDataRef = ref()
+
+const RequestFormUrlencodedRef = ref()
 
 const setData = (data) => {
   if (!data) return
@@ -64,10 +69,10 @@ const getData = () => {
   }
   requestData.mode = mode.value
   if (mode.value === 'form_data') {
-    requestData.data = state.formData.filter((e) => e.key !== "" || e.value !== "")
+    requestData.data = RequestFromDataRef.value.getData()
   }
   if (mode.value === 'x_www_form_urlencoded') {
-    requestData.data = state.x_www_form_urlencoded.filter((e) => e.key !== "" || e.value !== "")
+    requestData.data = RequestFormUrlencodedRef.value.getData()
   }
   if (mode.value === 'none') {
     requestData.data = null
