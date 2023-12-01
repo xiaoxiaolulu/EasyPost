@@ -10,6 +10,24 @@
           <el-radio label="form_data">form-data</el-radio>
           <el-radio label="x_www_form_urlencoded">x-www-form-urlencoded</el-radio>
           <el-radio label="raw">raw</el-radio>
+          <el-dropdown @command="handleLanguage"
+                       trigger="click"
+                       v-if="mode === 'raw'"
+                       placement="bottom-start">
+              <span class="el-button--text">
+                {{ state.language }}
+                <el-icon class="el-icon--right">
+                  <arrowDown/>
+                </el-icon>
+              </span>
+            <template #dropdown>
+              <el-dropdown-menu style="width: 150px">
+                <el-dropdown-item v-for="language in state.languageList" :key="language" :command="language">
+                  {{ language }}
+                </el-dropdown-item>
+              </el-dropdown-menu>
+            </template>
+          </el-dropdown>
         </el-radio-group>
       </div>
     </div>
@@ -34,6 +52,7 @@
 <script setup lang="ts">
 import {ref, reactive} from "vue";
 import {deepObjClone} from "@/utils";
+import {ArrowDown} from '@element-plus/icons-vue'
 import RequestData from "@/views/https/api/components/requestData.vue";
 
 const mode = ref('none')
@@ -43,6 +62,9 @@ const state = reactive({
   formData: [],
   // x_www_form_urlencoded
   x_www_form_urlencoded: [],
+  // raw
+  language: 'json',
+  languageList: ['json', 'text', 'Xml', 'html'],
 });
 
 const RequestFromDataRef = ref()
@@ -78,6 +100,11 @@ const getData = () => {
     requestData.data = null
   }
   return requestData
+}
+
+const handleLanguage = (language: any) => {
+  // rawPopoverRef.value.hide()
+  state.language = language
 }
 
 defineExpose({

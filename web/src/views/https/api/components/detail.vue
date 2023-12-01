@@ -146,7 +146,7 @@
                 <strong>Header</strong>
               </template>
               <div>
-                <request-data ref="RequestHeadersRef"></request-data>
+                <request-headers ref="RequestHeadersRef"></request-headers>
               </div>
             </el-tab-pane>
 
@@ -211,6 +211,7 @@ import {ElMessage, FormInstance} from "element-plus";
 import RequestBody from "@/views/https/api/components/requestBody.vue";
 import RequestQuery from "@/views/https/api/components/requestQuery.vue";
 import RequestData from "@/views/https/api/components/requestData.vue";
+import RequestHeaders from "@/views/https/api/components/requestHeaders.vue";
 
 const route = useRoute()
 const router = useRouter()
