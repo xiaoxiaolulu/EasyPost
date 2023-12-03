@@ -50,16 +50,23 @@
 
     <!--raw-->
     <div v-if="mode === 'raw'" style="text-align: center; padding-top: 10px">
-      {{state.rawData}}
+      <mirror-code
+          style="height: 420px"
+          ref="rawRef"
+          v-model="state.rawData"
+          :constModelData="state.rawData"
+          :editorConfig="state.editorConfig"
+      >
+      </mirror-code>
     </div>
   </el-form>
 </template>
 
 <script setup lang="ts">
 import {ref, reactive, watch} from "vue";
-import {deepObjClone} from "@/utils";
 import {ArrowDown} from '@element-plus/icons-vue'
 import RequestData from "@/views/https/api/components/requestData.vue";
+import MirrorCode from "@/components/MirrorCode/index.vue";
 
 const emit = defineEmits(['updateContentType'])
 
@@ -71,14 +78,19 @@ const state = reactive({
   // x_www_form_urlencoded
   x_www_form_urlencoded: [],
   // raw
-  rawData: [],
+  rawData: "",
   language: 'json',
   languageList: ['json', 'text', 'xml', 'html'],
+  //monaco
+  lang: 'json',
+  editorConfig: { language: 'json', theme: 'vs' }
 });
 
 const RequestFromDataRef = ref()
 
 const RequestFormUrlencodedRef = ref()
+
+const rawRef = ref()
 
 const setData = (data) => {
   if (!data) return

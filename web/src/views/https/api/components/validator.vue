@@ -24,30 +24,6 @@ const radio = ref('bottom')
 const table = ref()
 
 const column = [
-  {
-    name: 'type',
-    label: '断言内容',
-    options: [
-      {
-        value: 'ResponseJson',
-        label: 'ResponseJson',
-      },
-      {
-        value: 'ResponseText',
-        label: 'ResponseText',
-      },
-      {
-        value: 'ResponseHeaders',
-        label: 'ResponseHeaders',
-      },
-      {
-        value: 'ResponseCookie',
-        label: 'ResponseCookie',
-      }
-    ],
-    valueType: 'select',
-    width: 120
-  },
   {name: 'name', label: '表达式'},
   {
     name: 'type',
