@@ -49,7 +49,7 @@
     </div>
 
     <!--raw-->
-    <div v-if="mode === 'raw'" style="text-align: center; padding-top: 10px">
+    <div v-if="mode === 'raw'">
       <mirror-code
           style="height: 420px"
           ref="rawRef"
