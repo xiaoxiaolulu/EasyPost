@@ -5,7 +5,7 @@
         <el-icon style="margin-right: 4px"><plus /></el-icon> 添加一行数据</el-button
       >
     </div>
-    <el-table :data="transData" style="width: 100%" row-key="id" border size="small">
+    <el-table :data="transData" style="width: 100%" row-key="id" border size="small" :show-header="false">
       <template v-for="item in columns">
         <el-table-column
             v-if="item.type"
