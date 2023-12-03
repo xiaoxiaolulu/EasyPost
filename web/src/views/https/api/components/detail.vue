@@ -168,24 +168,25 @@
                 <request-raw ref="RequestBodyRef" @updateContentType="updateContentType"></request-raw>
               </div>
             </el-tab-pane>
-            <el-tab-pane name='ApiRequestExtractor'>
-              <template #label>
-                <strong>变量提取</strong>
-              </template>
-              <div>
-                <extract ref="RequestExtractor"></extract>
-              </div>
-            </el-tab-pane>
             <el-tab-pane name='ApiRequestSetup'>
               <template #label>
                 <strong>前置脚本</strong>
               </template>
               <div>
+                <api-script ref="RequestSetup" use-type="setup"></api-script>
               </div>
             </el-tab-pane>
             <el-tab-pane name='ApiRequestTeardown'>
               <template #label>
                 <strong>后置脚本</strong>
+              </template>
+              <div>
+                <api-script ref="RequestTeardown" use-type="teardown"></api-script>
+              </div>
+            </el-tab-pane>
+            <el-tab-pane name='ApiRequestController'>
+              <template #label>
+                <strong>控制器</strong>
               </template>
               <div>
               </div>
@@ -196,6 +197,14 @@
               </template>
               <div>
                 <validator ref="RequestValidators"></validator>
+              </div>
+            </el-tab-pane>
+            <el-tab-pane name='ApiRequestExtractor'>
+              <template #label>
+                <strong>变量提取</strong>
+              </template>
+              <div>
+                <extract ref="RequestExtractor"></extract>
               </div>
             </el-tab-pane>
           </el-tabs>
@@ -215,6 +224,7 @@ import RequestQuery from "@/views/https/api/components/requestQuery.vue";
 import RequestHeaders from "@/views/https/api/components/requestHeaders.vue";
 import Extract from "@/views/https/api/components/extract.vue";
 import Validator from "@/views/https/api/components/validator.vue";
+import ApiScript from "@/views/https/api/components/apiScript.vue";
 
 const route = useRoute()
 const router = useRouter()
@@ -262,6 +272,10 @@ const RequestBodyRef = ref()
 const RequestExtractor = ref()
 
 const RequestValidators = ref()
+
+const RequestTeardown = ref()
+
+const RequestSetup = ref()
 
 const settings = computed(() => {
   if (showSetting.value == false) {
