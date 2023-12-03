@@ -165,12 +165,12 @@
                 <strong>Body</strong>
               </template>
               <div>
-                <request-body ref="RequestBodyRef" @updateContentType="updateContentType"></request-body>
+                <request-raw ref="RequestBodyRef" @updateContentType="updateContentType"></request-raw>
               </div>
             </el-tab-pane>
             <el-tab-pane name='ApiRequestExtractor'>
               <template #label>
-                <strong>Extractor</strong>
+                <strong>变量提取</strong>
               </template>
               <div>
                 <extract ref="RequestExtractor"></extract>
@@ -178,21 +178,21 @@
             </el-tab-pane>
             <el-tab-pane name='ApiRequestSetup'>
               <template #label>
-                <strong>SetupScript</strong>
+                <strong>前置脚本</strong>
               </template>
               <div>
               </div>
             </el-tab-pane>
             <el-tab-pane name='ApiRequestTeardown'>
               <template #label>
-                <strong>TeardownScript</strong>
+                <strong>后置脚本</strong>
               </template>
               <div>
               </div>
             </el-tab-pane>
             <el-tab-pane name='ApiRequestValidators'>
               <template #label>
-                <strong>Validator</strong>
+                <strong>断言</strong>
               </template>
               <div>
                 <validator ref="RequestValidators"></validator>
@@ -210,7 +210,7 @@ import {ArrowDown, ArrowUp, Back} from "@element-plus/icons-vue";
 import {useRoute, useRouter} from "vue-router";
 import {computed, onMounted, reactive, ref, watch} from "vue";
 import {ElMessage, FormInstance} from "element-plus";
-import RequestBody from "@/views/https/api/components/requestBody.vue";
+import RequestRaw from "@/views/https/api/components/requestRaw.vue";
 import RequestQuery from "@/views/https/api/components/requestQuery.vue";
 import RequestHeaders from "@/views/https/api/components/requestHeaders.vue";
 import Extract from "@/views/https/api/components/extract.vue";
