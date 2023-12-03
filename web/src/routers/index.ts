@@ -4,20 +4,15 @@ import Layout from "@/layout/index.vue";
 interface extendRoute {
     hidden?:boolean
 }
-//
-import tableRouter from './modules/table'
-import dataScreenRouter from './modules/dataScreen'
+
 import excelRouter from './modules/excel'
 import systemRouter from './modules/system'
 import echartsRouter from './modules/echarts'
 import othersRouter from './modules/other'
-import externalLink from './modules/externalLink'
-import formRouter from './modules/form'
 import functionPageRouter from './modules/functionPage'
 import toolsRouter  from "./modules/tools"
 import projectRouter from "./modules/project"
 import httpsRouter from "./modules/https"
-import {useUserStore} from "@/store/modules/user";
 
 
 // 异步组件
@@ -26,14 +21,10 @@ export const asyncRoutes = [
     ...systemRouter,
     ...httpsRouter,
     ...toolsRouter,
-    ...dataScreenRouter,
     ...echartsRouter,
-    ...tableRouter,
-    ...formRouter,
     ...othersRouter,
     ...functionPageRouter,
-    ...excelRouter,
-    ...externalLink,
+    ...excelRouter
 ]
 
 /**
