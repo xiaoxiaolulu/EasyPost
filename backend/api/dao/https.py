@@ -5,7 +5,7 @@ from api.models.https import (
 )
 from api.models.project import Project
 from core.engine.session_runner import run_test
-from core.request.parser import Format
+from core.request.parser import HandelTestData
 from utils.trees import (
     collections_directory_id,
     get_relation_tree
@@ -58,7 +58,7 @@ class HttpDao:
     @staticmethod
     def parser_api_data(api: dict, request: Any):
 
-        api = Format(api) # noqa
+        api = HandelTestData(api) # noqa
 
         request_body = {
             'name': api.name,
@@ -97,8 +97,8 @@ class HttpDao:
     def run_api_doc(cls, api: dict):
 
         try:
-            api = Format(api)
-            case_data = api.create_step_template()
+            api = HandelTestData(api)
+            case_data = api.handle_api_doc()
             result = run_test(case_data=case_data, debug=False)
             return result
         except (Exception, ):

@@ -1,3 +1,6 @@
+from core.engine.env import (
+    DEBUG
+)
 
 
 class CaseRunLog:

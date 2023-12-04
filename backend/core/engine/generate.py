@@ -22,20 +22,30 @@ class GenerateCase:
         """
         suite = unittest.TestSuite()
         load = unittest.TestLoader()
-        for item in datas:
-            cls = self.create_test_class(item)
-            suite.addTest(load.loadTestsFromTestCase(cls)) # noqa
-        return suite
+        if isinstance(datas, list):
+            for item in datas:
+                self.add_test(item, load, suite)
+            return suite
+
+        if isinstance(datas, dict):
+            self.add_test(datas, load, suite)
+            return suite
+
+    def add_test(self, item, load, suite):
+        cls = self.create_test_class(item)
+        suite.addTest(load.loadTestsFromTestCase(cls))  # noqa
 
     def create_test_class(self, item) -> type:
         """创建测试类"""
         cls_name = item.get('name') or 'Demo'
 
-        cases = item.get('cases')
+        cases = item.get('cases', None)
+
+        collections = cases if cases is not None else [item]
         # 创建测试类
         cls = type(cls_name, (BaseTest,), {})
         # 遍历数据生成,动态添加测试方法
-        self.create_case_content(cls, cases)
+        self.create_case_content(cls, collections)
 
         return cls
 

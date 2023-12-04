@@ -1,8 +1,7 @@
 import importlib
 import os
 from typing import Any
-
-from core.engine.env import db
+from core.engine.env import db  # noqa
 from core.engine.generate import GenerateCase
 from core.engine.runner import TestRunner
 
@@ -54,3 +53,16 @@ def run_test(case_data, env_config={}, tester='测试员', thread_count=1, debug
         return result, ENV
     else:
         return result
+
+
+
+def run_api(api_data, tester='测试员', thread_count=1) -> tuple[Any, dict[Any, Any]] | Any: # noqa
+    global result # noqa
+    # 生成测试用例
+    suite = GenerateCase().data_to_suite(api_data)
+    # 运行测试用例
+    runner = TestRunner(suite=suite, tester=tester)
+    result = runner.run(thread_count=thread_count)
+    # 断开数据库连接
+    db.close_connect()
+    return result

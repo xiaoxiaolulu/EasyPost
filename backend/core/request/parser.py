@@ -1,25 +1,37 @@
+import typing
 
 
-class Format(object):
+class HandelTestData(object):
 
     def __init__(self, request_body):
         """
-        RequestBody => {
-            name: 登录1
-            request -> {
-                url: http://124.70.221.221:8201/api/v1/login/
-                method: POST
-                headers -> {Content-Type: application/json}
-                hooks -> {
-                    request_hooks -> [func1]
-                    response_hooks -> [func1]
-                }
-                json -> {}
-                data -> {}
-                params -> postId=K000612&status=0
-            }
-            validate -> [{eq: ["$.msg","success"]}]
-            extract -> {}
+        {
+        "If": {"condition": 100 > 99},
+        'Loop':2,
+        "title": "测试用例2",
+        "host": "http://httpbin.org/post",
+        "interface": {
+            "url": "http://httpbin.org/post",
+            "name": "登录",
+            "method": "post",
+        },
+        "headers": {
+            'content-Type': "application/json"
+        },
+        "request": {
+            'json': {"mobile_phone": "${{user_mobile}}", "pwd": "lemonban"},
+        },
+        'setup_script': "print('前置脚本123')",
+        'teardown_script': "test.assertion('相等',200,response.status_code)",
+        "extract": {
+            # 通过jsonpath提取
+            "router": ("env", "jsonpath", "$.url"),
+            # 通过正则表达式提取
+        },
+        'validators': [{
+            'method': '相等',
+            'actual': 'http://httpbin.org/post',
+            'expect': '$.url'}]
         }
         """
         try:
@@ -48,32 +60,29 @@ class Format(object):
         except (KeyError, ValueError, AttributeError):
             pass
 
-    def create_step_template(self):
-        step_step_template = dict()
-        step_step_template['title'] = self.name
-        step_step_template['interface']['url'] = self.url
-        step_step_template['interface']['name'] = self.name
-        step_step_template['interface']['method'] = self.method
-        step_step_template['headers'] = self.headers
-
-        match self.body_type:
-            case 0:
-                step_step_template['request'] = dict()
-            case 1:
-                step_step_template['request']['json'] = self.json
-            case 2:
-                step_step_template['request']['data'] = self.data
-            case 3:
-                step_step_template['request']['params'] = self.params
-
-        step_step_template['setup_script'] = self.setup_script
-        step_step_template['teardown_script'] = self.teardown_script
-        step_step_template['extract'] = self.extract
-        step_step_template['validators'] = self.validate
-
-        step_collection = [{
-            'name': '调试接口文档',
-            'cases': [step_step_template]
-        }]
-
-        return step_collection
+    def handle_api_doc(self):
+        return {
+            "title": self.name,
+            "interface": {
+                "url": self.url,
+                "name": self.name,
+                "method": self.method,
+            },
+            "headers": {
+                'content-Type': "application/json"
+            },
+            "request": {
+                'json': {"mobile_phone": "${{user_mobile}}", "pwd": "lemonban"},
+            },
+            'setup_script': "print('前置脚本123')",
+            'teardown_script': "test.assertion('相等',200,response.status_code)",
+            "extract": {
+                # 通过jsonpath提取
+                "router": ("env", "jsonpath", "$.url"),
+                # 通过正则表达式提取
+            },
+            'validators': [{
+                'method': '相等',
+                'actual': 'http://httpbin.org/post',
+                'expect': '$.url'}]
+        }
