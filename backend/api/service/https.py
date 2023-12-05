@@ -165,8 +165,7 @@ class RunApiView(APIView):
     def post(request, **kwargs):
 
         try:
-            api = request.data['request']
-            response = HttpDao.run_api_doc(api)
+            response = HttpDao.run_api_doc(request.data)
             return Response(ResponseStandard.success(data=response))
         except Exception as err:
             return Response(ResponseStandard.failed(msg=str(err)))

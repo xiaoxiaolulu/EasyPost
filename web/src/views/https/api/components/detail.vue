@@ -47,7 +47,7 @@
           <el-col :xs="6" :sm="6" :md="6" :lg="6" :xl="6">
             <div style="padding-left: 12px">
               <el-button type="primary" @click="onSureClick(ruleFormRef)">保存</el-button>
-              <el-button>调试</el-button>
+              <el-button @click="debug(ruleFormRef)">调试</el-button>
             </div>
           </el-col>
         </el-row>
@@ -225,6 +225,8 @@ import RequestHeaders from "@/views/https/api/components/requestHeaders.vue";
 import Extract from "@/views/https/api/components/extract.vue";
 import Validator from "@/views/https/api/components/validator.vue";
 import ApiScript from "@/views/https/api/components/apiScript.vue";
+import {addApi, runApi} from "@/api/http";
+import {showErrMessage} from "@/utils/element";
 
 const route = useRoute()
 const router = useRouter()
@@ -347,18 +349,35 @@ const onSureClick = (formName: FormInstance | undefined) => {
   formName.validate(async (valid) => {
     if (valid) {
       try{
-        console.log("表单测试")
-        // console.log(ruleForm)
-        //console.log(RequestHeadersRef.value.getData())
-        // console.log(RequestQueryRef.value.getData())
-        //console.log(RequestBodyRef.value.getData())
-        // console.log(RequestExtractor.value.getData())
-        // RequestValidators.value.getData()
-        // console.log("表单测试")
-        // const ret = await projectCreate(form)
-        // const {code, data, msg} = ret.data
-        // showErrMessage(code.toString(), msg)
-        // formName.resetFields()
+
+        let ApiRequestHeader = RequestHeadersRef.value.getData()
+        let ApiRequestQuery = RequestQueryRef.value.getData()
+
+        let ApiRequestBody = RequestBodyRef.value.getData()
+        let ApiRequestSetup = RequestSetup.value.getData()
+        let ApiRequestTeardown = RequestTeardown.value.getData()
+        let ApiRequestValidators = RequestValidators.value.getData()
+        let ApiRequestExtractor = RequestExtractor.value.getData()
+        let apiData = {
+          directory_id: route.query.node,
+          project: route.query.project,
+          name: ruleForm.name,
+          url: ruleForm.url,
+          method: ruleForm.method,
+          tags: '',
+          status: ruleForm.status,
+          desc: ruleForm.remarks,
+          headers: ApiRequestHeader,
+          raw: ApiRequestBody,
+          params: ApiRequestQuery,
+          setup_script: ApiRequestSetup,
+          teardown_script: ApiRequestTeardown,
+          validate: ApiRequestValidators,
+          extract: ApiRequestExtractor
+        }
+        const ret = await addApi(apiData)
+        const {code, data, msg} = ret.data
+        showErrMessage(code.toString(), msg)
       } catch (e) {
         console.log(e)
       }
@@ -371,6 +390,51 @@ const onSureClick = (formName: FormInstance | undefined) => {
   })
 }
 
+const debug = (formName: FormInstance | undefined) => {
+  if (!formName) return
+  formName.validate(async (valid) => {
+    if (valid) {
+      try{
+
+        let ApiRequestHeader = RequestHeadersRef.value.getData()
+        let ApiRequestQuery = RequestQueryRef.value.getData()
+
+        let ApiRequestBody = RequestBodyRef.value.getData()
+        let ApiRequestSetup = RequestSetup.value.getData()
+        let ApiRequestTeardown = RequestTeardown.value.getData()
+        let ApiRequestValidators = RequestValidators.value.getData()
+        let ApiRequestExtractor = RequestExtractor.value.getData()
+        let apiData = {
+          directory_id: route.query.node,
+          project: route.query.project,
+          name: ruleForm.name,
+          url: ruleForm.url,
+          method: ruleForm.method,
+          tags: '',
+          status: ruleForm.status,
+          desc: ruleForm.remarks,
+          headers: ApiRequestHeader,
+          raw: ApiRequestBody,
+          params: ApiRequestQuery,
+          setup_script: ApiRequestSetup,
+          teardown_script: ApiRequestTeardown,
+          validate: ApiRequestValidators,
+          extract: ApiRequestExtractor
+        }
+        const ret = await runApi(apiData)
+        const {code, data, msg} = ret.data
+        showErrMessage(code.toString(), msg)
+      } catch (e) {
+        console.log(e)
+      }
+
+    } else {
+      console.log('error submit!')
+      ElMessage.error("新增接口失败请重试!")
+      return false
+    }
+  })
+}
 const initApi = () => {
 }
 

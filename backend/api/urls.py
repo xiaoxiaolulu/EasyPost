@@ -73,7 +73,7 @@ app_urls = [
     path("http/list", ApiTestListView.as_view({
         'get': 'list'
     })),
-    path('api/run', RunApiView.as_view())
+    path('http/run', RunApiView.as_view())
 ]
 
 

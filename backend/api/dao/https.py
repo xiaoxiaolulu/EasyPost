@@ -4,7 +4,10 @@ from api.models.https import (
     Api
 )
 from api.models.project import Project
-from core.engine.session_runner import run_test
+from core.engine.session_runner import (
+    run_test,
+    run_api
+)
 from core.request.parser import HandelTestData
 from utils.trees import (
     collections_directory_id,
@@ -71,6 +74,7 @@ class HttpDao:
             'desc': api.desc,
             'headers': api.headers,
             'raw': api.raw,
+            'params': api.params,
             'setup_script': api.setup_script,
             'teardown_script': api.teardown_script,
             'validate': api.validate,
@@ -95,8 +99,10 @@ class HttpDao:
 
         try:
             api = HandelTestData(api)
-            case_data = api.handle_api_doc()
-            result = run_test(case_data=case_data, debug=False)
+            api_data = api.get_api_template()
+            print(api_data)
+            result = run_api(api_data=api_data)
             return result
-        except (Exception, ):
-            raise Exception("调试测试接口失败")
+        except Exception as e:
+            print(e)
+            raise Exception(f"调试测试接口失败: {e}")

@@ -4,8 +4,8 @@
       <div style="border: 1px solid #E6E6E6">
         <mirror-code
             style="height: 500px"
-            v-model="state.setup_code"
-            :constModelData="state.setup_code"
+            v-model="state.script_code"
+            :constModelData="state.script_code"
             :editorConfig="state.editorConfig"
         >
         </mirror-code>
@@ -36,7 +36,7 @@ const props = defineProps({
 })
 
 const state = reactive({
-  setup_code: "",
+  script_code: "",
   editorConfig: { language: 'python', theme: 'vs' },
   menuList: [],
   setupMenu: [
@@ -58,18 +58,18 @@ const state = reactive({
 });
 
 const handlerCode = (row) => {
-  state.setup_code = state.setup_code ? state.setup_code + `\n${row.content}` : row.content
+  state.script_code = state.script_code ? state.script_code + `\n${row.content}` : row.content
 }
 
 // init code
-const setData = (setup_code) => {
-  state.setup_code = setup_code ? setup_code : ""
+const setData = (script_code) => {
+  state.script_code = script_code ? script_code : ""
 }
 
 // 获取code
 const getData = () => {
   return {
-    setup_code: state.setup_code
+    script_code: state.script_code
   }
 }
 

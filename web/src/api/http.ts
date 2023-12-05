@@ -23,3 +23,19 @@ export function updateTree(data: any) {
         data
     })
 }
+
+export function addApi(data: any) {
+    return request({
+        url: '/api/http/add',
+        method: 'post',
+        data
+    })
+}
+
+export function runApi(data: any) {
+    return request({
+        url: '/api/http/run',
+        method: 'post',
+        data
+    })
+}
