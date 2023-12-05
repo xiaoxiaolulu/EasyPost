@@ -44,7 +44,7 @@ def collections_directory_id(value, relation_id):
     """
     根据目录id以列表的形式检索出当前目录以及下级目录的id
     """
-    ids = []
+    ids = [relation_id]
     if not value:
         return ids
 

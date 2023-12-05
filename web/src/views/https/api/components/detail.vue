@@ -354,7 +354,6 @@ const onSureClick = (formName: FormInstance | undefined) => {
 
         let ApiRequestHeader = RequestHeadersRef.value.getData()
         let ApiRequestQuery = RequestQueryRef.value.getData()
-
         let ApiRequestBody = RequestBodyRef.value.getData()
         let ApiRequestSetup = RequestSetup.value.getData()
         let ApiRequestTeardown = RequestTeardown.value.getData()

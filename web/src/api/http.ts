@@ -39,3 +39,11 @@ export function saveOrUpdate(data: any) {
         data
     })
 }
+
+export function getHttpList(params: any) {
+    return request({
+        url: `/api/http/list`,
+        method: 'get',
+        params
+    })
+}

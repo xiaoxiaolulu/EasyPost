@@ -22,7 +22,7 @@ from api.schema.https import (
 )
 from core.request.http_handler import HttpHandler
 from api.response.fatcory import ResponseStandard
-from utils.trees import get_tree_max_id
+from utils.trees import get_tree_max_id, get_relation_tree, collections_directory_id
 
 
 class ApiFastView(APIView):
@@ -106,17 +106,31 @@ class ApiTestListView(mixins.ListModelMixin, viewsets.GenericViewSet):
             project = request.query_params.get("project")
             node = int(request.query_params.get("node"))
             name = request.query_params.get("name")
+            queryset = self.get_queryset().filter(project__id=project).order_by('-update_time')
 
-            queryset = HttpDao.list_test_case(node, project, name)
-            page = self.paginate_queryset(queryset)  # noqa
+            tree = Relation.objects.get(project__id=project)
+            tree = eval(tree.tree)
+
+            if node == 1:
+                queryset = queryset
+
+            if node != 1:
+                children_tree = get_relation_tree(tree, node)
+                directory_ids = collections_directory_id(children_tree, node)
+                queryset = queryset.filter(project__id=project, directory_id__in=directory_ids)
+
+            if name:
+                queryset = queryset.filter(name=name)
+
+            page = self.paginate_queryset(queryset)
             if page is not None:
                 serializer = self.get_serializer(page, many=True)
                 return self.get_paginated_response(serializer.data)
 
             serializer = self.get_serializer(queryset, many=True)
-            return Response(ResponseStandard.success(serializer.data))
+            return Response(serializer.data)
         else:
-            return Response(ResponseStandard.failed(data=serializer.errors))
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 class ApiDetailView(MagicRetrieveApi):
@@ -156,6 +170,7 @@ class SaveOrUpdateApiView(APIView):
             ))
         except Exception as err:
             return Response(ResponseStandard.failed(msg=str(err)))
+
 
 class RunApiView(APIView):
 
