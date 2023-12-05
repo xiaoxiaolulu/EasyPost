@@ -56,9 +56,9 @@ class HttpDao:
             raise Exception("获取测试接口失败")
 
     @staticmethod
-    def parser_api_data(api: dict, request: Any):
+    def parser_api_data(request: Any):
 
-        api = HandelTestData(api) # noqa
+        api = HandelTestData(request.data) # noqa
 
         request_body = {
             'name': api.name,
@@ -70,10 +70,7 @@ class HttpDao:
             'status': api.status,
             'desc': api.desc,
             'headers': api.headers,
-            'body_type': api.body_type,
-            'json': api.json,
-            'params': api.params,
-            'data': api.data,
+            'raw': api.raw,
             'setup_script': api.setup_script,
             'teardown_script': api.teardown_script,
             'validate': api.validate,
@@ -86,9 +83,9 @@ class HttpDao:
             raise Exception("解析测试接口失败")
 
     @classmethod
-    def create_api(cls, api: dict, request: Any):
+    def create_api(cls, request: Any):
         try:
-            request_body = cls.parser_api_data(api, request)
+            request_body = cls.parser_api_data(request)
             Api.objects.create(**request_body)
         except (Exception, Api.DoesNotExist):
             raise Exception("创建测试接口失败")

@@ -100,6 +100,9 @@ const setData = (data) => {
       break
     case 'x_www_form_urlencoded':
       state.x_www_form_urlencoded = data.data ? data.data : []
+    case 'raw':
+      state.rawData = data.data
+      state.language = data.language
     default:
       break
   }
@@ -112,18 +115,18 @@ const radioChange = (value: any) => {
 
 const getData = () => {
   let requestData = {
-    'mode': '',
-    'data': []
   }
-  requestData.mode = mode.value
+  if (mode.value  === 'raw') {
+    requestData['json'] = state.rawData
+  }
   if (mode.value === 'form_data') {
-    requestData.data = RequestFromDataRef.value.getData()
+    requestData['data'] = RequestFromDataRef.value.getData()
   }
   if (mode.value === 'x_www_form_urlencoded') {
-    requestData.data = RequestFormUrlencodedRef.value.getData()
+    requestData['data'] = RequestFormUrlencodedRef.value.getData()
   }
   if (mode.value === 'none') {
-    requestData.data = null
+    requestData['data'] = null
   }
   return requestData
 }

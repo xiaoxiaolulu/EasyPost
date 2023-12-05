@@ -150,8 +150,7 @@ class AddApiView(APIView):
     def post(request, **kwargs):
 
         try:
-            api = request.data['request']
-            HttpDao.create_api(api, request)
+            HttpDao.create_api(request)
             return Response(ResponseStandard.success())
         except Exception as err:
             return Response(ResponseStandard.failed(msg=str(err)))

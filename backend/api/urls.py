@@ -67,10 +67,10 @@ app_urls = [
     # 接口测试
     path("http/", ApiFastView.as_view()),
     path("tree/<int:pk>", TreeView.as_view()),
-    path("api/add", AddApiView.as_view()),
-    path("api/delete/<int:pk>", DelApiView.as_view()),
-    path("api/detail/<int:pk>", ApiDetailView.as_view()),
-    path("api/list", ApiTestListView.as_view({
+    path("http/add", AddApiView.as_view()),
+    path("http/delete/<int:pk>", DelApiView.as_view()),
+    path("http/detail/<int:pk>", ApiDetailView.as_view()),
+    path("http/list", ApiTestListView.as_view({
         'get': 'list'
     })),
     path('api/run', RunApiView.as_view())

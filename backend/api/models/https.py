@@ -85,11 +85,7 @@ class Api(Model):
                        default=Defaults.STATUS_TYPE)
     desc = TextField(null=True, blank=True, verbose_name=_('Api Desc'))
     headers = TextField(verbose_name=_('Api Headers'), null=False, default=None)
-    body_type = CharField(max_length=50, verbose_name=_('Api BodyType'), choices=Defaults.BODY_TYPE_CHOICES,
-                          default=Defaults.BODY_TYPE)
-    params = TextField(verbose_name=_('Api Params'), null=False, default=None)
-    data = TextField(verbose_name=_('Api Data'), null=False, default=None)
-    json = TextField(verbose_name=_('Api Json'), null=False,  default=None)
+    raw = TextField(verbose_name=_('Api Raw'), null=False,  default=None)
     setup_script = TextField(verbose_name=_('Api SetupScript'), null=False,  default=None)
     teardown_script = TextField(verbose_name=_('Api TeardownScript'), null=False, default=None)
     validate = TextField(verbose_name=_('Api Validate'), null=False, default=None)

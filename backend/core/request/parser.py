@@ -48,10 +48,7 @@ class HandelTestData(object):
 
             # 请求体
             self.headers = request_body.get('headers', {})
-            self.body_type = request_body.get('body_type', 1)
-            self.json = request_body.get('json', {})
-            self.data = request_body.get('data', {})
-            self.params = request_body.get('params', None)
+            self.raw = request_body.get('raw', {})
             self.setup_script = request_body.get('setup_script', None)
             self.teardown_script = request_body.get('teardown_script', None)
             self.validate = request_body.get('validate', [])
