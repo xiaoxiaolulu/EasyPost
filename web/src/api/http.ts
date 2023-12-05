@@ -24,17 +24,17 @@ export function updateTree(data: any) {
     })
 }
 
-export function addApi(data: any) {
+export function runApi(data: any) {
     return request({
-        url: '/api/http/add',
+        url: '/api/http/run',
         method: 'post',
         data
     })
 }
 
-export function runApi(data: any) {
+export function saveOrUpdate(data: any) {
     return request({
-        url: '/api/http/run',
+        url: `/api/http/saveOrUpdate/${data.id}`,
         method: 'post',
         data
     })

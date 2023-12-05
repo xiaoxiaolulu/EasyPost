@@ -141,7 +141,7 @@ class DelApiView(APIView):
             return Response(ResponseStandard.failed(data=str(err)))
 
 
-class AddApiView(APIView):
+class SaveOrUpdateApiView(APIView):
 
     permission_classes = [IsAuthenticated]
     authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
@@ -150,11 +150,12 @@ class AddApiView(APIView):
     def post(request, **kwargs):
 
         try:
-            HttpDao.create_api(request)
-            return Response(ResponseStandard.success())
+            response = HttpDao.create_or_update_api(request, pk=kwargs['pk'])
+            return Response(ResponseStandard.success(
+                data={"api_id": response}
+            ))
         except Exception as err:
             return Response(ResponseStandard.failed(msg=str(err)))
-
 
 class RunApiView(APIView):
 

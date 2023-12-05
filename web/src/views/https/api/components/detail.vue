@@ -225,7 +225,7 @@ import RequestHeaders from "@/views/https/api/components/requestHeaders.vue";
 import Extract from "@/views/https/api/components/extract.vue";
 import Validator from "@/views/https/api/components/validator.vue";
 import ApiScript from "@/views/https/api/components/apiScript.vue";
-import {addApi, runApi} from "@/api/http";
+import {saveOrUpdate, runApi} from "@/api/http";
 import {showErrMessage} from "@/utils/element";
 
 const route = useRoute()
@@ -278,6 +278,8 @@ const RequestValidators = ref()
 const RequestTeardown = ref()
 
 const RequestSetup = ref()
+
+const apiId = ref(0)
 
 const settings = computed(() => {
   if (showSetting.value == false) {
@@ -359,6 +361,7 @@ const onSureClick = (formName: FormInstance | undefined) => {
         let ApiRequestValidators = RequestValidators.value.getData()
         let ApiRequestExtractor = RequestExtractor.value.getData()
         let apiData = {
+          id: apiId.value,
           directory_id: route.query.node,
           project: route.query.project,
           name: ruleForm.name,
@@ -375,8 +378,9 @@ const onSureClick = (formName: FormInstance | undefined) => {
           validate: ApiRequestValidators,
           extract: ApiRequestExtractor
         }
-        const ret = await addApi(apiData)
+        const ret = await saveOrUpdate(apiData)
         const {code, data, msg} = ret.data
+        apiId.value = data.api_id
         showErrMessage(code.toString(), msg)
       } catch (e) {
         console.log(e)
@@ -435,6 +439,7 @@ const debug = (formName: FormInstance | undefined) => {
     }
   })
 }
+
 const initApi = () => {
 }
 

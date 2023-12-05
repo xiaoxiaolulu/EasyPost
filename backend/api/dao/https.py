@@ -1,4 +1,7 @@
 from typing import Any
+
+from django.core.exceptions import ObjectDoesNotExist
+
 from api.models.https import (
     Relation,
     Api
@@ -87,12 +90,20 @@ class HttpDao:
             raise Exception("解析测试接口失败")
 
     @classmethod
-    def create_api(cls, request: Any):
+    def create_or_update_api(cls, request: Any, pk):
         try:
             request_body = cls.parser_api_data(request)
-            Api.objects.create(**request_body)
-        except (Exception, Api.DoesNotExist):
-            raise Exception("创建测试接口失败")
+            if pk:
+                update_obj = Api.objects.filter(id=pk)
+                update_obj.update(**request_body)
+                update_pk = pk
+            else:
+                create_obj = Api.objects.create(**request_body)
+                update_pk = create_obj.id
+
+            return update_pk
+        except Exception as e:
+            raise Exception(f"{e}")
 
     @classmethod
     def run_api_doc(cls, api: dict):
@@ -100,9 +111,7 @@ class HttpDao:
         try:
             api = HandelTestData(api)
             api_data = api.get_api_template()
-            print(api_data)
             result = run_api(api_data=api_data)
             return result
         except Exception as e:
-            print(e)
             raise Exception(f"调试测试接口失败: {e}")

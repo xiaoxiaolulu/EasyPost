@@ -6,11 +6,11 @@ from rest_framework.routers import DefaultRouter
 from api.service.https import (
     ApiFastView,
     TreeView,
-    AddApiView,
     DelApiView,
     ApiDetailView,
     ApiTestListView,
-    RunApiView
+    RunApiView,
+    SaveOrUpdateApiView
 )
 from api.service.project import (
     ProjectListViewSet,
@@ -67,9 +67,9 @@ app_urls = [
     # 接口测试
     path("http/", ApiFastView.as_view()),
     path("tree/<int:pk>", TreeView.as_view()),
-    path("http/add", AddApiView.as_view()),
     path("http/delete/<int:pk>", DelApiView.as_view()),
     path("http/detail/<int:pk>", ApiDetailView.as_view()),
+    path("http/saveOrUpdate/<int:pk>", SaveOrUpdateApiView.as_view()),
     path("http/list", ApiTestListView.as_view({
         'get': 'list'
     })),
