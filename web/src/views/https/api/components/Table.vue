@@ -1,13 +1,15 @@
 <template>
   <div class="m-user-table">
     <div class="header">
-      <el-form :inline="true" :model="formInline" ref="ruleFormRef">
-        <el-form-item label="名称" prop="username">
-          <el-input v-model="formInline.username" placeholder="请输入名称"/>
-        </el-form-item>
-        <el-form-item>
-          <el-button type="primary" @click="onSubmit" :icon="Search">查询</el-button>
-          <el-button @click="reset(ruleFormRef)">重置</el-button>
+      <el-form :inline="true" :model="queryParams">
+        <el-form-item style="float: right">
+          <el-input
+              :suffix-icon="Search"
+              clearable
+              v-model.trim="queryParams.name"
+              placeholder="请输入接口名称"
+              @keyup.enter.native="queryList">
+          </el-input>
         </el-form-item>
       </el-form>
     </div>
@@ -24,14 +26,30 @@
         <el-table
             v-loading="loading"
             :data="tableData" style="width: 100%;height: 100%" border>
-          <el-table-column prop="id" label="id" align="center" width="100"/>
-          <el-table-column prop="name" label="名称" align="center" width="100"/>
-          <el-table-column prop="key" label="键值" align="center"/>
-          <el-table-column prop="remark"
-                           :show-overflow-tooltip="true"
-                           width="180"
-                           label="描述" align="center"/>
-          <el-table-column prop="createTime" label="创建时间" align="center" width="180"/>
+          <el-table-column type="index" label="序号" width="80" fixed/>
+          <el-table-column prop="name" label="接口名称" align="center" width="100" fixed>
+          </el-table-column>
+          <el-table-column prop="method" label="请求方式" align="center" width="150">
+            <template #default="scope">
+              <el-tag v-show="tag.name === scope.row.method" v-for="tag in methods" :key="tag.id" :type="tag.type">
+                {{ tag.name }}
+              </el-tag>
+            </template>
+          </el-table-column>
+          <el-table-column prop="status" label="状态" align="center" width="180">
+            <template #default="scope">
+              <div v-show="tag.id === scope.row.status" v-for="tag in tags" :key="tag.id" :type="tag.type">
+                <span :class="`status-${tag.status}`"></span>
+                <span>&nbsp;&nbsp;{{ tag.name }}</span>
+              </div>
+            </template>
+          </el-table-column>
+          <el-table-column prop="user.username" label="创建人" align="center" width="180"/>
+          <el-table-column prop="create_time" label="创建时间" width="200">
+            <template #default="scope">
+              <span>{{ parseTime(scope.row.create_time) }}</span>
+            </template>
+          </el-table-column>
           <el-table-column prop="operator" label="操作" width="200px" align="center" fixed="right">
             <template #default="scope">
               <el-button type="primary" size="small" icon="Edit" @click="editHandler(scope.row)">
@@ -46,13 +64,13 @@
       </div>
       <div class="pagination">
         <el-pagination
-            v-model:currentPage="currentPage1"
-            :page-size="10"
-            background
-            layout="total, sizes, prev, pager, next, jumper"
-            :total="1000"
-            @size-change="handleSizeChange"
-            @current-change="handleCurrentChange"
+            style="margin-top: 8px;"
+            v-model:currentPage="queryParams.page"
+            :page-size="20"
+            :pager-count="11"
+            layout=">, total, prev, pager, next, jumper"
+            :total="count"
+            @current-change="handlePageChange"
         />
       </div>
     </div>
@@ -60,19 +78,22 @@
   </div>
 </template>
 <script lang="ts" setup>
-import {ElMessageBox, ElMessage, FormInstance} from 'element-plus'
+import {ElMessageBox, ElMessage, FormInstance, ElPagination} from 'element-plus'
 import {Search, Plus} from '@element-plus/icons-vue'
 import {onMounted, reactive, ref} from 'vue'
 import {dictionaryDetailData} from '@/mock/system'
 import ApiDrawer from './apiDrawer.vue'
 import {watch} from "vue/dist/vue";
 import {useRouter} from "vue-router";
+import {getHttpList, saveOrUpdate} from "@/api/http";
+import {showErrMessage} from "@/utils/element";
+import {projectList} from "@/api/project";
+import {parseTime} from "@/utils";
 
 
-const tableData = ref(dictionaryDetailData[0].children)
+const tableData = ref([])
 const dialogVisible = ref(false)
 const ruleFormRef = ref<FormInstance>()
-const formInline = reactive({})
 const loading = ref(true)
 const currentPage1 = ref(1)
 const rowData = ref(null)
@@ -80,13 +101,28 @@ const router = useRouter()
 const currentProject = ref()
 const nodeId = ref()
 
-const onSubmit = () => {
-  console.log('submit!', formInline)
-  loading.value = true
-  setTimeout(() => {
-    loading.value = false
-  }, 1000)
-}
+
+const queryParams = reactive({
+  name: '',
+  page: 1,
+  project: '',
+  node: ''
+})
+
+const count = ref(0)
+
+const tags =  reactive([
+  { id: 0, type: 'primary', name: '调试中', status: 'debug' },
+  { id: 1, type: 'warning', name: '已废弃', status: 'discard'},
+  { id: 2, type: 'success', name: '正常' , status: 'normal'}
+])
+
+const methods = reactive([
+  { id: 0, type: 'primary', name: 'POST' },
+  { id: 1, type: 'success', name: 'GET' },
+  { id: 2, type: 'warning', name: 'PUT' },
+  { id: 3, type: 'danger', name: 'DELETED' }
+])
 
 const reset = (formEl: FormInstance | undefined) => {
   loading.value = true
@@ -95,16 +131,23 @@ const reset = (formEl: FormInstance | undefined) => {
   }, 1000)
 }
 
+const queryList = () => {
+  getHttpList(queryParams).then((response) => {
+    tableData.value = response.data.results;
+    count.value = response.data.count;
+  }).catch((error) => {
+    console.log(error.response)
+    ElMessage.error("获取接口列表数据失败;请重试！")
+  })
+}
+
 const getList = (data) => {
   currentProject.value = data.currentProject
   nodeId.value = data.node
+  queryParams.project = data.currentProject
+  queryParams.node = data.node
   loading.value = true
-  if (!data.id) {
-    tableData.value = []
-  } else {
-    let obj = dictionaryDetailData.find(item => item.id === data.id)
-    tableData.value = obj.children
-  }
+  queryList()
 
   setTimeout(() => {
     loading.value = false
@@ -122,6 +165,11 @@ const add = () => {
   } else {
     ElMessage.error("项目未选择或未选择相关目录树节点, 无法添加接口!");
   }
+}
+
+const handlePageChange = (newPage: any) => {
+  queryParams.page = newPage
+  queryList()
 }
 
 const del = (row) => {
@@ -173,4 +221,40 @@ defineExpose({
 </script>
 <style lang="scss" scoped>
 @import "../index";
+
+.status-debug {
+  position: relative;
+  background-color: #1890ff;
+  top: -1px;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  vertical-align: middle;
+  border-radius: 50%;
+  animation: fade 600ms infinite;
+}
+
+.status-discard {
+  position: relative;
+  background-color: #d92911;
+  top: -1px;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  vertical-align: middle;
+  border-radius: 50%;
+  animation: fade 600ms infinite;
+}
+
+.status-normal {
+  position: relative;
+  background-color: #83f106;
+  top: -1px;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  vertical-align: middle;
+  border-radius: 50%;
+  animation: fade 600ms infinite;
+}
 </style>
