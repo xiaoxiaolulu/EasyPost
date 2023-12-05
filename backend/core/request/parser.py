@@ -1,4 +1,3 @@
-import typing
 
 
 class HandelTestData(object):
