@@ -49,7 +49,7 @@
     </div>
 
     <!--raw-->
-    <div v-if="mode === 'raw'">
+    <div v-show="mode === 'raw'">
       <mirror-code
           style="height: 420px"
           ref="rawRef"
