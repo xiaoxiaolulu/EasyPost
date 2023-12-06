@@ -9,7 +9,7 @@ from django.db.models import (
     SET_NULL
 )
 from api.models.project import Project
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from api.models.setting import Address
 
 User = get_user_model()

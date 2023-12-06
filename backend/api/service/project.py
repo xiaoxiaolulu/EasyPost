@@ -8,7 +8,6 @@ from rest_framework.authentication import SessionAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 from api.dao.project import ProjectDao
 from api.filters.project import ProjectFilter
 from api.models.project import (
@@ -31,7 +30,6 @@ from api.response.magic import (
 class ProjectListViewSet(generics.ListAPIView):
     serializer_class = ProjectSerializers
     permission_classes = [IsAuthenticated]
-    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
     filterset_class = ProjectFilter  # noqa
     search_fields = ['name']
@@ -60,14 +58,12 @@ class ProjectDestroyViewSet(MagicDestroyApi):  # noqa
     queryset = Project.objects.all()
     serializer_class = ProjectSerializers
     permission_classes = [IsAuthenticated]
-    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
 
 
 class ProjectUpdateViewSet(MagicUpdateApi):
     queryset = Project.objects.all()
     serializer_class = ProjectSerializers
     permission_classes = [IsAuthenticated]
-    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
 
     # def get_serializer_class(self):
     #     if 'avatar' in self.request.data:
@@ -80,19 +76,15 @@ class ProjectCreateViewSet(MagicCreateApi):  # noqa
     queryset = Project.objects.all()
     serializer_class = ProjectSerializers
     permission_classes = [IsAuthenticated]
-    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
-
 
 class ProjectRetrieveApi(MagicRetrieveApi):
     queryset = Project.objects.all()
     serializer_class = ProjectSerializers
     permission_classes = [IsAuthenticated]
-    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
 
 
 class ProjectRoleDestroyViewSet(APIView):
     permission_classes = [IsAuthenticated]
-    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
 
     @staticmethod
     def delete(request, *args, **kwargs):
@@ -117,7 +109,6 @@ class ProjectRoleDestroyViewSet(APIView):
 
 class ProjectRoleUpdateViewSet(APIView):
     permission_classes = [IsAuthenticated]  # noqa
-    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
 
     @staticmethod
     def post(request, *args, **kwargs):

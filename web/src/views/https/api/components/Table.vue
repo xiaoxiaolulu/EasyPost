@@ -27,18 +27,18 @@
             v-loading="loading"
             :data="tableData" style="width: 100%;height: 100%" border>
           <el-table-column type="index" label="序号" width="80" fixed/>
-          <el-table-column prop="name" label="接口名称" align="center" width="100" fixed>
+          <el-table-column prop="name" label="接口名称" align="center" width="200" fixed>
           </el-table-column>
           <el-table-column prop="method" label="请求方式" align="center" width="150">
             <template #default="scope">
-              <el-tag v-show="tag.name === scope.row.method" v-for="tag in methods" :key="tag.id" :type="tag.type">
-                {{ tag.name }}
+              <el-tag v-show="tag.name === scope.row.method" v-for="tag in methods" :key="tag.id">
+                {{ scope.row.method }}
               </el-tag>
             </template>
           </el-table-column>
           <el-table-column prop="status" label="状态" align="center" width="180">
             <template #default="scope">
-              <div v-show="tag.id === scope.row.status" v-for="tag in tags" :key="tag.id" :type="tag.type">
+              <div v-show="tag.id === scope.row.status" v-for="tag in tags" :key="tag.id">
                 <span :class="`status-${tag.status}`"></span>
                 <span>&nbsp;&nbsp;{{ tag.name }}</span>
               </div>
@@ -81,13 +81,8 @@
 import {ElMessageBox, ElMessage, FormInstance, ElPagination} from 'element-plus'
 import {Search, Plus} from '@element-plus/icons-vue'
 import {onMounted, reactive, ref} from 'vue'
-import {dictionaryDetailData} from '@/mock/system'
-import ApiDrawer from './apiDrawer.vue'
-import {watch} from "vue/dist/vue";
 import {useRouter} from "vue-router";
-import {getHttpList, saveOrUpdate} from "@/api/http";
-import {showErrMessage} from "@/utils/element";
-import {projectList} from "@/api/project";
+import {getHttpList} from "@/api/http";
 import {parseTime} from "@/utils";
 
 
@@ -96,7 +91,6 @@ const dialogVisible = ref(false)
 const ruleFormRef = ref<FormInstance>()
 const loading = ref(true)
 const currentPage1 = ref(1)
-const rowData = ref(null)
 const router = useRouter()
 const currentProject = ref()
 const nodeId = ref()
@@ -112,9 +106,9 @@ const queryParams = reactive({
 const count = ref(0)
 
 const tags =  reactive([
-  { id: 0, type: 'primary', name: '调试中', status: 'debug' },
-  { id: 1, type: 'warning', name: '已废弃', status: 'discard'},
-  { id: 2, type: 'success', name: '正常' , status: 'normal'}
+  { id: 0, name: '调试中', status: 'debug' },
+  { id: 1, name: '已废弃', status: 'discard'},
+  { id: 2, name: '正常' , status: 'normal'}
 ])
 
 const methods = reactive([
@@ -164,6 +158,19 @@ const add = () => {
     });
   } else {
     ElMessage.error("项目未选择或未选择相关目录树节点, 无法添加接口!");
+  }
+}
+
+const editHandler = (row) => {
+  let node = nodeId.value
+  let project = currentProject.value
+  if (node && project) {
+    router.push({
+      name: "httpDetail",
+      query: {editType: 'update', project: project, node: node, id: row.id}
+    });
+  } else {
+    ElMessage.error("项目未选择或未选择相关目录树节点, 无法编辑接口!");
   }
 }
 

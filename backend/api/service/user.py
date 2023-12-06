@@ -1,19 +1,14 @@
-from datetime import datetime
-
 from django.contrib.auth import get_user_model
 from django.contrib.auth.backends import ModelBackend
+from django.contrib.auth.models import update_last_login
 from django.core.exceptions import ImproperlyConfigured
 from django.db.models import Q
-from rest_framework.authentication import SessionAuthentication
 from rest_framework.permissions import IsAuthenticated
-from rest_framework.response import Response
-from rest_framework_jwt.authentication import JSONWebTokenAuthentication
-from rest_framework_jwt.settings import api_settings
-from rest_framework_jwt.utils import jwt_response_payload_handler
-from rest_framework_jwt.views import ObtainJSONWebToken
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
+from rest_framework_simplejwt.settings import api_settings
+from rest_framework_simplejwt.views import TokenObtainPairView
 from api.response.magic import MagicListAPI
 from api.schema.user import UserSimpleSerializers
-from core.exception.exception_handler import jwt_response_payload_error_handler
 from api.response.fatcory import ResponseStandard
 
 User = get_user_model()
@@ -35,30 +30,31 @@ class CustomAuthenticateBackend(ModelBackend):
                 return user
 
 
-class CustomJsonWebToken(ObtainJSONWebToken):
+class NewTokenObtainPairSerializer(TokenObtainPairSerializer):
+
+    def validate(self, attrs):
+        data = super().validate(attrs)
+        username = attrs.get('username')
+        user = User.objects.get(Q(username=username) | Q(mobile=username) | Q(email=username))
+        user_info = {"username": user.username, "nickname": user.nickname, "userid": user.pk}
+
+        refresh = self.get_token(self.user)
+
+        data['token'] = str(refresh.access_token)
+        data['userInfo'] = user_info
+        data['roles'] = [user.role]
+
+        if api_settings.UPDATE_LAST_LOGIN:
+            update_last_login(None, self.user)
+        response = ResponseStandard.success(data)
+        return response
+
+
+class CustomJsonWebToken(TokenObtainPairView):
     """
     重写JWT认证方法
     """
-
-    def post(self, request, *args, **kwargs):
-        serializer = self.get_serializer(data=request.data)
-
-        if serializer.is_valid():
-            user = serializer.object.get('user') or request.user
-            token = serializer.object.get('token')
-
-            token = jwt_response_payload_handler(token, user, request)
-            response = {"username": user.username, "nickname": user.nickname, "userid": user.pk}
-            response = Response(ResponseStandard.success(dict(token, userInfo=response, roles=[user.role])))
-
-            if api_settings.JWT_AUTH_COOKIE:
-                expiration = (datetime.utcnow() +
-                              api_settings.JWT_EXPIRATION_DELTA)
-                response.set_cookie(api_settings.JWT_AUTH_COOKIE,
-                                    token,
-                                    expires=expiration,
-                                    httponly=True)
-            return response
+    serializer_class = NewTokenObtainPairSerializer
 
 
 class UserListViewSet(MagicListAPI):
@@ -66,6 +62,4 @@ class UserListViewSet(MagicListAPI):
     queryset = User.objects.all()
     serializer_class = UserSimpleSerializers
     permission_classes = [IsAuthenticated]
-    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
     ordering_fields = ['create_time']
-

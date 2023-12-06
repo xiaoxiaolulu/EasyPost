@@ -1,8 +1,6 @@
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters
-from rest_framework.authentication import SessionAuthentication
 from rest_framework.permissions import IsAuthenticated
-from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 from api.filters.setting import (
     TestEnvironmentFilter,
     AddressFilter
@@ -13,11 +11,14 @@ from api.models.setting import (
 )
 from api.response.magic import (
     MagicListAPI,
-    MagicUpdateApi, MagicDestroyApi, MagicCreateApi
+    MagicUpdateApi,
+    MagicDestroyApi,
+    MagicCreateApi
 )
 from api.schema.setting import (
     TestEnvironmentSerializers,
-    AddressSerializers, AddressWriteSerializers
+    AddressSerializers,
+    AddressWriteSerializers
 )
 
 
@@ -26,7 +27,6 @@ class TestEnvironmentListViewSet(MagicListAPI): # noqa
     queryset = TestEnvironment.objects.all()
     serializer_class = TestEnvironmentSerializers
     permission_classes = [IsAuthenticated]
-    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
     filterset_class = TestEnvironmentFilter   # noqa
     search_fields = ['name']
@@ -38,15 +38,13 @@ class TestEnvironmentDestroyViewSet(MagicDestroyApi):
     queryset = TestEnvironment.objects.all()
     serializer_class = TestEnvironmentSerializers
     permission_classes = [IsAuthenticated]
-    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
-
+    
 
 class TestEnvironmentUpdateViewSet(MagicUpdateApi):
 
     queryset = TestEnvironment.objects.all()
     serializer_class = TestEnvironmentSerializers
     permission_classes = [IsAuthenticated]
-    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
 
 
 class TestEnvironmentCreateViewSet(MagicCreateApi):
@@ -54,15 +52,13 @@ class TestEnvironmentCreateViewSet(MagicCreateApi):
     queryset = TestEnvironment.objects.all()
     serializer_class = TestEnvironmentSerializers
     permission_classes = [IsAuthenticated]
-    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
-
+    
 
 class AddressListViewSet(MagicListAPI):  # noqa
 
     queryset = Address.objects.all()
     serializer_class = AddressSerializers
     permission_classes = [IsAuthenticated]
-    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
     filterset_class = AddressFilter  # noqa
     search_fields = ['name']
@@ -74,7 +70,6 @@ class AddressDestroyViewSet(MagicDestroyApi):  # noqa
     queryset = Address.objects.all()
     serializer_class = AddressSerializers
     permission_classes = [IsAuthenticated]
-    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
 
 
 class AddressUpdateViewSet(MagicUpdateApi):
@@ -82,12 +77,10 @@ class AddressUpdateViewSet(MagicUpdateApi):
     queryset = Address.objects.all()
     serializer_class = AddressWriteSerializers
     permission_classes = [IsAuthenticated]
-    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
-
+    
 
 class AddressCreateViewSet(MagicCreateApi):  # noqa
 
     queryset = Address.objects.all()
     serializer_class = AddressWriteSerializers
     permission_classes = [IsAuthenticated]
-    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]

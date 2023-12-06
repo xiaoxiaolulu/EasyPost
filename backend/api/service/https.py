@@ -5,11 +5,9 @@ from rest_framework import (
     mixins,
     viewsets
 )
-from rest_framework.authentication import SessionAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 from api.dao.https import HttpDao
 from api.models.https import (
     Relation,
@@ -22,13 +20,16 @@ from api.schema.https import (
 )
 from core.request.http_handler import HttpHandler
 from api.response.fatcory import ResponseStandard
-from utils.trees import get_tree_max_id, get_relation_tree, collections_directory_id
+from utils.trees import (
+    get_tree_max_id,
+    get_relation_tree,
+    collections_directory_id
+)
 
 
 class ApiFastView(APIView):
 
     permission_classes = [IsAuthenticated]
-    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
 
     @staticmethod
     def post(request):
@@ -47,7 +48,6 @@ class TreeView(APIView):
 
     serializer_class = RelationSerializer
     permission_classes = [IsAuthenticated]
-    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
 
     @staticmethod
     def put(request, **kwargs):
@@ -95,7 +95,6 @@ class ApiTestListView(mixins.ListModelMixin, viewsets.GenericViewSet):
     serializer_class = ApiSerializer
     queryset = Api.objects
     permission_classes = [IsAuthenticated]
-    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
 
     def list(self, request, *args, **kwargs):
         context = {
@@ -139,13 +138,11 @@ class ApiDetailView(MagicRetrieveApi):
     serializer_class = ApiSerializer
     queryset = Api.objects.all()
     permission_classes = [IsAuthenticated]
-    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
-
+    
 
 class DelApiView(APIView):
 
     permission_classes = [IsAuthenticated]
-    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
 
     @staticmethod
     def delete(request, **kwargs):
@@ -159,7 +156,6 @@ class DelApiView(APIView):
 class SaveOrUpdateApiView(APIView):
 
     permission_classes = [IsAuthenticated]
-    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
 
     @staticmethod
     def post(request, **kwargs):
@@ -176,7 +172,6 @@ class SaveOrUpdateApiView(APIView):
 class RunApiView(APIView):
 
     permission_classes = [IsAuthenticated]
-    authentication_classes = [JSONWebTokenAuthentication, SessionAuthentication]
 
     @staticmethod
     def post(request, **kwargs):

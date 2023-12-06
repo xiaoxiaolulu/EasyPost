@@ -47,3 +47,11 @@ export function getHttpList(params: any) {
         params
     })
 }
+
+export function getHttpDetail(data: any) {
+    return request({
+        url: `/api/http/detail/${data.id}`,
+        method: 'get',
+        data
+    })
+}

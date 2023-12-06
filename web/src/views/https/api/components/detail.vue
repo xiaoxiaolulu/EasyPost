@@ -225,7 +225,7 @@ import RequestHeaders from "@/views/https/api/components/requestHeaders.vue";
 import Extract from "@/views/https/api/components/extract.vue";
 import Validator from "@/views/https/api/components/validator.vue";
 import ApiScript from "@/views/https/api/components/apiScript.vue";
-import {saveOrUpdate, runApi} from "@/api/http";
+import {saveOrUpdate, runApi, getHttpDetail} from "@/api/http";
 import {showErrMessage} from "@/utils/element";
 
 const route = useRoute()
@@ -279,7 +279,9 @@ const RequestTeardown = ref()
 
 const RequestSetup = ref()
 
-const apiId = ref(0)
+const state = reactive({
+  api_id: 0
+})
 
 const settings = computed(() => {
   if (showSetting.value == false) {
@@ -329,11 +331,11 @@ const setData = (form: any) => {
 }
 
 const updateRouter = (newValue: any) => {
-  initialize()
+  initializeUrl()
   ruleForm.url += newValue
 }
 
-const initialize = () => {
+const initializeUrl = () => {
   // 初始化逻辑
   if(ruleForm.url.includes('?')){
     ruleForm.url = ruleForm.url.split('?')[0]
@@ -360,7 +362,7 @@ const onSureClick = (formName: FormInstance | undefined) => {
         let ApiRequestValidators = RequestValidators.value.getData()
         let ApiRequestExtractor = RequestExtractor.value.getData()
         let apiData = {
-          id: apiId.value,
+          id: state.api_id,
           directory_id: route.query.node,
           project: route.query.project,
           name: ruleForm.name,
@@ -379,7 +381,7 @@ const onSureClick = (formName: FormInstance | undefined) => {
         }
         const ret = await saveOrUpdate(apiData)
         const {code, data, msg} = ret.data
-        apiId.value = data.api_id
+        state.api_id = data.api_id
         showErrMessage(code.toString(), msg)
       } catch (e) {
         console.log(e)
@@ -401,7 +403,6 @@ const debug = (formName: FormInstance | undefined) => {
 
         let ApiRequestHeader = RequestHeadersRef.value.getData()
         let ApiRequestQuery = RequestQueryRef.value.getData()
-
         let ApiRequestBody = RequestBodyRef.value.getData()
         let ApiRequestSetup = RequestSetup.value.getData()
         let ApiRequestTeardown = RequestTeardown.value.getData()
@@ -440,6 +441,42 @@ const debug = (formName: FormInstance | undefined) => {
 }
 
 const initApi = () => {
+  let api_id = route.query.id
+  if(api_id){
+    state.api_id = api_id
+  }
+  console.log("api_id------>", api_id)
+  if (api_id) {
+    getHttpDetail({id: api_id}).then((response) => {
+      const {data, code, msg} = response.data
+      ruleForm.url = data.url
+      ruleForm.method = data.method
+      ruleForm.name = data.name
+      ruleForm.status = data.status
+      ruleForm.remarks = data.desc
+      RequestHeadersRef.value.setData(data.headers)
+      RequestQueryRef.value.setData(data.params)
+      RequestBodyRef.value.setData(data.raw)
+      RequestExtractor.value.setData(data.extract)
+      RequestValidators.value.setData(data.validate)
+      RequestTeardown.value.setData(data.setup_script)
+      RequestSetup.value.setData(data.teardown_script)
+      showErrMessage(code.toString(), msg)
+    })
+  } else {
+    // ruleForm.url = ""
+    // ruleForm.method = "POST"
+    // ruleForm.name = ""
+    // ruleForm.status = ""
+    // ruleForm.remarks = ""
+    // RequestHeadersRef.value = []
+    // RequestQueryRef.value = []
+    // RequestBodyRef.value.setData()
+    // RequestExtractor.value = []
+    // RequestValidators.value = []
+    // RequestTeardown.value = ""
+    // RequestSetup.value = ""
+  }
 }
 
 onMounted(() => {
