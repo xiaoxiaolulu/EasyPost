@@ -13,7 +13,8 @@ from django.db.models import (
     TextField,
     ImageField,
     DateTimeField,
-    DateField
+    DateField,
+    AutoField
 )
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
@@ -62,7 +63,7 @@ class User(AbstractUser):
     * is_valid: 管理员可以禁用某个用户，当他离职后
     * role: 临时字段 1 管理员  2 组员  3 边缘
     """
-
+    id = AutoField(primary_key=True)
     nickname = CharField(max_length=20, null=True, blank=True, verbose_name=_('User Nickname'))
     mobile = CharField(max_length=11, null=True, blank=True, verbose_name=_('User Mobile'))
     email = CharField(max_length=125, null=True, blank=True, verbose_name=_('User Email'))
@@ -98,7 +99,7 @@ class VerifyCode(Model):
     * account: 账号类型
     * add_time: 添加时间
     """
-
+    id = AutoField(primary_key=True)
     code = CharField(max_length=10, verbose_name=_('VerifyCode Code'))
     account = CharField(max_length=125, verbose_name=_('VerifyCode Account'))
     account_type = CharField(verbose_name=_('VerifyCode AccountType'), choices=Defaults.ACCOUNT_TYPE_CHOICES,

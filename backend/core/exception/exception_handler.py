@@ -54,11 +54,3 @@ def exception_handler(exc, context):
         return Response(ResponseStandard.failed(f'其他未知错误：{traceback.format_exc()}'))
     else:
         return Response(ResponseStandard.failed(f'其他未知错误：{traceback.format_exc()}'))
-
-
-def jwt_response_payload_error_handler(serializer, request=None):
-
-    data = "".join([f"{key} {value}" for key, value in serializer.errors.items()])
-    return Response(
-        ResponseStandard.failed(msg=data)
-    )

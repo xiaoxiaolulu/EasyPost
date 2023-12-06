@@ -13,7 +13,8 @@ from django.db.models import (
     DateTimeField,
     ForeignKey,
     SET_NULL,
-    ImageField
+    ImageField,
+    AutoField
 )
 from django.db.models.signals import (
     post_delete,
@@ -58,7 +59,7 @@ class Project(Model):
     * create_time: 创建时间
     * update_time: 更新时间
     """
-
+    id = AutoField(primary_key=True)
     name = CharField(max_length=50, null=True, blank=True, verbose_name=_('Project Name'))
     user = ForeignKey(User, null=True, on_delete=SET_NULL, verbose_name=_('User'))
     type = CharField(max_length=50, verbose_name=_('Project Type'), choices=Defaults.PROJECT_TYPE_CHOICES,
@@ -83,6 +84,7 @@ class Project(Model):
 
 class ProjectRole(Model):
 
+    id = AutoField(primary_key=True)
     user = ForeignKey(User, null=True, on_delete=SET_NULL, verbose_name=_('User'))
     project = ForeignKey(Project, null=True, on_delete=SET_NULL, related_name='roles', verbose_name=_('Project'))
     rode_id = CharField(max_length=50, null=True, blank=True, verbose_name=_('ProjectRoleId'))

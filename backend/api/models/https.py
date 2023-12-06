@@ -6,11 +6,11 @@ from django.db.models import (
     TextField,
     CharField,
     DateTimeField,
-    SET_NULL
+    SET_NULL,
+    AutoField
 )
 from api.models.project import Project
 from django.utils.translation import gettext_lazy as _
-from api.models.setting import Address
 
 User = get_user_model()
 
@@ -45,7 +45,7 @@ class Relation(Model):
     * tree: 树形名称
     * type: 树形类型
     """
-
+    id = AutoField(primary_key=True)
     project = ForeignKey(Project, on_delete=CASCADE, db_constraint=False)
     tree = TextField(verbose_name=_('Relation Tree'), null=False, default=[])
 
@@ -74,7 +74,7 @@ class Api(Model):
     * body: 请求体
     * directory_id: 目录id
     """
-
+    id = AutoField(primary_key=True)
     name = CharField(max_length=50, null=True, blank=True, verbose_name=_('Api Name'))
     project = ForeignKey(Project, on_delete=CASCADE, db_constraint=False)
     directory_id = CharField(max_length=50, null=True, blank=True, verbose_name=_('Api DirectoryId'))

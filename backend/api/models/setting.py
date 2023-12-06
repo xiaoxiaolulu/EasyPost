@@ -6,7 +6,8 @@ from django.db.models import (
     ForeignKey,
     DateTimeField,
     SET_NULL,
-    TextField
+    TextField,
+    AutoField
 )
 from django.db.models.signals import (
     post_save,
@@ -26,7 +27,7 @@ class TestEnvironment(Model):
     * create_time: 创建时间
     * update_time: 更新时间
     """
-
+    id = AutoField(primary_key=True)
     name = CharField(max_length=50, null=True, blank=True, verbose_name=_('TestEnvironment Name'))
     user = ForeignKey(User, null=True, on_delete=SET_NULL, verbose_name=_('User'))
     desc = TextField(null=True, blank=True, verbose_name=_('TestEnvironment Desc'))
@@ -52,7 +53,7 @@ class Address(Model):
     * create_time: 创建时间
     * update_time: 更新时间
     """
-
+    id = AutoField(primary_key=True)
     name = CharField(max_length=50, null=True, blank=True, verbose_name=_('Address Name'))
     env = ForeignKey(TestEnvironment, null=True, on_delete=SET_NULL, verbose_name=_('Address Env'))
     host = CharField(max_length=100, null=True, blank=True, verbose_name=_('Address Host'))
