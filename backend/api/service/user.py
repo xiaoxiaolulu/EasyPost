@@ -34,15 +34,13 @@ class NewTokenObtainPairSerializer(TokenObtainPairSerializer):
 
     def validate(self, attrs):
         data = super().validate(attrs)
-        username = attrs.get('username')
-        user = User.objects.get(Q(username=username) | Q(mobile=username) | Q(email=username))
-        user_info = {"username": user.username, "nickname": user.nickname, "userid": user.pk}
+        user_info = {"username": self.user.username, "nickname": self.user.nickname, "userid": self.user.pk}
 
         refresh = self.get_token(self.user)
 
         data['token'] = str(refresh.access_token)
         data['userInfo'] = user_info
-        data['roles'] = [user.role]
+        data['roles'] = [self.user.role]
 
         if api_settings.UPDATE_LAST_LOGIN:
             update_last_login(None, self.user)
