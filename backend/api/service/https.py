@@ -106,22 +106,23 @@ class ApiTestListView(mixins.ListModelMixin, viewsets.GenericViewSet):
             node = int(request.query_params.get("node"))
             name = request.query_params.get("name")
 
-            queryset = self.get_queryset().filter(project__id=project).order_by('-update_time')
+            # queryset = self.get_queryset().filter(project__id=project).order_by('-update_time')
 
-            tree = Relation.objects.get(project__id=project)
-            tree = eval(tree.tree)
-
-            if node == 1:
-                queryset = queryset
-
-            if node != 1:
-                children_tree = get_relation_tree(tree, node)
-                directory_ids = collections_directory_id(children_tree, node)
-                queryset = queryset.filter(project__id=project, directory_id__in=directory_ids)
-
-            if name:
-                queryset = queryset.filter(name=name)
-
+            # tree = Relation.objects.get(project__id=project)
+            # tree = eval(tree.tree)
+            #
+            # if node == 1:
+            #     queryset = queryset
+            #
+            # else:
+            #     children_tree = get_relation_tree(tree, node)
+            #     directory_ids = collections_directory_id(children_tree, node)
+            #     queryset = queryset.filter(project__id=project, directory_id__in=directory_ids)
+            #
+            # if name:
+            #     queryset = queryset.filter(name=name)
+            queryset = self.get_queryset()
+            queryset = HttpDao.list_test_case(queryset, node, project, name)
             page = self.paginate_queryset(queryset)
             if page is not None:
                 serializer = self.get_serializer(page, many=True)

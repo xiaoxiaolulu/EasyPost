@@ -4,7 +4,6 @@ from rest_framework import (
     filters,
     generics
 )
-from rest_framework.authentication import SessionAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -76,6 +75,7 @@ class ProjectCreateViewSet(MagicCreateApi):  # noqa
     queryset = Project.objects.all()
     serializer_class = ProjectSerializers
     permission_classes = [IsAuthenticated]
+
 
 class ProjectRetrieveApi(MagicRetrieveApi):
     queryset = Project.objects.all()

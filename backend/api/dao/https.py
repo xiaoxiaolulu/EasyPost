@@ -37,21 +37,19 @@ class HttpDao:
     @classmethod
     def list_test_case(cls, get_queryset, node: int, project_id: int, name: str = ""):
         try:
-
             queryset = cls.get_directory_case(get_queryset, project_id)
             tree = cls.get_directory_tree(project_id)
 
             if project_id:
-
                 if node == 1:
                     queryset = queryset
-                if node != 1:
+                else:
                     children_tree = get_relation_tree(tree, node)
                     directory_ids = collections_directory_id(children_tree, node)
-                    queryset.filter(project__id=project_id, directory_id__in=directory_ids)
+                    queryset = queryset.filter(project__id=project_id, directory_id__in=directory_ids)
 
                 if name:
-                    queryset.queryset.filter(name=name)
+                    queryset = queryset.filter(name=name)
 
                 return queryset
 
