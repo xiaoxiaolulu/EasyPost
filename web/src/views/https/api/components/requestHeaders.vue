@@ -15,6 +15,7 @@ import EditableProTable from "@/components/Table/EditableProTable/index.vue";
 import {reactive, ref} from "vue";
 import {ElMessage} from "element-plus";
 import {deepObjClone} from "@/utils";
+import {watch} from "vue/dist/vue";
 
 const data = reactive({
   params: []
@@ -32,6 +33,7 @@ const column = [
 const add = (row) => {
 }
 const dataSource = ref(data.params)
+
 const onChange = (val) => {
   dataSource.value = val
 }

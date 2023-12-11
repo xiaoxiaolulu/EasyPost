@@ -1,3 +1,6 @@
+import json
+
+
 class HandelTestData(object):
 
     def __init__(self, request_body=None):
@@ -15,13 +18,13 @@ class HandelTestData(object):
             self.desc = request_body.get('desc', None)
 
             # 请求体
-            self.headers = request_body.get('headers', {})
-            self.raw = request_body.get('raw', {})
-            self.params = request_body.get('params', None)
+            self.headers = json.dumps(request_body.get('headers', []))
+            self.raw = json.dumps(request_body.get('raw', []))
+            self.params = json.dumps(request_body.get('params', []))
             self.setup_script = request_body.get('setup_script', None)
             self.teardown_script = request_body.get('teardown_script', None)
-            self.validate = request_body.get('validate', [])
-            self.extract = request_body.get('extract', {})
+            self.validate = json.dumps(request_body.get('validate', []))
+            self.extract = json.dumps(request_body.get('extract', []))
         except (KeyError, ValueError, AttributeError):
             pass
 
