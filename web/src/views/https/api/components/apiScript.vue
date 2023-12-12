@@ -68,9 +68,7 @@ const setData = (script_code) => {
 
 // 获取code
 const getData = () => {
-  return {
-    script_code: state.script_code
-  }
+  return state.script_code
 }
 
 const sideMenu = computed(() => {

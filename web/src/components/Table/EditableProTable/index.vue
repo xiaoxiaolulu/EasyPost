@@ -164,8 +164,9 @@ const deleteCurrent = (row)=>{
   // row.visible = true
 }
 
-const getData = () => {
-  let arr = deepObjClone(transData.value)
+const getData = (data) => {
+  let table = data ? data : transData.value
+  let arr = deepObjClone(table)
   for (let item of arr) {
     for (let attr in item) {
       if (attr.includes('te__mp')) {
@@ -285,6 +286,7 @@ const filterOption = (item, scope) => {
 
 defineExpose({
   reset,
+  getData
 })
 </script>
 <style scoped>

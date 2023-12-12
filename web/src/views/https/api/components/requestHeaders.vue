@@ -2,7 +2,7 @@
   <EditableProTable
       :mode="radio"
       :columns="column"
-      :data="data.params"
+      :data="sate.params"
       @add="add"
       ref="table"
       @onChange="onChange"
@@ -15,9 +15,8 @@ import EditableProTable from "@/components/Table/EditableProTable/index.vue";
 import {reactive, ref} from "vue";
 import {ElMessage} from "element-plus";
 import {deepObjClone} from "@/utils";
-import {watch} from "vue/dist/vue";
 
-const data = reactive({
+const sate = reactive({
   params: []
 });
 const radio = ref('bottom')
@@ -32,7 +31,7 @@ const column = [
 
 const add = (row) => {
 }
-const dataSource = ref(data.params)
+const dataSource = ref(sate.params)
 
 const onChange = (val) => {
   dataSource.value = val
@@ -44,12 +43,14 @@ const deleteAction = (row) => {
 }
 
 const setData = (data) => {
-  data.params = data ? data : []
+  data = eval(data)
+  sate.params = data ? data : []
+  table.value.getData(data)
 }
 
 const getData = () => {
-  data.params = deepObjClone(dataSource.value)
-  return data.params
+  sate.params = deepObjClone(dataSource.value)
+  return sate.params
 }
 
 const updateContentType = (mode: any, language: any, remove: any) => {
@@ -76,20 +77,20 @@ const updateContentType = (mode: any, language: any, remove: any) => {
   }
   // 查找带有Content-Type的请求头
   let contentType = '';
-  data.params.find(param => {
+  sate.params.find(param => {
     if (param.name.toLowerCase() === 'content-type') {
       contentType = param.name;
     }
   });
   // 切换Raw更新原本Content-Type
   if (contentType) {
-    data.params = data.params.filter(obj => Object.values(obj).every(value => value !== "Content-Type"))
+    sate.params = sate.params.filter(obj => Object.values(obj).every(value => value !== "Content-Type"))
   }
   if (headerValue) {
-    data.params.unshift({name: "Content-Type", value: headerValue, description: ""})
+    sate.params.unshift({name: "Content-Type", value: headerValue, description: ""})
   }
   if (remove) {
-    data.params =  data.params.filter(obj => Object.values(obj).every(value => value !== "Content-Type"));
+    sate.params =  sate.params.filter(obj => Object.values(obj).every(value => value !== "Content-Type"));
   }
 }
 

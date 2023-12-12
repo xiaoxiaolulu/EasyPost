@@ -454,11 +454,11 @@ const initApi = () => {
       ruleForm.name = data.name
       ruleForm.status = data.status
       ruleForm.remarks = data.desc
-      //RequestHeadersRef.value.setData(data.headers)
-      // RequestQueryRef.value.setData(data.params)
-      // RequestBodyRef.value.setData(data.raw)
-      // RequestExtractor.value.setData(data.extract)
-      // RequestValidators.value.setData(data.validate)
+      RequestHeadersRef.value.setData(eval(data.headers))
+      RequestQueryRef.value.setData(eval(data.params))
+      RequestBodyRef.value.setData(data.raw)
+      RequestExtractor.value.setData(data.extract)
+      RequestValidators.value.setData(data.validate)
       RequestTeardown.value.setData(data.setup_script)
       RequestSetup.value.setData(data.teardown_script)
       showErrMessage(code.toString(), msg)

@@ -49,7 +49,7 @@
     </div>
 
     <!--raw-->
-    <div v-show="mode === 'raw'">
+    <div v-show="mode === 'json'">
       <mirror-code
           style="height: 420px"
           ref="rawRef"
@@ -63,7 +63,7 @@
 </template>
 
 <script setup lang="ts">
-import {ref, reactive, watch} from "vue";
+import {reactive, ref, watch} from "vue";
 import {ArrowDown} from '@element-plus/icons-vue'
 import RequestData from "@/views/https/api/components/requestData.vue";
 import MirrorCode from "@/components/MirrorCode/index.vue";
@@ -93,6 +93,8 @@ const RequestFormUrlencodedRef = ref()
 const rawRef = ref()
 
 const setData = (data) => {
+  data = JSON.parse(data)
+  mode.value = Object.keys(data)[0]
   if (!data) return
   switch (mode.value) {
     case 'form_data':
@@ -100,9 +102,9 @@ const setData = (data) => {
       break
     case 'x_www_form_urlencoded':
       state.x_www_form_urlencoded = data.data ? data.data : []
-    case 'raw':
-      state.rawData = data.data
-      state.language = data.language
+    case 'json':
+      state.rawData = data["json"]
+      state.language = mode.value
     default:
       break
   }
@@ -116,7 +118,7 @@ const radioChange = (value: any) => {
 const getData = () => {
   let requestData = {
   }
-  if (mode.value  === 'raw') {
+  if (mode.value  === 'json') {
     requestData['json'] = state.rawData
   }
   if (mode.value === 'form_data') {

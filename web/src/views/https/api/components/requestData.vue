@@ -2,7 +2,7 @@
   <EditableProTable
       :mode="radio"
       :columns="column"
-      :data="data.params"
+      :data="form.params"
       @add="add"
       ref="table"
       @onChange="onChange"
@@ -16,7 +16,7 @@ import {ref, reactive} from "vue";
 import {ElMessage} from "element-plus";
 import {deepObjClone} from "@/utils";
 
-const data = reactive({
+const form = reactive({
   params: []
 });
 const radio = ref('bottom')
@@ -63,7 +63,7 @@ const column = [
 
 const add = (row) => {
 }
-const dataSource = ref(data.params)
+const dataSource = ref(form.params)
 const onChange = (val) => {
   dataSource.value = val
 }
@@ -74,12 +74,13 @@ const deleteAction = (row) => {
 }
 
 const setData = (data) => {
-  data.params = data ? data : []
+  form.params = data ? data : []
+  table.value.getData(data)
 }
 
 const getData = () => {
-  data.params = deepObjClone(dataSource.value)
-  return data.params
+  form.params = deepObjClone(dataSource.value)
+  return form.params
 }
 
 defineExpose({

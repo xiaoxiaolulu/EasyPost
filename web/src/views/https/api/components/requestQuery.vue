@@ -106,6 +106,7 @@ const addAction = (row) => {
 
 const setData = (data) => {
   query.params = data ? data : []
+  table.value.getData(data)
 }
 
 const getData = () => {
