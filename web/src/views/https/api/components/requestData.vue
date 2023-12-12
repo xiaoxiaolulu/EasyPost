@@ -73,19 +73,19 @@ const deleteAction = (row) => {
   ElMessage.success('点击删除')
 }
 
-const setData = (data) => {
+const setFormData = (data) => {
   form.params = data ? data : []
   table.value.getData(data)
 }
 
-const getData = () => {
+const getFormData = () => {
   form.params = deepObjClone(dataSource.value)
   return form.params
 }
 
 defineExpose({
-  setData,
-  getData
+  setFormData,
+  getFormData
 })
 </script>
 

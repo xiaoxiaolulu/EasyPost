@@ -45,7 +45,19 @@ class HandelTestData(object):
 
         'data': {"mobile_phone": "${{user_mobile}}", "pwd": "lemonban"},
         """
-        form_data_items = self.raw.get('data', [])
+        form_data_items = self.raw.get('form_data', [])
+        form_data = {
+            'data': {item['name']: item['value'] for item in form_data_items}
+        }
+        return form_data
+
+    def resolve_x_www_form_urlencoded(self):
+        """
+        {'data': [{'id': 912586, 'edit': False, 'visible': False, 'name': '33', 'value': '333', 'type': 'Integer', 'description': '33'}]}
+
+        'data': {"mobile_phone": "${{user_mobile}}", "pwd": "lemonban"},
+        """
+        form_data_items = self.raw.get('x_www_form_urlencoded', [])
         form_data = {
             'data': {item['name']: item['value'] for item in form_data_items}
         }
@@ -62,8 +74,12 @@ class HandelTestData(object):
         return json_data
 
     def raw_conversion(self):
-        target = self.raw.get('data', [])
-        raw_content = self.resolve_form_data() if target else self.resolve_json()
+        json_target = self.raw.get('json', [])
+        if json_target:
+            raw_content = self.resolve_json()
+        else:
+            form_target = self.raw.get('form_data', [])
+            raw_content = self.resolve_form_data() if form_target else self.resolve_x_www_form_urlencoded()
         return raw_content
 
     def resolve_script(self, use='setup_script'):

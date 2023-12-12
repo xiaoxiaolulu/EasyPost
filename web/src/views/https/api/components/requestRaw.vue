@@ -49,7 +49,7 @@
     </div>
 
     <!--raw-->
-    <div v-show="mode === 'json'">
+    <div v-show="mode === 'raw'">
       <mirror-code
           style="height: 420px"
           ref="rawRef"
@@ -94,17 +94,17 @@ const rawRef = ref()
 
 const setData = (data) => {
   data = JSON.parse(data)
-  mode.value = Object.keys(data)[0]
+  mode.value = state.languageList.includes(Object.keys(data)[0])?'raw' :Object.keys(data)[0]
   if (!data) return
   switch (mode.value) {
     case 'form_data':
-      state.formData = data.data ? data.data : []
+      state.formData = eval(data['form_data']) ? data : []
       break
     case 'x_www_form_urlencoded':
-      state.x_www_form_urlencoded = data.data ? data.data : []
-    case 'json':
-      state.rawData = data["json"]
-      state.language = mode.value
+      state.x_www_form_urlencoded = eval(data['x_www_form_urlencoded']) ? data.data : []
+    case 'raw':
+      state.rawData = data[Object.keys(data)[0]]
+      state.language = Object.keys(data)[0]
     default:
       break
   }
@@ -118,14 +118,14 @@ const radioChange = (value: any) => {
 const getData = () => {
   let requestData = {
   }
-  if (mode.value  === 'json') {
+  if (mode.value  === 'raw') {
     requestData['json'] = state.rawData
   }
   if (mode.value === 'form_data') {
-    requestData['data'] = RequestFromDataRef.value.getData()
+    requestData['form_data'] = state.formData
   }
   if (mode.value === 'x_www_form_urlencoded') {
-    requestData['data'] = RequestFormUrlencodedRef.value.getData()
+    requestData['x_www_form_urlencoded'] = state.x_www_form_urlencoded
   }
   if (mode.value === 'none') {
     requestData['data'] = null
