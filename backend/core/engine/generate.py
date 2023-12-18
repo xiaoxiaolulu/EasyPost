@@ -61,35 +61,44 @@ class GenerateCase:
         }
         """
         for index, case_ in enumerate(cases):
-            global children # noqa
-            try:
-                children = case_.get('children', None)
-            except AttributeError:
-                pass
+            mode = case_.get('mode', 'normal')
+            if mode == 'normal':
+                global children # noqa
+                try:
+                    children = case_.get('children', None)
+                except AttributeError:
+                    pass
 
-            if children:
-                if_obj = case_.get('If', None)
-                loop_obj = case_.get('Loop', None)
-                self.create_case_content(cls, children, if_obj, loop_obj)
+                if children:
+                    if_obj = case_.get('If', None)
+                    loop_obj = case_.get('Loop', None)
+                    self.create_case_content(cls, children, if_obj, loop_obj)
+                else:
+                    if_request_obj = case_.get('If', None)
+                    loop_request_obj = case_.get('Loop', None)
+
+                    # 计算当前执行用例循环次数
+                    loop_count = self.controller.loop_strategy(loop_obj, loop_request_obj)
+                    # 计算当前执行用例是否跳过
+                    if_object = self.controller.skip_strategy(if_obj, if_request_obj)
+
+                    test_name = self.create_test_name(index, len(cases))
+                    new_test_func = self.create_test_func(getattr(cls, 'step'), case_)
+                    new_test_func.__doc__ = case_.get('title') or new_test_func.__doc__
+
+                    # 循环当前用例, 默认1次
+                    self.controller.loop(loop_count, cls, test_name, new_test_func)
+
+                    test_name = [name for name in cls.__dict__.keys() if name.__contains__('test_')]
+
+                    self.controller.skipIf(if_object, cls, str(test_name.pop()))
+
             else:
-                if_request_obj = case_.get('If', None)
-                loop_request_obj = case_.get('Loop', None)
-
-                # 计算当前执行用例循环次数
-                loop_count = self.controller.loop_strategy(loop_obj, loop_request_obj)
-                # 计算当前执行用例是否跳过
-                if_object = self.controller.skip_strategy(if_obj, if_request_obj)
 
                 test_name = self.create_test_name(index, len(cases))
-                new_test_func = self.create_test_func(getattr(cls, 'step'), case_)
+                new_test_func = self.create_test_func(getattr(cls, 'perform'), case_)
                 new_test_func.__doc__ = case_.get('title') or new_test_func.__doc__
-
-                # 循环当前用例, 默认1次
-                self.controller.loop(loop_count, cls, test_name, new_test_func)
-
-                test_name = [name for name in cls.__dict__.keys() if name.__contains__('test_')]
-
-                self.controller.skipIf(if_object, cls, str(test_name.pop()))
+                setattr(cls, test_name, new_test_func)
 
     def create_test_func(self, func, case_) -> Callable[[Any], None]:
         """创建测试方法"""

@@ -37,6 +37,7 @@ class TestResult(unittest.TestResult):
         :return:
         """
         test.run_time = '{:.3}s'.format((time.time() - self.start_time))
+        test.perform = test._BaseTest__unittest_perform_response
         self.result['cases'].append(test)
         self.result['all'] += 1
         self.result["name"] = test.__class__.__name__

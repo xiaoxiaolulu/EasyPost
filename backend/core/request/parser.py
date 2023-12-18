@@ -19,12 +19,17 @@ class HandelTestData(object):
 
             # 请求体
             self.headers = json.dumps(request_body.get('headers', []))
-            self.raw = json.dumps(request_body.get('raw', []))
+            self.raw = json.dumps(request_body.get('raw', {}))
             self.params = json.dumps(request_body.get('params', []))
             self.setup_script = request_body.get('setup_script', None)
             self.teardown_script = request_body.get('teardown_script', None)
             self.validate = json.dumps(request_body.get('validate', []))
             self.extract = json.dumps(request_body.get('extract', []))
+
+            # 一键压测
+            self.mode = request_body.get('mode', 'normal')
+            self.threads = request_body.get('threads', 1)
+            self.iterations = request_body.get('iterations', 1)
         except (KeyError, ValueError, AttributeError):
             pass
 
@@ -36,7 +41,7 @@ class HandelTestData(object):
             'content-Type': "application/json"
         },
         """
-        headers = {item['name']: item['value'] for item in self.headers}
+        headers = {item['name']: item['value'] for item in json.loads(self.headers)}
         return headers
 
     def resolve_form_data(self):
@@ -45,7 +50,7 @@ class HandelTestData(object):
 
         'data': {"mobile_phone": "${{user_mobile}}", "pwd": "lemonban"},
         """
-        form_data_items = self.raw.get('form_data', [])
+        form_data_items = eval(self.raw).get('form_data', [])
         form_data = {
             'data': {item['name']: item['value'] for item in form_data_items}
         }
@@ -57,7 +62,7 @@ class HandelTestData(object):
 
         'data': {"mobile_phone": "${{user_mobile}}", "pwd": "lemonban"},
         """
-        form_data_items = self.raw.get('x_www_form_urlencoded', [])
+        form_data_items = eval(self.raw).get('x_www_form_urlencoded', [])
         form_data = {
             'data': {item['name']: item['value'] for item in form_data_items}
         }
@@ -67,18 +72,19 @@ class HandelTestData(object):
         """
         {'json': '{"$schema": "http://json-schema.org/draft-04/schema"}'}
         """
-        json_items = self.raw.get('json', [])
+        json_items = eval(self.raw).get('json', [])
         json_data = {
-            'json': json_items
+            'json': json.loads(json_items)
         }
         return json_data
 
     def raw_conversion(self):
-        json_target = self.raw.get('json', [])
+
+        json_target = eval(self.raw).get('json', [])
         if json_target:
             raw_content = self.resolve_json()
         else:
-            form_target = self.raw.get('form_data', [])
+            form_target = eval(self.raw).get('form_data', [])
             raw_content = self.resolve_form_data() if form_target else self.resolve_x_www_form_urlencoded()
         return raw_content
 
@@ -89,7 +95,6 @@ class HandelTestData(object):
         'setup_script': "print('前置脚本123')"
         """
         script = self.setup_script if use == 'setup_script' else self.teardown_script
-        script = script.get('script_code', None)
         return script
 
     def resolve_extract(self, env="env"):
@@ -101,7 +106,7 @@ class HandelTestData(object):
             # 通过正则表达式提取
         }
         """
-        extract_items = self.extract
+        extract_items = eval(self.extract)
         extract_data = {
             item['name']: (env, item['type'], item['value']) for item in extract_items
         }
@@ -117,7 +122,7 @@ class HandelTestData(object):
             'expect': '$.url'}]
         }
         """
-        validate_items = self.validate
+        validate_items = eval(self.validate)
         validate_data = [{
             'method': item['type'],
             'actual': item['value'],
@@ -157,12 +162,15 @@ class HandelTestData(object):
         }
         """
         api_doc_template = {
+            "mode": self.mode,
             "title": self.name,
             "interface": {
                 "url": self.url,
                 "name": self.name,
                 "method": self.method
             },
+            "threads": int(self.threads),
+            "iterations": int(self.iterations),
             "headers": self.resolve_headers(),
             "request": self.raw_conversion(),
             'setup_script': self.resolve_script(),
