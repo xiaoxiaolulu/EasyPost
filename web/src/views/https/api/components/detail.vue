@@ -207,6 +207,44 @@
                 <extract ref="RequestExtractor"></extract>
               </div>
             </el-tab-pane>
+            <el-tab-pane name='ApiRequestPerform'>
+              <template #label>
+                <strong>一键压测</strong>
+              </template>
+              <div>
+                <el-form :inline="true" autoComplete="on" :model="ruleForm" :rules="rules" ref="ruleFormRef"
+                         label-width="auto"
+                         label-position="right">
+                  <el-form-item label="并发数" prop="">
+                    <el-input
+                        size="default"
+                        v-model="ruleForm.threads"
+                        placeholder=""
+                    ></el-input>
+                  </el-form-item>
+                  <el-form-item label="轮次" prop="">
+                    <el-input
+                        size="default"
+                        v-model="ruleForm.iter"
+                        placeholder=""
+                    ></el-input>
+                  </el-form-item>
+                  <el-form-item>
+                    <el-button type="primary" @click="debug(ruleFormRef)">开始压测</el-button>
+                  </el-form-item>
+                </el-form>
+                <el-table :load="performLoading" :data="performData" class="custom-table" v-show="performResponseShow">
+                  <el-table-column prop="duration" label="duration"></el-table-column>
+                  <el-table-column prop="mean" label="mean"></el-table-column>
+                  <el-table-column prop="min" label="min"></el-table-column>
+                  <el-table-column prop="median" label="median"></el-table-column>
+                  <el-table-column prop="90p" label="90p"></el-table-column>
+                  <el-table-column prop="95p" label="95p"></el-table-column>
+                  <el-table-column prop="99p" label="99p"></el-table-column>
+                  <el-table-column prop="max" label="max"></el-table-column>
+                </el-table>
+              </div>
+            </el-tab-pane>
           </el-tabs>
         </div>
       </el-card>
@@ -242,7 +280,9 @@ const ruleForm = reactive({
   'method': 'POST',
   'name': '',
   'status': '',
-  'remarks': ''
+  'remarks': '',
+  'threads': '',
+  'iter': ''
 })
 
 const status = ref([{
@@ -258,6 +298,8 @@ const status = ref([{
   label: "正常",
   type: "normal"
 }])
+
+const performData = ref()
 
 const statusClass = ref()
 
@@ -278,6 +320,10 @@ const RequestValidators = ref()
 const RequestTeardown = ref()
 
 const RequestSetup = ref()
+
+const performResponseShow = ref(false)
+
+const performLoading = ref(false)
 
 const state = reactive({
   api_id: 0
@@ -400,7 +446,14 @@ const debug = (formName: FormInstance | undefined) => {
   formName.validate(async (valid) => {
     if (valid) {
       try{
-
+        let mode = 'normal'
+        if (ruleForm.iter && ruleForm.threads){
+          mode = 'perform'
+        }else {
+          mode = 'normal'
+        }
+        performLoading.value = true
+        performResponseShow.value = false
         let ApiRequestHeader = RequestHeadersRef.value.getData()
         let ApiRequestQuery = RequestQueryRef.value.getData()
         let ApiRequestBody = RequestBodyRef.value.getData()
@@ -409,6 +462,9 @@ const debug = (formName: FormInstance | undefined) => {
         let ApiRequestValidators = RequestValidators.value.getData()
         let ApiRequestExtractor = RequestExtractor.value.getData()
         let apiData = {
+          mode: mode,
+          threads: ruleForm.threads,
+          iterations: ruleForm.iter,
           directory_id: route.query.node,
           project: route.query.project,
           name: ruleForm.name,
@@ -427,6 +483,9 @@ const debug = (formName: FormInstance | undefined) => {
         }
         const ret = await runApi(apiData)
         const {code, data, msg} = ret.data
+        performData.value = [data['class_list'][0]['cases'][0]['perform']]
+        performResponseShow.value = true
+        performLoading.value = false
         showErrMessage(code.toString(), msg)
       } catch (e) {
         console.log(e)
@@ -584,5 +643,10 @@ watch(() => ruleForm.status, (newVal, oldVal) => {
 
 .api-body {
   margin-top: 20px;
+}
+
+.custom-table .cell{
+  font-size: 12px;
+  color: #7a8b9a;
 }
 </style>

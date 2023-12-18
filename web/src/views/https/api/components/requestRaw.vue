@@ -128,7 +128,7 @@ const getData = () => {
     requestData['x_www_form_urlencoded'] = state.x_www_form_urlencoded
   }
   if (mode.value === 'none') {
-    requestData['data'] = null
+    requestData['data'] = {}
   }
   return requestData
 }
