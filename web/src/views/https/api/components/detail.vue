@@ -217,20 +217,20 @@
                          label-position="right">
                   <el-form-item label="并发数" prop="">
                     <el-input
-                        size="default"
+                        size="small"
                         v-model="ruleForm.threads"
                         placeholder=""
                     ></el-input>
                   </el-form-item>
                   <el-form-item label="轮次" prop="">
                     <el-input
-                        size="default"
+                        size="small"
                         v-model="ruleForm.iter"
                         placeholder=""
                     ></el-input>
                   </el-form-item>
                   <el-form-item>
-                    <el-button type="primary" @click="debug(ruleFormRef)">开始压测</el-button>
+                    <el-button size="small" type="primary" @click="debug(ruleFormRef)">开始压测</el-button>
                   </el-form-item>
                 </el-form>
                 <el-table :load="performLoading" :data="performData" class="custom-table" v-show="performResponseShow">
