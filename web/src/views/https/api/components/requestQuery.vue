@@ -22,7 +22,7 @@
         ></el-input>
       </template>
     </el-table-column>
-    <el-table-column label="请选择类型" prop="type">
+    <el-table-column label="请选择类型" prop="type" width="160px">
       <template #default="scope">
         <el-select
             size="small"
