@@ -15,7 +15,7 @@
 
 #### 🍦 工作台
 
-![](https://static.pity.fun/picture/2022-2-28/1646063228180-image.png)
+![](https://.fun/picture/2022-2-28/1646063228180-image.png)
 
 #### 💌 支持作者
 如果觉得框架不错，或者已经在使用了，希望你可以去 <a target="_blank" href="https://github.com/xiaoxiaolulu/EasyPost">Github</a> 帮我点个 ⭐ Star，这将是对我极大的鼓励与支持, 平台会持续迭代更新。
