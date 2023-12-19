@@ -10,8 +10,6 @@
 
 <details>
 <summary>平台预览(点击可展开)</summary>
-</details>
-
 
 #### 🍦 项目管理
 
@@ -24,6 +22,8 @@
 #### 🍦 地址管理
 
 ![](https://github.com/xiaoxiaolulu/EasyPost/blob/master/backend/static/219141328.png)
+
+</details>
 
 
 #### 💌 支持作者
