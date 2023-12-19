@@ -98,10 +98,10 @@ const setData = (data) => {
   if (!data) return
   switch (mode.value) {
     case 'form_data':
-      state.formData = eval(data['form_data']) ? data : []
+      state.formData = data['form_data'] ? data : []
       break
     case 'x_www_form_urlencoded':
-      state.x_www_form_urlencoded = eval(data['x_www_form_urlencoded']) ? data.data : []
+      state.x_www_form_urlencoded = data['x_www_form_urlencoded'] ? data.data : []
     case 'raw':
       state.rawData = data[Object.keys(data)[0]]
       state.language = Object.keys(data)[0]
