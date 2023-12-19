@@ -307,33 +307,25 @@ const delete3wFormAction = (scope) => {
 const delete3wFormCurrent = (row) => {
   // pass
 }
-
 const setData = (data) => {
-  let modeObj = Object.keys(data)[0]
-  mode.value = (modeObj == 'none' || modeObj == 'form_data' || modeObj == 'x_www_form_urlencoded')?modeObj:'raw'
-  if (!data) return
-    if (mode.value === 'form_data'){
-      if (data) {
-        for (let i = 0; i < data['form_data'].length; i++) {
-          state.formData.push(data['form_data'][i])
-        }
-      } else {
-        state.formData = []
-      }
-    }
-    if (mode.value === 'x_www_form_urlencoded'){
-      if (data){
-        for (let i = 0; i < data['x_www_form_urlencoded'].length; i++) {
-          state.x_www_form_urlencoded.push(data['x_www_form_urlencoded'][i])
-        }
-      }else{
-        state.x_www_form_urlencoded = []
-      }
-    }
-    if (mode.value === 'raw') {
-      state.rawData = data[Object.keys(data)[0]]
-      state.language = Object.keys(data)[0]
-    }
+  // 获取数据的第一个键作为模式
+  const modeObj = Object.keys(data)[0];
+
+  // 根据模式设置 mode.value
+  mode.value =
+      ['none', 'form_data', 'x_www_form_urlencoded'].includes(modeObj) ? modeObj : 'raw';
+
+  if (!data) return;
+
+  // 根据 mode.value 处理数据
+  if (mode.value === 'form_data') {
+    state.formData = data['form_data'] || [];
+  } else if (mode.value === 'x_www_form_urlencoded') {
+    state.x_www_form_urlencoded = data['x_www_form_urlencoded'] || [];
+  } else if (mode.value === 'raw') {
+    state.rawData = data[Object.keys(data)[0]];
+    state.language = Object.keys(data)[0];
+  }
 }
 
 const radioChange = (value: any) => {
