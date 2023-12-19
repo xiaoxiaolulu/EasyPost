@@ -233,7 +233,7 @@
                     <el-button size="small" type="primary" @click="debug(ruleFormRef)">开始压测</el-button>
                   </el-form-item>
                 </el-form>
-                <el-table :load="performLoading" :data="performData" class="custom-table" v-show="performResponseShow">
+                <el-table v-loading="performLoading" :data="performData" class="custom-table" v-show="performResponseShow">
                   <el-table-column prop="duration" label="duration"></el-table-column>
                   <el-table-column prop="mean" label="mean"></el-table-column>
                   <el-table-column prop="min" label="min"></el-table-column>
@@ -516,8 +516,8 @@ const initApi = () => {
       RequestHeadersRef.value.setData(eval(data.headers))
       RequestQueryRef.value.setData(eval(data.params))
       RequestBodyRef.value.setData(JSON.parse(data.raw))
-      RequestExtractor.value.setData(data.extract)
-      RequestValidators.value.setData(data.validate)
+      // RequestExtractor.value.setData(data.extract)
+      // RequestValidators.value.setData(data.validate)
       RequestTeardown.value.setData(data.setup_script)
       RequestSetup.value.setData(data.teardown_script)
       showErrMessage(code.toString(), msg)
