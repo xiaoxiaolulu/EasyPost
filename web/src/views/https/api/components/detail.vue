@@ -383,10 +383,10 @@ const updateRouter = (newValue: any) => {
 
 const initializeUrl = () => {
   // 初始化逻辑
-  if(ruleForm.url.includes('?')){
-    ruleForm.url = ruleForm.url.split('?')[0]
-  }
-  console.log('Initialized:', ruleForm.url);
+  // if(ruleForm.url.includes('?')){
+  //   ruleForm.url = ruleForm.url.split('?')[0]
+  // }
+  // console.log('Initialized:', ruleForm.url);
 };
 
 const updateContentType = (mode: any, language: any, remove: any) => {
@@ -515,7 +515,7 @@ const initApi = () => {
       ruleForm.remarks = data.desc
       RequestHeadersRef.value.setData(eval(data.headers))
       RequestQueryRef.value.setData(eval(data.params))
-      RequestBodyRef.value.setData(data.raw)
+      RequestBodyRef.value.setData(JSON.parse(data.raw))
       RequestExtractor.value.setData(data.extract)
       RequestValidators.value.setData(data.validate)
       RequestTeardown.value.setData(data.setup_script)
