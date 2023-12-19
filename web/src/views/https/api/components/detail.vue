@@ -248,6 +248,32 @@
           </el-tabs>
         </div>
       </el-card>
+
+      <el-card style="margin-top: 20px">
+        <template #header>
+          <div style="display: flex; justify-content: space-between">
+            <div>
+              <strong>响应面板</strong>
+            </div>
+            <div style="font-size: 12px">
+              <span style="padding-left: 10px">
+                <span style="color:#67c23a">
+                  200 OK
+                </span>
+              </span>
+              <span style="padding-left: 10px">
+                Time: <span style="color:#67c23a;">100 ms</span>
+              </span>
+              <span style="padding-left: 10px">
+                Size:<span style="color:#67c23a;">100kb</span>
+              </span>
+            </div>
+          </div>
+        </template>
+        <div style="height: 500px; overflow-y: auto">
+          <response-report></response-report>
+        </div>
+      </el-card>
     </div>
   </div>
 </template>
@@ -265,6 +291,7 @@ import Validator from "@/views/https/api/components/validator.vue";
 import ApiScript from "@/views/https/api/components/apiScript.vue";
 import {saveOrUpdate, runApi, getHttpDetail} from "@/api/http";
 import {showErrMessage} from "@/utils/element";
+import ResponseReport from "@/views/https/api/components/responseReport.vue";
 
 const route = useRoute()
 const router = useRouter()
@@ -522,19 +549,6 @@ const initApi = () => {
       RequestSetup.value.setData(data.teardown_script)
       showErrMessage(code.toString(), msg)
     })
-  } else {
-    // ruleForm.url = ""
-    // ruleForm.method = "POST"
-    // ruleForm.name = ""
-    // ruleForm.status = ""
-    // ruleForm.remarks = ""
-    // RequestHeadersRef.value = []
-    // RequestQueryRef.value = []
-    // RequestBodyRef.value.setData()
-    // RequestExtractor.value = []
-    // RequestValidators.value = []
-    // RequestTeardown.value = ""
-    // RequestSetup.value = ""
   }
 }
 
