@@ -60,7 +60,7 @@ class HandelTestData(object):
         """
         {'data': [{'id': 912586, 'edit': False, 'visible': False, 'name': '33', 'value': '333', 'type': 'Integer', 'description': '33'}]}
 
-        'data': {"mobile_phone": "${{user_mobile}}", "pwd": "lemonban"},
+        'data': {"mobile_phone": "${{user_mobile}}", "pwd": "llll"},
         """
         form_data_items = eval(self.raw).get('x_www_form_urlencoded', [])
         form_data = {

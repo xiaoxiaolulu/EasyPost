@@ -1,3 +1,4 @@
+import json
 from api.response.fatcory import ResponseStandard
 from core.engine.session_runner import run_test, run_api
 
@@ -171,7 +172,7 @@ if __name__ == '__main__':
     # r = json.dumps(ResponseStandard.encode_json(result), ensure_ascii=False)
     # print(r)
     result = run_api(api_data)
-    import json
+
 
     r = json.dumps(ResponseStandard.encode_json(result), ensure_ascii=False)
     print(r)
