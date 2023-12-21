@@ -78,9 +78,8 @@ import {ElMessage, ElMessageBox, ElTree} from "element-plus";
 import groupDialog from './groupDialog.vue'
 import {Plus, Sort, Folder, More, Delete, Edit} from "@element-plus/icons-vue";
 import {getTree} from "@/api/http";
-import {projectList} from "@/api/project";
 
-const emit = defineEmits(['change'])
+const emit = defineEmits(['change', 'switch'])
 
 const tableData = ref<Tree[]>()
 const dialog = ref(null)
@@ -119,27 +118,19 @@ const maxId = ref()
 
 const queryParams = ref({})
 
-const getProjectList = () => {
-
-  projectList({}).then((res) => {
-    let projectList = res.data.results;
-    for (let i = 0; i < projectList.length; i++) {
-      projectOption.value.push({
-        "label": projectList[i]["name"],
-        "value": projectList[i]["id"],
-        "avatar": projectList[i]["avatar"]
-      })
-    }
-    currentProjectName.value = projectList[0]["name"]
-    currentProject.value = projectList[0]["id"]
-    currentAvatar.value = projectList[0]["avatar"]
-    switchProjectItem.value = false
-    queryParams.value['currentProject'] = projectList[0]["id"]
-
-    queryList()
-  }).catch((error) => {
-    ElMessage.error("获取项目列表数据失败")
-  })
+const setProjectList = (data) => {
+  for (let i = 0; i < data.length; i++) {
+    projectOption.value.push({
+      "label": data[i]["name"],
+      "value": data[i]["id"],
+      "avatar": data[i]["avatar"]
+    })
+  }
+  currentProjectName.value = data[0]["name"]
+  currentProject.value = data[0]["id"]
+  currentAvatar.value = data[0]["avatar"]
+  switchProjectItem.value = false
+  queryParams.value['currentProject'] = data[0]["id"]
 }
 
 const queryList = () => {
@@ -153,8 +144,6 @@ const queryList = () => {
   })
 }
 
-getProjectList()
-
 // 监听输入
 watch(filterText, (val) => {
   treeRef.value!.filter(val)
@@ -167,6 +156,8 @@ watch(projectItem, (value) => {
   currentProject.value = currentProjectList[1]
   currentAvatar.value = currentProjectList[2]
   queryList()
+  emit('switch', currentProject)
+  console.log('switch current ===========', currentProject.value)
 })
 
 // 搜索
@@ -242,6 +233,11 @@ const remove = (node: any, data: any) => {
   })
   console.log('data===', node, data)
 }
+
+defineExpose({
+  queryList,
+  setProjectList
+})
 </script>
 
 <style lang="scss" scoped>

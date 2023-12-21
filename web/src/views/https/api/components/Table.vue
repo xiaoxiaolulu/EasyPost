@@ -100,7 +100,7 @@ const queryParams = reactive({
   name: '',
   page: 1,
   project: '',
-  node: ''
+  node: '1'
 })
 
 const count = ref(0)
@@ -133,6 +133,10 @@ const queryList = () => {
     console.log(error.response)
     ElMessage.error("获取接口列表数据失败;请重试！")
   })
+}
+
+const setCurrentProject = (data) => {
+  queryParams.project = data ? data : ''
 }
 
 const getList = (data) => {
@@ -216,6 +220,7 @@ const handleCurrentChange = (val: number) => {
   currentPage1.value = val
 }
 
+
 onMounted(() => {
   setTimeout(() => {
     loading.value = false
@@ -223,7 +228,9 @@ onMounted(() => {
 })
 
 defineExpose({
-  getList
+  getList,
+  setCurrentProject,
+  queryList
 })
 </script>
 <style lang="scss" scoped>
