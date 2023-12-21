@@ -76,6 +76,7 @@ app_urls = [
     path('http/run', RunApiView.as_view())
 ]
 
+
 # Final URL configuration
 app_name = "api"
 urlpatterns = app_urls + router.urls
