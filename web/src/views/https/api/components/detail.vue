@@ -78,32 +78,15 @@
                     </el-option>
                   </el-select>
                 </el-form-item>
-                <el-form-item label="接口标签" prop="tag">
-                  <!--                  <el-tag-->
-                  <!--                      v-for="tag in state.form.tags"-->
-                  <!--                      :key="tag"-->
-                  <!--                      size="default"-->
-                  <!--                      type="success"-->
-                  <!--                      closable-->
-                  <!--                      style="{margin-left: 0.25rem;margin-right: 0.25rem;}"-->
-                  <!--                      :disable-transitions="false"-->
-                  <!--                      @close="removeTag(tag)"-->
-                  <!--                  >{{ tag }}-->
-                  <!--                  </el-tag>-->
-
-                  <!--                  <el-input-->
-                  <!--                      v-if="state.editTag"-->
-                  <!--                      ref="caseTagInputRef"-->
-                  <!--                      v-model="state.tagValue"-->
-                  <!--                      class="ml-1 w-20"-->
-                  <!--                      size="small"-->
-                  <!--                      @keyup.enter="addTag"-->
-                  <!--                      @blur="addTag"-->
-                  <!--                      style="width: 100px"-->
-                  <!--                  />-->
-                  <el-button size="small">
-                    + New Tag
-                  </el-button>
+                <el-form-item label="优先级" prop="priority">
+                  <el-select v-model="ruleForm.priority" filterable placeholder="请选择接口当前状态" size="small">
+                    <el-option
+                        v-for="item in priority"
+                        :key="item.value"
+                        :label="item.label"
+                        :value="item.value">
+                    </el-option>
+                  </el-select>
                 </el-form-item>
               </el-col>
               <el-col style="margin-bottom: 20px">
@@ -309,8 +292,26 @@ const ruleForm = reactive({
   'status': '',
   'remarks': '',
   'threads': '',
-  'iter': ''
+  'iter': '',
+  'priority': '',
 })
+
+const priority = ref([{
+  value: 0,
+  label: "P0"
+}, {
+  value: 1,
+  label: "P1"
+}, {
+  value: 2,
+  label: "P2"
+}, {
+  value: 3,
+  label: "P3"
+}, {
+  value: 4,
+  label: "P4"
+}])
 
 const status = ref([{
   value: 0,
@@ -441,7 +442,7 @@ const onSureClick = (formName: FormInstance | undefined) => {
           name: ruleForm.name,
           url: ruleForm.url,
           method: ruleForm.method,
-          tags: '',
+          priority: ruleForm.priority,
           status: ruleForm.status,
           desc: ruleForm.remarks,
           headers: ApiRequestHeader,
