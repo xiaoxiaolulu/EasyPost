@@ -55,3 +55,11 @@ export function getHttpDetail(data: any) {
         data
     })
 }
+
+export function deleteHttp(data: any) {
+    return request({
+        url: `/api/http/delete/${data.id}`,
+        method: 'delete',
+        data
+    })
+}

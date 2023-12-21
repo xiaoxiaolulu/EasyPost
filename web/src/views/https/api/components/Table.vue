@@ -31,7 +31,7 @@
           </el-table-column>
           <el-table-column prop="method" label="请求方式" align="center" width="150">
             <template #default="scope">
-              <el-tag v-show="tag.name === scope.row.method" v-for="tag in methods" :key="tag.id">
+              <el-tag v-show="tag.name === scope.row.method" v-for="tag in methods" :key="tag.id" :type="tag.type">
                 {{ scope.row.method }}
               </el-tag>
             </template>
@@ -82,8 +82,9 @@ import {ElMessageBox, ElMessage, FormInstance, ElPagination} from 'element-plus'
 import {Search, Plus} from '@element-plus/icons-vue'
 import {onMounted, reactive, ref} from 'vue'
 import {useRouter} from "vue-router";
-import {getHttpList} from "@/api/http";
+import {getHttpList, deleteHttp} from "@/api/http";
 import {parseTime} from "@/utils";
+import {showErrMessage} from "@/utils/element";
 
 
 const tableData = ref([])
@@ -112,10 +113,10 @@ const tags =  reactive([
 ])
 
 const methods = reactive([
-  { id: 0, type: 'primary', name: 'POST' },
+  { id: 0, type: '', name: 'POST' },
   { id: 1, type: 'success', name: 'GET' },
   { id: 2, type: 'warning', name: 'PUT' },
-  { id: 3, type: 'danger', name: 'DELETED' }
+  { id: 3, type: 'danger', name: 'DELETE' }
 ])
 
 const reset = (formEl: FormInstance | undefined) => {
@@ -189,11 +190,15 @@ const del = (row) => {
     cancelButtonText: '取消',
     type: 'warning',
     draggable: true,
+  }).then(() => {
+    deleteHttp({id: row.id}).then((response) => {
+      const {data, code, msg} = response.data
+      showErrMessage(code.toString(), msg)
+      queryList();
+    })
+  }).catch(() => {
+    ElMessage.error("接口删除失败请重试");
   })
-      .then(() => {
-      })
-      .catch(() => {
-      })
 }
 const changeStatus = (row) => {
   ElMessageBox.confirm(
