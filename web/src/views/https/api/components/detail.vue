@@ -232,7 +232,7 @@
         </div>
       </el-card>
 
-      <el-card style="margin-top: 20px">
+      <el-card style="margin-top: 20px" v-show="responseReport">
         <template #header>
           <div style="display: flex; justify-content: space-between">
             <div>
@@ -241,20 +241,17 @@
             <div style="font-size: 12px">
               <span style="padding-left: 10px">
                 <span style="color:#67c23a">
-                  200 OK
+                  {{statusCode}}
                 </span>
               </span>
               <span style="padding-left: 10px">
-                Time: <span style="color:#67c23a;">100 ms</span>
-              </span>
-              <span style="padding-left: 10px">
-                Size:<span style="color:#67c23a;">100kb</span>
+                Time: <span style="color:#67c23a;">{{runTime}}</span>
               </span>
             </div>
           </div>
         </template>
         <div style="height: 500px; overflow-y: auto">
-          <response-report></response-report>
+          <response-report ref="ResponseRef"></response-report>
         </div>
       </el-card>
     </div>
@@ -264,7 +261,7 @@
 <script setup lang="ts">
 import {ArrowDown, ArrowUp, Back} from "@element-plus/icons-vue";
 import {useRoute, useRouter} from "vue-router";
-import {computed, onMounted, reactive, ref, watch} from "vue";
+import {computed, onMounted, reactive, ref, watch, nextTick} from "vue";
 import {ElMessage, FormInstance} from "element-plus";
 import RequestRaw from "@/views/https/api/components/requestRaw.vue";
 import RequestQuery from "@/views/https/api/components/requestQuery.vue";
@@ -280,6 +277,8 @@ const route = useRoute()
 const router = useRouter()
 
 const methodRef = ref()
+
+const responseReport = ref(false)
 
 const methodList = ['POST', "GET", "PUT", "DELETE"]
 
@@ -329,11 +328,17 @@ const status = ref([{
 
 const performData = ref()
 
+const statusCode = ref()
+
 const statusClass = ref()
+
+const runTime = ref()
 
 const showSetting = ref(false)
 
 const activeName =  ref('ApiRequestBody')
+
+const ResponseRef = ref()
 
 const RequestHeadersRef = ref()
 
@@ -364,6 +369,18 @@ const settings = computed(() => {
     return "收起设置";
   }
 })
+
+const toResponse = () => {
+  nextTick(() => {
+    ResponseRef.value.$el.scrollIntoView({
+      behavior: "smooth",
+      // 定义动画过渡效果， "auto"或 "smooth" 之一。默认为 "auto"
+      block: "center",
+      // 定义垂直方向的对齐， "start", "center", "end", 或 "nearest"之一。默认为 "start"
+      inline: "nearest"
+    })
+  })
+}
 
 const closeSetting = () => {
   showSetting.value = !showSetting.value
@@ -511,9 +528,15 @@ const debug = (formName: FormInstance | undefined) => {
         }
         const ret = await runApi(apiData)
         const {code, data, msg} = ret.data
-        performData.value = [data['class_list'][0]['cases'][0]['perform']]
+        const res = data['class_list'][0]['cases'][0]
+        statusCode.value = res['status_code']
+        runTime.value = res['run_time']
+        ResponseRef.value.setData(res)
+        performData.value = [res['perform']]
         performResponseShow.value = true
         performLoading.value = false
+        responseReport.value = true
+        toResponse()
         showErrMessage(code.toString(), msg)
       } catch (e) {
         console.log(e)

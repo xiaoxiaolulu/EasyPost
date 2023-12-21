@@ -27,6 +27,7 @@
 #### 🍦 接口管理
 
 ![](https://github.com/xiaoxiaolulu/EasyPost/blob/master/backend/static/221134334.png)
+![](https://github.com/xiaoxiaolulu/EasyPost/blob/master/backend/static/1221160034.png)
 
 </details>
 

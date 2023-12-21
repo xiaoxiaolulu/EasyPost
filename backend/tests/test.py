@@ -138,7 +138,7 @@ if __name__ == '__main__':
     api_data =  {
                                 #"If": {"condition": 100 > 99},
                                 #'Loop':2,
-                                "mode": "perform",
+                                # "mode": "perform",
                                 "title": "测试用例2",
                                 "threads": 1,
                                 "iterations": 1,

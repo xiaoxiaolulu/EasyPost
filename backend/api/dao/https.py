@@ -67,7 +67,7 @@ class HttpDao:
             'directory_id': api.directory_id,
             'method': api.method,
             'url': api.url,
-            'tags': api.tags,
+            'priority': api.priority,
             'status': api.status,
             'desc': api.desc,
             'headers': api.headers,

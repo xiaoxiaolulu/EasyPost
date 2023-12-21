@@ -37,10 +37,10 @@ class TestResult(unittest.TestResult):
         :return:
         """
         test.run_time = '{:.3}s'.format((time.time() - self.start_time))
-        test.perform = test._BaseTest__unittest_perform_response
         self.result['cases'].append(test)
         self.result['all'] += 1
         self.result["name"] = test.__class__.__name__
+        test.perform = test._BaseTest__unittest_perform_response
 
     def stopTestRun(self, title=None):
         """
@@ -92,7 +92,7 @@ class TestResult(unittest.TestResult):
         test.tag = f'循环{count}次' if count else '-'
         getattr(test, 'error_log')(str(err[1]))
         getattr(test, 'error_log')("{}执行——>【错误Error】\n".format(getattr(test, '_testMethodDoc')))
-        getattr(test, 'error_log')(''.join(traceback.format_exception(*err)))
+        getattr(test, 'error_log')('\n'.join(traceback.format_exception(*err)))
 
     def addSkip(self, test, reason):
         """
