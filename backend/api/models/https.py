@@ -117,12 +117,39 @@ class Case(Model):
     threads = CharField(max_length=50, null=True, blank=True, verbose_name=_('Case Name'))
     desc = TextField(null=True, blank=True, verbose_name=_('Case Desc'))
     user = ForeignKey(User, related_name="case_creator", null=True, on_delete=SET_NULL, verbose_name=_('User'))
-    step = ManyToManyField(Api)
     create_time = DateTimeField(auto_now_add=True, verbose_name=_('Case CreateTime'))
     update_time = DateTimeField(auto_now=True, verbose_name=_('Case UpdateTime'))
 
     class Meta:
         verbose_name = _('Case')
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.name
+
+
+class Step(Model):
+
+    id = AutoField(primary_key=True)
+    sort = CharField(max_length=50, null=True, blank=True, verbose_name=_('Step Sort'))
+    name = CharField(max_length=50, null=True, blank=True, verbose_name=_('Step Name'))
+    method = CharField(max_length=50, null=True, blank=True, verbose_name=_('Step Method'))
+    url = TextField(verbose_name=_('Step Url'), null=False, default=None)
+    desc = TextField(null=True, blank=True, verbose_name=_('Step Desc'))
+    headers = TextField(verbose_name=_('Step Headers'), null=False, default=None)
+    params = TextField(verbose_name=_('Step Params'), null=False, default=None)
+    raw = TextField(verbose_name=_('Step raw'), null=False,  default=None)
+    setup_script = TextField(verbose_name=_('Step SetupScript'), null=False,  default=None)
+    teardown_script = TextField(verbose_name=_('Step TeardownScript'), null=False, default=None)
+    validate = TextField(verbose_name=_('Step Validate'), null=False, default=None)
+    extract = TextField(verbose_name=_('Step Extract'), null=False, default=None)
+    case = ForeignKey(Case, null=True, on_delete=SET_NULL, related_name='step', verbose_name=_('Case'))
+    user = ForeignKey(User, related_name="step_creator", null=True, on_delete=SET_NULL, verbose_name=_('User'))
+    create_time = DateTimeField(auto_now_add=True, verbose_name=_('Step CreateTime'))
+    update_time = DateTimeField(auto_now=True, verbose_name=_('Step UpdateTime'))
+
+    class Meta:
+        verbose_name = _('Step')
         verbose_name_plural = verbose_name
 
     def __str__(self):
