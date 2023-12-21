@@ -27,13 +27,14 @@ class Defaults(object):
         (2, 2)
     )
 
-    BODY_TYPE = 0
+    PRIORITY_TYPE = 0
 
-    BODY_TYPE_CHOICES = (
+    PRIORITY_TYPE_CHOICES = (
         (0, 0),
         (1, 1),
         (2, 2),
-        (3, 3)
+        (3, 3),
+        (4, 4)
     )
 
 
@@ -70,7 +71,6 @@ class Api(Model):
     * request_method: 请求类型
     * url: 路由
     * request_headers: 请求头
-    * body_type: 请求体类型 none 0 json 1 data 2 params 3
     * body: 请求体
     * directory_id: 目录id
     """
@@ -80,7 +80,8 @@ class Api(Model):
     directory_id = CharField(max_length=50, null=True, blank=True, verbose_name=_('Api DirectoryId'))
     method = CharField(max_length=50, null=True, blank=True, verbose_name=_('Api Method'))
     url = TextField(verbose_name=_('Api Url'), null=False, default=None)
-    tags = TextField(verbose_name=_('Api Tags'), null=False, default=None)
+    priority = CharField(max_length=50, verbose_name=_('Api Priority'), choices=Defaults.PRIORITY_TYPE_CHOICES,
+                       default=Defaults.PRIORITY_TYPE)
     status = CharField(max_length=50, verbose_name=_('Api Status'), choices=Defaults.STATUS_CHOICES,
                        default=Defaults.STATUS_TYPE)
     desc = TextField(null=True, blank=True, verbose_name=_('Api Desc'))

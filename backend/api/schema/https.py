@@ -23,6 +23,8 @@ class ApiSerializer(serializers.ModelSerializer):
     class Meta:
         model = Api
         fields = '__all__'
-        read_only_fields = ('name', 'project', 'gateway', 'request_method', 'url',
-                            'request_headers', 'body_type', 'params', 'body',
-                            'directory_id', 'user', 'create_time', 'update_time')
+        read_only_fields = ('name', 'project', 'directory_id', 'method', 'url',
+                            'headers', 'priority', 'params', 'raw', 'status',
+                            'priority', 'user', 'create_time', 'update_time',
+                            'desc', 'setup_script', 'teardown_script', 'validate',
+                            'extract')

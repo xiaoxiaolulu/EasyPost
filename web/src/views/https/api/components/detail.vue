@@ -47,7 +47,7 @@
           <el-col :xs="6" :sm="6" :md="6" :lg="6" :xl="6">
             <div style="padding-left: 12px">
               <el-button type="primary" @click="onSureClick(ruleFormRef)">保存</el-button>
-              <el-button @click="debug(ruleFormRef)">调试</el-button>
+              <el-button type="success" @click="debug(ruleFormRef)">调试</el-button>
             </div>
           </el-col>
         </el-row>
