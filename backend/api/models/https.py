@@ -7,7 +7,8 @@ from django.db.models import (
     CharField,
     DateTimeField,
     SET_NULL,
-    AutoField
+    AutoField,
+    ManyToManyField
 )
 from api.models.project import Project
 from django.utils.translation import gettext_lazy as _
@@ -98,6 +99,30 @@ class Api(Model):
 
     class Meta:
         verbose_name = _('Api')
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.name
+
+
+class Case(Model):
+
+    id = AutoField(primary_key=True)
+    name = CharField(max_length=50, null=True, blank=True, verbose_name=_('Case Name'))
+    project = ForeignKey(Project, on_delete=CASCADE, db_constraint=False)
+    directory_id = CharField(max_length=50, null=True, blank=True, verbose_name=_('Case DirectoryId'))
+    priority = CharField(max_length=50, verbose_name=_('Case Priority'), choices=Defaults.PRIORITY_TYPE_CHOICES,
+                         default=Defaults.PRIORITY_TYPE)
+    rerun = CharField(max_length=50, null=True, blank=True, verbose_name=_('Case Name'))
+    threads = CharField(max_length=50, null=True, blank=True, verbose_name=_('Case Name'))
+    desc = TextField(null=True, blank=True, verbose_name=_('Case Desc'))
+    user = ForeignKey(User, related_name="case_creator", null=True, on_delete=SET_NULL, verbose_name=_('User'))
+    step = ManyToManyField(Api)
+    create_time = DateTimeField(auto_now_add=True, verbose_name=_('Case CreateTime'))
+    update_time = DateTimeField(auto_now=True, verbose_name=_('Case UpdateTime'))
+
+    class Meta:
+        verbose_name = _('Case')
         verbose_name_plural = verbose_name
 
     def __str__(self):
