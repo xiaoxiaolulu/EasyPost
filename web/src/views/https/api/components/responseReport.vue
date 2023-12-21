@@ -25,8 +25,7 @@
       state.headers = JSON.parse(data['requests_header'])
     }
   }
-
-
+  
   defineExpose({
     setData
   })
