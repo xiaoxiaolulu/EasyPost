@@ -24,7 +24,12 @@ const httpsRouter = [{
             name: 'httpDetail',
             hidden: true,
             meta: { title: '接口详情', icon: 'FolderRemove'  }
-        }
+        },{
+            path: '/https/case',
+            component: () => import('@/views/https/case/index.vue'),
+            name: 'case',
+            meta: { title: '接口用例', icon: 'Lightning'  }
+        },
     ]
 }]
 
