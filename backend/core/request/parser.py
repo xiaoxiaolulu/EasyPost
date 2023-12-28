@@ -162,20 +162,20 @@ class HandelTestData(object):
         }
         """
         api_doc_template = {
-            # "mode": self.mode,
+            "mode": self.mode,
             "title": self.name,
             "interface": {
                 "url": self.url,
                 "name": self.name,
                 "method": self.method
             },
-            # "threads": int(self.threads),
-            # "iterations": int(self.iterations),
+            "threads": int(self.threads),
+            "iterations": int(self.iterations),
             "headers": self.resolve_headers(),
             "request": self.raw_conversion(),
-            # 'setup_script': self.resolve_script(),
-            # 'teardown_script':  self.resolve_script('teardown_script'),
-            # 'extract': self.resolve_extract(),
-            # 'validators': self.resolve_validators()
+            'setup_script': self.resolve_script(),
+            'teardown_script':  self.resolve_script('teardown_script'),
+            'extract': self.resolve_extract(),
+            'validators': self.resolve_validators()
         }
         return api_doc_template

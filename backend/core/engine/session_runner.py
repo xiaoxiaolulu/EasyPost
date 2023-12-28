@@ -9,7 +9,7 @@ from core.engine.runner import TestRunner
 try:
     global_func = importlib.import_module('global_func')
 except ModuleNotFoundError:
-    from utils import builtin as global_func
+    from core.builitin import functions as global_func
 
 
 def run_test(case_data, env_config={}, tester='测试员', thread_count=1, debug=True) -> tuple[Any, dict[Any, Any]] | Any: # noqa

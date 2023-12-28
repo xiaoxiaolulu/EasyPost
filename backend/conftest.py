@@ -4,7 +4,7 @@ import types
 from _pytest.python import Module
 from config.settings import BASE_DIR
 from core.engine.engine import PytestRunner
-from utils import builtin
+from core.builitin import functions
 from utils.log import set_log_format
 
 
@@ -51,5 +51,5 @@ def func2():
     print('-----------------后置条件----------------------')
 
 
-builtin.func1 = func1
-builtin.func2 = func2
+functions.func1 = func1
+functions.func2 = func2

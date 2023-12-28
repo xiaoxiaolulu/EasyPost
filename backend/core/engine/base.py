@@ -1,4 +1,5 @@
 import time
+import numpy as np
 from pymeter.api.config import (
     TestPlan,
     ThreadGroupSimple
@@ -35,18 +36,19 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         self.info_log('强制等待:{}秒\n'.format(second))
 
     @staticmethod
-    def skipIf(if_obj, cls, test_name):
+    def skipIf(_condition, cls, test_name):
         """
         条件控制器
         """
-        if if_obj:
-            test_item = getattr(cls, test_name)
-            condition = if_obj.get('condition', True)
-            reason = if_obj.get('reason', '跳过')
+        test_item = getattr(cls, test_name)
 
-            if condition:
+        try:
+            if _condition:
                 test_item.__unittest_skip__ = True
-                test_item.__unittest_skip_why__ = reason
+                test_item.__unittest_skip_why__ = 'Skip'
+            return test_item
+
+        except (AttributeError, ):
             return test_item
 
     def loop(self, loop_obj, cls, test_name, new_test_func):
@@ -54,9 +56,9 @@ class BaseTest(unittest.TestCase, CaseRunLog):
 
         count = 1 if loop_obj is None else loop_obj # noqa
         for c in range(int(count)):
-            tag = f'_NoLooP_' if loop_obj is None else f'_Loop_{c + 1}'  # noqa
-            self.info_log('用例第{}次循环\n'.format(c+1))
-            setattr(cls, test_name + tag, new_test_func)
+            tag = f'_NoLooP_' if loop_obj is None else f'_Loop_{c + 1}'
+            setattr(cls, f"{test_name + tag}", new_test_func)
+            self.info_log('用例第{}次循环\n'.format(c + 1))
 
     def save_env_variable(self, name, value) -> None:
         """
@@ -100,38 +102,25 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         del ENV[name]
 
     @staticmethod
-    def loop_strategy(before, after):
+    def loop_strategy(loop):
         """
         循环控制器策略
         """
-
-        global count # noqa
-
-        if before is None:
-            count = after
-        if before is not None:
-            count = before
-        if before is not None and after is not None:
-            count = before * after
-
+        arr = np.array(loop)
+        count = np.prod(arr)
         return count
 
     @staticmethod
-    def skip_strategy(before, after):
+    def skip_strategy(condition):
         """
         if控制器策略
         """
 
-        global tag # noqa
-
-        if before is None:
-            tag = after
-        if before is not None:
-            tag = before
-        if before is not None and after is not None:
-            tag = before if before.get('condition') is True else after
-
-        return tag
+        tag = [_condition['condition'] for _condition in condition]
+        if False not in tag:
+            return True
+        else:
+            return False
 
     @classmethod
     def setUpClass(cls) -> None:

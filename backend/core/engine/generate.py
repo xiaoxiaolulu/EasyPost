@@ -42,6 +42,7 @@ class GenerateCase:
         cases = item.get('cases', None)
 
         collections = cases if cases is not None else [item]
+
         # 创建测试类
         cls = type(cls_name, (BaseTest,), {})
         # 遍历数据生成,动态添加测试方法
@@ -49,7 +50,7 @@ class GenerateCase:
 
         return cls
 
-    def create_case_content(self, cls, cases, if_obj=None, loop_obj=None):
+    def create_case_content(self, cls, cases, skip_collections: list = [], loop_collections: list = []):
         """
         生成用例内容模版, 目前支持嵌套循环控制器与if控制器(不超过2层)
         {
@@ -70,17 +71,22 @@ class GenerateCase:
                     pass
 
                 if children:
-                    if_obj = case_.get('If', None)
-                    loop_obj = case_.get('Loop', None)
-                    self.create_case_content(cls, children, if_obj, loop_obj)
+                    skip_after = case_.get('If', {'condition': False})
+                    loop_after = case_.get('Loop', 1)
+                    skip_collections.append(skip_after)
+                    loop_collections.append(loop_after)
+
+                    self.create_case_content(cls, children, skip_collections, loop_collections)
                 else:
-                    if_request_obj = case_.get('If', None)
-                    loop_request_obj = case_.get('Loop', None)
+                    if_before = case_.get('If', {'condition': False})
+                    loop_before = case_.get('Loop', 1)
+                    skip_collections.append(if_before)
+                    loop_collections.append(loop_before)
 
                     # 计算当前执行用例循环次数
-                    loop_count = self.controller.loop_strategy(loop_obj, loop_request_obj)
+                    loop_count = self.controller.loop_strategy(loop_collections)
                     # 计算当前执行用例是否跳过
-                    if_object = self.controller.skip_strategy(if_obj, if_request_obj)
+                    if_object = self.controller.skip_strategy(skip_collections)
 
                     test_name = self.create_test_name(index, len(cases))
                     new_test_func = self.create_test_func(getattr(cls, 'step'), case_)

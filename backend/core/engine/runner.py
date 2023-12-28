@@ -40,7 +40,7 @@ class TestResult(unittest.TestResult):
         self.result['cases'].append(test)
         self.result['all'] += 1
         self.result["name"] = test.__class__.__name__
-        test.perform = test._BaseTest__unittest_perform_response
+        # test.perform = test._BaseTest__unittest_perform_response
 
     def stopTestRun(self, title=None):
         """
@@ -157,7 +157,7 @@ class ReRunResult(TestResult):
             test.count = 0
         if test.count < self.count:
             test.count += 1
-            getattr(test, 'error_log')("{}执行——>【错误Error】\n".format(test))
+            getattr(test, 'error_log')("{}执行——>【错误Error】\n".format(getattr(test, '_testMethodDoc')))
             getattr(test, 'exception_log')(err[1])
             getattr(test, 'error_log')("================{}重运行第{}次================\n".format(test, test.count))
             time.sleep(self.interval)

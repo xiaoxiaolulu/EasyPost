@@ -1,4 +1,6 @@
+from contextlib import closing
 import MySQLdb
+from utils.log import log
 
 
 class DBMysql:
@@ -48,3 +50,20 @@ class DBClient:
         """断开连接"""
         for db in list(self.__dict__.keys()):
             delattr(self, db)
+
+    def is_connect(self, config) -> bool:
+
+        try:
+            with closing(MySQLdb.connect(**config)) as conn:
+
+                if isinstance(conn, MySQLdb.connections.Connection):
+                    log.info(f'mysql connect success -> {config.get("db")}')
+                    return True
+        except Exception as err:
+            log.error(f"mysql connect error -> {err}")
+            return False
+        finally:
+            try:
+                self.close_connect()
+            except AttributeError:
+                pass
