@@ -25,19 +25,19 @@
               </div>
             </template>
             <div>
-              <el-form :inline="true" autoComplete="on" :model="ruleForm" :rules="rules" ref="ruleFormRef"
+              <el-form :inline="true" autoComplete="on" :model="state.form" :rules="rules" ref="ruleFormRef"
                        label-width="auto"
                        label-position="top"
                        size="small"
               >
                 <el-form-item label="用例名称：" prop="name">
-                  <el-input v-model.trim="ruleForm.name"
+                  <el-input v-model.trim="state.form.name"
                             style="width: 100%;"
                             size="small"
                             placeholder="请输入用例名称"></el-input>
                 </el-form-item>
                 <el-form-item label="优先级：" prop="priority">
-                  <el-select v-model="ruleForm.priority" filterable placeholder="请选择接口当前状态" size="small">
+                  <el-select v-model="state.form.priority" filterable placeholder="请选择接口当前状态" size="small">
                     <el-option
                         v-for="item in priority"
                         :key="item.value"
@@ -47,7 +47,7 @@
                   </el-select>
                 </el-form-item>
                 <el-form-item label="描述：" prop="">
-                  <el-input v-model.trim="ruleForm.remarks"
+                  <el-input v-model.trim="state.form.remarks"
                             style="width: 100%;"
                             size="small"
                             placeholder="请输入用例描述"></el-input>
@@ -83,12 +83,17 @@
                            :style="{color:getStepTypeInfo(key,'color')}"></i>
                         {{ value }}
                       </el-dropdown-item>
-
                     </el-dropdown-menu>
                   </template>
                 </el-dropdown>
               </div>
             </div>
+            <step
+                ref="stepControllerRef"
+                use_type="case"
+                style="margin-bottom: 10px"
+                v-model:steps="state.form.step_data">
+            </step>
           </el-card>
         </el-col>
       </el-row>
@@ -104,23 +109,21 @@ import {ElMessage, FormInstance} from "element-plus";
 import {saveOrUpdate, runApi, getHttpDetail} from "@/api/http";
 import {showErrMessage} from "@/utils/element";
 import {getStepTypesByUse, getStepTypeInfo} from '@/utils/index'
+import Step from "@/views/https/case/components/step.vue";
 
 const route = useRoute()
 const router = useRouter()
 
-const methodRef = ref()
-
-const responseReport = ref(false)
-
-const methodList = ['POST', "GET", "PUT", "DELETE"]
-
 const ruleFormRef = ref<FormInstance>()
 
-const ruleForm = reactive({
-  'name': '',
-  'remarks': '',
-  'priority': '',
-})
+const createForm = () => {
+  return {
+    name: '',
+    remarks: '',
+    priority: '',
+    step_data: []
+  }
+}
 
 const priority = ref([{
   value: 0,
@@ -143,6 +146,7 @@ const stepControllerRef = ref()
 
 const state = reactive({
   optTypes: getStepTypesByUse("case"),
+  form: createForm()
 })
 
 const handleAddData = (optType) => {
