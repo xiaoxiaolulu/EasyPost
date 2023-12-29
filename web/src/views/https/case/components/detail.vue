@@ -3,49 +3,77 @@
     <div class="header-container">
       <div class="card-head-title">
         <div class="card-description">
-          <span style="display: inline-block" class="el-icon-back" @click="goBack">
-                      <el-icon>
-                        <component :is="Back"/>
-                      </el-icon>
-                    </span>
-<!--          <span style="display: inline-block" class="page-header-heading-title">-->
-<!--            {{ route.query.editType === 'update' ? "更新" : "新增" }}-->
-<!--          </span>-->
-          <span style="display: inline-block; float: right">
-            <el-dropdown :hide-on-click="false" style="margin-right: 10px">
-              <el-button type="warning" size="small">
-              添加步骤
-              <el-icon class="el-icon--right">
-                <arrowDown/>
-              </el-icon>
-            </el-button>
-                <template #dropdown>
-                  <el-dropdown-menu>
-                    <el-dropdown-item v-for="(value, key)  in state.optTypes"
-                                      :key="key"
-                                      style="margin: 5px 0"
-                                      :style="{ color: getStepTypeInfo(key,'color')}"
-                                      @click="handleAddData(key)">
-                      <i :class="getStepTypeInfo(key,'icon')" class="fab-icons"
-                         :style="{color:getStepTypeInfo(key,'color')}"></i>
-                      {{ value }}
-                    </el-dropdown-item>
-                  </el-dropdown-menu>
-                </template>
-            </el-dropdown>
-            <el-button type="success" @click="" size="small">调试</el-button>
-            <el-button type="primary" @click="" class="title-button" size="small">保存</el-button>
+          <span class="el-icon-back" @click="goBack">
+            <el-icon>
+              <component :is="Back"/>
+            </el-icon>
+          </span>
+          <span class="page-header-heading-title">
+            {{ route.query.editType === 'update' ? "更新" : "新增" }}
           </span>
         </div>
       </div>
     </div>
     <div class="container">
+      <el-row :gutter="12">
+        <el-col :span="8">
+          <el-card style="height:100%;min-height: 600px;overflow:scroll;">
+            <template #header>
+              <div>
+                <span style="margin-right:8px;color: #7a8b9a"><el-icon><component :is="Odometer"/></el-icon></span>
+                <span style="font-size: 18px; color: #7a8b9a">用例配置</span>
+              </div>
+            </template>
+            <div>
+              <el-form :inline="true" autoComplete="on" :model="ruleForm" :rules="rules" ref="ruleFormRef"
+                       label-width="auto"
+                       label-position="top"
+                       size="small"
+              >
+                <el-form-item label="用例名称：" prop="name">
+                  <el-input v-model.trim="ruleForm.name"
+                            style="width: 100%;"
+                            size="small"
+                            placeholder="请输入用例名称"></el-input>
+                </el-form-item>
+                <el-form-item label="优先级：" prop="priority">
+                  <el-select v-model="ruleForm.priority" filterable placeholder="请选择接口当前状态" size="small">
+                    <el-option
+                        v-for="item in priority"
+                        :key="item.value"
+                        :label="item.label"
+                        :value="item.value">
+                    </el-option>
+                  </el-select>
+                </el-form-item>
+                <el-form-item label="描述：" prop="">
+                  <el-input v-model.trim="ruleForm.remarks"
+                            style="width: 100%;"
+                            size="small"
+                            placeholder="请输入用例描述"></el-input>
+                </el-form-item>
+              </el-form>
+              <el-button type="success" @click="" size="small">调试</el-button>
+              <el-button type="primary" @click="" size="small">保存</el-button>
+            </div>
+          </el-card>
+        </el-col>
+        <el-col :span="16">
+          <el-card style="height:100%;min-height: 600px;overflow:scroll;">
+            <template #header>
+              <div>
+                <span style="font-size: 18px; color: #7a8b9a">用例步骤</span>
+              </div>
+            </template>
+          </el-card>
+        </el-col>
+      </el-row>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import {ArrowDown, ArrowUp, Back} from "@element-plus/icons-vue";
+import {ArrowDown, ArrowUp, Back, Odometer} from "@element-plus/icons-vue";
 import {useRoute, useRouter} from "vue-router";
 import {computed, onMounted, reactive, ref, watch, nextTick} from "vue";
 import {ElMessage, FormInstance} from "element-plus";
@@ -56,9 +84,18 @@ import {getStepTypesByUse, getStepTypeInfo} from '@/utils/index'
 const route = useRoute()
 const router = useRouter()
 
+const methodRef = ref()
+
+const responseReport = ref(false)
+
+const methodList = ['POST', "GET", "PUT", "DELETE"]
+
 const ruleFormRef = ref<FormInstance>()
 
 const ruleForm = reactive({
+  'name': '',
+  'remarks': '',
+  'priority': '',
 })
 
 const priority = ref([{
@@ -78,7 +115,6 @@ const priority = ref([{
   label: "P4"
 }])
 
-
 const stepControllerRef = ref()
 
 const state = reactive({
@@ -96,7 +132,6 @@ const goBack = () => {
 }
 
 const rules = reactive({
-  name: [{required: true, trigger: "blur", message: "请输入接口名称！"}],
 })
 
 const onSureClick = (formName: FormInstance | undefined) => {
