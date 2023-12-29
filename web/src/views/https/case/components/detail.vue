@@ -92,7 +92,7 @@
                 ref="stepControllerRef"
                 use_type="case"
                 style="margin-bottom: 10px"
-                v-model:steps="state.form.step_data">
+                v-model="state.form.step_data">
             </step>
           </el-card>
         </el-col>
