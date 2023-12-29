@@ -441,3 +441,53 @@ export function ellipsis(value: string) {
     return value;
   }
 }
+
+export const stepTypes = {
+  api: "引用接口",
+  if: "条件控制器",
+  loop: "循环控制器",
+  extract: "参数提取",
+  script: "自定义脚本",
+  sql: "SQL控制器",
+  wait: "等待控制器",
+  scene: "场景断言",
+  case: "引用用例",
+}
+
+export function getStepTypesByUse(use_type) {
+  let stepTypeMapping
+  let stepContain
+  switch (use_type) {
+    case "hook":
+      stepContain = ["sql", "wait"]
+      stepTypeMapping = objectFilter(stepTypes, stepContain)
+      break
+    case "case":
+      stepContain = ["api", "if", "loop", "wait", "script", "sql"]
+      stepTypeMapping = objectFilter(stepTypes, stepContain)
+      break
+    default:
+      stepTypeMapping = {}
+  }
+  return stepTypeMapping
+}
+
+export function objectFilter(obj, field) {
+  let res = Object.entries(obj).filter(([key, val]) => field.includes(key))
+  return Object.fromEntries(res)
+}
+
+export function getStepTypeInfo(stepType, type) {
+  let obj = {
+    script: {color: "#7B4D12FF", background: "#F1EEE9FF", icon: 'iconfont icon-code'},
+    wait: {color: "#67C23AFF", background: "#F2F9EEFF", icon: 'iconfont icon-time'},
+    api: {color: "#61649f", background: "#f5f5fa", icon: 'iconfont icon-c158API'},
+    case: {color: "#f4664a", background: "#f5f5faFF", icon: 'iconfont icon-a-case-o1'},
+    loop: {color: "#02A7F0FF", background: "#F4F4F5FF", icon: 'iconfont icon-loop'},
+    extract: {color: "#015478FF", background: "#E6EEF2FF", icon: ''},
+    sql: {color: "#783887FF", background: "#F2ECF3FF", icon: 'iconfont icon-suffix-sql'},
+    if: {color: "#E6A23C", background: "#FCF6EE", icon: 'iconfont icon-fenzhijiedian'},
+    timed_task: {color: "#AE445A", background: "#AE445A", icon: 'iconfont icon-time'},
+  }
+  return obj[stepType][type]
+}
