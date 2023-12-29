@@ -35,14 +35,21 @@ class HttpDao:
             raise Exception("获取测试接口失败")
 
     @classmethod
-    def list_test_case(cls, get_queryset, node: int, project_id: int, name: str = ""):
-        try:
-            queryset = cls.get_directory_case(get_queryset, project_id)
-            tree = cls.get_directory_tree(project_id)
+    def list_test_case(cls, get_queryset, node: Any, project_id: Any, name: str = ""):
+        # Early return if project_id or node is not provided
+        if not project_id:
+            _queryset = get_queryset.order_by('-update_time')
+            if name:
+                _queryset = get_queryset.filter(name=name)
+            return _queryset
+        else:
+            try:
+                queryset = cls.get_directory_case(get_queryset, project_id)
+                tree = cls.get_directory_tree(project_id)
+                node = int(node)
 
-            if project_id:
                 if node == 1:
-                    queryset = queryset
+                    pass  # queryset remains unchanged for root node
                 else:
                     children_tree = get_relation_tree(tree, node)
                     directory_ids = collections_directory_id(children_tree, node)
@@ -53,8 +60,8 @@ class HttpDao:
 
                 return queryset
 
-        except (Api.DoesNotExist, Exception):
-            raise Exception("获取测试接口失败")
+            except (Api.DoesNotExist, Exception) as e:
+                raise Exception("获取测试接口失败") from e
 
     @staticmethod
     def parser_api_data(request: Any):

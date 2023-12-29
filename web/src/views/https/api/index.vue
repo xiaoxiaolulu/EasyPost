@@ -16,7 +16,6 @@
   const current = ref()
   const side = ref()
 
-
   const init = () => {
     projectList({}).then((response) => {
       let res = response.data.results

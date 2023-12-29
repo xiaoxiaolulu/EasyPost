@@ -103,7 +103,7 @@ class ApiTestListView(mixins.ListModelMixin, viewsets.GenericViewSet):
         serializer = ApiSerializer(data=request.query_params, context=context)
         if serializer.is_valid():
             project = request.query_params.get("project")
-            node = int(request.query_params.get("node"))
+            node = request.query_params.get("node")
             name = request.query_params.get("name")
 
             # queryset = self.get_queryset().filter(project__id=project).order_by('-update_time')
@@ -129,6 +129,7 @@ class ApiTestListView(mixins.ListModelMixin, viewsets.GenericViewSet):
                 return self.get_paginated_response(serializer.data)
 
             serializer = self.get_serializer(queryset, many=True)
+
             return Response(serializer.data)
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

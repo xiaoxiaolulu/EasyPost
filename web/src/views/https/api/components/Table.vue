@@ -14,7 +14,7 @@
       </el-form>
     </div>
     <div class="footer">
-      <div class="util">
+      <div class="util" v-show="selectionShow">
         <el-button type="primary" @click="add">
           <el-icon>
             <Plus/>
@@ -25,7 +25,10 @@
       <div class="table-inner">
         <el-table
             v-loading="loading"
-            :data="tableData" style="width: 100%;height: 100%" border>
+            :data="tableData" style="width: 100%;height: 100%"
+            @selection-change="handleSelectionChange"
+            border>
+          <el-table-column type="selection" width="55" />
           <el-table-column type="index" label="序号" width="80" fixed/>
           <el-table-column prop="name" label="接口名称" align="center" width="200" fixed>
           </el-table-column>
@@ -86,7 +89,6 @@ import {getHttpList, deleteHttp} from "@/api/http";
 import {parseTime} from "@/utils";
 import {showErrMessage} from "@/utils/element";
 
-
 const tableData = ref([])
 const dialogVisible = ref(false)
 const ruleFormRef = ref<FormInstance>()
@@ -118,6 +120,10 @@ const methods = reactive([
   { id: 2, type: 'warning', name: 'PUT' },
   { id: 3, type: 'danger', name: 'DELETE' }
 ])
+
+const selectionData = ref()
+
+const selectionShow = ref(false)
 
 const reset = (formEl: FormInstance | undefined) => {
   loading.value = true
@@ -225,6 +231,25 @@ const handleCurrentChange = (val: number) => {
   currentPage1.value = val
 }
 
+const handleSelectionChange = (val: any) => {
+  selectionData.value = val
+}
+
+const getSelectionData = () => {
+  return selectionData.value
+}
+
+const setSelectionData = (data: any) => {
+  return selectionShow.value = data
+}
+
+const showList = () => {
+  if(selectionShow){
+    queryList()
+  }
+}
+
+showList()
 
 onMounted(() => {
   setTimeout(() => {
@@ -235,7 +260,9 @@ onMounted(() => {
 defineExpose({
   getList,
   setCurrentProject,
-  queryList
+  queryList,
+  getSelectionData,
+  setSelectionData
 })
 </script>
 <style lang="scss" scoped>
