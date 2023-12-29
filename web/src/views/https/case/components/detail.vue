@@ -65,6 +65,30 @@
                 <span style="font-size: 18px; color: #7a8b9a">用例步骤</span>
               </div>
             </template>
+            <div>
+              <div style="margin-top: 15px">
+                <el-dropdown :hide-on-click="false" style="width: 100%">
+                  <el-button size="small" style="width: 100%">
+                    <el-icon style="margin-right: 4px"><plus /></el-icon> 添加步骤
+                  </el-button>
+                  <template #dropdown>
+                    <el-dropdown-menu>
+                      <el-dropdown-item v-for="(value, key)  in state.optTypes"
+                                        :key="key"
+                                        style="margin: 5px 0"
+                                        :style="{ color: getStepTypeInfo(key,'color')}"
+                                        @click="handleAddData(key)">
+
+                        <i :class="getStepTypeInfo(key,'icon')" class="fab-icons"
+                           :style="{color:getStepTypeInfo(key,'color')}"></i>
+                        {{ value }}
+                      </el-dropdown-item>
+
+                    </el-dropdown-menu>
+                  </template>
+                </el-dropdown>
+              </div>
+            </div>
           </el-card>
         </el-col>
       </el-row>
