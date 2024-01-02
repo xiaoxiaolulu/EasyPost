@@ -75,6 +75,7 @@ app_urls = [
         'get': 'list'
     })),
     path('http/run', RunApiView.as_view()),
+
     path("case/SaveOrUpdate/<int:pk>", SaveOrUpdateCaseView.as_view())
 ]
 

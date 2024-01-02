@@ -72,7 +72,7 @@
                     :header-cell-style="{ background: '#F2F3F8', color: '#1D2129' }"
                     style="width: 100%"
                     ref="dragTable"
-                    row-key="name"
+                    row-key="id"
                     :show-header="false"
                 >
                   <el-table-column width="30">
