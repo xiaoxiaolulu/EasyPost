@@ -30,6 +30,10 @@ class HandelTestData(object):
             self.mode = request_body.get('mode', 'normal')
             self.threads = request_body.get('threads', 1)
             self.iterations = request_body.get('iterations', 1)
+
+            # 步骤
+            self.step_data = request_body.get('step_data', [])
+
         except (KeyError, ValueError, AttributeError):
             pass
 

@@ -54,7 +54,7 @@
                 </el-form-item>
               </el-form>
               <el-button type="success" @click="" size="small">调试</el-button>
-              <el-button type="primary" @click="" size="small">保存</el-button>
+              <el-button type="primary" @click="onSureClick(ruleFormRef)" size="small">保存</el-button>
             </div>
           </el-card>
         </el-col>
@@ -216,6 +216,15 @@ const onSureClick = (formName: FormInstance | undefined) => {
   formName.validate(async (valid) => {
     if (valid) {
       try {
+        let caseData = {
+          name: state.form.name,
+          remarks: state.form.remarks,
+          priority: state.form.remarks,
+          step_data: tableData
+        }
+        console.log("白丹")
+        console.log(caseData)
+        console.log("白丹")
       } catch (e) {
         console.log(e)
       }

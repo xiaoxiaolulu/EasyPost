@@ -1,7 +1,9 @@
 from typing import Any
 from api.models.https import (
     Relation,
-    Api
+    Api,
+    Case,
+    Step
 )
 from api.models.project import Project
 from core.engine.session_runner import (
@@ -66,7 +68,7 @@ class HttpDao:
     @staticmethod
     def parser_api_data(request: Any, pk=None):
         api = HandelTestData(request.data) # noqa
-        
+
         if pk:
             update_obj = Api.objects.get(id=pk)
             project = update_obj.project
@@ -126,3 +128,46 @@ class HttpDao:
             return result
         except Exception as e:
             raise Exception(f"调试测试接口失败: {e}")
+
+    @classmethod
+    def create_or_update_case(cls, request: Any, pk):
+        try:
+            cased_body, steps = cls.parser_case_data(request)
+            create_obj = Case.objects.create(
+                **cased_body
+            )
+            for sort, step in enumerate(steps):
+                Step.objects.create(
+                    sort=sort,
+                    case=Case.objects.get(id=create_obj.id),
+                    **step
+                )
+            update_pk = create_obj.id
+
+            return update_pk
+        except Exception as e:
+            raise Exception(f"{e}")
+
+    @staticmethod
+    def parser_case_data(request: Any, pk=None):
+        api = HandelTestData(request.data) # noqa
+
+        if pk:
+            update_obj = Case.objects.get(id=pk)
+            project = update_obj.project
+            directory_id = update_obj.directory_id
+        else:
+            project = Project.objects.get(id=api.project)
+            directory_id = api.directory_id
+
+        request_body = {
+            'name': api.name,
+            'project': project,
+            'directory_id': directory_id,
+            'priority': api.priority,
+            'desc': api.desc
+        }
+        try:
+            return request_body, api.step_data
+        except (Exception, ):
+            raise Exception("解析测试用例失败")

@@ -183,3 +183,19 @@ class RunApiView(APIView):
             return Response(ResponseStandard.success(data=response))
         except Exception as err:
             return Response(ResponseStandard.failed(msg=str(err)))
+
+
+class SaveOrUpdateCaseView(APIView):
+
+    # permission_classes = [IsAuthenticated]
+
+    @staticmethod
+    def post(request, **kwargs):
+
+        try:
+            response = HttpDao.create_or_update_case(request, pk=kwargs['pk'])
+            return Response(ResponseStandard.success(
+                data={"api_id": response}
+            ))
+        except Exception as err:
+            return Response(ResponseStandard.failed(msg=str(err)))

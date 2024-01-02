@@ -10,7 +10,8 @@ from api.service.https import (
     ApiDetailView,
     ApiTestListView,
     RunApiView,
-    SaveOrUpdateApiView
+    SaveOrUpdateApiView,
+    SaveOrUpdateCaseView
 )
 from api.service.project import (
     ProjectListViewSet,
@@ -73,7 +74,8 @@ app_urls = [
     path("http/list", ApiTestListView.as_view({
         'get': 'list'
     })),
-    path('http/run', RunApiView.as_view())
+    path('http/run', RunApiView.as_view()),
+    path("case/SaveOrUpdate/<int:pk>", SaveOrUpdateCaseView.as_view())
 ]
 
 
