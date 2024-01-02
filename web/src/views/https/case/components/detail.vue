@@ -247,6 +247,12 @@ const initDropTable = () => {
     disabled: false,
     handle: '.move', //指定列拖拽
     filter: '.disabled',
+    // 设置拖拽样式类名
+    dragClass: 'drop-dragClass',
+    // 设置拖拽停靠样式类名
+    ghostClass: 'drop-ghostClass',
+    // 设置选中样式类名
+    chosenClass: 'drop-chosenClass',
 
     onStart: () => {
       console.log('开始拖动')
@@ -398,4 +404,18 @@ defineExpose({
   word-break: break-word;
 }
 
+.drop-dragClass {
+  background: #e4e4ee !important;
+  opacity: 0.5 !important;
+}
+// 停靠
+.drop-ghostClass {
+  background: #C0C0C0 !important;
+  opacity: 0.5 !important;
+}
+// 选择
+.drop-chosenClass:hover > td {
+  background: #e4e4ee !important;
+  opacity: 0.5 !important;
+}
 </style>
