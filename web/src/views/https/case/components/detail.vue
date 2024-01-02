@@ -112,6 +112,7 @@ import {saveOrUpdate, runApi, getHttpDetail} from "@/api/http";
 import {showErrMessage} from "@/utils/element";
 import {getStepTypesByUse, getStepTypeInfo} from '@/utils/index'
 import Step from "@/views/https/case/components/step.vue";
+import Sortable from "sortablejs";
 
 const route = useRoute()
 const router = useRouter()
