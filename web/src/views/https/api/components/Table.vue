@@ -53,7 +53,7 @@
               <span>{{ parseTime(scope.row.create_time) }}</span>
             </template>
           </el-table-column>
-          <el-table-column prop="operator" label="操作" width="200px" align="center" fixed="right">
+          <el-table-column prop="operator" label="操作" width="200px" align="center" fixed="right" v-show="false">
             <template #default="scope">
               <el-button type="primary" size="small" icon="Edit" @click="editHandler(scope.row)">
                 编辑
@@ -173,15 +173,13 @@ const add = () => {
 }
 
 const editHandler = (row) => {
-  let node = nodeId.value
-  let project = currentProject.value
-  if (node && project) {
+  if (row) {
     router.push({
       name: "httpDetail",
-      query: {editType: 'update', project: project, node: node, id: row.id}
+      query: {editType: 'update', id: row.id}
     });
   } else {
-    ElMessage.error("项目未选择或未选择相关目录树节点, 无法编辑接口!");
+    ElMessage.error("编辑接口异常请重试!");
   }
 }
 

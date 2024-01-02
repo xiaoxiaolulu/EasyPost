@@ -64,14 +64,21 @@ class HttpDao:
                 raise Exception("获取测试接口失败") from e
 
     @staticmethod
-    def parser_api_data(request: Any):
-
+    def parser_api_data(request: Any, pk=None):
         api = HandelTestData(request.data) # noqa
+        
+        if pk:
+            update_obj = Api.objects.get(id=pk)
+            project = update_obj.project
+            directory_id = update_obj.directory_id
+        else:
+            project = Project.objects.get(id=api.project)
+            directory_id = api.directory_id
 
         request_body = {
             'name': api.name,
-            'project': Project.objects.get(id=api.project),
-            'directory_id': api.directory_id,
+            'project': project,
+            'directory_id': directory_id,
             'method': api.method,
             'url': api.url,
             'priority': api.priority,
@@ -94,12 +101,14 @@ class HttpDao:
     @classmethod
     def create_or_update_api(cls, request: Any, pk):
         try:
-            request_body = cls.parser_api_data(request)
+
             if pk:
                 update_obj = Api.objects.filter(id=pk)
+                request_body = cls.parser_api_data(request, pk=pk)
                 update_obj.update(**request_body)
                 update_pk = pk
             else:
+                request_body = cls.parser_api_data(request)
                 create_obj = Api.objects.create(**request_body)
                 update_pk = create_obj.id
 

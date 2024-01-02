@@ -444,7 +444,6 @@ const onSureClick = (formName: FormInstance | undefined) => {
   formName.validate(async (valid) => {
     if (valid) {
       try{
-
         let ApiRequestHeader = RequestHeadersRef.value.getData()
         let ApiRequestQuery = RequestQueryRef.value.getData()
         let ApiRequestBody = RequestBodyRef.value.getData()
@@ -477,7 +476,6 @@ const onSureClick = (formName: FormInstance | undefined) => {
       } catch (e) {
         console.log(e)
       }
-
     } else {
       console.log('error submit!')
       ElMessage.error("新增接口失败请重试!")

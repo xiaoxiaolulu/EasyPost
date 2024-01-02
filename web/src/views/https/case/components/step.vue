@@ -6,12 +6,14 @@ const selectApiRef = ref()
 
 const handleAddData = async (optType) => {
   if (optType !== 'api') {
-    console.log("嘻嘻嘻嘻嘻嘻休息休")
     console.log(optType)
   } else {
-    console.log("11111111")
     selectApiRef.value.onOpenApiList()
   }
+}
+
+const addApiStep = () => {
+  selectApiRef.value.getSelectionData()
 }
 
 defineExpose({
@@ -21,7 +23,7 @@ defineExpose({
 
 <template>
   <div>
-    <select-api ref="selectApiRef"></select-api>
+    <select-api ref="selectApiRef" @addApiStep="addApiStep"></select-api>
   </div>
 </template>
 

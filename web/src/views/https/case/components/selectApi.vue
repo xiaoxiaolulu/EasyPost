@@ -40,10 +40,7 @@ const addApiStep = () => {
   onOpenApiList()
 }
 const onOpenApiList = () => {
-  console.log("测试")
-  console.log(state.showApiList)
   state.showApiList = !state.showApiList
-  console.log(state.showApiList)
 }
 
 defineExpose({
