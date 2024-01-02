@@ -92,7 +92,9 @@
                 ref="stepControllerRef"
                 use_type="case"
                 style="margin-bottom: 10px"
-                v-model="state.form.step_data">
+                v-model="state.form.step_data"
+                @change="changeAction"
+            >
             </step>
           </el-card>
         </el-col>
@@ -144,6 +146,8 @@ const priority = ref([{
 
 const stepControllerRef = ref()
 
+const selectApiData = ref()
+
 const state = reactive({
   optTypes: getStepTypesByUse("case"),
   form: createForm()
@@ -177,6 +181,13 @@ const onSureClick = (formName: FormInstance | undefined) => {
       return false
     }
   })
+}
+
+const changeAction = (data)=>{
+  selectApiData.value = data
+  console.log("测试")
+  console.log(data)
+  console.log("测试")
 }
 
 onMounted(() => {

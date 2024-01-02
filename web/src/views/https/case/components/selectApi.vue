@@ -39,6 +39,7 @@ const addApiStep = () => {
   emit("addApiStep")
   onOpenApiList()
 }
+
 const onOpenApiList = () => {
   state.showApiList = !state.showApiList
 }

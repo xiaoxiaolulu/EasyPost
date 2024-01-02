@@ -2,6 +2,8 @@
 import {ref} from "vue";
 import SelectApi from "@/views/https/case/components/selectApi.vue";
 
+const emit = defineEmits(['change'])
+
 const selectApiRef = ref()
 
 const handleAddData = async (optType) => {
@@ -12,18 +14,20 @@ const handleAddData = async (optType) => {
   }
 }
 
-const addApiStep = () => {
-  selectApiRef.value.getSelectionData()
+const getApiStep = () => {
+  let steps = selectApiRef.value.getSelectionData()
+  emit('change', steps)
 }
 
+
 defineExpose({
-  handleAddData,
+  handleAddData
 })
 </script>
 
 <template>
   <div>
-    <select-api ref="selectApiRef" @addApiStep="addApiStep"></select-api>
+    <select-api ref="selectApiRef" @addApiStep="getApiStep"></select-api>
   </div>
 </template>
 
