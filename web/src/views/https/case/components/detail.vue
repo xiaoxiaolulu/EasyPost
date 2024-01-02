@@ -67,9 +67,27 @@
             </template>
             <div>
               <div style="margin-top: 15px">
+                <el-table
+                    :data="tableData"
+                    :header-cell-style="{ background: '#F2F3F8', color: '#1D2129' }"
+                    style="width: 100%"
+                    ref="dragTable"
+                    :show-header="false"
+                >
+                  <el-table-column width="180">
+                    <template #default>
+                      <el-icon class="move"><Switch /></el-icon>
+                    </template>
+                  </el-table-column>
+                  <el-table-column prop="id" label="duration"></el-table-column>
+                  <el-table-column prop="name" label="duration"></el-table-column>
+                </el-table>
                 <el-dropdown :hide-on-click="false" style="width: 100%">
                   <el-button size="small" style="width: 100%">
-                    <el-icon style="margin-right: 4px"><plus /></el-icon> 添加步骤
+                    <el-icon style="margin-right: 4px">
+                      <plus/>
+                    </el-icon>
+                    添加步骤
                   </el-button>
                   <template #dropdown>
                     <el-dropdown-menu>
@@ -104,7 +122,7 @@
 </template>
 
 <script setup lang="ts">
-import {ArrowDown, ArrowUp, Back, Odometer} from "@element-plus/icons-vue";
+import {ArrowDown, Switch, Back, Odometer} from "@element-plus/icons-vue";
 import {useRoute, useRouter} from "vue-router";
 import {computed, onMounted, reactive, ref, watch, nextTick} from "vue";
 import {ElMessage, FormInstance} from "element-plus";
@@ -112,12 +130,29 @@ import {saveOrUpdate, runApi, getHttpDetail} from "@/api/http";
 import {showErrMessage} from "@/utils/element";
 import {getStepTypesByUse, getStepTypeInfo} from '@/utils/index'
 import Step from "@/views/https/case/components/step.vue";
-import Sortable from "sortablejs";
+import Sortable from "sortablejs"
 
 const route = useRoute()
 const router = useRouter()
 
 const ruleFormRef = ref<FormInstance>()
+
+const tableData = reactive([
+  {
+    id: 1,
+    name: '序列号1'
+  },
+  {
+    id: 2,
+    name: '序列号2'
+  },
+  {
+    id: 3,
+    name: '序列号3'
+  }
+])
+
+const loading = ref(false)
 
 const createForm = () => {
   return {
@@ -164,14 +199,13 @@ const goBack = () => {
   })
 }
 
-const rules = reactive({
-})
+const rules = reactive({})
 
 const onSureClick = (formName: FormInstance | undefined) => {
   if (!formName) return
   formName.validate(async (valid) => {
     if (valid) {
-      try{
+      try {
       } catch (e) {
         console.log(e)
       }
@@ -184,21 +218,57 @@ const onSureClick = (formName: FormInstance | undefined) => {
   })
 }
 
-const changeAction = (data)=>{
+
+const dragTable = ref()
+const initDropTable = () => {
+  const el = dragTable.value.$el.querySelector('.el-table__body tbody')
+  Sortable.create(el, {
+    handle: '.move-icon', //设置指定列作为拖拽
+    onEnd(evt: any) {
+      const { newIndex, oldIndex } = evt
+      console.log(newIndex)
+      console.log(oldIndex)
+      const currRow = tableData?.splice(oldIndex, 1)[0]
+      tableData?.splice(newIndex, 0, currRow)
+      sortIndex()
+    }
+  })
+}
+
+const sortIndex = () => {
+  const array = []
+  tableData.forEach((e, i) => {
+    const obj = {
+      currency_id: e.currency_id,
+      index: i + 1
+    }
+    array.push(obj)
+  })
+}
+
+const changeAction = (data) => {
   selectApiData.value = data
   console.log("测试")
   console.log(data)
   console.log("测试")
 }
 
+
 onMounted(() => {
+  nextTick(() => {
+    initDropTable()
+  })
 })
 
-defineExpose({
-})
+defineExpose({})
 
 </script>
 <style lang="scss">
+
+.move {
+  cursor: pointer;
+}
+
 .page-header-back-button {
   text-decoration: none;
   outline: none;
@@ -282,7 +352,7 @@ defineExpose({
   margin-top: 20px;
 }
 
-.custom-table .cell{
+.custom-table .cell {
   font-size: 12px;
   color: #7a8b9a;
 }
