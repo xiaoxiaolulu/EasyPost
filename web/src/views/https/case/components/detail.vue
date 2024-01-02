@@ -82,17 +82,24 @@
                       ></span>
                     </template>
                   </el-table-column>
-                  <el-table-column>
+                  <el-table-column width="80">
                     <template #default="scope">
                       <div>
                         <div>
                           <span :class="`opblock-${scope.row.method.toLowerCase()}`">
                               {{ scope.row.method }}
                           </span>
-                          <span class="opblock-summary-description">
-                            {{ scope.row.name }}
-                          </span>
+
                         </div>
+                      </div>
+                    </template>
+                  </el-table-column>
+                  <el-table-column>
+                    <template #default="scope">
+                      <div>
+                        <span class="opblock-summary-description">
+                            {{ scope.row.name }}
+                        </span>
                       </div>
                     </template>
                   </el-table-column>
@@ -153,25 +160,6 @@ const router = useRouter()
 const ruleFormRef = ref<FormInstance>()
 
 const tableData = reactive([
-  {
-    id: 1,
-    method: "GET",
-    name: '序列号1'
-  },
-  {
-    id: 2,
-    method: "PUT",
-    name: '序列号2'
-  },
-  {
-    id: 3,
-    method: "DELETE",
-    name: '序列号3'
-  },  {
-    id: 4,
-    method: "POST",
-    name: '序列号3'
-  }
 ])
 
 const loading = ref(false)
@@ -266,9 +254,9 @@ const initDropTable = () => {
 
 const changeAction = (data) => {
   selectApiData.value = data
-  console.log("测试")
-  console.log(data)
-  console.log("测试")
+  for (let i = 0; i < data.length; i++) {
+    tableData.push(data[i])
+  }
 }
 
 
@@ -278,7 +266,9 @@ onMounted(() => {
   })
 })
 
-defineExpose({})
+defineExpose({
+
+})
 
 </script>
 <style lang="scss">
@@ -392,7 +382,6 @@ defineExpose({})
 }
 
 .opblock-summary-description {
-  margin-left: 20px;
   color: #3b4151;
   font-family: sans-serif;
   font-size: 13px;
