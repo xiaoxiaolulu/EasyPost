@@ -74,13 +74,28 @@
                     ref="dragTable"
                     :show-header="false"
                 >
-                  <el-table-column width="180">
+                  <el-table-column width="30">
                     <template #default>
-                      <el-icon class="move"><Switch /></el-icon>
+                      <span
+                          :class="getStepTypeInfo('api','icon')" class="fab-icons move"
+                          :style="{color:getStepTypeInfo('api','color')}"
+                      ></span>
                     </template>
                   </el-table-column>
-                  <el-table-column prop="id" label="duration"></el-table-column>
-                  <el-table-column prop="name" label="duration"></el-table-column>
+                  <el-table-column>
+                    <template #default="scope">
+                      <div>
+                        <div>
+                          <span :class="`opblock-${scope.row.method.toLowerCase()}`">
+                              {{ scope.row.method }}
+                          </span>
+                          <span class="opblock-summary-description">
+                            {{ scope.row.name }}
+                          </span>
+                        </div>
+                      </div>
+                    </template>
+                  </el-table-column>
                 </el-table>
                 <el-dropdown :hide-on-click="false" style="width: 100%">
                   <el-button size="small" style="width: 100%">
@@ -128,7 +143,7 @@ import {computed, onMounted, reactive, ref, watch, nextTick} from "vue";
 import {ElMessage, FormInstance} from "element-plus";
 import {saveOrUpdate, runApi, getHttpDetail} from "@/api/http";
 import {showErrMessage} from "@/utils/element";
-import {getStepTypesByUse, getStepTypeInfo} from '@/utils/index'
+import {getStepTypesByUse, getStepTypeInfo, parseTime} from '@/utils/index'
 import Step from "@/views/https/case/components/step.vue";
 import Sortable from "sortablejs"
 
@@ -140,14 +155,21 @@ const ruleFormRef = ref<FormInstance>()
 const tableData = reactive([
   {
     id: 1,
+    method: "GET",
     name: '序列号1'
   },
   {
     id: 2,
+    method: "PUT",
     name: '序列号2'
   },
   {
     id: 3,
+    method: "DELETE",
+    name: '序列号3'
+  },  {
+    id: 4,
+    method: "POST",
     name: '序列号3'
   }
 ])
@@ -223,26 +245,22 @@ const dragTable = ref()
 const initDropTable = () => {
   const el = dragTable.value.$el.querySelector('.el-table__body tbody')
   Sortable.create(el, {
-    handle: '.move-icon', //设置指定列作为拖拽
+    animation: 150, //动画
+    disabled: false,
+    handle: '.move', //指定列拖拽
+    filter: '.disabled',
+
+    onStart: () => {
+      console.log('开始拖动')
+    },
+
     onEnd(evt: any) {
       const { newIndex, oldIndex } = evt
       console.log(newIndex)
       console.log(oldIndex)
-      const currRow = tableData?.splice(oldIndex, 1)[0]
-      tableData?.splice(newIndex, 0, currRow)
-      sortIndex()
+      const currRow = tableData.splice(oldIndex, 1)[0]
+      tableData.splice(newIndex, 0, currRow)
     }
-  })
-}
-
-const sortIndex = () => {
-  const array = []
-  tableData.forEach((e, i) => {
-    const obj = {
-      currency_id: e.currency_id,
-      index: i + 1
-    }
-    array.push(obj)
   })
 }
 
@@ -356,4 +374,29 @@ defineExpose({})
   font-size: 12px;
   color: #7a8b9a;
 }
+
+.opblock-get{
+  color: #122de1;
+}
+
+.opblock-post {
+  color: #49cc90;
+}
+
+.opblock-put {
+  color: #e7a20c;
+}
+
+.opblock-delete {
+  color: #f30808;
+}
+
+.opblock-summary-description {
+  margin-left: 20px;
+  color: #3b4151;
+  font-family: sans-serif;
+  font-size: 13px;
+  word-break: break-word;
+}
+
 </style>
