@@ -187,7 +187,7 @@ class RunApiView(APIView):
 
 class SaveOrUpdateCaseView(APIView):
 
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
 
     @staticmethod
     def post(request, **kwargs):

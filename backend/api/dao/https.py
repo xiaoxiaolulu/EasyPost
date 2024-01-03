@@ -130,19 +130,34 @@ class HttpDao:
             raise Exception(f"调试测试接口失败: {e}")
 
     @classmethod
-    def create_or_update_case(cls, request: Any, pk):
+    def update_case_and_steps(cls, request, pk=None):
         try:
-            cased_body, steps = cls.parser_case_data(request)
-            create_obj = Case.objects.create(
-                **cased_body
-            )
-            for sort, step in enumerate(steps):
-                Step.objects.create(
-                    sort=sort,
-                    case=Case.objects.get(id=create_obj.id),
-                    **step
-                )
-            update_pk = create_obj.id
+            if pk:
+                case_obj = Case.objects.filter(id=pk)
+                if not case_obj:
+                    raise ValueError("Case with given ID does not exist.")
+
+                cased_body, steps = cls.parser_case_data(request, pk=pk)
+                case_obj.update(**cased_body)
+                Step.objects.filter(case=case_obj).delete()  # 删除旧的Steps
+                for sort, step in enumerate(steps):
+                    Step.objects.create(
+                        sort=sort,
+                        case=case_obj,
+                        **step
+                    )
+                update_pk = case_obj.id
+
+            else:
+                cased_body, steps = cls.parser_case_data(request)
+                case_obj = Case.objects.create(**cased_body)
+                for sort, step in enumerate(steps):
+                    Step.objects.create(
+                        sort=sort,
+                        case=case_obj,
+                        **step
+                    )
+                update_pk = case_obj.id
 
             return update_pk
         except Exception as e:
