@@ -129,6 +129,15 @@ class HttpDao:
         except Exception as e:
             raise Exception(f"调试测试接口失败: {e}")
 
+    @staticmethod
+    def create_case_step(case_obj, steps):
+        for sort, step in enumerate(steps):
+            Step.objects.create(
+                sort=sort,
+                case=case_obj,
+                **step
+            )
+
     @classmethod
     def update_case_and_steps(cls, request, pk=None):
         try:
@@ -140,23 +149,13 @@ class HttpDao:
                 cased_body, steps = cls.parser_case_data(request, pk=pk)
                 case_obj.update(**cased_body)
                 Step.objects.filter(case=case_obj).delete()  # 删除旧的Steps
-                for sort, step in enumerate(steps):
-                    Step.objects.create(
-                        sort=sort,
-                        case=case_obj,
-                        **step
-                    )
+                cls.create_case_step(case_obj, steps)
                 update_pk = case_obj.id
 
             else:
                 cased_body, steps = cls.parser_case_data(request)
                 case_obj = Case.objects.create(**cased_body)
-                for sort, step in enumerate(steps):
-                    Step.objects.create(
-                        sort=sort,
-                        case=case_obj,
-                        **step
-                    )
+                cls.create_case_step(case_obj, steps)
                 update_pk = case_obj.id
 
             return update_pk
