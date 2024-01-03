@@ -139,7 +139,7 @@ class HttpDao:
             )
 
     @classmethod
-    def update_case_and_steps(cls, request, pk=None):
+    def create_or_update_case(cls, request, pk=None):
         try:
             if pk:
                 case_obj = Case.objects.filter(id=pk)
