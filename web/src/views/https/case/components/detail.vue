@@ -149,7 +149,7 @@ import {ArrowDown, Switch, Back, Odometer} from "@element-plus/icons-vue";
 import {useRoute, useRouter} from "vue-router";
 import {computed, onMounted, reactive, ref, watch, nextTick} from "vue";
 import {ElMessage, FormInstance} from "element-plus";
-import {saveOrUpdate, runApi, getHttpDetail} from "@/api/http";
+import {saveCaseOrUpdate, runApi, getHttpDetail, saveOrUpdate} from "@/api/http";
 import {showErrMessage} from "@/utils/element";
 import {getStepTypesByUse, getStepTypeInfo, parseTime} from '@/utils/index'
 import Step from "@/views/https/case/components/step.vue";
@@ -197,7 +197,8 @@ const selectApiData = ref()
 
 const state = reactive({
   optTypes: getStepTypesByUse("case"),
-  form: createForm()
+  form: createForm(),
+  api_id: 0
 })
 
 const handleAddData = (optType) => {
@@ -218,14 +219,18 @@ const onSureClick = (formName: FormInstance | undefined) => {
     if (valid) {
       try {
         let caseData = {
+          id: state.api_id,
           name: state.form.name,
           remarks: state.form.remarks,
           priority: state.form.remarks,
-          step_data: tableData
+          step_data: tableData,
+          directory_id: route.query.node,
+          project: route.query.project
         }
-        console.log("白丹")
-        console.log(caseData)
-        console.log("白丹")
+        const ret = await saveOrUpdate(caseData)
+        const {code, data, msg} = ret.data
+        state.api_id = data.api_id
+        showErrMessage(code.toString(), msg)
       } catch (e) {
         console.log(e)
       }

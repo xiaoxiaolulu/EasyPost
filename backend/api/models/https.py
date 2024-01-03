@@ -132,6 +132,7 @@ class Step(Model):
 
     id = AutoField(primary_key=True)
     sort = CharField(max_length=50, null=True, blank=True, verbose_name=_('Step Sort'))
+    case = ForeignKey(Case, null=True, on_delete=SET_NULL, related_name='step', verbose_name=_('Step Case'))
     name = CharField(max_length=50, null=True, blank=True, verbose_name=_('Step Name'))
     method = CharField(max_length=50, null=True, blank=True, verbose_name=_('Step Method'))
     url = TextField(verbose_name=_('Step Url'), null=False, default=None)
@@ -143,7 +144,6 @@ class Step(Model):
     teardown_script = TextField(verbose_name=_('Step TeardownScript'), null=False, default=None)
     validate = TextField(verbose_name=_('Step Validate'), null=False, default=None)
     extract = TextField(verbose_name=_('Step Extract'), null=False, default=None)
-    case = ForeignKey(Case, null=True, on_delete=SET_NULL, related_name='step', verbose_name=_('Case'))
     user = ForeignKey(User, related_name="step_creator", null=True, on_delete=SET_NULL, verbose_name=_('User'))
     create_time = DateTimeField(auto_now_add=True, verbose_name=_('Step CreateTime'))
     update_time = DateTimeField(auto_now=True, verbose_name=_('Step UpdateTime'))

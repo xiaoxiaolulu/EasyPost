@@ -132,6 +132,14 @@ class HttpDao:
     @staticmethod
     def create_case_step(case_obj, steps):
         for sort, step in enumerate(steps):
+            step.pop("id")
+            step.pop("user")
+            step.pop("create_time")
+            step.pop("update_time")
+            step.pop("directory_id")
+            step.pop("priority")
+            step.pop("status")
+            step.pop("project")
             Step.objects.create(
                 sort=sort,
                 case=case_obj,
@@ -179,7 +187,8 @@ class HttpDao:
             'project': project,
             'directory_id': directory_id,
             'priority': api.priority,
-            'desc': api.desc
+            'desc': api.desc,
+            'user': request.user
         }
         try:
             return request_body, api.step_data

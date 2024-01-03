@@ -63,3 +63,11 @@ export function deleteHttp(data: any) {
         data
     })
 }
+
+export function saveCaseOrUpdate(data: any) {
+    return request({
+        url: `/api/case/SaveOrUpdate/${data.id}`,
+        method: 'post',
+        data
+    })
+}
