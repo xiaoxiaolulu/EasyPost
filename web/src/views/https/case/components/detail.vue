@@ -149,7 +149,7 @@ import {ArrowDown, Switch, Back, Odometer} from "@element-plus/icons-vue";
 import {useRoute, useRouter} from "vue-router";
 import {computed, onMounted, reactive, ref, watch, nextTick} from "vue";
 import {ElMessage, FormInstance} from "element-plus";
-import {saveCaseOrUpdate, runApi, getHttpDetail, saveOrUpdate} from "@/api/http";
+import {saveCaseOrUpdate, runApi, getHttpDetail} from "@/api/http";
 import {showErrMessage} from "@/utils/element";
 import {getStepTypesByUse, getStepTypeInfo, parseTime} from '@/utils/index'
 import Step from "@/views/https/case/components/step.vue";
@@ -227,7 +227,7 @@ const onSureClick = (formName: FormInstance | undefined) => {
           directory_id: route.query.node,
           project: route.query.project
         }
-        const ret = await saveOrUpdate(caseData)
+        const ret = await saveCaseOrUpdate(caseData)
         const {code, data, msg} = ret.data
         state.api_id = data.api_id
         showErrMessage(code.toString(), msg)

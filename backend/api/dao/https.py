@@ -130,19 +130,22 @@ class HttpDao:
             raise Exception(f"调试测试接口失败: {e}")
 
     @staticmethod
-    def create_case_step(case_obj, steps):
+    def remove_unwanted_keys(step):
+        keys_to_pop = [
+            "id", "user", "create_time", "update_time", "directory_id", "priority", "status", "project"
+        ]
+        for key in keys_to_pop:
+            if key in step:
+                del step[key]
+
+    @classmethod
+    def create_case_step(cls, case_obj, steps):
+
         for sort, step in enumerate(steps):
-            step.pop("id")
-            step.pop("user")
-            step.pop("create_time")
-            step.pop("update_time")
-            step.pop("directory_id")
-            step.pop("priority")
-            step.pop("status")
-            step.pop("project")
+            cls.remove_unwanted_keys(step)
             Step.objects.create(
                 sort=sort,
-                case=case_obj,
+                case_id=case_obj,
                 **step
             )
 
@@ -156,9 +159,12 @@ class HttpDao:
 
                 cased_body, steps = cls.parser_case_data(request, pk=pk)
                 case_obj.update(**cased_body)
-                Step.objects.filter(case=case_obj).delete()  # 删除旧的Steps
-                cls.create_case_step(case_obj, steps)
-                update_pk = case_obj.id
+                steps_obj = Step.objects.filter(case__id=pk)
+
+                if steps_obj:
+                    steps_obj.delete()
+                cls.create_case_step(pk, steps)
+                update_pk = pk
 
             else:
                 cased_body, steps = cls.parser_case_data(request)
