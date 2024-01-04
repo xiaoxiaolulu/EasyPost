@@ -169,7 +169,7 @@ class HttpDao:
             else:
                 cased_body, steps = cls.parser_case_data(request)
                 case_obj = Case.objects.create(**cased_body)
-                cls.create_case_step(case_obj, steps)
+                cls.create_case_step(case_obj.id, steps)
                 update_pk = case_obj.id
 
             return update_pk
@@ -200,3 +200,16 @@ class HttpDao:
             return request_body, api.step_data
         except (Exception, ):
             raise Exception("解析测试用例失败")
+
+    @classmethod
+    def run_case_steps(cls, data: dict):
+
+        try:
+            runner = HandelTestData()
+            steps = data.get('step_data', [])
+            name = data.get('name', 'Demo')
+            case_data = runner.get_case_template(steps, name)
+            result = run_test(case_data)
+            return result
+        except Exception as e:
+            raise Exception(f"调试测试用例失败: {e}")

@@ -37,7 +37,7 @@ class HandelTestData(object):
         except (KeyError, ValueError, AttributeError):
             pass
 
-    def resolve_headers(self):
+    def resolve_headers(self, headers):
         """
         [{'name': 'Content-Type', 'value': 'application/json', 'description': '', 'edit': False}]
 
@@ -45,63 +45,63 @@ class HandelTestData(object):
             'content-Type': "application/json"
         },
         """
-        headers = {item['name']: item['value'] for item in json.loads(self.headers)}
+        headers = {item['name']: item['value'] for item in json.loads(headers)}
         return headers
 
-    def resolve_form_data(self):
+    def resolve_form_data(self, raw):
         """
         {'data': [{'id': 912586, 'edit': False, 'visible': False, 'name': '33', 'value': '333', 'type': 'Integer', 'description': '33'}]}
 
         'data': {"mobile_phone": "${{user_mobile}}", "pwd": "lemonban"},
         """
-        form_data_items = eval(self.raw).get('form_data', [])
+        form_data_items = eval(raw).get('form_data', [])
         form_data = {
             'data': {item['name']: item['value'] for item in form_data_items}
         }
         return form_data
 
-    def resolve_x_www_form_urlencoded(self):
+    def resolve_x_www_form_urlencoded(self, raw):
         """
         {'data': [{'id': 912586, 'edit': False, 'visible': False, 'name': '33', 'value': '333', 'type': 'Integer', 'description': '33'}]}
 
         'data': {"mobile_phone": "${{user_mobile}}", "pwd": "llll"},
         """
-        form_data_items = eval(self.raw).get('x_www_form_urlencoded', [])
+        form_data_items = eval(raw).get('x_www_form_urlencoded', [])
         form_data = {
             'data': {item['name']: item['value'] for item in form_data_items}
         }
         return form_data
 
-    def resolve_json(self):
+    def resolve_json(self, raw):
         """
         {'json': '{"$schema": "http://json-schema.org/draft-04/schema"}'}
         """
-        json_items = eval(self.raw).get('json', [])
+        json_items = eval(raw).get('json', [])
         json_data = {
             'json': json.loads(json_items)
         }
         return json_data
 
-    def raw_conversion(self):
+    def raw_conversion(self, raw):
 
-        json_target = eval(self.raw).get('json', [])
+        json_target = eval(raw).get('json', [])
         if json_target:
-            raw_content = self.resolve_json()
+            raw_content = self.resolve_json(raw)
         else:
-            form_target = eval(self.raw).get('form_data', [])
-            raw_content = self.resolve_form_data() if form_target else self.resolve_x_www_form_urlencoded()
+            form_target = eval(raw).get('form_data', [])
+            raw_content = self.resolve_form_data(raw) if form_target else self.resolve_x_www_form_urlencoded(raw)
         return raw_content
 
-    def resolve_script(self, use='setup_script'):
+    def resolve_script(self, use='setup_script', setup_script=None, teardown_script=None):
         """
         {'script_code': "ep.get_env_variable('name')\nep.get_env_variable('name')\nep.get_env_variable('name')"}
 
         'setup_script': "print('前置脚本123')"
         """
-        script = self.setup_script if use == 'setup_script' else self.teardown_script
+        script = setup_script if use == 'setup_script' else teardown_script
         return script
 
-    def resolve_extract(self, env="env"):
+    def resolve_extract(self, env="env", extract=None):
         """
         [{'id': 452947, 'edit': False, 'visible': False, 'name': 'router', 'type': 'jsonpath', 'value': '$.url'}]
         "extract": {
@@ -110,13 +110,13 @@ class HandelTestData(object):
             # 通过正则表达式提取
         }
         """
-        extract_items = eval(self.extract)
+        extract_items = eval(extract)
         extract_data = {
             item['name']: (env, item['type'], item['value']) for item in extract_items
         }
         return extract_data
 
-    def resolve_validators(self):
+    def resolve_validators(self, validate=None):
         """
         [{'id': 713191, 'edit': False, 'visible': False, 'value': 'http://httpbin.org/post', 'type': '相等', 'name': '$.url'}]
 
@@ -126,7 +126,7 @@ class HandelTestData(object):
             'expect': '$.url'}]
         }
         """
-        validate_items = eval(self.validate)
+        validate_items = eval(validate)
         validate_data = [{
             'method': item['type'],
             'actual': item['value'],
@@ -175,11 +175,57 @@ class HandelTestData(object):
             },
             "threads": int(self.threads),
             "iterations": int(self.iterations),
-            "headers": self.resolve_headers(),
-            "request": self.raw_conversion(),
-            'setup_script': self.resolve_script(),
-            'teardown_script':  self.resolve_script('teardown_script'),
-            'extract': self.resolve_extract(),
-            'validators': self.resolve_validators()
+            "headers": self.resolve_headers(self.headers),
+            "request": self.raw_conversion(self.raw),
+            'setup_script': self.resolve_script(setup_script=self.setup_script),
+            'teardown_script': self.resolve_script(use='teardown_script', teardown_script=self.teardown_script),
+            'extract': self.resolve_extract(extract=self.extract),
+            'validators': self.resolve_validators(self.validate)
         }
         return api_doc_template
+
+    def get_step_template(self, step):
+        """
+        "step_data": [
+        {
+            "name": "验证表单回填",
+            "method": "POST",
+            "url": "http://localhost:8080/login",
+            "priority": 0,
+            "status": 0,
+            "desc": "http://localhost:8080/login",
+            "headers": "[{\"name\": \"Content-Type\", \"value\": \"application/json\", \"description\": \"\"}, {\"name\": \"1\", \"value\": \"1\", \"description\": \"1\"}]",
+            "params": "[{\"name\": \"dddd\", \"value\": \"4444\", \"description\": \"4444\", \"type\": \"Float\"}]",
+            "raw": "{\"json\": \"{\\\"$schema\\\": \\\"http://json-schema.org/draft-04/schema\\\"}\"}",
+            "setup_script": "ep.get_pre_url()",
+            "teardown_script": "ep.get_pre_url()",
+            "validate": "[{\"name\": \"1\", \"type\": \"\\u5927\\u4e8e\\u7b49\\u4e8e\", \"description\": \"3\"}]",
+            "extract": "[{\"name\": \"1\", \"type\": \"jsonpath\", \"description\": \"1\"}]",
+            "project": 158
+        }
+    ],
+        """
+        step_template = {
+            "title": step.get('name', None),
+            "interface": {
+                "url": step.get('url', None),
+                "name": step.get('name', None),
+                "method": step.get('method', None)
+            },
+            "headers": self.resolve_headers(step.get('headers', [])),
+            "request": self.raw_conversion(step.get('raw', {})),
+            'setup_script': self.resolve_script(setup_script=step.get('setup_script', None)),
+            'teardown_script': self.resolve_script(use='teardown_script',
+                                                   teardown_script=step.get('teardown_script', None)),
+            'extract': self.resolve_extract(extract=step.get('extract', [])),
+            'validators': self.resolve_validators(step.get('validate', []))
+        }
+        return step_template
+
+    def get_case_template(self, cases, name='Demo'):
+
+        case_template = [{
+            'name': name,
+            'cases': [self.get_step_template(step) for step in cases]
+        }]
+        return case_template
