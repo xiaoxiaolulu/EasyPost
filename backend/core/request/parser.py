@@ -223,7 +223,6 @@ class HandelTestData(object):
         return step_template
 
     def get_case_template(self, cases, name='Demo'):
-
         case_template = [{
             'name': name,
             'cases': [self.get_step_template(step) for step in cases]

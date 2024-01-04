@@ -208,7 +208,10 @@ class HttpDao:
             runner = HandelTestData()
             steps = data.get('step_data', [])
             name = data.get('name', 'Demo')
+            import sys
+
             case_data = runner.get_case_template(steps, name)
+            sys.stdout.write(str(case_data))
             result = run_test(case_data)
             return result
         except Exception as e:

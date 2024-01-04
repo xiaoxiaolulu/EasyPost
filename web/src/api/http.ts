@@ -71,3 +71,11 @@ export function saveCaseOrUpdate(data: any) {
         data
     })
 }
+
+export function runCase(data: any) {
+    return request({
+        url: '/api/case/run',
+        method: 'post',
+        data
+    })
+}

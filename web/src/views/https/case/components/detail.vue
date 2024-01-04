@@ -53,7 +53,7 @@
                             placeholder="请输入用例描述"></el-input>
                 </el-form-item>
               </el-form>
-              <el-button type="success" @click="" size="small">调试</el-button>
+              <el-button type="success" @click="debug(ruleFormRef)" size="small">调试</el-button>
               <el-button type="primary" @click="onSureClick(ruleFormRef)" size="small">保存</el-button>
             </div>
           </el-card>
@@ -149,7 +149,7 @@ import {ArrowDown, Switch, Back, Odometer} from "@element-plus/icons-vue";
 import {useRoute, useRouter} from "vue-router";
 import {computed, onMounted, reactive, ref, watch, nextTick} from "vue";
 import {ElMessage, FormInstance} from "element-plus";
-import {saveCaseOrUpdate, runApi, getHttpDetail} from "@/api/http";
+import {saveCaseOrUpdate, runCase, getHttpDetail, runApi} from "@/api/http";
 import {showErrMessage} from "@/utils/element";
 import {getStepTypesByUse, getStepTypeInfo, parseTime} from '@/utils/index'
 import Step from "@/views/https/case/components/step.vue";
@@ -230,6 +230,41 @@ const onSureClick = (formName: FormInstance | undefined) => {
         const ret = await saveCaseOrUpdate(caseData)
         const {code, data, msg} = ret.data
         state.api_id = data.api_id
+        showErrMessage(code.toString(), msg)
+      } catch (e) {
+        console.log(e)
+      }
+
+    } else {
+      console.log('error submit!')
+      ElMessage.error("新增接口失败请重试!")
+      return false
+    }
+  })
+}
+
+
+
+const debug = (formName: FormInstance | undefined) => {
+  if (!formName) return
+  formName.validate(async (valid) => {
+    if (valid) {
+      try{
+        let caseData = {
+          name: state.form.name,
+          step_data: tableData
+        }
+        const ret = await runCase(caseData)
+        const {code, data, msg} = ret.data
+        // const res = data['class_list'][0]['cases'][0]
+        // statusCode.value = res['status_code']
+        // runTime.value = res['run_time']
+        // ResponseRef.value.setData(res)
+        // performData.value = [res['perform']]
+        // performResponseShow.value = true
+        // performLoading.value = false
+        // responseReport.value = true
+        // toResponse()
         showErrMessage(code.toString(), msg)
       } catch (e) {
         console.log(e)
