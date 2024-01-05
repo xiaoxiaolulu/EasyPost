@@ -29,12 +29,17 @@ const httpsRouter = [{
             component: () => import('@/views/https/case/index.vue'),
             name: 'case',
             meta: { title: '接口用例', icon: 'Lightning'  }
-        },        {
+        },{
             path: '/case/detail',
             component: () => import('@/views/https/case/components/detail.vue'),
             name: 'caseDetail',
             hidden: true,
             meta: { title: '用例详情', icon: 'FolderRemove'  }
+        },{
+            path: '/https/plan',
+            component: () => import('@/views/https/plan/index.vue'),
+            name: 'plan',
+            meta: { title: '测试计划', icon: 'Lightning'  }
         },
     ]
 }]
