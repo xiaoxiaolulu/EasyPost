@@ -1,8 +1,16 @@
 import asyncio
-from asgiref.sync import sync_to_async
-from rest_framework import exceptions, status
+import inspect
+from django.db.models import QuerySet
+from pydantic.main import Model
+from rest_framework import exceptions
+from rest_framework.generics import (
+    GenericAPIView,
+    get_object_or_404
+)
 from rest_framework.request import Request
 from rest_framework.views import APIView
+
+from async_mixins import *
 
 
 class AsyncAPIView(APIView):
@@ -105,3 +113,228 @@ class AsyncAPIView(APIView):
 
         self.response = self.finalize_response(request, response, *args, **kwargs)
         return self.response
+
+
+class AsyncGenericAPIView(AsyncAPIView, GenericAPIView):
+    async def paginate_queryset(self, queryset):
+        """
+        Return a single page of results, or `None` if pagination is disabled.
+        """
+        if self.paginator is None:
+            return None
+        return await self.paginator.paginate_queryset(queryset, self.request, view=self)
+
+    async def get_queryset(self) -> QuerySet:
+        """
+        Get the list of items for this view.
+        This must be an iterable, and may be a queryset.
+        Defaults to using `self.queryset`.
+
+        This method should always be used rather than accessing `self.queryset`
+        directly, as `self.queryset` gets evaluated only once, and those results
+        are cached for all subsequent requests.
+
+        You may want to override this if you need to provide different
+        querysets depending on the incoming request.
+
+        (Eg. return a list of items that is specific to the user)
+        """
+        assert self.queryset is not None, (
+            "'%s' should either include a `queryset` attribute, "
+            "or override the `get_queryset()` method." % self.__class__.__name__
+        )
+
+        queryset = self.queryset
+        if isinstance(queryset, QuerySet):
+            # Ensure queryset is re-evaluated on each request.
+            queryset = queryset.all()
+        return queryset
+
+    async def get_object(self) -> Model:
+        """
+        Returns the object the view is displaying.
+
+        You may want to override this if you need to provide non-standard
+        queryset lookups.  Eg if objects are referenced using multiple
+        keyword arguments in the url conf.
+        """
+        queryset = await self.filter_queryset(await self.get_queryset())
+
+        # Perform the lookup filtering.
+        lookup_url_kwarg = self.lookup_url_kwarg or self.lookup_field
+
+        assert lookup_url_kwarg in self.kwargs, (
+            "Expected view %s to be called with a URL keyword argument "
+            'named "%s". Fix your URL conf, or set the `.lookup_field` '
+            "attribute on the view correctly." % (self.__class__.__name__, lookup_url_kwarg)
+        )
+
+        filter_kwargs = {self.lookup_field: self.kwargs[lookup_url_kwarg]}
+        obj = await sync_to_async(get_object_or_404)(queryset, **filter_kwargs)
+        obj = await obj
+        # May raise a permission denied
+        await sync_to_async(self.check_object_permissions)(self.request, obj)
+
+        return obj
+
+    async def get_serializer(self, *args, **kwargs):
+        """
+        Return the serializer instance that should be used for validating and
+        deserializing input, and for serializing output.
+        """
+        if inspect.iscoroutinefunction(self.get_serializer_class):
+            serializer_class = await self.get_serializer_class()
+        else:
+            serializer_class = await sync_to_async(self.get_serializer_class)()
+        kwargs.setdefault("context", await sync_to_async(self.get_serializer_context)())
+        return await sync_to_async(serializer_class)(*args, **kwargs)
+
+    async def get_serializer_class(self):
+        """
+        Return the class to use for the serializer.
+        Defaults to using `self.serializer_class`.
+
+        You may want to override this if you need to provide different
+        serializations depending on the incoming request.
+
+        (Eg. admins get full serialization, others get basic serialization)
+        """
+        assert self.serializer_class is not None, (
+            "'%s' should either include a `serializer_class` attribute, "
+            "or override the `get_serializer_class()` method." % self.__class__.__name__
+        )
+
+        return self.serializer_class
+
+    async def get_paginated_response(self, data):
+        """
+        Return a paginated style `Response` object for the given output data.
+        """
+        assert self.paginator is not None
+        return await self.paginator.get_paginated_response(data)
+
+    async def filter_queryset(self, queryset):
+        """
+        Given a queryset, filter it with whichever filter backend is in use.
+
+        You are unlikely to want to override this method, although you may need
+        to call it either from a list view, or from a custom `get_object`
+        method if you want to apply the configured filtering backend to the
+        default queryset.
+        """
+        for backend in list(self.filter_backends):
+            queryset = await backend().filter_queryset(self.request, queryset, self)
+        if inspect.iscoroutine(queryset):
+            return await queryset
+        return queryset
+
+
+# Concrete view classes that provide method handlers
+# by composing the mixin classes with the base view.
+
+
+class AsyncCreateAPIView(mixins.AsyncCreateModelMixin, AsyncGenericAPIView):
+    """
+    Concrete view for creating a model instance.
+    """
+
+    async def post(self, request, *args, **kwargs):
+        return await self.create(request, *args, **kwargs)
+
+
+class AsyncListAPIView(mixins.AsyncListModelMixin, AsyncGenericAPIView):
+    """
+    Concrete view for listing a queryset.
+    """
+
+    async def get(self, request, *args, **kwargs):
+        return await self.list(request, *args, **kwargs)
+
+
+class AsyncRetrieveAPIView(mixins.AsyncRetrieveModelMixin, AsyncGenericAPIView):
+    """
+    Concrete view for retrieving a model instance.
+    """
+
+    async def get(self, request, *args, **kwargs):
+        return await self.retrieve(request, *args, **kwargs)
+
+
+class AsyncDestroyAPIView(mixins.AsyncDestroyModelMixin, AsyncGenericAPIView):
+    """
+    Concrete view for deleting a model instance.
+    """
+
+    async def delete(self, request, *args, **kwargs):
+        return await self.destroy(request, *args, **kwargs)
+
+
+class AsyncUpdateAPIView(mixins.AsyncUpdateModelMixin, AsyncGenericAPIView):
+    """
+    Concrete view for updating a model instance.
+    """
+
+    async def put(self, request, *args, **kwargs):
+        return await self.update(request, *args, **kwargs)
+
+    async def patch(self, request, *args, **kwargs):
+        return await self.partial_update(request, *args, **kwargs)
+
+
+class AsyncListCreateAPIView(mixins.AsyncListModelMixin, mixins.AsyncCreateModelMixin, AsyncGenericAPIView):
+    """
+    Concrete view for listing a queryset or creating a model instance.
+    """
+
+    async def get(self, request, *args, **kwargs):
+        return await self.list(request, *args, **kwargs)
+
+    async def post(self, request, *args, **kwargs):
+        return await self.create(request, *args, **kwargs)
+
+
+class AsyncRetrieveUpdateAPIView(mixins.AsyncRetrieveModelMixin, mixins.AsyncUpdateModelMixin, AsyncGenericAPIView):
+    """
+    Concrete view for retrieving, updating a model instance.
+    """
+
+    async def get(self, request, *args, **kwargs):
+        return await self.retrieve(request, *args, **kwargs)
+
+    async def put(self, request, *args, **kwargs):
+        return await self.update(request, *args, **kwargs)
+
+    async def patch(self, request, *args, **kwargs):
+        return await self.partial_update(request, *args, **kwargs)
+
+
+class AsyncRetrieveDestroyAPIView(mixins.AsyncRetrieveModelMixin, mixins.AsyncDestroyModelMixin, AsyncGenericAPIView):
+    """
+    Concrete view for retrieving or deleting a model instance.
+    """
+
+    async def get(self, request, *args, **kwargs):
+        return await self.retrieve(request, *args, **kwargs)
+
+    async def delete(self, request, *args, **kwargs):
+        return await self.destroy(request, *args, **kwargs)
+
+
+class AsyncRetrieveUpdateDestroyAPIView(
+    mixins.AsyncRetrieveModelMixin, mixins.AsyncUpdateModelMixin, mixins.AsyncDestroyModelMixin, AsyncGenericAPIView
+):
+    """
+    Concrete view for retrieving, updating or deleting a model instance.
+    """
+
+    async def get(self, request, *args, **kwargs):
+        return await self.retrieve(request, *args, **kwargs)
+
+    async def put(self, request, *args, **kwargs):
+        return await self.update(request, *args, **kwargs)
+
+    async def patch(self, request, *args, **kwargs):
+        return await self.partial_update(request, *args, **kwargs)
+
+    async def delete(self, request, *args, **kwargs):
+        return await self.destroy(request, *args, **kwargs)
