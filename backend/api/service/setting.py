@@ -9,7 +9,7 @@ from api.models.setting import (
     TestEnvironment,
     Address
 )
-from api.response.magic import (
+from api.mixins.magic import (
     MagicListAPI,
     MagicUpdateApi,
     MagicDestroyApi,

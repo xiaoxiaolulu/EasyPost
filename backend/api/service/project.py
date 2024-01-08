@@ -17,7 +17,7 @@ from api.schema.project import (
     ProjectSerializers,
     ProjectRoleSerializers
 )
-from api.response.magic import (
+from api.mixins.magic import (
     MagicDestroyApi,
     MagicUpdateApi,
     MagicCreateApi,

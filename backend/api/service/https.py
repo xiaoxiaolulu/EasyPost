@@ -13,7 +13,7 @@ from api.models.https import (
     Relation,
     Api
 )
-from api.response.magic import MagicRetrieveApi
+from api.mixins.magic import MagicRetrieveApi
 from api.schema.https import (
     RelationSerializer,
     ApiSerializer
@@ -21,9 +21,7 @@ from api.schema.https import (
 from core.request.http_handler import HttpHandler
 from api.response.fatcory import ResponseStandard
 from utils.trees import (
-    get_tree_max_id,
-    get_relation_tree,
-    collections_directory_id
+    get_tree_max_id
 )
 
 
