@@ -115,7 +115,10 @@ class AsyncAPIView(APIView):
         return self.response
 
 
-class AsyncGenericAPIView(AsyncAPIView, GenericAPIView):
+class AsyncGenericAPIView(
+    AsyncAPIView,
+    GenericAPIView
+):
     async def paginate_queryset(self, queryset):
         """
         Return a single page of results, or `None` if pagination is disabled.
@@ -233,7 +236,10 @@ class AsyncGenericAPIView(AsyncAPIView, GenericAPIView):
 # by composing the mixin classes with the base view.
 
 
-class AsyncCreateAPIView(mixins.AsyncCreateModelMixin, AsyncGenericAPIView):
+class AsyncCreateAPIView(
+    AsyncCreateModelMixin,
+    AsyncGenericAPIView
+):
     """
     Concrete view for creating a model instance.
     """
@@ -242,7 +248,7 @@ class AsyncCreateAPIView(mixins.AsyncCreateModelMixin, AsyncGenericAPIView):
         return await self.create(request, *args, **kwargs)
 
 
-class AsyncListAPIView(mixins.AsyncListModelMixin, AsyncGenericAPIView):
+class AsyncListAPIView(AsyncListModelMixin, AsyncGenericAPIView):
     """
     Concrete view for listing a queryset.
     """
@@ -251,7 +257,10 @@ class AsyncListAPIView(mixins.AsyncListModelMixin, AsyncGenericAPIView):
         return await self.list(request, *args, **kwargs)
 
 
-class AsyncRetrieveAPIView(mixins.AsyncRetrieveModelMixin, AsyncGenericAPIView):
+class AsyncRetrieveAPIView(
+    AsyncRetrieveModelMixin,
+    AsyncGenericAPIView
+):
     """
     Concrete view for retrieving a model instance.
     """
@@ -260,7 +269,10 @@ class AsyncRetrieveAPIView(mixins.AsyncRetrieveModelMixin, AsyncGenericAPIView):
         return await self.retrieve(request, *args, **kwargs)
 
 
-class AsyncDestroyAPIView(mixins.AsyncDestroyModelMixin, AsyncGenericAPIView):
+class AsyncDestroyAPIView(
+    AsyncDestroyModelMixin,
+    AsyncGenericAPIView
+):
     """
     Concrete view for deleting a model instance.
     """
@@ -269,7 +281,10 @@ class AsyncDestroyAPIView(mixins.AsyncDestroyModelMixin, AsyncGenericAPIView):
         return await self.destroy(request, *args, **kwargs)
 
 
-class AsyncUpdateAPIView(mixins.AsyncUpdateModelMixin, AsyncGenericAPIView):
+class AsyncUpdateAPIView(
+    AsyncUpdateModelMixin,
+    AsyncGenericAPIView
+):
     """
     Concrete view for updating a model instance.
     """
@@ -281,7 +296,11 @@ class AsyncUpdateAPIView(mixins.AsyncUpdateModelMixin, AsyncGenericAPIView):
         return await self.partial_update(request, *args, **kwargs)
 
 
-class AsyncListCreateAPIView(mixins.AsyncListModelMixin, mixins.AsyncCreateModelMixin, AsyncGenericAPIView):
+class AsyncListCreateAPIView(
+    AsyncListModelMixin,
+    AsyncCreateModelMixin,
+    AsyncGenericAPIView
+):
     """
     Concrete view for listing a queryset or creating a model instance.
     """
@@ -293,7 +312,11 @@ class AsyncListCreateAPIView(mixins.AsyncListModelMixin, mixins.AsyncCreateModel
         return await self.create(request, *args, **kwargs)
 
 
-class AsyncRetrieveUpdateAPIView(mixins.AsyncRetrieveModelMixin, mixins.AsyncUpdateModelMixin, AsyncGenericAPIView):
+class AsyncRetrieveUpdateAPIView(
+    AsyncRetrieveModelMixin,
+    AsyncUpdateModelMixin,
+    AsyncGenericAPIView
+):
     """
     Concrete view for retrieving, updating a model instance.
     """
@@ -308,7 +331,11 @@ class AsyncRetrieveUpdateAPIView(mixins.AsyncRetrieveModelMixin, mixins.AsyncUpd
         return await self.partial_update(request, *args, **kwargs)
 
 
-class AsyncRetrieveDestroyAPIView(mixins.AsyncRetrieveModelMixin, mixins.AsyncDestroyModelMixin, AsyncGenericAPIView):
+class AsyncRetrieveDestroyAPIView(
+    AsyncRetrieveModelMixin,
+    AsyncDestroyModelMixin,
+    AsyncGenericAPIView
+):
     """
     Concrete view for retrieving or deleting a model instance.
     """
@@ -321,7 +348,10 @@ class AsyncRetrieveDestroyAPIView(mixins.AsyncRetrieveModelMixin, mixins.AsyncDe
 
 
 class AsyncRetrieveUpdateDestroyAPIView(
-    mixins.AsyncRetrieveModelMixin, mixins.AsyncUpdateModelMixin, mixins.AsyncDestroyModelMixin, AsyncGenericAPIView
+    AsyncRetrieveModelMixin,
+    AsyncUpdateModelMixin,
+    AsyncDestroyModelMixin,
+    AsyncGenericAPIView
 ):
     """
     Concrete view for retrieving, updating or deleting a model instance.
