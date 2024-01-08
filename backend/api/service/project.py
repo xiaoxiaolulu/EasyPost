@@ -8,6 +8,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from api.dao.project import ProjectDao
+from api.emus.ProjectEnum import ProjectRoleEnum
 from api.filters.project import ProjectFilter
 from api.models.project import (
     Project,
@@ -97,7 +98,7 @@ class ProjectRoleDestroyViewSet(APIView):
             has_permission = ProjectDao.check_judge_permission(project_pk, request.user.id)
 
             if not has_permission:
-                response = Response(ResponseStandard.failed(msg="删除角色失败, 你无改项目权限"))
+                response = Response(ResponseStandard.failed(msg=ProjectRoleEnum.DEL_PERMISSION))
             if has_permission:
                 instance = ProjectDao.search_user_role(project_pk, user_pk)
                 instance.delete()
@@ -121,9 +122,9 @@ class ProjectRoleUpdateViewSet(APIView):
             has_permission = ProjectDao.check_judge_permission(project_pk, request.user.id)
             exist = ProjectDao.check_user_role_exist(project_pk, user_pk)
             if not has_permission:
-                return Response(ResponseStandard.failed(msg="新增角色失败, 你无改项目权限!"))
+                return Response(ResponseStandard.failed(msg=ProjectRoleEnum.ADD_PERMISSION))
             if exist:
-                return Response(ResponseStandard.failed(msg="当前角色已填权限!"))
+                return Response(ResponseStandard.failed(msg=ProjectRoleEnum.HAS_PERMISSION))
             else:
                 ret = ProjectRole.objects.create(
                     project_id=project_pk,
