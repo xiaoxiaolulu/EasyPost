@@ -33,24 +33,29 @@ class ProjectDao:
             return False
 
     @staticmethod
-    def create_project_role(validated_data):
+    def get_node_template():
+
+        tree_template = [{  # noqa
+            "id": 1,
+            "label": "全部",
+            "children": []
+        }]
+        return tree_template
+
+    @classmethod
+    def create_project_role(cls, validated_data):
 
         try:
             instance = Project.objects.create(**validated_data)
             ProjectRole.objects.create(project_id=instance.id, user_id=instance.user.id, rode_id=0)
 
-            tree_template = [{  # noqa
-                "id": 1,
-                "label": "全部",
-                "children": []
-            }]
-
+            template = cls.get_node_template()
             try:
                 tree = Relation.objects.get(project=instance)
             except Relation.DoesNotExist:
                 Relation.objects.create(
                     project=instance,
-                    tree=tree_template
+                    tree=template
                 )
             return instance
 
