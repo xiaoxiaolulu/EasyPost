@@ -1,7 +1,9 @@
 import asyncio
 import inspect
-from django.db.models import QuerySet
-from pydantic.main import Model
+from django.db.models import (
+    QuerySet,
+    Model
+)
 from rest_framework import exceptions
 from rest_framework.generics import (
     GenericAPIView,
