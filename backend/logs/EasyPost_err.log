@@ -1,0 +1,47 @@
+[2024-01-22 15:35:21,044][ThreadPoolExecutor-1_0:19912][task_id:apscheduler.executors.default][base.py:131][ERROR][Job "HttpDao.run_test_suite (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*'], next run at: 2024-01-22 15:36:00 CST)" raised an exception]
+Traceback (most recent call last):
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\redis\connection.py", line 698, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\redis\retry.py", line 51, in call_with_retry
+    raise error
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\redis\retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\redis\connection.py", line 699, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\redis\connection.py", line 987, in _connect
+    raise err
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\redis\connection.py", line 975, in _connect
+    sock.connect(socket_address)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\Desktop\EasyPost\backend\utils\decorator.py", line 34, in wrapper
+    with RedLock(f"distributed_lock:{func.__name__}:{key}:{str(args)}",
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\redlock\lock.py", line 116, in __enter__
+    if not self.acquire():
+           ^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\redlock\lock.py", line 154, in acquire
+    if self.acquire_node(node):
+       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\redlock\lock.py", line 134, in acquire_node
+    return node.set(self.resource, self.lock_key, nx=True, px=self.ttl)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\redis\commands\core.py", line 2302, in set
+    return self.execute_command("SET", *pieces, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\redis\client.py", line 1255, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\redis\connection.py", line 1442, in get_connection
+    connection.connect()
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\redis\connection.py", line 702, in connect
+    raise TimeoutError("Timeout connecting to server")
+redis.exceptions.TimeoutError: Timeout connecting to server
