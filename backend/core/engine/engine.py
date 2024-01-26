@@ -34,7 +34,7 @@ class PytestRunner(object):
 
     def run(self):
         self.context.update(__builtins__)  # noqa
-        self.context.update(builtin.__dict__)
+        # self.context.update(builtin.__dict__) # noqa
         self.context.update(**self.execute_sql())
         teststeps = self.raw.get('teststeps', [])  # noqa
         fixtures = self.raw.get('config', {}).get('fixtures', [])

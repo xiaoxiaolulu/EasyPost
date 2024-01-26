@@ -6,6 +6,7 @@ from typing import (
 )
 from unittest import TestSuite
 from core.engine.base import BaseTest
+from core.models import step
 
 
 class GenerateCase:
@@ -14,7 +15,7 @@ class GenerateCase:
     def __init__(self):
         self.controller = BaseTest()
 
-    def data_to_suite(self, datas) -> TestSuite:
+    def data_to_suite(self, datas: step.TestCase) -> TestSuite:
         """
         根据用例数据生成测试套件
         :param datas:

@@ -1,9 +1,13 @@
 import json
+from typing import (
+    List,
+    Dict
+)
 
 
 class HandelTestData(object):
 
-    def __init__(self, request_body=None):
+    def __init__(self, request_body: Dict = None) -> None:
         try:
             # 额外参数
             self.directory_id = request_body.get('directory_id', None)
@@ -34,10 +38,19 @@ class HandelTestData(object):
             # 步骤
             self.step_data = request_body.get('step_data', [])
 
+            # 计划
+            self.cron = request_body.get('cron', None)
+            self.case_list = request_body.get('case_list', [])
+            self.state = request_body.get('state', 0)
+            self.pass_rate = request_body.get('pass_rate', '80%')
+            self.msg_type = request_body.get('msg_type', 0)
+            self.receiver = request_body.get('receiver', [])
+
         except (KeyError, ValueError, AttributeError):
             pass
 
-    def resolve_headers(self, headers):
+    @staticmethod
+    def resolve_headers(headers):
         """
         [{'name': 'Content-Type', 'value': 'application/json', 'description': '', 'edit': False}]
 
@@ -48,7 +61,8 @@ class HandelTestData(object):
         headers = {item['name']: item['value'] for item in json.loads(headers)}
         return headers
 
-    def resolve_form_data(self, raw):
+    @staticmethod
+    def resolve_form_data(raw):
         """
         {'data': [{'id': 912586, 'edit': False, 'visible': False, 'name': '33', 'value': '333', 'type': 'Integer', 'description': '33'}]}
 
@@ -60,7 +74,8 @@ class HandelTestData(object):
         }
         return form_data
 
-    def resolve_x_www_form_urlencoded(self, raw):
+    @staticmethod
+    def resolve_x_www_form_urlencoded(raw):
         """
         {'data': [{'id': 912586, 'edit': False, 'visible': False, 'name': '33', 'value': '333', 'type': 'Integer', 'description': '33'}]}
 
@@ -72,7 +87,8 @@ class HandelTestData(object):
         }
         return form_data
 
-    def resolve_json(self, raw):
+    @staticmethod
+    def resolve_json(raw):
         """
         {'json': '{"$schema": "http://json-schema.org/draft-04/schema"}'}
         """
@@ -92,7 +108,12 @@ class HandelTestData(object):
             raw_content = self.resolve_form_data(raw) if form_target else self.resolve_x_www_form_urlencoded(raw)
         return raw_content
 
-    def resolve_script(self, use='setup_script', setup_script=None, teardown_script=None):
+    @staticmethod
+    def resolve_script(
+            use='setup_script',
+            setup_script=None,
+            teardown_script=None
+    ):
         """
         {'script_code': "ep.get_env_variable('name')\nep.get_env_variable('name')\nep.get_env_variable('name')"}
 
@@ -101,7 +122,8 @@ class HandelTestData(object):
         script = setup_script if use == 'setup_script' else teardown_script
         return script
 
-    def resolve_extract(self, env="env", extract=None):
+    @staticmethod
+    def resolve_extract(env="env", extract=None):
         """
         [{'id': 452947, 'edit': False, 'visible': False, 'name': 'router', 'type': 'jsonpath', 'value': '$.url'}]
         "extract": {
@@ -116,7 +138,8 @@ class HandelTestData(object):
         }
         return extract_data
 
-    def resolve_validators(self, validate=None):
+    @staticmethod
+    def resolve_validators(validate=None):
         """
         [{'id': 713191, 'edit': False, 'visible': False, 'value': 'http://httpbin.org/post', 'type': '相等', 'name': '$.url'}]
 
@@ -223,8 +246,21 @@ class HandelTestData(object):
         return step_template
 
     def get_case_template(self, cases, name='Demo'):
-        case_template = [{
+
+        if not cases:
+            return []  # or None
+
+        return {
             'name': name,
             'cases': [self.get_step_template(step) for step in cases]
-        }]
-        return case_template
+        }
+
+    def get_plan_template(self, suites: List[dict]) -> List[dict]:
+
+        if not suites:
+            return []
+
+        return [{
+            'name': case.get('name', f'场景-{index + 1}'),
+            'cases': [self.get_step_template(step) for step in case.get('cases', [])]
+        } for index, case in enumerate(suites)]

@@ -1,18 +1,24 @@
 import asyncio
 import inspect
+from asgiref.sync import sync_to_async
 from django.db.models import (
     QuerySet,
     Model
 )
-from rest_framework import exceptions
+from rest_framework import exceptions, status
 from rest_framework.generics import (
     GenericAPIView,
     get_object_or_404
 )
 from rest_framework.request import Request
 from rest_framework.views import APIView
-
-from async_mixins import *
+from api.mixins.async_mixins import (
+    AsyncCreateModelMixin,
+    AsyncListModelMixin,
+    AsyncRetrieveModelMixin,
+    AsyncDestroyModelMixin,
+    AsyncUpdateModelMixin
+)
 
 
 class AsyncAPIView(APIView):
@@ -23,16 +29,16 @@ class AsyncAPIView(APIView):
     """
 
     @classmethod
-    def as_view(cls, *args, **initkwargs):
+    def as_view(cls, *args, **initkwargs): # noqa
         """Make Django process the view as an async view."""
-        view = super().as_view(*args, **initkwargs)
+        view = super().as_view(*args, **initkwargs) # noqa
 
-        async def async_view(*args, **kwargs):
+        async def async_view(*args, **kwargs): # noqa
             # wait for the `dispatch` method
             return await view(*args, **kwargs)
 
         async_view.cls = cls
-        async_view.initkwargs = initkwargs
+        async_view.initkwargs = initkwargs # noqa
         async_view.csrf_exempt = True
         return async_view
 
@@ -90,11 +96,11 @@ class AsyncAPIView(APIView):
 
     async def dispatch(self, request, *args, **kwargs):
         """Add async support."""
-        self.args = args
-        self.kwargs = kwargs
+        self.args = args # noqa
+        self.kwargs = kwargs # noqa
         request = await self.initialize_request(request, *args, **kwargs)
-        self.request = request
-        self.headers = self.default_response_headers
+        self.request = request # noqa
+        self.headers = self.default_response_headers # noqa
 
         try:
             await sync_to_async(self.initial)(request, *args, **kwargs)
@@ -113,7 +119,7 @@ class AsyncAPIView(APIView):
         except Exception as exc:
             response = await self.handle_exception(exc)
 
-        self.response = self.finalize_response(request, response, *args, **kwargs)
+        self.response = self.finalize_response(request, response, *args, **kwargs) # noqa
         return self.response
 
 
@@ -140,9 +146,9 @@ class AsyncGenericAPIView(
         are cached for all subsequent requests.
 
         You may want to override this if you need to provide different
-        querysets depending on the incoming request.
+        query sets depending on the incoming request.
 
-        (Eg. return a list of items that is specific to the user)
+        (E.g. return a list of items that is specific to the user)
         """
         assert self.queryset is not None, (
             "'%s' should either include a `queryset` attribute, "
@@ -202,7 +208,7 @@ class AsyncGenericAPIView(
         You may want to override this if you need to provide different
         serializations depending on the incoming request.
 
-        (Eg. admins get full serialization, others get basic serialization)
+        (E.g. admins get full serialization, others get basic serialization)
         """
         assert self.serializer_class is not None, (
             "'%s' should either include a `serializer_class` attribute, "

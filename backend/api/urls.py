@@ -3,7 +3,6 @@ from django.urls import (
     include
 )
 from rest_framework.routers import DefaultRouter
-
 from api.service.https import (
     ApiFastView,
     TreeView,
@@ -13,7 +12,10 @@ from api.service.https import (
     RunApiView,
     SaveOrUpdateApiView,
     SaveOrUpdateCaseView,
-    RunCaseView
+    RunCaseView,
+    SaveOrUpdatePlanView,
+    RunPlanView,
+    UpdatePlanStateView
 )
 from api.service.project import (
     ProjectListViewSet,
@@ -77,9 +79,13 @@ app_urls = [
         'get': 'list'
     })),
     path('http/run', RunApiView.as_view()),
-
     path("case/SaveOrUpdate/<int:pk>", SaveOrUpdateCaseView.as_view()),
-    path('case/run', RunCaseView.as_view())
+    path('case/run', RunCaseView.as_view()),
+
+    # 测试计划
+    path("plan/SaveOrUpdate/<int:pk>", SaveOrUpdatePlanView.as_view()),
+    path("plan/UpdatePlanState/<int:task_id>/<int:target_status>", UpdatePlanStateView.as_view()),
+    path("plan/run", RunPlanView.as_view())
 ]
 
 # Final URL configuration
