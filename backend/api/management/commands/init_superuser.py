@@ -8,7 +8,6 @@ DESCRIPTION：自定义创建用户命令
 import logging
 from django.core.management.base import BaseCommand
 from rest_framework_simplejwt.tokens import RefreshToken
-
 from api.models.https import User
 
 logger = logging.getLogger('raven')

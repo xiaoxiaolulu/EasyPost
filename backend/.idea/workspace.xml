@@ -4,7 +4,108 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="后端调整" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="后端调整">
+      <change afterPath="$PROJECT_DIR$/api/dao/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/dao/project.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/dao/setting.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/dao/user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/emus/CaseParametersEnum.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/emus/CaseStatusEnum.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/emus/CertEnum.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/emus/ConstructorEnum.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/emus/ConvertorEnum.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/emus/DatabaseEnum.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/emus/MessageEnum.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/emus/NoticeEnum.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/emus/OperationEnum.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/emus/OssEnum.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/emus/ProjectEnum.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/emus/RequestTypeEnum.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/filters/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/filters/project.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/filters/setting.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/middleware/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/middleware/whitelist_middleware.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/migrations/0002_remove_user_is_valid.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/migrations/0003_project.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/migrations/0004_projectrole.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/migrations/0005_auto_20230811_1105.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/migrations/0006_auto_20230912_1126.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/migrations/0007_auto_20230912_1436.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/migrations/0008_auto_20230927_1537.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/migrations/0009_auto_20231124_1014.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/migrations/0010_auto_20231205_1336.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/migrations/0011_auto_20231205_1348.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/migrations/0012_alter_address_id_alter_api_id_alter_project_id_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/migrations/0013_djangoadminaccessipwhitelist.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/migrations/0014_alter_djangoadminaccessipwhitelist_id.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/migrations/0015_djangoadminaccessipwhitelist_name_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/migrations/0016_remove_api_tags_api_priority.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/migrations/0017_case.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/migrations/0018_remove_case_step_step.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/migrations/0019_remove_step_case.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/migrations/0020_step_case.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/mixins/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/mixins/magic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/models/configuration.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/models/project.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/models/setting.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/models/user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/response/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/schema/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/schema/https.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/schema/project.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/schema/setting.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/schema/user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/service/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/service/project.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/service/setting.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/service/user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/builitin/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/builitin/functions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/builitin/validator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/constructor/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/constructor/create_function.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/database/DBClient.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/database/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/engine/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/engine/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/engine/env.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/engine/extract.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/engine/log.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/engine/paramster.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/engine/runner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/engine/session_runner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/exception/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/exception/exception_handler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/msg/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/msg/qy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/request/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/request/http_handler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/22.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/3333test1login.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/login.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/pam.yaml1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/encoder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/log.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/recursion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/trees.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/https.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/plan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/management/commands/init_superuser.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/management/commands/init_superuser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/service/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/https.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/models/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/models/step.py" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -352,15 +453,7 @@
       <workItem from="1705995985318" duration="31000" />
       <workItem from="1705996178360" duration="35102000" />
       <workItem from="1706169196806" duration="21346000" />
-      <workItem from="1706262452393" duration="328000" />
-    </task>
-    <task id="LOCAL-00159" summary="用例详情表单">
-      <option name="closed" value="true" />
-      <created>1704251134022</created>
-      <option name="number" value="00159" />
-      <option name="presentableId" value="LOCAL-00159" />
-      <option name="project" value="LOCAL" />
-      <updated>1704251134022</updated>
+      <workItem from="1706262452393" duration="1460000" />
     </task>
     <task id="LOCAL-00160" summary="用例详情表单">
       <option name="closed" value="true" />
@@ -746,7 +839,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706261694565</updated>
     </task>
-    <option name="localTasksCounter" value="208" />
+    <task id="LOCAL-00208" summary="后端调整">
+      <option name="closed" value="true" />
+      <created>1706262974821</created>
+      <option name="number" value="00208" />
+      <option name="presentableId" value="LOCAL-00208" />
+      <option name="project" value="LOCAL" />
+      <updated>1706262974821</updated>
+    </task>
+    <option name="localTasksCounter" value="209" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -57,7 +57,6 @@ class TreeView(APIView):
         """
         try:
             body = request.data['body']
-
             relation = Relation.objects.get(id=kwargs['pk'])
             relation.tree = body
             relation.save()
