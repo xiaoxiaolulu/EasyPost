@@ -1,0 +1,156 @@
+2023-08-05 15:06:34 [INFO]: 执行文件-> test_login.yaml
+2023-08-05 15:06:34 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-08-05 15:06:34 [INFO]: 用例步骤：1 -> 登录1
+2023-08-05 15:06:34 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function test_login[test1-123456]>>, 'username': 'test1', 'password': '123456'}
+2023-08-05 15:06:34 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test1",
+        "password": "123456"
+    }
+}
+2023-08-05 15:06:34 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-08-05 15:06:34 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Sat, 05 Aug 2023 07:06:36 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "110"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=ppk3v6oj8dvofopswewifjzu2dpstoa6; expires=Sat, 19-Aug-2023 07:06:36 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 0,
+    "msg": "login success!",
+    "username": "test1",
+    "token": "a433d7dba8efd75ed7486c7d95da83a8bc09eb27"
+}
+cookies: [{'name': 'sessionid', 'value': 'ppk3v6oj8dvofopswewifjzu2dpstoa6'}]
+cost: 2075ms
+cookie: <RequestsCookieJar[<Cookie sessionid=ppk3v6oj8dvofopswewifjzu2dpstoa6 for 124.70.221.221/>]>
+2023-08-05 15:06:34 [INFO]: f--------  执行后置条件 ----------
+func2
+2023-08-05 15:06:34 [INFO]: 执行文件-> test_login.yaml
+2023-08-05 15:06:34 [INFO]: 参数化数据-> [{'username': 'test1', 'password': '123456'}, {'username': 'test2', 'password': 'abdxxx'}]
+2023-08-05 15:06:34 [INFO]: 用例步骤：1 -> 登录1
+2023-08-05 15:06:34 [INFO]: 当前用例引用参数化数据-> {'request': <FixtureRequest for <Function test_login[test2-abdxxx]>>, 'username': 'test2', 'password': 'abdxxx'}
+2023-08-05 15:06:34 [INFO]: --------  request info ----------
+{
+    "url": "http://124.70.221.221:8201/api/v1/login/",
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "User-Agent": "python-requests/2.18.4"
+    },
+    "hooks": {
+        "request_hooks": [
+            "func1"
+        ],
+        "response_hooks": [
+            "func2"
+        ]
+    },
+    "json": {
+        "username": "test2",
+        "password": "abdxxx"
+    }
+}
+2023-08-05 15:06:34 [INFO]: f--------  执行前置条件 ----------
+func1
+2023-08-05 15:06:34 [INFO]: --------  response info ----------
+status: True
+msg: success
+statusCode: 200
+responseHeaders:
+[
+    {
+        "name": "Date",
+        "value": "Sat, 05 Aug 2023 07:06:36 GMT"
+    },
+    {
+        "name": "Server",
+        "value": "WSGIServer/0.2 CPython/3.6.8"
+    },
+    {
+        "name": "Content-Type",
+        "value": "application/json"
+    },
+    {
+        "name": "Allow",
+        "value": "POST, OPTIONS"
+    },
+    {
+        "name": "X-Frame-Options",
+        "value": "SAMEORIGIN"
+    },
+    {
+        "name": "Content-Length",
+        "value": "76"
+    },
+    {
+        "name": "Vary",
+        "value": "Cookie"
+    },
+    {
+        "name": "Set-Cookie",
+        "value": "sessionid=imst75mapnx389n1hgvf5dmfpsehekq1; expires=Sat, 19-Aug-2023 07:06:36 GMT; HttpOnly; Max-Age=1209600; Path=/"
+    }
+]
+responseBody:
+{
+    "code": 3003,
+    "msg": "账号或密码不正确",
+    "username": "test2",
+    "token": ""
+}
+cookies: [{'name': 'sessionid', 'value': 'imst75mapnx389n1hgvf5dmfpsehekq1'}]
+cost: 1944ms
+cookie: <RequestsCookieJar[<Cookie sessionid=imst75mapnx389n1hgvf5dmfpsehekq1 for 124.70.221.221/>]>
+2023-08-05 15:06:34 [INFO]: f--------  执行后置条件 ----------
+func2
