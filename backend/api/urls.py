@@ -94,8 +94,8 @@ app_urls = [
     path("plan/SaveOrUpdate/<int:pk>", SaveOrUpdatePlanView.as_view()),
     path("plan/UpdatePlanState/<int:task_id>/<int:target_status>", UpdatePlanStateView.as_view()),
     path("plan/run", RunPlanView.as_view()),
-    path('case/delete/<int:pk>', DelPlanView.as_view()),
-    path('case/detail/<int:pk>', PlanDetailView.as_view()),
+    path('plan/delete/<int:pk>', DelPlanView.as_view()),
+    path('plan/detail/<int:pk>', PlanDetailView.as_view()),
 ]
 
 # Final URL configuration

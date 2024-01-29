@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment=":construction_worker: 调整模型">
-      <change afterPath="$PROJECT_DIR$/api/schema/plan.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/dao/dashboard.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/dao/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/https.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/schema/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/schema/https.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/service/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/https.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_info.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_info.log" afterDir="false" />
     </list>
@@ -85,38 +82,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/86135/Desktop/EasyPost/backend/api&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\Program Files\\JetBrains\\PyCharm 2023.1.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/86135/Desktop/EasyPost/backend/api/dao",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "inlay.hints",
+    "ts.external.directory.path": "D:\\Program Files\\JetBrains\\PyCharm 2023.1.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;ChangesTree.GroupingKeys&quot;: [
-      &quot;directory&quot;
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\dao" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\utils" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\scheduler" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\response" />
-      <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\emus" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\86135\Desktop\EasyPost\backend" />
@@ -243,6 +240,7 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="config.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -385,23 +383,7 @@
       <workItem from="1705996178360" duration="35102000" />
       <workItem from="1706169196806" duration="21346000" />
       <workItem from="1706262452393" duration="2389000" />
-      <workItem from="1706264876701" duration="2357000" />
-    </task>
-    <task id="LOCAL-00163" summary="用例详情表单">
-      <option name="closed" value="true" />
-      <created>1704356899704</created>
-      <option name="number" value="00163" />
-      <option name="presentableId" value="LOCAL-00163" />
-      <option name="project" value="LOCAL" />
-      <updated>1704356899704</updated>
-    </task>
-    <task id="LOCAL-00164" summary="用例详情表单">
-      <option name="closed" value="true" />
-      <created>1704362134444</created>
-      <option name="number" value="00164" />
-      <option name="presentableId" value="LOCAL-00164" />
-      <option name="project" value="LOCAL" />
-      <updated>1704362134444</updated>
+      <workItem from="1706264876701" duration="5273000" />
     </task>
     <task id="LOCAL-00165" summary="后端调整">
       <option name="closed" value="true" />
@@ -779,7 +761,23 @@
       <option name="project" value="LOCAL" />
       <updated>1706495034574</updated>
     </task>
-    <option name="localTasksCounter" value="212" />
+    <task id="LOCAL-00212" summary=":construction_worker: 调整模型">
+      <option name="closed" value="true" />
+      <created>1706496103215</created>
+      <option name="number" value="00212" />
+      <option name="presentableId" value="LOCAL-00212" />
+      <option name="project" value="LOCAL" />
+      <updated>1706496103215</updated>
+    </task>
+    <task id="LOCAL-00213" summary=":construction_worker: 调整模型">
+      <option name="closed" value="true" />
+      <created>1706496108335</created>
+      <option name="number" value="00213" />
+      <option name="presentableId" value="LOCAL-00213" />
+      <option name="project" value="LOCAL" />
+      <updated>1706496108335</updated>
+    </task>
+    <option name="localTasksCounter" value="214" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
