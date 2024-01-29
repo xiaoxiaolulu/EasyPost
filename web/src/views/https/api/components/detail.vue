@@ -263,7 +263,7 @@ import RequestHeaders from "@/views/https/api/components/requestHeaders.vue";
 import Extract from "@/views/https/api/components/extract.vue";
 import Validator from "@/views/https/api/components/validator.vue";
 import ApiScript from "@/views/https/api/components/apiScript.vue";
-import {saveOrUpdate, runApi, getHttpDetail} from "@/api/http";
+import {saveOrUpdate, runApi, getHttpDetail, httpSnapshot} from "@/api/http";
 import {showErrMessage} from "@/utils/element";
 import ResponseReport from "@/views/https/api/components/responseReport.vue";
 
@@ -549,6 +549,40 @@ const debug = (formName: FormInstance | undefined) => {
   })
 }
 
+const Snapshot = () => {
+  try{
+    let ApiRequestHeader = RequestHeadersRef.value.getData()
+    let ApiRequestQuery = RequestQueryRef.value.getData()
+    let ApiRequestBody = RequestBodyRef.value.getData()
+    let ApiRequestSetup = RequestSetup.value.getData()
+    let ApiRequestTeardown = RequestTeardown.value.getData()
+    let ApiRequestValidators = RequestValidators.value.getData()
+    let ApiRequestExtractor = RequestExtractor.value.getData()
+    let apiData = {
+      id: state.api_id,
+      directory_id: route.query.node,
+      project: route.query.project,
+      name: ruleForm.name,
+      url: ruleForm.url,
+      method: ruleForm.method,
+      priority: ruleForm.priority,
+      status: ruleForm.status,
+      desc: ruleForm.remarks,
+      headers: ApiRequestHeader,
+      raw: ApiRequestBody,
+      params: ApiRequestQuery,
+      setup_script: ApiRequestSetup,
+      teardown_script: ApiRequestTeardown,
+      validate: ApiRequestValidators,
+      extract: ApiRequestExtractor
+    }
+    httpSnapshot(apiData)
+  } catch (e) {
+    console.log(e)
+  }
+}
+
+
 const initApi = () => {
   let api_id = route.query.id
   if(api_id){
@@ -596,6 +630,12 @@ watch(() => ruleForm.status, (newVal, oldVal) => {
   }
   console.log(`"${oldVal}" to "${newVal}"`)
 })
+
+
+window.setInterval(() => {
+  setTimeout(Snapshot, 0)
+}, 3000)
+
 </script>
 <style lang="scss">
 .page-header-back-button {

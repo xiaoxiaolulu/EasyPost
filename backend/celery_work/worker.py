@@ -23,10 +23,10 @@ def create_celery():
             self.logger = logger
 
         def on_success(self, retval: Any, task_id: Any, args, kwargs) -> None:
-            self.logger.info('Task %s succeeded: %s', task_id, retval)  # Use f-string for cleaner formatting
+            self.logger.info('✅Task %s succeeded: %s', task_id, retval)  # Use f-string for cleaner formatting
 
         def on_failure(self, exc: Exception, task_id: str, args: Any, kwargs: Any, einfo: str) -> None:
-            self.logger.exception('Task failed: %s', exc, exc_info=exc)  # Include exc_info
+            self.logger.exception('❌Task failed: %s', exc, exc_info=exc)  # Include exc_info
 
         def run(self, *args: Any, **kwargs: Any) -> Any:
             """
@@ -36,14 +36,14 @@ def create_celery():
             try:
                 result = super().run(*args, **kwargs)
             except Exception as exc:
-                self.logger.exception('Task execution failed: %s', exc)  # Log exception within run
+                self.logger.exception('❌Task execution failed: %s', exc)  # Log exception within run
                 raise  # Re-raise to propagate exception properly
             end_time = time.time()
-            self.logger.info('Task execution time: %s seconds', end_time - start_time)
+            self.logger.info('✳️Task execution time: %s seconds', end_time - start_time)
             return result
 
         def on_state_change(self, state: str, task_id: str, args: Any, kwargs: Any) -> None:
-            self.logger.info('Task %s state changed: %s', task_id, state)
+            self.logger.info('⤴️Task %s state changed: %s', task_id, state)
 
         def __call__(self, *args, **kwargs):
             _task_stack.push(self)

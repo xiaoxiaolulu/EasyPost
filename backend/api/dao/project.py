@@ -19,7 +19,7 @@ class ProjectDao:
                 Q(id__in=[instance.project_id for instance in queryset]) | Q(private=1) | Q(user_id=user_id))
             return queryset
         except(ProjectRole.DoesNotExist, Exception):
-            raise Exception("获取用户项目列表失败!")
+            raise Exception("获取用户项目列表失败! ❌")
 
     @staticmethod
     def project_name_validate(name: str) -> bool:
@@ -82,7 +82,7 @@ class ProjectDao:
             return permission
         except(Project.DoesNotExist, Exception):
 
-            raise Exception("项目未找到")
+            raise Exception("项目未找到 ❌")
 
     @staticmethod
     def search_user_role(project_id, user_id):
@@ -90,4 +90,4 @@ class ProjectDao:
             instance = ProjectRole.objects.filter(Q(project_id=project_id) & Q(user_id=user_id))
             return instance
         except(ProjectRole.DoesNotExist, Exception):
-            raise Exception("该项目未找到该角色权限！")
+            raise Exception("该项目未找到该角色权限！❌")

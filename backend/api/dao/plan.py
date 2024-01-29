@@ -36,7 +36,7 @@ class PlanDao:
         try:
             return request_body
         except (Exception,):
-            raise Exception("解析测试计划失败")
+            raise Exception("解析测试计划失败 ❌")
 
     @classmethod
     @database_sync_to_async
@@ -63,7 +63,7 @@ class PlanDao:
             return update_pk
 
         except Exception as e:
-            raise Exception(f"创建或更新测试计划失败: {e}")
+            raise Exception(f"创建或更新测试计划失败: {e} ❌")
 
     @classmethod
     def update_test_plan_state(cls, plan_id: int, target_state: int) -> Any:
@@ -74,7 +74,7 @@ class PlanDao:
             plan_parser_data = cls.parser_plan_data(model_to_dict(plan), pk=plan_id)
 
             if plan is None:
-                raise Exception("测试计划不存在")
+                raise Exception("测试计划不存在 ❌")
 
             if plan.state == target_state:
                 return ResponseStandard.resp_400()
@@ -91,18 +91,18 @@ class PlanDao:
             return ResponseStandard.success()
 
         except Exception as e:
-            raise Exception(f"更新测试计划状态失败: {e}")
+            raise Exception(f"更新测试计划状态失败: {e} ❌")
 
     @classmethod
     def run_test_plan(cls, plan_id, case_list):
 
         plan = Plan.objects.get(pk=plan_id)
         if plan is None:
-            raise Exception(f"测试计划: [{plan_id}]不存在")
+            raise Exception(f"测试计划: [{plan_id}]不存在 ❌")
         try:
             # 设置为running
             cls.update_test_plan_state(plan_id, 1)
             response = HttpDao.run_test_suite(case_list)
             return response
         except Exception as e:
-            raise Exception(f"执行测试计划: 【{plan.name}】失败: {str(e)}")
+            raise Exception(f"执行测试计划: 【{plan.name}】失败: {str(e)} ❌")

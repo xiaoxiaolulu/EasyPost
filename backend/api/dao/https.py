@@ -2,12 +2,15 @@ from typing import (
     Any,
     List
 )
+
+from channels.db import database_sync_to_async
 from django.forms import model_to_dict
 from api.models.https import (
     Relation,
     Api,
     Case,
-    Step
+    Step,
+    ApiCopy
 )
 from api.models.project import Project
 from core.engine.session_runner import (
@@ -42,7 +45,7 @@ class HttpDao:
             tree = eval(tree.tree)
             return tree
         except (Relation.DoesNotExist, Exception):
-            raise Exception("获取目录详情失败")
+            raise Exception("获取目录详情失败❌")
 
     @staticmethod
     def get_directory_case(get_queryset, project_id: int):
@@ -63,7 +66,7 @@ class HttpDao:
             queryset = get_queryset.filter(project__id=project_id).order_by('-update_time')
             return queryset
         except (Api.DoesNotExist, Exception):
-            raise Exception("获取测试接口失败")
+            raise Exception("获取测试接口失败❌")
 
     @classmethod
     def list_test_case(cls, get_queryset, node: Any, project_id: Any, name: str = ""):
@@ -92,7 +95,7 @@ class HttpDao:
                 return queryset
 
             except (Api.DoesNotExist, Exception) as e:
-                raise Exception("获取测试接口失败") from e
+                raise Exception("获取测试接口失败❌") from e
 
     @staticmethod
     def parser_api_data(request: Any, pk=None):
@@ -140,7 +143,7 @@ class HttpDao:
         try:
             return request_body
         except (Exception,):
-            raise Exception("解析测试接口失败")
+            raise Exception("解析测试接口失败❌")
 
     @classmethod
     def create_or_update_api(cls, request: Any, pk):
@@ -171,7 +174,7 @@ class HttpDao:
 
             return update_pk
         except Exception as e:
-            raise Exception(f"{e}")
+            raise Exception(f"{e} ❌")
 
     @classmethod
     def run_api_doc(cls, api: dict):
@@ -193,7 +196,7 @@ class HttpDao:
             result = run_api(api_data=api_data)
             return result
         except Exception as e:
-            raise Exception(f"调试测试接口失败: {e}")
+            raise Exception(f"调试测试接口失败: {e} ❌")
 
     @staticmethod
     def remove_unwanted_keys(step):
@@ -244,7 +247,7 @@ class HttpDao:
             if steps_obj:
                 steps_obj.delete()
         except Exception as err:
-            raise Exception(f"{err}")
+            raise Exception(f"{err} ❌")
 
     @classmethod
     def create_or_update_case(cls, request, pk=None):
@@ -265,7 +268,7 @@ class HttpDao:
             if pk:
                 case_obj = Case.objects.filter(id=pk)
                 if not case_obj:
-                    raise ValueError("Case with given ID does not exist.")
+                    raise ValueError("Case with given ID does not exist. ❌")
 
                 cased_body, steps = cls.parser_case_data(request, pk=pk)
                 case_obj.update(**cased_body)
@@ -284,7 +287,7 @@ class HttpDao:
 
             return update_pk
         except Exception as e:
-            raise Exception(f"{e}")
+            raise Exception(f"{e} ❌")
 
     @staticmethod
     def parser_case_data(request: Any, pk=None):
@@ -324,7 +327,7 @@ class HttpDao:
         try:
             return request_body, api.step_data
         except (Exception,):
-            raise Exception("解析测试用例失败")
+            raise Exception("解析测试用例失败 ❌")
 
     @classmethod
     def run_case_steps(cls, data: dict):
@@ -350,7 +353,7 @@ class HttpDao:
             result = run_test(case_data)
             return result
         except Exception as e:
-            raise Exception(f"调试测试用例失败: {e}")
+            raise Exception(f"调试测试用例失败: {e} ❌")
 
     @classmethod
     def get_case_list(cls, case_list: List[int]) -> List[dict]:
@@ -411,4 +414,26 @@ class HttpDao:
             result = run_test(case_data)
             return result
         except Exception as e:
-            raise Exception(f"调试测试计划失败: {e}")
+            raise Exception(f"调试测试计划失败: {e} ❌")
+
+    @classmethod
+    @database_sync_to_async
+    def create_api_snapshot(cls, request: Any):
+        """
+        创建API快照。
+
+        Args:
+            request: HTTP 请求对象
+
+        Returns:
+            创建或更新后的 API 文档 ID
+
+        Raises:
+            Exception: 创建或更新 API 文档失败时抛出异常
+        """
+        try:
+
+            request_body = cls.parser_api_data(request)
+            ApiCopy.objects.create(**request_body)
+        except Exception as e:
+            raise Exception(f"{e} ❌")

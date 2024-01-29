@@ -29,7 +29,7 @@ class TestResult(unittest.TestResult):
         super().startTest(test)
         self.start_time = time.time() # noqa
         test.name = getattr(test, '_testMethodDoc')
-        getattr(test, 'info_log')("开始执行用例：【{}】\n".format(test.name))
+        getattr(test, 'info_log')("⏭️开始执行用例：【{}】\n".format(test.name))
 
     def stopTest(self, test):
         """

@@ -51,6 +51,6 @@ def exception_handler(exc, context):
 
     # 捕获其他异常，直接返回 500
     if isinstance(exc, DatabaseError) or isinstance(exc, RedisError):
-        return Response(ResponseStandard.failed(f'其他未知错误：{traceback.format_exc()}'))
+        return Response(ResponseStandard.failed(f'❌其他未知错误：{traceback.format_exc()}'))
     else:
-        return Response(ResponseStandard.failed(f'其他未知错误：{traceback.format_exc()}'))
+        return Response(ResponseStandard.failed(f'❌其他未知错误：{traceback.format_exc()}'))

@@ -152,7 +152,7 @@ class AsyncGenericAPIView(
         """
         assert self.queryset is not None, (
             "'%s' should either include a `queryset` attribute, "
-            "or override the `get_queryset()` method." % self.__class__.__name__
+            "or override the `get_queryset()` method. 🦯" % self.__class__.__name__
         )
 
         queryset = self.queryset
@@ -177,7 +177,7 @@ class AsyncGenericAPIView(
         assert lookup_url_kwarg in self.kwargs, (
             "Expected view %s to be called with a URL keyword argument "
             'named "%s". Fix your URL conf, or set the `.lookup_field` '
-            "attribute on the view correctly." % (self.__class__.__name__, lookup_url_kwarg)
+            "attribute on the view correctly. 🦯" % (self.__class__.__name__, lookup_url_kwarg)
         )
 
         filter_kwargs = {self.lookup_field: self.kwargs[lookup_url_kwarg]}
@@ -212,7 +212,7 @@ class AsyncGenericAPIView(
         """
         assert self.serializer_class is not None, (
             "'%s' should either include a `serializer_class` attribute, "
-            "or override the `get_serializer_class()` method." % self.__class__.__name__
+            "or override the `get_serializer_class()` method. 🦯" % self.__class__.__name__
         )
 
         return self.serializer_class

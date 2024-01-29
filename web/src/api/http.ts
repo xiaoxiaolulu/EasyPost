@@ -79,3 +79,11 @@ export function runCase(data: any) {
         data
     })
 }
+
+export function httpSnapshot(data: any) {
+    return request({
+        url: '/api/http/snapshot',
+        method: 'post',
+        data
+    })
+}

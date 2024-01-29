@@ -33,7 +33,7 @@ class ProjectSerializers(serializers.ModelSerializer):
     def create(self, validated_data):
         name = validated_data.get("name")
         if ProjectDao.project_name_validate(name):
-            raise serializers.ValidationError('项目名称已存在!')
+            raise serializers.ValidationError('项目名称已存在!❌')
         instance = ProjectDao.create_project_role(validated_data)
         return instance
 

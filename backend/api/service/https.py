@@ -9,6 +9,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from api.dao.https import HttpDao
+from api.mixins.async_generics import AsyncAPIView
 from api.models.https import (
     Relation,
     Api,
@@ -228,5 +229,19 @@ class RunCaseView(APIView):
         try:
             response = HttpDao.run_case_steps(request.data)
             return Response(ResponseStandard.success(data=response))
+        except Exception as err:
+            return Response(ResponseStandard.failed(msg=str(err)))
+
+
+class ApiSnapshotView(AsyncAPIView):
+
+    permission_classes = [IsAuthenticated]
+
+    @staticmethod
+    async def post(request, **kwargs):
+
+        try:
+            await HttpDao.create_api_snapshot(request)
+            return Response(ResponseStandard.success())
         except Exception as err:
             return Response(ResponseStandard.failed(msg=str(err)))

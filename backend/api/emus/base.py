@@ -47,7 +47,7 @@ class BaseEumWitchDesc(Enum):
         for item in cls:
             if item.value == value:
                 return item
-        raise ValueError(f"找不到值为 {value} 的枚举常量")
+        raise ValueError(f"找不到值为 {value} 的枚举常量 ❌")
 
     @property
     def extra_info(self) -> Optional[T]:
@@ -56,4 +56,4 @@ class BaseEumWitchDesc(Enum):
 
         :return: 额外信息
         """
-        return f"额外信息：{self._name} 的额外信息"
+        return f"✳️ 额外信息：{self._name} 的额外信息"

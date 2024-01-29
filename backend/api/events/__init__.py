@@ -25,7 +25,7 @@ class ServiceRegistryCenter:
         def decorator(func: DecoratedCallable) -> DecoratedCallable:
             if cls.contains(target):
                 raise KeyError((f"\033[31m"
-                                f"WARNING: {target} 已经存在!"
+                                f"WARNING: {target} 已经存在!❌"
                                 f"\033[0m"))
             cls.add_func_modules(target, func, comment)
             return func

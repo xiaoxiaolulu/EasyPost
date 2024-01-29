@@ -14,24 +14,24 @@ logger = logging.getLogger('raven')
 
 
 class Command(BaseCommand):
-    help = 'Create an superuser with JWT token for testing.'
+    help = '⚠️Create an superuser with JWT token for testing.'
 
     def add_arguments(self, parser):
         parser.add_argument(
-            '--delete', action='store_true', help='Delete poll instead of closing it',
+            '--delete', action='store_true', help='⚠️Delete poll instead of closing it',
         )
 
     def handle(self, *args, **kwargs):
 
         if kwargs['delete']:
             while True:
-                username = input("Please enter the user to be deleted: ")
+                username = input("⚠️Please enter the user to be deleted: ")
                 try:
                     user = User.objects.filter(username=username).first()
                     user.delete()
                     break
                 except (User.DoesNotExist, AttributeError):
-                    self.stdout.write(self.style.WARNING('User does not exist!'))
+                    self.stdout.write(self.style.WARNING('User does not exist! ❌'))
         else:
 
             username = input("Enter your user name: ")

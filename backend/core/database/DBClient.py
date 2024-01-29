@@ -37,12 +37,12 @@ class DBClient:
         if not config:
             return
         if not config.get('name'):
-            raise ValueError('数据库配置的name字段不能为空！')
+            raise ValueError('数据库配置的name字段不能为空！❌')
 
         if config.get('type').lower() == 'mysql' and config.get('config'):
             dbc = DBMysql(config.get('config'))
         else:
-            raise ValueError('您传入的数据库配置有误，或者apin目前不支持：{}'.format(config))
+            raise ValueError('您传入的数据库配置有误，或者apin目前不支持：{} ❌'.format(config))
 
         setattr(self, config.get('name'), dbc)
 
@@ -57,10 +57,10 @@ class DBClient:
             with closing(MySQLdb.connect(**config)) as conn:
 
                 if isinstance(conn, MySQLdb.connections.Connection):
-                    log.info(f'mysql connect success -> {config.get("db")}')
+                    log.info(f'mysql connect success -> {config.get("db")} ✅')
                     return True
         except Exception as err:
-            log.error(f"mysql connect error -> {err}")
+            log.error(f"mysql connect error -> {err} ❌")
             return False
         finally:
             try:

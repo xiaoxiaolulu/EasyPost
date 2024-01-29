@@ -33,7 +33,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         等待控制器
         """
         time.sleep(second)
-        self.info_log('强制等待:{}秒\n'.format(second))
+        self.info_log('⏯️强制等待:{}秒\n'.format(second))
 
     @staticmethod
     def skipIf(_condition, cls, test_name):
@@ -58,15 +58,15 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         for c in range(int(count)):
             tag = f'_NoLooP_' if loop_obj is None else f'_Loop_{c + 1}'
             setattr(cls, f"{test_name + tag}", new_test_func)
-            self.info_log('用例第{}次循环\n'.format(c + 1))
+            self.info_log('🔁用例第{}次循环\n'.format(c + 1))
 
     def save_env_variable(self, name, value) -> None:
         """
         设置一个环境变量
         """
-        self.info_log('设置临时变量 变量名:{} 变量值:{}\n'.format(name, value))
+        self.info_log('♾️设置临时变量 变量名:{} 变量值:{}\n'.format(name, value))
         if DEBUG:
-            self.debug_log('提示调试模式运行,设置的临时变量均保存到全局变量中\n')
+            self.debug_log('⏭️提示调试模式运行,设置的临时变量均保存到全局变量中\n')
             ENV[name] = value
         else:
             self.env[name] = value
@@ -75,7 +75,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         """
         获取一个环境变量
         """
-        self.info_log('获取临时变量 变量名:{}\n'.format(name))
+        self.info_log('♾️获取临时变量 变量名:{}\n'.format(name))
         if DEBUG:
             return ENV[name]
         else:
@@ -88,17 +88,17 @@ class BaseTest(unittest.TestCase, CaseRunLog):
 
     def save_global_variable(self, name, value) -> None:
         """设置全局环境变量"""
-        self.info_log('设置全局变量 变量名:{} 变量值:{}\n'.format(name, value))
+        self.info_log('♾️设置全局变量 变量名:{} 变量值:{}\n'.format(name, value))
         ENV[name] = value
 
     def delete_env_variable(self, name) -> None:
         """删除临时变量"""
-        self.info_log(' 删除临时变量:{}\n'.format(name, ))
+        self.info_log('♾️删除临时变量:{}\n'.format(name, ))
         del self.env[name]
 
     def delete_global_variable(self, name) -> None:
         """删除全局变量"""
-        self.info_log('删除全局变量:{}\n'.format(name))
+        self.info_log('♾️删除全局变量:{}\n'.format(name))
         del ENV[name]
 
     @staticmethod
@@ -189,26 +189,26 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         """输出当前环境变量数据的日志"""
         self.l_env = ['\t{}:{}\n'.format(k, repr(v)) for k, v in self.env.items()]
         self.g_env = ['\t{}:{}\n'.format(k, repr(v)) for k, v in ENV.items()]
-        self.info_log('当前运行环境\n',
+        self.info_log('♾️当前运行环境\n',
                       "临时变量：{}\n".format(''.join(self.l_env)),
                       "全局变量：{}\n".format(''.join(self.g_env)))
 
     def __request_log(self) -> None:
         """请求信息日志输出"""
-        self.debug_log("请求头：{}\n".format(self.requests_header))
-        self.debug_log("请求体：{}\n".format(self.requests_body))
-        self.debug_log("响应头：{}\n".format(self.response_header))
-        self.debug_log("响应体：{}\n".format(self.response_body))
-        self.info_log('请求响应状态码:{}\n'.format(self.status_code))
+        self.debug_log("⚠️请求头：{}\n".format(self.requests_header))
+        self.debug_log("⚠️请求体：{}\n".format(self.requests_body))
+        self.debug_log("⚠️响应头：{}\n".format(self.response_header))
+        self.debug_log("⚠️响应体：{}\n".format(self.response_body))
+        self.info_log('⚠️请求响应状态码:{}\n'.format(self.status_code))
 
     def __send_request(self, data) -> Response:
         """发送请求"""
         request_info = self.__handler_request_data(data)
-        self.info_log('发送请求[{}]:{}：\n'.format(request_info['method'].upper(), request_info['url']))
+        self.info_log('⚠️发送请求[{}]:{}：\n'.format(request_info['method'].upper(), request_info['url']))
         try:
             response = session.request(**request_info)
         except Exception as e:
-            raise ValueError('请求发送失败，错误信息如下：{}'.format(e))
+            raise ValueError('❌请求发送失败，错误信息如下：{}'.format(e))
         self.url = response.request.url
         self.method = response.request.method
         self.status_code = response.status_code
@@ -295,7 +295,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
                 attr = res2.group(1)
                 value = ENV.get(attr) if self.env.get(attr) is None else self.env.get(attr)
                 if value is None:
-                    raise ValueError('变量引用错误:\n{}中的变量{},在当前运行环境中未找到'.format(data, attr))
+                    raise ValueError('❌变量引用错误:\n{}中的变量{},在当前运行环境中未找到'.format(data, attr))
                 if item == data:
                     return value
                 data = data.replace(item, str(value))
@@ -308,7 +308,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
                 attr = res2.group(1)
                 value = ENV.get(attr) if self.env.get(attr) is None else self.env.get(attr)
                 if value is None:
-                    raise ValueError('变量引用错误：\n{}\n中的变量{},在当前运行环境中未找到'.format(
+                    raise ValueError('❌变量引用错误：\n{}\n中的变量{},在当前运行环境中未找到'.format(
                         json.dumps(old_data, ensure_ascii=False, indent=2), attr)
                     )
                 if isinstance(value, Number):
@@ -325,18 +325,18 @@ class BaseTest(unittest.TestCase, CaseRunLog):
 
     def json_extract(self, obj, ext) -> Any:
         """jsonpath数据提取"""
-        self.info_log('jsonpath提取数据\n')
+        self.info_log('✴️jsonpath提取数据\n')
         value = jsonpath(obj, ext)
         value = value[0] if value else ''
-        self.info_log('提取表达式：{}\n'.format(ext), '提取结果:{}\n'.format(value))
+        self.info_log('✴️提取表达式：{}\n'.format(ext), '提取结果:{}\n'.format(value))
         return value
 
     def re_extract(self, string, ext) -> Any:
         """正则表达式提取数据提取"""
-        self.info_log('正则提取数据\n')
+        self.info_log('✴️正则提取数据\n')
         value = re.search(ext, string)
         value = value.group(1) if value else ''
-        self.info_log('提取表达式：{}\n'.format(ext), '提取结果:{}\n'.format(value))
+        self.info_log('✴️提取表达式：{}\n'.format(ext), '提取结果:{}\n'.format(value))
         return value
 
     def data_extraction(self, response, case):
@@ -348,7 +348,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         """
         exts = case.get('extract') or getattr(self, 'extract', None)  # noqa
         if not (isinstance(exts, dict) and exts): return
-        self.info_log("从响应结果中开始提取数据\n")
+        self.info_log("✴️从响应结果中开始提取数据\n")
         self.extras = []
         # 遍历要提取的数据
         for name, ext in exts.items():
@@ -358,7 +358,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             elif len(ext) == 3 and ext[1] == "re":
                 value = self.re_extract(response, ext[2])
             else:
-                self.error_log("变量{},的提取表达式 :{}格式不对！\n".format(name, ext))
+                self.error_log("✴️变量{},的提取表达式 :{}格式不对！\n".format(name, ext))
                 self.extras.append((name, ext, '提取失败！'))
                 break
             if ext[0] == 'ENV':
@@ -366,10 +366,10 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             elif ext[0] == 'env':
                 self.env[name] = value
             else:
-                self.error_log("错误的变量级别，变量提取表达式中的变量级别只能为ENV，或者env\n".format(ext[1]))
+                self.error_log("❌错误的变量级别，变量提取表达式中的变量级别只能为ENV，或者env\n".format(ext[1]))
                 continue
             self.extras.append((name, ext, value))
-            self.info_log("提取变量：{},提取方式【{}】,提取表达式:{},提取值为:{}\n".format(name, ext[1], ext[2], value))
+            self.info_log("✴️提取变量：{},提取方式【{}】,提取表达式:{},提取值为:{}\n".format(name, ext[1], ext[2], value))
 
     def assertion(self, methods, expected, actual) -> None:
         """
@@ -391,21 +391,21 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             "包含": self.assertIn,
             "不包含": self.assertNotIn
         }
-        self.info_log('断言方法:{} 预期结果:{} 实际结果:{}\n'.format(methods, expected, actual))
+        self.info_log('*️⃣断言方法:{} 预期结果:{} 实际结果:{}\n'.format(methods, expected, actual))
         assert_method = methods_map.get(methods)
         global result # noqa
         if assert_method:
             try:
                 assert_method(expected, actual)
             except Exception as err:
-                self.warning_log('断言失败!\n')
+                self.warning_log('❌断言失败!\n')
                 self.save_validators(methods, expected, actual, '【❌】')
                 raise self.failureException(err)
             else:
-                self.info_log("断言通过!\n")
+                self.info_log("✅断言通过!\n")
                 self.save_validators(methods, expected, actual, '【✔】')
         else:
-            raise TypeError('断言比较方法{},不支持!'.format(methods))
+            raise TypeError('❌断言比较方法{},不支持!'.format(methods))
 
     def __run_script(ep, data) -> None:  # noqa
         print = ep.print  # noqa
@@ -415,7 +415,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             try:
                 exec(setup_script)
             except Exception as e:
-                ep.error_log('前置脚本执行错误: {}\n'.format(e))
+                ep.error_log('❌前置脚本执行错误: {}\n'.format(e))
                 delattr(ep, 'hook_gen')
                 raise
         response = yield  # noqa
@@ -424,18 +424,18 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             try:
                 exec(teardown_script)
             except Exception as e:
-                ep.error_log('后置脚本执行错误: {}\n'.format(e))
+                ep.error_log('❌后置脚本执行错误: {}\n'.format(e))
                 raise
         yield
 
     def __run_teardown_script(self, response) -> None:
         """执行后置脚本"""
-        self.info_log('执行后置脚本\n')
+        self.info_log('✳️执行后置脚本\n')
         self.hook_gen.send(response)
         delattr(self, 'hook_gen')
 
     def __run_setup_script(self, data):
         """执行前置脚本"""
-        self.info_log('执行前置脚本\n')
+        self.info_log('✳️执行前置脚本\n')
         self.hook_gen = self.__run_script(data) # noqa
         next(self.hook_gen)  # noqa

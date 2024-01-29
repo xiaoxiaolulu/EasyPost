@@ -56,7 +56,7 @@ class AddressWriteSerializers(serializers.ModelSerializer):
         # 验证url是否合法
         host_address = attrs.get('host')
         if not re.match(REGEX_URL_PATH, host_address):
-            raise serializers.ValidationError("请输入正确的URL地址")
+            raise serializers.ValidationError("请输入正确的URL地址❌")
 
         # if 'user' in self.initial_data.keys():
         #     userid = int(self.initial_data.get('user'))

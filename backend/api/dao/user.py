@@ -23,12 +23,12 @@ class UserDao:
         """验证账号类型的函数"""
         if account_type == 'mobile':
             if not re.match(REGEX_MOBILE, account):
-                raise Exception("手机号码不合法!")
+                raise Exception("手机号码不合法! ❌")
         elif account_type == "email":
             if not re.match(REGEX_EMAIL, account):
-                raise Exception("邮箱账号不合法!")
+                raise Exception("邮箱账号不合法! ❌")
         else:
-            raise Exception("账号类型不合法!")
+            raise Exception("账号类型不合法! ❌")
 
     @staticmethod
     def check_user_existence(account: str) -> None:
@@ -36,7 +36,7 @@ class UserDao:
         try:
             user = User.objects.get(mobile=account) or User.objects.get(email=account)
             if user:
-                raise Exception("用户名或邮箱已存在!")
+                raise Exception("用户名或邮箱已存在! ❌")
         except User.DoesNotExist:
             pass
 
@@ -45,7 +45,7 @@ class UserDao:
         """检查验证码发送时间的函数"""
         one_minutes_ago = datetime.now() - timedelta(minutes=1)
         if VerifyCode.objects.filter(add_time__gt=one_minutes_ago, account=account).exists():
-            raise Exception("距离上一次发送未超过60s")
+            raise Exception("距离上一次发送未超过60s ❌")
 
     def register_user_validate(self, account: str, account_type: str) -> None:
         """注册用户验证的主函数"""
@@ -54,7 +54,7 @@ class UserDao:
             self.check_user_existence(account)
             self.check_verify_code_time(account)
         except Exception as err:
-            raise Exception(f"用户获取验证码失败 -> {err}")
+            raise Exception(f"用户获取验证码失败 -> {err} ❌")
 
     @staticmethod
     def register_code_validate(account: str, account_type: str, code: str) -> None:
@@ -72,11 +72,11 @@ class UserDao:
             one_minutes_ago = datetime.now() - timedelta(hours=0, minutes=1, seconds=0)
 
             if one_minutes_ago > last_recode.add_time:
-                raise Exception('验证码过期')
+                raise Exception('验证码过期 ❌')
             if last_recode.code != code:
-                raise Exception('验证码错误')
+                raise Exception('验证码错误 ❌')
         else:
-            raise Exception('账号不存在')
+            raise Exception('账号不存在 ❌')
 
     @staticmethod
     def get_username(username: str) -> Any | None:

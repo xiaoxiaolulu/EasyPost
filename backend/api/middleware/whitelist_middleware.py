@@ -19,9 +19,9 @@ class AdminAccessIPWhiteListMiddleware(MiddlewareMixin):
         self.ADMIN_ACCESS_WHITELIST_MESSAGE = getattr(settings, 'ADMIN_ACCESS_WHITELIST_MESSAGE', 'You are banned.')
 
         if not self.ENABLED:
-            raise MiddlewareNotUsed("django-admin-username-whitelist is not enabled via settings.py")
+            raise MiddlewareNotUsed("❌django-admin-username-whitelist is not enabled via settings.py")
 
-        logging.debug("[django-admin-username-whitelist] status = enabled")
+        logging.debug("✳️[django-admin-username-whitelist] status = enabled")
 
         self.ABUSE_PREFIX = 'DJANGO_ADMIN_ACCESS_WHITELIST_ABUSE:'
         self.WHITELIST_PREFIX = ADMIN_ACCESS_WHITELIST_PREFIX
@@ -47,7 +47,7 @@ class AdminAccessIPWhiteListMiddleware(MiddlewareMixin):
             if self.is_whitelisted(name):
                 return response
             else:
-                raise PermissionError('账号不在白名单请联系管理员!')
+                raise PermissionError('账号不在白名单请联系管理员! ❌')
         except (KeyError, redis.exceptions.AuthorizationError):
             pass
         return response
@@ -56,5 +56,5 @@ class AdminAccessIPWhiteListMiddleware(MiddlewareMixin):
         is_whitelisted = cache.get(self.WHITELIST_PREFIX + name)
 
         if is_whitelisted:
-            logging.debug("/Admin access IP: " + self.WHITELIST_PREFIX + name)
+            logging.debug("✳️/Admin access IP: " + self.WHITELIST_PREFIX + name)
         return is_whitelisted

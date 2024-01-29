@@ -8,15 +8,15 @@ from django.core.management.base import (
 
 
 class Command(BaseCommand):
-    help = 'Backing up MySQL Data'
+    help = '⚠️Backing up MySQL Data'
 
     def add_arguments(self, parser):
-        parser.add_argument('--filename', '-f', default='backup.sql', help='Backup file name')
+        parser.add_argument('--filename', '-f', default='backup.sql', help='⚠️Backup file name')
         parser.add_argument('--compress', '-c', action='store_true', default=False,
-                            help='Whether to compress the backup file')
+                            help='⚠️Whether to compress the backup file')
         parser.add_argument('--encrypt', '-e', action='store_true', default=False,
-                            help='Whether to encrypt the backup file')
-        parser.add_argument('--password_env', '-p', default=None, help='Database password environment variable name')
+                            help='⚠️Whether to encrypt the backup file')
+        parser.add_argument('--password_env', '-p', default=None, help='⚠️Database password environment variable name')
 
     def handle(self, *args, **options):
         filename = options.get('filename')
@@ -33,9 +33,9 @@ class Command(BaseCommand):
         if password_env:
             password = os.environ.get(password_env)
             if password is None:
-                raise CommandError(f"Environment variable '{password_env}' not set.")
+                raise CommandError(f"Environment variable '{password_env}' not set. ❌")
         else:
-            raise CommandError("Database password not provided.")
+            raise CommandError("Database password not provided. ❌")
 
         try:
             backup_file = self._backup_db(user, password, host, port, db_name, filename)
@@ -43,9 +43,9 @@ class Command(BaseCommand):
                 backup_file = self._compress_file(backup_file)
             if encrypt:
                 backup_file = self._encrypt_file(backup_file, password)
-            self.stdout.write(self.style.SUCCESS(f'Database backup successful: {backup_file}'))
+            self.stdout.write(self.style.SUCCESS(f'Database backup successful: {backup_file} ✅'))
         except Exception as e:
-            raise CommandError(f"Error during backup: {e}")
+            raise CommandError(f"Error during backup: {e} ❌")
 
     @staticmethod
     def _backup_db(user, password, host, port, db, filename):

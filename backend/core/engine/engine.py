@@ -43,15 +43,15 @@ class PytestRunner(object):
 
         def function_template(*args):
 
-            log.info(f'执行文件-> {self.module.__name__}.yaml')
-            log.info(f'参数化数据-> {self.ass_parameters(fixtures, params)}')
+            log.info(f'🔅执行文件-> {self.module.__name__}.yaml')
+            log.info(f'🔅参数化数据-> {self.ass_parameters(fixtures, params)}')
 
             response = None
             for index, step in enumerate(teststeps):
                 for step_key, step_value in step.items():
 
                     if step_key == "name":
-                        log.info(f'用例步骤：{index + 1} -> {step_value}')
+                        log.info(f'🔅用例步骤：{index + 1} -> {step_value}')
 
                     if step_key == 'api':
                         api_root = pathlib.Path(BASE_DIR).joinpath(step_value)
@@ -70,7 +70,7 @@ class PytestRunner(object):
                         extract_collections = self.extract_to_result(response, step_value)
                         self.context.update(extract_collections)
 
-                        log.info('参数提取 -> {}'.format(
+                        log.info('🔅参数提取 -> {}'.format(
                             json.dumps(extract_collections, indent=4, ensure_ascii=False)
                         ))
                     else:
@@ -106,14 +106,14 @@ class PytestRunner(object):
                 "query_sql": db.execute
             }
         except Exception as err:
-            log.error(f"Mysql Not connected {err}")
+            log.error(f"❌Mysql Not connected {err}")
             return none_obj
 
     @staticmethod
     def none_connect_obj() -> dict[str, Callable[[Any], Any] | Callable[[Any], Any]]:
         none_obj = {
-            "query_sql": lambda x: log.error("MYSQL_HOST not found in config.py"),
-            "execute_sql": lambda x: log.error("MYSQL_HOST not found in config.py")
+            "query_sql": lambda x: log.error("❌MYSQL_HOST not found in config.py"),
+            "execute_sql": lambda x: log.error("❌MYSQL_HOST not found in config.py")
         }
         return none_obj
 
@@ -166,7 +166,7 @@ class PytestRunner(object):
 
     def run_request(self, args, request_body: dict, ctx: dict) -> Any:
 
-        log.info(f"当前用例引用参数化数据-> {args[0]}")
+        log.info(f"🔆当前用例引用参数化数据-> {args[0]}")
 
         self.context.update(args[0])
         request_body = render_template_context(f'''{request_body}''', **ctx)

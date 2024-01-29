@@ -154,3 +154,36 @@ class Step(Model):
 
     def __str__(self):
         return self.name
+
+
+class ApiCopy(Model):
+
+
+    id = AutoField(primary_key=True)
+    name = CharField(max_length=50, null=True, blank=True, verbose_name=_('ApiCopy Name'))
+    project = ForeignKey(Project, on_delete=CASCADE, db_constraint=False)
+    directory_id = CharField(max_length=50, null=True, blank=True, verbose_name=_('ApiCopy DirectoryId'))
+    method = CharField(max_length=50, null=True, blank=True, verbose_name=_('ApiCopy Method'))
+    url = TextField(verbose_name=_('Api Url'), null=False, default=None)
+    priority = CharField(max_length=50, verbose_name=_('ApiCopy Priority'), choices=Defaults.PRIORITY_TYPE_CHOICES,
+                         default=Defaults.PRIORITY_TYPE)
+    status = CharField(max_length=50, verbose_name=_('ApiCopy Status'), choices=Defaults.STATUS_CHOICES,
+                       default=Defaults.STATUS_TYPE)
+    desc = TextField(null=True, blank=True, verbose_name=_('ApiCopy Desc'))
+    headers = TextField(verbose_name=_('ApiCopy Headers'), null=False, default=None)
+    params = TextField(verbose_name=_('ApiCopy Params'), null=False, default=None)
+    raw = TextField(verbose_name=_('ApiCopy raw'), null=False,  default=None)
+    setup_script = TextField(verbose_name=_('ApiCopy SetupScript'), null=False,  default=None)
+    teardown_script = TextField(verbose_name=_('ApiCopy TeardownScript'), null=False, default=None)
+    validate = TextField(verbose_name=_('ApiCopy Validate'), null=False, default=None)
+    extract = TextField(verbose_name=_('ApiCopy Extract'), null=False, default=None)
+    user = ForeignKey(User, related_name="apiCopy_creator", null=True, on_delete=SET_NULL, verbose_name=_('User'))
+    create_time = DateTimeField(auto_now_add=True, verbose_name=_('ApiCopy CreateTime'))
+    update_time = DateTimeField(auto_now=True, verbose_name=_('ApiCopy UpdateTime'))
+
+    class Meta:
+        verbose_name = _('ApiCopy')
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.name
