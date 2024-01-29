@@ -45,7 +45,7 @@ class CaseSerializers(serializers.ModelSerializer):
 
     id = serializers.IntegerField(read_only=True)
     user = UserSimpleSerializers(required=False, default=serializers.CurrentUserDefault())
-    roles = CaseStepSerializers(many=True, read_only=True)
+    step = CaseStepSerializers(many=True, read_only=True)
     create_time = serializers.DateTimeField(read_only=True)
     update_time = serializers.DateTimeField(read_only=True)
 

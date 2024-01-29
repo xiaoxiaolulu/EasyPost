@@ -4,18 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="后端调整">
-      <change afterPath="$PROJECT_DIR$/../.idea/EasyPost.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/migrations/0022_alter_plan_id.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/models/plan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/backend.iml" afterDir="false" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment=":construction_worker: 调整模型">
+      <change afterPath="$PROJECT_DIR$/api/schema/plan.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/dao/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/https.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/dao/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/plan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/models/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/https.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/schema/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/schema/https.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/service/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/https.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_info.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_info.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -390,15 +385,7 @@
       <workItem from="1705996178360" duration="35102000" />
       <workItem from="1706169196806" duration="21346000" />
       <workItem from="1706262452393" duration="2389000" />
-      <workItem from="1706264876701" duration="1321000" />
-    </task>
-    <task id="LOCAL-00162" summary="用例详情表单">
-      <option name="closed" value="true" />
-      <created>1704274468516</created>
-      <option name="number" value="00162" />
-      <option name="presentableId" value="LOCAL-00162" />
-      <option name="project" value="LOCAL" />
-      <updated>1704274468516</updated>
+      <workItem from="1706264876701" duration="2357000" />
     </task>
     <task id="LOCAL-00163" summary="用例详情表单">
       <option name="closed" value="true" />
@@ -784,7 +771,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706264146959</updated>
     </task>
-    <option name="localTasksCounter" value="211" />
+    <task id="LOCAL-00211" summary=":construction_worker: 调整模型">
+      <option name="closed" value="true" />
+      <created>1706495034574</created>
+      <option name="number" value="00211" />
+      <option name="presentableId" value="LOCAL-00211" />
+      <option name="project" value="LOCAL" />
+      <updated>1706495034574</updated>
+    </task>
+    <option name="localTasksCounter" value="212" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -833,7 +828,8 @@
     <MESSAGE value="接口详情表单" />
     <MESSAGE value="用例详情表单" />
     <MESSAGE value="后端调整" />
-    <option name="LAST_COMMIT_MESSAGE" value="后端调整" />
+    <MESSAGE value=":construction_worker: 调整模型" />
+    <option name="LAST_COMMIT_MESSAGE" value=":construction_worker: 调整模型" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$init_task.coverage" NAME="init_task Coverage Results" MODIFIED="1705894334573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/events" />

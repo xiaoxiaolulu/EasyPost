@@ -13,9 +13,15 @@ from api.service.https import (
     SaveOrUpdateApiView,
     SaveOrUpdateCaseView,
     RunCaseView,
+    DelCaseView,
+    CaseDetailView,
+)
+from api.service.plan import (
     SaveOrUpdatePlanView,
+    UpdatePlanStateView,
     RunPlanView,
-    UpdatePlanStateView
+    DelPlanView,
+    PlanDetailView
 )
 from api.service.project import (
     ProjectListViewSet,
@@ -81,11 +87,15 @@ app_urls = [
     path('http/run', RunApiView.as_view()),
     path("case/SaveOrUpdate/<int:pk>", SaveOrUpdateCaseView.as_view()),
     path('case/run', RunCaseView.as_view()),
+    path('case/delete/<int:pk>', DelCaseView.as_view()),
+    path('case/detail/<int:pk>', CaseDetailView.as_view()),
 
     # 测试计划
     path("plan/SaveOrUpdate/<int:pk>", SaveOrUpdatePlanView.as_view()),
     path("plan/UpdatePlanState/<int:task_id>/<int:target_status>", UpdatePlanStateView.as_view()),
-    path("plan/run", RunPlanView.as_view())
+    path("plan/run", RunPlanView.as_view()),
+    path('case/delete/<int:pk>', DelPlanView.as_view()),
+    path('case/detail/<int:pk>', PlanDetailView.as_view()),
 ]
 
 # Final URL configuration

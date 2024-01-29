@@ -237,6 +237,16 @@ class HttpDao:
             )
 
     @classmethod
+    def delete_case(cls, pk=None):
+        try:
+            Case.objects.filter(id=pk).delete()
+            steps_obj = Step.objects.filter(case__id=pk)
+            if steps_obj:
+                steps_obj.delete()
+        except Exception as err:
+            raise Exception(f"{err}")
+
+    @classmethod
     def create_or_update_case(cls, request, pk=None):
         """
         创建或更新测试用例。
