@@ -3815,3 +3815,4 @@ AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse`
 [2024-01-29 10:39:04,311][MainThread:10264][task_id:root][base.py:181][INFO][Scheduler started]
 [2024-01-29 10:41:39,867][MainThread:10264][task_id:django.utils.autoreload][autoreload.py:266][INFO][C:\Users\86135\Desktop\EasyPost\backend\api\urls.py changed, reloading.]
 [2024-01-29 10:41:40,640][MainThread:18216][task_id:django.utils.autoreload][autoreload.py:668][INFO][Watching for file changes with StatReloader]
+[2024-01-29 10:41:41,523][MainThread:18216][task_id:root][base.py:181][INFO][Scheduler started]
