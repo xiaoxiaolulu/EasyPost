@@ -104,7 +104,7 @@ CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
         # redis主机地址和链接信息
-        "LOCATION": "redis://101.35.3.10:6379/1",
+        "LOCATION": "redis://127.0.0.1:6379/1",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
             "AUTH": "123456",
@@ -115,7 +115,7 @@ CACHES = {
 }
 
 REDIS_NODES: List[dict] = [{
-    "host": "101.35.3.10",
+    "host": "127.0.0.1",
     "port": 6379,
     "db": 1,
     "password": "123456"

@@ -57,13 +57,13 @@
                      label-width="auto"
                      label-position="right">
               <el-col>
-                <el-form-item label="接口名称" prop="name">
+                <el-form-item label="接口名称" prop="name" :required="true">
                   <el-input v-model.trim="ruleForm.name"
                             style="width: 100%;"
                             size="small"
                             placeholder="请输入接口名称"></el-input>
                 </el-form-item>
-                <el-form-item label="状态" prop="status">
+                <el-form-item label="状态" prop="status" :required="true" >
                   <el-select v-model="ruleForm.status" filterable placeholder="请选择接口当前状态" size="small">
                     <template #prefix>
                       <span :class="`${statusClass}`"></span>
@@ -78,8 +78,8 @@
                     </el-option>
                   </el-select>
                 </el-form-item>
-                <el-form-item label="优先级" prop="priority">
-                  <el-select v-model="ruleForm.priority" filterable placeholder="请选择接口当前状态" size="small">
+                <el-form-item label="优先级" prop="priority" :required="true" >
+                  <el-select v-model="ruleForm.priority" filterable placeholder="请选择接口优先级" size="small">
                     <el-option
                         v-for="item in priority"
                         :key="item.value"
@@ -167,13 +167,6 @@
                 <api-script ref="RequestTeardown" use-type="teardown"></api-script>
               </div>
             </el-tab-pane>
-<!--            <el-tab-pane name='ApiRequestController'>-->
-<!--              <template #label>-->
-<!--                <strong>控制器</strong>-->
-<!--              </template>-->
-<!--              <div>-->
-<!--              </div>-->
-<!--            </el-tab-pane>-->
             <el-tab-pane name='ApiRequestValidators'>
               <template #label>
                 <strong>断言</strong>
@@ -190,44 +183,45 @@
                 <extract ref="RequestExtractor"></extract>
               </div>
             </el-tab-pane>
-            <el-tab-pane name='ApiRequestPerform'>
-              <template #label>
-                <strong>一键压测</strong>
-              </template>
-              <div>
-                <el-form :inline="true" autoComplete="on" :model="ruleForm" :rules="rules" ref="ruleFormRef"
-                         label-width="auto"
-                         label-position="right">
-                  <el-form-item label="并发数" prop="">
-                    <el-input
-                        size="small"
-                        v-model="ruleForm.threads"
-                        placeholder=""
-                    ></el-input>
-                  </el-form-item>
-                  <el-form-item label="轮次" prop="">
-                    <el-input
-                        size="small"
-                        v-model="ruleForm.iter"
-                        placeholder=""
-                    ></el-input>
-                  </el-form-item>
-                  <el-form-item>
-                    <el-button size="small" type="primary" @click="debug(ruleFormRef)">开始压测</el-button>
-                  </el-form-item>
-                </el-form>
-                <el-table v-loading="performLoading" :data="performData" class="custom-table" v-show="performResponseShow">
-                  <el-table-column prop="duration" label="duration"></el-table-column>
-                  <el-table-column prop="mean" label="mean"></el-table-column>
-                  <el-table-column prop="min" label="min"></el-table-column>
-                  <el-table-column prop="median" label="median"></el-table-column>
-                  <el-table-column prop="90p" label="90p"></el-table-column>
-                  <el-table-column prop="95p" label="95p"></el-table-column>
-                  <el-table-column prop="99p" label="99p"></el-table-column>
-                  <el-table-column prop="max" label="max"></el-table-column>
-                </el-table>
-              </div>
-            </el-tab-pane>
+<!-- TODO 待优化           -->
+<!--            <el-tab-pane name='ApiRequestPerform'>-->
+<!--              <template #label>-->
+<!--                <strong>一键压测</strong>-->
+<!--              </template>-->
+<!--              <div>-->
+<!--                <el-form :inline="true" autoComplete="on" :model="ruleForm" :rules="rules" ref="ruleFormRef"-->
+<!--                         label-width="auto"-->
+<!--                         label-position="right">-->
+<!--                  <el-form-item label="并发数" prop="">-->
+<!--                    <el-input-->
+<!--                        size="small"-->
+<!--                        v-model="ruleForm.threads"-->
+<!--                        placeholder=""-->
+<!--                    ></el-input>-->
+<!--                  </el-form-item>-->
+<!--                  <el-form-item label="轮次" prop="">-->
+<!--                    <el-input-->
+<!--                        size="small"-->
+<!--                        v-model="ruleForm.iter"-->
+<!--                        placeholder=""-->
+<!--                    ></el-input>-->
+<!--                  </el-form-item>-->
+<!--                  <el-form-item>-->
+<!--                    <el-button size="small" type="primary" @click="debug(ruleFormRef)">开始压测</el-button>-->
+<!--                  </el-form-item>-->
+<!--                </el-form>-->
+<!--                <el-table v-loading="performLoading" :data="performData" class="custom-table" v-show="performResponseShow">-->
+<!--                  <el-table-column prop="duration" label="duration"></el-table-column>-->
+<!--                  <el-table-column prop="mean" label="mean"></el-table-column>-->
+<!--                  <el-table-column prop="min" label="min"></el-table-column>-->
+<!--                  <el-table-column prop="median" label="median"></el-table-column>-->
+<!--                  <el-table-column prop="90p" label="90p"></el-table-column>-->
+<!--                  <el-table-column prop="95p" label="95p"></el-table-column>-->
+<!--                  <el-table-column prop="99p" label="99p"></el-table-column>-->
+<!--                  <el-table-column prop="max" label="max"></el-table-column>-->
+<!--                </el-table>-->
+<!--              </div>-->
+<!--            </el-tab-pane>-->
           </el-tabs>
         </div>
       </el-card>
@@ -394,6 +388,9 @@ const goBack = () => {
 
 const rules = reactive({
   name: [{required: true, trigger: "blur", message: "请输入接口名称！"}],
+  url: [{required: true, trigger: "blur", message: "请输入接口地址！"}],
+  priority: [{required: true, trigger: "blur", message: "请输入接口优先级！"}],
+  status: [{required: true, trigger: "blur", message: "请选择接口当前状态！"}]
 })
 
 const getMethodColor = (method: any) => {
@@ -441,6 +438,10 @@ const updateContentType = (mode: any, language: any, remove: any) => {
 
 const onSureClick = (formName: FormInstance | undefined) => {
   if (!formName) return
+  if (!ruleForm.name || !ruleForm.url || !ruleForm.priority || !ruleForm.status) {
+    ElMessage.warning('接口名称、地址、优先级、状态为必填项！ 🤔');
+    return
+  }
   formName.validate(async (valid) => {
     if (valid) {
       try{

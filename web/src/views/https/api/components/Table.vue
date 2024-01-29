@@ -14,7 +14,7 @@
       </el-form>
     </div>
     <div class="footer">
-      <div class="util" v-show="selectionShow">
+      <div class="util" v-show="!selectionShow">
         <el-button type="primary" @click="add">
           <el-icon>
             <Plus/>

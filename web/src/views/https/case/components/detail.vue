@@ -30,14 +30,14 @@
                        label-position="top"
                        size="small"
               >
-                <el-form-item label="用例名称：" prop="name">
+                <el-form-item label="用例名称：" prop="name" :required="true">
                   <el-input v-model.trim="state.form.name"
                             style="width: 100%;"
                             size="small"
                             placeholder="请输入用例名称"></el-input>
                 </el-form-item>
-                <el-form-item label="优先级：" prop="priority">
-                  <el-select v-model="state.form.priority" filterable placeholder="请选择接口当前状态" size="small">
+                <el-form-item label="优先级：" prop="priority" :required="true">
+                  <el-select v-model="state.form.priority" filterable placeholder="请选择接口优先级" size="small">
                     <el-option
                         v-for="item in priority"
                         :key="item.value"
@@ -149,7 +149,7 @@ import {ArrowDown, Switch, Back, Odometer} from "@element-plus/icons-vue";
 import {useRoute, useRouter} from "vue-router";
 import {computed, onMounted, reactive, ref, watch, nextTick} from "vue";
 import {ElMessage, FormInstance} from "element-plus";
-import {saveCaseOrUpdate, runCase, getHttpDetail, runApi} from "@/api/http";
+import {saveCaseOrUpdate, runCase} from "@/api/http";
 import {showErrMessage} from "@/utils/element";
 import {getStepTypesByUse, getStepTypeInfo, parseTime} from '@/utils/index'
 import Step from "@/views/https/case/components/step.vue";
