@@ -2,7 +2,7 @@ from typing import Any
 from channels.db import database_sync_to_async
 from django.forms import model_to_dict
 from api.dao.https import HttpDao
-from api.models.https import Plan
+from api.models.plan import Plan
 from api.models.project import Project
 from api.response.fatcory import ResponseStandard
 from api.scheduler.scheduler import Scheduler
