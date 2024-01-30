@@ -2,8 +2,8 @@ import ast
 import json
 from django.http import HttpResponse, JsonResponse
 from django.utils.deprecation import MiddlewareMixin
-import logging
 from rest_framework.response import Response
+from utils.logger import logger as logging
 
 
 class LoggerCollectMiddlewareMixin(MiddlewareMixin):

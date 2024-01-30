@@ -1,7 +1,6 @@
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
-
 from api.dao.https import HttpDao
 from api.dao.plan import PlanDao
 from api.mixins.async_generics import AsyncAPIView

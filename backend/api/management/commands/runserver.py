@@ -1,5 +1,4 @@
 import errno
-import logging
 import os
 import re
 import socket
@@ -17,6 +16,8 @@ from django.core.servers.basehttp import (
 )
 from django.utils import autoreload
 from django.utils.regex_helper import _lazy_re_compile
+from utils.logger import logger as logging
+
 
 naiveip_re = _lazy_re_compile(
     r"""^(?:
@@ -136,7 +137,7 @@ class Command(BaseCommand):
         shutdown_message = options.get("shutdown_message", "")
 
         if not options["skip_checks"]:
-            self.stdout.write("🔖Performing system checks...\n\n")
+            logging.info("🔖Performing system checks...\n\n")
             self.check(display_num_errors=True)
         # Need to check migrations here, so can't use the
         # requires_migrations_check attribute.

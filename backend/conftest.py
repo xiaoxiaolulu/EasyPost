@@ -5,7 +5,7 @@ from _pytest.python import Module
 from config.settings import BASE_DIR
 from core.engine.engine import PytestRunner
 from core.builitin import functions
-from utils.log import set_log_format
+from utils.logger import set_log_format
 
 
 def pytest_collect_file(parent):

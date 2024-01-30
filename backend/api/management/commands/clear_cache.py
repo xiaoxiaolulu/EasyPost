@@ -1,7 +1,7 @@
-import logging
 from django.core.management.base import BaseCommand
 from django.conf import settings
 from django.core.cache import caches
+from utils.logger import logger as logging
 
 
 class Command(BaseCommand):

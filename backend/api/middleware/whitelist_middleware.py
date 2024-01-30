@@ -1,4 +1,3 @@
-import logging
 import redis
 from django.conf import settings
 from django.core.cache import cache
@@ -8,6 +7,7 @@ from api.models.configuration import (
     DjangoAdminAccessIPWhitelist,
     ADMIN_ACCESS_WHITELIST_PREFIX
 )
+from utils.logger import logger as logging
 
 
 class AdminAccessIPWhiteListMiddleware(MiddlewareMixin):

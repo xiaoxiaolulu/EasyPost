@@ -1,17 +1,16 @@
 import asyncio
-import logging
 import time
 from celery import (
     Task,
     Celery
 )
-from celery._state import _task_stack
+from celery._state import _task_stack # noqa
 from typing import Any
 from celery_work.configs import backend
 from utils.async_pool import AsyncIOPool
+from utils.logger import logger
 
 
-logger = logging.getLogger(__name__)
 WorkerPool = AsyncIOPool()
 
 

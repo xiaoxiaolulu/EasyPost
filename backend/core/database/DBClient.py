@@ -1,6 +1,6 @@
 from contextlib import closing
 import MySQLdb
-from utils.log import log
+from utils.logger import logger as log
 
 
 class DBMysql:

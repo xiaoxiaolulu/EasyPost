@@ -5,12 +5,10 @@ DESCRIPTION：自定义创建用户命令
     2. 删除用户: python manage.py init_superuser --delete
 :Created by Null.
 """
-import logging
 from django.core.management.base import BaseCommand
 from rest_framework_simplejwt.tokens import RefreshToken
 from api.models.https import User
-
-logger = logging.getLogger('raven')
+from utils.logger import logger
 
 
 class Command(BaseCommand):

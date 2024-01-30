@@ -21,7 +21,7 @@ from core.request.http_handler import HttpHandler
 from core.builitin import validator
 from core.engine.extract import extract_by_object
 from core.database.db import OperateMysql
-from utils.log import log
+from utils.logger import log
 from utils.render_template_obj import *
 
 
