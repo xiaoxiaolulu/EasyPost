@@ -15,7 +15,7 @@ class CaseRunLog:
     def save_validators(self, methods, expected, actual, result) -> None:
         if not hasattr(self, 'validate_extractor'):
             setattr(self, 'validate_extractor', [])
-        info = "🥇预期结果: {} {} 实际结果: {} {}".format(expected, methods, actual, result)
+        info = {"expected": expected, "methods": methods, "actual": actual, "result": result}
         getattr(self, 'validate_extractor').append(info)
 
     def save_ife(self, info) -> None:

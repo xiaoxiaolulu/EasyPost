@@ -65,7 +65,7 @@ MIDDLEWARE = [
     "django.middleware.common.BrokenLinkEmailsMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "api.middleware.whitelist_middleware.AdminAccessIPWhiteListMiddleware",
-    "api.middleware.log_middleware.LoggerCollectMiddlewareMixin"
+    # "api.middleware.log_middleware.LoggerCollectMiddlewareMixin"
 ]
 
 # Local time zone. Choices are

@@ -196,8 +196,8 @@ class HandelTestData(object):
                 "name": self.name,
                 "method": self.method
             },
-            "threads": int(self.threads),
-            "iterations": int(self.iterations),
+            # "threads": int(self.threads),
+            # "iterations": int(self.iterations),
             "headers": self.resolve_headers(self.headers),
             "request": self.raw_conversion(self.raw),
             'setup_script': self.resolve_script(setup_script=self.setup_script),

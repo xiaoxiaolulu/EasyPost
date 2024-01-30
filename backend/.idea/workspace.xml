@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment=":construction_worker: 修改部分错误">
-      <change afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/engine/log.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/engine/log.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/request/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/request/parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/logger.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +126,7 @@
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\core\database" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.manage">
+  <component name="RunManager" selected="Python.__init__ (3)">
     <configuration name="__init__ (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -168,7 +171,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="__init__ (3)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -176,12 +179,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api/celery_work" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/celery_work/__init__.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/__init__.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -260,19 +263,19 @@
     </configuration>
     <list>
       <item itemvalue="Django Server.backend" />
+      <item itemvalue="Python.__init__ (3)" />
       <item itemvalue="Python.manage" />
       <item itemvalue="Python.__init__ (1)" />
       <item itemvalue="Python.__init__ (2)" />
-      <item itemvalue="Python.__init__" />
       <item itemvalue="Python.main" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.__init__ (3)" />
         <item itemvalue="Python.manage" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.__init__ (2)" />
         <item itemvalue="Python.__init__ (1)" />
-        <item itemvalue="Python.__init__" />
       </list>
     </recent_temporary>
   </component>
@@ -384,23 +387,7 @@
       <workItem from="1706169196806" duration="21346000" />
       <workItem from="1706262452393" duration="2389000" />
       <workItem from="1706264876701" duration="16146000" />
-      <workItem from="1706523985951" duration="7275000" />
-    </task>
-    <task id="LOCAL-00170" summary="后端调整">
-      <option name="closed" value="true" />
-      <created>1704684677353</created>
-      <option name="number" value="00170" />
-      <option name="presentableId" value="LOCAL-00170" />
-      <option name="project" value="LOCAL" />
-      <updated>1704684677354</updated>
-    </task>
-    <task id="LOCAL-00171" summary="后端调整">
-      <option name="closed" value="true" />
-      <created>1704685478241</created>
-      <option name="number" value="00171" />
-      <option name="presentableId" value="LOCAL-00171" />
-      <option name="project" value="LOCAL" />
-      <updated>1704685478241</updated>
+      <workItem from="1706523985951" duration="11864000" />
     </task>
     <task id="LOCAL-00172" summary="后端调整">
       <option name="closed" value="true" />
@@ -778,7 +765,23 @@
       <option name="project" value="LOCAL" />
       <updated>1706592695486</updated>
     </task>
-    <option name="localTasksCounter" value="219" />
+    <task id="LOCAL-00219" summary=":construction_worker: 修改部分错误">
+      <option name="closed" value="true" />
+      <created>1706593504619</created>
+      <option name="number" value="00219" />
+      <option name="presentableId" value="LOCAL-00219" />
+      <option name="project" value="LOCAL" />
+      <updated>1706593504619</updated>
+    </task>
+    <task id="LOCAL-00220" summary=":construction_worker: 修改部分错误">
+      <option name="closed" value="true" />
+      <created>1706593974771</created>
+      <option name="number" value="00220" />
+      <option name="presentableId" value="LOCAL-00220" />
+      <option name="project" value="LOCAL" />
+      <updated>1706593974771</updated>
+    </task>
+    <option name="localTasksCounter" value="221" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -848,6 +851,7 @@
     <SUITE FILE_PATH="coverage/http_handler_py$__init____1_.coverage" NAME="__init__ (1) Coverage Results" MODIFIED="1695113385741" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
     <SUITE FILE_PATH="coverage/backend$render_template_obj.coverage" NAME="render_template_obj Coverage Results" MODIFIED="1706090193785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/backend$decorator.coverage" NAME="decorator Coverage Results" MODIFIED="1706064703211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/backend$__init____3_.coverage" NAME="__init__ (3) Coverage Results" MODIFIED="1706596938180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/backend$http_handler.coverage" NAME="http_handler Coverage Results" MODIFIED="1691322735662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/request" />
     <SUITE FILE_PATH="coverage/backend$cl.coverage" NAME="cl Coverage Results" MODIFIED="1692972573609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/protobuf_test" />
     <SUITE FILE_PATH="coverage/http_handler_py$global_func.coverage" NAME="global_func Coverage Results" MODIFIED="1699843223150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />

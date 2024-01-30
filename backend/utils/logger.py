@@ -74,6 +74,10 @@ class Log:
     def exception(self, message):
         self.log("EXCEPTION", message)
 
+    @staticmethod
+    def print(message):
+        sys.stdout.write("<green>{time:YYYY-MM-DD HH:mm:ss}</green> ")
+
 
 _logger = Log()
 logger = _logger.logger
