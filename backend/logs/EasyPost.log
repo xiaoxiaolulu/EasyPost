@@ -17598,3 +17598,66 @@ Quit the server with CTRL-BREAK.
 2024-01-30 17:38:46 [Thread-1 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
 2024-01-30 17:38:52 [Thread-1 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
 2024-01-30 17:38:52 [Thread-1 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': [{'id': 2, 'label': '222', 'parent': 1, 'children': []}]}]
+2024-01-30 17:50:31 [Thread-3 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:50:31 [Thread-3 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': [{'id': 2, 'label': '222', 'parent': 1, 'children': []}]}]
+2024-01-30 17:50:34 [Thread-4 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:50:34 [Thread-4 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': [{'id': 2, 'label': '222', 'parent': 1, 'children': []}]}]
+2024-01-30 17:50:35 [Thread-3 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:50:35 [Thread-3 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': [{'id': 2, 'label': '222', 'parent': 1, 'children': []}]}]
+2024-01-30 17:56:47 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 17:56:48 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 17:56:48 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 17:56:48 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 17:56:48 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 17:56:48
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 18:00:59 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 18:01:00 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 18:01:00 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 18:01:00 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 18:01:00 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 18:01:00
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 18:01:19 [Thread-2 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 18:01:19 [Thread-2 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': [{'id': 2, 'label': '222', 'parent': 1, 'children': []}]}]
+2024-01-30 18:02:00 [Thread-2 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 18:02:00 [Thread-2 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': [{'id': 2, 'label': '222', 'parent': 1, 'children': []}]}]
+2024-01-30 18:02:01 [Thread-2 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 18:02:01 [Thread-2 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': [{'id': 2, 'label': '222', 'parent': 1, 'children': []}]}]
+2024-01-30 18:02:33 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 18:02:33 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 18:02:33 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 18:02:33 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 18:02:33 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 18:02:33
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            

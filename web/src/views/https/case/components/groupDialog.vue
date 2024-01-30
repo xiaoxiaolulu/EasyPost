@@ -140,6 +140,7 @@ const handleClose = (formName: FormInstance | undefined) => {
 const updateTrees = (pk, treeData) => {
   updateTree({
     id: pk,
+    use_type: 1,
     body: treeData,
   }).then((response) => {
     const {data, code, msg} = response.data

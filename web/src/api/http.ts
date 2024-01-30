@@ -10,7 +10,7 @@ export function http(data: any) {
 
 export function getTree(data: any) {
     return request({
-        url: `/api/tree/${data.id}`,
+        url: `/api/tree/${data.id}&${data.use_type}`,
         method: 'get',
         data
     })
@@ -18,7 +18,7 @@ export function getTree(data: any) {
 
 export function updateTree(data: any) {
     return request({
-        url: `/api/tree/${data.id}`,
+        url: `/api/tree/${data.id}&${data.use_type}`,
         method: 'put',
         data
     })

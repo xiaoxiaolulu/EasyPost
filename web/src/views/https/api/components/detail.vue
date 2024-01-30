@@ -632,9 +632,9 @@ watch(() => ruleForm.status, (newVal, oldVal) => {
 })
 
 
-// window.setInterval(() => {
-//   setTimeout(Snapshot, 0)
-// }, 3000)
+window.setInterval(() => {
+  setTimeout(Snapshot, 0)
+}, 1000)
 
 </script>
 <style lang="scss">

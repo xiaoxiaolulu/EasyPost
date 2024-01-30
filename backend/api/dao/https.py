@@ -6,6 +6,7 @@ from typing import (
 from channels.db import database_sync_to_async
 from django.db.models import Q
 from django.forms import model_to_dict
+
 from api.emus import treesEnum
 from api.models.https import (
     Relation,
@@ -448,8 +449,11 @@ class HttpDao:
             Exception: 创建或更新 API 文档失败时抛出异常
         """
         try:
-
             request_body = cls.parser_api_data(request)
+            api_copy_records = ApiCopy.objects.filter(user=request.user).order_by('-create_time')
+            if len(api_copy_records) > 100:
+                ApiCopy.objects.filter(user=request.user).filter(
+                    create_time__lt=api_copy_records[100].create_time).delete()
             ApiCopy.objects.create(**request_body)
         except Exception as e:
             raise Exception(f"{e} ❌")
