@@ -38,6 +38,13 @@ class Defaults(object):
         (4, 4)
     )
 
+    TREE_TYPE = 0
+
+    TREE_TYPE_CHOICES = (
+        (0, 0),
+        (1, 1)
+    )
+
 
 class Relation(Model):
     """
@@ -50,6 +57,8 @@ class Relation(Model):
     id = AutoField(primary_key=True)
     project = ForeignKey(Project, on_delete=CASCADE, db_constraint=False)
     tree = TextField(verbose_name=_('Relation Tree'), null=False, default=[])
+    type = CharField(max_length=50, verbose_name=_('Relation Type'), default=Defaults.TREE_TYPE,
+                     choices=Defaults.TREE_TYPE_CHOICES)
 
     class Meta:
         verbose_name = _('Relation')

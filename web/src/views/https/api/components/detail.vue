@@ -438,8 +438,8 @@ const updateContentType = (mode: any, language: any, remove: any) => {
 
 const onSureClick = (formName: FormInstance | undefined) => {
   if (!formName) return
-  if (!ruleForm.name || !ruleForm.url || !ruleForm.priority || !ruleForm.status) {
-    ElMessage.warning('接口名称、地址、优先级、状态为必填项！ 🤔');
+  if (!ruleForm.name || !ruleForm.url) {
+    ElMessage.warning('接口名称、地址为必填项！ 🤔');
     return
   }
   formName.validate(async (valid) => {
@@ -632,9 +632,9 @@ watch(() => ruleForm.status, (newVal, oldVal) => {
 })
 
 
-window.setInterval(() => {
-  setTimeout(Snapshot, 0)
-}, 3000)
+// window.setInterval(() => {
+//   setTimeout(Snapshot, 0)
+// }, 3000)
 
 </script>
 <style lang="scss">

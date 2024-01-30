@@ -1,4 +1,6 @@
 from django.db.models import Q
+
+from api.emus.ProjectEnum import ProjectRoleEnum
 from api.models.https import Relation
 from api.models.project import (
     Project,
@@ -53,10 +55,12 @@ class ProjectDao:
             try:
                 tree = Relation.objects.get(project=instance)
             except Relation.DoesNotExist:
-                Relation.objects.create(
-                    project=instance,
-                    tree=template
-                )
+                for tree_type in range(ProjectRoleEnum.CREATE_RANGE):
+                    Relation.objects.create(
+                        project=instance,
+                        tree=template,
+                        type=tree_type
+                    )
             return instance
 
         except(Project.DoesNotExist, ProjectRole.DoesNotExist):

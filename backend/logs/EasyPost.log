@@ -16329,3 +16329,445 @@ Quit the server with CTRL-BREAK.
              \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
               \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
             
+2024-01-30 15:07:12 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 15:07:13 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:07:13 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:07:13 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:07:13 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 15:07:13
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 15:07:19 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:07:19 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:07:19 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:07:23 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:07:23 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:07:23 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:09:25 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 15:10:34 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 15:10:35 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:10:35 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:10:35 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:10:35 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 15:10:35
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 15:13:03 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 15:13:04 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:13:04 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:13:04 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:13:04 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 15:13:04
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 15:13:47 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 15:13:47 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:13:47 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:13:47 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:13:47 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 15:13:47
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 15:13:49 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:13:49 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:13:49 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:13:51 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:13:51 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:13:51 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:14:01 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:14:01 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:14:01 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:18:03 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 15:18:04 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:18:04 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:18:04 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:18:04 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 15:18:04
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 15:19:09 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 15:19:10 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:19:10 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:19:10 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:19:10 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 15:19:10
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 15:19:49 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 15:19:50 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:19:50 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:19:50 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:19:50 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 15:19:50
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 15:20:06 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 15:20:06 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:20:06 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:20:06 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:20:07 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 15:20:07
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 15:20:55 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 15:20:56 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:20:56 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:20:56 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:20:56 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 15:20:56
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 15:21:26 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 15:21:27 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:21:27 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:21:27 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:21:27 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 15:21:27
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 15:22:59 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 15:23:31 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 15:23:32 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:23:32 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:23:32 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:23:32 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 15:23:32
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 15:24:03 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 15:24:03 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:24:03 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:24:03 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:24:04 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 15:24:04
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 15:24:04 [Thread-2 (process_request_thread)]-[https.get_directory_tree:48]-[DEBUG]:[{'id': 1, 'label': '全部', 'children': [{'id': 2, 'label': '券', 'parent': 1, 'children': []}, {'id': 3, 'label': '购物车', 'parent': 1, 'children': []}]}]
+2024-01-30 15:24:34 [Thread-2 (process_request_thread)]-[https.get_directory_tree:48]-[DEBUG]:[{'id': 1, 'label': '全部', 'children': [{'id': 2, 'label': '券', 'parent': 1, 'children': []}, {'id': 3, 'label': '购物车', 'parent': 1, 'children': []}]}]
+2024-01-30 15:24:45 [Thread-1 (process_request_thread)]-[https.get_directory_tree:48]-[DEBUG]:[{'id': 1, 'label': '全部', 'children': [{'id': 2, 'label': '券', 'parent': 1, 'children': []}, {'id': 3, 'label': '购物车', 'parent': 1, 'children': []}]}]
+2024-01-30 15:25:13 [Thread-2 (process_request_thread)]-[https.get_directory_tree:48]-[DEBUG]:[{'id': 1, 'label': '全部', 'children': [{'id': 2, 'label': '券', 'parent': 1, 'children': []}, {'id': 3, 'label': '购物车', 'parent': 1, 'children': []}]}]
+2024-01-30 15:25:40 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 15:25:40 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:25:40 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:25:40 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:25:40 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 15:25:40
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 15:25:42 [Thread-2 (process_request_thread)]-[https.get_directory_tree:48]-[DEBUG]:[{'id': 1, 'label': '全部', 'children': [{'id': 2, 'label': '券', 'parent': 1, 'children': []}, {'id': 3, 'label': '购物车', 'parent': 1, 'children': []}]}]
+2024-01-30 15:26:03 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 15:26:04 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:26:04 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:26:04 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:26:04 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 15:26:04
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 15:26:05 [Thread-2 (process_request_thread)]-[https.get_directory_tree:48]-[DEBUG]:<QuerySet []>
+2024-01-30 15:26:26 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 15:26:27 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:26:27 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:26:27 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:26:27 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 15:26:27
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 15:27:09 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 15:27:09 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:27:09 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:27:09 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:27:09 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 15:27:09
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 15:27:25 [Thread-2 (process_request_thread)]-[https.get_directory_tree:48]-[DEBUG]:测试
+2024-01-30 15:27:37 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 15:27:37 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:27:37 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:27:37 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:27:37 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 15:27:37
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 15:27:38 [Thread-1 (process_request_thread)]-[https.get_directory_tree:48]-[DEBUG]:测试
+2024-01-30 15:27:38 [Thread-1 (process_request_thread)]-[https.get_directory_tree:49]-[DEBUG]:<QuerySet []>
+2024-01-30 15:27:38 [Thread-1 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:测试
+2024-01-30 15:28:25 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 15:28:25 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:28:25 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:28:25 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:28:25 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 15:28:25
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 15:28:27 [Thread-2 (process_request_thread)]-[https.get_directory_tree:48]-[DEBUG]:测试
+2024-01-30 15:28:27 [Thread-2 (process_request_thread)]-[https.get_directory_tree:49]-[DEBUG]:None
+2024-01-30 15:28:27 [Thread-2 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:测试
+2024-01-30 15:30:14 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 15:30:15 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:30:15 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:30:15 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:30:15 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 15:30:15
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 15:30:21 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 15:30:21 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:30:21 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:30:21 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:30:21 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 15:30:21
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 15:31:48 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 15:31:49 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:31:49 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:31:49 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:31:49 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 15:31:49
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 15:37:37 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:37:37 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:37:37 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:38:27 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:38:27 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:38:27 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:38:30 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:38:30 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:38:30 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:39:09 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:39:09 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:39:09 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:41:07 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:41:07 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:41:07 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:41:11 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:41:11 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:41:11 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:41:17 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:41:17 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:41:17 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:41:52 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:41:52 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:41:52 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:42:00 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:42:00 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:42:00 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:42:22 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:42:22 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:42:22 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:42:25 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:42:25 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:42:25 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:42:28 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:42:28 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:42:28 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:42:32 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:42:32 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:42:32 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:43:54 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:43:54 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:43:54 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:43:58 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:43:58 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:43:58 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:44:26 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:44:26 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:44:26 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 15:44:33 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 15:44:33 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 15:44:33 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added

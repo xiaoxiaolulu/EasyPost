@@ -4,6 +4,7 @@ from typing import (
 )
 
 from channels.db import database_sync_to_async
+from django.db.models import Q
 from django.forms import model_to_dict
 from api.models.https import (
     Relation,
@@ -18,6 +19,7 @@ from core.engine.session_runner import (
     run_api
 )
 from core.request.parser import HandelTestData
+from utils.logger import logger
 from utils.trees import (
     collections_directory_id,
     get_relation_tree
@@ -27,12 +29,13 @@ from utils.trees import (
 class HttpDao:
 
     @staticmethod
-    def get_directory_tree(project_id: int):
+    def get_directory_tree(project_id: int, type: Any = 0):
         """
         获取指定项目的目录树。
 
         Args:
             project_id: 项目 ID
+            type
 
         Returns:
             目录树字典
@@ -41,7 +44,7 @@ class HttpDao:
             Exception: 获取目录树失败时抛出异常
         """
         try:
-            tree = Relation.objects.get(project__id=project_id)
+            tree = Relation.objects.filter(Q(project__id=project_id) & Q(type=type)).first()
             tree = eval(tree.tree)
             return tree
         except (Relation.DoesNotExist, Exception):
@@ -69,7 +72,7 @@ class HttpDao:
             raise Exception("获取测试接口失败❌")
 
     @classmethod
-    def list_test_case(cls, get_queryset, node: Any, project_id: Any, name: str = ""):
+    def list_test_case(cls, get_queryset, node: Any, project_id: Any, type: Any = 0, name: str = ""):
         # Early return if project_id or node is not provided
         if not project_id:
             _queryset = get_queryset.order_by('-update_time')
@@ -79,7 +82,7 @@ class HttpDao:
         else:
             try:
                 queryset = cls.get_directory_case(get_queryset, project_id)
-                tree = cls.get_directory_tree(project_id)
+                tree = cls.get_directory_tree(project_id, type)
                 node = int(node)
 
                 if node == 1:

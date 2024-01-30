@@ -34,8 +34,8 @@
             size="small"
             clearable
             placeholder="请输入期望值"
-            :value="scope.row.description"
-            v-model.trim="scope.row.description"
+            :value="scope.row.value"
+            v-model.trim="scope.row.value"
         ></el-input>
       </template>
     </el-table-column>
