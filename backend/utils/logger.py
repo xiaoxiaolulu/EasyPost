@@ -1,3 +1,4 @@
+import inspect
 import os
 import sys
 from loguru import logger as uru_logger
@@ -51,6 +52,27 @@ class Log:
                    "<level>[{level}]</level>: "
                    "<level>{message}</level>",
         )
+
+    def log(self, level, message):
+        frame = inspect.currentframe().f_back
+        func, line, filename = inspect.getframeinfo(frame).function, frame.f_lineno, frame.f_code.co_filename
+        self.logger.bind(name=getattr(settings, f"EASY_POST_{level.upper()}", level),
+                         func=func, line=line, business=self.business, filename=filename).log(level, message)
+
+    def debug(self, message):
+        self.log("DEBUG", message)
+
+    def info(self, message):
+        self.log("INFO", message)
+
+    def warning(self, message):
+        self.log("WARNING", message)
+
+    def error(self, message):
+        self.log("ERROR", message)
+
+    def exception(self, message):
+        self.log("EXCEPTION", message)
 
 
 _logger = Log()
