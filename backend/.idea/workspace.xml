@@ -5,13 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment=":construction_worker: 修改部分错误">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/engine/log.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/engine/log.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/request/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/request/parser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/migrations/0002_case_djangoadminaccessipwhitelist_project_and_more.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/https.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/project.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/emus/ProjectEnum.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/emus/ProjectEnum.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/migrations/0002_remove_user_is_valid.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/migrations/0003_project.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/migrations/0004_projectrole.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/migrations/0005_auto_20230811_1105.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/migrations/0006_auto_20230912_1126.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/migrations/0007_auto_20230912_1436.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/migrations/0008_auto_20230927_1537.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/migrations/0009_auto_20231124_1014.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/migrations/0010_auto_20231205_1336.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/migrations/0011_auto_20231205_1348.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/migrations/0012_alter_address_id_alter_api_id_alter_project_id_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/migrations/0013_djangoadminaccessipwhitelist.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/migrations/0014_alter_djangoadminaccessipwhitelist_id.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/migrations/0015_djangoadminaccessipwhitelist_name_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/migrations/0016_remove_api_tags_api_priority.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/migrations/0017_case.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/migrations/0018_remove_case_step_step.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/migrations/0019_remove_step_case.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/migrations/0020_step_case.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/migrations/0021_plan.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/migrations/0022_alter_plan_id.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/migrations/0023_apicopy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/models/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/https.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/logger.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/https/api/components/detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/api/components/detail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/https/api/components/validator.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/api/components/validator.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +149,7 @@
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\core\database" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.__init__ (3)">
+  <component name="RunManager" selected="Python.__init__ (1)">
     <configuration name="__init__ (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -271,11 +294,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.__init__ (3)" />
+        <item itemvalue="Python.__init__ (1)" />
         <item itemvalue="Python.manage" />
+        <item itemvalue="Python.__init__ (3)" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.__init__ (2)" />
-        <item itemvalue="Python.__init__ (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -387,15 +410,7 @@
       <workItem from="1706169196806" duration="21346000" />
       <workItem from="1706262452393" duration="2389000" />
       <workItem from="1706264876701" duration="16146000" />
-      <workItem from="1706523985951" duration="11864000" />
-    </task>
-    <task id="LOCAL-00172" summary="后端调整">
-      <option name="closed" value="true" />
-      <created>1705314027958</created>
-      <option name="number" value="00172" />
-      <option name="presentableId" value="LOCAL-00172" />
-      <option name="project" value="LOCAL" />
-      <updated>1705314027959</updated>
+      <workItem from="1706523985951" duration="14526000" />
     </task>
     <task id="LOCAL-00173" summary="后端调整">
       <option name="closed" value="true" />
@@ -781,7 +796,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706593974771</updated>
     </task>
-    <option name="localTasksCounter" value="221" />
+    <task id="LOCAL-00221" summary=":construction_worker: 修改部分错误">
+      <option name="closed" value="true" />
+      <created>1706598113302</created>
+      <option name="number" value="00221" />
+      <option name="presentableId" value="LOCAL-00221" />
+      <option name="project" value="LOCAL" />
+      <updated>1706598113302</updated>
+    </task>
+    <option name="localTasksCounter" value="222" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -841,7 +864,7 @@
     <SUITE FILE_PATH="coverage/backend$registry.coverage" NAME="registry Coverage Results" MODIFIED="1705542881675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/events" />
     <SUITE FILE_PATH="coverage/http_handler_py$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1699871291170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/backend$snowflake.coverage" NAME="snowflake Coverage Results" MODIFIED="1705989296959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
-    <SUITE FILE_PATH="coverage/backend$manage.coverage" NAME="manage Coverage Results" MODIFIED="1706593442146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/backend$manage.coverage" NAME="manage Coverage Results" MODIFIED="1706599627949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/backend$__init____2_.coverage" NAME="__init__ (2) Coverage Results" MODIFIED="1706257554536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/events" />
     <SUITE FILE_PATH="coverage/http_handler_py$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1699847256865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/http_handler_py$.coverage" NAME=" Coverage Results" MODIFIED="1699719668172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
@@ -855,7 +878,7 @@
     <SUITE FILE_PATH="coverage/backend$http_handler.coverage" NAME="http_handler Coverage Results" MODIFIED="1691322735662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/request" />
     <SUITE FILE_PATH="coverage/backend$cl.coverage" NAME="cl Coverage Results" MODIFIED="1692972573609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/protobuf_test" />
     <SUITE FILE_PATH="coverage/http_handler_py$global_func.coverage" NAME="global_func Coverage Results" MODIFIED="1699843223150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/backend$__init____1_.coverage" NAME="__init__ (1) Coverage Results" MODIFIED="1706250012670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/dao" />
+    <SUITE FILE_PATH="coverage/backend$__init____1_.coverage" NAME="__init__ (1) Coverage Results" MODIFIED="1706599813976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/dao" />
     <SUITE FILE_PATH="coverage/backend$.coverage" NAME=" Coverage Results" MODIFIED="1702865657871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/engine" />
     <SUITE FILE_PATH="coverage/backend$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1706154208033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/celery_work" />
     <SUITE FILE_PATH="coverage/backend$trees.coverage" NAME="trees Coverage Results" MODIFIED="1701767218934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
