@@ -134,7 +134,10 @@ const setProjectList = (data) => {
 }
 
 const queryList = () => {
-  getTree({id: currentProject.value}).then((response) => {
+  getTree({
+    id: currentProject.value,
+    use_type: 0
+  }).then((response) => {
     const {data, code, msg} = response.data
     tableData.value = data.tree
     pk.value = data.id

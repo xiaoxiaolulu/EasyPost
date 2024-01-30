@@ -16771,3 +16771,830 @@ Quit the server with CTRL-BREAK.
 2024-01-30 15:44:33 [MainThread]-[base.start:181]-[INFO]:Scheduler started
 2024-01-30 15:44:33 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
 2024-01-30 15:44:33 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:26:16 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 16:26:16 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 16:26:16 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:26:20 [MainThread]-[init_superuser.handle:45]-[INFO]:
+
+        Your initial superuser has been set for testing, use this user to sign in Django admin:
+
+            Email: admin
+            Password: 123456
+
+        Use this token for jwt testing:
+
+            Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA2Njg5NTgwLCJqdGkiOiI5YjMyNjdhN2E1OTA0ZjVhYTgwMzQyOTIzZmY1NTI3ZCIsInVzZXJfaWQiOjF9.GM0t7TI4Ip9MAgZA1G2XsV0OuWQjDPLIeLuphuBFKxQ
+
+        
+2024-01-30 16:28:22 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 16:28:22 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 16:28:22 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 16:28:22 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:28:22 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 16:28:22
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 16:28:27 [Thread-1 (process_request_thread)]-[https.get_directory_tree:48]-[DEBUG]:None
+2024-01-30 16:28:59 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 16:29:00 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 16:29:00 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 16:29:00 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:29:00 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 16:29:00
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 16:29:01 [Thread-2 (process_request_thread)]-[https.get_directory_tree:48]-[DEBUG]:[{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 16:29:17 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 16:29:18 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 16:29:18 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 16:29:18 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:29:18 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 16:29:18
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 16:29:19 [Thread-1 (process_request_thread)]-[https.get_directory_tree:48]-[DEBUG]:[{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 16:29:36 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 16:29:36 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 16:29:36 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 16:29:36 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:29:37 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 16:29:37
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 16:30:39 [Thread-1 (process_request_thread)]-[https.get_directory_tree:48]-[DEBUG]:[{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 16:30:41 [Thread-1 (process_request_thread)]-[https.get_directory_tree:48]-[DEBUG]:[{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 16:30:52 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 16:30:53 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 16:30:53 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 16:30:53 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:30:53 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 16:30:53
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 16:30:53 [Thread-1 (process_request_thread)]-[https.get_directory_tree:48]-[DEBUG]:[{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 16:31:10 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 16:31:11 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 16:31:11 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 16:31:11 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:31:11 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 16:31:11
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 16:31:11 [Thread-1 (process_request_thread)]-[https.get_directory_tree:48]-[DEBUG]:[{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 16:31:22 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 16:31:23 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 16:31:23 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 16:31:23 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:31:23 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 16:31:23
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 16:31:31 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 16:31:32 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 16:31:32 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 16:31:32 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:31:32 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 16:31:32
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 16:31:49 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 16:31:50 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 16:31:50 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 16:31:50 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:31:50 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 16:31:50
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 16:31:51 [Thread-2 (process_request_thread)]-[https.get_directory_tree:48]-[DEBUG]:None
+2024-01-30 16:31:52 [Thread-2 (process_request_thread)]-[https.get_directory_tree:48]-[DEBUG]:None
+2024-01-30 16:32:24 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 16:32:25 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 16:32:25 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 16:32:25 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:32:25 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 16:32:25
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 16:35:27 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 16:35:27 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 16:35:27 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 16:35:27 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:35:27 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 16:35:27
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 16:35:42 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 16:35:42 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 16:35:42 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 16:35:42 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:35:42 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 16:35:42
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 16:35:43 [Thread-1 (process_request_thread)]-[https.list_test_case:85]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet []>
+2024-01-30 16:36:06 [Thread-1 (process_request_thread)]-[https.list_test_case:85]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet []>
+2024-01-30 16:36:15 [Thread-1 (process_request_thread)]-[https.list_test_case:85]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 16:36:19 [Thread-1 (process_request_thread)]-[https.list_test_case:85]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 16:36:32 [Thread-2 (process_request_thread)]-[https.list_test_case:85]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 16:36:37 [Thread-1 (process_request_thread)]-[https.list_test_case:85]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 16:37:22 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 16:37:23 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 16:37:23 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 16:37:23 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:37:23 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 16:37:23
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 16:38:50 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 16:38:51 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 16:38:51 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 16:38:51 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:38:51 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 16:38:51
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 16:39:58 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 16:39:59 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 16:39:59 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 16:39:59 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:39:59 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 16:39:59
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 16:40:15 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 16:40:15 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 16:40:15 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 16:40:15 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:40:15 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 16:40:15
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 16:40:35 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 16:40:36 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 16:40:36 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 16:40:36 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:40:36 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 16:40:36
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 16:40:57 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 16:40:58 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 16:40:58 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 16:40:58 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:40:58 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 16:40:58
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 16:41:01 [Thread-2 (process_request_thread)]-[https.list_test_case:85]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+
+2024-01-30 16:41:45 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 16:41:46 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 16:41:46 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 16:41:46 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:41:46 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 16:41:46
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 16:42:48 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 16:42:49 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 16:42:49 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 16:42:49 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:42:49 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 16:42:49
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 16:42:50 [Thread-2 (process_request_thread)]-[https.get_directory_case:76]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 16:42:50 [Thread-2 (process_request_thread)]-[https.get_directory_tree:54]-[DEBUG]:🏓获取项目关联的接口数据失败
+2024-01-30 16:44:19 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 16:44:19 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 16:44:19 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 16:44:19 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:44:20 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 16:44:20
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 16:44:21 [Thread-1 (process_request_thread)]-[https.get_directory_case:76]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 16:44:21 [Thread-1 (process_request_thread)]-[https.get_directory_tree:54]-[DEBUG]:🏓获取项目关联的树形结构数据 -> 'NoneType' object has no attribute 'tree'
+2024-01-30 16:45:52 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 16:45:53 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 16:45:53 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 16:45:53 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:45:53 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 16:45:53
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 16:45:54 [Thread-1 (process_request_thread)]-[https.get_directory_case:76]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 16:45:54 [Thread-1 (process_request_thread)]-[https.get_directory_tree:54]-[DEBUG]:🏓获取项目关联的树形结构数据 -> 'NoneType' object has no attribute 'tree'
+2024-01-30 16:46:21 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 16:46:21 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 16:46:21 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 16:46:21 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:46:21 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 16:46:21
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 16:46:22 [Thread-3 (process_request_thread)]-[https.get_directory_case:78]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 16:46:22 [Thread-3 (process_request_thread)]-[https.get_directory_tree:47]-[DEBUG]:xxxx
+2024-01-30 16:46:22 [Thread-3 (process_request_thread)]-[https.get_directory_tree:56]-[DEBUG]:🏓获取项目关联的树形结构数据 -> 'NoneType' object has no attribute 'tree'
+2024-01-30 16:46:42 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 16:46:43 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 16:46:43 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 16:46:43 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:46:43 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 16:46:43
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 16:46:44 [Thread-2 (process_request_thread)]-[https.get_directory_case:78]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 16:46:44 [Thread-2 (process_request_thread)]-[https.get_directory_tree:47]-[DEBUG]:xxxx
+2024-01-30 16:46:44 [Thread-2 (process_request_thread)]-[https.get_directory_tree:56]-[DEBUG]:🏓获取项目关联的树形结构数据 -> 'NoneType' object has no attribute 'tree'
+2024-01-30 16:46:56 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 16:46:57 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 16:46:57 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 16:46:57 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:46:57 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 16:46:57
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 16:46:57 [Thread-1 (process_request_thread)]-[https.get_directory_case:78]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 16:46:57 [Thread-1 (process_request_thread)]-[https.get_directory_tree:47]-[DEBUG]:xxxx0
+2024-01-30 16:46:57 [Thread-1 (process_request_thread)]-[https.get_directory_tree:56]-[DEBUG]:🏓获取项目关联的树形结构数据 -> 'NoneType' object has no attribute 'tree'
+2024-01-30 16:47:29 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 16:47:30 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 16:47:30 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 16:47:30 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:47:30 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 16:47:30
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 16:47:31 [Thread-1 (process_request_thread)]-[https.get_directory_case:76]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 16:47:31 [Thread-1 (process_request_thread)]-[https.get_directory_tree:49]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 16:50:20 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 16:50:21 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 16:50:21 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 16:50:21 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:50:21 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 16:50:21
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 16:50:23 [Thread-3 (process_request_thread)]-[https.get_directory_case:78]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 16:50:23 [Thread-3 (process_request_thread)]-[https.get_directory_tree:51]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 16:50:26 [Thread-2 (process_request_thread)]-[https.get_directory_case:78]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 16:50:26 [Thread-2 (process_request_thread)]-[https.get_directory_tree:51]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 16:51:01 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 16:51:02 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 16:51:02 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 16:51:02 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:51:02 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 16:51:02
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 16:51:02 [Thread-2 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 16:51:02 [Thread-2 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 16:52:43 [Thread-1 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 16:52:43 [Thread-1 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 16:53:02 [Thread-2 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 16:53:02 [Thread-2 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 16:53:53 [Thread-1 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 16:53:53 [Thread-1 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 16:54:16 [Thread-5 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 16:54:16 [Thread-5 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 16:56:43 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 16:56:43 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 16:56:43 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 16:56:43 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:56:43 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 16:56:43
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 16:56:44 [Thread-2 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 16:56:44 [Thread-2 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 16:56:44 [Thread-1 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 16:57:49 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 16:57:49 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 16:57:49 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 16:57:49 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:57:49 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 16:57:49
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 16:57:51 [Thread-3 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 16:57:51 [Thread-1 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 16:57:51 [Thread-3 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 16:58:28 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 16:58:29 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 16:58:29 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 16:58:29 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:58:29 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 16:58:29
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 16:58:42 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 16:58:43 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 16:58:43 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 16:58:43 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 16:58:43 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 16:58:43
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 16:58:43 [Thread-1 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 16:58:43 [Thread-1 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 16:58:47 [Thread-1 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 16:58:47 [Thread-1 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 16:58:49 [Thread-1 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 16:58:49 [Thread-1 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:02:57 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 17:02:58 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 17:02:58 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 17:02:58 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 17:02:58 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 17:02:58
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 17:02:58 [Thread-2 (process_request_thread)]-[https.get_directory_tree:79]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:02:58 [Thread-1 (process_request_thread)]-[https.get_directory_case:106]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:02:58 [Thread-1 (process_request_thread)]-[https.get_directory_tree:79]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:05:11 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 17:05:12 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 17:05:12 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 17:05:12 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 17:05:12 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 17:05:12
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 17:05:12 [Thread-1 (process_request_thread)]-[https.get_directory_case:113]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:05:12 [Thread-1 (process_request_thread)]-[https.get_directory_tree:86]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:05:30 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 17:05:31 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 17:05:31 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 17:05:31 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 17:05:31 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 17:05:31
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 17:05:31 [Thread-2 (process_request_thread)]-[https.get_directory_case:113]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:05:31 [Thread-2 (process_request_thread)]-[https.get_directory_tree:86]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:05:43 [Thread-2 (process_request_thread)]-[https.get_directory_case:113]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:05:43 [Thread-2 (process_request_thread)]-[https.get_directory_tree:86]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:06:40 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 17:06:41 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 17:06:41 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 17:06:41 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 17:06:41 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 17:06:41
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 17:06:42 [Thread-1 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:06:42 [Thread-1 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:06:43 [Thread-1 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:06:43 [Thread-1 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:07:10 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 17:07:11 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 17:07:11 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 17:07:11 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 17:07:11 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 17:07:11
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 17:07:11 [Thread-4 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:07:11 [Thread-4 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:08:32 [Thread-1 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:08:32 [Thread-1 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:09:21 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 17:09:21 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 17:09:21 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 17:09:21 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 17:09:21 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 17:09:21
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 17:09:23 [Thread-1 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:09:23 [Thread-1 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:09:27 [Thread-1 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:09:27 [Thread-1 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:09:33 [Thread-1 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:09:33 [Thread-1 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:12:35 [Thread-1 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:12:35 [Thread-1 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:12:39 [Thread-1 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:12:39 [Thread-1 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:27:01 [Thread-5 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:27:01 [Thread-5 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:33:14 [Thread-7 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:33:14 [Thread-7 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:33:18 [Thread-7 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:33:18 [Thread-7 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:34:09 [Thread-8 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:34:09 [Thread-8 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:34:11 [Thread-8 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:34:11 [Thread-8 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:34:16 [Thread-8 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:34:16 [Thread-8 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:34:18 [Thread-8 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:34:18 [Thread-8 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:34:20 [Thread-8 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:34:20 [Thread-8 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:34:22 [Thread-8 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:34:22 [Thread-8 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:34:22 [Thread-8 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:34:22 [Thread-8 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:34:25 [Thread-7 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:34:25 [Thread-7 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:34:27 [Thread-7 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:34:27 [Thread-7 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:34:30 [Thread-7 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:34:30 [Thread-7 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:34:31 [Thread-8 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:34:31 [Thread-8 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:34:32 [Thread-8 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:34:32 [Thread-8 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:34:58 [Thread-8 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:34:58 [Thread-8 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:35:07 [Thread-7 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:35:07 [Thread-7 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:36:10 [django-main-thread]-[runserver.inner_run:140]-[INFO]:🔖Performing system checks...
+
+
+2024-01-30 17:36:10 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-01-30 17:36:10 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-01-30 17:36:10 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-01-30 17:36:10 [django-main-thread]-[runserver.on_bind:188]-[INFO]:January 30, 2024 - 17:36:10
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-01-30 17:36:10 [Thread-1 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:36:10 [Thread-1 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:36:11 [Thread-1 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:36:11 [Thread-1 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:36:16 [Thread-1 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:36:16 [Thread-1 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:36:17 [Thread-1 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:36:17 [Thread-1 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:36:18 [Thread-1 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:36:18 [Thread-1 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:36:21 [Thread-1 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:36:21 [Thread-1 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:36:28 [Thread-2 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:36:28 [Thread-2 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:38:35 [Thread-1 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:38:35 [Thread-1 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:38:37 [Thread-2 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:38:37 [Thread-2 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:38:37 [Thread-2 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:38:37 [Thread-2 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:38:44 [Thread-1 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:38:44 [Thread-1 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:38:45 [Thread-1 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:38:45 [Thread-1 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:38:46 [Thread-1 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:38:46 [Thread-1 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': []}]
+2024-01-30 17:38:52 [Thread-1 (process_request_thread)]-[https.get_directory_case:77]-[DEBUG]:🏓获取项目关联的接口数据 -> <QuerySet [<Api: 3>]>
+2024-01-30 17:38:52 [Thread-1 (process_request_thread)]-[https.get_directory_tree:50]-[DEBUG]:🏓获取项目关联的树形结构数据 -> [{'id': 1, 'label': '全部', 'children': [{'id': 2, 'label': '222', 'parent': 1, 'children': []}]}]

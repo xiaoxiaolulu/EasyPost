@@ -6,6 +6,7 @@ from typing import (
 from channels.db import database_sync_to_async
 from django.db.models import Q
 from django.forms import model_to_dict
+from api.emus import treesEnum
 from api.models.https import (
     Relation,
     Api,
@@ -46,8 +47,14 @@ class HttpDao:
         try:
             tree = Relation.objects.filter(Q(project__id=project_id) & Q(type=type)).first()
             tree = eval(tree.tree)
+            logger.debug(
+                f"🏓获取项目关联的树形结构数据 -> {tree}"
+            )
             return tree
-        except (Relation.DoesNotExist, Exception):
+        except (Relation.DoesNotExist, Exception) as err:
+            logger.debug(
+                f"🏓获取项目关联的树形结构数据 -> {err}"
+            )
             raise Exception("获取目录详情失败❌")
 
     @staticmethod
@@ -67,12 +74,18 @@ class HttpDao:
         """
         try:
             queryset = get_queryset.filter(project__id=project_id).order_by('-update_time')
+            logger.debug(
+                f"🏓获取项目关联的接口数据 -> {queryset}"
+            )
             return queryset
-        except (Api.DoesNotExist, Exception):
+        except (Api.DoesNotExist, Exception) as err:
+            logger.debug(
+                f"🏓获取项目关联的接口数据失败 -> {err}"
+            )
             raise Exception("获取测试接口失败❌")
 
     @classmethod
-    def list_test_case(cls, get_queryset, node: Any, project_id: Any, type: Any = 0, name: str = ""):
+    def list_test_case(cls, get_queryset, node: Any, project_id: Any, name: str = ""):
         # Early return if project_id or node is not provided
         if not project_id:
             _queryset = get_queryset.order_by('-update_time')
@@ -82,7 +95,7 @@ class HttpDao:
         else:
             try:
                 queryset = cls.get_directory_case(get_queryset, project_id)
-                tree = cls.get_directory_tree(project_id, type)
+                tree = cls.get_directory_tree(project_id, treesEnum.TreeType.API)
                 node = int(node)
 
                 if node == 1:

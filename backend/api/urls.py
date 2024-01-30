@@ -78,7 +78,7 @@ app_urls = [
 
     # 接口测试
     path("http/", ApiFastView.as_view()),
-    path("tree/<int:pk>", TreeView.as_view()),
+    path("tree/<int:pk>&<int:use_type>", TreeView.as_view()),
     path("http/delete/<int:pk>", DelApiView.as_view()),
     path("http/detail/<int:pk>", ApiDetailView.as_view()),
     path("http/saveOrUpdate/<int:pk>", SaveOrUpdateApiView.as_view()),

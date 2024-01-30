@@ -9,6 +9,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from api.dao.https import HttpDao
+from api.emus.treesEnum import TreeType
 from api.mixins.async_generics import AsyncAPIView
 from api.models.https import (
     Relation,
@@ -56,7 +57,7 @@ class TreeView(APIView):
         """
         try:
             body = request.data['body']
-            relation = Relation.objects.get(id=kwargs['pk'])
+            relation = Relation.objects.get(id=kwargs['pk'], type=kwargs['use_type'])
             relation.tree = body
             relation.save()
 
@@ -75,7 +76,7 @@ class TreeView(APIView):
     @staticmethod
     def get(request, **kwargs):
         try:
-            tree = Relation.objects.get(project__id=kwargs['pk'])
+            tree = Relation.objects.get(project__id=kwargs['pk'], type=kwargs['use_type'])
             node = eval(tree.tree)
             serializer = {
                 "tree": node,
