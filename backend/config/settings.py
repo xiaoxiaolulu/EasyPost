@@ -280,4 +280,3 @@ EASY_POST_INFO = "easy_post_info"
 EASY_POST_WARNING = "easy_post_warning"
 EASY_POST_DEBUG = "easy_post_debug"
 EASY_POST_EXCEPTION = "easy_post_exception"
-
