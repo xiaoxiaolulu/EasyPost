@@ -5,8 +5,90 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment=":construction_worker: 修改部分错误">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/events/event_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/events/event_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/https.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/plan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/project.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20230805_150634.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20230927_112655.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20230927_113304.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20230927_113425.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20230927_113523.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20230927_113602.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20230927_113720.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20230927_113738.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20230927_113749.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20230927_113801.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20230927_113820.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20230927_113833.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20230927_114053.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20230927_114106.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20230927_114126.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20230927_114206.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20230927_114634.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20230927_141340.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20230927_141352.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20230927_141536.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_152031.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_152637.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_152657.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_152710.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_152819.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_152938.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_152939.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_153210.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_153346.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_153417.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_153503.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_153519.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_153631.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_153632.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_153713.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_153752.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_153907.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_154019.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_154547.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_154648.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_154719.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_154859.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_154946.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_155144.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_155240.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_160447.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_160507.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_160533.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_160619.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_160635.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_160742.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_160846.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_161040.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_161146.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_161220.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_161404.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_162437.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_162712.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_163521.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_163843.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_171455.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_171456.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_171759.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_171856.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_171905.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_172727.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_173004.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_173159.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_173245.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_173404.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_173636.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_173948.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_174644.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_174836.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_175110.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_175328.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/20231110_175653.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/EasyPost_err.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/EasyPost_info.log" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +203,7 @@
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\mixins" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunManager" selected="Django Server.backend">
     <configuration name="__init__ (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -382,15 +464,7 @@
       <workItem from="1706169196806" duration="21346000" />
       <workItem from="1706262452393" duration="2389000" />
       <workItem from="1706264876701" duration="16146000" />
-      <workItem from="1706523985951" duration="32365000" />
-    </task>
-    <task id="LOCAL-00182" summary="后端调整">
-      <option name="closed" value="true" />
-      <created>1705544431080</created>
-      <option name="number" value="00182" />
-      <option name="presentableId" value="LOCAL-00182" />
-      <option name="project" value="LOCAL" />
-      <updated>1705544431080</updated>
+      <workItem from="1706523985951" duration="33267000" />
     </task>
     <task id="LOCAL-00183" summary="后端调整">
       <option name="closed" value="true" />
@@ -776,7 +850,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706681242317</updated>
     </task>
-    <option name="localTasksCounter" value="231" />
+    <task id="LOCAL-00231" summary=":construction_worker: 修改部分错误">
+      <option name="closed" value="true" />
+      <created>1706682127474</created>
+      <option name="number" value="00231" />
+      <option name="presentableId" value="LOCAL-00231" />
+      <option name="project" value="LOCAL" />
+      <updated>1706682127474</updated>
+    </task>
+    <option name="localTasksCounter" value="232" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
