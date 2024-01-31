@@ -242,7 +242,7 @@ REST_FRAMEWORK = {
         'rest_framework.parsers.FileUploadParser'
     ],
 
-    'EXCEPTION_HANDLER': 'core.exception.exception_handler.exception_handler',
+    'EXCEPTION_HANDLER': 'api.exception.exception_handler.exception_handler',
 }
 
 
