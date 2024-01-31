@@ -35,7 +35,7 @@ class EventManager:
     @classmethod
     async def post(
             cls,
-            context: Event | Cancelable,
+            context: Event | Cancelable = None,
             alias: Optional[str] = None,
             callback: Callable[[], Coroutine[Any, Any, Any]] = None):
         """
@@ -54,6 +54,21 @@ class EventManager:
             await i(context)
         if issubclass(context.__class__, Cancelable) and not context.is_canceled():
             await callback()
+
+    @classmethod
+    def unsubscribe_all(cls):
+        """取消所有事件的所有订阅"""
+        cls.map.clear()
+
+    @classmethod
+    def unsubscribe_by_alias(
+            cls,
+            context: Event | Cancelable = None,
+            alias: Optional[str] = None,
+    ):
+        """取消对指定事件别名的所有订阅"""
+        key = alias or context.__class__
+        del cls.map[key]
 
     @classmethod
     def subscribe(cls, alias: Optional[str] = None):
