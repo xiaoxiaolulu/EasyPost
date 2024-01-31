@@ -11,16 +11,14 @@ class CancelableEvent(Cancelable, Event):
      pass
 
 
+# def handle_my_event(event: MyEvent):
+#     print(f"Received MyEvent: {event.data}")
+
+
+@EventManager.subscribe()
 def handle_my_event(event: MyEvent):
-    print(f"Received MyEvent: {event.data}")
-
-event_manager = EventManager()
-
-
-@event_manager.subscribe
-async def handle_my_event(event: MyEvent):
     print(f"Received MyEvent: {event.data}")
 
 
 event = MyEvent("Hello, world!")
-await event_manager.post(event)  # 发布 MyEvent
+EventManager.post(event)  # 发布 MyEvent

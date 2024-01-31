@@ -5,7 +5,8 @@ from typing import (
     Callable,
     Coroutine,
     Any,
-    TypeVar
+    TypeVar,
+    Optional
 )
 from typing import Type as Class
 from inspect import (
@@ -28,39 +29,42 @@ EventHandler = Callable[[E], Coroutine[Any, Any, Any]]
 
 
 class EventManager:
-    map: Dict[Class[Event], List[EventHandler]]
+    map: Dict[Class[Event], List[EventHandler]] = {}
 
-    def __init__(self):
-        self.map = {}
-
-    async def post(self, context: Event | Cancelable, callback: Callable[[], Coroutine[Any, Any, Any]] = None):
+    @classmethod
+    async def post(cls, context: Event | Cancelable, callback: Callable[[], Coroutine[Any, Any, Any]] = None):
         """
         发布事件
         :param context: 事件内容
         :param callback: 事件回调（仅在事件可取消且未被取消时进行）
         :return:
         """
-        func_list: List[EventHandler] = self.map.get(context.__class__, [])
+        func_list: List[EventHandler] = cls.map.get(context.__class__, [])
         for i in func_list:
             await i(context)
         if issubclass(context.__class__, Cancelable) and not context.is_canceled():
             await callback()
 
-    def subscribe(self, handler: EventHandler):
+    @classmethod
+    def subscribe(cls):
         """
         订阅事件
-        :param handler: 事件处理器
         """
-        sign: Signature = signature(handler)
-        params: List[Parameter] = list(sign.parameters.values())
-        if len(params) != 1:
-            raise UnsupportedFunctionException('Params lens not match.')
-        event_type: Class[Event] = params[0].annotation
-        func_list: List[EventHandler] = self.map.get(event_type, [])
-        if not issubclass(event_type, Event):
-            raise IllegalEventException()
-        if not asyncio.iscoroutinefunction(handler):
-            raise UnsupportedFunctionException('Is not coroutine function.')
-        else:
-            func_list.append(handler)
-        self.map[event_type] = func_list
+        def decorator(handler: EventHandler):
+            sign: Signature = signature(handler)
+            params: List[Parameter] = list(sign.parameters.values())
+            if len(params) != 1:
+                raise UnsupportedFunctionException('Params lens not match.')
+            event_type: Class[Event] = params[0].annotation
+
+            func_list: List[EventHandler] = cls.map.get(event_type, [])
+            if not issubclass(event_type, Event):
+                raise IllegalEventException()
+            if not asyncio.iscoroutinefunction(handler):
+                raise UnsupportedFunctionException('Is not coroutine function.')
+            else:
+                func_list.append(handler)
+            cls.map[event_type] = func_list
+
+        return decorator
+
