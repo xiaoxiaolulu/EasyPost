@@ -6,6 +6,7 @@ from api.models.project import (
     Project,
     ProjectRole
 )
+from utils.logger import logger
 
 
 class ProjectDao:
@@ -20,7 +21,10 @@ class ProjectDao:
             queryset = Project.objects.filter(
                 Q(id__in=[instance.project_id for instance in queryset]) | Q(private=1) | Q(user_id=user_id))
             return queryset
-        except(ProjectRole.DoesNotExist, Exception):
+        except(ProjectRole.DoesNotExist, Exception) as err:
+            logger.debug(
+                f"🎯获取用户项目列表失败 -> {err}"
+            )
             raise Exception("获取用户项目列表失败! ❌")
 
     @staticmethod
@@ -84,8 +88,10 @@ class ProjectDao:
             permission = False if owner != user_id else True
 
             return permission
-        except(Project.DoesNotExist, Exception):
-
+        except(Project.DoesNotExist, Exception) as err:
+            logger.debug(
+                f"🎯项目未找到 -> {err}"
+            )
             raise Exception("项目未找到 ❌")
 
     @staticmethod
@@ -93,5 +99,8 @@ class ProjectDao:
         try:
             instance = ProjectRole.objects.filter(Q(project_id=project_id) & Q(user_id=user_id))
             return instance
-        except(ProjectRole.DoesNotExist, Exception):
+        except(ProjectRole.DoesNotExist, Exception) as err:
+            logger.debug(
+                f"🎯该项目未找到该角色权限！ -> {err}"
+            )
             raise Exception("该项目未找到该角色权限！❌")

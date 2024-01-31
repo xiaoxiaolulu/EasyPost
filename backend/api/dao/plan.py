@@ -7,6 +7,7 @@ from api.models.project import Project
 from api.response.fatcory import ResponseStandard
 from api.scheduler.scheduler import Scheduler
 from core.request.parser import HandelTestData
+from utils.logger import logger
 
 
 class PlanDao:
@@ -35,7 +36,10 @@ class PlanDao:
         }
         try:
             return request_body
-        except (Exception,):
+        except (Exception,) as err:
+            logger.debug(
+                f"🎯解析测试计划数据失败 -> {err}"
+            )
             raise Exception("解析测试计划失败 ❌")
 
     @classmethod
@@ -63,6 +67,9 @@ class PlanDao:
             return update_pk
 
         except Exception as e:
+            logger.debug(
+                f"🎯编辑测试计划数据失败 -> {e}"
+            )
             raise Exception(f"创建或更新测试计划失败: {e} ❌")
 
     @classmethod
@@ -91,6 +98,9 @@ class PlanDao:
             return ResponseStandard.success()
 
         except Exception as e:
+            logger.debug(
+                f"🎯更新测试计划数据失败 -> {e}"
+            )
             raise Exception(f"更新测试计划状态失败: {e} ❌")
 
     @classmethod
@@ -105,4 +115,7 @@ class PlanDao:
             response = HttpDao.run_test_suite(case_list)
             return response
         except Exception as e:
+            logger.debug(
+                f"🎯执行测试计划失败 -> {e}"
+            )
             raise Exception(f"执行测试计划: 【{plan.name}】失败: {str(e)} ❌")

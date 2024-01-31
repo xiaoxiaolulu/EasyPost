@@ -48,9 +48,6 @@ class HttpDao:
         try:
             tree = Relation.objects.filter(Q(project__id=project_id) & Q(type=type)).first()
             tree = eval(tree.tree)
-            logger.debug(
-                f"🏓获取项目关联的树形结构数据 -> {tree}"
-            )
             return tree
         except (Relation.DoesNotExist, Exception) as err:
             logger.debug(
@@ -75,9 +72,6 @@ class HttpDao:
         """
         try:
             queryset = get_queryset.filter(project__id=project_id).order_by('-update_time')
-            logger.debug(
-                f"🏓获取项目关联的接口数据 -> {queryset}"
-            )
             return queryset
         except (Api.DoesNotExist, Exception) as err:
             logger.debug(
@@ -111,8 +105,11 @@ class HttpDao:
 
                 return queryset
 
-            except (Api.DoesNotExist, Exception) as e:
-                raise Exception("获取测试接口失败❌") from e
+            except (Api.DoesNotExist, Exception) as err:
+                logger.debug(
+                    f"🏓获取测试接口数据失败 -> {err}"
+                )
+                raise Exception(f"获取测试接口失败❌ {err}")
 
     @staticmethod
     def parser_api_data(request: Any, pk=None):
@@ -159,7 +156,10 @@ class HttpDao:
         }
         try:
             return request_body
-        except (Exception,):
+        except (Exception,) as err:
+            logger.debug(
+                f"🏓解析测试接口数据失败 -> {err}"
+            )
             raise Exception("解析测试接口失败❌")
 
     @classmethod
@@ -190,8 +190,11 @@ class HttpDao:
                 update_pk = create_obj.id
 
             return update_pk
-        except Exception as e:
-            raise Exception(f"{e} ❌")
+        except Exception as err:
+            logger.debug(
+                f"🏓编辑测试接口数据失败 -> {err}"
+            )
+            raise Exception(f"{err} ❌")
 
     @classmethod
     def run_api_doc(cls, api: dict):
@@ -212,8 +215,11 @@ class HttpDao:
             api_data = api.get_api_template()
             result = run_api(api_data=api_data)
             return result
-        except Exception as e:
-            raise Exception(f"调试测试接口失败: {e} ❌")
+        except Exception as err:
+            logger.debug(
+                f"🏓调试测试接口数据失败 -> {err}"
+            )
+            raise Exception(f"调试测试接口失败: {err} ❌")
 
     @staticmethod
     def remove_unwanted_keys(step):
@@ -264,6 +270,9 @@ class HttpDao:
             if steps_obj:
                 steps_obj.delete()
         except Exception as err:
+            logger.debug(
+                f"🏓删除用例数据失败 -> {err}"
+            )
             raise Exception(f"{err} ❌")
 
     @classmethod
@@ -303,8 +312,11 @@ class HttpDao:
                 update_pk = case_obj.id
 
             return update_pk
-        except Exception as e:
-            raise Exception(f"{e} ❌")
+        except Exception as err:
+            logger.debug(
+                f"🏓更新用例数据失败 -> {err}"
+            )
+            raise Exception(f"{err} ❌")
 
     @staticmethod
     def parser_case_data(request: Any, pk=None):
@@ -343,7 +355,10 @@ class HttpDao:
         }
         try:
             return request_body, api.step_data
-        except (Exception,):
+        except (Exception,) as err:
+            logger.debug(
+                f"🏓解析测试用例数据失败 -> {err}"
+            )
             raise Exception("解析测试用例失败 ❌")
 
     @classmethod
@@ -370,6 +385,9 @@ class HttpDao:
             result = run_test(case_data)
             return result
         except Exception as e:
+            logger.debug(
+                f"🏓调试用例数据失败 -> {e}"
+            )
             raise Exception(f"调试测试用例失败: {e} ❌")
 
     @classmethod
@@ -431,6 +449,9 @@ class HttpDao:
             result = run_test(case_data)
             return result
         except Exception as e:
+            logger.debug(
+                f"🏓调试测试计划失败 -> {e}"
+            )
             raise Exception(f"调试测试计划失败: {e} ❌")
 
     @classmethod
@@ -456,4 +477,7 @@ class HttpDao:
                     create_time__lt=api_copy_records[100].create_time).delete()
             ApiCopy.objects.create(**request_body)
         except Exception as e:
+            logger.debug(
+                f"🏓创建接口快照失败 {e}"
+            )
             raise Exception(f"{e} ❌")
