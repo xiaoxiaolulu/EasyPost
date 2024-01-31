@@ -11,10 +11,6 @@ class CancelableEvent(Cancelable, Event):
      pass
 
 
-# def handle_my_event(event: MyEvent):
-#     print(f"Received MyEvent: {event.data}")
-
-
 @EventManager.subscribe()
 def handle_my_event(event: MyEvent):
     print(f"Received MyEvent: {event.data}")
