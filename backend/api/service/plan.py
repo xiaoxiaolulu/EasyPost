@@ -10,7 +10,7 @@ from api.response.fatcory import ResponseStandard
 from api.schema.plan import PlanSerializers
 
 
-class SaveOrUpdatePlanView(AsyncAPIView):
+class SavePlanView(AsyncAPIView):
 
     permission_classes = [IsAuthenticated]
 
@@ -18,10 +18,22 @@ class SaveOrUpdatePlanView(AsyncAPIView):
     async def post(request, **kwargs):
 
         try:
-            response = await PlanDao.create_or_update_plan(request, pk=kwargs['pk'])
-            return Response(ResponseStandard.success(
-                data={"plan_id": response}
-            ))
+            await PlanDao.create_plan(request)
+            return Response(ResponseStandard.success())
+        except Exception as err:
+            return Response(ResponseStandard.failed(msg=str(err)))
+
+
+class UpdatePlanView(AsyncAPIView):
+
+    permission_classes = [IsAuthenticated]
+
+    @staticmethod
+    async def post(request, **kwargs):
+
+        try:
+            await PlanDao.update_plan(request, pk=kwargs['pk'])
+            return Response(ResponseStandard.success())
         except Exception as err:
             return Response(ResponseStandard.failed(msg=str(err)))
 

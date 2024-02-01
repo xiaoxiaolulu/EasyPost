@@ -19,11 +19,12 @@ from api.service.https import (
     CaseListView,
 )
 from api.service.plan import (
-    SaveOrUpdatePlanView,
     UpdatePlanStateView,
     RunPlanView,
     DelPlanView,
-    PlanDetailView
+    PlanDetailView,
+    SavePlanView,
+    UpdatePlanView
 )
 from api.service.project import (
     ProjectListViewSet,
@@ -97,7 +98,8 @@ app_urls = [
     })),
 
     # 测试计划
-    path("plan/SaveOrUpdate/<int:pk>", SaveOrUpdatePlanView.as_view()),
+    path("plan/add", SavePlanView.as_view()),
+    path("plan/update/<int:pk>", UpdatePlanView.as_view()),
     path("plan/UpdatePlanState/<int:task_id>/<int:target_status>", UpdatePlanStateView.as_view()),
     path("plan/run", RunPlanView.as_view()),
     path('plan/delete/<int:pk>', DelPlanView.as_view()),

@@ -44,8 +44,27 @@ class PlanDao:
 
     @classmethod
     @database_sync_to_async
-    def create_or_update_plan(cls, request: Any, pk: int) -> int:
-        """创建或更新测试计划，并根据计划信息添加或移除调度任务。"""
+    def create_plan(cls, request: Any, pk: int):
+        """创建测试计划，并根据计划信息添加或移除调度任务。"""
+
+        try:
+            request_body = cls.parser_plan_data(request, pk=pk)
+
+            plan = Plan.objects.create(**request_body)
+            Scheduler.add_test_plan(
+                plan.case_list, plan.id, plan.cron
+            )
+
+        except Exception as e:
+            logger.debug(
+                f"🎯编辑测试计划数据失败 -> {e}"
+            )
+            raise Exception(f"创建测试计划失败: {e} ❌")
+
+    @classmethod
+    @database_sync_to_async
+    def update_plan(cls, request: Any, pk: int):
+        """更新测试计划，并根据计划信息添加或移除调度任务。"""
 
         try:
             request_body = cls.parser_plan_data(request, pk=pk)
@@ -56,21 +75,12 @@ class PlanDao:
                 Scheduler.add_test_plan(
                     plan.case_list, plan.id, plan.cron
                 )
-                update_pk = pk
-            else:
-                plan = Plan.objects.create(**request_body)
-                Scheduler.add_test_plan(
-                    plan.case_list, plan.id, plan.cron
-                )
-                update_pk = plan.id
-
-            return update_pk
 
         except Exception as e:
             logger.debug(
                 f"🎯编辑测试计划数据失败 -> {e}"
             )
-            raise Exception(f"创建或更新测试计划失败: {e} ❌")
+            raise Exception(f"更新测试计划失败: {e} ❌")
 
     @classmethod
     def update_test_plan_state(cls, plan_id: int, target_state: int) -> Any:
