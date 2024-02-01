@@ -28,6 +28,8 @@ registerElIcons(app)
 app.component('svg-icon',SvgIcon)
 app.component('PageWrapLayout',PageWrapLayout)
 
+
+// @ts-ignore
 app.use(pinia)
 app.use(router)
 app.use(ElementPlus).mount('#app')

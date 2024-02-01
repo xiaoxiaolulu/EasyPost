@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment=":construction_worker: 修改部分错误">
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment=":construction_worker: 测试计划">
+      <change afterPath="$PROJECT_DIR$/../web/src/components/no-cron/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web/src/components/no-cron/language/cn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web/src/components/no-cron/language/en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web/src/components/no-cron/language/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web/src/components/no-cron/language/pt.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/schema/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/schema/plan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/service/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/https.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/service/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/plan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/api/http.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/api/http.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/https/plan/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/plan/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/https/plan/components/detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/plan/components/detail.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -388,23 +389,7 @@
       <workItem from="1706169196806" duration="21346000" />
       <workItem from="1706262452393" duration="2389000" />
       <workItem from="1706264876701" duration="16146000" />
-      <workItem from="1706523985951" duration="48552000" />
-    </task>
-    <task id="LOCAL-00187" summary="后端调整">
-      <option name="closed" value="true" />
-      <created>1705562064674</created>
-      <option name="number" value="00187" />
-      <option name="presentableId" value="LOCAL-00187" />
-      <option name="project" value="LOCAL" />
-      <updated>1705562064674</updated>
-    </task>
-    <task id="LOCAL-00188" summary="后端调整">
-      <option name="closed" value="true" />
-      <created>1705634286375</created>
-      <option name="number" value="00188" />
-      <option name="presentableId" value="LOCAL-00188" />
-      <option name="project" value="LOCAL" />
-      <updated>1705634286375</updated>
+      <workItem from="1706523985951" duration="51110000" />
     </task>
     <task id="LOCAL-00189" summary="后端调整">
       <option name="closed" value="true" />
@@ -782,7 +767,23 @@
       <option name="project" value="LOCAL" />
       <updated>1706759152954</updated>
     </task>
-    <option name="localTasksCounter" value="236" />
+    <task id="LOCAL-00236" summary=":construction_worker: 测试计划">
+      <option name="closed" value="true" />
+      <created>1706766286193</created>
+      <option name="number" value="00236" />
+      <option name="presentableId" value="LOCAL-00236" />
+      <option name="project" value="LOCAL" />
+      <updated>1706766286193</updated>
+    </task>
+    <task id="LOCAL-00237" summary=":construction_worker: 测试计划">
+      <option name="closed" value="true" />
+      <created>1706771913580</created>
+      <option name="number" value="00237" />
+      <option name="presentableId" value="LOCAL-00237" />
+      <option name="project" value="LOCAL" />
+      <updated>1706771913580</updated>
+    </task>
+    <option name="localTasksCounter" value="238" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -833,7 +834,8 @@
     <MESSAGE value="后端调整" />
     <MESSAGE value=":construction_worker: 调整模型" />
     <MESSAGE value=":construction_worker: 修改部分错误" />
-    <option name="LAST_COMMIT_MESSAGE" value=":construction_worker: 修改部分错误" />
+    <MESSAGE value=":construction_worker: 测试计划" />
+    <option name="LAST_COMMIT_MESSAGE" value=":construction_worker: 测试计划" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$init_task.coverage" NAME="init_task Coverage Results" MODIFIED="1705894334573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/events" />

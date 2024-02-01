@@ -16,7 +16,7 @@
     </div>
     <div class="container">
       <el-row :gutter="12">
-        <el-col :span="8">
+        <el-col :span="6">
           <el-card style="height:100%;min-height: 600px;overflow:scroll;">
             <template #header>
               <div>
@@ -25,7 +25,7 @@
               </div>
             </template>
             <div>
-              <el-form :inline="true" autoComplete="on" :model="state.form" :rules="rules" ref="ruleFormRef"
+              <el-form autoComplete="on" :model="state.form" :rules="rules" ref="ruleFormRef"
                        label-width="auto"
                        label-position="top"
                        size="small"
@@ -49,19 +49,33 @@
                 <el-form-item label="cron表达式：" prop="">
                   <el-input v-model.trim="state.form.cron"
                             style="width: 100%;"
-                            size="small"
-                            placeholder="请输入用例名称"></el-input>
+                            size="small">
+                    <template #append>
+                      <el-popover v-model:visible="state.cronPopover" width="700px" trigger="manual">
+                        <no-cron
+                            :cron-value="state.form.cron"
+                            @change="changeCron"
+                            @close="state.cronPopover=false"
+                            max-height="400px"
+                            i18n="cn"
+                        ></no-cron>
+                        <template #reference>
+                          <el-button @click="state.cronPopover = !state.cronPopover">设置</el-button>
+                        </template>
+                      </el-popover>
+                    </template>
+                  </el-input>
                 </el-form-item>
               </el-form>
               <el-button type="primary" @click="onSureClick(ruleFormRef)" size="small">保存</el-button>
             </div>
           </el-card>
         </el-col>
-        <el-col :span="16">
+        <el-col :span="18">
           <el-card style="height:100%;min-height: 600px;overflow:scroll;">
             <template #header>
               <div>
-                <span style="font-size: 18px; color: #7a8b9a">用例步骤</span>
+                <span style="font-size: 18px; color: #7a8b9a">用例配置</span>
               </div>
             </template>
             <div>
@@ -153,6 +167,8 @@ import {showErrMessage} from "@/utils/element";
 import {getStepTypesByUse, getStepTypeInfo, parseTime} from '@/utils/index'
 import Step from "@/views/https/case/components/step.vue";
 import Sortable from "sortablejs"
+import NoVue3Cron from "@/components/no-cron/index.vue";
+import noCron from "@/components/no-cron/index.vue";
 
 const route = useRoute()
 const router = useRouter()
@@ -197,8 +213,14 @@ const selectApiData = ref()
 const state = reactive({
   optTypes: getStepTypesByUse("case"),
   form: createForm(),
-  case_id: 0
+  case_id: 0,
+  cronPopover: false
 })
+
+const changeCron = (val) => {
+  if(typeof(val) !== 'string') return false
+  state.form.cron = val
+}
 
 const handleAddData = (optType) => {
   stepControllerRef.value.handleAddData(optType)
