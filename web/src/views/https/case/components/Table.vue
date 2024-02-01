@@ -69,7 +69,7 @@ import {ElMessageBox, ElMessage, FormInstance, ElPagination} from 'element-plus'
 import {Search, Plus} from '@element-plus/icons-vue'
 import {onMounted, reactive, ref} from 'vue'
 import {useRouter} from "vue-router";
-import {getHttpList, deleteHttp} from "@/api/http";
+import {getCaseList, deleteCase} from "@/api/http";
 import {parseTime} from "@/utils";
 import {showErrMessage} from "@/utils/element";
 
@@ -114,7 +114,7 @@ const reset = (formEl: FormInstance | undefined) => {
 }
 
 const queryList = () => {
-  getHttpList(queryParams).then((response) => {
+  getCaseList(queryParams).then((response) => {
     tableData.value = response.data.results;
     count.value = response.data.count;
   }).catch((error) => {
@@ -154,15 +154,13 @@ const add = () => {
 }
 
 const editHandler = (row) => {
-  let node = nodeId.value
-  let project = currentProject.value
-  if (node && project) {
+  if (row) {
     router.push({
-      name: "httpDetail",
-      query: {editType: 'update', project: project, node: node, id: row.id}
+      name: "caseDetail",
+      query: {editType: 'update', id: row.id}
     });
   } else {
-    ElMessage.error("项目未选择或未选择相关目录树节点, 无法编辑接口!");
+    ElMessage.error("编辑用例异常请重试!");
   }
 }
 
@@ -178,13 +176,13 @@ const del = (row) => {
     type: 'warning',
     draggable: true,
   }).then(() => {
-    deleteHttp({id: row.id}).then((response) => {
+    deleteCase({id: row.id}).then((response) => {
       const {data, code, msg} = response.data
       showErrMessage(code.toString(), msg)
       queryList();
     })
   }).catch(() => {
-    ElMessage.error("接口删除失败请重试");
+    ElMessage.error("用例删除失败请重试");
   })
 }
 const changeStatus = (row) => {

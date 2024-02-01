@@ -73,7 +73,7 @@ class HttpDao:
         try:
             queryset = get_queryset.filter(project__id=project_id).order_by('-update_time')
             return queryset
-        except (Api.DoesNotExist, Exception) as err:
+        except Exception as err:
             logger.debug(
                 f"🏓获取项目关联的接口数据失败 -> {err}"
             )
@@ -105,7 +105,7 @@ class HttpDao:
 
                 return queryset
 
-            except (Api.DoesNotExist, Exception) as err:
+            except Exception as err:
                 logger.debug(
                     f"🏓获取测试接口数据失败 -> {err}"
                 )

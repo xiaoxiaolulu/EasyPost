@@ -87,3 +87,28 @@ export function httpSnapshot(data: any) {
         data
     })
 }
+
+export function getCaseList(params: any) {
+    return request({
+        url: `/api/case/list`,
+        method: 'get',
+        params
+    })
+}
+
+
+export function deleteCase(data: any) {
+    return request({
+        url: `/api/case/delete/${data.id}`,
+        method: 'delete',
+        data
+    })
+}
+
+export function getCaseDetail(data: any) {
+    return request({
+        url: `/api/case/detail/${data.id}`,
+        method: 'get',
+        data
+    })
+}

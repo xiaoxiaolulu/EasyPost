@@ -16,6 +16,7 @@ from api.service.https import (
     DelCaseView,
     CaseDetailView,
     ApiSnapshotView,
+    CaseListView,
 )
 from api.service.plan import (
     SaveOrUpdatePlanView,
@@ -91,6 +92,9 @@ app_urls = [
     path('case/run', RunCaseView.as_view()),
     path('case/delete/<int:pk>', DelCaseView.as_view()),
     path('case/detail/<int:pk>', CaseDetailView.as_view()),
+    path("case/list", CaseListView.as_view({
+        'get': 'list'
+    })),
 
     # 测试计划
     path("plan/SaveOrUpdate/<int:pk>", SaveOrUpdatePlanView.as_view()),

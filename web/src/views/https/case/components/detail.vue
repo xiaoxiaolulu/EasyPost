@@ -149,7 +149,7 @@ import {ArrowDown, Switch, Back, Odometer} from "@element-plus/icons-vue";
 import {useRoute, useRouter} from "vue-router";
 import {computed, onMounted, reactive, ref, watch, nextTick} from "vue";
 import {ElMessage, FormInstance} from "element-plus";
-import {saveCaseOrUpdate, runCase} from "@/api/http";
+import {saveCaseOrUpdate, runCase, getCaseDetail, getHttpDetail} from "@/api/http";
 import {showErrMessage} from "@/utils/element";
 import {getStepTypesByUse, getStepTypeInfo, parseTime} from '@/utils/index'
 import Step from "@/views/https/case/components/step.vue";
@@ -198,7 +198,7 @@ const selectApiData = ref()
 const state = reactive({
   optTypes: getStepTypesByUse("case"),
   form: createForm(),
-  api_id: 0
+  case_id: 0
 })
 
 const handleAddData = (optType) => {
@@ -219,9 +219,9 @@ const onSureClick = (formName: FormInstance | undefined) => {
     if (valid) {
       try {
         let caseData = {
-          id: state.api_id,
+          id: state.case_id,
           name: state.form.name,
-          remarks: state.form.remarks,
+          desc: state.form.remarks,
           priority: state.form.remarks,
           step_data: tableData,
           directory_id: route.query.node,
@@ -229,7 +229,7 @@ const onSureClick = (formName: FormInstance | undefined) => {
         }
         const ret = await saveCaseOrUpdate(caseData)
         const {code, data, msg} = ret.data
-        state.api_id = data.api_id
+        state.case_id = data.case_id
         showErrMessage(code.toString(), msg)
       } catch (e) {
         console.log(e)
@@ -243,6 +243,24 @@ const onSureClick = (formName: FormInstance | undefined) => {
   })
 }
 
+
+const initApi = () => {
+  let case_id = route.query.id
+  if(case_id){
+    state.case_id = case_id
+  }
+  console.log("api_id------>", case_id)
+  if (case_id) {
+    getCaseDetail({id: case_id}).then((response) => {
+      const {data, code, msg} = response.data
+      state.form.name = data.name
+      state.form.remarks = data.desc
+      state.form.priority = data.priority
+      setStepData(eval(data.step))
+      showErrMessage(code.toString(), msg)
+    })
+  }
+}
 
 
 const debug = (formName: FormInstance | undefined) => {
@@ -310,20 +328,23 @@ const initDropTable = () => {
 
 const changeAction = (data) => {
   selectApiData.value = data
+  setStepData(data)
+}
+
+const setStepData = (data) => {
   for (let i = 0; i < data.length; i++) {
     tableData.push(data[i])
   }
 }
 
-
 onMounted(() => {
+  initApi()
   nextTick(() => {
     initDropTable()
   })
 })
 
 defineExpose({
-
 })
 
 </script>

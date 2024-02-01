@@ -195,7 +195,7 @@ class SaveOrUpdateCaseView(APIView):
         try:
             response = HttpDao.create_or_update_case(request, pk=kwargs['pk'])
             return Response(ResponseStandard.success(
-                data={"api_id": response}
+                data={"case_id": response}
             ))
         except Exception as err:
             return Response(ResponseStandard.failed(msg=str(err)))
@@ -246,3 +246,34 @@ class ApiSnapshotView(AsyncAPIView):
             return Response(ResponseStandard.success())
         except Exception as err:
             return Response(ResponseStandard.failed(msg=str(err)))
+
+
+class CaseListView(mixins.ListModelMixin, viewsets.GenericViewSet):
+
+    serializer_class = CaseSerializers
+    queryset = Case.objects
+    permission_classes = [IsAuthenticated]
+
+    def list(self, request, *args, **kwargs):
+        context = {
+            "request": request,
+        }
+        serializer = CaseSerializers(data=request.query_params, context=context)
+
+        if serializer.is_valid():
+            project = request.query_params.get("project")
+            node = request.query_params.get("node")
+            name = request.query_params.get("name")
+
+            queryset = self.get_queryset()
+            queryset = HttpDao.list_test_case(queryset, node, project, name)
+            page = self.paginate_queryset(queryset)
+            if page is not None:
+                serializer = self.get_serializer(page, many=True)
+                return self.get_paginated_response(serializer.data)
+
+            serializer = self.get_serializer(queryset, many=True)
+
+            return Response(serializer.data)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
