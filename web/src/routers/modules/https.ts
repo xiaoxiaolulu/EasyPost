@@ -40,6 +40,12 @@ const httpsRouter = [{
             component: () => import('@/views/https/plan/index.vue'),
             name: 'plan',
             meta: { title: '测试计划', icon: 'Lightning'  }
+        },{
+            path: '/plan/detail',
+            component: () => import('@/views/https/plan/components/detail.vue'),
+            name: 'planDetail',
+            hidden: true,
+            meta: { title: '计划详情', icon: 'FolderRemove'  }
         },
     ]
 }]

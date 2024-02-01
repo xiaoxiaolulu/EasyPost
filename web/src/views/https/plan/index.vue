@@ -7,7 +7,7 @@
             <el-button
                 type="primary"
                 :icon="Plus"
-                @click="addEnv">
+                @click="addPlan">
               添加计划
             </el-button>
           </el-form-item>
@@ -63,26 +63,25 @@
           @current-change="handlePageChange"
       />
     </div>
-    <add-dialog v-model="isShow" @onChangeDialog="onChangeDialog"/>
-    <edit-dialog v-model="editShow" :rowData="rowData" @onChangeDialog="onChangeDialog"></edit-dialog>
   </div>
 </template>
 
 <script lang="ts" setup>
 import {Plus, Search} from "@element-plus/icons-vue";
 import {ref, reactive} from 'vue'
-import {envList, envDelete} from "@/api/setting";
+import {useRouter} from "vue-router";
+import {envDelete} from "@/api/setting";
 import {parseTime} from "@/utils";
 import {ElMessage, ElMessageBox, ElPagination} from "element-plus";
 import {showErrMessage} from "@/utils/element";
-import addDialog from './components/addDialog.vue'
-import editDialog from './components/editDialog.vue'
 import {planList} from "@/api/http";
 
 const queryParams = reactive({
   name: '',
   page: 1
 })
+
+const router = useRouter()
 
 const loading = ref(false)
 
@@ -98,8 +97,11 @@ const editShow = ref(false);
 
 const rowData = ref({})
 
-const addEnv = () => {
-  isShow.value = true;
+const addPlan = () => {
+  router.push({
+    name: "planDetail",
+    query: {editType: 'save'}
+  });
 };
 
 const editEnv = (row: any) => {
