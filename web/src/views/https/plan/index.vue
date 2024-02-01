@@ -16,7 +16,7 @@
                 :suffix-icon="Search"
                 clearable
                 v-model.trim="queryParams.name"
-                placeholder="请输入环境名称"
+                placeholder="请输入计划名称"
                 @keyup.enter.native="queryList">
             </el-input>
           </el-form-item>

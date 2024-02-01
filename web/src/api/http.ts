@@ -112,3 +112,35 @@ export function getCaseDetail(data: any) {
         data
     })
 }
+
+export function envList(params: any) {
+    return request({
+        url: `/api/env/list`,
+        method: 'get',
+        params
+    })
+}
+//
+// export function envDelete(data: any) {
+//     return request({
+//         url: `/api/env/delete/${data.id}`,
+//         method: 'delete',
+//         data
+//     })
+// }
+//
+// export function envUpdate(data: any) {
+//     return request({
+//         url: `/api/env/update/${data.id}`,
+//         method: 'put',
+//         data
+//     })
+// }
+
+export function planAdd(data: any) {
+    return request({
+        url: '/api/plan/add',
+        method: 'post',
+        data
+    })
+}

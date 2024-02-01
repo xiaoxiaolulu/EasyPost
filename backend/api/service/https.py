@@ -1,15 +1,17 @@
 import json
 from django.core.exceptions import ObjectDoesNotExist
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import (
     status,
     mixins,
-    viewsets
+    viewsets, filters
 )
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from api.dao.https import HttpDao
 from api.emus.treesEnum import TreeType
+from api.filters.plan import PlanFilter
 from api.mixins.async_generics import AsyncAPIView
 from api.models.https import (
     Relation,
@@ -17,10 +19,12 @@ from api.models.https import (
     Case
 )
 from api.mixins.magic import MagicRetrieveApi
+from api.models.plan import Plan
 from api.schema.https import (
     RelationSerializer,
     ApiSerializer, CaseSerializers
 )
+from api.schema.plan import PlanSerializers
 from core.request.http_handler import HttpHandler
 from api.response.fatcory import ResponseStandard
 from utils.trees import (
@@ -277,3 +281,14 @@ class CaseListView(mixins.ListModelMixin, viewsets.GenericViewSet):
             return Response(serializer.data)
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class PlanListViewSet(MagicListAPI): # noqa
+
+    queryset = Plan.objects.all()
+    serializer_class = PlanSerializers
+    permission_classes = [IsAuthenticated]
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
+    filterset_class = PlanFilter  # noqa
+    search_fields = ['name']
+    ordering_fields = ['create_time']

@@ -27,7 +27,7 @@
 <script lang="ts" setup>
 import {ref, reactive, computed} from 'vue'
 import {ElMessage, FormInstance} from "element-plus";
-import {envCreate} from "@/api/setting";
+import {planAdd} from "@/api/http";
 import {showErrMessage} from "@/utils/element";
 
 const propsCxt: any = null
@@ -53,7 +53,14 @@ const isShow = computed({
 
 let form = reactive({
   name: '',
-  desc: '',
+  project: '',
+  cron: '',
+  priority: '',
+  case_list: '',
+  state: '',
+  pass_rate: '',
+  msg_type: '',
+  receiver: '',
 })
 
 const ruleFormRef = ref<FormInstance>()
@@ -66,7 +73,7 @@ const onSureClick = (formName: FormInstance | undefined) => {
   if (!formName) return
   formName.validate(async (valid) => {
     if (valid) {
-      const ret = await envCreate(form)
+      const ret = await planAdd(form)
       const {code, data, msg} = ret.data
       emits('onChangeDialog', true);
       showErrMessage(code.toString(), msg)
