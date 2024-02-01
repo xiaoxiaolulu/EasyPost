@@ -113,9 +113,9 @@ export function getCaseDetail(data: any) {
     })
 }
 
-export function envList(params: any) {
+export function planList(params: any) {
     return request({
-        url: `/api/env/list`,
+        url: `/api/plan/list`,
         method: 'get',
         params
     })

@@ -16,8 +16,7 @@ from api.service.https import (
     DelCaseView,
     CaseDetailView,
     ApiSnapshotView,
-    CaseListView,
-    PlanListViewSet,
+    CaseListView
 )
 from api.service.plan import (
     UpdatePlanStateView,
@@ -25,7 +24,8 @@ from api.service.plan import (
     DelPlanView,
     PlanDetailView,
     SavePlanView,
-    UpdatePlanView
+    UpdatePlanView,
+    PlanListViewSet
 )
 from api.service.project import (
     ProjectListViewSet,
@@ -107,6 +107,7 @@ app_urls = [
     path('plan/detail/<int:pk>', PlanDetailView.as_view()),
     path("plan/list", PlanListViewSet.as_view()),
 
+    # 测试报告
 ]
 
 # Final URL configuration

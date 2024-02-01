@@ -27,8 +27,10 @@
                 element-loading-text="拼命加载中"
                 style="width: 100%">
         <el-table-column type="index" width="55" label="id"></el-table-column>
-        <el-table-column prop="name" label="环境名称"></el-table-column>
-        <el-table-column prop="desc" label="备注"></el-table-column>
+        <el-table-column prop="name" label="测试计划名称"></el-table-column>
+        <el-table-column prop="priority" label="优先级"></el-table-column>
+        <el-table-column prop="cron" label="cron表达式"></el-table-column>
+        <el-table-column prop="state" label="状态"></el-table-column>
         <el-table-column prop="user.username" label="创建者">
           <template #default="scope">
             <div style="margin-inline-end:16px;display:inline">
@@ -75,6 +77,7 @@ import {ElMessage, ElMessageBox, ElPagination} from "element-plus";
 import {showErrMessage} from "@/utils/element";
 import addDialog from './components/addDialog.vue'
 import editDialog from './components/editDialog.vue'
+import {planList} from "@/api/http";
 
 const queryParams = reactive({
   name: '',
@@ -112,13 +115,13 @@ const onChangeDialog = (val: any) => {
 
 const queryList = () => {
   tableLoading.value = true;
-  envList(queryParams).then((response) => {
+  planList(queryParams).then((response) => {
     tableLoading.value = false;
     tableData.value = response.data.results;
     count.value = response.data.count;
   }).catch((error) => {
     console.log(error)
-    ElMessage.error("获取环境列表数据失败;请重试！")
+    ElMessage.error("获取计划列表数据失败;请重试！😿")
   })
 }
 

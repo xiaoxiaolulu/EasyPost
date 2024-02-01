@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment=":construction_worker: 修改部分错误">
-      <change afterPath="$PROJECT_DIR$/../web/src/views/https/plan/components/addDialog.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/src/views/https/plan/components/editDialog.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/dao/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/plan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/schema/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/schema/plan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/service/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/https.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/service/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/plan.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/api/http.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/api/http.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/src/views/https/plan/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/plan/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -387,23 +388,7 @@
       <workItem from="1706169196806" duration="21346000" />
       <workItem from="1706262452393" duration="2389000" />
       <workItem from="1706264876701" duration="16146000" />
-      <workItem from="1706523985951" duration="45929000" />
-    </task>
-    <task id="LOCAL-00185" summary="后端调整">
-      <option name="closed" value="true" />
-      <created>1705549401299</created>
-      <option name="number" value="00185" />
-      <option name="presentableId" value="LOCAL-00185" />
-      <option name="project" value="LOCAL" />
-      <updated>1705549401299</updated>
-    </task>
-    <task id="LOCAL-00186" summary="后端调整">
-      <option name="closed" value="true" />
-      <created>1705561422759</created>
-      <option name="number" value="00186" />
-      <option name="presentableId" value="LOCAL-00186" />
-      <option name="project" value="LOCAL" />
-      <updated>1705561422759</updated>
+      <workItem from="1706523985951" duration="48552000" />
     </task>
     <task id="LOCAL-00187" summary="后端调整">
       <option name="closed" value="true" />
@@ -781,7 +766,23 @@
       <option name="project" value="LOCAL" />
       <updated>1706757116559</updated>
     </task>
-    <option name="localTasksCounter" value="234" />
+    <task id="LOCAL-00234" summary=":construction_worker: 修改部分错误">
+      <option name="closed" value="true" />
+      <created>1706758186233</created>
+      <option name="number" value="00234" />
+      <option name="presentableId" value="LOCAL-00234" />
+      <option name="project" value="LOCAL" />
+      <updated>1706758186233</updated>
+    </task>
+    <task id="LOCAL-00235" summary=":construction_worker: 修改部分错误">
+      <option name="closed" value="true" />
+      <created>1706759152954</created>
+      <option name="number" value="00235" />
+      <option name="presentableId" value="LOCAL-00235" />
+      <option name="project" value="LOCAL" />
+      <updated>1706759152954</updated>
+    </task>
+    <option name="localTasksCounter" value="236" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
