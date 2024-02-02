@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment=":construction_worker: 测试计划">
-      <change afterPath="$PROJECT_DIR$/../web/src/components/no-cron/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/src/components/no-cron/language/cn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/src/components/no-cron/language/en.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/src/components/no-cron/language/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/src/components/no-cron/language/pt.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/main.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/src/views/https/plan/components/detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/plan/components/detail.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -389,23 +382,7 @@
       <workItem from="1706169196806" duration="21346000" />
       <workItem from="1706262452393" duration="2389000" />
       <workItem from="1706264876701" duration="16146000" />
-      <workItem from="1706523985951" duration="51110000" />
-    </task>
-    <task id="LOCAL-00189" summary="后端调整">
-      <option name="closed" value="true" />
-      <created>1705634733516</created>
-      <option name="number" value="00189" />
-      <option name="presentableId" value="LOCAL-00189" />
-      <option name="project" value="LOCAL" />
-      <updated>1705634733516</updated>
-    </task>
-    <task id="LOCAL-00190" summary="后端调整">
-      <option name="closed" value="true" />
-      <created>1705634824235</created>
-      <option name="number" value="00190" />
-      <option name="presentableId" value="LOCAL-00190" />
-      <option name="project" value="LOCAL" />
-      <updated>1705634824235</updated>
+      <workItem from="1706523985951" duration="55778000" />
     </task>
     <task id="LOCAL-00191" summary="后端调整">
       <option name="closed" value="true" />
@@ -783,7 +760,23 @@
       <option name="project" value="LOCAL" />
       <updated>1706771913580</updated>
     </task>
-    <option name="localTasksCounter" value="238" />
+    <task id="LOCAL-00238" summary=":construction_worker: 测试计划">
+      <option name="closed" value="true" />
+      <created>1706776409358</created>
+      <option name="number" value="00238" />
+      <option name="presentableId" value="LOCAL-00238" />
+      <option name="project" value="LOCAL" />
+      <updated>1706776409358</updated>
+    </task>
+    <task id="LOCAL-00239" summary=":construction_worker: 测试计划">
+      <option name="closed" value="true" />
+      <created>1706856966880</created>
+      <option name="number" value="00239" />
+      <option name="presentableId" value="LOCAL-00239" />
+      <option name="project" value="LOCAL" />
+      <updated>1706856966881</updated>
+    </task>
+    <option name="localTasksCounter" value="240" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

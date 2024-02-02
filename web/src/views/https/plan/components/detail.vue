@@ -36,6 +36,20 @@
                             size="small"
                             placeholder="请输入用例名称"></el-input>
                 </el-form-item>
+                <el-form-item label="所属项目" :required="true" prop="project">
+                  <el-select
+                      class="selectOpt" v-model="state.form.project" placeholder="请选择"
+                      :popper-append-to-body="false"
+                      style="width: 150px;"
+                  >
+                    <el-option
+                        v-for="item in projectOption"
+                        :key="item.value"
+                        :label="item.label"
+                        :value="item.value">
+                    </el-option>
+                  </el-select>
+                </el-form-item>
                 <el-form-item label="优先级：" prop="priority" :required="true">
                   <el-select v-model="state.form.priority" filterable placeholder="请选择接口优先级" size="small">
                     <el-option
@@ -111,7 +125,7 @@
                     <el-icon style="margin-right: 4px">
                       <plus/>
                     </el-icon>
-                    添加步骤
+                    添加用例
                   </el-button>
                   <template #dropdown>
                     <el-dropdown-menu>
@@ -150,7 +164,8 @@ import {Back, Odometer} from "@element-plus/icons-vue";
 import {useRoute, useRouter} from "vue-router";
 import {computed, onMounted, reactive, ref, watch, nextTick} from "vue";
 import {ElMessage, FormInstance} from "element-plus";
-import {saveCaseOrUpdate, runCase, getCaseDetail, getHttpDetail} from "@/api/http";
+import {saveCaseOrUpdate, getCaseDetail} from "@/api/http";
+import {projectList} from "@/api/project";
 import {showErrMessage} from "@/utils/element";
 import {getStepTypesByUse, getStepTypeInfo, parseTime} from '@/utils/index'
 import Step from "@/views/https/plan/components/step.vue";
@@ -173,7 +188,8 @@ const createForm = () => {
     cron: '',
     priority: '',
     case_data: [],
-    remarks: ''
+    remarks: '',
+    project: ''
   }
 }
 
@@ -197,6 +213,25 @@ const priority = ref([{
 const stepControllerRef = ref()
 
 const selectCaseData = ref()
+
+const projectOption = ref([])
+
+
+const initProjectList = () => {
+  projectList({}).then((response) => {
+    let res = response.data.results
+    for (let i = 0; i < res.length; i++) {
+      projectOption.value.push({
+        "label": res[i]["name"],
+        "value": res[i]["id"],
+        "avatar": res[i]["avatar"]
+      })
+    }
+  }).catch((error) => {
+  })
+}
+
+initProjectList()
 
 const state = reactive({
   optTypes: getStepTypesByUse("case"),
@@ -233,8 +268,7 @@ const onSureClick = (formName: FormInstance | undefined) => {
           desc: state.form.remarks,
           priority: state.form.remarks,
           case_data: tableData,
-          directory_id: route.query.node,
-          project: route.query.project
+          project: state.form.project
         }
         const ret = await saveCaseOrUpdate(caseData)
         const {code, data, msg} = ret.data
