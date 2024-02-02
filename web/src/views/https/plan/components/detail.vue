@@ -164,7 +164,7 @@ import {Back, Odometer} from "@element-plus/icons-vue";
 import {useRoute, useRouter} from "vue-router";
 import {computed, onMounted, reactive, ref, watch, nextTick} from "vue";
 import {ElMessage, FormInstance} from "element-plus";
-import {saveCaseOrUpdate, getCaseDetail} from "@/api/http";
+import {planAdd, getCaseDetail} from "@/api/http";
 import {projectList} from "@/api/project";
 import {showErrMessage} from "@/utils/element";
 import {getStepTypesByUse, getStepTypeInfo, parseTime} from '@/utils/index'
@@ -187,7 +187,7 @@ const createForm = () => {
     name: '',
     cron: '',
     priority: '',
-    case_data: [],
+    case_list: [],
     remarks: '',
     project: ''
   }
@@ -265,12 +265,15 @@ const onSureClick = (formName: FormInstance | undefined) => {
         let caseData = {
           id: state.case_id,
           name: state.form.name,
-          desc: state.form.remarks,
-          priority: state.form.remarks,
-          case_data: tableData,
-          project: state.form.project
+          cron: state.form.cron,
+          priority: state.form.priority,
+          case_list: state.form.case_list,
+          project: state.form.project,
+          pass_rate: "100%",
+          msg_type: 1,
+          receiver: ''
         }
-        const ret = await saveCaseOrUpdate(caseData)
+        const ret = await planAdd(caseData)
         const {code, data, msg} = ret.data
         state.case_id = data.case_id
         showErrMessage(code.toString(), msg)
@@ -342,6 +345,7 @@ const changeAction = (data) => {
 const setStepData = (data) => {
   for (let i = 0; i < data.length; i++) {
     tableData.push(data[i])
+    state.form.case_list.push(data[i]['id'])
   }
 }
 

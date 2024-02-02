@@ -2,6 +2,7 @@ from typing import Any
 from channels.db import database_sync_to_async
 from django.forms import model_to_dict
 from api.dao.https import HttpDao
+from api.emus.PlanEnum import PlanType
 from api.models.plan import Plan
 from api.models.project import Project
 from api.response.fatcory import ResponseStandard
@@ -13,21 +14,14 @@ from utils.logger import logger
 class PlanDao:
 
     @staticmethod
-    def parser_plan_data(request: Any, pk=None):
+    def parser_plan_data(request: Any):
         api = HandelTestData(request.data)
-
-        if pk:
-            update_obj = Plan.objects.get(id=pk)
-            project = update_obj.project
-        else:
-            project = Project.objects.get(id=api.project)
 
         request_body = {
             'name': api.name,
-            'project': project,
+            'project': Project.objects.get(id=api.project),
             'cron': api.cron,
             'priority': api.priority,
-            'state': api.state,
             'case_list': api.case_list,
             'pass_rate': api.pass_rate,
             'msg_type': api.msg_type,
@@ -44,16 +38,16 @@ class PlanDao:
 
     @classmethod
     @database_sync_to_async
-    def create_plan(cls, request: Any, pk: int):
+    def create_plan(cls, request: Any):
         """创建测试计划，并根据计划信息添加或移除调度任务。"""
 
         try:
-            request_body = cls.parser_plan_data(request, pk=pk)
-
+            request_body = cls.parser_plan_data(request)
             plan = Plan.objects.create(**request_body)
             Scheduler.add_test_plan(
                 plan.case_list, plan.id, plan.cron
             )
+            plan.state = PlanType.START
 
         except Exception as e:
             logger.debug(

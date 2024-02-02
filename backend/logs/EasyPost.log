@@ -681,3 +681,134 @@ Quit the server with CTRL-BREAK.
             
 2024-02-02 14:52:45 [Thread-2 (process_request_thread)]-[https.create_or_update_case:316]-[DEBUG]:🏓更新用例数据失败 -> Project matching query does not exist.
 2024-02-02 14:52:51 [Thread-2 (process_request_thread)]-[https.create_or_update_case:316]-[DEBUG]:🏓更新用例数据失败 -> Project matching query does not exist.
+2024-02-02 15:06:24 [Thread-4 (process_request_thread)]-[https.create_or_update_case:316]-[DEBUG]:🏓更新用例数据失败 -> Project matching query does not exist.
+2024-02-02 15:54:09 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-02-02 15:54:09 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-02-02 15:54:09 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-02-02 15:54:09 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-02-02 15:54:09 [django-main-thread]-[runserver.on_bind:188]-[INFO]:February 02, 2024 - 15:54:09
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-02-02 15:54:27 [Thread-1 (process_request_thread)]-[plan.create_plan:59]-[DEBUG]:🎯编辑测试计划数据失败 -> (1048, "Column 'cron' cannot be null")
+2024-02-02 15:56:22 [Thread-1 (process_request_thread)]-[plan.create_plan:59]-[DEBUG]:🎯编辑测试计划数据失败 -> Wrong number of fields; got 7, expected 5
+2024-02-02 16:01:23 [Thread-1 (process_request_thread)]-[plan.create_plan:59]-[DEBUG]:🎯编辑测试计划数据失败 -> Wrong number of fields; got 7, expected 5
+2024-02-02 16:04:27 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-02-02 16:04:28 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-02-02 16:04:28 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-02-02 16:04:28 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-02-02 16:04:28 [django-main-thread]-[runserver.on_bind:188]-[INFO]:February 02, 2024 - 16:04:28
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-02-02 16:05:20 [Thread-1 (process_request_thread)]-[plan.create_plan:61]-[DEBUG]:🎯编辑测试计划数据失败 -> Wrong number of fields; got 7, expected 5
+2024-02-02 16:07:37 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-02-02 16:07:37 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-02-02 16:07:37 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-02-02 16:07:37 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-02-02 16:07:37 [django-main-thread]-[runserver.on_bind:188]-[INFO]:February 02, 2024 - 16:07:37
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-02-02 16:07:52 [Thread-1 (process_request_thread)]-[plan.create_plan:54]-[DEBUG]:🎯编辑测试计划数据失败 -> Wrong number of fields; got 7, expected 5
+2024-02-02 16:08:54 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-02-02 16:08:55 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-02-02 16:08:55 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-02-02 16:08:55 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-02-02 16:08:55 [django-main-thread]-[runserver.on_bind:188]-[INFO]:February 02, 2024 - 16:08:55
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-02-02 16:08:55 [Thread-1 (process_request_thread)]-[plan.create_plan:45]-[DEBUG]:测试
+2024-02-02 16:08:55 [Thread-1 (process_request_thread)]-[plan.create_plan:47]-[DEBUG]:测试
+2024-02-02 16:08:55 [Thread-1 (process_request_thread)]-[plan.create_plan:55]-[DEBUG]:🎯编辑测试计划数据失败 -> Wrong number of fields; got 7, expected 5
+2024-02-02 16:09:28 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-02-02 16:09:29 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-02-02 16:09:29 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-02-02 16:09:29 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-02-02 16:09:29 [django-main-thread]-[runserver.on_bind:188]-[INFO]:February 02, 2024 - 16:09:29
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-02-02 16:16:36 [Thread-1 (process_request_thread)]-[base._real_add_job:895]-[INFO]:Added job "%s" to job store "%s"
+2024-02-02 16:16:36 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-02-02 16:16:36 [APScheduler]-[base._process_jobs:1034]-[DEBUG]:Next wakeup is due at %s (in %f seconds)
+2024-02-02 16:16:41 [Thread-1 (process_request_thread)]-[base._real_add_job:895]-[INFO]:Added job "%s" to job store "%s"
+2024-02-02 16:16:41 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-02-02 16:16:41 [APScheduler]-[base._process_jobs:1034]-[DEBUG]:Next wakeup is due at %s (in %f seconds)
+2024-02-02 16:16:41 [Thread-1 (process_request_thread)]-[base._real_add_job:895]-[INFO]:Added job "%s" to job store "%s"
+2024-02-02 16:16:41 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-02-02 16:16:41 [APScheduler]-[base._process_jobs:1034]-[DEBUG]:Next wakeup is due at %s (in %f seconds)
+2024-02-02 16:16:41 [Thread-1 (process_request_thread)]-[base._real_add_job:895]-[INFO]:Added job "%s" to job store "%s"
+2024-02-02 16:16:41 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-02-02 16:16:41 [APScheduler]-[base._process_jobs:1034]-[DEBUG]:Next wakeup is due at %s (in %f seconds)
+2024-02-02 16:16:41 [Thread-1 (process_request_thread)]-[base._real_add_job:895]-[INFO]:Added job "%s" to job store "%s"
+2024-02-02 16:16:41 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-02-02 16:16:41 [APScheduler]-[base._process_jobs:1034]-[DEBUG]:Next wakeup is due at %s (in %f seconds)
+2024-02-02 16:16:41 [Thread-1 (process_request_thread)]-[base._real_add_job:895]-[INFO]:Added job "%s" to job store "%s"
+2024-02-02 16:16:41 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-02-02 16:16:41 [APScheduler]-[base._process_jobs:1034]-[DEBUG]:Next wakeup is due at %s (in %f seconds)
+2024-02-02 16:16:42 [Thread-1 (process_request_thread)]-[base._real_add_job:895]-[INFO]:Added job "%s" to job store "%s"
+2024-02-02 16:16:42 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-02-02 16:16:42 [APScheduler]-[base._process_jobs:1034]-[DEBUG]:Next wakeup is due at %s (in %f seconds)
+2024-02-02 16:17:00 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-02-02 16:17:00 [APScheduler]-[base._process_jobs:1034]-[DEBUG]:Next wakeup is due at %s (in %f seconds)
+2024-02-02 16:18:00 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-02-02 16:18:00 [APScheduler]-[base._process_jobs:1034]-[DEBUG]:Next wakeup is due at %s (in %f seconds)
+2024-02-02 16:19:00 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-02-02 16:19:00 [APScheduler]-[base._process_jobs:1034]-[DEBUG]:Next wakeup is due at %s (in %f seconds)
+2024-02-02 16:20:00 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-02-02 16:20:00 [APScheduler]-[base._process_jobs:1034]-[DEBUG]:Next wakeup is due at %s (in %f seconds)
+2024-02-02 16:21:00 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-02-02 16:21:00 [APScheduler]-[base._process_jobs:1034]-[DEBUG]:Next wakeup is due at %s (in %f seconds)
+2024-02-02 16:22:00 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-02-02 16:22:00 [APScheduler]-[base._process_jobs:1034]-[DEBUG]:Next wakeup is due at %s (in %f seconds)
+2024-02-02 16:23:00 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-02-02 16:23:00 [APScheduler]-[base._process_jobs:1034]-[DEBUG]:Next wakeup is due at %s (in %f seconds)
+2024-02-02 16:24:00 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-02-02 16:24:00 [APScheduler]-[base._process_jobs:1034]-[DEBUG]:Next wakeup is due at %s (in %f seconds)
