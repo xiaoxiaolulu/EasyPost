@@ -25,7 +25,10 @@
       <div class="table-inner">
         <el-table
             v-loading="loading"
-            :data="tableData" style="width: 100%;height: 100%" border>
+            :data="tableData" style="width: 100%;height: 100%"
+            @selection-change="handleSelectionChange"
+            border>
+          <el-table-column type="selection" width="55" />
           <el-table-column type="index" label="序号" width="80" fixed/>
           <el-table-column prop="name" label="用例名称" align="center" width="200" fixed>
           </el-table-column>
@@ -105,6 +108,10 @@ const methods = reactive([
   { id: 2, type: 'warning', name: 'PUT' },
   { id: 3, type: 'danger', name: 'DELETE' }
 ])
+
+const selectionData = ref()
+
+const selectionShow = ref(false)
 
 const reset = (formEl: FormInstance | undefined) => {
   loading.value = true
@@ -211,6 +218,26 @@ const handleCurrentChange = (val: number) => {
 }
 
 
+const handleSelectionChange = (val: any) => {
+  selectionData.value = val
+}
+
+const getSelectionData = () => {
+  return selectionData.value
+}
+
+const setSelectionData = (data: any) => {
+  return selectionShow.value = data
+}
+
+const showList = () => {
+  if(selectionShow){
+    queryList()
+  }
+}
+
+showList()
+
 onMounted(() => {
   setTimeout(() => {
     loading.value = false
@@ -220,7 +247,9 @@ onMounted(() => {
 defineExpose({
   getList,
   setCurrentProject,
-  queryList
+  queryList,
+  getSelectionData,
+  setSelectionData
 })
 </script>
 <style lang="scss" scoped>

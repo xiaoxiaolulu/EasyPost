@@ -96,18 +96,6 @@
                       ></span>
                     </template>
                   </el-table-column>
-                  <el-table-column width="80">
-                    <template #default="scope">
-                      <div>
-                        <div>
-                          <span :class="`opblock-${scope.row.method.toLowerCase()}`">
-                              {{ scope.row.method }}
-                          </span>
-
-                        </div>
-                      </div>
-                    </template>
-                  </el-table-column>
                   <el-table-column>
                     <template #default="scope">
                       <div>
@@ -146,7 +134,7 @@
                 ref="stepControllerRef"
                 use_type="case"
                 style="margin-bottom: 10px"
-                v-model="state.form.step_data"
+                v-model="state.form.case_data"
                 @change="changeAction"
             >
             </step>
@@ -158,16 +146,15 @@
 </template>
 
 <script setup lang="ts">
-import {ArrowDown, Switch, Back, Odometer} from "@element-plus/icons-vue";
+import {Back, Odometer} from "@element-plus/icons-vue";
 import {useRoute, useRouter} from "vue-router";
 import {computed, onMounted, reactive, ref, watch, nextTick} from "vue";
 import {ElMessage, FormInstance} from "element-plus";
 import {saveCaseOrUpdate, runCase, getCaseDetail, getHttpDetail} from "@/api/http";
 import {showErrMessage} from "@/utils/element";
 import {getStepTypesByUse, getStepTypeInfo, parseTime} from '@/utils/index'
-import Step from "@/views/https/case/components/step.vue";
+import Step from "@/views/https/plan/components/step.vue";
 import Sortable from "sortablejs"
-import NoVue3Cron from "@/components/no-cron/index.vue";
 import noCron from "@/components/no-cron/index.vue";
 
 const route = useRoute()
@@ -185,7 +172,8 @@ const createForm = () => {
     name: '',
     cron: '',
     priority: '',
-    step_data: []
+    case_data: [],
+    remarks: ''
   }
 }
 
@@ -208,7 +196,7 @@ const priority = ref([{
 
 const stepControllerRef = ref()
 
-const selectApiData = ref()
+const selectCaseData = ref()
 
 const state = reactive({
   optTypes: getStepTypesByUse("case"),
@@ -244,7 +232,7 @@ const onSureClick = (formName: FormInstance | undefined) => {
           name: state.form.name,
           desc: state.form.remarks,
           priority: state.form.remarks,
-          step_data: tableData,
+          case_data: tableData,
           directory_id: route.query.node,
           project: route.query.project
         }
@@ -313,8 +301,8 @@ const initDropTable = () => {
 }
 
 const changeAction = (data) => {
-  selectApiData.value = data
-  setStepData(data)
+  selectCaseData.value = data
+  setStepData(eval(data))
 }
 
 const setStepData = (data) => {
@@ -426,22 +414,6 @@ defineExpose({
 .custom-table .cell {
   font-size: 12px;
   color: #7a8b9a;
-}
-
-.opblock-get{
-  color: #122de1;
-}
-
-.opblock-post {
-  color: #49cc90;
-}
-
-.opblock-put {
-  color: #e7a20c;
-}
-
-.opblock-delete {
-  color: #f30808;
 }
 
 .opblock-summary-description {

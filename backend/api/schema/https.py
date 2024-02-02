@@ -52,3 +52,6 @@ class CaseSerializers(serializers.ModelSerializer):
     class Meta:
         model = Case
         fields = "__all__"
+        read_only_fields = ('name', 'project', 'directory_id', 'priority',
+                            'rerun', 'threads', 'user', 'create_time',
+                            'update_time', 'desc', 'step')
