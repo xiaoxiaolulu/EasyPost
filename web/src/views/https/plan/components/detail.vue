@@ -164,7 +164,7 @@ import {Back, Odometer} from "@element-plus/icons-vue";
 import {useRoute, useRouter} from "vue-router";
 import {computed, onMounted, reactive, ref, watch, nextTick} from "vue";
 import {ElMessage, FormInstance} from "element-plus";
-import {planAdd, getCaseDetail} from "@/api/http";
+import {savePlanOrUpdate, getCaseDetail} from "@/api/http";
 import {projectList} from "@/api/project";
 import {showErrMessage} from "@/utils/element";
 import {getStepTypesByUse, getStepTypeInfo, parseTime} from '@/utils/index'
@@ -273,7 +273,7 @@ const onSureClick = (formName: FormInstance | undefined) => {
           msg_type: 1,
           receiver: ''
         }
-        const ret = await planAdd(caseData)
+        const ret = await savePlanOrUpdate(caseData)
         const {code, data, msg} = ret.data
         state.case_id = data.case_id
         showErrMessage(code.toString(), msg)
@@ -465,11 +465,13 @@ defineExpose({
   background: #e4e4ee !important;
   opacity: 0.5 !important;
 }
+
 // 停靠
 .drop-ghostClass {
   background: #C0C0C0 !important;
   opacity: 0.5 !important;
 }
+
 // 选择
 .drop-chosenClass:hover > td {
   background: #e4e4ee !important;

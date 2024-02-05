@@ -137,9 +137,9 @@ export function planList(params: any) {
 //     })
 // }
 
-export function planAdd(data: any) {
+export function savePlanOrUpdate(data: any) {
     return request({
-        url: '/api/plan/add',
+        url: `/api/plan/SaveOrUpdate/${data.id}`,
         method: 'post',
         data
     })

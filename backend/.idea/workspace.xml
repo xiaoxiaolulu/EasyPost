@@ -6,6 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment=":construction_worker: 测试计划">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/https.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/plan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/service/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/plan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/engine/log.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/engine/log.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/engine/session_runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/engine/session_runner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/api/http.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/api/http.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/https/api/components/detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/api/components/detail.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/src/views/https/plan/components/detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/plan/components/detail.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +105,7 @@
     "node.js.selected.package.stylelint": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
+    "settings.editor.selected.configurable": "File.Encoding",
     "ts.external.directory.path": "D:\\Program Files\\JetBrains\\PyCharm 2023.1.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   },
@@ -122,28 +132,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Django Server.backend">
-    <configuration name="__init__ (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="backend" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api/dao" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/dao/__init__.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="__init__ (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -210,6 +198,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -260,17 +270,17 @@
       <item itemvalue="Django Server.backend" />
       <item itemvalue="Python.event_manager" />
       <item itemvalue="Python.test" />
-      <item itemvalue="Python.__init__ (1)" />
+      <item itemvalue="Python.test (1)" />
       <item itemvalue="Python.__init__ (2)" />
       <item itemvalue="Python.__init__" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test (1)" />
         <item itemvalue="Python.__init__ (2)" />
         <item itemvalue="Python.__init__" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.event_manager" />
-        <item itemvalue="Python.__init__ (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -382,23 +392,7 @@
       <workItem from="1706169196806" duration="21346000" />
       <workItem from="1706262452393" duration="2389000" />
       <workItem from="1706264876701" duration="16146000" />
-      <workItem from="1706523985951" duration="55778000" />
-    </task>
-    <task id="LOCAL-00191" summary="后端调整">
-      <option name="closed" value="true" />
-      <created>1705634995444</created>
-      <option name="number" value="00191" />
-      <option name="presentableId" value="LOCAL-00191" />
-      <option name="project" value="LOCAL" />
-      <updated>1705634995444</updated>
-    </task>
-    <task id="LOCAL-00192" summary="后端调整">
-      <option name="closed" value="true" />
-      <created>1705652116376</created>
-      <option name="number" value="00192" />
-      <option name="presentableId" value="LOCAL-00192" />
-      <option name="project" value="LOCAL" />
-      <updated>1705652116376</updated>
+      <workItem from="1706523985951" duration="65441000" />
     </task>
     <task id="LOCAL-00193" summary="后端调整">
       <option name="closed" value="true" />
@@ -776,7 +770,23 @@
       <option name="project" value="LOCAL" />
       <updated>1706856966881</updated>
     </task>
-    <option name="localTasksCounter" value="240" />
+    <task id="LOCAL-00240" summary=":construction_worker: 测试计划">
+      <option name="closed" value="true" />
+      <created>1706857729310</created>
+      <option name="number" value="00240" />
+      <option name="presentableId" value="LOCAL-00240" />
+      <option name="project" value="LOCAL" />
+      <updated>1706857729310</updated>
+    </task>
+    <task id="LOCAL-00241" summary=":construction_worker: 测试计划">
+      <option name="closed" value="true" />
+      <created>1706862290467</created>
+      <option name="number" value="00241" />
+      <option name="presentableId" value="LOCAL-00241" />
+      <option name="project" value="LOCAL" />
+      <updated>1706862290467</updated>
+    </task>
+    <option name="localTasksCounter" value="242" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -857,7 +867,7 @@
     <SUITE FILE_PATH="coverage/backend$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1706695021907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
     <SUITE FILE_PATH="coverage/backend$trees.coverage" NAME="trees Coverage Results" MODIFIED="1701767218934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/backend$test.coverage" NAME="test Coverage Results" MODIFIED="1706681056646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/events" />
-    <SUITE FILE_PATH="coverage/backend$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1701755585849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/backend$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1707014408689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/backend$async_mixins.coverage" NAME="async_mixins Coverage Results" MODIFIED="1705914322987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/mixins" />
   </component>
 </project>

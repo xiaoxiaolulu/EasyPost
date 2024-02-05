@@ -64,7 +64,7 @@
                             placeholder="请输入接口名称"></el-input>
                 </el-form-item>
                 <el-form-item label="状态" prop="status" :required="true" >
-                  <el-select v-model="ruleForm.status" filterable placeholder="请选择接口当前状态" size="small">
+                  <el-select v-model="ruleForm.status" filterable placeholder="请选择接口当前状态" size="small" style="width: 100px;">
                     <template #prefix>
                       <span :class="`${statusClass}`"></span>
                     </template>
@@ -79,7 +79,7 @@
                   </el-select>
                 </el-form-item>
                 <el-form-item label="优先级" prop="priority" :required="true" >
-                  <el-select v-model="ruleForm.priority" filterable placeholder="请选择接口优先级" size="small">
+                  <el-select v-model="ruleForm.priority" filterable placeholder="请选择接口优先级" size="small" style="width: 100px;">
                     <el-option
                         v-for="item in priority"
                         :key="item.value"
@@ -632,9 +632,9 @@ watch(() => ruleForm.status, (newVal, oldVal) => {
 })
 
 
-window.setInterval(() => {
-  setTimeout(Snapshot, 0)
-}, 1000)
+// window.setInterval(() => {
+//   setTimeout(Snapshot, 0)
+// }, 1000)
 
 </script>
 <style lang="scss">

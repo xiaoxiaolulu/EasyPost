@@ -1,5 +1,5 @@
 from api.response.fatcory import ResponseStandard
-from core.engine.session_runner import run_test
+from core.engine.session_runner import run_test, run_api
 
 if __name__ == '__main__':
     # 测试数据(详细结构说明看下一节)
@@ -173,7 +173,8 @@ if __name__ == '__main__':
     #         'actual': 'http://httpbin.org/post',
     #         'expect': '$.url'}]
     # }
-    result = run_test(env_config=config, case_data=case_data, debug=False)
+    # result = run_test(env_config=config, case_data=case_data, debug=False)
+    result = run_api(api_data={'mode': 'normal', 'title': '33333', 'interface': {'url': 'http://httpbin.org/post', 'name': '33333', 'method': 'POST'}, 'headers': {}, 'request': {'data': {}}, 'setup_script': '', 'teardown_script': '', 'extract': {}, 'validators': []})
     import json
 
     r = json.dumps(ResponseStandard.encode_json(result), ensure_ascii=False)

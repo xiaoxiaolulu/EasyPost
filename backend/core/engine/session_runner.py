@@ -4,7 +4,7 @@ from typing import Any
 from core.engine.env import db  # noqa
 from core.engine.generate import GenerateCase
 from core.engine.runner import TestRunner
-
+from utils.logger import logger
 
 try:
     global_func = importlib.import_module('global_func')
@@ -59,7 +59,9 @@ def run_test(case_data, env_config={}, tester='测试员', thread_count=1, debug
 def run_api(api_data, tester='测试员', thread_count=1) -> tuple[Any, dict[Any, Any]] | Any: # noqa
     global result # noqa
     # 生成测试用例
+    logger.debug("测试")
     suite = GenerateCase().data_to_suite(api_data)
+    logger.debug(str(suite))
     # 运行测试用例
     runner = TestRunner(suite=suite, tester=tester)
     result = runner.run(thread_count=thread_count)
