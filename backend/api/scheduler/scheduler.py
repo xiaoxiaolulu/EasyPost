@@ -1,11 +1,12 @@
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.cron import CronTrigger
 from api.dao.https import HttpDao
+from api.scheduler.base import BaseScheduler
 from config.settings import TIME_ZONE
 from utils.logger import logger as logging
 
 
-class Scheduler(object):
+class Scheduler(BaseScheduler):
 
     scheduler = BackgroundScheduler(timezone=TIME_ZONE)
 
