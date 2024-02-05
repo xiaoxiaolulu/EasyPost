@@ -6,6 +6,29 @@ from config.settings import TIME_ZONE
 from utils.logger import logger as logging
 
 
+class Trigger(CronTrigger):
+
+    @classmethod
+    def from_crontab(cls, expr, timezone=None):
+        """
+        Create a :class:`~CronTrigger` from a standard crontab expression.
+        """
+        values = expr.split()
+        if len(values) < 0:
+            raise ValueError('The parameter was incorrectly obtained, and the field number was 0')
+
+        return cls(
+            second=values[0],
+            minute=values[1],
+            hour=values[2],
+            day=values[3],
+            month=values[4],
+            day_of_week=values[5],
+            year=values[6],
+            timezone=timezone
+        )
+
+
 class Scheduler(BaseScheduler):
 
     scheduler = BackgroundScheduler(timezone=TIME_ZONE)
@@ -25,7 +48,7 @@ class Scheduler(BaseScheduler):
         return cls.scheduler.add_job(
             func=HttpDao.run_test_suite,
             args=(case_list, ),
-            trigger=CronTrigger.from_crontab(cron),
+            trigger=Trigger.from_crontab(cron),
             id=str(plan_id)
         )
 

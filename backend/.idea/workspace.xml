@@ -6,17 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment=":construction_worker: 测试计划">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/dao/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/https.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/dao/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/plan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/service/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/plan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/engine/log.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/engine/log.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/engine/session_runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/engine/session_runner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/scheduler/scheduler.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/scheduler/scheduler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/api/http.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/api/http.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/https/api/components/detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/api/components/detail.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/https/plan/components/detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/plan/components/detail.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +85,6 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/86135/Desktop/pity",
@@ -392,23 +382,7 @@
       <workItem from="1706169196806" duration="21346000" />
       <workItem from="1706262452393" duration="2389000" />
       <workItem from="1706264876701" duration="16146000" />
-      <workItem from="1706523985951" duration="65441000" />
-    </task>
-    <task id="LOCAL-00193" summary="后端调整">
-      <option name="closed" value="true" />
-      <created>1705654410086</created>
-      <option name="number" value="00193" />
-      <option name="presentableId" value="LOCAL-00193" />
-      <option name="project" value="LOCAL" />
-      <updated>1705654410086</updated>
-    </task>
-    <task id="LOCAL-00194" summary="后端调整">
-      <option name="closed" value="true" />
-      <created>1705654771905</created>
-      <option name="number" value="00194" />
-      <option name="presentableId" value="LOCAL-00194" />
-      <option name="project" value="LOCAL" />
-      <updated>1705654771905</updated>
+      <workItem from="1706523985951" duration="71948000" />
     </task>
     <task id="LOCAL-00195" summary="后端调整">
       <option name="closed" value="true" />
@@ -786,7 +760,23 @@
       <option name="project" value="LOCAL" />
       <updated>1706862290467</updated>
     </task>
-    <option name="localTasksCounter" value="242" />
+    <task id="LOCAL-00242" summary=":construction_worker: 测试计划">
+      <option name="closed" value="true" />
+      <created>1707115173419</created>
+      <option name="number" value="00242" />
+      <option name="presentableId" value="LOCAL-00242" />
+      <option name="project" value="LOCAL" />
+      <updated>1707115173419</updated>
+    </task>
+    <task id="LOCAL-00243" summary=":construction_worker: 测试计划">
+      <option name="closed" value="true" />
+      <created>1707120291869</created>
+      <option name="number" value="00243" />
+      <option name="presentableId" value="LOCAL-00243" />
+      <option name="project" value="LOCAL" />
+      <updated>1707120291869</updated>
+    </task>
+    <option name="localTasksCounter" value="244" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
