@@ -1,3 +1,62 @@
+.pageHeaderContent{
+  display: flex;
+}
+
+.avatar{
+  flex: 0 1 72px;
+  margin-bottom: 8px
+}
+
+.avatar-lg {
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  border-radius: 50%;
+}
+
+.content {
+  position: relative;
+  top: 4px;
+  flex: 1 1 auto;
+  margin-left: 24px;
+  line-height: 22px;
+}
+
+.contentTitle{
+  margin-bottom: 12px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.description {
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+.extraContent {
+  zoom: 1;
+  float: right;
+  white-space: nowrap;
+}
+
+.statItem {
+  position: relative;
+  display: inline-block;
+  padding: 0 32px;
+}
+
+.statistic {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 14px;
+  line-height: 1.5714285714285714;
+  list-style: none;
+  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+}
+
 .personal {
   .name {
     margin-top: 15px;
@@ -7,6 +66,7 @@
   }
   .description {
     margin-top: 8px;
+    font-size: 13px;
   }
   .list {
     margin-top: 18px;
@@ -75,4 +135,39 @@
   padding: 16px;
   box-sizing: border-box;
   font-size: 14px;
+}
+
+.user-statistics {
+  display: flex;
+  padding-left: 50px;
+
+  :deep(.el-card__body) {
+    padding: 8px;
+  }
+
+  .user-statistics-card {
+    width: auto;
+    margin: 0 10px;
+    min-width: 100px;
+
+    .statistics-number {
+      font-size: 24px;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .statistics-comparison {
+      padding-left: 10px;
+      padding-top: 6px;
+      color: #0cbb52;
+
+      .statistics-comparison__text {
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+.font12 {
+  font-size: 12px!important;
 }

@@ -5,4 +5,3 @@ from api.models import configuration
 from api.models import plan
 from api.models import https
 from api.models import report
-

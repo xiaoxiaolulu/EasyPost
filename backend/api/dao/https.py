@@ -7,8 +7,7 @@ from typing import (
 from channels.db import database_sync_to_async
 from django.db.models import Q
 from django.forms import model_to_dict
-
-from api.dao.report import ResportDao
+from api.dao.report import ReportDao
 from api.emus import treesEnum
 from api.models.https import (
     Relation,
@@ -462,7 +461,7 @@ class HttpDao:
                 f"{json.dumps(result, indent=4, ensure_ascii=False)}\n"
                 f"--------  response info ----------\n"
             )
-            ResportDao.create_report(
+            ReportDao.create_report(
                 plan_name=report_name,
                 result_list=result
             )

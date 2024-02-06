@@ -6,7 +6,7 @@ from api.models.report import (
 from utils.logger import logger
 
 
-class ResportDao:
+class ReportDao:
 
     """
     测试报告详情
