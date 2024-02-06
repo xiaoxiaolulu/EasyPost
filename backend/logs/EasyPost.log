@@ -31609,3 +31609,161 @@ Quit the server with CTRL-BREAK.
 }
 --------  response info ----------
 
+2024-02-06 14:22:41 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-02-06 14:22:42 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-02-06 14:22:42 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-02-06 14:22:42 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-02-06 14:22:42 [django-main-thread]-[runserver.on_bind:188]-[INFO]:February 06, 2024 - 14:22:42
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-02-06 14:24:31 [Thread-1 (process_request_thread)]-[base._real_add_job:895]-[INFO]:Added job "%s" to job store "%s"
+2024-02-06 14:24:31 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-02-06 14:24:31 [APScheduler]-[base._process_jobs:1034]-[DEBUG]:Next wakeup is due at %s (in %f seconds)
+2024-02-06 14:24:33 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-02-06 14:24:33 [APScheduler]-[base._process_jobs:1034]-[DEBUG]:Next wakeup is due at %s (in %f seconds)
+2024-02-06 14:24:33 [ThreadPoolExecutor-1_0]-[https.run_test_suite:460]-[DEBUG]:--------  response info ----------
+{
+    "class_list": [
+        {
+            "all": 1,
+            "success": 1,
+            "fail": 0,
+            "error": 0,
+            "cases": [
+                {
+                    "name": "计划测试",
+                    "log_data": [
+                        "【INFO】 |: 开始执行用例：【计划测试】\n",
+                        "【INFO】 |: 强制等待:0秒\n",
+                        "【INFO】 |: 当前运行环境\n临时变量：\n全局变量：\n",
+                        "【INFO】 |: 执行前置脚本\n",
+                        "【INFO】 |: 发送请求[POST]:http://httpbin.org/post：\n",
+                        "【DEBUG】 |: 请求头：{\n  \"User-Agent\": \"python-requests/2.31.0\",\n  \"Accept-Encoding\": \"gzip, deflate, br\",\n  \"Accept\": \"*/*\",\n  \"Connection\": \"keep-alive\",\n  \"Content-Length\": \"0\"\n}\n",
+                        "【DEBUG】 |: 请求体：\n",
+                        "【DEBUG】 |: 响应头：{\n  \"Connection\": \"close\",\n  \"Content-Length\": \"403\",\n  \"Access-Control-Allow-Credentials\": \"true\",\n  \"Access-Control-Allow-Origin\": \"*\",\n  \"Content-Type\": \"application/json\",\n  \"Date\": \"Tue, 06 Feb 2024 06:26:05 GMT\",\n  \"Server\": \"gunicorn/19.9.0\"\n}\n",
+                        "【DEBUG】 |: 响应体：{\n  \"args\": {},\n  \"data\": \"\",\n  \"files\": {},\n  \"form\": {},\n  \"headers\": {\n    \"Accept\": \"*/*\",\n    \"Accept-Encoding\": \"gzip, deflate, br\",\n    \"Content-Length\": \"0\",\n    \"Host\": \"httpbin.org\",\n    \"User-Agent\": \"python-requests/2.31.0\",\n    \"X-Amzn-Trace-Id\": \"Root=1-65c1d0fd-1f69fe4a1c7ee92542102ce8\"\n  },\n  \"json\": null,\n  \"origin\": \"212.87.195.209\",\n  \"url\": \"http://httpbin.org/post\"\n}\n",
+                        "【INFO】 |: 请求响应状态码:200\n",
+                        "【INFO】 |: 执行后置脚本\n",
+                        "【INFO】 |: 计划测试执行——>【通过】\n"
+                    ],
+                    "l_env": [],
+                    "g_env": [],
+                    "url": "http://httpbin.org/post",
+                    "method": "POST",
+                    "status_code": 200,
+                    "response_header": "{\n  \"Connection\": \"close\",\n  \"Content-Length\": \"403\",\n  \"Access-Control-Allow-Credentials\": \"true\",\n  \"Access-Control-Allow-Origin\": \"*\",\n  \"Content-Type\": \"application/json\",\n  \"Date\": \"Tue, 06 Feb 2024 06:26:05 GMT\",\n  \"Server\": \"gunicorn/19.9.0\"\n}",
+                    "requests_header": "{\n  \"User-Agent\": \"python-requests/2.31.0\",\n  \"Accept-Encoding\": \"gzip, deflate, br\",\n  \"Accept\": \"*/*\",\n  \"Connection\": \"keep-alive\",\n  \"Content-Length\": \"0\"\n}",
+                    "response_body": "{\n  \"args\": {},\n  \"data\": \"\",\n  \"files\": {},\n  \"form\": {},\n  \"headers\": {\n    \"Accept\": \"*/*\",\n    \"Accept-Encoding\": \"gzip, deflate, br\",\n    \"Content-Length\": \"0\",\n    \"Host\": \"httpbin.org\",\n    \"User-Agent\": \"python-requests/2.31.0\",\n    \"X-Amzn-Trace-Id\": \"Root=1-65c1d0fd-1f69fe4a1c7ee92542102ce8\"\n  },\n  \"json\": null,\n  \"origin\": \"212.87.195.209\",\n  \"url\": \"http://httpbin.org/post\"\n}",
+                    "requests_body": "",
+                    "state": "成功",
+                    "tag": "循环1次",
+                    "run_time": "0.629s"
+                }
+            ],
+            "res": "",
+            "name": "计划测试",
+            "state": "success"
+        }
+    ],
+    "all": 1,
+    "success": 1,
+    "error": 0,
+    "fail": 0,
+    "runtime": "0.63s",
+    "argtime": "0.63s",
+    "begin_time": "2024-02-06 14:24:33",
+    "pass_rate": "100.00%",
+    "state": "通过",
+    "tester": "测试员"
+}
+--------  response info ----------
+
+2024-02-06 14:26:37 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-02-06 14:26:38 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-02-06 14:26:38 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-02-06 14:26:38 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-02-06 14:26:38 [django-main-thread]-[runserver.on_bind:188]-[INFO]:February 06, 2024 - 14:26:38
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-02-06 14:26:42 [Thread-1 (process_request_thread)]-[base._real_add_job:895]-[INFO]:Added job "%s" to job store "%s"
+2024-02-06 14:26:42 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-02-06 14:26:42 [APScheduler]-[base._process_jobs:1034]-[DEBUG]:Next wakeup is due at %s (in %f seconds)
+2024-02-06 14:26:43 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-02-06 14:26:43 [APScheduler]-[base._process_jobs:1034]-[DEBUG]:Next wakeup is due at %s (in %f seconds)
+2024-02-06 14:26:43 [ThreadPoolExecutor-1_0]-[https.run_test_suite:460]-[DEBUG]:--------  response info ----------
+{
+    "class_list": [
+        {
+            "all": 1,
+            "success": 1,
+            "fail": 0,
+            "error": 0,
+            "cases": [
+                {
+                    "name": "计划测试",
+                    "log_data": [
+                        "【INFO】 |: 开始执行用例：【计划测试】\n",
+                        "【INFO】 |: 强制等待:0秒\n",
+                        "【INFO】 |: 当前运行环境\n临时变量：\n全局变量：\n",
+                        "【INFO】 |: 执行前置脚本\n",
+                        "【INFO】 |: 发送请求[POST]:http://httpbin.org/post：\n",
+                        "【DEBUG】 |: 请求头：{\n  \"User-Agent\": \"python-requests/2.31.0\",\n  \"Accept-Encoding\": \"gzip, deflate, br\",\n  \"Accept\": \"*/*\",\n  \"Connection\": \"keep-alive\",\n  \"Content-Length\": \"0\"\n}\n",
+                        "【DEBUG】 |: 请求体：\n",
+                        "【DEBUG】 |: 响应头：{\n  \"Connection\": \"close\",\n  \"Content-Length\": \"403\",\n  \"Access-Control-Allow-Credentials\": \"true\",\n  \"Access-Control-Allow-Origin\": \"*\",\n  \"Content-Type\": \"application/json\",\n  \"Date\": \"Tue, 06 Feb 2024 06:28:15 GMT\",\n  \"Server\": \"gunicorn/19.9.0\"\n}\n",
+                        "【DEBUG】 |: 响应体：{\n  \"args\": {},\n  \"data\": \"\",\n  \"files\": {},\n  \"form\": {},\n  \"headers\": {\n    \"Accept\": \"*/*\",\n    \"Accept-Encoding\": \"gzip, deflate, br\",\n    \"Content-Length\": \"0\",\n    \"Host\": \"httpbin.org\",\n    \"User-Agent\": \"python-requests/2.31.0\",\n    \"X-Amzn-Trace-Id\": \"Root=1-65c1d17f-4c5aa3ff171b800464a2873b\"\n  },\n  \"json\": null,\n  \"origin\": \"212.87.195.209\",\n  \"url\": \"http://httpbin.org/post\"\n}\n",
+                        "【INFO】 |: 请求响应状态码:200\n",
+                        "【INFO】 |: 执行后置脚本\n",
+                        "【INFO】 |: 计划测试执行——>【通过】\n"
+                    ],
+                    "l_env": [],
+                    "g_env": [],
+                    "url": "http://httpbin.org/post",
+                    "method": "POST",
+                    "status_code": 200,
+                    "response_header": "{\n  \"Connection\": \"close\",\n  \"Content-Length\": \"403\",\n  \"Access-Control-Allow-Credentials\": \"true\",\n  \"Access-Control-Allow-Origin\": \"*\",\n  \"Content-Type\": \"application/json\",\n  \"Date\": \"Tue, 06 Feb 2024 06:28:15 GMT\",\n  \"Server\": \"gunicorn/19.9.0\"\n}",
+                    "requests_header": "{\n  \"User-Agent\": \"python-requests/2.31.0\",\n  \"Accept-Encoding\": \"gzip, deflate, br\",\n  \"Accept\": \"*/*\",\n  \"Connection\": \"keep-alive\",\n  \"Content-Length\": \"0\"\n}",
+                    "response_body": "{\n  \"args\": {},\n  \"data\": \"\",\n  \"files\": {},\n  \"form\": {},\n  \"headers\": {\n    \"Accept\": \"*/*\",\n    \"Accept-Encoding\": \"gzip, deflate, br\",\n    \"Content-Length\": \"0\",\n    \"Host\": \"httpbin.org\",\n    \"User-Agent\": \"python-requests/2.31.0\",\n    \"X-Amzn-Trace-Id\": \"Root=1-65c1d17f-4c5aa3ff171b800464a2873b\"\n  },\n  \"json\": null,\n  \"origin\": \"212.87.195.209\",\n  \"url\": \"http://httpbin.org/post\"\n}",
+                    "requests_body": "",
+                    "state": "成功",
+                    "tag": "循环1次",
+                    "run_time": "0.694s"
+                }
+            ],
+            "res": "",
+            "name": "计划测试",
+            "state": "success"
+        }
+    ],
+    "all": 1,
+    "success": 1,
+    "error": 0,
+    "fail": 0,
+    "runtime": "0.69s",
+    "argtime": "0.69s",
+    "begin_time": "2024-02-06 14:26:43",
+    "pass_rate": "100.00%",
+    "state": "通过",
+    "tester": "测试员"
+}
+--------  response info ----------
+
