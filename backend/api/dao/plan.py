@@ -54,13 +54,19 @@ class PlanDao:
                 plan = Plan.objects.filter(id=pk).update(**request_body)
                 Scheduler.remove(pk)
                 Scheduler.add_test_plan(
-                    plan.case_list, plan.id, plan.cron
+                    case_list=plan.case_list,
+                    plan_id=plan.id,
+                    plan_name=plan.name,
+                    cron=plan.cron
                 )
                 update_pk = pk
             else:
                 plan = Plan.objects.create(**request_body)
                 Scheduler.add_test_plan(
-                    plan.case_list, plan.id, plan.cron
+                    case_list=plan.case_list,
+                    plan_id=plan.id,
+                    plan_name=plan.name,
+                    cron=plan.cron
                 )
                 update_pk = plan.id
 
@@ -88,7 +94,10 @@ class PlanDao:
 
             if target_state == 1:
                 Scheduler.add_test_plan(
-                    plan_parser_data.get("case_list", []), plan.id, plan_parser_data.get("cron", "")
+                    plan_parser_data.get("case_list", []),
+                    plan.name,
+                    plan.id,
+                    plan_parser_data.get("cron", "")
                 )
             else:
                 Scheduler.remove(plan_id)

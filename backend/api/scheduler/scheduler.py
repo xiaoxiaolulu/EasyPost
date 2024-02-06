@@ -44,11 +44,12 @@ class Scheduler(BaseScheduler):
         cls.scheduler.start()
 
     @classmethod
-    def add_test_plan(cls, case_list, plan_id, cron):
+    def add_test_plan(cls, case_list, plan_id, plan_name, cron):
 
         return cls.scheduler.add_job(
+            name=plan_name,
             func=HttpDao.run_test_suite,
-            args=(case_list, ),
+            args=(case_list, plan_name, ),
             trigger=Trigger.from_crontab(cron),
             id=str(plan_id)
         )

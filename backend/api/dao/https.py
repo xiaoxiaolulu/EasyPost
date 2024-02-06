@@ -8,6 +8,7 @@ from channels.db import database_sync_to_async
 from django.db.models import Q
 from django.forms import model_to_dict
 
+from api.dao.report import ResportDao
 from api.emus import treesEnum
 from api.models.https import (
     Relation,
@@ -437,12 +438,13 @@ class HttpDao:
 
     @classmethod
     @lock("plan")
-    def run_test_suite(cls, case: list):
+    def run_test_suite(cls, case: list, report_name=None):
         """
         运行测试套件，执行一组测试用例。
 
         Args:
             case: 要执行的测试用例列表
+            report_name: 报告名称
 
         Returns:
             测试结果
@@ -459,6 +461,10 @@ class HttpDao:
                 f"--------  response info ----------\n"
                 f"{json.dumps(result, indent=4, ensure_ascii=False)}\n"
                 f"--------  response info ----------\n"
+            )
+            ResportDao.create_report(
+                plan_name=report_name,
+                result_list=result
             )
             return result
         except Exception as e:

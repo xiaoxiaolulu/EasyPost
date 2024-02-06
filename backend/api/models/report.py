@@ -37,8 +37,8 @@ class Main(Model):
 
 class Detail(Model):
     id = AutoField(primary_key=True)
-    case = ForeignKey(Main, null=True, on_delete=SET_NULL, related_name='report_detail',
-                      verbose_name=_('Detail Response'))
+    report = ForeignKey(Main, null=True, on_delete=SET_NULL, related_name='report_detail',
+                        verbose_name=_('Detail Response'))
     name = CharField(max_length=50, null=True, blank=True, verbose_name=_('Detail Name'))
     state = CharField(max_length=50, null=True, blank=True, verbose_name=_('Detail State'))
     all = CharField(max_length=50, null=True, blank=True, verbose_name=_('Detail All'))
@@ -56,8 +56,8 @@ class Detail(Model):
 
 class DetailStep(Model):
     id = AutoField(primary_key=True)
-    case = ForeignKey(Detail, null=True, on_delete=SET_NULL, related_name='detail_step',
-                      verbose_name=_('DetailStep Step'))
+    detail = ForeignKey(Detail, null=True, on_delete=SET_NULL, related_name='detail_step',
+                        verbose_name=_('DetailStep Step'))
     name = CharField(max_length=50, null=True, blank=True, verbose_name=_('DetailStep Name'))
     log_data = TextField(verbose_name=_('DetailStep LogData'), null=False, default=None)
     url = CharField(max_length=50, null=True, blank=True, verbose_name=_('DetailStep Url'))

@@ -48,10 +48,7 @@ def run_test(case_data, env_config={}, tester='测试员', thread_count=1, debug
         os.remove('global_func.py')
     # 断开数据库连接
     db.close_connect()
-    if debug:
-        return result, ENV
-    else:
-        return result
+    return result
 
 
 
