@@ -1,3 +1,4 @@
+import json
 from typing import (
     Any,
     List
@@ -21,6 +22,7 @@ from core.engine.session_runner import (
     run_api
 )
 from core.request.parser import HandelTestData
+from utils.decorator import lock
 from utils.logger import logger
 from utils.trees import (
     collections_directory_id,
@@ -434,6 +436,7 @@ class HttpDao:
         return collections
 
     @classmethod
+    @lock("plan")
     def run_test_suite(cls, case: list):
         """
         运行测试套件，执行一组测试用例。
@@ -452,6 +455,11 @@ class HttpDao:
             case_list = cls.get_case_list(case)
             case_data = runner.get_plan_template(case_list)
             result = run_test(case_data)
+            logger.debug(
+                f"--------  response info ----------\n"
+                f"{json.dumps(result, indent=4, ensure_ascii=False)}\n"
+                f"--------  response info ----------\n"
+            )
             return result
         except Exception as e:
             logger.debug(

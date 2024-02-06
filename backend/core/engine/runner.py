@@ -29,7 +29,7 @@ class TestResult(unittest.TestResult):
         super().startTest(test)
         self.start_time = time.time() # noqa
         test.name = getattr(test, '_testMethodDoc')
-        getattr(test, 'info_log')("⏭️开始执行用例：【{}】\n".format(test.name))
+        getattr(test, 'info_log')("开始执行用例：【{}】\n".format(test.name))
 
     def stopTest(self, test):
         """
@@ -207,8 +207,10 @@ class TestRunner:
             "runtime": "",
             "argtime": "",
             "begin_time": "",
-            "pass_rate": 0
+            "pass_rate": 0,
+            "state": ""
         }
+
         for cls in self.result_list:
             cases_info = cls.result['cases']
             result['all'] += cls.result['all']
@@ -220,13 +222,14 @@ class TestRunner:
                                    cases_info]
             result['class_list'].append(cls.result)
         result['runtime'] = '{:.2f}s'.format(time.time() - self.starttime)
-#        result['argtime'] = '{:.2f}s'.format(round((time.time() - self.starttime)/result.get('all', 0), 2))
+        result['argtime'] = '{:.2f}s'.format(round((time.time() - self.starttime)/result.get('all', 0), 2))
         result["begin_time"] = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(self.starttime))
         result["tester"] = self.tester
         if result['all'] != 0:
             result['pass_rate'] = "{:.2f}%".format(result['success'] / result['all'] * 100) # noqa
         else:
             result['pass_rate'] = 0
+        result["state"] = "通过" if (result['success'] / result['all']) == 1.0 else "失败"
         return result
 
     def run(self, thread_count=1, rerun=0, interval=2):

@@ -8,7 +8,7 @@ class CaseRunLog:
     def save_log(self, message, level) -> None:
         if not hasattr(self, 'log_data'):
             setattr(self, 'log_data', [])
-        info = "🥇【{}】 |: {}".format(level, message)
+        info = "【{}】 |: {}".format(level, message)
         getattr(self, 'log_data').append(info)
 
     def save_validators(self, methods, expected, actual, result) -> None:

@@ -1,3 +1,4 @@
+from datetime import datetime
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.cron import CronTrigger
 from api.dao.https import HttpDao
@@ -31,7 +32,7 @@ class Trigger(CronTrigger):
 
 class Scheduler(BaseScheduler):
 
-    scheduler = BackgroundScheduler(timezone=TIME_ZONE)
+    scheduler = BackgroundScheduler()
 
     @classmethod
     def configure(cls, **kwargs):

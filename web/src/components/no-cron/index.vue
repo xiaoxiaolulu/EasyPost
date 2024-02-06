@@ -751,7 +751,7 @@ export default defineComponent({
           case "4":
           case "11":
           case "8":
-            days = "?";
+            days = "*";
             break;
           case "3":
             days =
@@ -785,7 +785,7 @@ export default defineComponent({
           case "1":
           case "3":
           case "5":
-            weeks = "?";
+            weeks = "*";
             break;
           case "2":
             weeks =
@@ -801,7 +801,7 @@ export default defineComponent({
           case "7":
           case "9":
           case "10":
-            weeks = "?";
+            weeks = "*";
             break;
           case "8":
             weeks = state.week.cronLastSpecificDomDay + "L";
