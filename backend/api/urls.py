@@ -35,6 +35,10 @@ from api.service.project import (
     ProjectRoleDestroyViewSet,
     ProjectRoleUpdateViewSet
 )
+from api.service.report import (
+    ReportDetailView,
+    ReportListViewSet
+)
 from api.service.setting import (
     TestEnvironmentListViewSet,
     TestEnvironmentDestroyViewSet,
@@ -106,6 +110,8 @@ app_urls = [
     path("plan/list", PlanListViewSet.as_view()),
 
     # 测试报告
+    path("report/detail/<int:pk>", ReportDetailView.as_view()),
+    path("report/list", ReportListViewSet.as_view())
 ]
 
 # Final URL configuration
