@@ -58,7 +58,7 @@ class Plan(Model):
     update_time = DateTimeField(auto_now=True, verbose_name=_('Plan UpdateTime'))
 
     class Meta:
-        verbose_name = _('Step')
+        verbose_name = _('Plan')
         verbose_name_plural = verbose_name
 
     def __str__(self):
