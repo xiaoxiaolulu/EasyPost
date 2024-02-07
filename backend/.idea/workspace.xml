@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment=":construction_worker: 测试报告">
-      <change afterPath="$PROJECT_DIR$/api/schema/report.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/home/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/home/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/models/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/schema/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/schema/report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/service/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -383,23 +385,7 @@
       <workItem from="1706262452393" duration="2389000" />
       <workItem from="1706264876701" duration="16146000" />
       <workItem from="1706523985951" duration="85150000" />
-      <workItem from="1707200408363" duration="5599000" />
-    </task>
-    <task id="LOCAL-00202" summary="后端调整">
-      <option name="closed" value="true" />
-      <created>1705909772222</created>
-      <option name="number" value="00202" />
-      <option name="presentableId" value="LOCAL-00202" />
-      <option name="project" value="LOCAL" />
-      <updated>1705909772222</updated>
-    </task>
-    <task id="LOCAL-00203" summary="后端调整">
-      <option name="closed" value="true" />
-      <created>1705910606379</created>
-      <option name="number" value="00203" />
-      <option name="presentableId" value="LOCAL-00203" />
-      <option name="project" value="LOCAL" />
-      <updated>1705910606379</updated>
+      <workItem from="1707200408363" duration="8246000" />
     </task>
     <task id="LOCAL-00204" summary="后端调整">
       <option name="closed" value="true" />
@@ -777,7 +763,23 @@
       <option name="project" value="LOCAL" />
       <updated>1707210997365</updated>
     </task>
-    <option name="localTasksCounter" value="251" />
+    <task id="LOCAL-00251" summary=":construction_worker: 测试报告">
+      <option name="closed" value="true" />
+      <created>1707212858568</created>
+      <option name="number" value="00251" />
+      <option name="presentableId" value="LOCAL-00251" />
+      <option name="project" value="LOCAL" />
+      <updated>1707212858568</updated>
+    </task>
+    <task id="LOCAL-00252" summary=":construction_worker: 测试报告">
+      <option name="closed" value="true" />
+      <created>1707213163562</created>
+      <option name="number" value="00252" />
+      <option name="presentableId" value="LOCAL-00252" />
+      <option name="project" value="LOCAL" />
+      <updated>1707213163562</updated>
+    </task>
+    <option name="localTasksCounter" value="253" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

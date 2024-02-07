@@ -12,13 +12,14 @@ from api.models.report import (
 )
 from api.schema.report import (
     ReportMainSerializer,
-    ReportDetailSerializers
+    ReportDetailSerializers,
 )
 
 
 class ReportDetailView(MagicRetrieveApi):
-    serializer_class = ReportDetailSerializers
+
     queryset = Detail.objects.all()
+    serializer_class = ReportDetailSerializers
     permission_classes = [IsAuthenticated]
 
 
