@@ -40,6 +40,7 @@ class EventManager:
             callback: Callable[[], Coroutine[Any, Any, Any]] = None):
         """
         发布事件
+
         :usage:
             event = MyEvent("Hello, world!")
             EventManager.post(event, "vent")
@@ -74,6 +75,7 @@ class EventManager:
     def subscribe(cls, alias: Optional[str] = None):
         """
         订阅事件
+
         :param alias: 事件别名
         :usage:
             @EventManager.subscribe("Event")

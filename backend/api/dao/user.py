@@ -1,3 +1,7 @@
+"""
+DESCRIPTION：用户数据访问对象
+:Created by Null.
+"""
 import re
 from datetime import (
     datetime,
@@ -20,7 +24,16 @@ class UserDao:
 
     @staticmethod
     def validate_account_type(account: str, account_type: str) -> None:
-        """验证账号类型的函数"""
+        """
+        验证账号类型的函数
+
+        Args:
+            account: 账号
+            account_type: 账号类型
+
+        Raises:
+            Exception: 验证账号类型失败时抛出异常
+        """
         if account_type == 'mobile':
             if not re.match(REGEX_MOBILE, account):
                 raise Exception("手机号码不合法! ❌")
@@ -32,7 +45,15 @@ class UserDao:
 
     @staticmethod
     def check_user_existence(account: str) -> None:
-        """检查用户是否存在的函数"""
+        """
+        检查用户是否存在的函数
+
+        Args:
+            account: 账号
+
+        Raises:
+            Exception: 检查用户是否存在失败时抛出异常
+        """
         try:
             user = User.objects.get(mobile=account) or User.objects.get(email=account)
             if user:
@@ -42,13 +63,30 @@ class UserDao:
 
     @staticmethod
     def check_verify_code_time(account: str) -> None:
-        """检查验证码发送时间的函数"""
+        """
+        检查验证码发送时间的函数
+
+        Args:
+            account: 账号
+
+        Raises:
+            Exception: 检查验证码发送时间失败时抛出异常
+        """
         one_minutes_ago = datetime.now() - timedelta(minutes=1)
         if VerifyCode.objects.filter(add_time__gt=one_minutes_ago, account=account).exists():
             raise Exception("距离上一次发送未超过60s ❌")
 
     def register_user_validate(self, account: str, account_type: str) -> None:
-        """注册用户验证的主函数"""
+        """
+        注册用户验证的主函数
+
+        Args:
+            account: 账号
+            account_type: 账号类型
+
+        Raises:
+            Exception: 注册用户验证失败时抛出异常
+        """
         try:
             self.validate_account_type(account, account_type)
             self.check_user_existence(account)
@@ -60,6 +98,7 @@ class UserDao:
     def register_code_validate(account: str, account_type: str, code: str) -> None:
         """
         注册验证码验证
+
         :param account: 账号, str object.
         :param account_type: 账号类型, str object.
         :param code: 验证码, str object.
@@ -82,6 +121,7 @@ class UserDao:
     def get_username(username: str) -> Any | None:
         """
         校验用户是否注册
+
         :param username: 用户名
         :return: User.objects
         """
@@ -96,6 +136,7 @@ class UserDao:
     def get_register_code(account: str, account_type: str, code: str) -> None:
         """
         获取注册验证码
+
         :param account: 账号, str object.
         :param account_type: 账号类型, str object.
         :param code: 验证码, str object.
@@ -109,6 +150,7 @@ class UserDao:
     def query_user_by_email(email: str) -> Any | None:
         """
         根据邮箱获取用户
+
         :param email: 注册邮箱, str object.
         :return: User.objects
         """
@@ -123,6 +165,7 @@ class UserDao:
     def rest_password(username: str, password: str) -> None:
         """
         重置验证码
+
         :param username: 账号, str object.
         :param password: 密码, str object.
         :return: None

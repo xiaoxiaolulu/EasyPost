@@ -1,3 +1,9 @@
+"""
+DESCRIPTION：配置模型
+:Created by Null.
+
+ * table-DjangoAdminAccessIPWhitelist: 白名单
+"""
 from django.core.cache import cache
 from django.db.models import (
     Model,
@@ -18,6 +24,9 @@ WHITELIST_PREFIX = 'DJANGO_ADMIN_ACCESS_WHITELIST:'
 class DjangoAdminAccessIPWhitelist(Model):
     """
     系统白名单
+
+    * name: 名单名称
+    * whitelist_reason: 名单里有
     """
     id = AutoField(primary_key=True)
     whitelist_reason = CharField(max_length=255, null=True, blank=True, help_text="Reason for the whitelist?")

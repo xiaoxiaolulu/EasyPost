@@ -1,3 +1,13 @@
+"""
+DESCRIPTION：接口测试模型
+:Created by Null.
+
+ * table-Relation: 目录结构
+ * table-Api: 接口文档
+ * table-Case: 接口用例
+ * table-Step: 接口步骤
+ * table-ApiCopy: 接口快照
+"""
 from django.contrib.auth import get_user_model
 from django.db.models import (
     Model,
@@ -19,6 +29,9 @@ User = get_user_model()
 class Defaults(object):
     """
     默认字段
+    * 状态
+    * 优先级
+    * 目录类型
     """
     STATUS_TYPE = 0
 
@@ -76,13 +89,22 @@ class Api(Model):
     * priority: 优先级 P0/P1/P2/P3
     * status: 接口状态 调试中 0 已废弃 1 正常 2
     * request_type： 请求类型  http 1 grpc 2 dubbo 3
-    * tag: 标签
-    * gateway: 前置url
-    * request_method: 请求类型
+    * method: 请求类型
     * url: 路由
-    * request_headers: 请求头
+    * headers: 请求头
     * body: 请求体
     * directory_id: 目录id
+    * project:关联项目
+    * desc: 描述
+    * params: 地址参数
+    * raw: 请求体
+    * setup_script: 前置步骤
+    * teardown_script: 后置步骤
+    * validate: 校验内容
+    * extract: 提取参数
+    * user: 创建者
+    * create_time: 创建时间
+    * update_time: 更新时间
     """
     id = AutoField(primary_key=True)
     name = CharField(max_length=50, null=True, blank=True, verbose_name=_('Api Name'))
@@ -115,7 +137,20 @@ class Api(Model):
 
 
 class Case(Model):
+    """
+    用例
 
+    * name: 接口名称
+    * priority: 优先级 P0/P1/P2/P3
+    * project: 关联项目
+    * directory_id: 目录id
+    * rerun: 重试次数
+    * threads: 线程数
+    * desc: 描述
+    * user: 创建者
+    * create_time: 创建时间
+    * update_time: 更新时间
+    """
     id = AutoField(primary_key=True)
     name = CharField(max_length=50, null=True, blank=True, verbose_name=_('Case Name'))
     project = ForeignKey(Project, on_delete=CASCADE, db_constraint=False)
@@ -138,7 +173,26 @@ class Case(Model):
 
 
 class Step(Model):
+    """
+    步骤
 
+    * sort: 序号
+    * case: 关联用例
+    * name: 步骤名称
+    * method: 请求类型
+    * url: 路由
+    * headers: 请求头
+    * params: 地址参数
+    * raw: 请求体
+    * setup_script: 前置脚本
+    * teardown_script: 后置脚本
+    * validate: 校验内容
+    * extract: 提取参数
+    * desc: 描述
+    * user: 创建者
+    * create_time: 创建时间
+    * update_time: 更新时间
+    """
     id = AutoField(primary_key=True)
     sort = CharField(max_length=50, null=True, blank=True, verbose_name=_('Step Sort'))
     case = ForeignKey(Case, null=True, on_delete=SET_NULL, related_name='step', verbose_name=_('Step Case'))
@@ -167,7 +221,30 @@ class Step(Model):
 
 class ApiCopy(Model):
 
+    """
+    接口快照
 
+    * name: 接口名称
+    * priority: 优先级 P0/P1/P2/P3
+    * status: 接口状态 调试中 0 已废弃 1 正常 2
+    * request_type： 请求类型  http 1 grpc 2 dubbo 3
+    * method: 请求类型
+    * url: 路由
+    * headers: 请求头
+    * body: 请求体
+    * directory_id: 目录id
+    * project:关联项目
+    * desc: 描述
+    * params: 地址参数
+    * raw: 请求体
+    * setup_script: 前置步骤
+    * teardown_script: 后置步骤
+    * validate: 校验内容
+    * extract: 提取参数
+    * user: 创建者
+    * create_time: 创建时间
+    * update_time: 更新时间
+    """
     id = AutoField(primary_key=True)
     name = CharField(max_length=50, null=True, blank=True, verbose_name=_('ApiCopy Name'))
     project = ForeignKey(Project, on_delete=CASCADE, db_constraint=False)

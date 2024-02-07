@@ -1,3 +1,10 @@
+"""
+DESCRIPTION：设置模型
+:Created by Null.
+
+ * table-TestEnvironment: 环境配置
+ * table-Address: 地址配置
+"""
 from django.contrib.auth import get_user_model
 from django.core.cache import cache
 from django.db.models import (

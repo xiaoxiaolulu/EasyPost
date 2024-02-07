@@ -1,3 +1,7 @@
+"""
+DESCRIPTION：测试报告数据访问对象
+:Created by Null.
+"""
 from api.models.report import (
     Main,
     Detail,
@@ -22,7 +26,18 @@ class ReportDao:
 
     @staticmethod
     def parser_report_main(plan_name, result_list):
-        """解析报告主数据"""
+        """
+        解析报告主数据
+
+        Args:
+            plan_name: 计划名称
+            result_list: 测试结果数据
+
+        Returns: 解析后的报告数据
+
+        Raises:
+            Exception: 解析后的报告数据失败时抛出异常
+        """
         try:
             resport_main = {
                 "name": plan_name,
@@ -46,6 +61,18 @@ class ReportDao:
 
     @staticmethod
     def create_report_detail(model, class_item):
+        """
+        解析报告主数据
+
+        Args:
+            model: 模型
+            class_item: 测试详情数据
+
+        Returns: 报告详情数据对象
+
+        Raises:
+            Exception: 解析报告主数据失败时抛出异常
+        """
         try:
             detail_obj = Detail.objects.create(
                 report=Main.objects.get(id=model.id),
@@ -63,6 +90,16 @@ class ReportDao:
 
     @staticmethod
     def create_detail_step(class_item, model):
+        """
+        创建报告测试详情步骤
+
+        Args:
+            model: 模型
+            class_item: 测试详情数据
+
+        Raises:
+            Exception: 创建报告测试详情步骤失败时抛出异常
+        """
         try:
             for case_item in class_item.get('cases', []):
 
@@ -88,6 +125,16 @@ class ReportDao:
 
     @classmethod
     def create_report(cls, plan_name, result_list):
+        """
+        创建测试报告
+
+        Args:
+            plan_name: 计划名称
+            result_list: 测试结果数据
+
+        Raises:
+            Exception: 创建测试报告失败时抛出异常
+        """
         try:
             report_main = cls.parser_report_main(plan_name, result_list)
             report_obj = Main.objects.create(**report_main)

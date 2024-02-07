@@ -1,3 +1,11 @@
+"""
+DESCRIPTION：报告模型
+:Created by Null.
+
+ * table-Main: 报告主内容
+ * table-Detail: 报告详情
+  * table-DetailStep: 报告详情步骤
+"""
 from django.contrib.auth import get_user_model
 from django.db.models import (
     Model,
@@ -13,6 +21,20 @@ User = get_user_model()
 
 
 class Main(Model):
+    """
+    测试报告
+    * name: 报告名称
+    * state: 报告状态
+    * all: 用例总数
+    * success: 用例成功数
+    * error: 用例错误数
+    * fail: 用例失败数
+    * runtime: 运行时间
+    * begin_time: 开始执行时间
+    * argtime: 平均运行时间
+    * pass_rate: 通过率
+    * tester: 测试人员
+    """
 
     id = AutoField(primary_key=True)
     name = CharField(max_length=50, null=True, blank=True, verbose_name=_('Main Name'))
@@ -36,6 +58,16 @@ class Main(Model):
 
 
 class Detail(Model):
+    """
+    测试报告详情
+    * report: 关联主报告
+    * name: 报告名称
+    * state: 报告状态
+    * all: 用例总数
+    * success: 用例成功数
+    * error: 用例错误数
+    * fail: 用例失败数
+    """
     id = AutoField(primary_key=True)
     report = ForeignKey(Main, null=True, on_delete=SET_NULL, related_name='report_detail',
                         verbose_name=_('Detail Response'))
@@ -55,6 +87,23 @@ class Detail(Model):
 
 
 class DetailStep(Model):
+    """
+    测试报告详情步骤
+    * detail: 关联报告详情
+    * name: 报告名称
+    * log_data: 日志
+    * url: 请求地址
+    * method: 请求方法
+    * status_code: 状态码
+    * response_header: 响应头
+    * requests_header: 请求头
+    * response_body: 响应体
+    * requests_body: 请求体
+    * state: 状态
+    * run_time: 运行时间
+    * validate_extractor: 验证内容
+    * extras: 提取参数
+    """
     id = AutoField(primary_key=True)
     detail = ForeignKey(Detail, null=True, on_delete=SET_NULL, related_name='steps', verbose_name=_('DetailStep Step'))
     name = CharField(max_length=50, null=True, blank=True, verbose_name=_('DetailStep Name'))

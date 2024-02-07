@@ -1,3 +1,9 @@
+"""
+DESCRIPTION：计划模型
+:Created by Null.
+
+ * table-Plan: 测试计划
+"""
 from django.contrib.auth import get_user_model
 from django.db.models import (
     Model,
@@ -19,6 +25,8 @@ User = get_user_model()
 class Defaults(object):
     """
     默认字段
+    * 优先级
+    * 状态
     """
 
     PRIORITY_TYPE = 0
@@ -40,7 +48,21 @@ class Defaults(object):
 
 
 class Plan(Model):
-
+    """
+    测试计划
+    * name: 项目名称
+    * project: 关联项目
+    * cron: cron表达式
+    * priority: 优先级
+    * case_list: 关联用例列表
+    * state: 状态
+    * user: 用户
+    * pass_rate: 通过率
+    * msg_type: 通过类型
+    * receiver: 收件人
+    * create_time: 创建时间
+    * update_time: 更新时间
+    """
     id = AutoField(primary_key=True)
     name = CharField(max_length=50, null=True, blank=True, verbose_name=_('Plan Name'))
     project = ForeignKey(Project, on_delete=CASCADE, db_constraint=False)

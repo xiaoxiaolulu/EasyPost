@@ -1,8 +1,9 @@
 """
-DESCRIPTION：系统配置模型
+DESCRIPTION：项目配置模型
 :Created by Null.
 
  * table-Project: 项目配置
+ * table-ProjectRole: 项目权限配置
 """
 from django.contrib.auth import get_user_model
 from django.core.cache import cache
@@ -29,6 +30,7 @@ class Defaults(object):
     """
     默认字段
     * 项目类型
+    * 私有类型
     """
 
     PROJECT_TYPE = "Web"
@@ -56,6 +58,7 @@ class Project(Model):
     * avatar: 项目头像
     * type: 项目类型
     * desc: 描述
+    * private: 是否私有
     * create_time: 创建时间
     * update_time: 更新时间
     """
@@ -83,7 +86,12 @@ class Project(Model):
 
 
 class ProjectRole(Model):
-
+    """
+    项目权限配置
+    * user: 用户
+    * project: 关联项目
+    * rode_id: 权限id
+    """
     id = AutoField(primary_key=True)
     user = ForeignKey(User, null=True, on_delete=SET_NULL, verbose_name=_('User'))
     project = ForeignKey(Project, null=True, on_delete=SET_NULL, related_name='roles', verbose_name=_('Project'))

@@ -26,6 +26,7 @@ class Defaults(object):
     * 性别
     * 部门
     * 简介
+    *账号类型
     """
 
     ACCOUNT_TYPE = "email"
