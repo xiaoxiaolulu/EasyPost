@@ -59,6 +59,7 @@ router = DefaultRouter()
 app_urls = [
     # API
     path("", include(router.urls)),
+
     # API Authentication
     path("login/", CustomJsonWebToken.as_view()),
     path("user/list", UserListViewSet.as_view()),

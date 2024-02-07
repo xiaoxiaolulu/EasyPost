@@ -2,7 +2,7 @@
 
 import Layout from "@/layout/index.vue";
 
-const httpsRouter = [{
+const projectRouter = [{
     path: '/project',
     component: Layout,
     redirect: '/tool/404',
@@ -28,4 +28,4 @@ const httpsRouter = [{
     ]
 }]
 
-export default httpsRouter
+export default projectRouter

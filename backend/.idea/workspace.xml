@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment=":construction_worker: 测试报告">
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment=":construction_worker: 添加部分模块注释">
+      <change afterPath="$PROJECT_DIR$/../web/src/routers/modules/record.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web/src/views/record/build/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web/src/views/record/history/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/models/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/report.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/schema/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/schema/report.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/service/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/routers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/routers/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/routers/modules/project.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/routers/modules/project.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -385,31 +388,7 @@
       <workItem from="1706262452393" duration="2389000" />
       <workItem from="1706264876701" duration="16146000" />
       <workItem from="1706523985951" duration="85150000" />
-      <workItem from="1707200408363" duration="8246000" />
-    </task>
-    <task id="LOCAL-00204" summary="后端调整">
-      <option name="closed" value="true" />
-      <created>1705913214530</created>
-      <option name="number" value="00204" />
-      <option name="presentableId" value="LOCAL-00204" />
-      <option name="project" value="LOCAL" />
-      <updated>1705913214530</updated>
-    </task>
-    <task id="LOCAL-00205" summary="后端调整">
-      <option name="closed" value="true" />
-      <created>1705914445505</created>
-      <option name="number" value="00205" />
-      <option name="presentableId" value="LOCAL-00205" />
-      <option name="project" value="LOCAL" />
-      <updated>1705914445505</updated>
-    </task>
-    <task id="LOCAL-00206" summary="后端调整">
-      <option name="closed" value="true" />
-      <created>1705916856003</created>
-      <option name="number" value="00206" />
-      <option name="presentableId" value="LOCAL-00206" />
-      <option name="project" value="LOCAL" />
-      <updated>1705916856003</updated>
+      <workItem from="1707200408363" duration="13742000" />
     </task>
     <task id="LOCAL-00207" summary="后端调整">
       <option name="closed" value="true" />
@@ -779,7 +758,31 @@
       <option name="project" value="LOCAL" />
       <updated>1707213163562</updated>
     </task>
-    <option name="localTasksCounter" value="253" />
+    <task id="LOCAL-00253" summary=":construction_worker: 测试报告">
+      <option name="closed" value="true" />
+      <created>1707272019047</created>
+      <option name="number" value="00253" />
+      <option name="presentableId" value="LOCAL-00253" />
+      <option name="project" value="LOCAL" />
+      <updated>1707272019047</updated>
+    </task>
+    <task id="LOCAL-00254" summary=":construction_worker: 测试报告">
+      <option name="closed" value="true" />
+      <created>1707272084489</created>
+      <option name="number" value="00254" />
+      <option name="presentableId" value="LOCAL-00254" />
+      <option name="project" value="LOCAL" />
+      <updated>1707272084489</updated>
+    </task>
+    <task id="LOCAL-00255" summary=":construction_worker: 添加部分模块注释">
+      <option name="closed" value="true" />
+      <created>1707274887297</created>
+      <option name="number" value="00255" />
+      <option name="presentableId" value="LOCAL-00255" />
+      <option name="project" value="LOCAL" />
+      <updated>1707274887297</updated>
+    </task>
+    <option name="localTasksCounter" value="256" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -832,7 +835,8 @@
     <MESSAGE value=":construction_worker: 修改部分错误" />
     <MESSAGE value=":construction_worker: 测试计划" />
     <MESSAGE value=":construction_worker: 测试报告" />
-    <option name="LAST_COMMIT_MESSAGE" value=":construction_worker: 测试报告" />
+    <MESSAGE value=":construction_worker: 添加部分模块注释" />
+    <option name="LAST_COMMIT_MESSAGE" value=":construction_worker: 添加部分模块注释" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$init_task.coverage" NAME="init_task Coverage Results" MODIFIED="1705894334573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/events" />

@@ -13,6 +13,7 @@ import functionPageRouter from './modules/functionPage'
 import toolsRouter  from "./modules/tools"
 import projectRouter from "./modules/project"
 import httpsRouter from "./modules/https"
+import recordRouter from './modules/record'
 
 
 // 异步组件
@@ -20,6 +21,7 @@ export const asyncRoutes = [
     ...projectRouter,
     ...systemRouter,
     ...httpsRouter,
+    ...recordRouter,
     ...toolsRouter,
     ...echartsRouter,
     ...othersRouter,
