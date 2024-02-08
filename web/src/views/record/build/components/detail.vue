@@ -59,7 +59,7 @@
             </template>
           </el-table-column>
           <el-table-column prop="name" label="用例名称"></el-table-column>
-          <el-table-column prop="all" label="总数">
+          <el-table-column prop="all" label="步骤总数">
             <template #default="scope">
               <el-tag type="info">{{scope.row.all}}</el-tag>
             </template>
