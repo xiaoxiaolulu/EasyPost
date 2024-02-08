@@ -19,6 +19,13 @@ const recordRouter = [{
             meta: { title: '构建历史', icon: 'FolderRemove'  }
         },
         {
+            path: '/record/detail',
+            component: () => import('@/views/record/build/components/detail.vue'),
+            name: 'recordDetail',
+            hidden: true,
+            meta: { title: '构建详情', icon: 'FolderRemove'  }
+        },
+        {
             path: '/history/list',
             component: () => import('@/views/record/history/index.vue'),
             name: 'historyList',

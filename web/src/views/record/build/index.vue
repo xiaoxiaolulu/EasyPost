@@ -64,7 +64,7 @@
         </el-table-column>
         <el-table-column label="操作" width="150px" align="center">
           <template #default="scope">
-            <el-button @click="editEnv(scope.row)" type="primary" link>查看</el-button>
+            <el-button @click="editHandler(scope.row)" type="primary" link>查看</el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -84,6 +84,7 @@
 <script lang="ts" setup>
 import {Plus, Search, Close, WarningFilled} from "@element-plus/icons-vue";
 import {ref, reactive} from 'vue'
+import {useRouter} from "vue-router";
 import {envList, envDelete} from "@/api/setting";
 import {parseTime} from "@/utils";
 import {ElMessage, ElPagination} from "element-plus";
@@ -102,6 +103,8 @@ const tableData = ref(null)
 const tableLoading = ref(false)
 
 const count = ref(0)
+
+const router = useRouter()
 
 const queryList = () => {
   tableLoading.value = true;
@@ -122,6 +125,16 @@ const handlePageChange = (newPage: any) => {
   queryList()
 }
 
+const editHandler = (row) => {
+  if (row) {
+    router.push({
+      name: "recordDetail",
+      query: {id: row.id}
+    });
+  } else {
+    ElMessage.error("查询测试报告异常请重试!");
+  }
+}
 </script>
 
 <style lang="scss" scoped>
