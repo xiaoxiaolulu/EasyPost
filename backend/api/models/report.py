@@ -105,6 +105,7 @@ class DetailStep(Model):
     * extras: 提取参数
     """
     id = AutoField(primary_key=True)
+    sort = CharField(max_length=200, null=True, blank=True, verbose_name=_('DetailStep sort'))
     detail = ForeignKey(Detail, null=True, on_delete=SET_NULL, related_name='steps', verbose_name=_('DetailStep Step'))
     name = CharField(max_length=50, null=True, blank=True, verbose_name=_('DetailStep Name'))
     log_data = TextField(verbose_name=_('DetailStep LogData'), null=False, default=None)

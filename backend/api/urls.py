@@ -3,6 +3,7 @@ from django.urls import (
     include
 )
 from rest_framework.routers import DefaultRouter
+
 from api.service.https import (
     ApiFastView,
     TreeView,
@@ -98,9 +99,7 @@ app_urls = [
     path('case/run', RunCaseView.as_view()),
     path('case/delete/<int:pk>', DelCaseView.as_view()),
     path('case/detail/<int:pk>', CaseDetailView.as_view()),
-    path("case/list", CaseListView.as_view({
-        'get': 'list'
-    })),
+    path("case/list", CaseListView.as_view({'get': 'list'})),
 
     # 测试计划
     path("plan/SaveOrUpdate/<int:pk>", SaveOrUpdatePlanView.as_view()),
@@ -111,7 +110,7 @@ app_urls = [
     path("plan/list", PlanListViewSet.as_view()),
 
     # 测试报告
-    path("report/detail/<int:pk>", ReportDetailView.as_view()),
+    path("report/detail", ReportDetailView.as_view({'get': 'list'})),
     path("report/list", ReportListViewSet.as_view())
 ]
 

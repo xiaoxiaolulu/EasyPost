@@ -5,14 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment=":construction_worker: 添加部分模块注释">
-      <change afterPath="$PROJECT_DIR$/../web/src/routers/modules/record.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/src/views/record/build/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/src/views/record/history/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/filters/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/filters/report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/models/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/service/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/report.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/routers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/routers/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/routers/modules/project.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/routers/modules/project.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/api/record.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/api/record.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/styles/element.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/styles/element.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/record/build/components/ReportStatistics.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/record/build/components/ReportStatistics.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/record/build/components/detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/record/build/components/detail.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -388,23 +391,8 @@
       <workItem from="1706262452393" duration="2389000" />
       <workItem from="1706264876701" duration="16146000" />
       <workItem from="1706523985951" duration="85150000" />
-      <workItem from="1707200408363" duration="13742000" />
-    </task>
-    <task id="LOCAL-00207" summary="后端调整">
-      <option name="closed" value="true" />
-      <created>1706261694565</created>
-      <option name="number" value="00207" />
-      <option name="presentableId" value="LOCAL-00207" />
-      <option name="project" value="LOCAL" />
-      <updated>1706261694565</updated>
-    </task>
-    <task id="LOCAL-00208" summary="后端调整">
-      <option name="closed" value="true" />
-      <created>1706262974821</created>
-      <option name="number" value="00208" />
-      <option name="presentableId" value="LOCAL-00208" />
-      <option name="project" value="LOCAL" />
-      <updated>1706262974821</updated>
+      <workItem from="1707200408363" duration="16636000" />
+      <workItem from="1707388160201" duration="3081000" />
     </task>
     <task id="LOCAL-00209" summary="后端调整">
       <option name="closed" value="true" />
@@ -782,7 +770,23 @@
       <option name="project" value="LOCAL" />
       <updated>1707274887297</updated>
     </task>
-    <option name="localTasksCounter" value="256" />
+    <task id="LOCAL-00256" summary=":construction_worker: 添加部分模块注释">
+      <option name="closed" value="true" />
+      <created>1707286745413</created>
+      <option name="number" value="00256" />
+      <option name="presentableId" value="LOCAL-00256" />
+      <option name="project" value="LOCAL" />
+      <updated>1707286745413</updated>
+    </task>
+    <task id="LOCAL-00257" summary=":construction_worker: 添加部分模块注释">
+      <option name="closed" value="true" />
+      <created>1707288515410</created>
+      <option name="number" value="00257" />
+      <option name="presentableId" value="LOCAL-00257" />
+      <option name="project" value="LOCAL" />
+      <updated>1707288515410</updated>
+    </task>
+    <option name="localTasksCounter" value="258" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

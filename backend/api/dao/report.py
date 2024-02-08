@@ -24,6 +24,25 @@ class ReportDao:
                 |---📃step-detail 测试场景下包含的步骤执行接口详情信息
     """
 
+    @classmethod
+    def detail_step_list(cls, get_queryset, report_id, name: str = ""):
+        if not report_id:
+            raise Exception("缺少必要参数报告id❌ ")
+        else:
+            try:
+                queryset = get_queryset.filter(report_id=report_id)
+
+                if name:
+                    queryset = queryset.filter(name=name)
+
+                return queryset
+
+            except Exception as err:
+                logger.debug(
+                    f"🏓获取测试报告数据失败 -> {err}"
+                )
+                raise Exception(f"获取测试报告数据失败❌ {err}")
+
     @staticmethod
     def parser_report_main(plan_name, result_list):
         """
@@ -101,9 +120,10 @@ class ReportDao:
             Exception: 创建报告测试详情步骤失败时抛出异常
         """
         try:
-            for case_item in class_item.get('cases', []):
+            for index, case_item in enumerate(class_item.get('cases', [])):
 
                 DetailStep.objects.create(
+                    sort=(index + 1),
                     detail=Detail.objects.get(id=model.id),
                     name=case_item.get('name', 'Demo'),
                     log_data=case_item.get('log_data', []),
