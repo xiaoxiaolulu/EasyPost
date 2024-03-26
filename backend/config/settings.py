@@ -67,7 +67,8 @@ MIDDLEWARE = [
     "django.middleware.common.BrokenLinkEmailsMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "api.middleware.whitelist_middleware.AdminAccessIPWhiteListMiddleware",
-    # "api.middleware.log_middleware.LoggerCollectMiddlewareMixin"
+    # "api.middleware.log_middleware.LoggerCollectMiddlewareMixin",
+    "drf_viewset_profiler.middleware.LineProfilerViewSetMiddleware"
 ]
 
 # Local time zone. Choices are
@@ -316,4 +317,11 @@ LOGGING = {
             'propagate': True,
         },
     }
+}
+
+# 视图测试  @line_profiler_viewset
+DRF_VIEWSET_PROFILER = {
+    "DEFAULT_OUTPUT_GENERATION_TYPE": "drf_viewset_profiler.output.FileOutput",
+    "DEFAULT_OUTPUT_LOCATION": "",
+    "ENABLE_SERIALIZER_PROFILER": True
 }

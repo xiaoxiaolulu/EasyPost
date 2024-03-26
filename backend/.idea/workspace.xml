@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment=":construction_worker: 添加依赖文件">
-      <change afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment=":construction_worker: 日志链路">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,12 +271,12 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Django Server.backend" />
       <item itemvalue="Python.__init__ (1)" />
       <item itemvalue="Python.__init__ (2)" />
       <item itemvalue="Python.__init__ (3)" />
       <item itemvalue="Python.__init__" />
       <item itemvalue="Python.test_1ddd" />
-      <item itemvalue="Django Server.backend" />
     </list>
     <recent_temporary>
       <list>
@@ -425,14 +423,7 @@
       <workItem from="1710928291951" duration="87000" />
       <workItem from="1710930276427" duration="213000" />
       <workItem from="1711421283314" duration="7276000" />
-    </task>
-    <task id="LOCAL-00211" summary=":construction_worker: 调整模型">
-      <option name="closed" value="true" />
-      <created>1706495034574</created>
-      <option name="number" value="00211" />
-      <option name="presentableId" value="LOCAL-00211" />
-      <option name="project" value="LOCAL" />
-      <updated>1706495034574</updated>
+      <workItem from="1711435206521" duration="902000" />
     </task>
     <task id="LOCAL-00212" summary=":construction_worker: 调整模型">
       <option name="closed" value="true" />
@@ -818,7 +809,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711422924529</updated>
     </task>
-    <option name="localTasksCounter" value="260" />
+    <task id="LOCAL-00260" summary=":construction_worker: 日志链路">
+      <option name="closed" value="true" />
+      <created>1711435244930</created>
+      <option name="number" value="00260" />
+      <option name="presentableId" value="LOCAL-00260" />
+      <option name="project" value="LOCAL" />
+      <updated>1711435244930</updated>
+    </task>
+    <option name="localTasksCounter" value="261" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -848,7 +847,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="1" />
     <MESSAGE value="123" />
     <MESSAGE value="测试结果数据修正" />
     <MESSAGE value="测试引擎失败重跑" />
@@ -873,7 +871,8 @@
     <MESSAGE value=":construction_worker: 测试报告" />
     <MESSAGE value=":construction_worker: 添加部分模块注释" />
     <MESSAGE value=":construction_worker: 添加依赖文件" />
-    <option name="LAST_COMMIT_MESSAGE" value=":construction_worker: 添加依赖文件" />
+    <MESSAGE value=":construction_worker: 日志链路" />
+    <option name="LAST_COMMIT_MESSAGE" value=":construction_worker: 日志链路" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$init_task.coverage" NAME="init_task Coverage Results" MODIFIED="1705894334573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/events" />
