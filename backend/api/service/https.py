@@ -18,7 +18,8 @@ from api.models.https import (
 from api.mixins.magic import MagicRetrieveApi
 from api.schema.https import (
     RelationSerializer,
-    ApiSerializer, CaseSerializers
+    ApiSerializer,
+    CaseSerializers
 )
 from core.request.http_handler import HttpHandler
 from api.response.fatcory import ResponseStandard

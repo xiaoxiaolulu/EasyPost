@@ -217,14 +217,9 @@ class HttpDao:
             Exception: 调试测试接口失败时抛出异常
         """
         try:
-            logger.debug("测试")
             api = HandelTestData(api)
-            logger.debug("测试")
             api_data = api.get_api_template()
-            logger.debug("测试")
-            logger.debug(str(api_data))
             result = run_api(api_data=api_data)
-            logger.debug(str(result))
             return result
         except Exception as err:
             logger.debug(
@@ -460,11 +455,13 @@ class HttpDao:
             case_list = cls.get_case_list(case)
             case_data = runner.get_plan_template(case_list)
             result = run_test(case_data)
+
             logger.debug(
                 f"--------  response info ----------\n"
                 f"{json.dumps(result, indent=4, ensure_ascii=False)}\n"
                 f"--------  response info ----------\n"
             )
+
             ReportDao.create_report(
                 plan_name=report_name,
                 result_list=result
