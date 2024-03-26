@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 import datetime
 import os
+import time
 from typing import List
 
 # Path configurations
@@ -55,6 +56,7 @@ INSTALLED_APPS = LOCAL_APPS + THIRD_PARTY_APPS + DJANGO_APPS
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#middleware
 MIDDLEWARE = [
+    "log_request_id.middleware.RequestIDMiddleware",
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -244,7 +246,6 @@ REST_FRAMEWORK = {
     'EXCEPTION_HANDLER': 'api.exception.exception_handler.exception_handler',
 }
 
-
 SWAGGER_SETTINGS = {
     'LOGIN_URL': '/admin/login',
     'LOGOUT_URL': '/admin/logout',
@@ -273,9 +274,46 @@ SWAGGER_SETTINGS = {
 
 # 日志配置
 BASE_LOG_DIR = os.path.join(BASE_DIR, "logs")
+LOG_REQUEST_ID_HEADER = "HTTP_X_REQUEST_ID"
+GENERATE_REQUEST_ID_IF_NOT_IN_HEADER = True
+REQUEST_ID_RESPONSE_HEADER = "RESPONSE_HEADER_NAME"
 
-EASY_POST_ERROR = "easy_post_error"
-EASY_POST_INFO = "easy_post_info"
-EASY_POST_WARNING = "easy_post_warning"
-EASY_POST_DEBUG = "easy_post_debug"
-EASY_POST_EXCEPTION = "easy_post_exception"
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'filters': {
+        'request_id': {
+            '()': 'log_request_id.filters.RequestIDFilter'
+        }
+    },
+    'formatters': {
+        'standard': {
+            'format': '%(levelname)-8s [%(asctime)s] [%(request_id)s] %(name)s: %(message)s'
+        },
+    },
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'filters': ['request_id'],
+            'formatter': 'standard',
+        },
+        'default': {
+            'level': 'INFO',
+            'class': 'logging.handlers.RotatingFileHandler',  # 保存到文件，自动切
+            'filename': os.path.join(BASE_LOG_DIR, "EasyPost_collect.log"),
+            'maxBytes': 1024 * 1024 * 50,  # 日志大小 50M
+            'filters': ['request_id'],
+            'backupCount': 5,
+            'formatter': 'standard',
+            'encoding': "utf-8"
+        }
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'default'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+    }
+}
