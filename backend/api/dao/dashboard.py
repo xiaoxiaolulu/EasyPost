@@ -3,7 +3,6 @@ DESCRIPTION：看板数据访问对象
 :Created by Null.
 """
 from django.db.models import Avg
-
 from api.models.https import (
     Api,
     Case
