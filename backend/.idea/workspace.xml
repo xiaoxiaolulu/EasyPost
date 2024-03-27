@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Fixed dashboard.py by removing unnecessary import statement.">
-      <change beforePath="$PROJECT_DIR$/utils/time.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/time.py" afterDir="false" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Added static method get\_case\_count to DAO\_Dashboard for getting test case count.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/dashboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/dashboard.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -422,23 +423,7 @@
       <workItem from="1710928291951" duration="87000" />
       <workItem from="1710930276427" duration="213000" />
       <workItem from="1711421283314" duration="7276000" />
-      <workItem from="1711435206521" duration="8091000" />
-    </task>
-    <task id="LOCAL-00216" summary=":construction_worker: 修改部分错误">
-      <option name="closed" value="true" />
-      <created>1706519247301</created>
-      <option name="number" value="00216" />
-      <option name="presentableId" value="LOCAL-00216" />
-      <option name="project" value="LOCAL" />
-      <updated>1706519247301</updated>
-    </task>
-    <task id="LOCAL-00217" summary=":construction_worker: 修改部分错误">
-      <option name="closed" value="true" />
-      <created>1706580109680</created>
-      <option name="number" value="00217" />
-      <option name="presentableId" value="LOCAL-00217" />
-      <option name="project" value="LOCAL" />
-      <updated>1706580109680</updated>
+      <workItem from="1711435206521" duration="10617000" />
     </task>
     <task id="LOCAL-00218" summary=":construction_worker: 修改部分错误">
       <option name="closed" value="true" />
@@ -816,7 +801,23 @@
       <option name="project" value="LOCAL" />
       <updated>1711510191095</updated>
     </task>
-    <option name="localTasksCounter" value="265" />
+    <task id="LOCAL-00265" summary="Add sort field to DetailStep model and add time utility functions.">
+      <option name="closed" value="true" />
+      <created>1711510446434</created>
+      <option name="number" value="00265" />
+      <option name="presentableId" value="LOCAL-00265" />
+      <option name="project" value="LOCAL" />
+      <updated>1711510446434</updated>
+    </task>
+    <task id="LOCAL-00266" summary="Added static method get\_case\_count to DAO\_Dashboard for getting test case count.">
+      <option name="closed" value="true" />
+      <created>1711517414843</created>
+      <option name="number" value="00266" />
+      <option name="presentableId" value="LOCAL-00266" />
+      <option name="project" value="LOCAL" />
+      <updated>1711517414843</updated>
+    </task>
+    <option name="localTasksCounter" value="267" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -846,32 +847,32 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added methods to DashboardDao to get API count and count from yesterday. Added time utility file with various time" />
-    <MESSAGE value="Added methods to DashboardDao to get API count and count from yesterday. Added time utility file with various time-" />
-    <MESSAGE value="Added methods to DashboardDao to get API count and count from yesterday. Added time utility file with various time-related" />
-    <MESSAGE value="Added methods to DashboardDao to get API count and count from yesterday. Added time utility file with various time-related functions" />
-    <MESSAGE value="Added methods to DashboardDao to get API count and count from yesterday. Added time utility file with various time-related functions." />
+    <MESSAGE value="Add sort field to DetailStep model and add time utility" />
+    <MESSAGE value="Add sort field to DetailStep model and add time utility functions" />
+    <MESSAGE value="Add sort field to DetailStep model and add time utility functions." />
     <MESSAGE value="Add" />
-    <MESSAGE value="Add static" />
-    <MESSAGE value="Add static method" />
-    <MESSAGE value="Add static method to" />
-    <MESSAGE value="Add static method to get" />
-    <MESSAGE value="Add static method to get past" />
-    <MESSAGE value="Add static method to get past API" />
-    <MESSAGE value="Add static method to get past API count" />
-    <MESSAGE value="Add static method to get past API count." />
-    <MESSAGE value="Fixed" />
-    <MESSAGE value="Fixed dash" />
-    <MESSAGE value="Fixed dashboard" />
-    <MESSAGE value="Fixed dashboard." />
-    <MESSAGE value="Fixed dashboard.py" />
-    <MESSAGE value="Fixed dashboard.py by" />
-    <MESSAGE value="Fixed dashboard.py by removing" />
-    <MESSAGE value="Fixed dashboard.py by removing unnecessary" />
-    <MESSAGE value="Fixed dashboard.py by removing unnecessary import" />
-    <MESSAGE value="Fixed dashboard.py by removing unnecessary import statement" />
-    <MESSAGE value="Fixed dashboard.py by removing unnecessary import statement." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed dashboard.py by removing unnecessary import statement." />
+    <MESSAGE value="Added" />
+    <MESSAGE value="Added static" />
+    <MESSAGE value="Added static method" />
+    <MESSAGE value="Added static method get" />
+    <MESSAGE value="Added static method get\_" />
+    <MESSAGE value="Added static method get\_case" />
+    <MESSAGE value="Added static method get\_case\_" />
+    <MESSAGE value="Added static method get\_case\_count" />
+    <MESSAGE value="Added static method get\_case\_count to" />
+    <MESSAGE value="Added static method get\_case\_count to DA" />
+    <MESSAGE value="Added static method get\_case\_count to DAO" />
+    <MESSAGE value="Added static method get\_case\_count to DAO\_" />
+    <MESSAGE value="Added static method get\_case\_count to DAO\_D" />
+    <MESSAGE value="Added static method get\_case\_count to DAO\_Dash" />
+    <MESSAGE value="Added static method get\_case\_count to DAO\_Dashboard" />
+    <MESSAGE value="Added static method get\_case\_count to DAO\_Dashboard for" />
+    <MESSAGE value="Added static method get\_case\_count to DAO\_Dashboard for getting" />
+    <MESSAGE value="Added static method get\_case\_count to DAO\_Dashboard for getting test" />
+    <MESSAGE value="Added static method get\_case\_count to DAO\_Dashboard for getting test case" />
+    <MESSAGE value="Added static method get\_case\_count to DAO\_Dashboard for getting test case count" />
+    <MESSAGE value="Added static method get\_case\_count to DAO\_Dashboard for getting test case count." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added static method get\_case\_count to DAO\_Dashboard for getting test case count." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$__init____2_.coverage" NAME="__init__ (2) Coverage Results" MODIFIED="1706696733502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/management/commands" />

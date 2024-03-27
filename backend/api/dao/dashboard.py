@@ -2,10 +2,13 @@
 DESCRIPTION：看板数据访问对象
 :Created by Null.
 """
+from django.db.models import Avg
+
 from api.models.https import (
     Api,
     Case
 )
+from api.models.report import Main
 from utils.logger import logger
 from utils import time
 
@@ -83,3 +86,22 @@ class DashboardDao:
                 f"🏓获取测试用例数据数据失败 -> {err}"
             )
             raise Exception("获取测试用例数据数据失败❌")
+
+    @staticmethod
+    def get_case_pass_rate():
+        """
+        获取测试用例的通过率。
+
+        :return: 返回测试用例的通过率。
+        :rtype: float
+        :raises Exception: 当获取通过率失败时引发异常。
+        """
+        try:
+            pass_rate = Main.objects.aggregate(Avg("pass_rate"))
+
+            return pass_rate
+        except (Main.DoesNotExist, Exception) as err:
+            logger.debug(
+                f"🏓获取测试用例通过率数据数据失败 -> {err}"
+            )
+            raise Exception("获取测试用例通过率数据数据失败❌")
