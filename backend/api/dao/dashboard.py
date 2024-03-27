@@ -45,3 +45,22 @@ class DashboardDao:
                 f"🏓获取接口文档数据数据失败 -> {err}"
             )
             raise Exception("获取接口文档数据数据失败❌")
+
+    @staticmethod
+    def get_past_api_count(days=7):
+        """
+        获取过去多少天的API文档的数量。
+
+        :return: 返回API文档的数量。
+        :rtype: int
+        :raises Exception: 当获取数量失败时引发异常。
+        """
+        try:
+            import django.utils.timezone
+            count = Api.objects.filter(create_time__date__in=time.get_before_day(days)).count()
+            return count
+        except (Api.DoesNotExist, Exception) as err:
+            logger.debug(
+                f"🏓获取接口文档数据数据失败 -> {err}"
+            )
+            raise Exception("获取接口文档数据数据失败❌")
