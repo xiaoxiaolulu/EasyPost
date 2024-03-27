@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="&quot;Rename test_1ddd.py to test_engine.py in backend/api/tests&quot;">
-      <change beforePath="$PROJECT_DIR$/api/tests/test_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/tests/test_engine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/tests/test_user_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +90,7 @@
     "Django Server.backend.executor": "Run",
     "Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken.executor": "Run",
     "Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken.setUp.executor": "Run",
+    "Django tests.Test: api.tests.test_user_list.TestUserListViewSet.executor": "Run",
     "Python tests.Python tests in test_custom_token.py.executor": "Run",
     "Python.time.executor": "Run",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
@@ -131,7 +134,7 @@
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\templates\asserts" />
     </key>
   </component>
-  <component name="RunManager" selected="Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken">
+  <component name="RunManager" selected="Django tests.Test: api.tests.test_user_list.TestUserListViewSet">
     <configuration name="Test: api.tests.test_custom_token.TestCustomJsonWebToken" type="DjangoTestsConfigurationType" temporary="true">
       <module name="backend" />
       <option name="ENV_FILES" value="" />
@@ -174,7 +177,7 @@
       <option name="OPTIONS" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="__init__ (3)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Test: api.tests.test_user_list.TestUserListViewSet" type="DjangoTestsConfigurationType" temporary="true">
       <module name="backend" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -183,18 +186,16 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api/dao" />
+      <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/dao/__init__.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="TARGET" value="api.tests.test_user_list.TestUserListViewSet" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
       <method v="2" />
     </configuration>
     <configuration name="time" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -265,17 +266,17 @@
       <item itemvalue="Django Server.backend" />
       <item itemvalue="Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken" />
       <item itemvalue="Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken.setUp" />
+      <item itemvalue="Django tests.Test: api.tests.test_user_list.TestUserListViewSet" />
       <item itemvalue="Python.time" />
-      <item itemvalue="Python.__init__ (3)" />
       <item itemvalue="Python tests.Python tests in test_custom_token.py" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Django tests.Test: api.tests.test_user_list.TestUserListViewSet" />
         <item itemvalue="Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken" />
         <item itemvalue="Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken.setUp" />
         <item itemvalue="Python tests.Python tests in test_custom_token.py" />
         <item itemvalue="Python.time" />
-        <item itemvalue="Python.__init__ (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -414,15 +415,7 @@
       <workItem from="1710928291951" duration="87000" />
       <workItem from="1710930276427" duration="213000" />
       <workItem from="1711421283314" duration="7276000" />
-      <workItem from="1711435206521" duration="14650000" />
-    </task>
-    <task id="LOCAL-00225" summary=":construction_worker: 修改部分错误">
-      <option name="closed" value="true" />
-      <created>1706609248858</created>
-      <option name="number" value="00225" />
-      <option name="presentableId" value="LOCAL-00225" />
-      <option name="project" value="LOCAL" />
-      <updated>1706609248858</updated>
+      <workItem from="1711435206521" duration="15163000" />
     </task>
     <task id="LOCAL-00226" summary=":construction_worker: 修改部分错误">
       <option name="closed" value="true" />
@@ -808,7 +801,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711522276898</updated>
     </task>
-    <option name="localTasksCounter" value="274" />
+    <task id="LOCAL-00274" summary="&quot;Rename test_1ddd.py to test_engine.py in backend/api/tests&quot;">
+      <option name="closed" value="true" />
+      <created>1711522396157</created>
+      <option name="number" value="00274" />
+      <option name="presentableId" value="LOCAL-00274" />
+      <option name="project" value="LOCAL" />
+      <updated>1711522396157</updated>
+    </task>
+    <option name="localTasksCounter" value="275" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -892,6 +893,7 @@
     <SUITE FILE_PATH="coverage/backend$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1707391988545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/backend$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1706695021907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
     <SUITE FILE_PATH="coverage/backend$__init____3_.coverage" NAME="__init__ (3) Coverage Results" MODIFIED="1709112766835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/dao" />
+    <SUITE FILE_PATH="coverage/backend$Test__api_tests_test_user_list_TestUserListViewSet.coverage" NAME="Test: api.tests.test_user_list.TestUserListViewSet Coverage Results" MODIFIED="1711522863669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/backend$manage.coverage" NAME="manage Coverage Results" MODIFIED="1706599627949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/backend$main.coverage" NAME="main Coverage Results" MODIFIED="1706091376465" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/celery_work" />
     <SUITE FILE_PATH="coverage/backend$init_task.coverage" NAME="init_task Coverage Results" MODIFIED="1705894334573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/events" />
