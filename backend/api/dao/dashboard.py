@@ -29,9 +29,9 @@ class DashboardDao:
             return count
         except (Api.DoesNotExist, Exception) as err:
             logger.debug(
-                f"🏓获取接口文档数据数据失败 -> {err}"
+                f"🏓获取接口文档数据失败 -> {err}"
             )
-            raise Exception("获取接口文档数据数据失败❌")
+            raise Exception("获取接口文档数据失败❌")
 
     @staticmethod
     def get_ytd_api_count():
@@ -47,9 +47,9 @@ class DashboardDao:
             return count
         except (Api.DoesNotExist, Exception) as err:
             logger.debug(
-                f"🏓获取接口文档数据数据失败 -> {err}"
+                f"🏓获取接口文档数据失败 -> {err}"
             )
-            raise Exception("获取接口文档数据数据失败❌")
+            raise Exception("获取接口文档数据失败❌")
 
     @staticmethod
     def get_past_api_count(days=7):
@@ -65,9 +65,9 @@ class DashboardDao:
             return count
         except (Api.DoesNotExist, Exception) as err:
             logger.debug(
-                f"🏓获取接口文档数据数据失败 -> {err}"
+                f"🏓获取接口文档数据失败 -> {err}"
             )
-            raise Exception("获取接口文档数据数据失败❌")
+            raise Exception("获取接口文档数据失败❌")
 
     @staticmethod
     def get_case_count():
@@ -83,9 +83,9 @@ class DashboardDao:
             return count
         except (Case.DoesNotExist, Exception) as err:
             logger.debug(
-                f"🏓获取测试用例数据数据失败 -> {err}"
+                f"🏓获取测试用例数据失败 -> {err}"
             )
-            raise Exception("获取测试用例数据数据失败❌")
+            raise Exception("获取测试用例数据失败❌")
 
     @staticmethod
     def get_case_pass_rate():
@@ -102,6 +102,25 @@ class DashboardDao:
             return pass_rate
         except (Main.DoesNotExist, Exception) as err:
             logger.debug(
-                f"🏓获取测试用例通过率数据数据失败 -> {err}"
+                f"🏓获取测试用例通过率数据失败 -> {err}"
             )
-            raise Exception("获取测试用例通过率数据数据失败❌")
+            raise Exception("获取测试用例通过率数据失败❌")
+
+    @staticmethod
+    def get_execute_count():
+        """
+        获取测试用例执行次数。
+
+        :return: 返回测试用例执行次数。
+        :rtype: int
+        :raises Exception: 当获取执行次数失败时引发异常。
+        """
+        try:
+            count = Main.objects.count()
+
+            return count
+        except (Main.DoesNotExist, Exception) as err:
+            logger.debug(
+                f"🏓获取测试用例执行次数据失败 -> {err}"
+            )
+            raise Exception("获取测试用例执行次数数据失败❌")
