@@ -2051,3 +2051,5 @@ INFO     [2024-03-26 16:58:26,315] [0492050bcd014e24b2fe16fbfd435014] django.ser
 INFO     [2024-03-26 16:58:26,330] [b8364fb7bd3f4ecab831a0031e5c7d85] django.server: "GET /api/report/detail?id=48&name=&page=1 HTTP/1.1" 200 49441
 INFO     [2024-03-27 10:35:40,497] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\https.py changed, reloading.
 INFO     [2024-03-27 10:35:41,418] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-03-27 14:14:11,466] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\urls.py changed, reloading.
+INFO     [2024-03-27 14:14:12,349] [none] django.utils.autoreload: Watching for file changes with StatReloader
