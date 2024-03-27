@@ -2,7 +2,10 @@
 DESCRIPTION：看板数据访问对象
 :Created by Null.
 """
-from api.models.https import Api
+from api.models.https import (
+    Api,
+    Case
+)
 from utils.logger import logger
 from utils import time
 
@@ -62,3 +65,21 @@ class DashboardDao:
                 f"🏓获取接口文档数据数据失败 -> {err}"
             )
             raise Exception("获取接口文档数据数据失败❌")
+
+    @staticmethod
+    def get_case_count():
+        """
+        获取测试用例的数量。
+
+        :return: 返回测试用例的数量。
+        :rtype: int
+        :raises Exception: 当获取数量失败时引发异常。
+        """
+        try:
+            count = Case.objects.count()
+            return count
+        except (Case.DoesNotExist, Exception) as err:
+            logger.debug(
+                f"🏓获取测试用例数据数据失败 -> {err}"
+            )
+            raise Exception("获取测试用例数据数据失败❌")
