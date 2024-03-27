@@ -37,7 +37,6 @@ class DashboardDao:
         :raises Exception: 当获取数量失败时引发异常。
         """
         try:
-            import django.utils.timezone
             count = Api.objects.filter(create_time__date=time.yesterday).count()
             return count
         except (Api.DoesNotExist, Exception) as err:
@@ -56,7 +55,6 @@ class DashboardDao:
         :raises Exception: 当获取数量失败时引发异常。
         """
         try:
-            import django.utils.timezone
             count = Api.objects.filter(create_time__date__in=time.get_before_day(days)).count()
             return count
         except (Api.DoesNotExist, Exception) as err:
