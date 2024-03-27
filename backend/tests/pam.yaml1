@@ -1,6 +1,0 @@
-config:
-  name: post示例
-  fixtures: username, password
-  parameters:
-    - [ test1, '123456' ]
-    - [ test2, '123456' ]
