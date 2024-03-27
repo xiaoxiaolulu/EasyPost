@@ -491,9 +491,12 @@ class HttpDao:
         try:
             request_body = cls.parser_api_data(request)
             api_copy_records = ApiCopy.objects.filter(user=request.user).order_by('-create_time')
+
             if len(api_copy_records) > 100:
+                oldest_record = api_copy_records[100]
                 ApiCopy.objects.filter(user=request.user).filter(
-                    create_time__lt=api_copy_records[100].create_time).delete()
+                    create_time__lt=oldest_record.create_time).delete()
+
             ApiCopy.objects.create(**request_body)
         except Exception as e:
             logger.debug(

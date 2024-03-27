@@ -2,8 +2,46 @@
 DESCRIPTION：看板数据访问对象
 :Created by Null.
 """
+from api.models.https import Api
+from utils.logger import logger
+from utils import time
 
 
 class DashboardDao:
 
-    pass
+    @staticmethod
+    def get_api_count():
+        """
+        获取API文档的数量。
+
+        :return: 返回API文档的数量。
+        :rtype: int
+        :raises Exception: 当获取数量失败时引发异常。
+        """
+        try:
+            count = Api.objects.count()
+            return count
+        except (Api.DoesNotExist, Exception) as err:
+            logger.debug(
+                f"🏓获取接口文档数据数据失败 -> {err}"
+            )
+            raise Exception("获取接口文档数据数据失败❌")
+
+    @staticmethod
+    def get_ytd_api_count():
+        """
+        获取昨天的API文档的数量。
+
+        :return: 返回API文档的数量。
+        :rtype: int
+        :raises Exception: 当获取数量失败时引发异常。
+        """
+        try:
+            import django.utils.timezone
+            count = Api.objects.filter(create_time__date=time.yesterday).count()
+            return count
+        except (Api.DoesNotExist, Exception) as err:
+            logger.debug(
+                f"🏓获取接口文档数据数据失败 -> {err}"
+            )
+            raise Exception("获取接口文档数据数据失败❌")
