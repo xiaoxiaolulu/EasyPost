@@ -39,7 +39,9 @@ __all__ = [
     "array_range",
     "guid",
     "url",
-    "postcode"
+    "postcode",
+    "paragraph",
+    "title"
 ]
 
 
@@ -142,6 +144,16 @@ def postcode():
     return fk.postcode()
 
 
+def paragraph():
+    """随机生成一段文本"""
+    return fk.text()
+
+
+def title():
+    """随机生成一个标题"""
+    return fk.sentence(nb_words=4)
+
+
 def random_ipv4():
     """随机生成一个ipv4的地址"""
     return fk.ipv4()
@@ -181,4 +193,4 @@ def rsa_encrypt(msg, server_pub):
 
 
 if __name__ == '__main__':
-    print(fk.postcode())
+    print(fk.sentence(nb_words=4))
