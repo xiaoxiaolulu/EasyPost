@@ -1,7 +1,4 @@
 import time
-from _typeshed import SupportsSub, SupportsRSub, SupportsDunderGT, SupportsDunderLT, SupportsDunderGE, SupportsDunderLE
-from unittest.case import _S, _SupportsAbsAndDunderGE, _T
-
 import numpy as np
 from pymeter.api.config import (
     TestPlan,
@@ -14,11 +11,10 @@ import os
 import re
 import unittest
 from numbers import Number
-from typing import Any, Dict, Callable, SupportsAbs, SupportsRound, Iterable, Container
+from typing import Any
 import requests
 from jsonpath import jsonpath
 from requests_toolbelt import MultipartEncoder
-
 from core.builitin import compares
 from core.engine.env import (
     BaseEnv,
@@ -137,11 +133,11 @@ class BaseTest(unittest.TestCase, CaseRunLog):
 
     def step(self, data) -> None:
         """执行单条用例的主函数"""
+        # 日志记录
+        self.__run_log()
         # 强制等待
         sleep = data.get('timer', 0)
         self.timer(sleep)
-        # 日志记录
-        self.__run_log()
         # 执行前置脚本
         self.__run_setup_script(data)
         # 发送请求

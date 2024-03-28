@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Added several new functions to the built-in library: random_string, array_range, guid, url, and postcode.">
-      <change afterPath="$PROJECT_DIR$/core/builitin/compares.py" afterDir="false" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Added new built-in function `get_time_stamp` to generate time stamps.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/builitin/validator.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/core/engine/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/engine/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/engine/engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/engine/engine.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
     </list>
@@ -114,7 +111,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "E:/codes/AnotherFasterRunner",
+    "last_opened_file_path": "E:/codes/MuskTest",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.stylelint": "true",
     "node.js.detected.package.tslint": "true",
@@ -148,7 +145,30 @@
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\templates\asserts" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_assert.MyAssertTest.test_assertNotEqual">
+  <component name="RunManager" selected="Python.functions">
+    <configuration name="functions" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/core/builitin" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/core/builitin/functions.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="backend" type="Python.DjangoServer" factoryName="Django server">
       <module name="backend" />
       <option name="ENV_FILES" value="" />
@@ -207,22 +227,6 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for Test1" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="backend" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/core/request" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;Test1&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Python tests for test_assert.MyAssertTest.test_assertNotEqual" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <option name="ENV_FILES" value="" />
@@ -257,19 +261,19 @@
     </configuration>
     <list>
       <item itemvalue="Django Server.backend" />
+      <item itemvalue="Python.functions" />
       <item itemvalue="Python tests.Python tests for MyAssertTest" />
       <item itemvalue="Python tests.Python tests for MyAssertTest.test_assertNotEqual" />
-      <item itemvalue="Python tests.Python tests for Test1" />
       <item itemvalue="Python tests.Python tests for test_assert.MyAssertTest.test_assertNotEqual" />
       <item itemvalue="Python tests.Python tests in __init__.py" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.functions" />
         <item itemvalue="Python tests.Python tests for test_assert.MyAssertTest.test_assertNotEqual" />
         <item itemvalue="Python tests.Python tests for MyAssertTest" />
         <item itemvalue="Python tests.Python tests for MyAssertTest.test_assertNotEqual" />
         <item itemvalue="Python tests.Python tests in __init__.py" />
-        <item itemvalue="Python tests.Python tests for Test1" />
       </list>
     </recent_temporary>
   </component>
@@ -411,23 +415,7 @@
       <workItem from="1711435206521" duration="16392000" />
       <workItem from="1711524748647" duration="5736000" />
       <workItem from="1711534478853" duration="111000" />
-      <workItem from="1711591405569" duration="7620000" />
-    </task>
-    <task id="LOCAL-00233" summary=":construction_worker: 修改部分错误">
-      <option name="closed" value="true" />
-      <created>1706757116559</created>
-      <option name="number" value="00233" />
-      <option name="presentableId" value="LOCAL-00233" />
-      <option name="project" value="LOCAL" />
-      <updated>1706757116559</updated>
-    </task>
-    <task id="LOCAL-00234" summary=":construction_worker: 修改部分错误">
-      <option name="closed" value="true" />
-      <created>1706758186233</created>
-      <option name="number" value="00234" />
-      <option name="presentableId" value="LOCAL-00234" />
-      <option name="project" value="LOCAL" />
-      <updated>1706758186233</updated>
+      <workItem from="1711591405569" duration="11519000" />
     </task>
     <task id="LOCAL-00235" summary=":construction_worker: 修改部分错误">
       <option name="closed" value="true" />
@@ -805,7 +793,23 @@
       <option name="project" value="LOCAL" />
       <updated>1711595369916</updated>
     </task>
-    <option name="localTasksCounter" value="282" />
+    <task id="LOCAL-00282" summary="Added built-in comparison functions for validating data.">
+      <option name="closed" value="true" />
+      <created>1711604765297</created>
+      <option name="number" value="00282" />
+      <option name="presentableId" value="LOCAL-00282" />
+      <option name="project" value="LOCAL" />
+      <updated>1711604765297</updated>
+    </task>
+    <task id="LOCAL-00283" summary="Added new built-in function `get_time_stamp` to generate time stamps.">
+      <option name="closed" value="true" />
+      <created>1711604981914</created>
+      <option name="number" value="00283" />
+      <option name="presentableId" value="LOCAL-00283" />
+      <option name="project" value="LOCAL" />
+      <updated>1711604981915</updated>
+    </task>
+    <option name="localTasksCounter" value="284" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -835,32 +839,32 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added several new" />
-    <MESSAGE value="Added several new functions" />
-    <MESSAGE value="Added several new functions to" />
-    <MESSAGE value="Added several new functions to the" />
-    <MESSAGE value="Added several new functions to the built" />
-    <MESSAGE value="Added several new functions to the built-" />
-    <MESSAGE value="Added several new functions to the built-in" />
-    <MESSAGE value="Added several new functions to the built-in library" />
-    <MESSAGE value="Added several new functions to the built-in library:" />
-    <MESSAGE value="Added several new functions to the built-in library: random" />
-    <MESSAGE value="Added several new functions to the built-in library: random_" />
-    <MESSAGE value="Added several new functions to the built-in library: random_string" />
-    <MESSAGE value="Added several new functions to the built-in library: random_string," />
-    <MESSAGE value="Added several new functions to the built-in library: random_string, array" />
-    <MESSAGE value="Added several new functions to the built-in library: random_string, array_" />
-    <MESSAGE value="Added several new functions to the built-in library: random_string, array_range" />
-    <MESSAGE value="Added several new functions to the built-in library: random_string, array_range," />
-    <MESSAGE value="Added several new functions to the built-in library: random_string, array_range, guid" />
-    <MESSAGE value="Added several new functions to the built-in library: random_string, array_range, guid," />
-    <MESSAGE value="Added several new functions to the built-in library: random_string, array_range, guid, url" />
-    <MESSAGE value="Added several new functions to the built-in library: random_string, array_range, guid, url," />
-    <MESSAGE value="Added several new functions to the built-in library: random_string, array_range, guid, url, and" />
-    <MESSAGE value="Added several new functions to the built-in library: random_string, array_range, guid, url, and post" />
-    <MESSAGE value="Added several new functions to the built-in library: random_string, array_range, guid, url, and postcode" />
-    <MESSAGE value="Added several new functions to the built-in library: random_string, array_range, guid, url, and postcode." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added several new functions to the built-in library: random_string, array_range, guid, url, and postcode." />
+    <MESSAGE value="Added built-in comparison functions for valid" />
+    <MESSAGE value="Added built-in comparison functions for validating" />
+    <MESSAGE value="Added built-in comparison functions for validating data" />
+    <MESSAGE value="Added built-in comparison functions for validating data." />
+    <MESSAGE value="Add" />
+    <MESSAGE value="Added" />
+    <MESSAGE value="Added new" />
+    <MESSAGE value="Added new built" />
+    <MESSAGE value="Added new built-" />
+    <MESSAGE value="Added new built-in" />
+    <MESSAGE value="Added new built-in function" />
+    <MESSAGE value="Added new built-in function `" />
+    <MESSAGE value="Added new built-in function `get" />
+    <MESSAGE value="Added new built-in function `get_" />
+    <MESSAGE value="Added new built-in function `get_time" />
+    <MESSAGE value="Added new built-in function `get_time_" />
+    <MESSAGE value="Added new built-in function `get_time_st" />
+    <MESSAGE value="Added new built-in function `get_time_stamp" />
+    <MESSAGE value="Added new built-in function `get_time_stamp`" />
+    <MESSAGE value="Added new built-in function `get_time_stamp` to" />
+    <MESSAGE value="Added new built-in function `get_time_stamp` to generate" />
+    <MESSAGE value="Added new built-in function `get_time_stamp` to generate time" />
+    <MESSAGE value="Added new built-in function `get_time_stamp` to generate time st" />
+    <MESSAGE value="Added new built-in function `get_time_stamp` to generate time stamps" />
+    <MESSAGE value="Added new built-in function `get_time_stamp` to generate time stamps." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new built-in function `get_time_stamp` to generate time stamps." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$__init____2_.coverage" NAME="__init__ (2) Coverage Results" MODIFIED="1706696733502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/management/commands" />
@@ -872,7 +876,7 @@
     <SUITE FILE_PATH="coverage/http_handler_py$test.coverage" NAME="test Coverage Results" MODIFIED="1699719681836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/request" />
     <SUITE FILE_PATH="coverage/http_handler_py$.coverage" NAME=" Coverage Results" MODIFIED="1699719668172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/backend$test.coverage" NAME="test Coverage Results" MODIFIED="1706681056646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/events" />
-    <SUITE FILE_PATH="coverage/backend$functions.coverage" NAME="functions Coverage Results" MODIFIED="1711595147262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/builitin" />
+    <SUITE FILE_PATH="coverage/backend$functions.coverage" NAME="functions Coverage Results" MODIFIED="1711604944057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/builitin" />
     <SUITE FILE_PATH="coverage/backend$event_manager.coverage" NAME="event_manager Coverage Results" MODIFIED="1706679188463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/events" />
     <SUITE FILE_PATH="coverage/backend$__init____1_.coverage" NAME="__init__ (1) Coverage Results" MODIFIED="1707126339147" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/service" />
     <SUITE FILE_PATH="coverage/backend$Test__api_tests_test_custom_token_TestCustomJsonWebToken.coverage" NAME="Test: api.tests.test_custom_token.TestCustomJsonWebToken Coverage Results" MODIFIED="1711522004553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
