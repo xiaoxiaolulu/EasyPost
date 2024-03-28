@@ -1,4 +1,7 @@
+import importlib
 import time
+from functools import wraps
+from unittest import TestSuite
 import numpy as np
 from pymeter.api.config import (
     TestPlan,
@@ -11,7 +14,10 @@ import os
 import re
 import unittest
 from numbers import Number
-from typing import Any
+from typing import (
+    Any,
+    Callable
+)
 import requests
 from jsonpath import jsonpath
 from requests_toolbelt import MultipartEncoder
@@ -20,13 +26,20 @@ from core.engine.env import (
     BaseEnv,
     DEBUG,
     session,
-    ENV
+    ENV,
+    db
 )
 from core.engine.log import CaseRunLog
+from core.engine.runner import TestRunner
+from core.models import step
+
+try:
+    global_func = importlib.import_module('global_func')
+except ModuleNotFoundError:
+    from core.builitin import functions as global_func
 
 
 class BaseTest(unittest.TestCase, CaseRunLog):
-
     """用例执行逻辑"""
 
     def timer(self, second) -> None:
@@ -49,13 +62,13 @@ class BaseTest(unittest.TestCase, CaseRunLog):
                 test_item.__unittest_skip_why__ = 'Skip'
             return test_item
 
-        except (AttributeError, ):
+        except (AttributeError,):
             return test_item
 
     def loop(self, loop_obj, cls, test_name, new_test_func):
         """循环控制器"""
 
-        count = 1 if loop_obj is None else loop_obj # noqa
+        count = 1 if loop_obj is None else loop_obj  # noqa
         for c in range(int(count)):
             tag = f'_NoLooP_' if loop_obj is None else f'_Loop_{c + 1}'
             setattr(cls, f"{test_name + tag}", new_test_func)
@@ -135,6 +148,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         """执行单条用例的主函数"""
         # 日志记录
         self.__run_log()
+        # 数据库查询
         # 强制等待
         sleep = data.get('timer', 0)
         self.timer(sleep)
@@ -201,6 +215,29 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         self.debug_log("响应头：{}\n".format(self.response_header))
         self.debug_log("响应体：{}\n".format(self.response_body))
         self.info_log('请求响应状态码:{}\n'.format(self.status_code))
+
+    def none_connect_obj(self) -> dict[str, Callable[[Any], Any] | Callable[[Any], Any]]:
+        none_obj = {
+            "query_sql": lambda x: self.error_log("❌MYSQL_HOST not found in config.py"),
+            "execute_sql": lambda x: self.error_log("❌MYSQL_HOST not found in config.py")
+        }
+        return none_obj
+
+    # def execute_sql(self):
+    #     setting = DATABASES.get("default", {})
+    #     none_obj = self.none_connect_obj()
+    #
+    #     setting_obj = type('Setting', (object,), setting)
+    #     if not hasattr(setting_obj, 'database'):
+    #         return none_obj
+    #     try:
+    #         db = OperateMysql(setting)
+    #         return {
+    #             "query_sql": db.execute
+    #         }
+    #     except Exception as err:
+    #         log.error(f"❌Mysql Not connected {err}")
+    #         return none_obj
 
     def __send_request(self, data) -> Response:
         """发送请求"""
@@ -420,7 +457,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         """
         self.info_log('断言方法:{} 预期结果:{} 实际结果:{}\n'.format(methods, expected, actual))
         assert_method = self.get_assert_method().get(methods)
-        global result # noqa
+        global result  # noqa
         if assert_method:
             try:
                 assert_method(expected, actual)
@@ -464,5 +501,171 @@ class BaseTest(unittest.TestCase, CaseRunLog):
     def __run_setup_script(self, data):
         """执行前置脚本"""
         self.info_log('执行前置脚本\n')
-        self.hook_gen = self.__run_script(data) # noqa
+        self.hook_gen = self.__run_script(data)  # noqa
         next(self.hook_gen)  # noqa
+
+
+class GenerateCase:
+    """解析数据创建测试用例"""
+
+    def __init__(self):
+        self.controller = BaseTest()
+
+    def data_to_suite(self, datas: step.TestCase) -> TestSuite:
+        """
+        根据用例数据生成测试套件
+        :param datas:
+        :return:
+        """
+        suite = unittest.TestSuite()
+        load = unittest.TestLoader()
+        if isinstance(datas, list):
+            for item in datas:
+                self.add_test(item, load, suite)
+            return suite
+
+        if isinstance(datas, dict):
+            self.add_test(datas, load, suite)
+            return suite
+
+    def add_test(self, item, load, suite):
+        cls = self.create_test_class(item)
+        suite.addTest(load.loadTestsFromTestCase(cls))  # noqa
+
+    def create_test_class(self, item) -> type:
+        """创建测试类"""
+        cls_name = item.get('name') or 'Demo'
+
+        cases = item.get('cases', None)
+
+        collections = cases if cases is not None else [item]
+
+        # 创建测试类
+        cls = type(cls_name, (BaseTest,), {})
+        # 遍历数据生成,动态添加测试方法
+        self.create_case_content(cls, collections)
+
+        return cls
+
+    def create_case_content(self, cls, cases, skip_collections: list = [], loop_collections: list = []):
+        """
+        生成用例内容模版, 目前支持嵌套循环控制器与if控制器(不超过2层)
+        {
+         Loop: 3,
+         children: [
+            Loop: 2,
+            ....
+         ]
+        }
+        """
+        for index, case_ in enumerate(cases):
+            mode = case_.get('mode', 'normal')
+            if mode == 'normal':
+                global children # noqa
+                try:
+                    children = case_.get('children', None)
+                except AttributeError:
+                    pass
+
+                if children:
+                    skip_after = case_.get('If', {'condition': False})
+                    loop_after = case_.get('Loop', 1)
+                    skip_collections.append(skip_after)
+                    loop_collections.append(loop_after)
+
+                    self.create_case_content(cls, children, skip_collections, loop_collections)
+                else:
+                    if_before = case_.get('If', {'condition': False})
+                    loop_before = case_.get('Loop', 1)
+                    skip_collections.append(if_before)
+                    loop_collections.append(loop_before)
+
+                    # 计算当前执行用例循环次数
+                    loop_count = self.controller.loop_strategy(loop_collections)
+                    # 计算当前执行用例是否跳过
+                    if_object = self.controller.skip_strategy(skip_collections)
+
+                    test_name = self.create_test_name(index, len(cases))
+                    new_test_func = self.create_test_func(getattr(cls, 'step'), case_)
+                    new_test_func.__doc__ = case_.get('title') or new_test_func.__doc__
+
+                    # 循环当前用例, 默认1次
+                    self.controller.loop(loop_count, cls, test_name, new_test_func)
+
+                    test_name = [name for name in cls.__dict__.keys() if name.__contains__('test_')]
+
+                    self.controller.skipIf(if_object, cls, str(test_name.pop()))
+
+            else:
+
+                test_name = self.create_test_name(index, len(cases))
+                new_test_func = self.create_test_func(getattr(cls, 'perform'), case_)
+                new_test_func.__doc__ = case_.get('title') or new_test_func.__doc__
+                setattr(cls, test_name, new_test_func)
+
+    def create_test_func(self, func, case_) -> Callable[[Any], None]:
+        """创建测试方法"""
+
+        @wraps(func)
+        def wrapper(self):  # noqa
+            func(self, case_)
+
+        return wrapper
+
+    @staticmethod
+    def create_test_name(index, length) -> str:
+        """生成测试方法名"""
+        n = (len(str(length)) // len(str(index))) - 1
+        test_name = 'test_{}'.format("0" * n + str(index + 1))
+        return test_name
+def run_test(case_data, env_config={}, tester='测试员', thread_count=1, debug=True) -> tuple[Any, dict[Any, Any]] | Any: # noqa
+    """
+    :param case_data: 测试套件数据
+    :param env_config: 用例执行的环境配置
+        env_config:{
+        'ENV':{"host":'http//:127.0.0.1'},
+        'db':[{},{}],
+        'FuncTools':'工具函数文件'
+        }
+    :param thread_count: 运行线程数
+    :param debug: 单接口调试用debug模式
+    :param tester: 测试员
+    :return:
+        debug模式：会返回本次运行的结果和 本次运行设置的全局变量，
+    """
+    global global_func, db, DEBUG, ENV, result # noqa
+    global_func_file = env_config.get('global_func', b'')
+    if global_func_file:
+        with open('global_func.py', 'w', encoding='utf-8') as f:
+            f.write(global_func_file)  # noqa
+
+    # 更新运行环境
+    global_func = importlib.reload(global_func)
+    DEBUG = debug
+    ENV = {**env_config.get('ENV', {})}
+    db.init_connect(env_config.get('db', []))
+    # 失败重跑
+    rerun = env_config.get('rerun', 0)
+    # 生成测试用例
+    suite = GenerateCase().data_to_suite(case_data)
+    # 运行测试用例
+    runner = TestRunner(suite=suite, tester=tester)
+    result = runner.run(thread_count=thread_count, rerun=rerun)
+    if global_func and global_func_file:
+        os.remove('global_func.py')
+    # 断开数据库连接
+    db.close_connect()
+    return result
+
+
+
+def run_api(api_data, tester='测试员', thread_count=1) -> tuple[Any, dict[Any, Any]] | Any: # noqa
+    global result # noqa
+    # 生成测试用例
+    suite = GenerateCase().data_to_suite(api_data)
+    # 运行测试用例
+    runner = TestRunner(suite=suite, tester=tester)
+    result = runner.run(thread_count=thread_count)
+    # 断开数据库连接
+    db.close_connect()
+    return result

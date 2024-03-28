@@ -1,8 +1,5 @@
 from api.response.fatcory import ResponseStandard
-from core.engine.session_runner import (
-    run_test,
-    run_api
-)
+from core.engine.base import run_test
 
 if __name__ == '__main__':
     # 测试数据(详细结构说明看下一节)
@@ -119,7 +116,7 @@ if __name__ == '__main__':
                         'content-Type': "application/json"
                     },
                     "request": {
-                        'json': {"mobile_phone": "13564957378", "pwd": "lemonban"},
+                        'json': {"mobile_phone": "${{user_mobile}}", "pwd": "lemonban"},
                     },
                     'setup_script': "print('前置脚本123')",
                     'teardown_script': "ep.assertion('相等',200, 200)",
@@ -247,7 +244,7 @@ if __name__ == '__main__':
                         'content-Type': "application/json"
                     },
                     "request": {
-                        'json': {"mobile_phone": "13564957378", "pwd": "lemonban"},
+                        'json': {"mobile_phone": "${{user_mobile}}", "pwd": "lemonban"},
                     },
                     'setup_script': "print('前置脚本123')",
                     'teardown_script': "ep.assertion('相等',200, 200)",
@@ -267,8 +264,8 @@ if __name__ == '__main__':
     #    运行环境数据(详细结构说明看第三节)
     config = {
         'ENV': {
-            # "host": 'http://httpbin.org/post',
-            'user_mobile': 13564957378},
+            "host": 'http://httpbin.org/post',
+            'user_mobile': 999999999},
         'db': [{}, {}],
         'global_func': "print('前置脚本123')",
         'rerun': 1

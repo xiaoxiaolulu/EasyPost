@@ -21,7 +21,7 @@ from api.models.https import (
     ApiCopy
 )
 from api.models.project import Project
-from core.engine.session_runner import (
+from core.engine.base import (
     run_test,
     run_api
 )
