@@ -265,7 +265,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             except Exception as err:
                 self.error_log(f"❌Mysql Not connected {err}")
                 return none_obj
-        except (Exception, ):
+        except (Exception,):
             pass
 
     def __send_request(self, data) -> Response:
@@ -351,10 +351,24 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         return request_params
 
     def __parser_variable(self, data) -> str | None | Any:
-        """替换变量"""
+        """
+        Parses variables in a string, list, or dictionary, replacing them with values from environments.
+
+        Variables are in the format `${variable_name}`. Environment values are retrieved from either a global
+        `ENV` dictionary or the object's `env` dictionary.
+
+        Args:
+            data: The data to parse, which can be a string, list, or dictionary.
+
+        Returns:
+            str | None | Any: The parsed data, type depending on input data:
+                - String: The parsed string with variables replaced.
+                - List or Dictionary: The equivalent parsed list or dictionary.
+                - None: If the input data is of an unsupported type.
+        """
         pattern = r'\${{(.+?)}}'
         old_data = data
-        """解析变量"""
+
         if isinstance(data, str):
             while re.search(pattern, data):
                 res2 = re.search(pattern, data)
@@ -391,7 +405,19 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             return data
 
     def json_extract(self, obj, ext) -> Any:
-        """jsonpath数据提取"""
+        """
+        Extracts a value from a JSON object using a JSONPath expression.
+
+        This method uses the `jsonpath` library (assumed to be installed) to extract data from a JSON object (`obj`)
+        based on the provided JSONPath expression (`ext`).
+
+        Args:
+            obj (dict): The JSON object to extract data from.
+            ext (str): The JSONPath expression specifying the path to the desired value.
+
+        Returns:
+            Any: The extracted value if found, otherwise an empty string.
+        """
         self.info_log('jsonpath提取数据\n')
         value = jsonpath(obj, ext)
         value = value[0] if value else ''
@@ -399,7 +425,18 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         return value
 
     def re_extract(self, string, ext) -> Any:
-        """正则表达式提取数据提取"""
+        """
+        Extracts a value from a string using a regular expression.
+
+        This method attempts to find a match for the provided regular expression (`ext`) within the given `string`.
+
+        Args:
+            string (str): The string to search for the pattern.
+            ext (str): The regular expression pattern to use for extraction.
+
+        Returns:
+            Any: The extracted value if a match is found, otherwise an empty string.
+        """
         self.info_log('正则提取数据\n')
         value = re.search(ext, string)
         value = value.group(1) if value else ''
@@ -501,6 +538,19 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             raise TypeError('❌断言比较方法{},不支持!'.format(methods))
 
     def __run_script(ep, data) -> None:  # noqa
+        """
+            Executes a script within an execution context (ep) with access to environment and print function.
+
+            This method likely operates within the context of a test runner or similar framework.
+            It takes an execution point (ep) object and script data (`data`) as arguments.
+
+            Args:
+                ep: The execution point object (assumed to provide environment and printing functionality).
+                data (dict): The script data dictionary containing potential setup and teardown script information.
+
+            Yields:
+                Any: The data yielded by the script execution (if applicable).
+            """
         print = ep.print  # noqa
         env = ep.env  # noqa
         setup_script = data.get('setup_script')
@@ -522,13 +572,45 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         yield
 
     def __run_teardown_script(self, response) -> None:
-        """执行后置脚本"""
+        """
+        Executes a teardown script and sends the test response.
+
+        This method likely performs the following steps:
+
+        1. Logging: Logs a blank line for potential formatting purposes.
+        2. Generator Interaction: Assumes a generator object (`self.hook_gen`) exists from a previous setup script execution.
+           - Sends the `response` data to the generator using the `send` method.
+           - The generator might process the response data or perform cleanup actions.
+        3. Cleanup: Deletes the `hook_gen` attribute to avoid memory leaks or unintended references.
+
+        Args:
+            response (Any): The response data from the test execution.
+
+        Returns:
+            None
+        """
         self.info_log('执行后置脚本\n')
         self.hook_gen.send(response)
         delattr(self, 'hook_gen')
 
     def __run_setup_script(self, data):
-        """执行前置脚本"""
+        """
+        Executes a setup script and iterates through its generator.
+
+        This method likely performs the following steps:
+
+        1. Logging: Logs a blank line for potential formatting purposes.
+        2. Script Execution: Calls the `__run_script` method (assumed to be defined within the class)
+           to execute the setup script and capture the returned generator object.
+        3. Generator Initialization: Starts the execution of the generator by calling `next` on it.
+           The generator likely yields data or performs actions step-by-step.
+
+        Args:
+            data: The data for the setup script.
+
+        Yields:
+            Any: The data yielded by the `__run_script` generator (if applicable).
+        """
         self.info_log('执行前置脚本\n')
         self.hook_gen = self.__run_script(data)  # noqa
         next(self.hook_gen)  # noqa
@@ -542,9 +624,25 @@ class GenerateCase:
 
     def data_to_suite(self, datas: step.TestCase) -> TestSuite:
         """
-        根据用例数据生成测试套件
-        :param datas:
-        :return:
+        Converts test case data into a unittest.TestSuite object.
+
+        This method takes test case data (`datas`) and transforms it into a `TestSuite`
+        suitable for running with the `unittest` framework. It handles two main cases:
+
+        1. List of test case definitions:
+            - If `datas` is a list, it iterates through each item (assumed to be a test case definition dictionary).
+            - For each item, it calls `add_test` to create a test class or add a single test case to the `suite`.
+
+        2. Single test case definition:
+            - If `datas` is a dictionary, it directly treats it as a single test case definition.
+            - It calls `add_test` to create a test class or add the single test case to the `suite`.
+
+        Args:
+            datas (step.TestCase | list[step.TestCase]): The test case data in the format of a single TestCase object
+                                                        or a list of TestCase objects.
+
+        Returns:
+            TestSuite: The constructed TestSuite object containing the tests.
         """
         suite = unittest.TestSuite()
         load = unittest.TestLoader()
@@ -558,39 +656,69 @@ class GenerateCase:
             return suite
 
     def add_test(self, item, load, suite):
+        """
+        Adds a test class or a single test case to a test suite.
+
+        This method processes a test case definition (`item`) and a test loader (`load`).
+        It creates a corresponding test class using `create_test_class` and then adds the tests
+        to the provided `suite`.
+
+        Args:
+            item (dict): The test case definition dictionary containing information about the class or single test case.
+            load (TestSuiteLoader): An instance of `TestSuiteLoader` (assumed) for loading tests from classes.
+            suite (TestSuite): The test suite object where tests will be added.
+        """
+
         cls = self.create_test_class(item)
         suite.addTest(load.loadTestsFromTestCase(cls))  # noqa
 
     def create_test_class(self, item) -> type:
-        """创建测试类"""
+        """
+        Creates a dynamic test class from a test case definition.
+
+        This method takes a test case definition (`item`) dictionary and generates a corresponding test class.
+
+        Args:
+            item (dict): The test case definition dictionary containing information about the class and its test cases.
+
+        Returns:
+            type: The newly created test class derived from `BaseTest`.
+        """
+
+        # Extract class name or set a default
         cls_name = item.get('name') or 'Demo'
 
+        # Extract test cases or use the entire item if no cases provided
         cases = item.get('cases', None)
-
         collections = cases if cases is not None else [item]
 
-        # 创建测试类
+        # Create the class dynamically
         cls = type(cls_name, (BaseTest,), {})
-        # 遍历数据生成,动态添加测试方法
+
+        # Process test cases and generate test functions within the class
         self.create_case_content(cls, collections)
 
+        # Return the newly created test class
         return cls
 
     def create_case_content(self, cls, cases, skip_collections: list = [], loop_collections: list = []):
         """
-        生成用例内容模版, 目前支持嵌套循环控制器与if控制器(不超过2层)
-        {
-         Loop: 3,
-         children: [
-            Loop: 2,
-            ....
-         ]
-        }
+        Recursively processes test cases and generates corresponding test functions.
+
+        This method iterates through a list of test cases (`cases`) and performs the following actions:
+
+        Args:
+            cls (class): The class where test functions will be added.
+            cases (list): A list of test case data dictionaries.
+            skip_collections (list, optional): List to accumulate `If` conditions for skipping (defaults to []).
+            loop_collections (list, optional): List to accumulate `Loop` counts for looping (defaults to []).
+
         """
+
         for index, case_ in enumerate(cases):
             mode = case_.get('mode', 'normal')
             if mode == 'normal':
-                global children # noqa
+                global children  # noqa
                 try:
                     children = case_.get('children', None)
                 except AttributeError:
@@ -609,16 +737,13 @@ class GenerateCase:
                     skip_collections.append(if_before)
                     loop_collections.append(loop_before)
 
-                    # 计算当前执行用例循环次数
                     loop_count = self.controller.loop_strategy(loop_collections)
-                    # 计算当前执行用例是否跳过
                     if_object = self.controller.skip_strategy(skip_collections)
 
                     test_name = self.create_test_name(index, len(cases))
                     new_test_func = self.create_test_func(getattr(cls, 'step'), case_)
                     new_test_func.__doc__ = case_.get('title') or new_test_func.__doc__
 
-                    # 循环当前用例, 默认1次
                     self.controller.loop(loop_count, cls, test_name, new_test_func)
 
                     test_name = [name for name in cls.__dict__.keys() if name.__contains__('test_')]
@@ -633,21 +758,59 @@ class GenerateCase:
                 setattr(cls, test_name, new_test_func)
 
     def create_test_func(self, func, case_) -> Callable[[Any], None]:
-        """创建测试方法"""
+        """
+        Creates a wrapper function for a test case.
+
+        This method generates a new function that wraps around the provided `func`
+        and injects the `case_` argument during execution. It uses the `wraps` decorator
+        from the `functools` module (assumed to be imported) to preserve the original
+        function's metadata (like name, docstring).
+
+        Args:
+            self (object): The instance of the class to which the wrapper belongs (likely a test runner).
+            func (Callable[[Any], Any]): The original test function to be wrapped.
+            case_ (Any): The test case data that will be passed to the wrapped function.
+
+        Returns:
+            Callable[[Any], None]: The generated wrapper function that executes the original
+                                    function with the provided test case data.
+        """
 
         @wraps(func)
         def wrapper(self):  # noqa
+            """Wrapper function for the test case"""
             func(self, case_)
 
         return wrapper
 
     @staticmethod
-    def create_test_name(index, length) -> str:
-        """生成测试方法名"""
-        n = (len(str(length)) // len(str(index))) - 1
-        test_name = 'test_{}'.format("0" * n + str(index + 1))
+    def create_test_name(index: int, length: int) -> str:
+        """
+        Generates a test name with a specific format.
+
+        This static method constructs a test name string following a pattern of "test_"
+        padded with zeros and appended with a sequential index (starting from 1).
+        The number of leading zeros is determined based on the provided `length` parameter.
+
+        Args:
+            index (int): The index for the test case (starting from 1).
+            length (int): The desired total length of the test name (including zeros and index).
+
+        Returns:
+            str: The generated test name with the format "test_000N" where N is the index.
+        """
+
+        # Calculate the number of leading zeros to pad
+        num_zeros = (len(str(length)) // len(str(index))) - 1
+
+        # Format the test name with leading zeros and index
+        test_name = 'test_{}'.format("0" * num_zeros + str(index + 1))
+
         return test_name
-def run_test(case_data, env_config={}, tester='测试员', thread_count=1, debug=True) -> tuple[Any, dict[Any, Any]] | Any: # noqa
+
+
+def run_test(case_data, env_config={}, tester='tester', thread_count=1, debug=True) -> tuple[Any, dict[
+    Any, Any]] | Any:  # noqa
     """
     :param case_data: 测试套件数据
     :param env_config: 用例执行的环境配置
@@ -662,39 +825,55 @@ def run_test(case_data, env_config={}, tester='测试员', thread_count=1, debug
     :return:
         debug模式：会返回本次运行的结果和 本次运行设置的全局变量，
     """
-    global global_func, db, DEBUG, ENV, result # noqa
+    global global_func, db, DEBUG, ENV, result  # noqa
     global_func_file = env_config.get('global_func', b'')
     if global_func_file:
         with open('global_func.py', 'w', encoding='utf-8') as f:
             f.write(global_func_file)  # noqa
 
-    # 更新运行环境
     global_func = importlib.reload(global_func)
     DEBUG = debug
     ENV = {**env_config.get('ENV', {})}
     db.init_connect(env_config.get('db', []))
-    # 失败重跑
     rerun = env_config.get('rerun', 0)
-    # 生成测试用例
     suite = GenerateCase().data_to_suite(case_data)
-    # 运行测试用例
     runner = TestRunner(suite=suite, tester=tester)
     result = runner.run(thread_count=thread_count, rerun=rerun)
     if global_func and global_func_file:
         os.remove('global_func.py')
-    # 断开数据库连接
     db.close_connect()
     return result
 
 
+def run_api(api_data: dict, tester: str = 'tester', thread_count: int = 1) -> tuple[Any, dict[Any, Any]] | Any:  # noqa
+    """
+    Runs a single API interface test.
 
-def run_api(api_data, tester='测试员', thread_count=1) -> tuple[Any, dict[Any, Any]] | Any: # noqa
-    global result # noqa
-    # 生成测试用例
+    This function takes API data as a dictionary, an optional tester name (defaults to 'tester'),
+    and an optional thread count (defaults to 1) for concurrent execution. It performs the following steps:
+
+    1. Generates test cases: Uses an instance of `GenerateCase` (assumed to be a class
+       responsible for test case generation) to convert the API data into a test suite.
+    2. Runs test cases: Creates a `TestRunner` instance (assumed to be a class for running tests)
+       and executes the generated test suite with the provided tester name and thread count.
+    3. Closes database connection: Closes the database connection (assuming `db.close_connect`
+       is a function for closing the database connection).
+    4. Returns result: Returns the test result and a report dictionary (structure depends on the implementation
+       of `TestRunner.run`).
+
+    Args:
+        api_data (dict): Dictionary containing data for the API interface.
+        tester (str, optional): Name of the tester running the test (defaults to 'tester').
+        thread_count (int, optional): Number of threads for concurrent execution (defaults to 1).
+
+    Returns:
+        tuple[Any, dict[Any, Any]] | Any: A tuple containing the test result (type depends on the
+        implementation of `TestRunner.run`) and a dictionary holding the test report data
+        (structure depends on the implementation of `TestRunner.run`).
+    """
+
     suite = GenerateCase().data_to_suite(api_data)
-    # 运行测试用例
     runner = TestRunner(suite=suite, tester=tester)
     result = runner.run(thread_count=thread_count)
-    # 断开数据库连接
     db.close_connect()
     return result
