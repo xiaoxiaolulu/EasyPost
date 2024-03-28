@@ -190,7 +190,3 @@ def rsa_encrypt(msg, server_pub):
     cryto_msg = rsa.encrypt(msg, public_key_obj)  # noqa
     cipher_base64 = base64.b64encode(cryto_msg)  # 将加密文本转化为 base64 编码
     return cipher_base64.decode()
-
-
-if __name__ == '__main__':
-    print(fk.sentence(nb_words=4))
