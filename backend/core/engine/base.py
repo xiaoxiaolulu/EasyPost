@@ -117,20 +117,39 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         del ENV[name]
 
     @staticmethod
-    def loop_strategy(loop):
+    def loop_strategy(loop) -> int:
         """
-        循环控制器策略
+        Calculates the total number of iterations for a nested loop.
+
+        This function takes a list of loop lengths (`loop`) and calculates the total number of iterations
+        by multiplying the lengths together.
+
+        Args:
+            loop (list): A list of integers representing the lengths of each nested loop.
+
+        Returns:
+            int: The total number of iterations for the nested loop.
         """
+
         arr = np.array(loop)
         count = np.prod(arr)
         return count
 
     @staticmethod
-    def skip_strategy(condition):
+    def skip_strategy(condition) -> bool:
         """
-        if控制器策略
-        """
+        Determines whether to skip execution based on a list of conditions.
 
+        This function takes a list of conditions (`condition`) and evaluates them using a specific strategy.
+        The current strategy is to skip execution only if ALL conditions evaluate to False.
+
+        Args:
+            condition (list): A list of dictionaries representing conditions. Each dictionary should have a
+            'condition' key.
+
+        Returns:
+            bool: True if all conditions are False, False otherwise.
+        """
         tag = [_condition['condition'] for _condition in condition]
         if False not in tag:
             return True
@@ -193,7 +212,17 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         self.__unittest_perform_response = response
 
     def validators(self, response: Any, validate_check) -> None:
+        """
+        Validates a response against a set of validation checks.
 
+        This function takes a response object and a list of validation checks (`validate_check`).
+        Each check specifies a method, expected value (using a JSONPath expression), and an actual value for comparison.
+        The function performs the validation and calls the `assertion` method for handling results.
+
+        Args:
+            response (Any): The response object to validate.
+            validate_check (list): A list of validation checks, where each check is a dictionary.
+        """
         if isinstance(validate_check, list):
             for check in validate_check:
                 methods = check.get('method', None)
@@ -203,7 +232,15 @@ class BaseTest(unittest.TestCase, CaseRunLog):
                 self.assertion(methods, expect_result, actual)
 
     def __run_log(self) -> None:
-        """输出当前环境变量数据的日志"""
+        """
+        Logs local and global environment variables for informational purposes.
+
+        This function formats and logs both the object's local environment variables (`self.env`)
+        and the global environment variables (`ENV`) to provide context for debugging or understanding.
+
+        Returns:
+            None
+        """
         self.l_env = ['\t{}:{}\n'.format(k, repr(v)) for k, v in self.env.items()]
         self.g_env = ['\t{}:{}\n'.format(k, repr(v)) for k, v in ENV.items()]
         self.info_log('当前运行环境\n',
@@ -211,7 +248,14 @@ class BaseTest(unittest.TestCase, CaseRunLog):
                       "全局变量：{}\n".format(''.join(self.g_env)))
 
     def __request_log(self) -> None:
-        """请求信息日志输出"""
+        """
+        Logs detailed information about a completed HTTP request.
+
+        This function logs various details about the request and response to aid debugging.
+
+        Returns:
+            None
+        """
         self.debug_log("请求头：{}\n".format(self.requests_header))
         self.debug_log("请求体：{}\n".format(self.requests_body))
         self.debug_log("响应头：{}\n".format(self.response_header))
@@ -269,7 +313,18 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             pass
 
     def __send_request(self, data) -> Response:
-        """发送请求"""
+        """
+        Sends an HTTP request and handles the response.
+
+        This function takes request data (`data`) as input, preprocesses it using `__handler_request_data`,
+        sends the request using the `session` object, and processes the response.
+
+        Args:
+            data (dict): The request data dictionary containing various options.
+
+        Returns:
+            Response: The HTTP response object.
+        """
         request_info = self.__handler_request_data(data)
         self.info_log('发送请求[{}]:{}：\n'.format(request_info['method'].upper(), request_info['url']))
         try:
@@ -298,17 +353,26 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         return response
 
     def __handler_request_data(self, data) -> dict[str | Any, Any]:
-        """处理请求数据"""
-        # 获取请求头
+        """
+        Preprocesses request data for an outgoing HTTP request.
+
+        This function takes request data (`data`) as input and performs various transformations
+        to prepare it for making an HTTP request.
+
+        Args:
+            data (dict): The request data dictionary containing various options.
+
+        Returns:
+            dict[str | Any, Any]: The preprocessed request data dictionary, ready for making an HTTP request.
+        """
         if ENV.get('headers'):
             data['headers'] = ENV.get('headers').update(data.get('headers'))
-        # 替换用例数据中的变量
+
         for k, v in list(data.items()):
             if k not in ['setup_script', "run_teardown_script"]:
-                # 替换变量
                 v = self.__parser_variable(v)
                 data[k] = v
-        # files字段文件上传处理的处理
+
         files = data.get('files')
         if files:
             if isinstance(files, dict):
@@ -317,7 +381,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
                 file_data = files
             field = []
             for name, file_info in file_data:
-                # 判断是否时文件上传(获取文件类型和文件名)
+
                 if len(file_info) == 3 and os.path.isfile(file_info[1]):
                     field.append([name, (file_info[0], open(file_info[1], 'rb'), file_info[2])])
                 else:
@@ -329,24 +393,22 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         else:
             if data['headers'].get("Content-Type"):
                 del data['headers']["Content-Type"]
-        # 组织requests 发送请求所需要的参数格式
+
         request_params = {}
-        # requests请求所需的所有字段
+
         params_fields = ['url', 'method', 'params', 'data', 'json', 'files', 'headers', 'cookies', 'auth', 'timeout',
                          'allow_redirects', 'proxies', 'hooks', 'stream', 'verify', 'cert']
         for k, v in data['request'].items():
             if k in params_fields:
                 request_params[k] = v
-        # 请求地址
+
         # request_params['url'] = data.get('host') or ENV.get('host') + data.get('interface').get('url')
         if ENV.get('host'):
             request_params['url'] = ENV.get('host') + data.get('interface').get('url')
         else:
             request_params['url'] = data.get('interface').get('url')
 
-        # 请求方法
         request_params['method'] = data.get('interface').get('method')
-        # 请求头
         request_params['headers'] = data['headers']
         return request_params
 

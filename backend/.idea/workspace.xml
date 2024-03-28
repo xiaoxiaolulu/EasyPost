@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="&quot;Refactor code to handle database connection failures gracefully&quot;">
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Updated code documentation and added new methods for handling test cases and generating test functions.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/request/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/request/parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/engine/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/engine/base.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
     </list>
@@ -424,23 +424,7 @@
       <workItem from="1711435206521" duration="16392000" />
       <workItem from="1711524748647" duration="5736000" />
       <workItem from="1711534478853" duration="111000" />
-      <workItem from="1711591405569" duration="18193000" />
-    </task>
-    <task id="LOCAL-00238" summary=":construction_worker: 测试计划">
-      <option name="closed" value="true" />
-      <created>1706776409358</created>
-      <option name="number" value="00238" />
-      <option name="presentableId" value="LOCAL-00238" />
-      <option name="project" value="LOCAL" />
-      <updated>1706776409358</updated>
-    </task>
-    <task id="LOCAL-00239" summary=":construction_worker: 测试计划">
-      <option name="closed" value="true" />
-      <created>1706856966880</created>
-      <option name="number" value="00239" />
-      <option name="presentableId" value="LOCAL-00239" />
-      <option name="project" value="LOCAL" />
-      <updated>1706856966881</updated>
+      <workItem from="1711591405569" duration="20909000" />
     </task>
     <task id="LOCAL-00240" summary=":construction_worker: 测试计划">
       <option name="closed" value="true" />
@@ -818,7 +802,23 @@
       <option name="project" value="LOCAL" />
       <updated>1711613988888</updated>
     </task>
-    <option name="localTasksCounter" value="287" />
+    <task id="LOCAL-00287" summary="Refactored code for better readability and maintainability.">
+      <option name="closed" value="true" />
+      <created>1711615779292</created>
+      <option name="number" value="00287" />
+      <option name="presentableId" value="LOCAL-00287" />
+      <option name="project" value="LOCAL" />
+      <updated>1711615779292</updated>
+    </task>
+    <task id="LOCAL-00288" summary="Updated code documentation and added new methods for handling test cases and generating test functions.">
+      <option name="closed" value="true" />
+      <created>1711617972541</created>
+      <option name="number" value="00288" />
+      <option name="presentableId" value="LOCAL-00288" />
+      <option name="project" value="LOCAL" />
+      <updated>1711617972541</updated>
+    </task>
+    <option name="localTasksCounter" value="289" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -848,32 +848,32 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Changed test code structure, added" />
-    <MESSAGE value="Changed test code structure, added new" />
-    <MESSAGE value="Changed test code structure, added new classes" />
-    <MESSAGE value="Changed test code structure, added new classes and" />
-    <MESSAGE value="Changed test code structure, added new classes and methods" />
-    <MESSAGE value="Changed test code structure, added new classes and methods for" />
-    <MESSAGE value="Changed test code structure, added new classes and methods for test" />
-    <MESSAGE value="Changed test code structure, added new classes and methods for test case" />
-    <MESSAGE value="Changed test code structure, added new classes and methods for test case generation" />
-    <MESSAGE value="Changed test code structure, added new classes and methods for test case generation and" />
-    <MESSAGE value="Changed test code structure, added new classes and methods for test case generation and execution" />
-    <MESSAGE value="Changed test code structure, added new classes and methods for test case generation and execution." />
-    <MESSAGE value="&quot;" />
-    <MESSAGE value="&quot;Ref" />
-    <MESSAGE value="&quot;Refactor" />
-    <MESSAGE value="&quot;Refactor code" />
-    <MESSAGE value="&quot;Refactor code to" />
-    <MESSAGE value="&quot;Refactor code to handle" />
-    <MESSAGE value="&quot;Refactor code to handle database" />
-    <MESSAGE value="&quot;Refactor code to handle database connection" />
-    <MESSAGE value="&quot;Refactor code to handle database connection fail" />
-    <MESSAGE value="&quot;Refactor code to handle database connection failures" />
-    <MESSAGE value="&quot;Refactor code to handle database connection failures grace" />
-    <MESSAGE value="&quot;Refactor code to handle database connection failures gracefully" />
-    <MESSAGE value="&quot;Refactor code to handle database connection failures gracefully&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Refactor code to handle database connection failures gracefully&quot;" />
+    <MESSAGE value="Refactored code" />
+    <MESSAGE value="Refactored code for" />
+    <MESSAGE value="Refactored code for better" />
+    <MESSAGE value="Refactored code for better read" />
+    <MESSAGE value="Refactored code for better readability" />
+    <MESSAGE value="Refactored code for better readability and" />
+    <MESSAGE value="Refactored code for better readability and maintain" />
+    <MESSAGE value="Refactored code for better readability and maintainability" />
+    <MESSAGE value="Refactored code for better readability and maintainability." />
+    <MESSAGE value="Updated" />
+    <MESSAGE value="Updated code" />
+    <MESSAGE value="Updated code documentation" />
+    <MESSAGE value="Updated code documentation and" />
+    <MESSAGE value="Updated code documentation and added" />
+    <MESSAGE value="Updated code documentation and added new" />
+    <MESSAGE value="Updated code documentation and added new methods" />
+    <MESSAGE value="Updated code documentation and added new methods for" />
+    <MESSAGE value="Updated code documentation and added new methods for handling" />
+    <MESSAGE value="Updated code documentation and added new methods for handling test" />
+    <MESSAGE value="Updated code documentation and added new methods for handling test cases" />
+    <MESSAGE value="Updated code documentation and added new methods for handling test cases and" />
+    <MESSAGE value="Updated code documentation and added new methods for handling test cases and generating" />
+    <MESSAGE value="Updated code documentation and added new methods for handling test cases and generating test" />
+    <MESSAGE value="Updated code documentation and added new methods for handling test cases and generating test functions" />
+    <MESSAGE value="Updated code documentation and added new methods for handling test cases and generating test functions." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated code documentation and added new methods for handling test cases and generating test functions." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$__init____2_.coverage" NAME="__init__ (2) Coverage Results" MODIFIED="1706696733502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/management/commands" />
