@@ -1,4 +1,7 @@
 import time
+from _typeshed import SupportsSub, SupportsRSub, SupportsDunderGT, SupportsDunderLT, SupportsDunderGE, SupportsDunderLE
+from unittest.case import _S, _SupportsAbsAndDunderGE, _T
+
 import numpy as np
 from pymeter.api.config import (
     TestPlan,
@@ -11,10 +14,12 @@ import os
 import re
 import unittest
 from numbers import Number
-from typing import Any
+from typing import Any, Dict, Callable, SupportsAbs, SupportsRound, Iterable, Container
 import requests
 from jsonpath import jsonpath
 from requests_toolbelt import MultipartEncoder
+
+from core.builitin import compares
 from core.engine.env import (
     BaseEnv,
     DEBUG,
@@ -371,14 +376,17 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             self.extras.append((name, ext, value))
             self.info_log("✴️提取变量：{},提取方式【{}】,提取表达式:{},提取值为:{}\n".format(name, ext[1], ext[2], value))
 
-    def assertion(self, methods, expected, actual) -> None:
+    def get_assert_method(self) -> Any:
         """
-        断言
-        :param methods: 比较方式
-        :param expected: 预期结果
-        :param actual: 实际结果
-        :return:
+        获取断言方法
+
+        Args:
+            self: 对象本身
+
+        Returns:
+            断言方法字典
         """
+
         methods_map = {
             "相等": self.assertEqual,
             "不相等": self.assertNotEqual,
@@ -389,10 +397,33 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             "小于": self.assertLess,
             "小于等于": self.assertLessEqual,
             "包含": self.assertIn,
-            "不包含": self.assertNotIn
+            "不包含": self.assertNotIn,
+            "不为空": compares.not_none,
+            "为空": compares.is_none,
+            "字符串类型相等": compares.string_equals,
+            "长度相等": compares.length_equal,
+            "长度大于": compares.length_greater_than,
+            "长度大于等于": compares.length_greater_or_equals,
+            "长度小于": compares.length_less_than,
+            "长度小于等于": compares.length_less_or_equals,
+            "包含常见类型": compares.contained_by,
+            "类型匹配": compares.type_match,
+            "正则匹配": compares.regex_match,
+            "前缀相等": compares.startswith,
+            "后缀相等": compares.endswith,
         }
+        return methods_map
+
+    def assertion(self, methods, expected, actual) -> None:
+        """
+        断言
+        :param methods: 比较方式
+        :param expected: 预期结果
+        :param actual: 实际结果
+        :return:
+        """
         self.info_log('断言方法:{} 预期结果:{} 实际结果:{}\n'.format(methods, expected, actual))
-        assert_method = methods_map.get(methods)
+        assert_method = self.get_assert_method().get(methods)
         global result # noqa
         if assert_method:
             try:

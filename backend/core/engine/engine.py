@@ -18,7 +18,7 @@ from config.settings import (
 )
 from core.constructor.create_function import create_function_from_parameters
 from core.request.http_handler import HttpHandler
-from core.builitin import validator
+from core.builitin import compares
 from core.engine.extract import extract_by_object
 from core.database.db import OperateMysql
 from utils.logger import log
