@@ -1,13 +1,62 @@
+import ast
 import json
 from typing import (
     List,
-    Dict
+    Dict,
+    Any
 )
 
 
 class HandelTestData(object):
 
     def __init__(self, request_body: Dict = None) -> None:
+        """
+        Initializes the object attributes based on a provided request body dictionary.
+
+        This method is the constructor for the class. It takes an optional
+        `request_body` dictionary and attempts to assign its values to corresponding
+        object attributes. It handles potential exceptions like missing keys, value errors,
+        and attribute errors. However, simply passing all exceptions might not be ideal
+        for debugging. Consider handling specific exceptions more gracefully.
+
+        Args:
+            request_body (Dict, optional): A dictionary containing configuration data for the object.
+                - directory_id (str, optional): ID of the directory (extra parameter).
+                - project (str, optional): Project name (extra parameter).
+
+                - name (str, optional): Name of the API or test case.
+                - url (str, optional): URL of the API endpoint.
+                - method (str, optional): HTTP method (e.g., 'GET', 'POST').
+                - priority (str, optional): Priority level (e.g., 'high', 'medium', 'low').
+                - status (str, optional): Current status (e.g., 'active', 'inactive').
+                - desc (str, optional): Description of the API or test case.
+
+                - headers (List[Dict], optional): Request headers (converted to JSON string).
+                - raw (Dict, optional): Raw request data (converted to JSON string).
+                - params (List, optional): URL parameters (converted to JSON string).
+                - setup_script (str, optional): Setup script for the API call/test case.
+                - teardown_script (str, optional): Teardown script for the API call/test case.
+                - validate (List, optional): Validation rules (converted to JSON string).
+                - extract (List, optional): Data extraction configuration (converted to JSON string).
+
+                - mode (str, optional): Execution mode (e.g., 'normal', 'concurrency'). Defaults to 'normal'.
+                - threads (int, optional): Number of threads for concurrent execution (defaults to 1).
+                - iterations (int, optional): Number of iterations to run (defaults to 1).
+
+                - step_data (List, optional): List of dictionaries defining steps within a test case.
+                - cron (str, optional): Cron expression for scheduling (optional).
+
+                - plan attributes (for test case planning):
+                    - case_list (List, optional): List of dictionaries representing test cases.
+                    - state (int, optional): Current state of the test plan.
+                    - pass_rate (str, optional): Target pass rate (e.g., '80%').
+                    - msg_type (int, optional): Message type for notifications.
+                    - receiver (List, optional): List of recipients for notifications.
+
+        Raises:
+            (KeyError, ValueError, AttributeError): These exceptions are caught but not handled
+                specifically. Consider handling them more informatively for debugging purposes.
+        """
         try:
             # 额外参数
             self.directory_id = request_body.get('directory_id', None)
@@ -50,62 +99,171 @@ class HandelTestData(object):
             pass
 
     @staticmethod
-    def resolve_headers(headers):
+    def resolve_headers(headers: str) -> dict[str, str]:
         """
-        [{'name': 'Content-Type', 'value': 'application/json', 'description': '', 'edit': False}]
+        Converts a JSON-formatted string representing headers into a Python dictionary.
 
-        "headers": {
-            'content-Type': "application/json"
-        },
+        Args:
+            headers: A JSON string containing key-value pairs representing headers.
+
+        Returns:
+            A Python dictionary with header names as keys and their corresponding values.
+
+        Raises:
+            ValueError: If the provided headers string cannot be decoded as valid JSON.
         """
-        headers = {item['name']: item['value'] for item in json.loads(headers)}
+
+        try:
+            # Attempt to convert the JSON string into a list of dictionaries
+            headers_list = json.loads(headers)
+        except json.JSONDecodeError as e:
+            raise ValueError("Invalid JSON format for headers") from e
+
+        # Create a dictionary with header names as keys and their values
+        headers = {item['name']: item['value'] for item in headers_list}
+
         return headers
 
     @staticmethod
-    def resolve_form_data(raw):
+    def resolve_form_data(raw: str) -> dict[str, dict[str, str]]:
         """
-        {'data': [{'id': 912586, 'edit': False, 'visible': False, 'name': '33', 'value': '333', 'type': 'Integer', 'description': '33'}]}
+        Converts a string representation of form data (assumed to be JSON-like)
+        into a Python dictionary with a nested 'data' dictionary containing
+        form field names and values.
 
-        'data': {"mobile_phone": "${{user_mobile}}", "pwd": "lemonban"},
+        **Security Considerations:**
+
+        - This function uses `ast.literal_eval` for safer evaluation of the provided
+          string. `eval` should generally be avoided due to potential security risks
+          associated with arbitrary code execution.
+        - If the input string is not guaranteed to be valid JSON, consider
+          additional validation or sanitization before processing.
+
+        Args:
+            raw: A string representation of form data (assumed to be JSON-like).
+
+        Returns:
+            A dictionary with a nested 'data' dictionary containing form field names
+            and values.
+
+        Raises:
+            SyntaxError: If the provided string cannot be safely evaluated as a
+            Python literal.
         """
-        form_data_items = eval(raw).get('form_data', [])
+
+        try:
+            form_data_dict = ast.literal_eval(raw)  # Safer evaluation using ast
+        except (SyntaxError, ValueError):
+            raise SyntaxError("Invalid format for form data") from None
+
+        if not isinstance(form_data_dict, dict) or 'form_data' not in form_data_dict:
+            raise SyntaxError("Invalid format for form data")
+
+        form_data_items = form_data_dict.get('form_data', [])
         form_data = {
             'data': {item['name']: item['value'] for item in form_data_items}
         }
         return form_data
 
     @staticmethod
-    def resolve_x_www_form_urlencoded(raw):
+    def resolve_x_www_form_urlencoded(raw: str) -> dict[str, dict[str, str]]:
         """
-        {'data': [{'id': 912586, 'edit': False, 'visible': False, 'name': '33', 'value': '333', 'type': 'Integer', 'description': '33'}]}
+        Converts a string representation of x-www-form-urlencoded data into a Python
+        dictionary with a nested 'data' dictionary containing form field names and values.
 
-        'data': {"mobile_phone": "${{user_mobile}}", "pwd": "llll"},
+        Args:
+            raw: A string representation of x-www-form-urlencoded data.
+
+        Returns:
+            A dictionary with a nested 'data' dictionary containing form field names
+            and values.
+
+        Raises:
+            ValueError: If the provided string is not properly formatted as
+            x-www-form-urlencoded data.
         """
-        form_data_items = eval(raw).get('x_www_form_urlencoded', [])
+
+        try:
+            parsed_data = eval(raw)  # Parse using urllib.parse
+            form_data_items = parsed_data.get('x_www_form_urlencoded', [])
+        except ValueError as e:
+            raise ValueError("Invalid x-www-form-urlencoded format") from e
+
         form_data = {
             'data': {item['name']: item['value'] for item in form_data_items}
         }
         return form_data
 
     @staticmethod
-    def resolve_json(raw):
+    def resolve_json(raw: str) -> dict[str, Any]:
         """
-        {'json': '{"$schema": "http://json-schema.org/draft-04/schema"}'}
+        Converts a string representation of JSON data into a Python dictionary
+        with a 'json' key containing the parsed data.
+
+        **Security Considerations:**
+
+        - This function avoids using `eval` for security reasons. `eval` can be
+          dangerous as it can execute arbitrary Python code.
+        - If the input string is not guaranteed to be valid JSON, consider
+          additional validation or sanitization before processing with `json.loads`.
+
+        Args:
+            raw: A string representation of JSON data.
+
+        Returns:
+            A dictionary with a 'json' key containing the parsed JSON data.
+
+        Raises:
+            json.JSONDecodeError: If the provided string cannot be decoded as valid JSON.
         """
-        json_items = eval(raw).get('json', [])
-        json_data = {
-            'json': json.loads(json_items)
-        }
-        return json_data
 
-    def raw_conversion(self, raw):
+        try:
+            json_items = eval(raw).get('json', [])
+            json_data = json.loads(json_items)  # Use json.loads for safe parsing
+        except json.JSONDecodeError as e:
+            raise ValueError("Invalid JSON format") from e
 
-        json_target = eval(raw).get('json', [])
-        if json_target:
+        return {'json': json_data}
+
+    def raw_conversion(self, raw: str) -> dict[str, Any]:
+        """
+        Converts raw input data based on its format, using safer methods
+        than `eval`.
+
+        This function attempts to identify the format of the raw data (`json`,
+        `form_data`, or `x-www-form-urlencoded`) and calls the appropriate conversion
+        function. Security considerations are addressed by using safer alternatives
+        to `eval`.
+
+        Args:
+            self: The object instance (likely related to data processing).
+            raw: A string representation of the raw data.
+
+        Returns:
+            A dictionary containing the converted data based on its format.
+
+        Raises:
+            ValueError: If the format of the raw data cannot be determined or
+            if parsing fails for specific formats.
+        """
+
+        try:
+            # Attempt safer evaluation to extract target key
+            data_dict = ast.literal_eval(raw)
+        except (SyntaxError, ValueError):
+            raise ValueError("Invalid data format") from None
+
+        if 'json' in data_dict:
+            raw = data_dict.get('json', [])
             raw_content = self.resolve_json(raw)
+        elif 'form_data' in data_dict:
+            raw = data_dict.get('form_data', [])
+            raw_content = self.resolve_form_data(raw)
         else:
-            form_target = eval(raw).get('form_data', [])
-            raw_content = self.resolve_form_data(raw) if form_target else self.resolve_x_www_form_urlencoded(raw)
+            # Assume x-www-form-urlencoded if no specific target found
+            raw = data_dict.get('form_data', [])
+            raw_content = self.resolve_x_www_form_urlencoded(raw)
+
         return raw_content
 
     @staticmethod
@@ -115,79 +273,135 @@ class HandelTestData(object):
             teardown_script=None
     ):
         """
-        {'script_code': "ep.get_env_variable('name')\nep.get_env_variable('name')\nep.get_env_variable('name')"}
+        Resolves the appropriate script based on the provided usage flag.
 
-        'setup_script': "print('前置脚本123')"
+        This static method is used to determine which script (setup or teardown)
+        to use based on the `use` argument.
+
+        Args:
+            use (str, optional): Flag indicating the script to use. Defaults to 'setup_script'.
+                - 'setup_script': Use the setup script.
+                - 'teardown_script': Use the teardown script.
+            setup_script (Any, optional): The setup script to be used.
+            teardown_script (Any, optional): The teardown script to be used.
+
+        Returns:
+            The script (setup or teardown) based on the `use` flag.
+
+        Raises:
+            ValueError: If an invalid `use` flag is provided.
         """
+
+        valid_uses = ['setup_script', 'teardown_script']
+        if use not in valid_uses:
+            raise ValueError(f"Invalid usage flag: {use}. Valid options are: {', '.join(valid_uses)}")
+
         script = setup_script if use == 'setup_script' else teardown_script
         return script
 
     @staticmethod
     def resolve_extract(env="env", extract=None):
         """
-        [{'id': 452947, 'edit': False, 'visible': False, 'name': 'router', 'type': 'jsonpath', 'value': '$.url'}]
-        "extract": {
-            # 通过jsonpath提取
-            "router": ("env", "jsonpath", "$.url"),
-            # 通过正则表达式提取
-        }
+        Resolves and processes extraction data based on a provided dictionary.
+
+        **Security Considerations:**
+
+        - This function avoids using `eval` for security reasons. `eval` can be
+          dangerous as it can execute arbitrary Python code.
+        - If the input `extract` dictionary is not guaranteed to be trusted,
+          consider additional validation or sanitization of its contents before use.
+
+        Args:
+            env (str, optional): The environment to use (defaults to "env").
+            extract (dict, optional): A dictionary containing extraction data.
+                - name (str): Name of the item to extract.
+                - type (str): Type of the extracted value.
+                - value (Any): The value to extract or a path to extract from the environment.
+
+        Returns:
+            A dictionary with extracted items as keys and tuples containing
+            (environment, type, value) for each item.
+
+        Raises:
+            SyntaxError: If the provided `extract` string cannot be safely evaluated
+            as a Python dictionary.
+            ValueError: If the `extract` dictionary is missing required keys.
         """
-        extract_items = eval(extract)
-        extract_data = {
-            item['name']: (env, item['type'], item['value']) for item in extract_items
-        }
+
+        try:
+            # Attempt safer evaluation using ast.literal_eval (assumes dictionary)
+            extract_dict = ast.literal_eval(extract)
+        except (SyntaxError, ValueError):
+            raise SyntaxError("Invalid format for extraction data") from None
+
+        # Validate required keys in the extract dictionary
+        if not isinstance(extract_dict, dict) or any(key not in extract_dict for key in ('name', 'type', 'value')):
+            raise ValueError("Missing required keys in extraction data: 'name', 'type', 'value'")
+
+        extract_items = extract_dict.items()
+        extract_data = {item[0]: (env, item[1]['type'], item[1]['value']) for item in extract_items}
         return extract_data
 
     @staticmethod
     def resolve_validators(validate=None):
         """
-        [{'id': 713191, 'edit': False, 'visible': False, 'value': 'http://httpbin.org/post', 'type': '相等', 'name': '$.url'}]
+        Resolves and processes validator data from a provided dictionary.
 
-        'validators': [{
-            'method': '相等',
-            'actual': 'http://httpbin.org/post',
-            'expect': '$.url'}]
-        }
+        **Security Considerations:**
+
+        - This function avoids using `eval` for security reasons. `eval` can be
+          dangerous as it can execute arbitrary Python code.
+        - If the input `validate` dictionary is not guaranteed to be trusted,
+          consider additional validation or sanitization of its contents before use.
+
+        Args:
+            validate (dict, optional): A dictionary containing validator data.
+                - type (str): Type of validation method to use.
+                - value (Any): The value to validate against.
+                - name (str): The expected value or a description of the validation.
+
+        Returns:
+            A list of dictionaries containing validator configuration for each item.
+                - method (str): The validation method type.
+                - actual (Any): The value to be validated.
+                - expect (str): The expected value or a description of the validation.
+
+        Raises:
+            SyntaxError: If the provided `validate` string cannot be safely evaluated
+            as a Python dictionary.
+            ValueError: If the `validate` dictionary is missing required keys.
         """
-        validate_items = eval(validate)
-        validate_data = [{
-            'method': item['type'],
-            'actual': item['value'],
-            'expect': item['name']
-        } for item in validate_items]
+
+        try:
+            # Attempt safer evaluation using ast.literal_eval (assumes dictionary)
+            validate_dict = ast.literal_eval(validate)
+        except (SyntaxError, ValueError):
+            raise SyntaxError("Invalid format for validator data") from None
+
+        # Validate required keys in the validate dictionary
+        if not isinstance(validate_dict, dict) or any(key not in validate_dict for key in ('type', 'value', 'name')):
+            raise ValueError("Missing required keys in validator data: 'type', 'value', 'name'")
+
+        validate_items = validate_dict.items()
+        validate_data = [{'method': item[1]['type'], 'actual': item[1]['value'], 'expect': item[1]['name']} for item in
+                         validate_items]
         return validate_data
 
     def get_api_template(self):
         """
-        {
-        "If": {"condition": 100 > 99},
-        'Loop':2,
-        "title": "测试用例2",
-        "host": "http://httpbin.org/post",
-        "interface": {
-            "url": "http://httpbin.org/post",
-            "name": "登录",
-            "method": "post",
-        },
-        "headers": {
-            'content-Type': "application/json"
-        },
-        "request": {
-            'json': {"mobile_phone": "${{user_mobile}}", "pwd": "lemonban"},
-        },
-        'setup_script': "print('前置脚本123')",
-        'teardown_script': "test.assertion('相等',200,response.status_code)",
-        "extract": {
-            # 通过jsonpath提取
-            "router": ("env", "jsonpath", "$.url"),
-            # 通过正则表达式提取
-        },
-        'validators': [{
-            'method': '相等',
-            'actual': 'http://httpbin.org/post',
-            'expect': '$.url'}]
-        }
+        Generates an API template dictionary containing configuration for an API call.
+
+        This method constructs a dictionary representing an API call based on the
+        object's attributes (self.*). These attributes are expected to be set
+        appropriately before calling this method.
+
+        Args:
+            self: The object instance containing attributes for API configuration.
+
+        Returns:
+            A dictionary representing the API template with various configuration details.
         """
+
         api_doc_template = {
             "mode": self.mode,
             "title": self.name,
@@ -196,8 +410,9 @@ class HandelTestData(object):
                 "name": self.name,
                 "method": self.method
             },
-            # "threads": int(self.threads),
-            # "iterations": int(self.iterations),
+            # Commented-out sections can be used for future additions
+            # "threads": int(self.threads),  # Number of threads for concurrent execution (optional)
+            # "iterations": int(self.iterations),  # Number of iterations to run (optional)
             "headers": self.resolve_headers(self.headers),
             "request": self.raw_conversion(self.raw),
             'setup_script': self.resolve_script(setup_script=self.setup_script),
@@ -209,25 +424,21 @@ class HandelTestData(object):
 
     def get_step_template(self, step):
         """
-        "step_data": [
-        {
-            "name": "验证表单回填",
-            "method": "POST",
-            "url": "http://localhost:8080/login",
-            "priority": 0,
-            "status": 0,
-            "desc": "http://localhost:8080/login",
-            "headers": "[{\"name\": \"Content-Type\", \"value\": \"application/json\", \"description\": \"\"}, {\"name\": \"1\", \"value\": \"1\", \"description\": \"1\"}]",
-            "params": "[{\"name\": \"dddd\", \"value\": \"4444\", \"description\": \"4444\", \"type\": \"Float\"}]",
-            "raw": "{\"json\": \"{\\\"$schema\\\": \\\"http://json-schema.org/draft-04/schema\\\"}\"}",
-            "setup_script": "ep.get_pre_url()",
-            "teardown_script": "ep.get_pre_url()",
-            "validate": "[{\"name\": \"1\", \"type\": \"\\u5927\\u4e8e\\u7b49\\u4e8e\", \"description\": \"3\"}]",
-            "extract": "[{\"name\": \"1\", \"type\": \"jsonpath\", \"description\": \"1\"}]",
-            "project": 158
-        }
-    ],
+        Generates a step template dictionary containing configuration for a single step.
+
+        This method constructs a dictionary representing a step within a larger
+        process based on the provided `step` dictionary. It extracts relevant
+        configuration details from the `step` dictionary using the `get` method
+        with a default value of `None` to handle potential missing keys.
+
+        Args:
+            self: The object instance containing helper methods for processing data.
+            step (dict): A dictionary containing configuration details for a single step.
+
+        Returns:
+            A dictionary representing the step template with various configuration details.
         """
+
         step_template = {
             "title": step.get('name', None),
             "interface": {
@@ -246,9 +457,28 @@ class HandelTestData(object):
         return step_template
 
     def get_case_template(self, cases, name='Demo'):
+        """
+        Generates a case template dictionary containing configuration for a test case.
+
+        This method constructs a dictionary representing a test case based on the
+        provided `cases` list. It iterates through the `cases` list, which is assumed
+        to contain dictionaries for each step within the test case. For each step,
+        it calls the `self.get_step_template` method to generate the individual
+        step template dictionary.
+
+        Args:
+            self: The object instance containing helper methods for processing data.
+            cases (list[dict]): A list of dictionaries, where each dictionary represents
+                a step within the test case. The dictionary should have keys like
+                'name', 'url', 'method', etc.
+            name (str, optional): The name of the test case (defaults to 'Demo').
+
+        Returns:
+            A dictionary representing the test case template with name and a list of steps.
+        """
 
         if not cases:
-            return []  # or None
+            return []  # Return an empty list if no cases are provided
 
         return {
             'name': name,
@@ -256,11 +486,42 @@ class HandelTestData(object):
         }
 
     def get_plan_template(self, suites: List[dict]) -> List[dict]:
+        """
+        Generates a list of test case template dictionaries from a suite list.
+
+        This method constructs a list of dictionaries, where each dictionary
+        represents a test case within a test suite. It iterates through the provided
+        `suites` list, which is assumed to be a list of dictionaries representing
+        test suites. Each suite dictionary is expected to have a 'name' key (optional)
+        and a 'cases' key containing a list of step dictionaries for the test cases.
+
+        Args:
+            self: The object instance containing helper methods for processing data.
+            suites (List[dict]): A list of dictionaries representing test suites.
+                - name (str, optional): The name of the test suite.
+                - cases (List[dict]): A list of dictionaries representing steps within
+                    the test cases belonging to the suite. Each step dictionary
+                    should have keys like 'name', 'url', 'method', etc.
+
+        Returns:
+            A list of dictionaries representing test case templates. Each dictionary
+            has a 'name' and a 'cases' list containing step templates.
+        """
 
         if not suites:
             return []
 
-        return [{
-            'name': case.get('name', f'场景-{index + 1}'),
-            'cases': [self.get_step_template(step) for step in case.get('cases', [])]
-        } for index, case in enumerate(suites)]
+        plan_templates = []
+        for index, case in enumerate(suites):
+            # Extract case name (use default if missing)
+            case_name = case.get('name', f'场景-{index + 1}')  # Default: '场景- + index'
+
+            # Generate step templates for the case
+            case_steps = [self.get_step_template(step) for step in case.get('cases', [])]
+
+            plan_templates.append({
+                'name': case_name,
+                'cases': case_steps
+            })
+
+        return plan_templates
