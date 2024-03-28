@@ -1,5 +1,6 @@
 import importlib
 import time
+import typing
 from functools import wraps
 from unittest import TestSuite
 import numpy as np
@@ -149,6 +150,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         # 日志记录
         self.__run_log()
         # 数据库查询
+        self.execute_sql(data.get('sql', None))
         # 强制等待
         sleep = data.get('timer', 0)
         self.timer(sleep)
@@ -217,27 +219,54 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         self.info_log('请求响应状态码:{}\n'.format(self.status_code))
 
     def none_connect_obj(self) -> dict[str, Callable[[Any], Any] | Callable[[Any], Any]]:
+        """
+        Creates and returns a dictionary representing a placeholder object
+        used when a database connection cannot be established.
+
+        This dictionary provides methods that mimic the behavior of the
+        actual database connection methods but log an error message instead.
+
+        Returns:
+            A dictionary containing placeholder methods for commonly used
+            database operations.
+        """
         none_obj = {
             "query_sql": lambda x: self.error_log("❌MYSQL_HOST not found in config.py"),
             "execute_sql": lambda x: self.error_log("❌MYSQL_HOST not found in config.py")
         }
         return none_obj
 
-    # def execute_sql(self):
-    #     setting = DATABASES.get("default", {})
-    #     none_obj = self.none_connect_obj()
-    #
-    #     setting_obj = type('Setting', (object,), setting)
-    #     if not hasattr(setting_obj, 'database'):
-    #         return none_obj
-    #     try:
-    #         db = OperateMysql(setting)
-    #         return {
-    #             "query_sql": db.execute
-    #         }
-    #     except Exception as err:
-    #         log.error(f"❌Mysql Not connected {err}")
-    #         return none_obj
+    def execute_sql(self, sql: Any) -> typing.Union[dict, object]:
+        """
+        Executes a provided SQL query string and returns the results or a placeholder object on failure.
+
+        Args:
+            self: The object instance (likely related to database interaction).
+            sql: The SQL query string to be executed.
+
+        Returns:
+            A dictionary containing the query results on success, or a placeholder object
+            indicating a connection or execution failure.
+        """
+        try:
+            setting = ENV.get('db') if self.env.get('db') is None else self.env.get('db')
+            none_obj = self.none_connect_obj()
+
+            setting_obj = type('Setting', (object,), setting)
+            if not hasattr(setting_obj, 'database'):
+                return none_obj
+            try:
+                database = db(setting)
+                query_sql = {
+                    "query_sql": database.execute(sql)
+                }
+                ENV.update(query_sql)
+                return query_sql
+            except Exception as err:
+                self.error_log(f"❌Mysql Not connected {err}")
+                return none_obj
+        except (Exception, ):
+            pass
 
     def __send_request(self, data) -> Response:
         """发送请求"""
