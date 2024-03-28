@@ -31,6 +31,9 @@ class CustomAuthenticateBackend(ModelBackend):
 
 
 class NewTokenObtainPairSerializer(TokenObtainPairSerializer):
+    """
+        自定义的TokenObtainPairSerializer类，用于生成新的访问令牌和刷新令牌。
+    """
 
     def validate(self, attrs):
         data = super().validate(attrs)
@@ -56,7 +59,9 @@ class CustomJsonWebToken(TokenObtainPairView):
 
 
 class UserListViewSet(MagicListAPI):
-
+    """
+    用户列表视图集
+    """
     queryset = User.objects.all()
     serializer_class = UserSimpleSerializers
     permission_classes = [IsAuthenticated]
