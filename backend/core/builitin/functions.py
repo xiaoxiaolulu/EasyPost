@@ -2,6 +2,39 @@ import base64
 import time
 import rsa
 from faker import Faker
+from utils.time import *
+
+__all__ = [
+    "now_time",
+    "current_date",
+    "day_num",
+    "week_start",
+    "week_end",
+    "week_end",
+    "month_start",
+    "month_end",
+    "yesterday",
+    "get_before_day",
+    "random_mobile",
+    "random_name",
+    "random_ssn",
+    "random_addr",
+    "random_city",
+    "random_company",
+    "random_postcode",
+    "random_email",
+    "random_date",
+    "random_ipv4",
+    "random_date_time",
+    "get_timestamp",
+    "base64_encode",
+    "md5_encrypt",
+    "rsa_encrypt",
+    "random_float",
+    "random_natural",
+    "random_character"
+]
+
 
 fk = Faker(locale='zh_CN')
 
@@ -51,9 +84,27 @@ def random_date():
     return fk.date()
 
 
-def radom_date_time():
+def random_date_time():
     """随机生成一个时间"""
     return fk.date_time()
+
+
+def random_natural():
+    """返回一个随机的1-100的自然数（大于等于 0 的整数）"""
+    random_number = fk.random_int(min=1, max=100, step=1)
+    return random_number
+
+
+def random_float():
+    """生成一个范围在 0 到 100 之间的随机浮点数"""
+    random_number = round(fk.pyfloat(min_value=0, max_value=100), 2)
+    return random_number
+
+
+def random_character():
+    """返回随机的字符"""
+    character = fk.lexify()
+    return character
 
 
 def random_ipv4():
@@ -92,3 +143,7 @@ def rsa_encrypt(msg, server_pub):
     cryto_msg = rsa.encrypt(msg, public_key_obj)  # noqa
     cipher_base64 = base64.b64encode(cryto_msg)  # 将加密文本转化为 base64 编码
     return cipher_base64.decode()
+
+
+if __name__ == '__main__':
+    print(fk.lexify())
