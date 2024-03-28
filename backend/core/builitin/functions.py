@@ -41,7 +41,8 @@ __all__ = [
     "url",
     "postcode",
     "paragraph",
-    "title"
+    "title",
+    "get_time_stamp"
 ]
 
 
@@ -190,3 +191,12 @@ def rsa_encrypt(msg, server_pub):
     cryto_msg = rsa.encrypt(msg, public_key_obj)  # noqa
     cipher_base64 = base64.b64encode(cryto_msg)  # 将加密文本转化为 base64 编码
     return cipher_base64.decode()
+
+
+def get_time_stamp(str_len=13):
+    """ 获取时间戳
+    """
+    if isinstance(str_len, int) and 0 < str_len < 17:
+        return str(time.time()).replace(".", "")[:str_len]
+
+    raise Exception("timestamp length can only between 0 and 16.")
