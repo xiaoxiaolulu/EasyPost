@@ -1,4 +1,6 @@
 import base64
+import random
+import string
 import time
 import rsa
 from faker import Faker
@@ -32,7 +34,12 @@ __all__ = [
     "rsa_encrypt",
     "random_float",
     "random_natural",
-    "random_character"
+    "random_character",
+    "random_string",
+    "array_range",
+    "guid",
+    "url",
+    "postcode"
 ]
 
 
@@ -107,6 +114,34 @@ def random_character():
     return character
 
 
+def random_string():
+    """从字符串池返回一个随机字符串，字符数1-10"""
+    string_pool = list(string.ascii_lowercase)
+    ret_string = "".join(fk.random_sample(elements=string_pool, length=random.randint(1, 10)))
+    return ret_string
+
+
+def array_range(start, stop, step):
+    """返回一个整型数组，参数分别：start：起始值，stop：结束值，step：步长"""
+    random_array = [fk.random_int(min=start, max=stop, step=step) for _ in range(stop // step)]
+    return random_array
+
+
+def guid():
+    """随机生成一个 GUID。例：eFD616Bd-e149-c98E-a041-5e12ED0C94Fd"""
+    return fk.uuid4()
+
+
+def url():
+    """随机生成一个http URL"""
+    return fk.url()
+
+
+def postcode():
+    """随机生成一个邮政编码"""
+    return fk.postcode()
+
+
 def random_ipv4():
     """随机生成一个ipv4的地址"""
     return fk.ipv4()
@@ -146,4 +181,4 @@ def rsa_encrypt(msg, server_pub):
 
 
 if __name__ == '__main__':
-    print(fk.lexify())
+    print(fk.postcode())
