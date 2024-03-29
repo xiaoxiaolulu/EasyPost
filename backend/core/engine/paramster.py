@@ -23,10 +23,6 @@ def _update_func(new_func_name, params, test_desc, func, *args, **kwargs):
 
 
 def ddt(cls):
-    """
-    :param cls: 测试类
-    :return:
-    """
     for name, func in list(cls.__dict__.items()):
         if hasattr(func, "PARAMS"):
 
@@ -51,11 +47,6 @@ def ddt(cls):
 
 
 def list_data(datas):
-    """
-    :param datas: 测试数据
-    :return:
-    """
-
     def wrapper(func):
         setattr(func, "PARAMS", datas)
         return func

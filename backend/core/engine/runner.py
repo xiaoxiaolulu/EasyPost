@@ -6,7 +6,6 @@ from concurrent.futures.thread import ThreadPoolExecutor
 
 
 class TestResult(unittest.TestResult):
-    """ 测试结果记录"""
 
     def __init__(self):
         super().__init__()
