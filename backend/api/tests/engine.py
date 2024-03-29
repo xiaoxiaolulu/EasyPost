@@ -1,6 +1,7 @@
 from api.response.fatcory import ResponseStandard
 from core.engine.base import run_test
 
+
 if __name__ == '__main__':
     # 测试数据(详细结构说明看下一节)
     case_data = [
