@@ -12,7 +12,18 @@ class Trigger(CronTrigger):
     @classmethod
     def from_crontab(cls, expr, timezone=None):
         """
-        Create a :class:`~CronTrigger` from a standard crontab expression.
+        Creates an instance of the class (likely a cron-related class) from a crontab expression.
+
+        Args:
+            cls: The class to instantiate (assumed to handle cron scheduling).
+            expr: The crontab expression string (e.g., "0 0 * * *").
+            timezone: The optional timezone for the cron schedule (defaults to None).
+
+        Returns:
+            An instance of the class with fields set according to the crontab expression.
+
+        Raises:
+            ValueError: If the crontab expression is invalid (has 0 or fewer fields).
         """
         values = expr.split()
         if len(values) < 0:
@@ -36,16 +47,50 @@ class Scheduler(BaseScheduler):
 
     @classmethod
     def configure(cls, **kwargs):
+        """
+        Configures the scheduler (likely used for scheduling jobs) with the provided keyword arguments.
+
+        This class method allows for centralized configuration of the scheduler used by the class.
+
+        Args:
+            **kwargs: Keyword arguments to pass to the scheduler's `configure` method.
+
+        Returns:
+            None: The method does not return any value.
+        """
         cls.scheduler.configure(**kwargs)
 
     @classmethod
     def start(cls):
+        """
+        Starts the scheduler (likely used for scheduling jobs).
+
+        This method starts the scheduler used by the class, which can
+        be used to schedule jobs based on cron expressions.
+
+        Returns:
+            None: The method does not return any value.
+        """
         cls.scheduler._logger = logging
         cls.scheduler.start()
 
     @classmethod
     def add_test_plan(cls, case_list, plan_id, plan_name, cron):
+        """
+        Schedules a test plan using the scheduler.
 
+        This class method adds a new test plan to the scheduler using the provided details.
+
+        Args:
+            cls: The class itself.
+            case_list: A list of test cases to be included in the plan.
+            plan_id: The unique identifier of the test plan.
+            plan_name: The human-readable name of the test plan.
+            cron: The cron expression defining the schedule for running the test plan.
+
+        Returns:
+            Job: The scheduled job object representing the test plan.
+        """
         return cls.scheduler.add_job(
             name=plan_name,
             func=HttpDao.run_test_suite,
@@ -74,10 +119,16 @@ class Scheduler(BaseScheduler):
     @classmethod
     def pause_resume_test_plan(cls, plan_id, status):
         """
-        暂停或恢复测试计划，会影响到next_run_at
-        :param plan_id:
-        :param status:
-        :return:
+        Pauses or resumes a scheduled test plan based on the provided status.
+
+        This class method allows for controlling the execution of a test plan.
+
+        Args:
+            cls: The class itself.
+            plan_id: The unique identifier of the test plan.
+            status: Boolean value indicating the desired action:
+                - True: Resume the paused test plan.
+                - False: Pause the running test plan.
         """
         if status:
             cls.scheduler.resume_job(job_id=str(plan_id))
@@ -87,9 +138,13 @@ class Scheduler(BaseScheduler):
     @classmethod
     def remove(cls, plan_id):
         """
-        删除job，当删除测试计划时，调用此方法
-        :param plan_id:
-        :return:
+        Removes a test plan from the scheduler.
+
+        This class method removes a scheduled test plan based on its unique identifier.
+
+        Args:
+            cls: The class itself.
+            plan_id: The unique identifier of the test plan to be removed.
         """
         cls.scheduler.remove_job(str(plan_id))
 
