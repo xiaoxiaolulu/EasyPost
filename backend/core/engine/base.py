@@ -41,11 +41,20 @@ except ModuleNotFoundError:
 
 
 class BaseTest(unittest.TestCase, CaseRunLog):
-    """用例执行逻辑"""
 
     def timer(self, second) -> None:
         """
-        等待控制器
+        Waits for a specified number of seconds.
+
+        This function uses the `time.sleep()` function to suspend the execution of the current
+         thread for the given number of seconds (`second`). It then logs a message indicating the delay.
+
+        Args:
+            self (object): The object instance (not explicitly used in this function).
+            second: The number of seconds to wait.
+
+        Returns:
+            None
         """
         time.sleep(second)
         self.info_log('强制等待:{}秒\n'.format(second))
@@ -53,7 +62,22 @@ class BaseTest(unittest.TestCase, CaseRunLog):
     @staticmethod
     def skipIf(_condition, cls, test_name):
         """
-        条件控制器
+        Skips a test case conditionally based on a provided condition.
+
+        This function takes a condition (`_condition`), a test class (`cls`), and a test name (`test_name`)as arguments.
+        It attempts to mark the specified test case as skipped if the condition evaluates to True.
+
+        Args:
+            _condition: A function or expression that evaluates to True or False.
+                        If True, the test case will be skipped.
+            cls: The test class containing the test case.
+            test_name: The name of the test case to potentially skip.
+
+        Returns:
+            The original test case (`test_item`).
+
+        Raises:
+            AttributeError: If the specified test case is not found in the class.
         """
         test_item = getattr(cls, test_name)
 
@@ -67,7 +91,23 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             return test_item
 
     def loop(self, loop_obj, cls, test_name, new_test_func):
-        """循环控制器"""
+        """
+        Creates multiple test cases with unique names by dynamically attaching a test function to a class.
+
+        This function generates multiple test cases within a class by repeatedly attaching the same test function
+        with a unique name based on a loop count. It's designed for creating multiple test cases with similar
+        structure but different data or variations.
+
+        Args:
+            self (object): The object instance (not explicitly used in this function).
+            loop_obj: An object representing the loop count (either a number or None).
+            cls: The test class to which the test cases will be attached.
+            test_name: The base name for the test cases (will be suffixed with tags).
+            new_test_func: The test function to be attached as multiple test cases.
+
+        Returns:
+            None
+        """
 
         count = 1 if loop_obj is None else loop_obj  # noqa
         for c in range(int(count)):
@@ -77,7 +117,20 @@ class BaseTest(unittest.TestCase, CaseRunLog):
 
     def save_env_variable(self, name, value) -> None:
         """
-        设置一个环境变量
+        Saves a value to an environment variable, prioritizing object-level variables in non-debug mode.
+
+        This function stores the provided `value` in an environment variable named `name`. It chooses the environment
+        to store the variable in based on the debugging mode (`DEBUG`):
+            - In debug mode (`DEBUG` is True), it saves the value to the global environment (`ENV`).
+            - In non-debug mode, it saves the value to the object's environment (`self.env`).
+
+        Args:
+            self (object): The object instance (holds `env` in non-debug mode).
+            name (str): The name of the environment variable to save.
+            value: The value to store in the environment variable.
+
+        Returns:
+            None
         """
         self.info_log('♾️设置临时变量 变量名:{} 变量值:{}\n'.format(name, value))
         if DEBUG:
@@ -88,7 +141,19 @@ class BaseTest(unittest.TestCase, CaseRunLog):
 
     def get_env_variable(self, name) -> str:
         """
-        获取一个环境变量
+        Retrieves the value of an environment variable, prioritizing object-level variables in non-debug mode.
+
+        This function fetches the value of an environment variable named `name`. It selects the source of the variable
+        based on the debugging mode (`DEBUG`):
+            - In debug mode (`DEBUG` is True), it retrieves the value from the global environment (`ENV`).
+            - In non-debug mode, it retrieves the value from the object's environment (`self.env`).
+
+        Args:
+            self (object): The object instance (holds `env` in non-debug mode).
+            name (str): The name of the environment variable to retrieve.
+
+        Returns:
+            The value of the environment variable.
         """
         self.info_log('获取临时变量 变量名:{}\n'.format(name))
         if DEBUG:
@@ -97,22 +162,73 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             return self.env[name]
 
     def get_pre_url(self) -> str:
-        """获取当前环境的url"""
+        """
+        Retrieves the pre-URL from the environment.
+
+        This function fetches the value of the environment variable named `url` and returns it.
+
+        Args:
+            self (object): The object instance (not used in this function).
+
+        Returns:
+            The value of the environment variable `url`.
+        """
         pre_url = self.get_env_variable('url')
         return pre_url
 
     def save_global_variable(self, name, value) -> None:
-        """设置全局环境变量"""
+        """
+           Saves a global variable to the environment.
+
+           This function stores a value in a global variable identified by its name (`name`)
+           in the environment (assumed to be stored in a global dictionary named `ENV`).
+           It logs the saving process with an informational message before actually storing the value.
+
+           Args:
+               self (object): The object instance (not explicitly used in this function).
+               name (str): The name of the global variable to save.
+               value: The value to store in the global variable.
+
+           Returns:
+               None
+        """
         self.info_log('设置全局变量 变量名:{} 变量值:{}\n'.format(name, value))
         ENV[name] = value
 
     def delete_env_variable(self, name) -> None:
-        """删除临时变量"""
+        """
+        Deletes an environment variable from the current object's environment.
+
+        This function removes an environment variable identified by its name (`name`)
+        from the environment associated with the current object (`self.env`).
+        It logs the deletion with an informational message before actually removing the variable.
+
+        Args:
+            self (object): The object instance (which holds the `env` environment).
+            name (str): The name of the environment variable to delete.
+
+        Returns:
+            None
+        """
         self.info_log('删除临时变量:{}\n'.format(name, ))
         del self.env[name]
 
     def delete_global_variable(self, name) -> None:
-        """删除全局变量"""
+        """
+        Deletes a global variable from the environment.
+
+        This function removes a global variable identified by its name (`name`) from the environment
+        (likely stored in a global dictionary named `ENV`).
+
+        It logs the deletion with an informational message before actually removing the variable.
+
+        Args:
+            self (object): The object instance.
+            name (str): The name of the global variable to delete.
+
+        Returns:
+            None
+        """
         self.info_log('删除全局变量:{}\n'.format(name))
         del ENV[name]
 
@@ -158,6 +274,16 @@ class BaseTest(unittest.TestCase, CaseRunLog):
 
     @classmethod
     def setUpClass(cls) -> None:
+        """
+        Sets up the class-level environment before running any tests in the class.
+
+        This method is called once at the beginning of the test class execution.
+        It performs the following tasks:
+            - Initializes a base environment (`cls.env`) using `BaseEnv`.
+            - Creates a session object depending on the debug flag (`DEBUG`):
+            - If `DEBUG` is True, it uses the provided `session` object (likely for mocking or specific configurations).
+            - Otherwise, it creates a new `requests.Session` object for making HTTP requests during tests.
+        """
         cls.env = BaseEnv()
         if DEBUG:
             cls.session = session
@@ -165,7 +291,14 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             cls.session = requests.Session()
 
     def step(self, data) -> None:
-        """执行单条用例的主函数"""
+        """
+        Executes a single test step.
+
+        Args:
+            data: Dictionary containing step-specific data.
+
+        Returns: None
+        """
         # 日志记录
         self.__run_log()
         # 数据库查询
@@ -186,7 +319,6 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         self.__run_teardown_script(response)
 
     def perform(self, data):
-        """一键压测扩展"""
         router = data.get('interface').get('url')
         threads = data.get('threads', 1)
         iterations = data.get('iterations', 1)
@@ -507,10 +639,17 @@ class BaseTest(unittest.TestCase, CaseRunLog):
 
     def data_extraction(self, response, case):
         """
-        数据提取
-        :param response: response对象
-        :param case: 要提数据的数据，列表嵌套字典
-        :return:
+        Extracts data from a response object based on a list of JSONPath expressions.
+
+        This function takes a response object (`response`) and a list of JSONPath expressions (`case`) as input.
+        It uses the `jsonpath_rw` library to extract the data from the response and returns the results.
+
+        Args:
+            response (Any): The response object to extract data from.
+            case (Any): A list of JSONPath expressions representing the data to be extracted.
+
+        Returns:
+            Any: The extracted data.
         """
         exts = case.get('extract') or getattr(self, 'extract', None)  # noqa
         if not (isinstance(exts, dict) and exts): return
@@ -539,15 +678,16 @@ class BaseTest(unittest.TestCase, CaseRunLog):
 
     def get_assert_method(self) -> Any:
         """
-        获取断言方法
+        Retrieves the dictionary of assertion methods.
+
+        This function returns a dictionary mapping assertion method names to their corresponding functions.
 
         Args:
-            self: 对象本身
+            self (object): The object instance.
 
         Returns:
-            断言方法字典
+            Dict: A dictionary of assertion methods.
         """
-
         methods_map = {
             "相等": self.assertEqual,
             "不相等": self.assertNotEqual,
@@ -577,12 +717,22 @@ class BaseTest(unittest.TestCase, CaseRunLog):
 
     def assertion(self, methods, expected, actual) -> None:
         """
-        断言
-        :param methods: 比较方式
-        :param expected: 预期结果
-        :param actual: 实际结果
-        :return:
+        Performs an assertion based on the provided method and validates the results.
+
+        This function takes the assertion method name (`methods`), expected value, and actual value as input.
+        It retrieves the corresponding assertion method using `self.get_assert_method()`, performs the assertion,
+        and handles both successful and failed assertions with logging and result recording.
+
+        Args:
+            self (object): The object instance.
+            methods (str): The name of the assertion method to use.
+            expected (Any): The expected value for the assertion.
+            actual (Any): The actual value to be compared against.
+
+        Returns:
+            None
         """
+
         self.info_log('断言方法:{} 预期结果:{} 实际结果:{}\n'.format(methods, expected, actual))
         assert_method = self.get_assert_method().get(methods)
         global result  # noqa
@@ -679,7 +829,6 @@ class BaseTest(unittest.TestCase, CaseRunLog):
 
 
 class GenerateCase:
-    """解析数据创建测试用例"""
 
     def __init__(self):
         self.controller = BaseTest()
@@ -874,18 +1023,26 @@ class GenerateCase:
 def run_test(case_data, env_config={}, tester='tester', thread_count=1, debug=True) -> tuple[Any, dict[
     Any, Any]] | Any:  # noqa
     """
-    :param case_data: 测试套件数据
-    :param env_config: 用例执行的环境配置
-        env_config:{
-        'ENV':{"host":'http//:127.0.0.1'},
-        'db':[{},{}],
-        'FuncTools':'工具函数文件'
-        }
-    :param thread_count: 运行线程数
-    :param debug: 单接口调试用debug模式
-    :param tester: 测试员
-    :return:
-        debug模式：会返回本次运行的结果和 本次运行设置的全局变量，
+      Executes the test suite.
+
+      This function takes the test suite data (`case_data`), environment configuration (`env_config`),
+      number of threads (`thread_count`), debug mode (`debug`), and tester name (`tester`) as input.
+      It executes the test suite and returns the results.
+
+      Args:
+          case_data (Any): The test suite data.
+          env_config (Any): The environment configuration for test case execution.
+              env_config:{
+              'ENV':{"host":'http//:127.0.0.1'},
+              'db':[{},{}],
+              'FuncTools':'工具函数文件'
+              }
+          thread_count (int): The number of threads to use for execution.
+          debug (bool): Debug mode flag for single interface debugging.
+          tester (str): The name of the tester.
+
+      Returns:
+          Any: In debug mode, returns the results of the current run and the global variables set for the current run.
     """
     global global_func, db, DEBUG, ENV, result  # noqa
     global_func_file = env_config.get('global_func', b'')
