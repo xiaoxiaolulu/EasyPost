@@ -22,8 +22,12 @@ class TestResult(unittest.TestResult):
 
     def startTest(self, test):
         """
-        当测试用例测试即将运行时调用
-        :return:
+        Marks the beginning of a test execution, records the start time, and logs the test name.
+
+        This method is typically used within a testing framework or class for managing test execution.
+
+        Args:
+            test: The test object that is about to start.
         """
         super().startTest(test)
         self.start_time = time.time() # noqa
@@ -32,8 +36,12 @@ class TestResult(unittest.TestResult):
 
     def stopTest(self, test):
         """
-        当测试用列执行完成后进行调用
-        :return:
+        Marks the end of a test execution, calculates the run time, and updates test results.
+
+        This method is typically used within a testing framework or class for managing test execution.
+
+        Args:
+            test: The test object that has just finished execution.
         """
         test.run_time = '{:.3}s'.format((time.time() - self.start_time))
         self.result['cases'].append(test)
@@ -43,9 +51,13 @@ class TestResult(unittest.TestResult):
 
     def stopTestRun(self, title=None):
         """
-        测试用例执行完手动调用统计测试结果的相关数据
-        :param title:
-        :return:
+        Marks the end of a test run, determines the overall test outcome, and updates the result dictionary.
+
+        This method is typically used within a testing framework or class to finalize test execution and
+        summarize the results.
+
+        Args:
+            title (str, optional): A title for the test run (defaults to None).
         """
         if len(self.errors) > 0:
             self.result['state'] = 'error'
@@ -55,7 +67,14 @@ class TestResult(unittest.TestResult):
             self.result['state'] = 'success'
 
     def addSuccess(self, test):
-        """用例执行通过，成功数量+1"""
+        """
+        Logs a successful test and updates the result dictionary.
+
+        This method is typically called by a testing framework or class when a test completes successfully.
+
+        Args:
+            test: The test object that has just finished execution.
+        """
         count = test._testMethodName.split("_").pop()
         self.result["success"] += 1
         test.state = '成功'
@@ -64,25 +83,32 @@ class TestResult(unittest.TestResult):
 
     def addFailure(self, test, err):
         """
-        :param test: 测试用例
-        :param err:  错误信息
-        :return:
+        Logs a failed test, updates the result dictionary, and saves the error information.
+
+        This method is typically called by a testing framework or class when a test fails.
+
+        Args:
+            test: The test object that has just finished execution.
+            err: A tuple containing the error type and error message.
         """
         count = test._testMethodName.split("_").pop()
         super().addFailure(test, err)
         self.result["fail"] += 1
         test.state = '失败'
         test.tag = f'循环{count}次' if count else '-'
-        # 保存错误信息
         getattr(test, 'warning_log')(err[1])
         getattr(test, 'warning_log')("{}执行——>【失败】\n".format(getattr(test, '_testMethodDoc')))
 
     def addError(self, test, err):
         """
-        修改错误用例的状态
-        :param test: 测试用例
-        :param err:错误信息
-        :return:
+        Logs a test error, updates the result dictionary, and saves the error information.
+
+        This method is typically called by a testing framework or class when a test encounters
+        an error (unexpected exception).
+
+        Args:
+            test: The test object that has just finished execution.
+            err: A tuple containing the error type, error message, and traceback information.
         """
         count = test._testMethodName.split("_").pop()
         super().addError(test, err)
@@ -95,10 +121,13 @@ class TestResult(unittest.TestResult):
 
     def addSkip(self, test, reason):
         """
-        修改跳过用例的状态
-        :param test:测试用例
-        :param reason: 相关信息
-        :return: None
+        Logs a skipped test, updates the result dictionary, and saves the reason for skipping.
+
+        This method is typically called by a testing framework or class when a test is skipped.
+
+        Args:
+            test: The test object that has just finished execution.
+            reason: A string explaining why the test was skipped.
         """
         count = test._testMethodName.split("_").pop()
         super().addSkip(test, reason)
@@ -110,25 +139,56 @@ class TestResult(unittest.TestResult):
 class ReRunResult(TestResult):
 
     def __init__(self, count, interval):
+        """
+        Initializes a test runner object.
+
+        This constructor is typically called when creating a new instance of the test runner class.
+
+        Args:
+            count (int): The total number of test cases to run.
+            interval (float): The time interval (in seconds) between running each test case.
+        """
         super().__init__()
         self.count = count
         self.interval = interval
         self.run_cases = []
 
     def startTest(self, test):
+        """
+        Called before each test case is run.
+
+        This method is typically overridden by subclasses to perform any
+        necessary setup before a test case is executed.
+
+        Args:
+            test: The test case that is about to be run.
+        """
         if not hasattr(test, "count"):
             super().startTest(test)
 
     def stopTest(self, test):
+        """
+        Called after each test case is run.
+
+        This method is typically overridden by subclasses to perform any necessary
+        cleanup after a test case has been executed.
+
+        Args:
+            test: The test case that has just finished execution.
+        """
         if test not in self.run_cases:
             self.run_cases.append(test)
             super().stopTest(test)
 
     def addFailure(self, test, err):
         """
-        :param test: 测试用例
-        :param err:  错误信息
-        :return:err
+        Logs a failed test, updates the result dictionary, and saves the error information.
+
+        This method is typically called by a testing framework or class when a test fails.
+
+        Args:
+            test: The test object that has just finished execution.
+            err: A tuple containing the error type and error message.
         """
         if not hasattr(test, 'count'):
             test.count = 0
@@ -147,10 +207,14 @@ class ReRunResult(TestResult):
 
     def addError(self, test, err):
         """
-        修改错误用例的状态
-        :param test: 测试用例
-        :param err:错误信息
-        :return:
+        Logs a test error, updates the result dictionary, and saves the error information.
+
+        This method is typically called by a testing framework or class when a test
+        encounters an error (unexpected exception).
+
+        Args:
+            test: The test object that has just finished execution.
+            err: A tuple containing the error type, error message, and traceback information.
         """
         if not hasattr(test, 'count'):
             test.count = 0
@@ -168,10 +232,17 @@ class ReRunResult(TestResult):
 
 
 class TestRunner:
-    """测试运行器"""
 
     def __init__(self, suite, tester='测试员'):
-        """套件"""
+        """
+        Initializes a test runner object.
+
+        This constructor is typically called when creating a new instance of the test runner class.
+
+        Args:
+            suite: The test suite to be run.
+            tester: The name of the tester running the tests.
+        """
         self.suite = suite
         self.tester = tester
         self.result_list = []
@@ -179,8 +250,13 @@ class TestRunner:
 
     def __classification_suite(self):
         """
-        将测试套件中的用例，根据用例类位单位，拆分成多个测试套件，打包成列表类型
-        :return: list-->[suite,suite,suite.....]
+        Classifies a test suite into smaller suites containing individual test cases.
+
+        This method recursively traverses a test suite, identifying suites that directly
+        contain test cases and isolating them for execution.
+
+        Returns:
+            list: A list of suites, each containing individual test cases.
         """
         suites_list = []
 
@@ -196,7 +272,16 @@ class TestRunner:
         return suites_list
 
     def __parser_results(self):
-        """解析汇总测试结果"""
+        """
+        Parses and aggregates test results into a comprehensive dictionary.
+
+        This method iterates through the individual test results stored in
+        `self.result_list` and builds a consolidated dictionary containing
+        various test execution statistics.
+
+        Returns:
+            dict: A dictionary containing aggregated test results.
+        """
         result = {
             "class_list": [],
             "all": 0,
@@ -216,7 +301,7 @@ class TestRunner:
             result['success'] += cls.result['success']
             result['error'] += cls.result['error']
             result['fail'] += cls.result['fail']
-            # 将对象转换为dict类型数据
+
             cls.result['cases'] = [{k: v for k, v in res.__dict__.items() if not k.startswith('_')} for res in
                                    cases_info]
             result['class_list'].append(cls.result)
@@ -233,14 +318,28 @@ class TestRunner:
 
     def run(self, thread_count=1, rerun=0, interval=2):
         """
-        支持多线程执行
-        注意点：如果多个测试类共用某一个全局变量，由于资源竞争可能会出现错误
-        :param thread_count:线程数量，默认位1
-        :param rerun:
-        :param interval:
-        :return:测试运行结果
+        Executes the test suite(s) using multithreading.
+
+        This method orchestrates the test execution process. It performs the following steps:
+
+        1. Classifies the test suite into smaller suites containing individual test cases.
+        2. Creates a thread pool with the specified number of threads.
+        3. Iterates through the classified suites:
+           - Creates a `ReRunResult` object to store test results with retries.
+           - Appends the `ReRunResult` object to `self.result_list` for tracking.
+           - Submits the test suite's `run` method to the thread pool, providing the `ReRunResult` object as an argument
+           - Attaches a callback function `res.stopTestRun` to be executed after the test suite finishes running.
+        4. Waits for all threads to complete and parses the individual test results.
+        5. Returns a dictionary containing aggregated test execution statistics.
+
+        Args:
+            thread_count (int, optional): The number of threads to use for parallel execution. Defaults to 1 (thread).
+            rerun (int, optional): The maximum number of times to retry a failing test case. Defaults to 0 (no retries).
+            interval (float, optional): The time interval (in seconds) to wait between retries. Defaults to 2.
+
+        Returns:
+            dict: A dictionary containing aggregated test results.
         """
-        # 将测试套件按照用例类进行拆分
         suites = self.__classification_suite()
         with ThreadPoolExecutor(max_workers=thread_count) as ts:
             for i in suites:
