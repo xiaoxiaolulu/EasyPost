@@ -5,7 +5,7 @@ from pydantic import (
     BaseModel,
     Field
 )
-from core.request.http_handler import HttpHandler
+from unitrunner.request.http_handler import HttpHandler
 
 
 class Headers(BaseModel):

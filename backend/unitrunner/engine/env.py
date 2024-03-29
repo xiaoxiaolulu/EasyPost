@@ -1,5 +1,5 @@
 import requests
-from core.database.DBClient import DBClient
+from unitrunner.database.DBClient import DBClient
 
 
 class BaseEnv(dict):

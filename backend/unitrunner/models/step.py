@@ -3,7 +3,7 @@ from pydantic import (
     BaseModel,
     Field
 )
-from core.models import (
+from unitrunner.models import (
     Name,
     MethodEnum,
     Url,

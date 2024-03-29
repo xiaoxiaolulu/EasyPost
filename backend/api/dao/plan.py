@@ -10,7 +10,7 @@ from api.models.plan import Plan
 from api.models.project import Project
 from api.response.fatcory import ResponseStandard
 from api.scheduler.scheduler import Scheduler
-from core.request.parser import HandelTestData
+from unitrunner.request.parser import HandelTestData
 from utils.logger import logger
 
 

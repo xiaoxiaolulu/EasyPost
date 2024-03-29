@@ -22,22 +22,22 @@ from typing import (
 import requests
 from jsonpath import jsonpath
 from requests_toolbelt import MultipartEncoder
-from core.builitin import compares
-from core.engine.env import (
+from unitrunner.builitin import compares
+from unitrunner.engine.env import (
     BaseEnv,
     DEBUG,
     session,
     ENV,
     db
 )
-from core.engine.log import CaseRunLog
-from core.engine.runner import TestRunner
-from core.models import step
+from unitrunner.engine.log import CaseRunLog
+from unitrunner.engine.runner import TestRunner
+from unitrunner.models import step
 
 try:
     global_func = importlib.import_module('global_func')
 except ModuleNotFoundError:
-    from core.builitin import functions as global_func
+    from unitrunner.builitin import functions as global_func
 
 
 class BaseTest(unittest.TestCase, CaseRunLog):

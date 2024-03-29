@@ -21,7 +21,7 @@ from api.schema.https import (
     ApiSerializer,
     CaseSerializers
 )
-from core.request.http_handler import HttpHandler
+from unitrunner.request.http_handler import HttpHandler
 from api.response.fatcory import ResponseStandard
 from utils.trees import (
     get_tree_max_id

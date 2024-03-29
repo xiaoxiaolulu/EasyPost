@@ -21,11 +21,11 @@ from api.models.https import (
     ApiCopy
 )
 from api.models.project import Project
-from core.engine.base import (
+from unitrunner.engine.base import (
     run_test,
     run_api
 )
-from core.request.parser import HandelTestData
+from unitrunner.request.parser import HandelTestData
 from utils.decorator import lock
 from utils.logger import logger
 from utils.trees import (

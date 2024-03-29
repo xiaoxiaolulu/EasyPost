@@ -16,11 +16,11 @@ from config.settings import (
     BASE_DIR,
     DATABASES
 )
-from core.constructor.create_function import create_function_from_parameters
-from core.request.http_handler import HttpHandler
-from core.builitin import compares
-from core.engine.extract import extract_by_object
-from core.database.db import OperateMysql
+from unitrunner.constructor.create_function import create_function_from_parameters
+from unitrunner.request.http_handler import HttpHandler
+from unitrunner.builitin import compares
+from unitrunner.engine.extract import extract_by_object
+from unitrunner.database.db import OperateMysql
 from utils.logger import log
 from utils.render_template_obj import *
 
