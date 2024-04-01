@@ -66,3 +66,15 @@ class AddressWriteSerializers(serializers.ModelSerializer):
     class Meta:
         model = Address
         fields = "__all__"
+
+
+class DataSourceSerializers(serializers.ModelSerializer):
+
+    id = serializers.IntegerField(read_only=True)
+    user = UserSimpleSerializers(required=False, default=serializers.CurrentUserDefault())
+    create_time = serializers.DateTimeField(read_only=True)
+    update_time = serializers.DateTimeField(read_only=True)
+
+    class Meta:
+        model = Address
+        fields = "__all__"

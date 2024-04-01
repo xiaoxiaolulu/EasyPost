@@ -1,7 +1,8 @@
 import django_filters.rest_framework as filters
 from api.models.setting import (
     TestEnvironment,
-    Address
+    Address,
+    DataSource
 )
 
 
@@ -16,8 +17,17 @@ class TestEnvironmentFilter(filters.FilterSet):
 
 class AddressFilter(filters.FilterSet):
 
-    name = filters.CharFilter(field_name='name', help_text='按地址名称名模糊查询', lookup_expr='icontains')
+    name = filters.CharFilter(field_name='name', help_text='按地址名称模糊查询', lookup_expr='icontains')
 
     class Meta:
         model = Address
+        fields = ["name"]
+
+
+class DataSourceFilter(filters.FilterSet):
+
+    name = filters.CharFilter(field_name='name', help_text='按数据库名称模糊查询', lookup_expr='icontains')
+
+    class Meta:
+        model = DataSource
         fields = ["name"]

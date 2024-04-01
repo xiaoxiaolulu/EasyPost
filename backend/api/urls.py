@@ -47,7 +47,11 @@ from api.service.setting import (
     AddressListViewSet,
     AddressDestroyViewSet,
     AddressUpdateViewSet,
-    AddressCreateViewSet
+    AddressCreateViewSet,
+    DataSourceListViewSet,
+    DataSourceDestroyViewSet,
+    DataSourceUpdateViewSet,
+    DataSourceCreateViewSet
 )
 from api.service.user import (
     CustomJsonWebToken,
@@ -82,6 +86,10 @@ app_urls = [
     path("address/delete/<int:pk>", AddressDestroyViewSet.as_view()),
     path("address/update/<int:pk>", AddressUpdateViewSet.as_view()),
     path("address/create", AddressCreateViewSet.as_view()),
+    path("database/list", DataSourceListViewSet.as_view()),
+    path("database/delete/<int:pk>", DataSourceDestroyViewSet.as_view()),
+    path("database/update/<int:pk>", DataSourceUpdateViewSet.as_view()),
+    path("database/create", DataSourceCreateViewSet.as_view()),
 
     # 接口测试
     path("http/", ApiFastView.as_view()),

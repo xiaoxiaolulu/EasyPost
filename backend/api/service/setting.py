@@ -3,11 +3,13 @@ from rest_framework import filters
 from rest_framework.permissions import IsAuthenticated
 from api.filters.setting import (
     TestEnvironmentFilter,
-    AddressFilter
+    AddressFilter,
+    DataSourceFilter
 )
 from api.models.setting import (
     TestEnvironment,
-    Address
+    Address,
+    DataSource
 )
 from api.mixins.magic import (
     MagicListAPI,
@@ -18,7 +20,8 @@ from api.mixins.magic import (
 from api.schema.setting import (
     TestEnvironmentSerializers,
     AddressSerializers,
-    AddressWriteSerializers
+    AddressWriteSerializers,
+    DataSourceSerializers
 )
 
 
@@ -83,4 +86,35 @@ class AddressCreateViewSet(MagicCreateApi):  # noqa
 
     queryset = Address.objects.all()
     serializer_class = AddressWriteSerializers
+    permission_classes = [IsAuthenticated]
+
+
+class DataSourceListViewSet(MagicListAPI):  # noqa
+
+    queryset = DataSource.objects.all()
+    serializer_class = DataSourceSerializers
+    permission_classes = [IsAuthenticated]
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
+    filterset_class = DataSourceFilter  # noqa
+    search_fields = ['name']
+    ordering_fields = ['create_time']
+
+
+class DataSourceDestroyViewSet(MagicDestroyApi):  # noqa
+
+    queryset = DataSource.objects.all()
+    serializer_class = DataSourceSerializers
+    permission_classes = [IsAuthenticated]
+
+
+class DataSourceUpdateViewSet(MagicUpdateApi):
+    queryset = DataSource.objects.all()
+    serializer_class = DataSourceSerializers
+    permission_classes = [IsAuthenticated]
+
+
+class DataSourceCreateViewSet(MagicCreateApi):  # noqa
+
+    queryset = DataSource.objects.all()
+    serializer_class = DataSourceSerializers
     permission_classes = [IsAuthenticated]
