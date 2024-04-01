@@ -64,12 +64,43 @@ class Address(Model):
     name = CharField(max_length=50, null=True, blank=True, verbose_name=_('Address Name'))
     env = ForeignKey(TestEnvironment, null=True, on_delete=SET_NULL, verbose_name=_('Address Env'))
     host = CharField(max_length=100, null=True, blank=True, verbose_name=_('Address Host'))
-    user = ForeignKey(User, related_name="address_creator", null=True, on_delete=SET_NULL, verbose_name=_('User'))
+    user = ForeignKey(User, related_name="address", null=True, on_delete=SET_NULL, verbose_name=_('User'))
     create_time = DateTimeField(auto_now_add=True, verbose_name=_('Address CreateTime'))
     update_time = DateTimeField(auto_now=True, verbose_name=_('Address UpdateTime'))
 
     class Meta:
         verbose_name = _("Address")
+        verbose_name_plural = verbose_name
+        ordering = ("-create_time",)
+
+    def __str__(self):
+        return self.name
+
+
+class DataSource(Model):
+    """
+    数据库配置
+    * name: 数据库名称
+    * host: 地址
+    * port: 端口
+    * user: 账号
+    * password: 密码
+    * creator: 用户
+    * create_time: 创建时间
+    * update_time: 更新时间
+    """
+    id = AutoField(primary_key=True)
+    name = CharField(max_length=50, null=True, blank=True, verbose_name=_('DataSource Name'))
+    host = CharField(max_length=100, null=True, blank=True, verbose_name=_('DataSource Host'))
+    port = CharField(max_length=100, null=True, blank=True, verbose_name=_('DataSource Host'))
+    user = CharField(max_length=100, null=True, blank=True, verbose_name=_('DataSource Host'))
+    password = CharField(max_length=100, null=True, blank=True, verbose_name=_('DataSource Host'))
+    creator = ForeignKey(User, related_name="data_source", null=True, on_delete=SET_NULL, verbose_name=_('User'))
+    create_time = DateTimeField(auto_now_add=True, verbose_name=_('DataSource CreateTime'))
+    update_time = DateTimeField(auto_now=True, verbose_name=_('DataSource UpdateTime'))
+
+    class Meta:
+        verbose_name = _("DataSource")
         verbose_name_plural = verbose_name
         ordering = ("-create_time",)
 

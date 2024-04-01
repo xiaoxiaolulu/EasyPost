@@ -75,7 +75,7 @@ class Plan(Model):
     pass_rate = CharField(max_length=50, null=True, blank=True, verbose_name=_('Plan PassRate'))
     msg_type = CharField(max_length=50, null=True, blank=True, verbose_name=_('Plan MsgType'))
     receiver = TextField(verbose_name=_('Plan Receiver'), null=False, default=None)
-    user = ForeignKey(User, related_name="plan_creator", null=True, on_delete=SET_NULL, verbose_name=_('User'))
+    user = ForeignKey(User, related_name="plan", null=True, on_delete=SET_NULL, verbose_name=_('User'))
     create_time = DateTimeField(auto_now_add=True, verbose_name=_('Plan CreateTime'))
     update_time = DateTimeField(auto_now=True, verbose_name=_('Plan UpdateTime'))
 

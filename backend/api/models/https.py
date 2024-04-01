@@ -124,7 +124,7 @@ class Api(Model):
     teardown_script = TextField(verbose_name=_('Api TeardownScript'), null=False, default=None)
     validate = TextField(verbose_name=_('Api Validate'), null=False, default=None)
     extract = TextField(verbose_name=_('Api Extract'), null=False, default=None)
-    user = ForeignKey(User, related_name="api_creator", null=True, on_delete=SET_NULL, verbose_name=_('User'))
+    user = ForeignKey(User, related_name="api", null=True, on_delete=SET_NULL, verbose_name=_('User'))
     create_time = DateTimeField(auto_now_add=True, verbose_name=_('Api CreateTime'))
     update_time = DateTimeField(auto_now=True, verbose_name=_('Api UpdateTime'))
 
@@ -160,7 +160,7 @@ class Case(Model):
     rerun = CharField(max_length=50, null=True, blank=True, verbose_name=_('Case Name'))
     threads = CharField(max_length=50, null=True, blank=True, verbose_name=_('Case Name'))
     desc = TextField(null=True, blank=True, verbose_name=_('Case Desc'))
-    user = ForeignKey(User, related_name="case_creator", null=True, on_delete=SET_NULL, verbose_name=_('User'))
+    user = ForeignKey(User, related_name="case", null=True, on_delete=SET_NULL, verbose_name=_('User'))
     create_time = DateTimeField(auto_now_add=True, verbose_name=_('Case CreateTime'))
     update_time = DateTimeField(auto_now=True, verbose_name=_('Case UpdateTime'))
 
@@ -207,7 +207,7 @@ class Step(Model):
     teardown_script = TextField(verbose_name=_('Step TeardownScript'), null=False, default=None)
     validate = TextField(verbose_name=_('Step Validate'), null=False, default=None)
     extract = TextField(verbose_name=_('Step Extract'), null=False, default=None)
-    user = ForeignKey(User, related_name="step_creator", null=True, on_delete=SET_NULL, verbose_name=_('User'))
+    user = ForeignKey(User, related_name="step", null=True, on_delete=SET_NULL, verbose_name=_('User'))
     create_time = DateTimeField(auto_now_add=True, verbose_name=_('Step CreateTime'))
     update_time = DateTimeField(auto_now=True, verbose_name=_('Step UpdateTime'))
 
@@ -263,7 +263,7 @@ class ApiCopy(Model):
     teardown_script = TextField(verbose_name=_('ApiCopy TeardownScript'), null=False, default=None)
     validate = TextField(verbose_name=_('ApiCopy Validate'), null=False, default=None)
     extract = TextField(verbose_name=_('ApiCopy Extract'), null=False, default=None)
-    user = ForeignKey(User, related_name="apiCopy_creator", null=True, on_delete=SET_NULL, verbose_name=_('User'))
+    user = ForeignKey(User, related_name="api_copy", null=True, on_delete=SET_NULL, verbose_name=_('User'))
     create_time = DateTimeField(auto_now_add=True, verbose_name=_('ApiCopy CreateTime'))
     update_time = DateTimeField(auto_now=True, verbose_name=_('ApiCopy UpdateTime'))
 
