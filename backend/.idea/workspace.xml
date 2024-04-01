@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="&quot;Add docstring comments to scheduler base and scheduler py files.&quot;">
-      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/src/views/record/build/components/caseStepDetail.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/EasyPost.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/EasyPost.iml" afterDir="false" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Add case step detail component and drawer for report detail view.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/models/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/https.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/models/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/plan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/models/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/setting.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/record/build/components/detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/record/build/components/detail.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,52 +87,52 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Django Server.backend.executor&quot;: &quot;Run&quot;,
-    &quot;Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken.executor&quot;: &quot;Run&quot;,
-    &quot;Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken.setUp.executor&quot;: &quot;Run&quot;,
-    &quot;Django tests.Test: api.tests.test_project_destory.ProjectDestroyViewSetTests.executor&quot;: &quot;Run&quot;,
-    &quot;Django tests.Test: api.tests.test_user_list.TestUserListViewSet.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for MyAssertTest.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for MyAssertTest.test_assertNotEqual.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for Test1.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for Test1.test1.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_assert.MyAssertTest.test_assertNotEqual.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in __init__.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_custom_token.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_engine.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
-    &quot;Python.engine.executor&quot;: &quot;Run&quot;,
-    &quot;Python.functions.executor&quot;: &quot;Run&quot;,
-    &quot;Python.manage.executor&quot;: &quot;Run&quot;,
-    &quot;Python.time.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/codes/MuskTest&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\Program Files\\JetBrains\\PyCharm 2023.1.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Django Server.backend.executor": "Run",
+    "Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken.executor": "Run",
+    "Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken.setUp.executor": "Run",
+    "Django tests.Test: api.tests.test_project_destory.ProjectDestroyViewSetTests.executor": "Run",
+    "Django tests.Test: api.tests.test_user_list.TestUserListViewSet.executor": "Run",
+    "Python tests.Python tests for MyAssertTest.executor": "Run",
+    "Python tests.Python tests for MyAssertTest.test_assertNotEqual.executor": "Run",
+    "Python tests.Python tests for Test1.executor": "Run",
+    "Python tests.Python tests for Test1.test1.executor": "Run",
+    "Python tests.Python tests for test_assert.MyAssertTest.test_assertNotEqual.executor": "Run",
+    "Python tests.Python tests in __init__.py.executor": "Run",
+    "Python tests.Python tests in test_custom_token.py.executor": "Run",
+    "Python tests.Python tests in test_engine.py.executor": "Run",
+    "Python.__init__.executor": "Run",
+    "Python.engine.executor": "Run",
+    "Python.functions.executor": "Run",
+    "Python.manage.executor": "Run",
+    "Python.time.executor": "Run",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "E:/resources/zerorunner/backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "D:\\Program Files\\JetBrains\\PyCharm 2023.1.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;ChangesTree.GroupingKeys&quot;: [
-      &quot;directory&quot;
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\dao" />
@@ -429,22 +428,7 @@
       <workItem from="1711534478853" duration="111000" />
       <workItem from="1711591405569" duration="42079000" />
       <workItem from="1711962633078" duration="55000" />
-    </task>
-    <task id="LOCAL-00250" summary=":construction_worker: 测试报告">
-      <option name="closed" value="true" />
-      <created>1707210997365</created>
-      <option name="number" value="00250" />
-      <option name="presentableId" value="LOCAL-00250" />
-      <option name="project" value="LOCAL" />
-      <updated>1707210997365</updated>
-    </task>
-    <task id="LOCAL-00251" summary=":construction_worker: 测试报告">
-      <option name="closed" value="true" />
-      <created>1707212858568</created>
-      <option name="number" value="00251" />
-      <option name="presentableId" value="LOCAL-00251" />
-      <option name="project" value="LOCAL" />
-      <updated>1707212858568</updated>
+      <workItem from="1711962720464" duration="1044000" />
     </task>
     <task id="LOCAL-00252" summary=":construction_worker: 测试报告">
       <option name="closed" value="true" />
@@ -822,7 +806,23 @@
       <option name="project" value="LOCAL" />
       <updated>1711708018611</updated>
     </task>
-    <option name="localTasksCounter" value="299" />
+    <task id="LOCAL-00299" summary="Add case step detail component and drawer for report detail view.">
+      <option name="closed" value="true" />
+      <created>1711962758078</created>
+      <option name="number" value="00299" />
+      <option name="presentableId" value="LOCAL-00299" />
+      <option name="project" value="LOCAL" />
+      <updated>1711962758078</updated>
+    </task>
+    <task id="LOCAL-00300" summary="Add case step detail component and drawer for report detail view.">
+      <option name="closed" value="true" />
+      <created>1711962834200</created>
+      <option name="number" value="00300" />
+      <option name="presentableId" value="LOCAL-00300" />
+      <option name="project" value="LOCAL" />
+      <updated>1711962834200</updated>
+    </task>
+    <option name="localTasksCounter" value="301" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -852,19 +852,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Updated test runner to include docstrings and refactored methods for read" />
-    <MESSAGE value="Updated test runner to include docstrings and refactored methods for readability" />
-    <MESSAGE value="Updated test runner to include docstrings and refactored methods for readability." />
-    <MESSAGE value="&quot;Ref" />
-    <MESSAGE value="&quot;Refactor" />
-    <MESSAGE value="&quot;Refactor code" />
-    <MESSAGE value="&quot;Refactor code for" />
-    <MESSAGE value="&quot;Refactor code for unit" />
-    <MESSAGE value="&quot;Refactor code for unit test" />
-    <MESSAGE value="&quot;Refactor code for unit test&quot;" />
-    <MESSAGE value="&quot;" />
-    <MESSAGE value="&quot;Add" />
-    <MESSAGE value="&quot;Add doc" />
     <MESSAGE value="&quot;Add docstring" />
     <MESSAGE value="&quot;Add docstring comments" />
     <MESSAGE value="&quot;Add docstring comments to" />
@@ -877,7 +864,20 @@
     <MESSAGE value="&quot;Add docstring comments to scheduler base and scheduler py" />
     <MESSAGE value="&quot;Add docstring comments to scheduler base and scheduler py files" />
     <MESSAGE value="&quot;Add docstring comments to scheduler base and scheduler py files.&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Add docstring comments to scheduler base and scheduler py files.&quot;" />
+    <MESSAGE value="Add" />
+    <MESSAGE value="Add case" />
+    <MESSAGE value="Add case step" />
+    <MESSAGE value="Add case step detail" />
+    <MESSAGE value="Add case step detail component" />
+    <MESSAGE value="Add case step detail component and" />
+    <MESSAGE value="Add case step detail component and dra" />
+    <MESSAGE value="Add case step detail component and drawer" />
+    <MESSAGE value="Add case step detail component and drawer for" />
+    <MESSAGE value="Add case step detail component and drawer for report" />
+    <MESSAGE value="Add case step detail component and drawer for report detail" />
+    <MESSAGE value="Add case step detail component and drawer for report detail view" />
+    <MESSAGE value="Add case step detail component and drawer for report detail view." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add case step detail component and drawer for report detail view." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$__init____2_.coverage" NAME="__init__ (2) Coverage Results" MODIFIED="1706696733502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/management/commands" />
