@@ -3091,3 +3091,762 @@ INFO     [2024-04-01 17:29:30,804] [none] django.utils.autoreload: C:\Users\8613
 INFO     [2024-04-01 17:29:31,583] [none] django.utils.autoreload: Watching for file changes with StatReloader
 INFO     [2024-04-01 17:31:52,129] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
 INFO     [2024-04-01 17:31:52,870] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-01 17:33:31,411] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-04-01 17:33:32,154] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-01 17:40:38,102] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\filters\setting.py changed, reloading.
+INFO     [2024-04-01 17:40:38,934] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-01 17:43:32,196] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-01 17:43:43,337] [13e5fc665b5c4b5fa7d507649ed8e993] django.server: "GET /swagger/ HTTP/1.1" 200 2152
+WARNING  [2024-04-01 17:43:43,432] [2ab4cb370238449d9a9e87428ebd57d8] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js
+WARNING  [2024-04-01 17:43:43,433] [96284532a4484d1d9150b00cc4fdcc4d] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui.css
+WARNING  [2024-04-01 17:43:43,435] [7b6126930cf0466a8a4f540134ab14d7] django.request: Not Found: /static/drf-yasg/style.css
+WARNING  [2024-04-01 17:43:43,436] [2ab4cb370238449d9a9e87428ebd57d8] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2987
+WARNING  [2024-04-01 17:43:43,436] [96284532a4484d1d9150b00cc4fdcc4d] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 404 2969
+WARNING  [2024-04-01 17:43:43,437] [7b6126930cf0466a8a4f540134ab14d7] django.server: "GET /static/drf-yasg/style.css HTTP/1.1" 404 2906
+WARNING  [2024-04-01 17:43:43,440] [48a64ad85c9848938960894c052f2a7e] django.request: Not Found: /static/drf-yasg/insQ.min.js
+WARNING  [2024-04-01 17:43:43,441] [eb4f758b1f3f4e1cb3563077a4752900] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js
+WARNING  [2024-04-01 17:43:43,444] [48a64ad85c9848938960894c052f2a7e] django.server: "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 404 2912
+WARNING  [2024-04-01 17:43:43,446] [ae9acab101794d36bb8177865113ad5d] django.request: Not Found: /static/drf-yasg/immutable.min.js
+WARNING  [2024-04-01 17:43:43,447] [eb4f758b1f3f4e1cb3563077a4752900] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 404 3020
+WARNING  [2024-04-01 17:43:43,448] [ae9acab101794d36bb8177865113ad5d] django.server: "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 404 2927
+WARNING  [2024-04-01 17:43:43,452] [66c332a73ac645d19f4c0658480419b1] django.request: Not Found: /static/drf-yasg/swagger-ui-init.js
+WARNING  [2024-04-01 17:43:43,453] [66c332a73ac645d19f4c0658480419b1] django.server: "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 404 2933
+WARNING  [2024-04-01 17:43:43,475] [822d916da2134db18ff32070b279da2e] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/favicon-32x32.png
+WARNING  [2024-04-01 17:43:43,476] [822d916da2134db18ff32070b279da2e] django.server: "GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 404 2978
+INFO     [2024-04-01 17:43:47,372] [7416b334aa2e40dab6b9a8782468875f] django.server: "GET /admin/login?next=/swagger/ HTTP/1.1" 302 0
+ERROR    [2024-04-01 17:43:47,416] [6c42d1da96574a3691dd131712d82e64] django.request: Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sites\models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\admin\sites.py", line 441, in login
+    return LoginView.as_view(**defaults)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\views.py", line 90, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\views.py", line 114, in get_context_data
+    current_site = get_current_site(self.request)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sites\shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sites\models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sites\models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR    [2024-04-01 17:43:47,433] [6c42d1da96574a3691dd131712d82e64] django.server: "GET /admin/login/?next=/admin/login%3Fnext%3D/swagger/ HTTP/1.1" 500 179816
+WARNING  [2024-04-01 17:43:47,662] [0d6f96d9faae49e2973cec8d9bcf6486] django.request: Not Found: /favicon.ico
+WARNING  [2024-04-01 17:43:47,663] [0d6f96d9faae49e2973cec8d9bcf6486] django.server: "GET /favicon.ico HTTP/1.1" 404 2864
+INFO     [2024-04-01 17:43:58,582] [851982a1c141418b86d02e5fe240f3f1] django.server: "OPTIONS /api/login/ HTTP/1.1" 200 0
+INFO     [2024-04-01 17:43:58,816] [470475e07f204357bf33f203c4e66151] django.server: "POST /api/login/ HTTP/1.1" 200 773
+INFO     [2024-04-01 17:44:01,306] [ec132ff9527c45629ea1aad63fcbaa13] django.server: "GET /swagger/ HTTP/1.1" 200 2152
+WARNING  [2024-04-01 17:44:01,340] [c29a9f0be29b4e0284920a4d8dbf2fc7] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js
+WARNING  [2024-04-01 17:44:01,342] [1e9e2e8b8f084c1fb26ec7f8bff311ba] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui.css
+WARNING  [2024-04-01 17:44:01,343] [a1ccd2c7e95d4b6fb5dc093537e42259] django.request: Not Found: /static/drf-yasg/insQ.min.js
+WARNING  [2024-04-01 17:44:01,344] [ad68383a3d1a4fb2984ff53bd2591ede] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js
+WARNING  [2024-04-01 17:44:01,345] [ad68383a3d1a4fb2984ff53bd2591ede] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2987
+WARNING  [2024-04-01 17:44:01,346] [1e9e2e8b8f084c1fb26ec7f8bff311ba] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 404 2969
+WARNING  [2024-04-01 17:44:01,346] [a1ccd2c7e95d4b6fb5dc093537e42259] django.server: "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 404 2912
+WARNING  [2024-04-01 17:44:01,344] [c29a9f0be29b4e0284920a4d8dbf2fc7] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 404 3020
+WARNING  [2024-04-01 17:44:01,352] [fcd91b8a265f45ba80936957d556fe7f] django.request: Not Found: /static/drf-yasg/swagger-ui-init.js
+WARNING  [2024-04-01 17:44:01,353] [fcd91b8a265f45ba80936957d556fe7f] django.server: "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 404 2933
+WARNING  [2024-04-01 17:44:01,345] [b5aace95a8a04ba59af5d3c1daef5a14] django.request: Not Found: /static/drf-yasg/style.css
+WARNING  [2024-04-01 17:44:01,354] [b5aace95a8a04ba59af5d3c1daef5a14] django.server: "GET /static/drf-yasg/style.css HTTP/1.1" 404 2906
+WARNING  [2024-04-01 17:44:01,365] [83ba6cccd0a9438eb46d91858ccdc194] django.request: Not Found: /static/drf-yasg/immutable.min.js
+WARNING  [2024-04-01 17:44:01,366] [83ba6cccd0a9438eb46d91858ccdc194] django.server: "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 404 2927
+INFO     [2024-04-01 17:44:02,702] [3fa6e8e37b6543269dd109c3176cb3a8] django.server: "GET /swagger/ HTTP/1.1" 200 2152
+WARNING  [2024-04-01 17:44:02,729] [3edde233f1ee4e7eb62f071531e52dab] django.request: Not Found: /static/drf-yasg/insQ.min.js
+WARNING  [2024-04-01 17:44:02,729] [3edde233f1ee4e7eb62f071531e52dab] django.server: "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 404 2912
+WARNING  [2024-04-01 17:44:02,745] [bc2a5d86f9ae458a95d4556982714459] django.request: Not Found: /static/drf-yasg/style.css
+WARNING  [2024-04-01 17:44:02,745] [bc2a5d86f9ae458a95d4556982714459] django.server: "GET /static/drf-yasg/style.css HTTP/1.1" 404 2906
+WARNING  [2024-04-01 17:44:02,753] [0e1704b330d046ae93529193b4834c5f] django.request: Not Found: /static/drf-yasg/immutable.min.js
+WARNING  [2024-04-01 17:44:02,755] [52ee08dbd0da4cae9b0e1fe81a310702] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js
+WARNING  [2024-04-01 17:44:02,757] [1ee7ebaf83f6473a8db08a5f5d61c31a] django.request: Not Found: /static/drf-yasg/swagger-ui-init.js
+WARNING  [2024-04-01 17:44:02,758] [0e1704b330d046ae93529193b4834c5f] django.server: "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 404 2927
+WARNING  [2024-04-01 17:44:02,763] [52ee08dbd0da4cae9b0e1fe81a310702] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 404 3020
+WARNING  [2024-04-01 17:44:02,764] [1ee7ebaf83f6473a8db08a5f5d61c31a] django.server: "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 404 2933
+WARNING  [2024-04-01 17:44:02,766] [352ddf8816e3461097134b2c3b7a7ed6] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui.css
+WARNING  [2024-04-01 17:44:02,768] [d1b11b4b00ca49449f3b41cc872135e5] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js
+WARNING  [2024-04-01 17:44:02,770] [d1b11b4b00ca49449f3b41cc872135e5] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2987
+WARNING  [2024-04-01 17:44:02,770] [352ddf8816e3461097134b2c3b7a7ed6] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 404 2969
+INFO     [2024-04-01 17:44:02,889] [94dd66a1aa5348d2aa7f3e71158d55a6] django.server: "GET /swagger/ HTTP/1.1" 200 2152
+WARNING  [2024-04-01 17:44:02,930] [0ed95d002eeb4269b2be5f1c6888564c] django.request: Not Found: /static/drf-yasg/immutable.min.js
+WARNING  [2024-04-01 17:44:02,935] [fcaf94eb861c4bf9897ecbe29cc449b8] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js
+WARNING  [2024-04-01 17:44:02,936] [0ed95d002eeb4269b2be5f1c6888564c] django.server: "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 404 2927
+WARNING  [2024-04-01 17:44:02,936] [c0fcf0682c5c4192a46177ba943714b9] django.request: Not Found: /static/drf-yasg/style.css
+WARNING  [2024-04-01 17:44:02,937] [fcaf94eb861c4bf9897ecbe29cc449b8] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 404 3020
+WARNING  [2024-04-01 17:44:02,944] [c0fcf0682c5c4192a46177ba943714b9] django.server: "GET /static/drf-yasg/style.css HTTP/1.1" 404 2906
+WARNING  [2024-04-01 17:44:02,949] [36e19895050d47e599d0c6b2bca0e89a] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js
+WARNING  [2024-04-01 17:44:02,952] [c7acc0527b4547ba8c76f8f416dc645e] django.request: Not Found: /static/drf-yasg/swagger-ui-init.js
+WARNING  [2024-04-01 17:44:02,952] [36e19895050d47e599d0c6b2bca0e89a] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2987
+WARNING  [2024-04-01 17:44:02,954] [c7acc0527b4547ba8c76f8f416dc645e] django.server: "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 404 2933
+WARNING  [2024-04-01 17:44:02,955] [53a246d4bb9c41c2b586a0892d145b1c] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui.css
+WARNING  [2024-04-01 17:44:02,957] [53a246d4bb9c41c2b586a0892d145b1c] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 404 2969
+WARNING  [2024-04-01 17:44:02,956] [09500de75b604f879b04fa10c9a084cd] django.request: Not Found: /static/drf-yasg/insQ.min.js
+WARNING  [2024-04-01 17:44:02,959] [09500de75b604f879b04fa10c9a084cd] django.server: "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 404 2912
+INFO     [2024-04-01 17:44:56,268] [82a9230c08a04e4bb1772e62ec364e5c] django.server: "GET /swagger/ HTTP/1.1" 200 2152
+WARNING  [2024-04-01 17:44:56,335] [4ff016be983443e1bf91ea713bda8609] django.request: Not Found: /static/drf-yasg/style.css
+WARNING  [2024-04-01 17:44:56,335] [4ff016be983443e1bf91ea713bda8609] django.server: "GET /static/drf-yasg/style.css HTTP/1.1" 404 2906
+WARNING  [2024-04-01 17:44:56,372] [ec42e4a502ab47df88f5e1648293838b] django.request: Not Found: /static/drf-yasg/swagger-ui-init.js
+WARNING  [2024-04-01 17:44:56,373] [0cd4c9223c70409d97c78cd046ede04c] django.request: Not Found: /static/drf-yasg/insQ.min.js
+WARNING  [2024-04-01 17:44:56,374] [ca213b72188740ed8271be02d68ddc5a] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js
+WARNING  [2024-04-01 17:44:56,375] [40bfa5a3772845d1b777ba5d4ee2fefe] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui.css
+WARNING  [2024-04-01 17:44:56,376] [ba2ee93f6b194aaba40b308e4bf8cc8d] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js
+WARNING  [2024-04-01 17:44:56,377] [dd32596f2b374c698038169d75d3628d] django.request: Not Found: /static/drf-yasg/immutable.min.js
+WARNING  [2024-04-01 17:44:56,377] [ec42e4a502ab47df88f5e1648293838b] django.server: "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 404 2933
+WARNING  [2024-04-01 17:44:56,378] [0cd4c9223c70409d97c78cd046ede04c] django.server: "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 404 2912
+WARNING  [2024-04-01 17:44:56,378] [ca213b72188740ed8271be02d68ddc5a] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 404 3020
+WARNING  [2024-04-01 17:44:56,378] [40bfa5a3772845d1b777ba5d4ee2fefe] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 404 2969
+WARNING  [2024-04-01 17:44:56,379] [ba2ee93f6b194aaba40b308e4bf8cc8d] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2987
+WARNING  [2024-04-01 17:44:56,379] [dd32596f2b374c698038169d75d3628d] django.server: "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 404 2927
+INFO     [2024-04-01 17:44:59,024] [90207e3004af41f79ffd04e50f95b839] django.server: "GET /admin/login?next=/swagger/ HTTP/1.1" 302 0
+ERROR    [2024-04-01 17:44:59,083] [fad692b7c36e459fbbeec960f62f50ed] django.request: Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sites\models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\admin\sites.py", line 441, in login
+    return LoginView.as_view(**defaults)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\views.py", line 90, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\views.py", line 114, in get_context_data
+    current_site = get_current_site(self.request)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sites\shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sites\models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sites\models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR    [2024-04-01 17:44:59,120] [fad692b7c36e459fbbeec960f62f50ed] django.server: "GET /admin/login/?next=/admin/login%3Fnext%3D/swagger/ HTTP/1.1" 500 179816
+INFO     [2024-04-01 17:46:52,742] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\config\settings.py changed, reloading.
+INFO     [2024-04-01 17:46:52,905] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\config\settings.py changed, reloading.
+INFO     [2024-04-01 17:46:53,624] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-01 17:46:53,763] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-01 17:47:54,235] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\config\settings.py changed, reloading.
+INFO     [2024-04-01 17:47:54,608] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-01 17:47:55,010] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-01 17:48:02,537] [9b676937804a46c8b0340560e6d4315e] django.server: "GET /swagger/ HTTP/1.1" 200 2152
+WARNING  [2024-04-01 17:48:02,566] [8b98371603b1494b9aba8ed356336695] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui.css
+WARNING  [2024-04-01 17:48:02,567] [8b98371603b1494b9aba8ed356336695] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 404 2969
+WARNING  [2024-04-01 17:48:02,578] [4064db2b93334968baeffb510befa9dc] django.request: Not Found: /static/drf-yasg/style.css
+WARNING  [2024-04-01 17:48:02,581] [4064db2b93334968baeffb510befa9dc] django.server: "GET /static/drf-yasg/style.css HTTP/1.1" 404 2906
+WARNING  [2024-04-01 17:48:02,582] [f15c2b13c2844777a52a7d3a87ec146a] django.request: Not Found: /static/drf-yasg/swagger-ui-init.js
+WARNING  [2024-04-01 17:48:02,584] [f15c2b13c2844777a52a7d3a87ec146a] django.server: "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 404 2933
+WARNING  [2024-04-01 17:48:02,595] [7767b06a63444fd5b30b82535c154b87] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js
+WARNING  [2024-04-01 17:48:02,595] [800dc7d806574c76937a8c098211884b] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js
+WARNING  [2024-04-01 17:48:02,596] [33e16f5e0b324256b89adbbd8201f40c] django.request: Not Found: /static/drf-yasg/immutable.min.js
+WARNING  [2024-04-01 17:48:02,597] [f65d5a20adfa441dba5b3bc144cb64a4] django.request: Not Found: /static/drf-yasg/insQ.min.js
+WARNING  [2024-04-01 17:48:02,597] [7767b06a63444fd5b30b82535c154b87] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2987
+WARNING  [2024-04-01 17:48:02,597] [800dc7d806574c76937a8c098211884b] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 404 3020
+WARNING  [2024-04-01 17:48:02,598] [33e16f5e0b324256b89adbbd8201f40c] django.server: "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 404 2927
+WARNING  [2024-04-01 17:48:02,598] [f65d5a20adfa441dba5b3bc144cb64a4] django.server: "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 404 2912
+INFO     [2024-04-01 17:48:04,649] [c85421a69799484fa67e180a68e3cd20] django.server: "GET /admin/login?next=/swagger/ HTTP/1.1" 302 0
+INFO     [2024-04-01 17:48:04,677] [ca6ad43972fa49ee8837c29e3d5f52d0] django.server: "GET /admin/login/?next=/admin/login%3Fnext%3D/swagger/ HTTP/1.1" 200 4229
+WARNING  [2024-04-01 17:48:04,725] [5114477807d941c0a967bb2db1d4b071] django.request: Not Found: /static/admin/css/login.css
+WARNING  [2024-04-01 17:48:04,726] [5114477807d941c0a967bb2db1d4b071] django.server: "GET /static/admin/css/login.css HTTP/1.1" 404 2909
+WARNING  [2024-04-01 17:48:04,728] [ff6b83e5fa52484f94fb46b909ed42c8] django.request: Not Found: /static/admin/css/nav_sidebar.css
+WARNING  [2024-04-01 17:48:04,729] [ff6b83e5fa52484f94fb46b909ed42c8] django.server: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 2927
+WARNING  [2024-04-01 17:48:04,732] [66a5c81d05744ea2acdf183e8e3acf9b] django.request: Not Found: /static/admin/css/responsive.css
+WARNING  [2024-04-01 17:48:04,732] [66a5c81d05744ea2acdf183e8e3acf9b] django.server: "GET /static/admin/css/responsive.css HTTP/1.1" 404 2924
+WARNING  [2024-04-01 17:48:04,730] [5aa230252aeb4cc7af53abc9fcc41458] django.request: Not Found: /static/admin/css/dark_mode.css
+WARNING  [2024-04-01 17:48:04,734] [5aa230252aeb4cc7af53abc9fcc41458] django.server: "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 2921
+WARNING  [2024-04-01 17:48:04,745] [4c120121c5d14728a4c502a5f3da18c0] django.request: Not Found: /static/admin/css/base.css
+WARNING  [2024-04-01 17:48:04,747] [4c120121c5d14728a4c502a5f3da18c0] django.server: "GET /static/admin/css/base.css HTTP/1.1" 404 2906
+WARNING  [2024-04-01 17:48:04,749] [8b664402361746d4894499879771f125] django.request: Not Found: /static/admin/js/theme.js
+WARNING  [2024-04-01 17:48:04,750] [8b664402361746d4894499879771f125] django.server: "GET /static/admin/js/theme.js HTTP/1.1" 404 2903
+WARNING  [2024-04-01 17:48:04,752] [223d713d8f474da1943f9d4d3ae081bf] django.request: Not Found: /static/admin/js/nav_sidebar.js
+WARNING  [2024-04-01 17:48:04,753] [223d713d8f474da1943f9d4d3ae081bf] django.server: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 2921
+INFO     [2024-04-01 17:48:12,619] [8b06f07102044eb1bb664755d9b12329] django.server: "POST /admin/login/?next=/admin/login%3Fnext%3D/swagger/ HTTP/1.1" 302 0
+INFO     [2024-04-01 17:48:12,627] [580d8bb952a94fd8a3c710d54e405872] django.server: "GET /admin/login?next=/swagger/ HTTP/1.1" 301 0
+INFO     [2024-04-01 17:48:12,635] [73fe9ec01afe472e998723df82c229e5] django.server: "GET /admin/login/ HTTP/1.1" 302 0
+INFO     [2024-04-01 17:48:12,648] [07598bb3018a4275ab5cb339f5023e5f] django.server: "GET /admin/ HTTP/1.1" 200 6473
+WARNING  [2024-04-01 17:48:12,678] [464541c0bff7493084c67aa51b50c5b2] django.request: Not Found: /static/admin/css/nav_sidebar.css
+WARNING  [2024-04-01 17:48:12,678] [464541c0bff7493084c67aa51b50c5b2] django.server: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 2927
+WARNING  [2024-04-01 17:48:12,694] [d307ba080a1b4fd0849555140b0a7782] django.request: Not Found: /static/admin/js/nav_sidebar.js
+WARNING  [2024-04-01 17:48:12,697] [d307ba080a1b4fd0849555140b0a7782] django.server: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 2921
+WARNING  [2024-04-01 17:48:12,701] [7ed7ae5f549544f188ba950d075a6d9e] django.request: Not Found: /static/admin/css/dark_mode.css
+WARNING  [2024-04-01 17:48:12,708] [7ed7ae5f549544f188ba950d075a6d9e] django.server: "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 2921
+WARNING  [2024-04-01 17:48:12,703] [e6fdb48c7e304234a5ac74f68d11ac98] django.request: Not Found: /static/admin/css/base.css
+WARNING  [2024-04-01 17:48:12,710] [e6fdb48c7e304234a5ac74f68d11ac98] django.server: "GET /static/admin/css/base.css HTTP/1.1" 404 2906
+WARNING  [2024-04-01 17:48:12,708] [82e895e1fe394822844691a2ffabacd6] django.request: Not Found: /static/admin/css/responsive.css
+WARNING  [2024-04-01 17:48:12,710] [08a2a897e9df450fbe909ee881f5a9a6] django.request: Not Found: /static/admin/css/dashboard.css
+WARNING  [2024-04-01 17:48:12,704] [e81ea8f99d844ea7a56a9964b3e68b25] django.request: Not Found: /static/admin/js/theme.js
+WARNING  [2024-04-01 17:48:12,712] [e81ea8f99d844ea7a56a9964b3e68b25] django.server: "GET /static/admin/js/theme.js HTTP/1.1" 404 2903
+WARNING  [2024-04-01 17:48:12,711] [82e895e1fe394822844691a2ffabacd6] django.server: "GET /static/admin/css/responsive.css HTTP/1.1" 404 2924
+WARNING  [2024-04-01 17:48:12,711] [08a2a897e9df450fbe909ee881f5a9a6] django.server: "GET /static/admin/css/dashboard.css HTTP/1.1" 404 2921
+INFO     [2024-04-01 17:48:21,392] [309f6cbbe0e84652bc32ba206bc7137a] django.server: "GET /swagger/ HTTP/1.1" 200 2380
+WARNING  [2024-04-01 17:48:21,437] [0149f422bdee42aa8cde4a586a41aaae] django.request: Not Found: /static/drf-yasg/immutable.min.js
+WARNING  [2024-04-01 17:48:21,438] [0149f422bdee42aa8cde4a586a41aaae] django.server: "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 404 2927
+WARNING  [2024-04-01 17:48:21,444] [8ea0aa434a9a443fbde4e2a22ff2f699] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui.css
+WARNING  [2024-04-01 17:48:21,445] [8ea0aa434a9a443fbde4e2a22ff2f699] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 404 2969
+WARNING  [2024-04-01 17:48:21,450] [d39bf53f099b4f0c865ee8a382a80c16] django.request: Not Found: /static/drf-yasg/swagger-ui-init.js
+WARNING  [2024-04-01 17:48:21,451] [d39bf53f099b4f0c865ee8a382a80c16] django.server: "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 404 2933
+WARNING  [2024-04-01 17:48:21,453] [5f165f6a5f8b412ca39824dee9e9fd57] django.request: Not Found: /static/drf-yasg/insQ.min.js
+WARNING  [2024-04-01 17:48:21,454] [ab81bbdb8ba243c286a46b4ff8dbc248] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js
+WARNING  [2024-04-01 17:48:21,455] [ab81bbdb8ba243c286a46b4ff8dbc248] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2987
+WARNING  [2024-04-01 17:48:21,458] [c2cb03fa673747d09c766cf48ed0f4f9] django.request: Not Found: /static/drf-yasg/style.css
+WARNING  [2024-04-01 17:48:21,458] [c2cb03fa673747d09c766cf48ed0f4f9] django.server: "GET /static/drf-yasg/style.css HTTP/1.1" 404 2906
+WARNING  [2024-04-01 17:48:21,460] [45643787091847498f9b90a6abdc3030] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js
+WARNING  [2024-04-01 17:48:21,460] [5f165f6a5f8b412ca39824dee9e9fd57] django.server: "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 404 2912
+WARNING  [2024-04-01 17:48:21,460] [45643787091847498f9b90a6abdc3030] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 404 3020
+INFO     [2024-04-01 17:48:25,042] [9e879606032b411cae5484664d4edc9b] django.server: "GET /swagger/ HTTP/1.1" 200 2380
+WARNING  [2024-04-01 17:48:25,065] [f3b302a0de10491399323f529825bd7f] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js
+WARNING  [2024-04-01 17:48:25,066] [f3b302a0de10491399323f529825bd7f] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2987
+WARNING  [2024-04-01 17:48:25,077] [894d31c752ef494a94a6e286a718417e] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui.css
+WARNING  [2024-04-01 17:48:25,081] [894d31c752ef494a94a6e286a718417e] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 404 2969
+WARNING  [2024-04-01 17:48:25,082] [9668a083a15848ac99206c343cd726b1] django.request: Not Found: /static/drf-yasg/immutable.min.js
+WARNING  [2024-04-01 17:48:25,086] [3f31e00b0d654372897947fd4acaad8e] django.request: Not Found: /static/drf-yasg/style.css
+WARNING  [2024-04-01 17:48:25,088] [5608becd42ce4ca5aadeab04586db82a] django.request: Not Found: /static/drf-yasg/swagger-ui-init.js
+WARNING  [2024-04-01 17:48:25,089] [3f31e00b0d654372897947fd4acaad8e] django.server: "GET /static/drf-yasg/style.css HTTP/1.1" 404 2906
+WARNING  [2024-04-01 17:48:25,089] [9668a083a15848ac99206c343cd726b1] django.server: "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 404 2927
+WARNING  [2024-04-01 17:48:25,089] [5608becd42ce4ca5aadeab04586db82a] django.server: "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 404 2933
+WARNING  [2024-04-01 17:48:25,096] [70003191dc31409481265ad36a1a98e7] django.request: Not Found: /static/drf-yasg/insQ.min.js
+WARNING  [2024-04-01 17:48:25,097] [70003191dc31409481265ad36a1a98e7] django.server: "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 404 2912
+WARNING  [2024-04-01 17:48:25,098] [bb300a41cbb24e66a7640b37e9afd0c0] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js
+WARNING  [2024-04-01 17:48:25,099] [bb300a41cbb24e66a7640b37e9afd0c0] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 404 3020
+INFO     [2024-04-01 17:48:28,770] [11d49021dc1d44e6a942fa49410ded52] django.server: "GET /swagger/ HTTP/1.1" 200 2380
+WARNING  [2024-04-01 17:48:28,804] [1c8ae06a49d44f159ebc4d0c8d690124] django.request: Not Found: /static/drf-yasg/immutable.min.js
+WARNING  [2024-04-01 17:48:28,805] [1c8ae06a49d44f159ebc4d0c8d690124] django.server: "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 404 2927
+WARNING  [2024-04-01 17:48:28,812] [ae4c41314c49476eaa7669d02379dfe7] django.request: Not Found: /static/drf-yasg/swagger-ui-init.js
+WARNING  [2024-04-01 17:48:28,812] [ae4c41314c49476eaa7669d02379dfe7] django.server: "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 404 2933
+WARNING  [2024-04-01 17:48:28,813] [21741c088ec24aea8cd21b1e9ceaf3e9] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js
+WARNING  [2024-04-01 17:48:28,814] [21741c088ec24aea8cd21b1e9ceaf3e9] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 404 3020
+WARNING  [2024-04-01 17:48:28,815] [56cae05eec8e4f39ba38c2e343e90860] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui.css
+WARNING  [2024-04-01 17:48:28,816] [56cae05eec8e4f39ba38c2e343e90860] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 404 2969
+WARNING  [2024-04-01 17:48:28,825] [0c77d477cbee40dcb7df831c2286845b] django.request: Not Found: /static/drf-yasg/insQ.min.js
+WARNING  [2024-04-01 17:48:28,825] [0c77d477cbee40dcb7df831c2286845b] django.server: "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 404 2912
+WARNING  [2024-04-01 17:48:28,827] [7d95b3d4a6a044bb852e8d61c3186706] django.request: Not Found: /static/drf-yasg/style.css
+WARNING  [2024-04-01 17:48:28,827] [7d95b3d4a6a044bb852e8d61c3186706] django.server: "GET /static/drf-yasg/style.css HTTP/1.1" 404 2906
+WARNING  [2024-04-01 17:48:28,829] [f7549654d6814943b70e08f28e362982] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js
+WARNING  [2024-04-01 17:48:28,830] [f7549654d6814943b70e08f28e362982] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2987
+INFO     [2024-04-01 17:48:28,974] [6b4f3f4727bd41b09461e9fd146becd7] django.server: "GET /swagger/ HTTP/1.1" 200 2380
+WARNING  [2024-04-01 17:48:29,017] [5a7d7a911fbd4b2788584476fe77ce94] django.request: Not Found: /static/drf-yasg/immutable.min.js
+WARNING  [2024-04-01 17:48:29,018] [e8aade562fcf47cf95ba513b794f652b] django.request: Not Found: /static/drf-yasg/insQ.min.js
+WARNING  [2024-04-01 17:48:29,021] [5a7d7a911fbd4b2788584476fe77ce94] django.server: "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 404 2927
+WARNING  [2024-04-01 17:48:29,027] [e8aade562fcf47cf95ba513b794f652b] django.server: "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 404 2912
+WARNING  [2024-04-01 17:48:29,030] [4931c18a7fe348eb9e27ebe0a941fc56] django.request: Not Found: /static/drf-yasg/style.css
+WARNING  [2024-04-01 17:48:29,031] [4931c18a7fe348eb9e27ebe0a941fc56] django.server: "GET /static/drf-yasg/style.css HTTP/1.1" 404 2906
+WARNING  [2024-04-01 17:48:29,035] [9f81edc18a1149bf9c88e04ba7b7104e] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js
+WARNING  [2024-04-01 17:48:29,036] [9f81edc18a1149bf9c88e04ba7b7104e] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2987
+WARNING  [2024-04-01 17:48:29,040] [1122b516222c42db8ae666e8c7f9209a] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js
+WARNING  [2024-04-01 17:48:29,041] [1122b516222c42db8ae666e8c7f9209a] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 404 3020
+WARNING  [2024-04-01 17:48:29,045] [4ae0a82e69b946dcb2aee31cb8bf2329] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui.css
+WARNING  [2024-04-01 17:48:29,045] [4ae0a82e69b946dcb2aee31cb8bf2329] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 404 2969
+WARNING  [2024-04-01 17:48:29,057] [60337bba46bc4e2b89046e2abc0c9749] django.request: Not Found: /static/drf-yasg/swagger-ui-init.js
+WARNING  [2024-04-01 17:48:29,059] [60337bba46bc4e2b89046e2abc0c9749] django.server: "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 404 2933
+INFO     [2024-04-01 17:48:33,720] [8fc0730ee6704d29a9630417436bc22e] django.server: "GET /redoc HTTP/1.1" 301 0
+INFO     [2024-04-01 17:48:33,728] [1aa9230fbc2744c595bb8137cd99f1f4] django.server: "GET /redoc/ HTTP/1.1" 200 929
+WARNING  [2024-04-01 17:48:33,762] [b52d451bd9964ee4a25f82c28e37a004] django.request: Not Found: /static/drf-yasg/insQ.min.js
+WARNING  [2024-04-01 17:48:33,762] [b52d451bd9964ee4a25f82c28e37a004] django.server: "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 404 2912
+WARNING  [2024-04-01 17:48:33,768] [5e1aa2d0016e411cb8a92596493a43c1] django.request: Not Found: /static/drf-yasg/redoc-init.js
+WARNING  [2024-04-01 17:48:33,769] [5e1aa2d0016e411cb8a92596493a43c1] django.server: "GET /static/drf-yasg/redoc-init.js HTTP/1.1" 404 2918
+WARNING  [2024-04-01 17:48:33,779] [25268d1d08954038bdcc2d150aa444b1] django.request: Not Found: /static/drf-yasg/style.css
+WARNING  [2024-04-01 17:48:33,780] [fbb6f6eddf7c4cfd980f8c766c6c41b9] django.request: Not Found: /static/drf-yasg/redoc/redoc.min.js
+WARNING  [2024-04-01 17:48:33,780] [25268d1d08954038bdcc2d150aa444b1] django.server: "GET /static/drf-yasg/style.css HTTP/1.1" 404 2906
+WARNING  [2024-04-01 17:48:33,781] [fbb6f6eddf7c4cfd980f8c766c6c41b9] django.server: "GET /static/drf-yasg/redoc/redoc.min.js HTTP/1.1" 404 2933
+WARNING  [2024-04-01 17:48:33,800] [d1f8273a8d764215914c055865ffd9b8] django.request: Not Found: /static/drf-yasg/redoc/redoc-logo.png
+WARNING  [2024-04-01 17:48:33,801] [d1f8273a8d764215914c055865ffd9b8] django.server: "GET /static/drf-yasg/redoc/redoc-logo.png HTTP/1.1" 404 2939
+INFO     [2024-04-01 17:48:35,980] [6bc397740bd34b7c8a091e53d44628fd] django.server: "GET /redoc/ HTTP/1.1" 200 929
+WARNING  [2024-04-01 17:48:36,014] [8aa37057947f4ddb85f4e07e2a58f642] django.request: Not Found: /static/drf-yasg/redoc/redoc.min.js
+WARNING  [2024-04-01 17:48:36,014] [8aa37057947f4ddb85f4e07e2a58f642] django.server: "GET /static/drf-yasg/redoc/redoc.min.js HTTP/1.1" 404 2933
+WARNING  [2024-04-01 17:48:36,019] [efeed9808ad34e27a996a75ed5c17fde] django.request: Not Found: /static/drf-yasg/insQ.min.js
+WARNING  [2024-04-01 17:48:36,020] [79594250286f42ecac13dd20ba3d0b93] django.request: Not Found: /static/drf-yasg/redoc-init.js
+WARNING  [2024-04-01 17:48:36,021] [efeed9808ad34e27a996a75ed5c17fde] django.server: "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 404 2912
+WARNING  [2024-04-01 17:48:36,022] [79594250286f42ecac13dd20ba3d0b93] django.server: "GET /static/drf-yasg/redoc-init.js HTTP/1.1" 404 2918
+WARNING  [2024-04-01 17:48:36,022] [e234dca68cb74fafaef1c644d25068db] django.request: Not Found: /static/drf-yasg/style.css
+WARNING  [2024-04-01 17:48:36,023] [e234dca68cb74fafaef1c644d25068db] django.server: "GET /static/drf-yasg/style.css HTTP/1.1" 404 2906
+WARNING  [2024-04-01 17:48:45,803] [c81355b2b21a46cfac7e7a393445e9ac] django.request: Not Found: /api/swagger
+WARNING  [2024-04-01 17:48:45,804] [c81355b2b21a46cfac7e7a393445e9ac] django.server: "GET /api/swagger HTTP/1.1" 404 10796
+INFO     [2024-04-01 17:48:50,114] [287f19880a5248799cd5a1b5d6bd7028] django.server: "GET /swagger HTTP/1.1" 301 0
+INFO     [2024-04-01 17:48:50,127] [64bad68a08fc4a63ada1a4b575c4688d] django.server: "GET /swagger/ HTTP/1.1" 200 2380
+WARNING  [2024-04-01 17:48:50,157] [6f455d7befeb483384b044642fb21925] django.request: Not Found: /static/drf-yasg/style.css
+WARNING  [2024-04-01 17:48:50,157] [6f455d7befeb483384b044642fb21925] django.server: "GET /static/drf-yasg/style.css HTTP/1.1" 404 2906
+WARNING  [2024-04-01 17:48:50,181] [26feabb4bf83485f9a034d05005fd129] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js
+WARNING  [2024-04-01 17:48:50,181] [26feabb4bf83485f9a034d05005fd129] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 404 3020
+WARNING  [2024-04-01 17:48:50,184] [af7e3215435641b8a4c8be8530fbe643] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui.css
+WARNING  [2024-04-01 17:48:50,184] [af7e3215435641b8a4c8be8530fbe643] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 404 2969
+WARNING  [2024-04-01 17:48:50,186] [673fdd49eb11478a820303c5ebc37082] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js
+WARNING  [2024-04-01 17:48:50,187] [673fdd49eb11478a820303c5ebc37082] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2987
+WARNING  [2024-04-01 17:48:50,189] [21eb64ddcc0248bd9fdc8bccfbcd249d] django.request: Not Found: /static/drf-yasg/insQ.min.js
+WARNING  [2024-04-01 17:48:50,189] [21eb64ddcc0248bd9fdc8bccfbcd249d] django.server: "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 404 2912
+WARNING  [2024-04-01 17:48:50,195] [8254a431eac14dd0ba41dadd6f7df81e] django.request: Not Found: /static/drf-yasg/immutable.min.js
+WARNING  [2024-04-01 17:48:50,201] [63157fefbd8a46c2b023ad42d5c0e54b] django.request: Not Found: /static/drf-yasg/swagger-ui-init.js
+WARNING  [2024-04-01 17:48:50,207] [8254a431eac14dd0ba41dadd6f7df81e] django.server: "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 404 2927
+WARNING  [2024-04-01 17:48:50,215] [63157fefbd8a46c2b023ad42d5c0e54b] django.server: "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 404 2933
+INFO     [2024-04-01 17:49:09,833] [d1c36920433449c19f03cc4764b3a520] django.server: "GET /swagger/ HTTP/1.1" 200 2380
+WARNING  [2024-04-01 17:49:09,867] [7bd6b07f67844dc684599a8a79a5722b] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui.css
+WARNING  [2024-04-01 17:49:09,867] [59f9ddbab5014695aaff6c77a99b9c3e] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js
+WARNING  [2024-04-01 17:49:09,868] [80917811bf5f4e598520132202457e8b] django.request: Not Found: /static/drf-yasg/style.css
+WARNING  [2024-04-01 17:49:09,869] [b2f0061bd5664a178562aadc18490af9] django.request: Not Found: /static/drf-yasg/insQ.min.js
+WARNING  [2024-04-01 17:49:09,869] [178e35ceea74461fa997ec7b314a8ff4] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js
+WARNING  [2024-04-01 17:49:09,870] [3c796aed0af94b08ad4825211cce2b01] django.request: Not Found: /static/drf-yasg/immutable.min.js
+WARNING  [2024-04-01 17:49:09,870] [7bd6b07f67844dc684599a8a79a5722b] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 404 2969
+WARNING  [2024-04-01 17:49:09,870] [59f9ddbab5014695aaff6c77a99b9c3e] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2987
+WARNING  [2024-04-01 17:49:09,871] [80917811bf5f4e598520132202457e8b] django.server: "GET /static/drf-yasg/style.css HTTP/1.1" 404 2906
+WARNING  [2024-04-01 17:49:09,871] [b2f0061bd5664a178562aadc18490af9] django.server: "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 404 2912
+WARNING  [2024-04-01 17:49:09,871] [178e35ceea74461fa997ec7b314a8ff4] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 404 3020
+WARNING  [2024-04-01 17:49:09,871] [3c796aed0af94b08ad4825211cce2b01] django.server: "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 404 2927
+WARNING  [2024-04-01 17:49:09,876] [45896327063a4a318a91d8c96e495123] django.request: Not Found: /static/drf-yasg/swagger-ui-init.js
+WARNING  [2024-04-01 17:49:09,877] [45896327063a4a318a91d8c96e495123] django.server: "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 404 2933
+INFO     [2024-04-01 17:49:14,614] [238339f3c0f240a3890e616a3255e583] django.server: "GET /swagger/ HTTP/1.1" 200 2152
+WARNING  [2024-04-01 17:49:14,686] [12809cb307ba4a2bb298ebfbf2fbe3ac] django.request: Not Found: /static/drf-yasg/style.css
+WARNING  [2024-04-01 17:49:14,687] [2f2fa9e71dc24c128a62ee9db265b7ca] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js
+WARNING  [2024-04-01 17:49:14,687] [12809cb307ba4a2bb298ebfbf2fbe3ac] django.server: "GET /static/drf-yasg/style.css HTTP/1.1" 404 2906
+WARNING  [2024-04-01 17:49:14,690] [ad04b75b85444f44a03e807431dd0102] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui.css
+WARNING  [2024-04-01 17:49:14,692] [2f2fa9e71dc24c128a62ee9db265b7ca] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2987
+WARNING  [2024-04-01 17:49:14,697] [ad04b75b85444f44a03e807431dd0102] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 404 2969
+WARNING  [2024-04-01 17:49:14,704] [dc1d07612fae4fbca30e0aea86939ada] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js
+WARNING  [2024-04-01 17:49:14,705] [dc1d07612fae4fbca30e0aea86939ada] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 404 3020
+WARNING  [2024-04-01 17:49:14,705] [fef4bda5330b454f9b7389348703834b] django.request: Not Found: /static/drf-yasg/swagger-ui-init.js
+WARNING  [2024-04-01 17:49:14,707] [10a45c970cf14cf59e01f8912b1c2fa8] django.request: Not Found: /static/drf-yasg/insQ.min.js
+WARNING  [2024-04-01 17:49:14,708] [fef4bda5330b454f9b7389348703834b] django.server: "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 404 2933
+WARNING  [2024-04-01 17:49:14,709] [0fc77fd49e5246f4a2cc71db3eb443a7] django.request: Not Found: /static/drf-yasg/immutable.min.js
+WARNING  [2024-04-01 17:49:14,710] [10a45c970cf14cf59e01f8912b1c2fa8] django.server: "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 404 2912
+WARNING  [2024-04-01 17:49:14,710] [0fc77fd49e5246f4a2cc71db3eb443a7] django.server: "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 404 2927
+INFO     [2024-04-01 17:49:16,030] [358916a5baf2401e96dca55b9cd603c8] django.server: "GET /admin/login?next=/swagger/ HTTP/1.1" 302 0
+INFO     [2024-04-01 17:49:16,040] [05f4706925924cceafbf977153f3b218] django.server: "GET /admin/login/?next=/admin/login%3Fnext%3D/swagger/ HTTP/1.1" 200 4229
+WARNING  [2024-04-01 17:49:16,081] [917c960e69c74b98b11bf84ef874ad0e] django.request: Not Found: /static/admin/css/login.css
+WARNING  [2024-04-01 17:49:16,082] [3a3bc7706d7445738a984efce1735b0a] django.request: Not Found: /static/admin/css/nav_sidebar.css
+WARNING  [2024-04-01 17:49:16,083] [824297e07958465a93bb8507e26ff414] django.request: Not Found: /static/admin/css/base.css
+WARNING  [2024-04-01 17:49:16,084] [85aed8146f7f4ac49f6c4fe869557725] django.request: Not Found: /static/admin/js/theme.js
+WARNING  [2024-04-01 17:49:16,084] [e576c236d01c45c499fcbe97427aea74] django.request: Not Found: /static/admin/css/dark_mode.css
+WARNING  [2024-04-01 17:49:16,085] [e92bf2867bcc456f8aedb0881267b727] django.request: Not Found: /static/admin/css/responsive.css
+WARNING  [2024-04-01 17:49:16,086] [917c960e69c74b98b11bf84ef874ad0e] django.server: "GET /static/admin/css/login.css HTTP/1.1" 404 2909
+WARNING  [2024-04-01 17:49:16,086] [3a3bc7706d7445738a984efce1735b0a] django.server: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 2927
+WARNING  [2024-04-01 17:49:16,086] [824297e07958465a93bb8507e26ff414] django.server: "GET /static/admin/css/base.css HTTP/1.1" 404 2906
+WARNING  [2024-04-01 17:49:16,090] [e576c236d01c45c499fcbe97427aea74] django.server: "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 2921
+INFO     [2024-04-01 17:49:16,094] [917c960e69c74b98b11bf84ef874ad0e] django.server: - Broken pipe from ('127.0.0.1', 51257)
+WARNING  [2024-04-01 17:49:16,095] [e92bf2867bcc456f8aedb0881267b727] django.server: "GET /static/admin/css/responsive.css HTTP/1.1" 404 2924
+WARNING  [2024-04-01 17:49:16,096] [85aed8146f7f4ac49f6c4fe869557725] django.server: "GET /static/admin/js/theme.js HTTP/1.1" 404 2903
+INFO     [2024-04-01 17:49:16,098] [e92bf2867bcc456f8aedb0881267b727] django.server: - Broken pipe from ('127.0.0.1', 51255)
+WARNING  [2024-04-01 17:49:16,100] [7d8c05cd6f9e4deba7a29277d931a846] django.request: Not Found: /static/admin/js/nav_sidebar.js
+WARNING  [2024-04-01 17:49:16,101] [7d8c05cd6f9e4deba7a29277d931a846] django.server: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 2921
+INFO     [2024-04-01 17:49:21,556] [93d929c92eb0427c908964017d796f5a] django.server: "POST /admin/login/?next=/admin/login%3Fnext%3D/swagger/ HTTP/1.1" 302 0
+INFO     [2024-04-01 17:49:21,565] [69679b0b6b214308aecabf8e3c41cb02] django.server: "GET /admin/login?next=/swagger/ HTTP/1.1" 301 0
+INFO     [2024-04-01 17:49:21,570] [a398f1d153d64f11af2ceb3acd47fa9a] django.server: "GET /admin/login/ HTTP/1.1" 302 0
+INFO     [2024-04-01 17:49:21,583] [2543cef072914a7eb2e95a07906dec71] django.server: "GET /admin/ HTTP/1.1" 200 6473
+WARNING  [2024-04-01 17:49:21,616] [563c261b5d09491198a41acd3963cbdf] django.request: Not Found: /static/admin/css/nav_sidebar.css
+WARNING  [2024-04-01 17:49:21,617] [3f4b247c80be4d899632e33bf4cc3ccf] django.request: Not Found: /static/admin/css/dark_mode.css
+WARNING  [2024-04-01 17:49:21,617] [563c261b5d09491198a41acd3963cbdf] django.server: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 2927
+WARNING  [2024-04-01 17:49:21,618] [aad6484834db42c89325705a91c9b8ae] django.request: Not Found: /static/admin/css/dashboard.css
+WARNING  [2024-04-01 17:49:21,618] [05b882e6375e416293c5e9ddd7c6ff80] django.request: Not Found: /static/admin/css/base.css
+WARNING  [2024-04-01 17:49:21,619] [0e3eb2cf311948d4a9e5662d8f661634] django.request: Not Found: /static/admin/css/responsive.css
+WARNING  [2024-04-01 17:49:21,619] [3f4b247c80be4d899632e33bf4cc3ccf] django.server: "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 2921
+WARNING  [2024-04-01 17:49:21,621] [aad6484834db42c89325705a91c9b8ae] django.server: "GET /static/admin/css/dashboard.css HTTP/1.1" 404 2921
+WARNING  [2024-04-01 17:49:21,623] [05b882e6375e416293c5e9ddd7c6ff80] django.server: "GET /static/admin/css/base.css HTTP/1.1" 404 2906
+WARNING  [2024-04-01 17:49:21,623] [b3360c1f6c97471bb2d1cae4f1671619] django.request: Not Found: /static/admin/js/theme.js
+WARNING  [2024-04-01 17:49:21,624] [0e3eb2cf311948d4a9e5662d8f661634] django.server: "GET /static/admin/css/responsive.css HTTP/1.1" 404 2924
+WARNING  [2024-04-01 17:49:21,625] [8be5d95f6bb249a5955c17697c71d314] django.request: Not Found: /static/admin/js/nav_sidebar.js
+WARNING  [2024-04-01 17:49:21,625] [b3360c1f6c97471bb2d1cae4f1671619] django.server: "GET /static/admin/js/theme.js HTTP/1.1" 404 2903
+WARNING  [2024-04-01 17:49:21,626] [8be5d95f6bb249a5955c17697c71d314] django.server: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 2921
+INFO     [2024-04-01 17:49:28,117] [15d2f89494214621bd082930bafd9276] django.server: "GET /admin/sites/site/add/ HTTP/1.1" 200 9088
+INFO     [2024-04-01 17:49:28,152] [f4d3eb2bb699483bb37a64ef934fa042] django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+WARNING  [2024-04-01 17:49:28,153] [25900246cb4b46f49f41d5505d4379ed] django.request: Not Found: /static/admin/js/vendor/jquery/jquery.js
+WARNING  [2024-04-01 17:49:28,154] [ca5a3638cb4741b8a5b613022fc837a8] django.request: Not Found: /static/admin/css/dark_mode.css
+WARNING  [2024-04-01 17:49:28,158] [f164014fc6784d2683168d513abfe9c5] django.request: Not Found: /static/admin/css/base.css
+WARNING  [2024-04-01 17:49:28,160] [98f3e754b824415caa71122388e51378] django.request: Not Found: /static/admin/css/nav_sidebar.css
+WARNING  [2024-04-01 17:49:28,162] [941e4efd2f8646048190b0b19d68b9d3] django.request: Not Found: /static/admin/css/forms.css
+WARNING  [2024-04-01 17:49:28,165] [25900246cb4b46f49f41d5505d4379ed] django.server: "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 404 2948
+WARNING  [2024-04-01 17:49:28,166] [ca5a3638cb4741b8a5b613022fc837a8] django.server: "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 2921
+WARNING  [2024-04-01 17:49:28,167] [f164014fc6784d2683168d513abfe9c5] django.server: "GET /static/admin/css/base.css HTTP/1.1" 404 2906
+WARNING  [2024-04-01 17:49:28,167] [98f3e754b824415caa71122388e51378] django.server: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 2927
+WARNING  [2024-04-01 17:49:28,168] [93c3a2d559dd4607b3ad6e144742728f] django.request: Not Found: /static/admin/css/responsive.css
+WARNING  [2024-04-01 17:49:28,171] [941e4efd2f8646048190b0b19d68b9d3] django.server: "GET /static/admin/css/forms.css HTTP/1.1" 404 2909
+WARNING  [2024-04-01 17:49:28,180] [000aed6fef224f28a91b541e85da0e60] django.request: Not Found: /static/admin/js/actions.js
+WARNING  [2024-04-01 17:49:28,187] [93c3a2d559dd4607b3ad6e144742728f] django.server: "GET /static/admin/css/responsive.css HTTP/1.1" 404 2924
+WARNING  [2024-04-01 17:49:28,193] [000aed6fef224f28a91b541e85da0e60] django.server: "GET /static/admin/js/actions.js HTTP/1.1" 404 2909
+WARNING  [2024-04-01 17:49:28,213] [153582f388754ccf89fcaec30a3d49e5] django.request: Not Found: /static/admin/js/vendor/xregexp/xregexp.js
+WARNING  [2024-04-01 17:49:28,198] [34db853740094263b7d08ec589c120da] django.request: Not Found: /static/admin/js/jquery.init.js
+WARNING  [2024-04-01 17:49:28,202] [bb7fc265cd0943b8957d377c19999fa0] django.request: Not Found: /static/admin/js/urlify.js
+WARNING  [2024-04-01 17:49:28,215] [bb7fc265cd0943b8957d377c19999fa0] django.server: "GET /static/admin/js/urlify.js HTTP/1.1" 404 2906
+WARNING  [2024-04-01 17:49:28,203] [0440bf133f75410e91dc4f662aafbd80] django.request: Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+WARNING  [2024-04-01 17:49:28,196] [8d7d7e38273242ceae2198a3af2ddeb3] django.request: Not Found: /static/admin/js/core.js
+WARNING  [2024-04-01 17:49:28,214] [153582f388754ccf89fcaec30a3d49e5] django.server: "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 404 2954
+WARNING  [2024-04-01 17:49:28,215] [34db853740094263b7d08ec589c120da] django.server: "GET /static/admin/js/jquery.init.js HTTP/1.1" 404 2921
+WARNING  [2024-04-01 17:49:28,207] [d4a8a5b5ccda45c0af840b158b221087] django.request: Not Found: /static/admin/js/prepopulate.js
+WARNING  [2024-04-01 17:49:28,217] [8d7d7e38273242ceae2198a3af2ddeb3] django.server: "GET /static/admin/js/core.js HTTP/1.1" 404 2900
+WARNING  [2024-04-01 17:49:28,218] [0440bf133f75410e91dc4f662aafbd80] django.server: "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 2966
+WARNING  [2024-04-01 17:49:28,221] [d4a8a5b5ccda45c0af840b158b221087] django.server: "GET /static/admin/js/prepopulate.js HTTP/1.1" 404 2921
+WARNING  [2024-04-01 17:49:28,227] [7bf3e5574d7d4094b4049a3da9677a85] django.request: Not Found: /static/admin/js/prepopulate_init.js
+WARNING  [2024-04-01 17:49:28,227] [7bf3e5574d7d4094b4049a3da9677a85] django.server: "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 404 2936
+WARNING  [2024-04-01 17:49:28,241] [41cf411487f2455c9ed990f3a3eaa908] django.request: Not Found: /static/admin/js/nav_sidebar.js
+WARNING  [2024-04-01 17:49:28,242] [41cf411487f2455c9ed990f3a3eaa908] django.server: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 2921
+WARNING  [2024-04-01 17:49:28,244] [7945d9f821ad4b6d8dd622ac794758c1] django.request: Not Found: /static/admin/css/responsive.css
+WARNING  [2024-04-01 17:49:28,245] [7945d9f821ad4b6d8dd622ac794758c1] django.server: "GET /static/admin/css/responsive.css HTTP/1.1" 404 2924
+WARNING  [2024-04-01 17:49:28,253] [2b240d4120ae435b830c207ecceb0cda] django.request: Not Found: /static/admin/js/change_form.js
+WARNING  [2024-04-01 17:49:28,269] [a6834f7147ec4590a4d692a3ffe50ca7] django.request: Not Found: /static/admin/js/theme.js
+WARNING  [2024-04-01 17:49:28,269] [2b240d4120ae435b830c207ecceb0cda] django.server: "GET /static/admin/js/change_form.js HTTP/1.1" 404 2921
+WARNING  [2024-04-01 17:49:28,270] [a6834f7147ec4590a4d692a3ffe50ca7] django.server: "GET /static/admin/js/theme.js HTTP/1.1" 404 2903
+INFO     [2024-04-01 17:49:30,229] [2b4e184a141a4696b08b37a39e455089] django.server: "GET /admin/ HTTP/1.1" 200 6473
+WARNING  [2024-04-01 17:49:30,306] [5b75dd0923a741428cceafc925418e48] django.request: Not Found: /static/admin/js/theme.js
+WARNING  [2024-04-01 17:49:30,307] [5b75dd0923a741428cceafc925418e48] django.server: "GET /static/admin/js/theme.js HTTP/1.1" 404 2903
+WARNING  [2024-04-01 17:49:30,308] [4787662b04d34b10a7b5b6ff30c5fbb1] django.request: Not Found: /static/admin/css/responsive.css
+WARNING  [2024-04-01 17:49:30,310] [2da601615aa6453ea8afa39605fdd534] django.request: Not Found: /static/admin/css/dark_mode.css
+WARNING  [2024-04-01 17:49:30,312] [4787662b04d34b10a7b5b6ff30c5fbb1] django.server: "GET /static/admin/css/responsive.css HTTP/1.1" 404 2924
+WARNING  [2024-04-01 17:49:30,312] [2da601615aa6453ea8afa39605fdd534] django.server: "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 2921
+WARNING  [2024-04-01 17:49:30,317] [6785743a97c84395a1331c09f434b4e7] django.request: Not Found: /static/admin/js/nav_sidebar.js
+WARNING  [2024-04-01 17:49:30,319] [b8a7b7ce67e64660aaaac2c05ca43016] django.request: Not Found: /static/admin/css/dashboard.css
+WARNING  [2024-04-01 17:49:30,319] [6785743a97c84395a1331c09f434b4e7] django.server: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 2921
+WARNING  [2024-04-01 17:49:30,320] [45d5c3935ca8480c90b1ec24ee665d8f] django.request: Not Found: /static/admin/css/base.css
+WARNING  [2024-04-01 17:49:30,321] [b8a7b7ce67e64660aaaac2c05ca43016] django.server: "GET /static/admin/css/dashboard.css HTTP/1.1" 404 2921
+WARNING  [2024-04-01 17:49:30,322] [5ce6f0df778744ad8f30e2b957f2f349] django.request: Not Found: /static/admin/css/nav_sidebar.css
+WARNING  [2024-04-01 17:49:30,325] [45d5c3935ca8480c90b1ec24ee665d8f] django.server: "GET /static/admin/css/base.css HTTP/1.1" 404 2906
+WARNING  [2024-04-01 17:49:30,330] [5ce6f0df778744ad8f30e2b957f2f349] django.server: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 2927
+WARNING  [2024-04-01 17:49:32,443] [bdefb3d2a3c4414e8f827bff89695b52] django.request: Not Found: /
+WARNING  [2024-04-01 17:49:32,444] [bdefb3d2a3c4414e8f827bff89695b52] django.server: "GET / HTTP/1.1" 404 2813
+INFO     [2024-04-01 17:49:34,042] [84ee4561aec94878950df0cbfaee6732] django.server: "GET /admin/ HTTP/1.1" 200 6473
+INFO     [2024-04-01 17:49:43,204] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\config\settings.py changed, reloading.
+INFO     [2024-04-01 17:49:43,566] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\config\settings.py changed, reloading.
+INFO     [2024-04-01 17:49:44,032] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-01 17:49:44,389] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-01 17:49:44,982] [07ef769447ef48eaa7f6d7d6761375b4] django.server: "GET /swagger/ HTTP/1.1" 200 2380
+WARNING  [2024-04-01 17:49:45,013] [14069571a18c408a9a90471e2aabc4b6] django.request: Not Found: /static/drf-yasg/style.css
+WARNING  [2024-04-01 17:49:45,013] [1bc901154ed04bc28cca03dbe0661b3e] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui.css
+WARNING  [2024-04-01 17:49:45,014] [580f187829eb41a7a2bb533dd408ebee] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js
+WARNING  [2024-04-01 17:49:45,014] [705538e4ffdb4a7293a207854968cf6f] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js
+WARNING  [2024-04-01 17:49:45,015] [8e151dfe52594d75940ca01b1af816fa] django.request: Not Found: /static/drf-yasg/insQ.min.js
+WARNING  [2024-04-01 17:49:45,016] [14069571a18c408a9a90471e2aabc4b6] django.server: "GET /static/drf-yasg/style.css HTTP/1.1" 404 2906
+WARNING  [2024-04-01 17:49:45,016] [1bc901154ed04bc28cca03dbe0661b3e] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 404 2969
+WARNING  [2024-04-01 17:49:45,017] [580f187829eb41a7a2bb533dd408ebee] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 404 3020
+WARNING  [2024-04-01 17:49:45,017] [705538e4ffdb4a7293a207854968cf6f] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2987
+WARNING  [2024-04-01 17:49:45,018] [8e151dfe52594d75940ca01b1af816fa] django.server: "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 404 2912
+WARNING  [2024-04-01 17:49:45,025] [8c787c98c99f4904862cfdc57bd0a1d3] django.request: Not Found: /static/drf-yasg/immutable.min.js
+WARNING  [2024-04-01 17:49:45,026] [e9d2a0427d0d4ee08f23ec87b8521e5f] django.request: Not Found: /static/drf-yasg/swagger-ui-init.js
+WARNING  [2024-04-01 17:49:45,026] [8c787c98c99f4904862cfdc57bd0a1d3] django.server: "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 404 2927
+WARNING  [2024-04-01 17:49:45,027] [e9d2a0427d0d4ee08f23ec87b8521e5f] django.server: "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 404 2933
+INFO     [2024-04-01 17:49:52,925] [bca56975ab974d81b16839d55531c4db] django.server: "GET /swagger/ HTTP/1.1" 200 2380
+WARNING  [2024-04-01 17:49:53,011] [4ada8eb2f4be4ab18e1f25d6e7da6387] django.request: Not Found: /static/drf-yasg/style.css
+WARNING  [2024-04-01 17:49:53,015] [4ada8eb2f4be4ab18e1f25d6e7da6387] django.server: "GET /static/drf-yasg/style.css HTTP/1.1" 404 2906
+WARNING  [2024-04-01 17:49:53,021] [dcf433aeb9b44bf3b5624f6fce84d3f0] django.request: Not Found: /static/drf-yasg/swagger-ui-init.js
+WARNING  [2024-04-01 17:49:53,022] [dcf433aeb9b44bf3b5624f6fce84d3f0] django.server: "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 404 2933
+WARNING  [2024-04-01 17:49:53,033] [e959351bb61d4810a17988b2cb11ffe3] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js
+WARNING  [2024-04-01 17:49:53,040] [55e5660f7cd74c6c85177f5e61779e27] django.request: Not Found: /static/drf-yasg/insQ.min.js
+WARNING  [2024-04-01 17:49:53,041] [e959351bb61d4810a17988b2cb11ffe3] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2987
+WARNING  [2024-04-01 17:49:53,043] [7ef314de669c461f928a4ff6b457815a] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui.css
+WARNING  [2024-04-01 17:49:53,044] [7ed07da457b94c53b40f33aa7a1cf791] django.request: Not Found: /static/drf-yasg/immutable.min.js
+WARNING  [2024-04-01 17:49:53,045] [55e5660f7cd74c6c85177f5e61779e27] django.server: "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 404 2912
+WARNING  [2024-04-01 17:49:53,046] [da34e28215354c37a1a11412d9531249] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js
+WARNING  [2024-04-01 17:49:53,047] [7ef314de669c461f928a4ff6b457815a] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 404 2969
+WARNING  [2024-04-01 17:49:53,047] [7ed07da457b94c53b40f33aa7a1cf791] django.server: "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 404 2927
+WARNING  [2024-04-01 17:49:53,048] [da34e28215354c37a1a11412d9531249] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 404 3020
+INFO     [2024-04-01 17:49:54,848] [e6097ffde8d143b7ae8e468acda94527] django.server: "GET /admin/logout?next=/swagger/ HTTP/1.1" 301 0
+ERROR    [2024-04-01 17:49:54,919] [4f92d27286b747159dc66a9eb27915a7] django.request: Internal Server Error: /admin/logout/
+Traceback (most recent call last):
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sites\models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\admin\sites.py", line 261, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\admin\sites.py", line 403, in logout
+    return LogoutView.as_view(**defaults)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\views.py", line 147, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\views.py", line 157, in post
+    return super().get(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 226, in get
+    context = self.get_context_data(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\views.py", line 173, in get_context_data
+    current_site = get_current_site(self.request)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sites\shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sites\models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sites\models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR    [2024-04-01 17:49:54,938] [4f92d27286b747159dc66a9eb27915a7] django.server: "GET /admin/logout/ HTTP/1.1" 500 192299
+INFO     [2024-04-01 17:50:01,246] [96370d2a668d414f94411057cba3c220] django.server: "GET /swagger HTTP/1.1" 301 0
+INFO     [2024-04-01 17:50:01,251] [673c6a8fda6e4019a3875e6ddc1091ac] django.server: "GET /swagger/ HTTP/1.1" 200 2152
+WARNING  [2024-04-01 17:50:01,283] [49df375c9ceb482a9286f28a31709aa1] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js
+WARNING  [2024-04-01 17:50:01,284] [49df375c9ceb482a9286f28a31709aa1] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2987
+WARNING  [2024-04-01 17:50:01,290] [ed6d106d5ad44bcd822988bdfdc34149] django.request: Not Found: /static/drf-yasg/swagger-ui-init.js
+WARNING  [2024-04-01 17:50:01,290] [ed6d106d5ad44bcd822988bdfdc34149] django.server: "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 404 2933
+WARNING  [2024-04-01 17:50:01,294] [be91350b7f474dbbb7c329ea4c570596] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui.css
+WARNING  [2024-04-01 17:50:01,295] [be91350b7f474dbbb7c329ea4c570596] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 404 2969
+WARNING  [2024-04-01 17:50:01,304] [4b723476f4e140d99b30617aeb08989d] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js
+WARNING  [2024-04-01 17:50:01,305] [4b723476f4e140d99b30617aeb08989d] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 404 3020
+WARNING  [2024-04-01 17:50:01,310] [8b1ba76fa7904f3b8ec9c5aa50aaeef7] django.request: Not Found: /static/drf-yasg/style.css
+WARNING  [2024-04-01 17:50:01,311] [8b1ba76fa7904f3b8ec9c5aa50aaeef7] django.server: "GET /static/drf-yasg/style.css HTTP/1.1" 404 2906
+WARNING  [2024-04-01 17:50:01,316] [af6a36d967074de8a6d5a1d2c591e4cc] django.request: Not Found: /static/drf-yasg/insQ.min.js
+WARNING  [2024-04-01 17:50:01,317] [af6a36d967074de8a6d5a1d2c591e4cc] django.server: "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 404 2912
+WARNING  [2024-04-01 17:50:01,336] [0bd1d568c6304256a5ab42be488f066f] django.request: Not Found: /static/drf-yasg/immutable.min.js
+WARNING  [2024-04-01 17:50:01,337] [0bd1d568c6304256a5ab42be488f066f] django.server: "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 404 2927
+INFO     [2024-04-01 17:50:02,439] [93e562dce7a847918f0e871a78e20a36] django.server: "GET /admin/login?next=/swagger/ HTTP/1.1" 302 0
+ERROR    [2024-04-01 17:50:02,466] [143d5b5d29234dfea55efcf00904e9c9] django.request: Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sites\models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\admin\sites.py", line 441, in login
+    return LoginView.as_view(**defaults)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\views.py", line 90, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\views.py", line 114, in get_context_data
+    current_site = get_current_site(self.request)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sites\shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sites\models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sites\models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR    [2024-04-01 17:50:02,476] [143d5b5d29234dfea55efcf00904e9c9] django.server: "GET /admin/login/?next=/admin/login%3Fnext%3D/swagger/ HTTP/1.1" 500 180473
+INFO     [2024-04-01 17:50:29,749] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\config\settings.py changed, reloading.
+INFO     [2024-04-01 17:50:30,090] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\config\settings.py changed, reloading.
+INFO     [2024-04-01 17:50:30,534] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-01 17:50:30,940] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-01 17:50:50,816] [bb9fdef72327485bac9dd261385e05ab] django.server: "GET /swagger/ HTTP/1.1" 200 2152
+WARNING  [2024-04-01 17:50:50,872] [55752358dbb5465c9ab889d016b9103f] django.request: Not Found: /static/drf-yasg/style.css
+WARNING  [2024-04-01 17:50:50,873] [55752358dbb5465c9ab889d016b9103f] django.server: "GET /static/drf-yasg/style.css HTTP/1.1" 404 2906
+WARNING  [2024-04-01 17:50:50,908] [285e2cdf84be476ba6828c7306225704] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js
+WARNING  [2024-04-01 17:50:50,909] [55ffc090e4bf48b09721aaa96e760ee2] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui.css
+WARNING  [2024-04-01 17:50:50,912] [285e2cdf84be476ba6828c7306225704] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 404 2987
+WARNING  [2024-04-01 17:50:50,913] [55ffc090e4bf48b09721aaa96e760ee2] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 404 2969
+WARNING  [2024-04-01 17:50:50,915] [d45617cf9c804510aad76e1be414b8ce] django.request: Not Found: /static/drf-yasg/insQ.min.js
+WARNING  [2024-04-01 17:50:50,916] [0706149d7d494371b57f77635e0787ae] django.request: Not Found: /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js
+WARNING  [2024-04-01 17:50:50,917] [b9d0d916a8534253b4a454d40ab74451] django.request: Not Found: /static/drf-yasg/immutable.min.js
+WARNING  [2024-04-01 17:50:50,918] [d45617cf9c804510aad76e1be414b8ce] django.server: "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 404 2912
+WARNING  [2024-04-01 17:50:50,918] [352c2316fe8b4e7a8940ba6c94a79834] django.request: Not Found: /static/drf-yasg/swagger-ui-init.js
+WARNING  [2024-04-01 17:50:50,919] [0706149d7d494371b57f77635e0787ae] django.server: "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 404 3020
+WARNING  [2024-04-01 17:50:50,919] [b9d0d916a8534253b4a454d40ab74451] django.server: "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 404 2927
+WARNING  [2024-04-01 17:50:50,920] [352c2316fe8b4e7a8940ba6c94a79834] django.server: "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 404 2933
+INFO     [2024-04-01 17:52:59,671] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\urls.py changed, reloading.
+INFO     [2024-04-01 17:52:59,700] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\urls.py changed, reloading.
+INFO     [2024-04-01 17:53:00,546] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-01 17:53:00,635] [none] django.utils.autoreload: Watching for file changes with StatReloader

@@ -98,9 +98,7 @@ app_urls = [
     path("http/detail/<int:pk>", ApiDetailView.as_view()),
     path("http/saveOrUpdate/<int:pk>", SaveOrUpdateApiView.as_view()),
     path('http/snapshot', ApiSnapshotView.as_view()),
-    path("http/list", ApiTestListView.as_view({
-        'get': 'list'
-    })),
+    path("http/list", ApiTestListView.as_view({'get': 'list'})),
     path('http/run', RunApiView.as_view()),
     path("case/SaveOrUpdate/<int:pk>", SaveOrUpdateCaseView.as_view()),
     path('case/run', RunCaseView.as_view()),

@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Add case step detail component and drawer for report detail view.">
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Added new API endpoints for data source management.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/models/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/https.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/models/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/plan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/models/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/setting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
     </list>
@@ -149,7 +147,7 @@
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\templates\asserts" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.__init__">
+  <component name="RunManager" selected="Django Server.backend">
     <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <option name="ENV_FILES" value="" />
@@ -428,39 +426,7 @@
       <workItem from="1711534478853" duration="111000" />
       <workItem from="1711591405569" duration="42079000" />
       <workItem from="1711962633078" duration="55000" />
-      <workItem from="1711962720464" duration="1044000" />
-    </task>
-    <task id="LOCAL-00252" summary=":construction_worker: 测试报告">
-      <option name="closed" value="true" />
-      <created>1707213163562</created>
-      <option name="number" value="00252" />
-      <option name="presentableId" value="LOCAL-00252" />
-      <option name="project" value="LOCAL" />
-      <updated>1707213163562</updated>
-    </task>
-    <task id="LOCAL-00253" summary=":construction_worker: 测试报告">
-      <option name="closed" value="true" />
-      <created>1707272019047</created>
-      <option name="number" value="00253" />
-      <option name="presentableId" value="LOCAL-00253" />
-      <option name="project" value="LOCAL" />
-      <updated>1707272019047</updated>
-    </task>
-    <task id="LOCAL-00254" summary=":construction_worker: 测试报告">
-      <option name="closed" value="true" />
-      <created>1707272084489</created>
-      <option name="number" value="00254" />
-      <option name="presentableId" value="LOCAL-00254" />
-      <option name="project" value="LOCAL" />
-      <updated>1707272084489</updated>
-    </task>
-    <task id="LOCAL-00255" summary=":construction_worker: 添加部分模块注释">
-      <option name="closed" value="true" />
-      <created>1707274887297</created>
-      <option name="number" value="00255" />
-      <option name="presentableId" value="LOCAL-00255" />
-      <option name="project" value="LOCAL" />
-      <updated>1707274887297</updated>
+      <workItem from="1711962720464" duration="2444000" />
     </task>
     <task id="LOCAL-00256" summary=":construction_worker: 添加部分模块注释">
       <option name="closed" value="true" />
@@ -822,7 +788,39 @@
       <option name="project" value="LOCAL" />
       <updated>1711962834200</updated>
     </task>
-    <option name="localTasksCounter" value="301" />
+    <task id="LOCAL-00301" summary="Changed related\_name in models: plan, https, case, step, api\_copy, and added data\_source model.">
+      <option name="closed" value="true" />
+      <created>1711963783346</created>
+      <option name="number" value="00301" />
+      <option name="presentableId" value="LOCAL-00301" />
+      <option name="project" value="LOCAL" />
+      <updated>1711963783346</updated>
+    </task>
+    <task id="LOCAL-00302" summary="&quot;Add DataSource model, refine relationships in Plan, Https, Case, Step, ApiCopy, and Setting models&quot;">
+      <option name="closed" value="true" />
+      <created>1711963945424</created>
+      <option name="number" value="00302" />
+      <option name="presentableId" value="LOCAL-00302" />
+      <option name="project" value="LOCAL" />
+      <updated>1711963945424</updated>
+    </task>
+    <task id="LOCAL-00303" summary="&quot;Add DataSource model, refine relationships in Plan, Https, Case, Step, ApiCopy, and Setting models&quot;">
+      <option name="closed" value="true" />
+      <created>1711963956563</created>
+      <option name="number" value="00303" />
+      <option name="presentableId" value="LOCAL-00303" />
+      <option name="project" value="LOCAL" />
+      <updated>1711963956563</updated>
+    </task>
+    <task id="LOCAL-00304" summary="Added new API endpoints for data source management.">
+      <option name="closed" value="true" />
+      <created>1711964451049</created>
+      <option name="number" value="00304" />
+      <option name="presentableId" value="LOCAL-00304" />
+      <option name="project" value="LOCAL" />
+      <updated>1711964451049</updated>
+    </task>
+    <option name="localTasksCounter" value="305" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -852,32 +850,32 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="&quot;Add docstring" />
-    <MESSAGE value="&quot;Add docstring comments" />
-    <MESSAGE value="&quot;Add docstring comments to" />
-    <MESSAGE value="&quot;Add docstring comments to sch" />
-    <MESSAGE value="&quot;Add docstring comments to scheduler" />
-    <MESSAGE value="&quot;Add docstring comments to scheduler base" />
-    <MESSAGE value="&quot;Add docstring comments to scheduler base and" />
-    <MESSAGE value="&quot;Add docstring comments to scheduler base and sch" />
-    <MESSAGE value="&quot;Add docstring comments to scheduler base and scheduler" />
-    <MESSAGE value="&quot;Add docstring comments to scheduler base and scheduler py" />
-    <MESSAGE value="&quot;Add docstring comments to scheduler base and scheduler py files" />
-    <MESSAGE value="&quot;Add docstring comments to scheduler base and scheduler py files.&quot;" />
+    <MESSAGE value="&quot;Add DataSource model, refine relationships in Plan, Htt" />
+    <MESSAGE value="&quot;Add DataSource model, refine relationships in Plan, Https" />
+    <MESSAGE value="&quot;Add DataSource model, refine relationships in Plan, Https," />
+    <MESSAGE value="&quot;Add DataSource model, refine relationships in Plan, Https, Case" />
+    <MESSAGE value="&quot;Add DataSource model, refine relationships in Plan, Https, Case," />
+    <MESSAGE value="&quot;Add DataSource model, refine relationships in Plan, Https, Case, Step" />
+    <MESSAGE value="&quot;Add DataSource model, refine relationships in Plan, Https, Case, Step," />
+    <MESSAGE value="&quot;Add DataSource model, refine relationships in Plan, Https, Case, Step, Api" />
+    <MESSAGE value="&quot;Add DataSource model, refine relationships in Plan, Https, Case, Step, ApiCopy" />
+    <MESSAGE value="&quot;Add DataSource model, refine relationships in Plan, Https, Case, Step, ApiCopy," />
+    <MESSAGE value="&quot;Add DataSource model, refine relationships in Plan, Https, Case, Step, ApiCopy, and" />
+    <MESSAGE value="&quot;Add DataSource model, refine relationships in Plan, Https, Case, Step, ApiCopy, and Setting" />
+    <MESSAGE value="&quot;Add DataSource model, refine relationships in Plan, Https, Case, Step, ApiCopy, and Setting models" />
+    <MESSAGE value="&quot;Add DataSource model, refine relationships in Plan, Https, Case, Step, ApiCopy, and Setting models&quot;" />
     <MESSAGE value="Add" />
-    <MESSAGE value="Add case" />
-    <MESSAGE value="Add case step" />
-    <MESSAGE value="Add case step detail" />
-    <MESSAGE value="Add case step detail component" />
-    <MESSAGE value="Add case step detail component and" />
-    <MESSAGE value="Add case step detail component and dra" />
-    <MESSAGE value="Add case step detail component and drawer" />
-    <MESSAGE value="Add case step detail component and drawer for" />
-    <MESSAGE value="Add case step detail component and drawer for report" />
-    <MESSAGE value="Add case step detail component and drawer for report detail" />
-    <MESSAGE value="Add case step detail component and drawer for report detail view" />
-    <MESSAGE value="Add case step detail component and drawer for report detail view." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add case step detail component and drawer for report detail view." />
+    <MESSAGE value="Added" />
+    <MESSAGE value="Added new" />
+    <MESSAGE value="Added new API" />
+    <MESSAGE value="Added new API end" />
+    <MESSAGE value="Added new API endpoints" />
+    <MESSAGE value="Added new API endpoints for" />
+    <MESSAGE value="Added new API endpoints for data" />
+    <MESSAGE value="Added new API endpoints for data source" />
+    <MESSAGE value="Added new API endpoints for data source management" />
+    <MESSAGE value="Added new API endpoints for data source management." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new API endpoints for data source management." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$__init____2_.coverage" NAME="__init__ (2) Coverage Results" MODIFIED="1706696733502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/management/commands" />
