@@ -27,8 +27,6 @@ def ddt(cls):
         if hasattr(func, "PARAMS"):
 
             for index, case_data in enumerate(getattr(func, "PARAMS")):
-                print(index)
-                print(case_data)
                 new_test_name = _create_test_name(index, name)
                 if isinstance(case_data, dict) and case_data.get("title"):
                     test_desc = str(case_data.get("title"))

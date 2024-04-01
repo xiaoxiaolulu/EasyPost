@@ -8,11 +8,16 @@
       <el-col :span="8">
         <div class="top">
           <div class="headerContent">
-            <span class="title">EasyPost</span>
+            <img
+                class="login-logo"
+                src="https://s11.ax1x.com/2024/01/31/pFKvjUA.png"
+                alt="logo"
+            />
+<!--            <span class="title">EasyPost</span>-->
           </div>
-          <div class="desc">
-            一站式测试质量协作平台
-          </div>
+<!--          <div class="desc">-->
+<!--            一站式测试质量协作平台-->
+<!--          </div>-->
         </div>
         <div class="main">
           <LoginForm/>
@@ -46,7 +51,7 @@
   }
   .left_content___3vtUv {
     height: 100vh;
-    background-image: url('@/assets/image/login/side-logo.png');
+    background-image: url('@/assets/image/login/side-logo.jpg');
     background-repeat: no-repeat;
     background-position: 100%;
     background-size: cover;
@@ -60,24 +65,32 @@
     text-align: center;
     margin: 32px 0;
   }
-  .title {
+  //.title {
+  //  position: relative;
+  //  top: 2px;
+  //  color: rgba(0, 0, 0, .85);
+  //  font-weight: 600;
+  //  font-size: 50px;
+  //  font-family: Avenir, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  //}
+  .login-logo {
     position: relative;
     top: 2px;
     color: rgba(0, 0, 0, .85);
-    font-weight: 600;
-    font-size: 50px;
-    font-family: Avenir, "Helvetica Neue", Arial, Helvetica, sans-serif;
+    width: 250px;
+    height: 150px;
+    vertical-align: top;
   }
-  .desc {
-    margin-top: 12px;
-    margin-bottom: 40px;
-    color: rgba(0, 0, 0, .45);
-    font-size: 12px;
-  }
+  //.desc {
+  //  margin-top: 12px;
+  //  margin-bottom: 40px;
+  //  color: rgba(0, 0, 0, .45);
+  //  font-size: 12px;
+  //}
 
   .main {
     width: 328px;
-    margin: 0 auto;
+    margin: 120px auto 0;
   }
   .ant-layout-footer {
     padding: 24px 50px;
