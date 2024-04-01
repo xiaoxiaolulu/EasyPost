@@ -51,11 +51,29 @@
                       {{ item.name }}
                     </div>
                     <div style="float: right">
-                      <el-button type="primary" link>详情</el-button>
+                      <el-button type="primary" link @click="viewDetail(item)">详情</el-button>
                     </div>
                   </div>
                 </div>
               </div>
+              <el-drawer
+                  v-model="state.showDetailInfo"
+                  size="70%"
+                  append-to-body
+                  direction="ltr"
+                  destroy-on-close
+                  :with-header="true">
+                <template #header>
+                        <span>
+                          <strong class="pr10">报告详情</strong>
+                          <el-tag type="danger" v-if="state.statisticsData.success === 0">不通过</el-tag>
+                          <el-tag type="success" v-else>通过</el-tag>
+                        </span>
+                </template>
+                <div style="height: 500px; overflow-y: auto">
+                  <case-step-detail :reportData="ResponseData"></case-step-detail>
+                </div>
+              </el-drawer>
             </template>
           </el-table-column>
           <el-table-column prop="name" label="用例名称"></el-table-column>
@@ -114,6 +132,7 @@ import ReportStatistics from "./ReportStatistics.vue"
 import {Close, Search, WarningFilled} from "@element-plus/icons-vue";
 import {ElMessage, ElPagination} from "element-plus";
 import {recordDetail} from "@/api/record";
+import CaseStepDetail from "@/views/record/build/components/caseStepDetail.vue";
 
 const route = useRoute()
 
@@ -137,6 +156,7 @@ const state = reactive({
     step_success_count: 1,
     success: 1
   },
+  showDetailInfo: false
 })
 
 const queryParams = reactive({
@@ -145,18 +165,13 @@ const queryParams = reactive({
   page: 1
 })
 
-const methods = reactive([
-  {id: 0, type: '', name: 'POST'},
-  {id: 1, type: 'success', name: 'GET'},
-  {id: 2, type: 'warning', name: 'PUT'},
-  {id: 3, type: 'danger', name: 'DELETE'}
-])
-
 const tableLoading = ref(false)
 
 const tableData = ref([])
 
 const count = ref(0)
+
+const ResponseData = ref()
 
 const reportStatus = computed(() => {
   return state.statisticsData?.success === 1 || state.statisticsData?.success
@@ -179,6 +194,16 @@ const queryList = () => {
 const handlePageChange = (newPage: any) => {
   queryParams.page = newPage
   queryList()
+}
+
+const viewDetail = (row) => {
+  if (row) {
+    console.log("测试")
+    console.log(row)
+    console.log("测试")
+    state.showDetailInfo = true
+    ResponseData.value = eval(row)
+  }
 }
 
 queryList()
