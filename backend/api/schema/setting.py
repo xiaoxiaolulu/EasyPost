@@ -2,7 +2,7 @@ import re
 from rest_framework import serializers
 from api.models.setting import (
     Address,
-    TestEnvironment
+    TestEnvironment, DataSource
 )
 from api.schema.user import UserSimpleSerializers
 
@@ -71,10 +71,10 @@ class AddressWriteSerializers(serializers.ModelSerializer):
 class DataSourceSerializers(serializers.ModelSerializer):
 
     id = serializers.IntegerField(read_only=True)
-    user = UserSimpleSerializers(required=False, default=serializers.CurrentUserDefault())
+    creator = UserSimpleSerializers(required=False, default=serializers.CurrentUserDefault())
     create_time = serializers.DateTimeField(read_only=True)
     update_time = serializers.DateTimeField(read_only=True)
 
     class Meta:
-        model = Address
+        model = DataSource
         fields = "__all__"

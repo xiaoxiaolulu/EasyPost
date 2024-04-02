@@ -63,3 +63,36 @@ export function addressCreate(data: any) {
         data
     })
 }
+
+
+export function databaseList(params: any) {
+    return request({
+        url: `/api/database/list`,
+        method: 'get',
+        params
+    })
+}
+
+export function databaseDelete(data: any) {
+    return request({
+        url: `/api/database/delete/${data.id}`,
+        method: 'delete',
+        data
+    })
+}
+
+export function databaseUpdate(data: any) {
+    return request({
+        url: `/api/database/update/${data.id}`,
+        method: 'put',
+        data
+    })
+}
+
+export function databaseCreate(data: any) {
+    return request({
+        url: '/api/database/create',
+        method: 'post',
+        data
+    })
+}
