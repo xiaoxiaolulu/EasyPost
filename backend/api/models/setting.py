@@ -106,6 +106,33 @@ class DataSource(Model):
         ordering = ("-create_time",)
 
     def __str__(self):
+        return self.database
+
+
+class Functions(Model):
+    """
+    内置函数
+    * name: 内置函数名称
+    * content: 内置函数内容
+    * remarks: 内置函数描述
+    * creator: 用户
+    * create_time: 创建时间
+    * update_time: 更新时间
+    """
+    id = AutoField(primary_key=True)
+    name = CharField(max_length=50, null=True, blank=True, verbose_name=_('Functions Name'))
+    content = TextField(null=True, blank=True, verbose_name=_('Functions Content'))
+    remarks = TextField(null=True, blank=True, verbose_name=_('Functions Remarks'))
+    creator = ForeignKey(User, related_name="functions_creator", null=True, on_delete=SET_NULL, verbose_name=_('User'))
+    create_time = DateTimeField(auto_now_add=True, verbose_name=_('Functions CreateTime'))
+    update_time = DateTimeField(auto_now=True, verbose_name=_('Functions UpdateTime'))
+
+    class Meta:
+        verbose_name = _("Functions")
+        verbose_name_plural = verbose_name
+        ordering = ("-create_time",)
+
+    def __str__(self):
         return self.name
 
 
