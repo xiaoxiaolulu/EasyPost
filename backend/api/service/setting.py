@@ -1,6 +1,10 @@
+import json
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from api.dao.setting import SettingDao
 from api.filters.setting import (
     TestEnvironmentFilter,
     AddressFilter,
@@ -17,6 +21,7 @@ from api.mixins.magic import (
     MagicDestroyApi,
     MagicCreateApi
 )
+from api.response.fatcory import ResponseStandard
 from api.schema.setting import (
     TestEnvironmentSerializers,
     AddressSerializers,
@@ -118,3 +123,19 @@ class DataSourceCreateViewSet(MagicCreateApi):  # noqa
     queryset = DataSource.objects.all()
     serializer_class = DataSourceSerializers
     permission_classes = [IsAuthenticated]
+
+
+class DatabaseIsConnectView(APIView):
+
+    permission_classes = [IsAuthenticated]
+
+    @staticmethod
+    def post(request):
+        try:
+            request_body = json.loads(request.body.decode())
+            ret = SettingDao.database_is_connect(config=request_body)
+            return Response(ResponseStandard.success(
+                data={"database_status": ret}
+            ))
+        except Exception as err:
+            return Response(ResponseStandard.failed(err))

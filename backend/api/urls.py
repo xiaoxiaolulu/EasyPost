@@ -51,7 +51,8 @@ from api.service.setting import (
     DataSourceListViewSet,
     DataSourceDestroyViewSet,
     DataSourceUpdateViewSet,
-    DataSourceCreateViewSet
+    DataSourceCreateViewSet,
+    DatabaseIsConnectView
 )
 from api.service.user import (
     CustomJsonWebToken,
@@ -90,6 +91,7 @@ app_urls = [
     path("database/delete/<int:pk>", DataSourceDestroyViewSet.as_view()),
     path("database/update/<int:pk>", DataSourceUpdateViewSet.as_view()),
     path("database/create", DataSourceCreateViewSet.as_view()),
+    path("database/isConnect", DatabaseIsConnectView.as_view()),
 
     # 接口测试
     path("http/", ApiFastView.as_view()),
