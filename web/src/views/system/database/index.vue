@@ -15,7 +15,7 @@
             <el-input
                 :suffix-icon="Search"
                 clearable
-                v-model.trim="queryParams.name"
+                v-model.trim="queryParams.database"
                 placeholder="请输入数据库名称"
                 @keyup.enter.native="queryList">
             </el-input>
@@ -26,7 +26,7 @@
                 v-loading="tableLoading"
                 element-loading-text="拼命加载中"
                 style="width: 100%">
-        <el-table-column prop="name" label="数据库名称"></el-table-column>
+        <el-table-column prop="database" label="数据库名称"></el-table-column>
         <el-table-column prop="host" label="地址"></el-table-column>
         <el-table-column prop="port" label="端口"></el-table-column>
         <el-table-column prop="creator.username" label="创建者">
@@ -70,7 +70,7 @@ import databaseDialog from "./components/databaseDialog.vue"
 import {showErrMessage} from "@/utils/element";
 
 const queryParams = reactive({
-  name: '',
+  database: '',
   page: 1
 })
 

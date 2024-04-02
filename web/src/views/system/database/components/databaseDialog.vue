@@ -8,8 +8,8 @@
     <el-form autoComplete="on" :model="form" :rules="rules" ref="ruleFormRef"
              label-position="right"
              label-width="100px">
-      <el-form-item label="数据库名称" :required="true" prop="name">
-        <el-input v-model="form.name" placeholder="请输入数据库名称"></el-input>
+      <el-form-item label="数据库名称" :required="true" prop="database">
+        <el-input v-model="form.database" placeholder="请输入数据库名称"></el-input>
       </el-form-item>
       <el-form-item label="地址" :required="true" prop="host">
         <el-input v-model="form.host" placeholder="请输入地址">></el-input>
@@ -42,7 +42,7 @@ import {showErrMessage} from "@/utils/element";
 const dialog = ref<boolean>(false)
 
 let form = reactive({
-  name: '',
+  database: '',
   host: '',
   port: '',
   user: '',
@@ -56,7 +56,7 @@ const pk = ref()
 const title = ref()
 
 const rules = reactive({
-  name: [{required: true, trigger: "blur", message: "请输入数据库名称！"}],
+  database: [{required: true, trigger: "blur", message: "请输入数据库名称！"}],
   host: [{required: true, trigger: "blur", message: "请输入地址！"}],
   port: [{required: true, trigger: "blur", message: "请输入端口！"}],
   user: [{required: true, trigger: "blur", message: "请输入账号！"}],
@@ -104,7 +104,7 @@ const show = (item={})=>{
     title.value = '编辑数据库'
     pk.value = item.id
     Object.keys(item).forEach(key=>{
-      form.name = item.name
+      form.database = item.database
       form.host = item.host
       form.port = item.port
       form.user = item.user

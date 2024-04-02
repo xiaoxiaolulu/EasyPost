@@ -91,7 +91,7 @@ class DataSource(Model):
     * update_time: 更新时间
     """
     id = AutoField(primary_key=True)
-    name = CharField(max_length=50, null=True, blank=True, verbose_name=_('DataSource Name'))
+    database = CharField(max_length=50, null=True, blank=True, verbose_name=_('DataSource Name'))
     host = CharField(max_length=100, null=True, blank=True, verbose_name=_('DataSource Host'))
     port = CharField(max_length=100, null=True, blank=True, verbose_name=_('DataSource Port'))
     user = CharField(max_length=100, null=True, blank=True, verbose_name=_('DataSource User'))

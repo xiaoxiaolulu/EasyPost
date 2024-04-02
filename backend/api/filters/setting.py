@@ -26,8 +26,8 @@ class AddressFilter(filters.FilterSet):
 
 class DataSourceFilter(filters.FilterSet):
 
-    name = filters.CharFilter(field_name='name', help_text='按数据库名称模糊查询', lookup_expr='icontains')
+    database = filters.CharFilter(field_name='database', help_text='按数据库名称模糊查询', lookup_expr='icontains')
 
     class Meta:
         model = DataSource
-        fields = ["name"]
+        fields = ["database"]

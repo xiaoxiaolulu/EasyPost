@@ -96,7 +96,7 @@ class DataSourceListViewSet(MagicListAPI):  # noqa
     permission_classes = [IsAuthenticated]
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
     filterset_class = DataSourceFilter  # noqa
-    search_fields = ['name']
+    search_fields = ['database']
     ordering_fields = ['create_time']
 
 
