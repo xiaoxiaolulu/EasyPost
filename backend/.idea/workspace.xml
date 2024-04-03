@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Add Functions API view, serializers, and filter.">
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="&quot;Modify setting.py to add exit code message in debug function&quot;">
+      <change afterPath="$PROJECT_DIR$/api/migrations/0013_address_headers_address_variables.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/models/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/plan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/models/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/setting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -444,15 +448,7 @@
       <workItem from="1711534478853" duration="111000" />
       <workItem from="1711591405569" duration="42079000" />
       <workItem from="1711962633078" duration="55000" />
-      <workItem from="1711962720464" duration="31318000" />
-    </task>
-    <task id="LOCAL-00280" summary="Added several new functions to the built-in library: random_string, array_range, guid, url, and postcode.">
-      <option name="closed" value="true" />
-      <created>1711595344751</created>
-      <option name="number" value="00280" />
-      <option name="presentableId" value="LOCAL-00280" />
-      <option name="project" value="LOCAL" />
-      <updated>1711595344751</updated>
+      <workItem from="1711962720464" duration="35347000" />
     </task>
     <task id="LOCAL-00281" summary="Added several new functions to the built-in library: random_string, array_range, guid, url, and postcode.">
       <option name="closed" value="true" />
@@ -838,7 +834,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712128508687</updated>
     </task>
-    <option name="localTasksCounter" value="329" />
+    <task id="LOCAL-00329" summary="&quot;Modify setting.py to add exit code message in debug function&quot;">
+      <option name="closed" value="true" />
+      <created>1712129660174</created>
+      <option name="number" value="00329" />
+      <option name="presentableId" value="LOCAL-00329" />
+      <option name="project" value="LOCAL" />
+      <updated>1712129660174</updated>
+    </task>
+    <option name="localTasksCounter" value="330" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -868,21 +872,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_function` method to `SettingDAO` class in `setting." />
-    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_function` method to `SettingDAO` class in `setting.py" />
-    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_function` method to `SettingDAO` class in `setting.py`." />
-    <MESSAGE value="Add debug" />
-    <MESSAGE value="Add debug function" />
-    <MESSAGE value="Add debug function API" />
-    <MESSAGE value="Add debug function API view" />
-    <MESSAGE value="Add debug function API view and" />
-    <MESSAGE value="Add debug function API view and update" />
-    <MESSAGE value="Add debug function API view and update setting" />
-    <MESSAGE value="Add debug function API view and update setting DA" />
-    <MESSAGE value="Add debug function API view and update setting DAO" />
-    <MESSAGE value="Add debug function API view and update setting DAO." />
-    <MESSAGE value="Add" />
-    <MESSAGE value="Add Function" />
     <MESSAGE value="Add Functions" />
     <MESSAGE value="Add Functions API" />
     <MESSAGE value="Add Functions API view" />
@@ -893,7 +882,22 @@
     <MESSAGE value="Add Functions API view, serializers, and" />
     <MESSAGE value="Add Functions API view, serializers, and filter" />
     <MESSAGE value="Add Functions API view, serializers, and filter." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Functions API view, serializers, and filter." />
+    <MESSAGE value="&quot;" />
+    <MESSAGE value="&quot;Mod" />
+    <MESSAGE value="&quot;Modify" />
+    <MESSAGE value="&quot;Modify setting" />
+    <MESSAGE value="&quot;Modify setting." />
+    <MESSAGE value="&quot;Modify setting.py" />
+    <MESSAGE value="&quot;Modify setting.py to" />
+    <MESSAGE value="&quot;Modify setting.py to add" />
+    <MESSAGE value="&quot;Modify setting.py to add exit" />
+    <MESSAGE value="&quot;Modify setting.py to add exit code" />
+    <MESSAGE value="&quot;Modify setting.py to add exit code message" />
+    <MESSAGE value="&quot;Modify setting.py to add exit code message in" />
+    <MESSAGE value="&quot;Modify setting.py to add exit code message in debug" />
+    <MESSAGE value="&quot;Modify setting.py to add exit code message in debug function" />
+    <MESSAGE value="&quot;Modify setting.py to add exit code message in debug function&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Modify setting.py to add exit code message in debug function&quot;" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$__init____2_.coverage" NAME="__init__ (2) Coverage Results" MODIFIED="1706696733502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/management/commands" />
@@ -908,7 +912,7 @@
     <SUITE FILE_PATH="coverage/backend$Test__api_tests_test_user_list.coverage" NAME="Test: api.tests.test_user_list Coverage Results" MODIFIED="1712039022358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/backend$functions.coverage" NAME="functions Coverage Results" MODIFIED="1711604944057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/builitin" />
     <SUITE FILE_PATH="coverage/backend$event_manager.coverage" NAME="event_manager Coverage Results" MODIFIED="1706679188463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/events" />
-    <SUITE FILE_PATH="coverage/backend$__init____1_.coverage" NAME="__init__ (1) Coverage Results" MODIFIED="1712114547355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/dao" />
+    <SUITE FILE_PATH="coverage/backend$__init____1_.coverage" NAME="__init__ (1) Coverage Results" MODIFIED="1712129630655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/dao" />
     <SUITE FILE_PATH="coverage/backend$Test__api_tests_test_user_list_TestUserListViewSet_test_hello.coverage" NAME="Test: api.tests.test_user_list.TestUserListViewSet.test_hello Coverage Results" MODIFIED="1712039113885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/backend$Test__api_tests_test_custom_token_TestCustomJsonWebToken.coverage" NAME="Test: api.tests.test_custom_token.TestCustomJsonWebToken Coverage Results" MODIFIED="1711522004553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/backend$render_template_obj.coverage" NAME="render_template_obj Coverage Results" MODIFIED="1706090193785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
@@ -926,7 +930,7 @@
     <SUITE FILE_PATH="coverage/backend$time.coverage" NAME="time Coverage Results" MODIFIED="1711509289936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/backend$engine.coverage" NAME="engine Coverage Results" MODIFIED="1711612188644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/tests" />
     <SUITE FILE_PATH="coverage/backend$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1707391988545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/backend$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1711942053869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/unitrunner/constructor" />
+    <SUITE FILE_PATH="coverage/backend$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1712129391496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
     <SUITE FILE_PATH="coverage/backend$__init____3_.coverage" NAME="__init__ (3) Coverage Results" MODIFIED="1709112766835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/dao" />
     <SUITE FILE_PATH="coverage/backend$Test__api_tests_test_user_list_TestUserListViewSet.coverage" NAME="Test: api.tests.test_user_list.TestUserListViewSet Coverage Results" MODIFIED="1712038591853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/backend$setting.coverage" NAME="setting Coverage Results" MODIFIED="1712038164027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/dao" />

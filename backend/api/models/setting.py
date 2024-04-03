@@ -65,6 +65,8 @@ class Address(Model):
     name = CharField(max_length=50, null=True, blank=True, verbose_name=_('Address Name'))
     env = ForeignKey(TestEnvironment, null=True, on_delete=SET_NULL, verbose_name=_('Address Env'))
     host = CharField(max_length=100, null=True, blank=True, verbose_name=_('Address Host'))
+    variables = TextField(null=True, blank=True, verbose_name=_('Address Variables'))
+    headers = TextField(null=True, blank=True, verbose_name=_('Address Headers'))
     user = ForeignKey(User, related_name="address_creator", null=True, on_delete=SET_NULL, verbose_name=_('User'))
     create_time = DateTimeField(auto_now_add=True, verbose_name=_('Address CreateTime'))
     update_time = DateTimeField(auto_now=True, verbose_name=_('Address UpdateTime'))
