@@ -13,19 +13,33 @@ from utils.logger import logger
 class ReportDao:
 
     """
-    测试报告详情
+    Test report Details
 
-    📒report-main  测试报告主数据(展示在列表与报告详情主体)
+    📒report-main Test report master data (shown in the list and report details body)
         |
         |
-        |---📑case-detail 测试报告场景展示（测试计划指定运行用例）
+        |---📑case - the detail test report show scenes (test plan specified operation cases)
                 |
                 |
-                |---📃step-detail 测试场景下包含的步骤执行接口详情信息
+                |---📃step - the detail test scenario includes the steps of interface information for details
     """
 
     @classmethod
     def detail_step_list(cls, get_queryset, report_id, name: str = ""):
+        """
+        Retrieves a list of step details for a given test report.
+
+        Args:
+            get_queryset: The queryset to use for filtering.
+            report_id: The ID of the test report to get step details for.
+            name: An optional filter to only return steps with the specified name.
+
+        Returns:
+            A queryset of step details.
+
+        Raises:
+            Exception: If the report ID is missing or an error occurs while retrieving the data.
+        """
         if not report_id:
             raise Exception("缺少必要参数报告id❌ ")
         else:
@@ -46,16 +60,17 @@ class ReportDao:
     @staticmethod
     def parser_report_main(plan_name, result_list):
         """
-        解析报告主数据
+        Parses and extracts the main report data from the provided result list.
 
         Args:
-            plan_name: 计划名称
-            result_list: 测试结果数据
+            plan_name: The name of the test plan.
+            result_list: A list of test result data.
 
-        Returns: 解析后的报告数据
+        Returns:
+            A dictionary containing the main report data.
 
         Raises:
-            Exception: 解析后的报告数据失败时抛出异常
+            Exception: If an error occurs while parsing the data.
         """
         try:
             resport_main = {
@@ -81,16 +96,17 @@ class ReportDao:
     @staticmethod
     def create_report_detail(model, class_item):
         """
-        解析报告主数据
+        Creates a new report detail object in the database.
 
         Args:
-            model: 模型
-            class_item: 测试详情数据
+            model: An instance of the Main model (assumed to represent the main report).
+            class_item: A dictionary containing data for the report detail object.
 
-        Returns: 报告详情数据对象
+        Returns:
+            The created Detail object on success.
 
         Raises:
-            Exception: 解析报告主数据失败时抛出异常
+            Exception: If an error occurs while creating the report detail.
         """
         try:
             detail_obj = Detail.objects.create(
@@ -110,14 +126,14 @@ class ReportDao:
     @staticmethod
     def create_detail_step(class_item, model):
         """
-        创建报告测试详情步骤
+        Creates multiple detail step objects in the database based on a list of cases.
 
         Args:
-            model: 模型
-            class_item: 测试详情数据
+            class_item: A dictionary containing data about multiple test cases.
+            model: An instance of the Detail model representing the parent report detail.
 
         Raises:
-            Exception: 创建报告测试详情步骤失败时抛出异常
+            Exception: If an error occurs while creating the detail steps.
         """
         try:
             for index, case_item in enumerate(class_item.get('cases', [])):
@@ -146,14 +162,14 @@ class ReportDao:
     @classmethod
     def create_report(cls, plan_name, result_list):
         """
-        创建测试报告
+        Creates a test report with main data, details, and step details from the provided information.
 
         Args:
-            plan_name: 计划名称
-            result_list: 测试结果数据
+            plan_name: The name of the test plan.
+            result_list: A list containing test result data.
 
         Raises:
-            Exception: 创建测试报告失败时抛出异常
+            Exception: If an error occurs while creating the report.
         """
         try:
             report_main = cls.parser_report_main(plan_name, result_list)
