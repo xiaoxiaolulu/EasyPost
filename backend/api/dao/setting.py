@@ -2,7 +2,11 @@
 DESCRIPTION：测试配置数据访问对象
 :Created by Null.
 """
+import importlib
 import os.path
+import sys
+import traceback
+import types
 import typing
 from api.models.setting import Functions
 from config.settings import BASE_DIR
@@ -106,3 +110,90 @@ class SettingDao:
             'content': content,
             'common_content': common_content
         }
+
+    @staticmethod
+    def function_save_or_update(params: typing.Union[typing.Dict], pk: int) -> typing.Dict[typing.Text, typing.Any]:
+        """
+        Creates or updates a built-in function record in the database.
+
+        Args:
+            params: A dictionary containing the function data to be created or updated.
+            pk: The primary key of the function to be updated. If None, a new record is created.
+
+        Returns:
+            A dictionary containing:
+                - update_pk: The primary key of the created or updated function record.
+
+        Raises:
+            ValueError: If the provided params are not a valid dictionary.
+            Exception: If an error occurs during the create or update operation.
+        """
+        if not isinstance(params, dict):
+            raise ValueError("更新参数错误！")
+        else:
+            try:
+                if pk:
+                    update_obj = Functions.objects.filter(id=pk)
+                    update_obj.update(**params)
+                    update_pk = pk
+                else:
+                    create_obj = Functions.objects.create(**params)
+                    update_pk = create_obj.id
+
+                return update_pk
+            except Exception as err:
+                logger.debug(
+                    f"🏓编辑内置函数数据失败 -> {err}"
+                )
+                raise Exception(f"{err} ❌")
+
+    @staticmethod
+    def load_module_functions(module) -> typing.Dict[str, typing.Callable]:
+        """
+        Loads all functions defined within a given module into a dictionary.
+
+        Args:
+            module: The module object containing the functions to be loaded.
+
+        Returns:
+            A dictionary where the keys are function names and the values are the corresponding
+            function objects.
+        """
+        module_functions = {}
+
+        for name, item in vars(module).items():
+            if isinstance(item, types.FunctionType):
+                module_functions[name] = item
+
+        return module_functions
+
+    def load_func_content(self, content: str, module_name: str) -> typing.Dict[str, typing.Callable]:
+        """
+        Loads function content from a string, creates a temporary module, and returns its functions.
+
+        Args:
+            content: The string containing the function definitions.
+            module_name: The name to assign to the temporary module.
+
+        Returns:
+            A dictionary containing the names and callable objects of the loaded functions.
+
+        Raises:
+            IndentationError: If the provided content has indentation errors.
+            ModuleNotFoundError: If importing the temporary module fails.
+            Exception: If any other errors occur during the process.
+        """
+        mod = sys.modules.setdefault(module_name, types.ModuleType(module_name))
+        try:
+            code = compile(content, module_name, 'exec')
+            exec(code, mod.__dict__)
+            imported_module = importlib.import_module(module_name)
+        except IndentationError:
+            raise IndentationError(f"格式错误，请检查！\n {traceback.format_exc()}")
+        except ModuleNotFoundError:
+            raise ModuleNotFoundError(f"模块导入错误！\n {traceback.format_exc()}")
+        except Exception:
+            raise Exception(f"脚本错误！\n {traceback.format_exc()}")
+
+        module_functions = self.load_module_functions(imported_module)
+        return module_functions
