@@ -54,7 +54,8 @@ from api.service.setting import (
     DataSourceCreateViewSet,
     DatabaseIsConnectView,
     FunctionSaveOrUpdateApiView,
-    GetFunctionListApiView
+    GetFunctionListApiView,
+    DebugFunctionApiView
 )
 from api.service.user import (
     CustomJsonWebToken,
@@ -96,6 +97,7 @@ app_urls = [
     path("database/isConnect", DatabaseIsConnectView.as_view()),
     path("function/saveOrUpdate/<int:pk>", FunctionSaveOrUpdateApiView.as_view()),
     path("function/list/<int:pk>", GetFunctionListApiView.as_view()),
+    path("function/debug/<int:pk>", DebugFunctionApiView.as_view()),
 
     # 接口测试
     path("http/", ApiFastView.as_view()),

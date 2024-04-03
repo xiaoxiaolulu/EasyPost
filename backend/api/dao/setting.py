@@ -374,7 +374,7 @@ class SettingDao:
 
         try:
             # Validate parameters early and concisely
-            if not pk or not all(key in params for key in ("func_name", "args_info")):
+            if not pk or not all(key in params for key in ("func_name", )):
                 raise ValueError("参数错误！")
 
             # Retrieve function information
@@ -387,7 +387,7 @@ class SettingDao:
                 raise ValueError('未匹配到函数！')
 
             # Parse argument values
-            args_info = {key: parse_string_value(value) for key, value in params.get('args_info').items()}
+            args_info = {key: parse_string_value(value) for key, value in params.get('args_info', {}).items()}
 
             # Execute the function and return the result
             return func(**args_info)

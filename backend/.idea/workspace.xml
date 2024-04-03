@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Added loading of built-in functions and retrieval of functions from multiple sources.">
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Added `parse_string_value` function to `encoder.py` and `run_function` method to `SettingDAO` class in `setting.py`.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/dao/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/setting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/service/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/setting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/encoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/encoder.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -447,15 +448,7 @@
       <workItem from="1711534478853" duration="111000" />
       <workItem from="1711591405569" duration="42079000" />
       <workItem from="1711962633078" duration="55000" />
-      <workItem from="1711962720464" duration="28952000" />
-    </task>
-    <task id="LOCAL-00276" summary="Added test case for destroying project with authenticated user.">
-      <option name="closed" value="true" />
-      <created>1711592090753</created>
-      <option name="number" value="00276" />
-      <option name="presentableId" value="LOCAL-00276" />
-      <option name="project" value="LOCAL" />
-      <updated>1711592090754</updated>
+      <workItem from="1711962720464" duration="29965000" />
     </task>
     <task id="LOCAL-00277" summary="Add comments to UserListViewSet and NewTokenObtainPairSerializer classes in user.py.">
       <option name="closed" value="true" />
@@ -841,7 +834,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712126439130</updated>
     </task>
-    <option name="localTasksCounter" value="325" />
+    <task id="LOCAL-00325" summary="Added `parse_string_value` function to `encoder.py` and `run_function` method to `SettingDAO` class in `setting.py`.">
+      <option name="closed" value="true" />
+      <created>1712127047308</created>
+      <option name="number" value="00325" />
+      <option name="presentableId" value="LOCAL-00325" />
+      <option name="project" value="LOCAL" />
+      <updated>1712127047308</updated>
+    </task>
+    <option name="localTasksCounter" value="326" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -871,32 +872,32 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add static method `handler_func_list` to `BaseDao` to check if a function should be included in the" />
-    <MESSAGE value="Add static method `handler_func_list` to `BaseDao` to check if a function should be included in the list" />
-    <MESSAGE value="Add static method `handler_func_list` to `BaseDao` to check if a function should be included in the list based" />
-    <MESSAGE value="Add static method `handler_func_list` to `BaseDao` to check if a function should be included in the list based on" />
-    <MESSAGE value="Add static method `handler_func_list` to `BaseDao` to check if a function should be included in the list based on optional" />
-    <MESSAGE value="Add static method `handler_func_list` to `BaseDao` to check if a function should be included in the list based on optional filtering" />
-    <MESSAGE value="Add static method `handler_func_list` to `BaseDao` to check if a function should be included in the list based on optional filtering parameters" />
-    <MESSAGE value="Add static method `handler_func_list` to `BaseDao` to check if a function should be included in the list based on optional filtering parameters." />
-    <MESSAGE value="Add" />
-    <MESSAGE value="Added" />
-    <MESSAGE value="Added loading" />
-    <MESSAGE value="Added loading of" />
-    <MESSAGE value="Added loading of built" />
-    <MESSAGE value="Added loading of built-" />
-    <MESSAGE value="Added loading of built-in" />
-    <MESSAGE value="Added loading of built-in functions" />
-    <MESSAGE value="Added loading of built-in functions and" />
-    <MESSAGE value="Added loading of built-in functions and retr" />
-    <MESSAGE value="Added loading of built-in functions and retrieval" />
-    <MESSAGE value="Added loading of built-in functions and retrieval of" />
-    <MESSAGE value="Added loading of built-in functions and retrieval of functions" />
-    <MESSAGE value="Added loading of built-in functions and retrieval of functions from" />
-    <MESSAGE value="Added loading of built-in functions and retrieval of functions from multiple" />
-    <MESSAGE value="Added loading of built-in functions and retrieval of functions from multiple sources" />
-    <MESSAGE value="Added loading of built-in functions and retrieval of functions from multiple sources." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added loading of built-in functions and retrieval of functions from multiple sources." />
+    <MESSAGE value="Added `parse_string_value` function to `enc" />
+    <MESSAGE value="Added `parse_string_value` function to `encoder" />
+    <MESSAGE value="Added `parse_string_value` function to `encoder." />
+    <MESSAGE value="Added `parse_string_value` function to `encoder.py" />
+    <MESSAGE value="Added `parse_string_value` function to `encoder.py`" />
+    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and" />
+    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `" />
+    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run" />
+    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_" />
+    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_function" />
+    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_function`" />
+    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_function` method" />
+    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_function` method to" />
+    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_function` method to `" />
+    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_function` method to `Setting" />
+    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_function` method to `SettingDA" />
+    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_function` method to `SettingDAO" />
+    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_function` method to `SettingDAO`" />
+    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_function` method to `SettingDAO` class" />
+    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_function` method to `SettingDAO` class in" />
+    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_function` method to `SettingDAO` class in `" />
+    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_function` method to `SettingDAO` class in `setting" />
+    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_function` method to `SettingDAO` class in `setting." />
+    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_function` method to `SettingDAO` class in `setting.py" />
+    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_function` method to `SettingDAO` class in `setting.py`." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added `parse_string_value` function to `encoder.py` and `run_function` method to `SettingDAO` class in `setting.py`." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$__init____2_.coverage" NAME="__init__ (2) Coverage Results" MODIFIED="1706696733502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/management/commands" />

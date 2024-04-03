@@ -173,3 +173,20 @@ class GetFunctionListApiView(APIView):
             ))
         except Exception as err:
             return Response(ResponseStandard.failed(msg=str(err)))
+
+
+class DebugFunctionApiView(APIView):
+
+    permission_classes = [IsAuthenticated]
+
+    @staticmethod
+    def post(request, **kwargs):
+
+        try:
+            dao = SettingDao()
+            response = dao.run_function(request.data, kwargs['pk'])
+            return Response(ResponseStandard.success(
+                data={"ret": response}
+            ))
+        except Exception as err:
+            return Response(ResponseStandard.failed(msg=str(err)))
