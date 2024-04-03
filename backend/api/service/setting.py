@@ -8,12 +8,14 @@ from api.dao.setting import SettingDao
 from api.filters.setting import (
     TestEnvironmentFilter,
     AddressFilter,
-    DataSourceFilter
+    DataSourceFilter,
+    FunctionsFilter
 )
 from api.models.setting import (
     TestEnvironment,
     Address,
-    DataSource
+    DataSource,
+    Functions
 )
 from api.mixins.magic import (
     MagicListAPI,
@@ -26,7 +28,8 @@ from api.schema.setting import (
     TestEnvironmentSerializers,
     AddressSerializers,
     AddressWriteSerializers,
-    DataSourceSerializers
+    DataSourceSerializers,
+    FunctionsSerializers
 )
 
 
@@ -190,3 +193,14 @@ class DebugFunctionApiView(APIView):
             ))
         except Exception as err:
             return Response(ResponseStandard.failed(msg=str(err)))
+
+
+class FunctionsListViewSet(MagicListAPI):  # noqa
+
+    queryset = Functions.objects.all()
+    serializer_class = FunctionsSerializers
+    permission_classes = [IsAuthenticated]
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
+    filterset_class = FunctionsFilter  # noqa
+    search_fields = ['name']
+    ordering_fields = ['create_time']

@@ -2,7 +2,9 @@ import re
 from rest_framework import serializers
 from api.models.setting import (
     Address,
-    TestEnvironment, DataSource
+    TestEnvironment,
+    DataSource,
+    Functions
 )
 from api.schema.user import UserSimpleSerializers
 
@@ -77,4 +79,16 @@ class DataSourceSerializers(serializers.ModelSerializer):
 
     class Meta:
         model = DataSource
+        fields = "__all__"
+
+
+class FunctionsSerializers(serializers.ModelSerializer):
+
+    id = serializers.IntegerField(read_only=True)
+    creator = UserSimpleSerializers(required=False, default=serializers.CurrentUserDefault())
+    create_time = serializers.DateTimeField(read_only=True)
+    update_time = serializers.DateTimeField(read_only=True)
+
+    class Meta:
+        model = Functions
         fields = "__all__"

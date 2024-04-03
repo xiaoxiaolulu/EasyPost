@@ -2,7 +2,8 @@ import django_filters.rest_framework as filters
 from api.models.setting import (
     TestEnvironment,
     Address,
-    DataSource
+    DataSource,
+    Functions
 )
 
 
@@ -31,3 +32,12 @@ class DataSourceFilter(filters.FilterSet):
     class Meta:
         model = DataSource
         fields = ["database"]
+
+
+class FunctionsFilter(filters.FilterSet):
+
+    database = filters.CharFilter(field_name='name', help_text='按函数名称模糊查询', lookup_expr='icontains')
+
+    class Meta:
+        model = Functions
+        fields = ["name"]

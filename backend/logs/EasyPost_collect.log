@@ -4914,3 +4914,17 @@ INFO     [2024-04-03 15:06:19,091] [none] django.utils.autoreload: Watching for 
 INFO     [2024-04-03 15:06:58,625] [41d16689e9834d609b0f591720632cf6] django.server: "POST /api/function/list/5 HTTP/1.1" 200 274
 INFO     [2024-04-03 15:08:06,858] [c3e919e1c2fe4d36ada05748b021fc72] django.server: "POST /api/function/list/5 HTTP/1.1" 200 274
 INFO     [2024-04-03 15:08:17,318] [62aa5e93c01143ce900a30e4d562b32c] django.server: "POST /api/function/debug/5 HTTP/1.1" 200 84
+INFO     [2024-04-03 15:10:41,509] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\urls.py changed, reloading.
+INFO     [2024-04-03 15:10:42,081] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\urls.py changed, reloading.
+INFO     [2024-04-03 15:10:42,296] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-03 15:10:42,885] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-03 15:11:49,881] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\schema\setting.py changed, reloading.
+INFO     [2024-04-03 15:11:50,243] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\schema\setting.py changed, reloading.
+INFO     [2024-04-03 15:11:50,774] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-03 15:11:51,090] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-03 15:14:30,580] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\urls.py changed, reloading.
+INFO     [2024-04-03 15:14:30,593] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\filters\setting.py changed, reloading.
+INFO     [2024-04-03 15:14:31,463] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-03 15:14:31,471] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-03 15:14:37,975] [b382e57248c94a9896385a1a853995da] django.server: "POST /api/function/list HTTP/1.1" 200 61
+INFO     [2024-04-03 15:14:42,654] [41685920de6d43dc98a051149330f351] django.server: "GET /api/function/list HTTP/1.1" 200 44027
