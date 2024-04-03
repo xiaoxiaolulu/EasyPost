@@ -39,17 +39,17 @@ class HttpDao:
     @staticmethod
     def get_directory_tree(project_id: int, type: Any = 0):
         """
-        获取指定项目的目录树。
+        Retrieves the directory tree for a given project and type.
 
         Args:
-            project_id: 项目 ID
-            type
+            project_id (int): The ID of the project.
+            type (int, optional): The type of directory (default: 0).
 
         Returns:
-            目录树字典
+            A dictionary representing the directory tree.
 
         Raises:
-            Exception: 获取目录树失败时抛出异常
+            Exception: If an error occurs while retrieving the tree.
         """
         try:
             tree = Relation.objects.filter(Q(project__id=project_id) & Q(type=type)).first()
@@ -64,17 +64,17 @@ class HttpDao:
     @staticmethod
     def get_directory_case(get_queryset, project_id: int):
         """
-        获取指定项目下的所有测试用例。
+        Retrieves the directory-related test cases for a given project.
 
         Args:
-            get_queryset: 获取测试用例的查询集
-            project_id: 项目 ID
+            get_queryset: The queryset to filter.
+            project_id (int): The ID of the project.
 
         Returns:
-            测试用例查询集
+            A queryset containing the filtered test cases.
 
         Raises:
-            Exception: 获取测试用例失败时抛出异常
+            Exception: If an error occurs while retrieving the cases.
         """
         try:
             queryset = get_queryset.filter(project__id=project_id).order_by('-update_time')
@@ -87,6 +87,21 @@ class HttpDao:
 
     @classmethod
     def list_test_case(cls, get_queryset, node: Any, project_id: Any, name: str = ""):
+        """
+        Retrieves a queryset of test cases based on project, directory, and name filters.
+
+        Args:
+            get_queryset: The queryset to filter.
+            node (Any): The ID of the directory node to filter by (optional).
+            project_id (Any): The ID of the project to filter by (optional).
+            name (str, optional): The name of the test case to filter by. Defaults to "".
+
+        Returns:
+            A filtered queryset of test cases.
+
+        Raises:
+            Exception: If an error occurs while retrieving the test cases.
+        """
         # Early return if project_id or node is not provided
         if not project_id:
             _queryset = get_queryset.order_by('-update_time')
@@ -120,17 +135,17 @@ class HttpDao:
     @staticmethod
     def parser_api_data(request: Any, pk=None):
         """
-        解析 API 文档数据，并根据是否更新操作进行处理。
+        Parses test API data from a request object and project ID (optional for update).
 
         Args:
-            request: HTTP 请求对象
-            pk: API 文档 ID（用于更新操作）
+            request: The Django request object containing the data to be parsed.
+            pk (int, optional): The primary key of the API object for update (if provided).
 
         Returns:
-            用于创建或更新 API 文档的字典
+            A dictionary containing the parsed test API data.
 
         Raises:
-            Exception: 解析 API 文档失败时抛出异常
+            Exception: If an error occurs during data parsing.
         """
         api = HandelTestData(request.data)  # noqa
 
@@ -171,17 +186,17 @@ class HttpDao:
     @classmethod
     def create_or_update_api(cls, request: Any, pk):
         """
-        创建或更新 API 文档。
+        Creates a new API object or updates an existing one based on provided data.
 
         Args:
-            request: HTTP 请求对象
-            pk: API 文档 ID（用于更新操作）
+            request: The Django request object containing the API data.
+            pk (int): The primary key of the API object to update (if provided).
 
         Returns:
-            创建或更新后的 API 文档 ID
+            The ID of the created or updated API object.
 
         Raises:
-            Exception: 创建或更新 API 文档失败时抛出异常
+            Exception: If an error occurs during API creation or update.
         """
         try:
 
@@ -205,16 +220,16 @@ class HttpDao:
     @classmethod
     def run_api_doc(cls, api: dict):
         """
-        运行 API 文档。
+        Runs an API test case based on the provided API data.
 
         Args:
-            api: API 文档字典
+            api (dict): A dictionary containing the API data.
 
         Returns:
-            测试结果
+            The response object from the API test run.
 
         Raises:
-            Exception: 调试测试接口失败时抛出异常
+            Exception: If an error occurs during the API test run.
         """
         try:
             api = HandelTestData(api)
@@ -230,10 +245,13 @@ class HttpDao:
     @staticmethod
     def remove_unwanted_keys(step):
         """
-        去除步骤字典中不需要的键。
+        Removes unwanted keys from a dictionary containing test step data.
 
         Args:
-            step: 步骤字典
+            step (dict): The dictionary representing a test step.
+
+        Returns:
+            The modified dictionary with unwanted keys removed.
         """
         keys_to_pop = [
             "id",
@@ -254,12 +272,13 @@ class HttpDao:
     @classmethod
     def create_case_step(cls, case_obj, steps):
         """
-        创建测试用例步骤。
+        Creates test case steps from a list of step data and associates them with a test case object.
 
         Args:
-            case_obj: 测试用例 ID
-            steps: 测试用例步骤列表
+            case_obj (object): The test case object to associate the steps with.
+            steps (list): A list of dictionaries containing step data.
         """
+
         for sort, step in enumerate(steps):
             cls.remove_unwanted_keys(step)
             Step.objects.create(
@@ -270,6 +289,15 @@ class HttpDao:
 
     @classmethod
     def delete_case(cls, pk=None):
+        """
+        Deletes a test case and its associated test steps.
+
+        Args:
+            pk (int): The primary key of the test case to delete.
+
+        Raises:
+            Exception: If an error occurs during test case deletion.
+        """
         try:
             Case.objects.filter(id=pk).delete()
             steps_obj = Step.objects.filter(case__id=pk)
@@ -284,17 +312,18 @@ class HttpDao:
     @classmethod
     def create_or_update_case(cls, request, pk=None):
         """
-        创建或更新测试用例。
+        Creates a new test case or updates an existing one based on provided data and associated steps.
 
         Args:
-            request: HTTP 请求对象
-            pk: 要更新的测试用例 ID（可选）
+            request (Any): The Django request object containing the case data.
+            pk (int, optional): The primary key of the test case to update (if provided).
 
         Returns:
-            更新或创建的测试用例 ID
+            The ID of the created or updated test case.
 
         Raises:
-            Exception: 创建或更新测试用例失败时抛出异常
+            ValueError: If a case update is attempted with a non-existent ID.
+            Exception: If an error occurs during test case creation or update.
         """
         try:
             if pk:
@@ -327,19 +356,19 @@ class HttpDao:
     @staticmethod
     def parser_case_data(request: Any, pk=None):
         """
-        解析测试用例数据，并根据是否更新操作进行处理。
+        Parses test case data and associated step data from a request object.
 
         Args:
-            request: HTTP 请求对象
-            pk: 要更新的测试用例 ID（可选）
+            request (Any): The Django request object containing the test case data.
+            pk (int, optional): The primary key of the test case to update (if provided).
 
         Returns:
-            元组，包含：
-                - 用于更新或创建测试用例的字典
-                - 测试用例步骤列表
+            A tuple containing:
+                - request_body (dict): A dictionary containing the parsed test case data.
+                - step_data (list): A list containing the parsed step data (assumed to be handled by HandelTestData).
 
         Raises:
-            Exception: 解析测试用例失败时抛出异常
+            Exception: If an error occurs during data parsing.
         """
         api = HandelTestData(request.data)  # noqa
 
@@ -370,19 +399,18 @@ class HttpDao:
     @classmethod
     def run_case_steps(cls, data: dict):
         """
-        运行单个测试用例的步骤。
+        Runs a test case based on the provided data and associated step data.
 
         Args:
-            data: 包含测试用例信息的字典，包括：
-                - step_data: 测试用例步骤列表
-                - name: 测试用例名称（可选）
+            data (dict): A dictionary containing the test case data and step data.
 
         Returns:
-            测试结果
+            The response object from the test case run.
 
         Raises:
-            Exception: 调试测试用例失败时抛出异常
+            Exception: If an error occurs during the test case run.
         """
+
         try:
             runner = HandelTestData()
             steps = data.get('step_data', [])
@@ -399,13 +427,16 @@ class HttpDao:
     @classmethod
     def get_case_list(cls, case_list: List[int]) -> List[dict]:
         """
-        获取指定的测试用例列表，并格式化为测试计划所需的格式。
+        Retrieves a list of test case details and associated steps.
 
         Args:
-            case_list: 测试用例的 ID 列表
+            case_list (List[int]): A list of test case IDs.
 
         Returns:
-            格式化后的测试用例列表
+            A list of dictionaries containing test case details and step information.
+
+        Raises:
+            ValueError: If no test cases are found with the provided IDs.
         """
         case_object = Case.objects.filter(id__in=case_list).values("id", "name")
         collections = [{
@@ -418,13 +449,13 @@ class HttpDao:
     @classmethod
     def get_case_step(cls, steps: List[dict]) -> List[dict]:
         """
-        获取格式化后的测试用例步骤列表。
+        Processes a list of step objects, removing unwanted keys and converting them to serializable dictionaries.
 
         Args:
-            steps: 原始的测试用例步骤列表
+            steps (List[dict]): A list of step objects (likely model instances).
 
         Returns:
-            格式化后的测试用例步骤列表
+            A list of cleaned dictionaries containing step data.
         """
         collections: list = []
         for sort, step in enumerate(steps):
@@ -438,17 +469,17 @@ class HttpDao:
     @lock("plan")
     def run_test_suite(cls, case: list, report_name=None):
         """
-        运行测试套件，执行一组测试用例。
+        Runs a test suite based on a provided list of test cases and generates a report.
 
         Args:
-            case: 要执行的测试用例列表
-            report_name: 报告名称
+            case (list): A list of test case IDs.
+            report_name (str, optional): The name for the generated report.
 
         Returns:
-            测试结果
+            The test run response object.
 
         Raises:
-            Exception: 调试测试计划失败时抛出异常
+            Exception: If an error occurs during test execution or report generation.
         """
         try:
             runner = HandelTestData()
@@ -477,16 +508,13 @@ class HttpDao:
     @database_sync_to_async
     def create_api_snapshot(cls, request: Any):
         """
-        创建API快照。
+        Creates an API snapshot asynchronously, managing a maximum of 100 snapshots per user.
 
         Args:
-            request: HTTP 请求对象
-
-        Returns:
-            创建或更新后的 API 文档 ID
+            request (Any): The request object containing API data.
 
         Raises:
-            Exception: 创建或更新 API 文档失败时抛出异常
+            Exception: If an error occurs during snapshot creation.
         """
         try:
             request_body = cls.parser_api_data(request)
