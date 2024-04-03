@@ -1,4 +1,6 @@
+import ast
 import dataclasses
+import typing
 from collections import defaultdict
 from enum import Enum
 from pathlib import PurePath
@@ -165,3 +167,22 @@ def jsonable_encoder(
         custom_encoder=custom_encoder,
         sqlalchemy_safe=sqlalchemy_safe,
     )
+
+
+def parse_string_value(str_value: str) -> typing.Any:
+    """
+    Attempts to parse a string value into a Python object.
+
+    Args:
+        str_value (str): The string value to be parsed.
+
+    Returns:
+        typing.Any: The parsed object (e.g., integer, list, dictionary) or the original string if parsing fails.
+    """
+    try:
+        return ast.literal_eval(str_value)
+    except ValueError:
+        return str_value
+    except SyntaxError:
+        # e.g. $var, ${func}
+        return str_value

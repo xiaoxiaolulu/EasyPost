@@ -19,6 +19,7 @@ from api.models.setting import Functions
 from config.settings import BASE_DIR
 from unitrunner.database.DBClient import DBClient
 from unitrunner import builitin
+from utils.encoder import parse_string_value
 from utils.logger import logger
 
 
@@ -354,3 +355,42 @@ class SettingDao:
             pass
 
         raise ModuleNotFoundError(f"函数 {function_name} 没有找到 💔")
+
+    def run_function(self, params: typing.Dict, pk: int) -> typing.Any:
+        """
+        Runs a function based on its ID and provided parameters.
+
+        Args:
+            params (typing.Dict): A dictionary containing function parameters.
+            pk (int): The primary key of the function to execute.
+
+        Returns:
+            typing.Any: The result of the function execution.
+
+        Raises:
+            ValueError: If there are parameter errors, function retrieval fails,
+            or function execution encounters errors.
+        """
+
+        try:
+            # Validate parameters early and concisely
+            if not pk or not all(key in params for key in ("func_name", "args_info")):
+                raise ValueError("参数错误！")
+
+            # Retrieve function information
+            data = self.get_function_by_id(params, pk)
+            functions_mapping = data.get('functions_mapping')
+            func = self.get_mapping_function(params.get("func_name"), functions_mapping)
+
+            # Ensure function is found
+            if not func:
+                raise ValueError('未匹配到函数！')
+
+            # Parse argument values
+            args_info = {key: parse_string_value(value) for key, value in params.get('args_info').items()}
+
+            # Execute the function and return the result
+            return func(**args_info)
+
+        except Exception as err:
+            raise ValueError(f"函数调试错误：{err}") from err
