@@ -17,15 +17,16 @@ class ProjectDao:
     @staticmethod
     def get_project_list(user_id):
         """
-        查看用户具有权限的项目
+        Retrieves a list of projects for the specified user.
 
         Args:
-            user_id: 用户id
+            user_id: The ID of the user to get projects for.
 
-        Returns: queryset
+        Returns:
+            A queryset of projects for the user.
 
         Raises:
-            Exception: 查看用户具有权限的项目失败时抛出异常
+            Exception: If an error occurs while retrieving the projects.
         """
         try:
             queryset = ProjectRole.objects.filter(user_id=user_id).all()
@@ -41,15 +42,13 @@ class ProjectDao:
     @staticmethod
     def project_name_validate(name: str) -> bool:
         """
-        验证项目名称
+        Checks if a project name already exists in the database.
 
         Args:
-            name: 项目名称
+            name: The project name to validate.
 
-        Returns: 布尔值
-
-        Raises:
-            Exception: 验证项目名称失败时抛出异常
+        Returns:
+            True if the name already exists, False otherwise.
         """
         try:
             model_object = Project.objects.filter(name=name).first()
@@ -62,9 +61,10 @@ class ProjectDao:
     @staticmethod
     def get_node_template():
         """
-        获取树形目录结构数据
+        Generates a default tree template for the node list.
 
-        Returns: 数据结构数据
+        Returns:
+            A list representing the tree template.
         """
 
         tree_template = [{  # noqa
@@ -77,15 +77,16 @@ class ProjectDao:
     @classmethod
     def create_project_role(cls, validated_data):
         """
-        设置项目权限
+        Creates a new project, project role, and optional tree relations.
 
         Args:
-            validated_data: 项目设置数据
+            validated_data: A dictionary containing validated project data.
 
-        Returns: Model实例数据
+        Returns:
+            The created Project instance on success.
 
         Raises:
-            Exception: 设置项目权限失败时抛出异常
+          - Implicitly raises exceptions from model creation methods if unsuccessful.
         """
 
         try:
@@ -110,38 +111,37 @@ class ProjectDao:
     @staticmethod
     def check_user_role_exist(project_id, user_id):
         """
-        校验用户权限是否存在
+        Checks if a user has a role associated with a specific project.
 
         Args:
-            project_id: 项目Id
-            user_id: 用户Id
+            project_id: The ID of the project.
+            user_id: The ID of the user.
 
-        Returns: 布尔值
-
-        Raises:
-            Exception: 校验用户权限是否存在失败时抛出异常
+        Returns:
+            True if the user has a role for the project, False otherwise.
         """
         try:
             instance = ProjectRole.objects.filter(Q(project_id=project_id) & Q(user_id=user_id)).first()
 
             if instance is not None:
                 return True
-        except(ProjectRole.DoesNotExist, Exception):
+        except (ProjectRole.DoesNotExist, Exception):
             return False
 
     @staticmethod
     def check_judge_permission(project_id, user_id):
         """
-        校验用户项目权限
+        Checks if the user has permission to judge submissions for a given project.
 
         Args:
-            project_id: 项目Id
-            user_id: 用户Id
+            project_id: The ID of the project.
+            user_id: The ID of the user.
 
-        Returns: 布尔值
+        Returns:
+            True if the user has permission to judge, False otherwise.
 
         Raises:
-            Exception: 校验用户项目权限失败时抛出异常
+            Exception: If the project does not exist.
         """
         try:
             instance = Project.objects.get(pk=project_id)
@@ -158,17 +158,19 @@ class ProjectDao:
     @staticmethod
     def search_user_role(project_id, user_id):
         """
-        搜索用户项目权限
+        Retrieves the project role for a specific user in a given project.
 
         Args:
-            project_id: 项目Id
-            user_id: 用户Id
+            project_id: The ID of the project.
+            user_id: The ID of the user.
 
-        Returns: 项目权限数据
+        Returns:
+            A queryset containing the ProjectRole object for the user, if it exists.
 
         Raises:
-            Exception: 搜索用户项目权限失败时抛出异常
+            Exception: If an error occurs while retrieving the role.
         """
+
         try:
             instance = ProjectRole.objects.filter(Q(project_id=project_id) & Q(user_id=user_id))
             return instance
