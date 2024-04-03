@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Added static methods for saving/updating and loading functions, and refactored the load\_func\_content method.">
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Added new API endpoint for editing built-in functions and associated test code.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/dao/dashboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/dashboard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/dao/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/https.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/dao/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/plan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/dao/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/project.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/dao/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/report.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/dao/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/setting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/service/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/setting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
     </list>
@@ -157,7 +154,7 @@
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\templates\asserts" />
     </key>
   </component>
-  <component name="RunManager" selected="Django tests.Test: api.tests.test_user_list.TestUserListViewSet.test_hello">
+  <component name="RunManager" selected="Python.__init__ (1)">
     <configuration name="Test: api.tests.test_user_list" type="DjangoTestsConfigurationType" temporary="true">
       <module name="backend" />
       <option name="ENV_FILES" value="" />
@@ -303,10 +300,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.__init__ (1)" />
         <item itemvalue="Django tests.Test: api.tests.test_user_list.TestUserListViewSet.test_hello" />
         <item itemvalue="Django tests.Test: api.tests.test_user_list" />
         <item itemvalue="Django tests.Test: api.tests.test_user_list.TestUserListViewSet" />
-        <item itemvalue="Python.__init__ (1)" />
         <item itemvalue="Python.setting" />
       </list>
     </recent_temporary>
@@ -451,71 +448,7 @@
       <workItem from="1711534478853" duration="111000" />
       <workItem from="1711591405569" duration="42079000" />
       <workItem from="1711962633078" duration="55000" />
-      <workItem from="1711962720464" duration="21129000" />
-    </task>
-    <task id="LOCAL-00263" summary="Add static method to get past API count.">
-      <option name="closed" value="true" />
-      <created>1711510096342</created>
-      <option name="number" value="00263" />
-      <option name="presentableId" value="LOCAL-00263" />
-      <option name="project" value="LOCAL" />
-      <updated>1711510096342</updated>
-    </task>
-    <task id="LOCAL-00264" summary="Fixed dashboard.py by removing unnecessary import statement.">
-      <option name="closed" value="true" />
-      <created>1711510191095</created>
-      <option name="number" value="00264" />
-      <option name="presentableId" value="LOCAL-00264" />
-      <option name="project" value="LOCAL" />
-      <updated>1711510191095</updated>
-    </task>
-    <task id="LOCAL-00265" summary="Add sort field to DetailStep model and add time utility functions.">
-      <option name="closed" value="true" />
-      <created>1711510446434</created>
-      <option name="number" value="00265" />
-      <option name="presentableId" value="LOCAL-00265" />
-      <option name="project" value="LOCAL" />
-      <updated>1711510446434</updated>
-    </task>
-    <task id="LOCAL-00266" summary="Added static method get\_case\_count to DAO\_Dashboard for getting test case count.">
-      <option name="closed" value="true" />
-      <created>1711517414843</created>
-      <option name="number" value="00266" />
-      <option name="presentableId" value="LOCAL-00266" />
-      <option name="project" value="LOCAL" />
-      <updated>1711517414843</updated>
-    </task>
-    <task id="LOCAL-00267" summary="Added a static method `get_case_pass_rate` to calculate the pass rate of test cases.">
-      <option name="closed" value="true" />
-      <created>1711518330687</created>
-      <option name="number" value="00267" />
-      <option name="presentableId" value="LOCAL-00267" />
-      <option name="project" value="LOCAL" />
-      <updated>1711518330687</updated>
-    </task>
-    <task id="LOCAL-00268" summary="Update API count and case count methods, add new method for getting test case execution count.">
-      <option name="closed" value="true" />
-      <created>1711518622027</created>
-      <option name="number" value="00268" />
-      <option name="presentableId" value="LOCAL-00268" />
-      <option name="project" value="LOCAL" />
-      <updated>1711518622027</updated>
-    </task>
-    <task id="LOCAL-00269" summary="Update API count and case count methods, add new method for getting test case execution count.">
-      <option name="closed" value="true" />
-      <created>1711519272221</created>
-      <option name="number" value="00269" />
-      <option name="presentableId" value="LOCAL-00269" />
-      <option name="project" value="LOCAL" />
-      <updated>1711519272221</updated>
-    </task>
-    <task id="LOCAL-00270" summary="&quot;Add test for custom JWT authentication&quot;">
-      <option name="closed" value="true" />
-      <created>1711522034754</created>
-      <option name="number" value="00270" />
-      <option name="presentableId" value="LOCAL-00270" />
-      <option name="project" value="LOCAL" />
-      <updated>1711522034754</updated>
+      <workItem from="1711962720464" duration="25540000" />
     </task>
     <task id="LOCAL-00271" summary="&quot;Add test for custom JWT authentication&quot;">
       <option name="closed" value="true" />
@@ -845,7 +778,71 @@
       <option name="project" value="LOCAL" />
       <updated>1712111522237</updated>
     </task>
-    <option name="localTasksCounter" value="312" />
+    <task id="LOCAL-00312" summary="Update API doc and test case count methods.">
+      <option name="closed" value="true" />
+      <created>1712113617160</created>
+      <option name="number" value="00312" />
+      <option name="presentableId" value="LOCAL-00312" />
+      <option name="project" value="LOCAL" />
+      <updated>1712113617160</updated>
+    </task>
+    <task id="LOCAL-00313" summary="Update code comments and docstrings for backend API module.">
+      <option name="closed" value="true" />
+      <created>1712113631436</created>
+      <option name="number" value="00313" />
+      <option name="presentableId" value="LOCAL-00313" />
+      <option name="project" value="LOCAL" />
+      <updated>1712113631436</updated>
+    </task>
+    <task id="LOCAL-00314" summary="Update plan.py docstring and comments to improve clarity and consistency.">
+      <option name="closed" value="true" />
+      <created>1712113643657</created>
+      <option name="number" value="00314" />
+      <option name="presentableId" value="LOCAL-00314" />
+      <option name="project" value="LOCAL" />
+      <updated>1712113643658</updated>
+    </task>
+    <task id="LOCAL-00315" summary="Update API DAO project docstrings to use numpydoc format and improve descriptions.">
+      <option name="closed" value="true" />
+      <created>1712113656314</created>
+      <option name="number" value="00315" />
+      <option name="presentableId" value="LOCAL-00315" />
+      <option name="project" value="LOCAL" />
+      <updated>1712113656314</updated>
+    </task>
+    <task id="LOCAL-00316" summary="Updated code comments to provide more context and improve clarity.">
+      <option name="closed" value="true" />
+      <created>1712113668213</created>
+      <option name="number" value="00316" />
+      <option name="presentableId" value="LOCAL-00316" />
+      <option name="project" value="LOCAL" />
+      <updated>1712113668213</updated>
+    </task>
+    <task id="LOCAL-00317" summary="Updated docstrings for user DAO methods.">
+      <option name="closed" value="true" />
+      <created>1712113680326</created>
+      <option name="number" value="00317" />
+      <option name="presentableId" value="LOCAL-00317" />
+      <option name="project" value="LOCAL" />
+      <updated>1712113680326</updated>
+    </task>
+    <task id="LOCAL-00318" summary="Updated docstrings for user DAO methods.">
+      <option name="closed" value="true" />
+      <created>1712113693002</created>
+      <option name="number" value="00318" />
+      <option name="presentableId" value="LOCAL-00318" />
+      <option name="project" value="LOCAL" />
+      <updated>1712113693002</updated>
+    </task>
+    <task id="LOCAL-00319" summary="Added new API endpoint for editing built-in functions and associated test code.">
+      <option name="closed" value="true" />
+      <created>1712115672285</created>
+      <option name="number" value="00319" />
+      <option name="presentableId" value="LOCAL-00319" />
+      <option name="project" value="LOCAL" />
+      <updated>1712115672285</updated>
+    </task>
+    <option name="localTasksCounter" value="320" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -875,32 +872,32 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Updated" />
+    <MESSAGE value="Updated doc" />
+    <MESSAGE value="Updated docstrings" />
+    <MESSAGE value="Updated docstrings for" />
+    <MESSAGE value="Updated docstrings for user" />
+    <MESSAGE value="Updated docstrings for user DA" />
+    <MESSAGE value="Updated docstrings for user DAO" />
+    <MESSAGE value="Updated docstrings for user DAO methods" />
+    <MESSAGE value="Updated docstrings for user DAO methods." />
     <MESSAGE value="Add" />
     <MESSAGE value="Added" />
-    <MESSAGE value="Added static" />
-    <MESSAGE value="Added static methods" />
-    <MESSAGE value="Added static methods for" />
-    <MESSAGE value="Added static methods for saving" />
-    <MESSAGE value="Added static methods for saving/" />
-    <MESSAGE value="Added static methods for saving/up" />
-    <MESSAGE value="Added static methods for saving/updating" />
-    <MESSAGE value="Added static methods for saving/updating and" />
-    <MESSAGE value="Added static methods for saving/updating and loading" />
-    <MESSAGE value="Added static methods for saving/updating and loading functions" />
-    <MESSAGE value="Added static methods for saving/updating and loading functions," />
-    <MESSAGE value="Added static methods for saving/updating and loading functions, and" />
-    <MESSAGE value="Added static methods for saving/updating and loading functions, and ref" />
-    <MESSAGE value="Added static methods for saving/updating and loading functions, and refact" />
-    <MESSAGE value="Added static methods for saving/updating and loading functions, and refactored" />
-    <MESSAGE value="Added static methods for saving/updating and loading functions, and refactored the" />
-    <MESSAGE value="Added static methods for saving/updating and loading functions, and refactored the load" />
-    <MESSAGE value="Added static methods for saving/updating and loading functions, and refactored the load\_" />
-    <MESSAGE value="Added static methods for saving/updating and loading functions, and refactored the load\_func" />
-    <MESSAGE value="Added static methods for saving/updating and loading functions, and refactored the load\_func\_" />
-    <MESSAGE value="Added static methods for saving/updating and loading functions, and refactored the load\_func\_content" />
-    <MESSAGE value="Added static methods for saving/updating and loading functions, and refactored the load\_func\_content method" />
-    <MESSAGE value="Added static methods for saving/updating and loading functions, and refactored the load\_func\_content method." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added static methods for saving/updating and loading functions, and refactored the load\_func\_content method." />
+    <MESSAGE value="Added new" />
+    <MESSAGE value="Added new API" />
+    <MESSAGE value="Added new API endpoint" />
+    <MESSAGE value="Added new API endpoint for" />
+    <MESSAGE value="Added new API endpoint for editing" />
+    <MESSAGE value="Added new API endpoint for editing built" />
+    <MESSAGE value="Added new API endpoint for editing built-" />
+    <MESSAGE value="Added new API endpoint for editing built-in" />
+    <MESSAGE value="Added new API endpoint for editing built-in functions" />
+    <MESSAGE value="Added new API endpoint for editing built-in functions and" />
+    <MESSAGE value="Added new API endpoint for editing built-in functions and associated" />
+    <MESSAGE value="Added new API endpoint for editing built-in functions and associated test" />
+    <MESSAGE value="Added new API endpoint for editing built-in functions and associated test code" />
+    <MESSAGE value="Added new API endpoint for editing built-in functions and associated test code." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new API endpoint for editing built-in functions and associated test code." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$__init____2_.coverage" NAME="__init__ (2) Coverage Results" MODIFIED="1706696733502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/management/commands" />
@@ -915,7 +912,7 @@
     <SUITE FILE_PATH="coverage/backend$Test__api_tests_test_user_list.coverage" NAME="Test: api.tests.test_user_list Coverage Results" MODIFIED="1712039022358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/backend$functions.coverage" NAME="functions Coverage Results" MODIFIED="1711604944057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/builitin" />
     <SUITE FILE_PATH="coverage/backend$event_manager.coverage" NAME="event_manager Coverage Results" MODIFIED="1706679188463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/events" />
-    <SUITE FILE_PATH="coverage/backend$__init____1_.coverage" NAME="__init__ (1) Coverage Results" MODIFIED="1712038426851" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/dao" />
+    <SUITE FILE_PATH="coverage/backend$__init____1_.coverage" NAME="__init__ (1) Coverage Results" MODIFIED="1712114547355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/dao" />
     <SUITE FILE_PATH="coverage/backend$Test__api_tests_test_user_list_TestUserListViewSet_test_hello.coverage" NAME="Test: api.tests.test_user_list.TestUserListViewSet.test_hello Coverage Results" MODIFIED="1712039113885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/backend$Test__api_tests_test_custom_token_TestCustomJsonWebToken.coverage" NAME="Test: api.tests.test_custom_token.TestCustomJsonWebToken Coverage Results" MODIFIED="1711522004553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/backend$render_template_obj.coverage" NAME="render_template_obj Coverage Results" MODIFIED="1706090193785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
