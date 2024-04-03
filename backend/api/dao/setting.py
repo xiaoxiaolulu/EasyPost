@@ -2,6 +2,7 @@
 DESCRIPTION：测试配置数据访问对象
 :Created by Null.
 """
+import builtins
 import importlib
 import inspect
 import os.path
@@ -17,6 +18,7 @@ from typing import (
 from api.models.setting import Functions
 from config.settings import BASE_DIR
 from unitrunner.database.DBClient import DBClient
+from unitrunner import builitin
 from utils.logger import logger
 
 
@@ -310,3 +312,45 @@ class SettingDao:
             'functions_mapping': functions_mapping,
         }
         return func_data
+
+    def load_builtin_functions(self) -> typing.Dict[str, typing.Callable]:
+        """
+        Loads built-in functions from a predefined module (potentially 'builtins').
+
+        Returns:
+            typing.Dict[str, typing.Callable]: A dictionary mapping function names to their corresponding functions.
+        """
+        return self.load_module_functions(builitin)
+
+    def get_mapping_function(
+            self, function_name: str, functions_mapping: typing.Dict[str, typing.Callable]
+    ) -> typing.Callable:
+        """
+        Retrieves a function based on its name, searching through various sources.
+
+        Args:
+            function_name (str): The name of the function to find.
+            functions_mapping (typing.Dict[str, typing.Callable]): A predefined mapping of functions.
+
+        Returns:
+            typing.Callable: The retrieved function.
+
+        Raises:
+            ModuleNotFoundError: If the function is not found in any of the sources.
+        """
+        if function_name in functions_mapping:
+            return functions_mapping[function_name]
+
+        try:
+            built_in_functions = self.load_builtin_functions()
+            return built_in_functions[function_name]
+        except KeyError:
+            pass
+
+        try:
+            # check if Python builtin functions
+            return getattr(builtins, function_name)
+        except AttributeError:
+            pass
+
+        raise ModuleNotFoundError(f"函数 {function_name} 没有找到 💔")

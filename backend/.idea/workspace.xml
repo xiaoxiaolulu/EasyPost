@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Added `GetFunctionListApiView` and updated `urls.py` to include the new view.">
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Add static method `handler_func_list` to `BaseDao` to check if a function should be included in the list based on optional filtering parameters.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/dao/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/setting.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/builitin/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/unitrunner/builitin/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -446,15 +447,7 @@
       <workItem from="1711534478853" duration="111000" />
       <workItem from="1711591405569" duration="42079000" />
       <workItem from="1711962633078" duration="55000" />
-      <workItem from="1711962720464" duration="26618000" />
-    </task>
-    <task id="LOCAL-00274" summary="&quot;Rename test_1ddd.py to test_engine.py in backend/api/tests&quot;">
-      <option name="closed" value="true" />
-      <created>1711522396157</created>
-      <option name="number" value="00274" />
-      <option name="presentableId" value="LOCAL-00274" />
-      <option name="project" value="LOCAL" />
-      <updated>1711522396157</updated>
+      <workItem from="1711962720464" duration="28334000" />
     </task>
     <task id="LOCAL-00275" summary="Added test cases for UserListViewSet with APIClient and sample users.">
       <option name="closed" value="true" />
@@ -840,7 +833,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712123714472</updated>
     </task>
-    <option name="localTasksCounter" value="323" />
+    <task id="LOCAL-00323" summary="Add static method `handler_func_list` to `BaseDao` to check if a function should be included in the list based on optional filtering parameters.">
+      <option name="closed" value="true" />
+      <created>1712124860971</created>
+      <option name="number" value="00323" />
+      <option name="presentableId" value="LOCAL-00323" />
+      <option name="project" value="LOCAL" />
+      <updated>1712124860971</updated>
+    </task>
+    <option name="localTasksCounter" value="324" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -870,32 +871,32 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added new API endpoint for editing built-in functions and associated test" />
-    <MESSAGE value="Added new API endpoint for editing built-in functions and associated test code" />
-    <MESSAGE value="Added new API endpoint for editing built-in functions and associated test code." />
-    <MESSAGE value="Add" />
-    <MESSAGE value="Added" />
-    <MESSAGE value="Added `" />
-    <MESSAGE value="Added `Get" />
-    <MESSAGE value="Added `GetFunction" />
-    <MESSAGE value="Added `GetFunctionList" />
-    <MESSAGE value="Added `GetFunctionListApi" />
-    <MESSAGE value="Added `GetFunctionListApiView" />
-    <MESSAGE value="Added `GetFunctionListApiView`" />
-    <MESSAGE value="Added `GetFunctionListApiView` and" />
-    <MESSAGE value="Added `GetFunctionListApiView` and updated" />
-    <MESSAGE value="Added `GetFunctionListApiView` and updated `" />
-    <MESSAGE value="Added `GetFunctionListApiView` and updated `urls" />
-    <MESSAGE value="Added `GetFunctionListApiView` and updated `urls." />
-    <MESSAGE value="Added `GetFunctionListApiView` and updated `urls.py" />
-    <MESSAGE value="Added `GetFunctionListApiView` and updated `urls.py`" />
-    <MESSAGE value="Added `GetFunctionListApiView` and updated `urls.py` to" />
-    <MESSAGE value="Added `GetFunctionListApiView` and updated `urls.py` to include" />
-    <MESSAGE value="Added `GetFunctionListApiView` and updated `urls.py` to include the" />
-    <MESSAGE value="Added `GetFunctionListApiView` and updated `urls.py` to include the new" />
-    <MESSAGE value="Added `GetFunctionListApiView` and updated `urls.py` to include the new view" />
-    <MESSAGE value="Added `GetFunctionListApiView` and updated `urls.py` to include the new view." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added `GetFunctionListApiView` and updated `urls.py` to include the new view." />
+    <MESSAGE value="Add static method `handler_func_list" />
+    <MESSAGE value="Add static method `handler_func_list`" />
+    <MESSAGE value="Add static method `handler_func_list` to" />
+    <MESSAGE value="Add static method `handler_func_list` to `" />
+    <MESSAGE value="Add static method `handler_func_list` to `Base" />
+    <MESSAGE value="Add static method `handler_func_list` to `BaseD" />
+    <MESSAGE value="Add static method `handler_func_list` to `BaseDao" />
+    <MESSAGE value="Add static method `handler_func_list` to `BaseDao`" />
+    <MESSAGE value="Add static method `handler_func_list` to `BaseDao` to" />
+    <MESSAGE value="Add static method `handler_func_list` to `BaseDao` to check" />
+    <MESSAGE value="Add static method `handler_func_list` to `BaseDao` to check if" />
+    <MESSAGE value="Add static method `handler_func_list` to `BaseDao` to check if a" />
+    <MESSAGE value="Add static method `handler_func_list` to `BaseDao` to check if a function" />
+    <MESSAGE value="Add static method `handler_func_list` to `BaseDao` to check if a function should" />
+    <MESSAGE value="Add static method `handler_func_list` to `BaseDao` to check if a function should be" />
+    <MESSAGE value="Add static method `handler_func_list` to `BaseDao` to check if a function should be included" />
+    <MESSAGE value="Add static method `handler_func_list` to `BaseDao` to check if a function should be included in" />
+    <MESSAGE value="Add static method `handler_func_list` to `BaseDao` to check if a function should be included in the" />
+    <MESSAGE value="Add static method `handler_func_list` to `BaseDao` to check if a function should be included in the list" />
+    <MESSAGE value="Add static method `handler_func_list` to `BaseDao` to check if a function should be included in the list based" />
+    <MESSAGE value="Add static method `handler_func_list` to `BaseDao` to check if a function should be included in the list based on" />
+    <MESSAGE value="Add static method `handler_func_list` to `BaseDao` to check if a function should be included in the list based on optional" />
+    <MESSAGE value="Add static method `handler_func_list` to `BaseDao` to check if a function should be included in the list based on optional filtering" />
+    <MESSAGE value="Add static method `handler_func_list` to `BaseDao` to check if a function should be included in the list based on optional filtering parameters" />
+    <MESSAGE value="Add static method `handler_func_list` to `BaseDao` to check if a function should be included in the list based on optional filtering parameters." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add static method `handler_func_list` to `BaseDao` to check if a function should be included in the list based on optional filtering parameters." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$__init____2_.coverage" NAME="__init__ (2) Coverage Results" MODIFIED="1706696733502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/management/commands" />
