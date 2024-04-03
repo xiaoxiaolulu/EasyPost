@@ -3,14 +3,17 @@ DESCRIPTION：测试配置数据访问对象
 :Created by Null.
 """
 import importlib
+import inspect
 import os.path
 import sys
 import traceback
 import types
 import typing
 import uuid
-from typing import Dict, Any
-
+from typing import (
+    Dict,
+    Any
+)
 from api.models.setting import Functions
 from config.settings import BASE_DIR
 from unitrunner.database.DBClient import DBClient
@@ -218,3 +221,76 @@ class SettingDao:
         response = self.function_save_or_update(params, pk=pk)
 
         return response
+
+    @staticmethod
+    def handle_func_info(func: types.FunctionType) -> typing.Dict:
+        """
+        Extracts and organizes information about a given function.
+
+        Args:
+            func (types.FunctionType): The function to inspect.
+
+        Returns:
+            typing.Dict: A dictionary containing the extracted function information.
+        """
+        func_info = inspect.signature(func)
+        parameters = func_info.parameters
+        args_dict = dict()
+        for name, param_info in parameters.items():
+            args_dict.setdefault(name, param_info.default if not isinstance(param_info.default, type) else '')
+
+        return dict(
+            func_name=func.__name__,
+            func_args=str(func_info),
+            args_info=args_dict,
+            func_doc=func.__doc__,
+        )
+
+    def get_function_by_id(self, params: typing.Union[typing.Dict], pk: int):
+            """
+            Retrieves functions based on ID and filters by optional parameters.
+
+            Args:
+                params (typing.Union[typing.Dict]): Optional parameters for filtering.
+                pk (int): Primary key of the function (0 for all functions).
+
+            Returns:
+                dict: A dictionary containing a list of function information and the function mapping.
+            """
+            if not pk:
+                raise ValueError("参数错误！")
+
+            # Retrieve function content based on ID
+            func_info = self.get_func_content(func_key=pk)
+
+            # Extract content and common content (if available)
+            content = func_info.get('content', '')
+            common_content = func_info.get('common_content', '')
+
+            # Combine content for function loading
+            file_content = content if pk else common_content  # Use content for specific ID, common content for all
+
+            # Generate unique module name using UUID hash
+            module_name = f"{pk}_{uuid.uuid4().__hash__()}"
+
+            # Load functions from combined content
+            functions_mapping = self.load_func_content(f"{common_content}\n{content}", module_name)
+
+            func_list = []
+            for func_name, func in functions_mapping.items():
+                # Early termination if function definition is absent
+                if file_content.find(f'def {func_name}(') == -1:
+                    continue
+
+                # Concisely filter based on search terms and handle potential absence of a docstring
+                if not params.get('func_name') or any(
+                        search_term in (func.__name__, func.__doc__ or '')  # Use docstring or an empty string
+                        for search_term in [params.get('func_name'), ]
+                ):
+                    func_list.append(self.handle_func_info(func))
+
+            func_data = {
+                'func_list': func_list,
+                'functions_mapping': functions_mapping,
+            }
+            return func_data
