@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Added new API endpoint for editing built-in functions and associated test code.">
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Added `GetFunctionListApiView` and updated `urls.py` to include the new view.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/dao/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/setting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/service/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/setting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
     </list>
@@ -448,31 +446,7 @@
       <workItem from="1711534478853" duration="111000" />
       <workItem from="1711591405569" duration="42079000" />
       <workItem from="1711962633078" duration="55000" />
-      <workItem from="1711962720464" duration="25540000" />
-    </task>
-    <task id="LOCAL-00271" summary="&quot;Add test for custom JWT authentication&quot;">
-      <option name="closed" value="true" />
-      <created>1711522146869</created>
-      <option name="number" value="00271" />
-      <option name="presentableId" value="LOCAL-00271" />
-      <option name="project" value="LOCAL" />
-      <updated>1711522146869</updated>
-    </task>
-    <task id="LOCAL-00272" summary="&quot;Add test for custom JWT authentication&quot;">
-      <option name="closed" value="true" />
-      <created>1711522155113</created>
-      <option name="number" value="00272" />
-      <option name="presentableId" value="LOCAL-00272" />
-      <option name="project" value="LOCAL" />
-      <updated>1711522155113</updated>
-    </task>
-    <task id="LOCAL-00273" summary="&quot;Rename test_1ddd.py to test_engine.py in backend/api/tests&quot;">
-      <option name="closed" value="true" />
-      <created>1711522276898</created>
-      <option name="number" value="00273" />
-      <option name="presentableId" value="LOCAL-00273" />
-      <option name="project" value="LOCAL" />
-      <updated>1711522276898</updated>
+      <workItem from="1711962720464" duration="26618000" />
     </task>
     <task id="LOCAL-00274" summary="&quot;Rename test_1ddd.py to test_engine.py in backend/api/tests&quot;">
       <option name="closed" value="true" />
@@ -842,7 +816,31 @@
       <option name="project" value="LOCAL" />
       <updated>1712115672285</updated>
     </task>
-    <option name="localTasksCounter" value="320" />
+    <task id="LOCAL-00320" summary="Added `GetFunctionListApiView` and updated `urls.py` to include the new view.">
+      <option name="closed" value="true" />
+      <created>1712123617343</created>
+      <option name="number" value="00320" />
+      <option name="presentableId" value="LOCAL-00320" />
+      <option name="project" value="LOCAL" />
+      <updated>1712123617343</updated>
+    </task>
+    <task id="LOCAL-00321" summary="Added `GetFunctionListApiView` and updated `urls.py` to include the new view.">
+      <option name="closed" value="true" />
+      <created>1712123632096</created>
+      <option name="number" value="00321" />
+      <option name="presentableId" value="LOCAL-00321" />
+      <option name="project" value="LOCAL" />
+      <updated>1712123632096</updated>
+    </task>
+    <task id="LOCAL-00322" summary="Added `GetFunctionListApiView` and updated `urls.py` to include the new view.">
+      <option name="closed" value="true" />
+      <created>1712123714472</created>
+      <option name="number" value="00322" />
+      <option name="presentableId" value="LOCAL-00322" />
+      <option name="project" value="LOCAL" />
+      <updated>1712123714472</updated>
+    </task>
+    <option name="localTasksCounter" value="323" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -872,32 +870,32 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Updated" />
-    <MESSAGE value="Updated doc" />
-    <MESSAGE value="Updated docstrings" />
-    <MESSAGE value="Updated docstrings for" />
-    <MESSAGE value="Updated docstrings for user" />
-    <MESSAGE value="Updated docstrings for user DA" />
-    <MESSAGE value="Updated docstrings for user DAO" />
-    <MESSAGE value="Updated docstrings for user DAO methods" />
-    <MESSAGE value="Updated docstrings for user DAO methods." />
-    <MESSAGE value="Add" />
-    <MESSAGE value="Added" />
-    <MESSAGE value="Added new" />
-    <MESSAGE value="Added new API" />
-    <MESSAGE value="Added new API endpoint" />
-    <MESSAGE value="Added new API endpoint for" />
-    <MESSAGE value="Added new API endpoint for editing" />
-    <MESSAGE value="Added new API endpoint for editing built" />
-    <MESSAGE value="Added new API endpoint for editing built-" />
-    <MESSAGE value="Added new API endpoint for editing built-in" />
-    <MESSAGE value="Added new API endpoint for editing built-in functions" />
-    <MESSAGE value="Added new API endpoint for editing built-in functions and" />
-    <MESSAGE value="Added new API endpoint for editing built-in functions and associated" />
     <MESSAGE value="Added new API endpoint for editing built-in functions and associated test" />
     <MESSAGE value="Added new API endpoint for editing built-in functions and associated test code" />
     <MESSAGE value="Added new API endpoint for editing built-in functions and associated test code." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new API endpoint for editing built-in functions and associated test code." />
+    <MESSAGE value="Add" />
+    <MESSAGE value="Added" />
+    <MESSAGE value="Added `" />
+    <MESSAGE value="Added `Get" />
+    <MESSAGE value="Added `GetFunction" />
+    <MESSAGE value="Added `GetFunctionList" />
+    <MESSAGE value="Added `GetFunctionListApi" />
+    <MESSAGE value="Added `GetFunctionListApiView" />
+    <MESSAGE value="Added `GetFunctionListApiView`" />
+    <MESSAGE value="Added `GetFunctionListApiView` and" />
+    <MESSAGE value="Added `GetFunctionListApiView` and updated" />
+    <MESSAGE value="Added `GetFunctionListApiView` and updated `" />
+    <MESSAGE value="Added `GetFunctionListApiView` and updated `urls" />
+    <MESSAGE value="Added `GetFunctionListApiView` and updated `urls." />
+    <MESSAGE value="Added `GetFunctionListApiView` and updated `urls.py" />
+    <MESSAGE value="Added `GetFunctionListApiView` and updated `urls.py`" />
+    <MESSAGE value="Added `GetFunctionListApiView` and updated `urls.py` to" />
+    <MESSAGE value="Added `GetFunctionListApiView` and updated `urls.py` to include" />
+    <MESSAGE value="Added `GetFunctionListApiView` and updated `urls.py` to include the" />
+    <MESSAGE value="Added `GetFunctionListApiView` and updated `urls.py` to include the new" />
+    <MESSAGE value="Added `GetFunctionListApiView` and updated `urls.py` to include the new view" />
+    <MESSAGE value="Added `GetFunctionListApiView` and updated `urls.py` to include the new view." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added `GetFunctionListApiView` and updated `urls.py` to include the new view." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$__init____2_.coverage" NAME="__init__ (2) Coverage Results" MODIFIED="1706696733502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/management/commands" />

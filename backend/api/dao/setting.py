@@ -246,6 +246,25 @@ class SettingDao:
             func_doc=func.__doc__,
         )
 
+    @staticmethod
+    def handler_func_list(func: types.FunctionType, params: typing.Union[typing.Dict]):
+        """
+        Checks if a function should be included in the list based on optional filtering parameters.
+
+        Args:
+            func (types.FunctionType): The function to be evaluated.
+            params (typing.Union[typing.Dict]): Optional dictionary containing filtering parameters.
+
+        Returns:
+            bool: True if the function should be included, False otherwise.
+        """
+
+        condition = not params.get('func_name') or any(
+            search_term in (func.__name__, func.__doc__ or '')  # Use docstring or an empty string
+            for search_term in [params.get('func_name'), ]
+        )
+        return condition
+
     def get_function_by_id(self, params: typing.Union[typing.Dict], pk: int):
         """
         Retrieves functions based on ID and filters by optional parameters.
@@ -283,10 +302,7 @@ class SettingDao:
                 continue
 
             # Concisely filter based on search terms and handle potential absence of a docstring
-            if not params.get('func_name') or any(
-                    search_term in (func.__name__, func.__doc__ or '')  # Use docstring or an empty string
-                    for search_term in [params.get('func_name'), ]
-            ):
+            if self.handler_func_list(func, params):
                 func_list.append(self.handle_func_info(func))
 
         func_data = {
