@@ -16,12 +16,15 @@ class DashboardDao:
 
     @staticmethod
     def get_api_count():
-        """
-        获取API文档的数量。
 
-        :return: 返回API文档的数量。
-        :rtype: int
-        :raises Exception: 当获取数量失败时引发异常。
+        """
+        Retrieves the total number of API documents in the database.
+
+        Returns:
+            The total number of API documents.
+
+        Raises:
+            Exception: If an error occurs during data retrieval.
         """
         try:
             count = Api.objects.count()
@@ -35,11 +38,13 @@ class DashboardDao:
     @staticmethod
     def get_ytd_api_count():
         """
-        获取昨天的API文档的数量。
+        Retrieves the number of API documents created yesterday.
 
-        :return: 返回API文档的数量。
-        :rtype: int
-        :raises Exception: 当获取数量失败时引发异常。
+        Returns:
+            The number of API documents created yesterday.
+
+        Raises:
+            Exception: If an error occurs during data retrieval.
         """
         try:
             count = Api.objects.filter(create_time__date=time.yesterday).count()
@@ -53,11 +58,16 @@ class DashboardDao:
     @staticmethod
     def get_past_api_count(days=7):
         """
-        获取过去多少天的API文档的数量。
+        Retrieves the number of API documents created in the past `days`.
 
-        :return: 返回API文档的数量。
-        :rtype: int
-        :raises Exception: 当获取数量失败时引发异常。
+        Args:
+            days (int, optional): The number of days to look back. Defaults to 7.
+
+        Returns:
+            The number of API documents created in the past `days`.
+
+        Raises:
+            Exception: If an error occurs during data retrieval.
         """
         try:
             count = Api.objects.filter(create_time__date__in=time.get_before_day(days)).count()
@@ -71,11 +81,13 @@ class DashboardDao:
     @staticmethod
     def get_case_count():
         """
-        获取测试用例的数量。
+        Retrieves the total number of test cases in the database.
 
-        :return: 返回测试用例的数量。
-        :rtype: int
-        :raises Exception: 当获取数量失败时引发异常。
+        Returns:
+            The total number of test cases.
+
+        Raises:
+            Exception: If an error occurs during data retrieval.
         """
         try:
             count = Case.objects.count()
@@ -89,11 +101,13 @@ class DashboardDao:
     @staticmethod
     def get_case_pass_rate():
         """
-        获取测试用例的通过率。
+        Retrieves the average test case pass rate.
 
-        :return: 返回测试用例的通过率。
-        :rtype: float
-        :raises Exception: 当获取通过率失败时引发异常。
+        Returns:
+            The average test case pass rate.
+
+        Raises:
+            Exception: If an error occurs during data retrieval.
         """
         try:
             pass_rate = Main.objects.aggregate(Avg("pass_rate"))
@@ -108,16 +122,18 @@ class DashboardDao:
     @staticmethod
     def get_execute_count():
         """
-        获取测试用例执行次数。
+        Retrieves the total number of test case executions.
 
-        :return: 返回测试用例执行次数。
-        :rtype: int
-        :raises Exception: 当获取执行次数失败时引发异常。
+        Returns:
+            The total number of test case executions.
+
+        Raises:
+            Exception: If an error occurs during data retrieval.
         """
         try:
             count = Main.objects.count()
-
             return count
+
         except (Main.DoesNotExist, Exception) as err:
             logger.debug(
                 f"🏓获取测试用例执行次数据失败 -> {err}"
