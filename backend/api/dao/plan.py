@@ -19,17 +19,17 @@ class PlanDao:
     @staticmethod
     def parser_plan_data(request: Any, pk=None):
         """
-        创建API快照。
+        Parses test plan data from a request object and project ID (optional for update).
 
         Args:
-            request: HTTP 请求对象
-            pk: 数据主键
+            request: The Django request object containing the data to be parsed.
+            pk (int, optional): The primary key of the plan for update (if provided).
 
         Returns:
-            解析后的计划数据
+            A dictionary containing the parsed test plan data.
 
         Raises:
-            Exception: 解析计划数据失败时抛出异常
+            Exception: If an error occurs during data parsing.
         """
         api = HandelTestData(request.data)
 
@@ -63,19 +63,18 @@ class PlanDao:
     @database_sync_to_async
     def create_or_update_plan(cls, request: Any, pk: int) -> int:
         """
-        创建或更新测试计划，并根据计划信息添加或移除调度任务。
+        Creates a new test plan or updates an existing one based on the provided data.
 
         Args:
-            request: HTTP 请求对象
-            pk: 主键
+            request: The Django request object containing the data to be used.
+            pk (int): The primary key of the plan to update (if provided).
 
         Returns:
-            创建或更新后的 计划 ID
+            The primary key of the created or updated plan (int).
 
         Raises:
-            Exception: 创建或更新测试计划失败时抛出异常
+            Exception: If an error occurs during plan creation or update.
         """
-
         try:
             request_body = cls.parser_plan_data(request, pk=pk)
 
@@ -110,19 +109,18 @@ class PlanDao:
     @classmethod
     def update_test_plan_state(cls, plan_id: int, target_state: int) -> Any:
         """
-        更新测试计划状态，并根据状态添加或移除调度任务。
+        Updates the state of a test plan.
 
         Args:
-            plan_id: 计划id
-            target_state: 目标状态
+            plan_id (int): The ID of the plan to update.
+            target_state (int): The target state to set for the plan.
 
         Returns:
-            None
+            A response object indicating success or failure.
 
         Raises:
-            Exception: 更新测试计划状态失败时抛出异常
+            Exception: If an error occurs during state update.
         """
-
         try:
             plan = Plan.objects.get(pk=plan_id)
             plan_parser_data = cls.parser_plan_data(model_to_dict(plan), pk=plan_id)
@@ -156,22 +154,23 @@ class PlanDao:
     @classmethod
     def run_test_plan(cls, plan_id, case_list):
         """
-        运行测试计划
+        Executes a test plan and returns the response from the test suite.
 
         Args:
-            plan_id: 计划id
-            case_list: 用例列表
+            plan_id (int): The ID of the plan to execute.
+            case_list (list): A list of case IDs to be included in the execution.
 
-        Returns: response 测试用例运行结果 Dict object
+        Returns:
+            The response object from the test suite.
 
         Raises:
-            Exception: 运行测试计划状态失败时抛出异常
+            Exception: If an error occurs during plan execution.
         """
         plan = Plan.objects.get(pk=plan_id)
         if plan is None:
             raise Exception(f"测试计划: [{plan_id}]不存在 ❌")
         try:
-            # 设置为running
+
             cls.update_test_plan_state(plan_id, 1)
             response = HttpDao.run_test_suite(case_list)
             return response
