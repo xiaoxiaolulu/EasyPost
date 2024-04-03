@@ -25,14 +25,15 @@ class UserDao:
     @staticmethod
     def validate_account_type(account: str, account_type: str) -> None:
         """
-        验证账号类型的函数
+        Validates an account based on its type (mobile or email) using regular expressions.
 
         Args:
-            account: 账号
-            account_type: 账号类型
+            account: The account string to be validated.
+            account_type: The type of account to validate (mobile or email).
 
         Raises:
-            Exception: 验证账号类型失败时抛出异常
+            Exception: If the account type is invalid or the account does not match the
+            corresponding regular expression.
         """
         if account_type == 'mobile':
             if not re.match(REGEX_MOBILE, account):
@@ -46,13 +47,13 @@ class UserDao:
     @staticmethod
     def check_user_existence(account: str) -> None:
         """
-        检查用户是否存在的函数
+        Checks if a user with the given account (mobile or email) already exists in the database.
 
         Args:
-            account: 账号
+            account: The account string to be checked.
 
         Raises:
-            Exception: 检查用户是否存在失败时抛出异常
+            Exception: If a user with the provided account already exists.
         """
         try:
             user = User.objects.get(mobile=account) or User.objects.get(email=account)
@@ -64,13 +65,13 @@ class UserDao:
     @staticmethod
     def check_verify_code_time(account: str) -> None:
         """
-        检查验证码发送时间的函数
+        Checks if the last verification code sent to the given account was sent less than a minute ago.
 
         Args:
-            account: 账号
+            account: The account string to be checked.
 
         Raises:
-            Exception: 检查验证码发送时间失败时抛出异常
+            Exception: If the last verification code was sent less than a minute ago.
         """
         one_minutes_ago = datetime.now() - timedelta(minutes=1)
         if VerifyCode.objects.filter(add_time__gt=one_minutes_ago, account=account).exists():
@@ -78,14 +79,14 @@ class UserDao:
 
     def register_user_validate(self, account: str, account_type: str) -> None:
         """
-        注册用户验证的主函数
+        Validates the account and verification code for user registration.
 
         Args:
-            account: 账号
-            account_type: 账号类型
+            account: The account string (mobile or email) to be validated.
+            account_type: The type of account to validate (mobile or email).
 
         Raises:
-            Exception: 注册用户验证失败时抛出异常
+            Exception: If any of the validation steps fail.
         """
         try:
             self.validate_account_type(account, account_type)
@@ -97,14 +98,16 @@ class UserDao:
     @staticmethod
     def register_code_validate(account: str, account_type: str, code: str) -> None:
         """
-        注册验证码验证
+        Validates the verification code for user registration.
 
-        :param account: 账号, str object.
-        :param account_type: 账号类型, str object.
-        :param code: 验证码, str object.
-        :return: None
+        Args:
+            account: The account string (mobile or email) used for verification.
+            account_type: The type of account (mobile or email).
+            code: The verification code entered by the user.
+
+        Raises:
+            Exception: If the verification code is invalid or the account doesn't exist.
         """
-
         existed = VerifyCode.objects.filter(account_type=account_type, account=account).order_by('-add_time')
         if existed:
             last_recode = existed[0]
@@ -120,12 +123,19 @@ class UserDao:
     @staticmethod
     def get_username(username: str) -> Any | None:
         """
-        校验用户是否注册
+        Retrieves a user object based on the provided username.
 
-        :param username: 用户名
-        :return: User.objects
+        Args:
+            username: The username string to search for. This can be the actual username,
+                     mobile number, or email address associated with the user.
+
+        Returns:
+            A User object if a matching user is found, otherwise None.
+
+        Raises:
+            (User.DoesNotExist, ImproperlyConfigured): These exceptions are caught
+                and not re-raised, but their occurrence is simply indicated by returning None.
         """
-
         try:
             user = User.objects.get(Q(username=username) | Q(mobile=username) | Q(email=username))
             return user
@@ -135,26 +145,31 @@ class UserDao:
     @staticmethod
     def get_register_code(account: str, account_type: str, code: str) -> None:
         """
-        获取注册验证码
+        Saves a verification code for a user account.
 
-        :param account: 账号, str object.
-        :param account_type: 账号类型, str object.
-        :param code: 验证码, str object.
-        :return: None
+        Args:
+            account: The account string (mobile or email) associated with the code.
+            account_type: The type of account (mobile or email).
+            code: The verification code itself.
         """
-
         verify_code = VerifyCode(code=code, account=account, account_type=account_type)
         verify_code.save()
 
     @staticmethod
     def query_user_by_email(email: str) -> Any | None:
         """
-        根据邮箱获取用户
+        Retrieves a user object based on the provided email address.
 
-        :param email: 注册邮箱, str object.
-        :return: User.objects
+        Args:
+            email: The email string to search for.
+
+        Returns:
+            A User object if a matching user is found, otherwise None.
+
+        Raises:
+            (User.DoesNotExist, ImproperlyConfigured): These exceptions are caught
+                and not re-raised, but their occurrence is simply indicated by returning None.
         """
-
         try:
             user = User.objects.get(email=email).first()
             return user
@@ -164,13 +179,16 @@ class UserDao:
     @staticmethod
     def rest_password(username: str, password: str) -> None:
         """
-        重置验证码
+        Resets the password for a user based on username (or mobile/email).
 
-        :param username: 账号, str object.
-        :param password: 密码, str object.
-        :return: None
+        Args:
+            username: The username (or mobile number or email address) associated with the account.
+            password: The new password to set for the user.
+
+        Raises:
+            (User.DoesNotExist, ImproperlyConfigured): These exceptions are caught
+                and not re-raised, but their occurrence is simply indicated by returning None.
         """
-
         try:
             user = User.objects.get(Q(username=username) | Q(mobile=username) | Q(email=username))
 
