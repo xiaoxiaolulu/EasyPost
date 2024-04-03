@@ -8,6 +8,9 @@ import sys
 import traceback
 import types
 import typing
+import uuid
+from typing import Dict, Any
+
 from api.models.setting import Functions
 from config.settings import BASE_DIR
 from unitrunner.database.DBClient import DBClient
@@ -197,3 +200,21 @@ class SettingDao:
 
         module_functions = self.load_module_functions(imported_module)
         return module_functions
+
+    def edit_builtin_function(self, params: typing.Union[typing.Dict], pk: int) -> dict[str, Any]:
+        """
+        Edits a built-in function, handling shared content and saving updates.
+
+        Args:
+            params (typing.Dict[str, Any]): Input parameters for the function.
+            pk (int): Primary key of the function to be edited.
+
+        Returns:
+            dict[str, Any]: Response from the function save/update operation.
+        """
+        content = self.get_common_content()
+        params['content'] = content
+        self.load_func_content(content=content, module_name=uuid.uuid4().hex)
+        response = self.function_save_or_update(params, pk=pk)
+
+        return response

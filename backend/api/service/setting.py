@@ -1,4 +1,5 @@
 import json
+import uuid
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters
 from rest_framework.permissions import IsAuthenticated
@@ -139,3 +140,20 @@ class DatabaseIsConnectView(APIView):
             ))
         except Exception as err:
             return Response(ResponseStandard.failed(err))
+
+
+class FunctionSaveOrUpdateApiView(APIView):
+
+    permission_classes = [IsAuthenticated]
+
+    @staticmethod
+    def post(request, **kwargs):
+
+        try:
+            dao = SettingDao()
+            response = dao.edit_builtin_function(request.data, kwargs['pk'])
+            return Response(ResponseStandard.success(
+                data={"func_id": response}
+            ))
+        except Exception as err:
+            return Response(ResponseStandard.failed(msg=str(err)))
