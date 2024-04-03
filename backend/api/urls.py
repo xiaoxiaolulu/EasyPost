@@ -96,7 +96,7 @@ app_urls = [
     path("database/create", DataSourceCreateViewSet.as_view()),
     path("database/isConnect", DatabaseIsConnectView.as_view()),
     path("function/saveOrUpdate/<int:pk>", FunctionSaveOrUpdateApiView.as_view()),
-    path("function/list/<int:pk>", GetFunctionListApiView.as_view()),
+    path("function/DetailList/<int:pk>", GetFunctionListApiView.as_view()),
     path("function/debug/<int:pk>", DebugFunctionApiView.as_view()),
 
     # 接口测试
