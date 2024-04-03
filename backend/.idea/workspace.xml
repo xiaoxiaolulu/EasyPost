@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Add database connectivity check API and associated views and dao.">
-      <change afterPath="$PROJECT_DIR$/api/migrations/0011_functions.py" afterDir="false" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Added static methods for saving/updating and loading functions, and refactored the load\_func\_content method.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/dao/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/setting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/models/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/setting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/tests/test_user_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/tests/test_user_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/dashboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/dashboard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/https.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/plan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/project.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
     </list>
@@ -449,31 +451,7 @@
       <workItem from="1711534478853" duration="111000" />
       <workItem from="1711591405569" duration="42079000" />
       <workItem from="1711962633078" duration="55000" />
-      <workItem from="1711962720464" duration="12984000" />
-    </task>
-    <task id="LOCAL-00260" summary=":construction_worker: 日志链路">
-      <option name="closed" value="true" />
-      <created>1711435244930</created>
-      <option name="number" value="00260" />
-      <option name="presentableId" value="LOCAL-00260" />
-      <option name="project" value="LOCAL" />
-      <updated>1711435244930</updated>
-    </task>
-    <task id="LOCAL-00261" summary=":construction_worker: 视图性能测试">
-      <option name="closed" value="true" />
-      <created>1711436127286</created>
-      <option name="number" value="00261" />
-      <option name="presentableId" value="LOCAL-00261" />
-      <option name="project" value="LOCAL" />
-      <updated>1711436127286</updated>
-    </task>
-    <task id="LOCAL-00262" summary="Added methods to DashboardDao to get API count and count from yesterday. Added time utility file with various time-related functions.">
-      <option name="closed" value="true" />
-      <created>1711509696531</created>
-      <option name="number" value="00262" />
-      <option name="presentableId" value="LOCAL-00262" />
-      <option name="project" value="LOCAL" />
-      <updated>1711509696531</updated>
+      <workItem from="1711962720464" duration="21129000" />
     </task>
     <task id="LOCAL-00263" summary="Add static method to get past API count.">
       <option name="closed" value="true" />
@@ -843,7 +821,31 @@
       <option name="project" value="LOCAL" />
       <updated>1712027804937</updated>
     </task>
-    <option name="localTasksCounter" value="309" />
+    <task id="LOCAL-00309" summary="Changed codebase to handle exceptions and added new methods for getting function content.">
+      <option name="closed" value="true" />
+      <created>1712039255746</created>
+      <option name="number" value="00309" />
+      <option name="presentableId" value="LOCAL-00309" />
+      <option name="project" value="LOCAL" />
+      <updated>1712039255746</updated>
+    </task>
+    <task id="LOCAL-00310" summary="Changed codebase to handle exceptions and added new methods for getting function content.">
+      <option name="closed" value="true" />
+      <created>1712039293049</created>
+      <option name="number" value="00310" />
+      <option name="presentableId" value="LOCAL-00310" />
+      <option name="project" value="LOCAL" />
+      <updated>1712039293049</updated>
+    </task>
+    <task id="LOCAL-00311" summary="Added static methods for saving/updating and loading functions, and refactored the load\_func\_content method.">
+      <option name="closed" value="true" />
+      <created>1712111522237</created>
+      <option name="number" value="00311" />
+      <option name="presentableId" value="LOCAL-00311" />
+      <option name="project" value="LOCAL" />
+      <updated>1712111522237</updated>
+    </task>
+    <option name="localTasksCounter" value="312" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -873,32 +875,32 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add database management page and related API calls for adding, editing, and deleting" />
-    <MESSAGE value="Add database management page and related API calls for adding, editing, and deleting databases" />
-    <MESSAGE value="Add database management page and related API calls for adding, editing, and deleting databases." />
-    <MESSAGE value="Changed" />
-    <MESSAGE value="Changed database" />
-    <MESSAGE value="Changed database name" />
-    <MESSAGE value="Changed database name to" />
-    <MESSAGE value="Changed database name to database" />
-    <MESSAGE value="Changed database name to database in" />
-    <MESSAGE value="Changed database name to database in code" />
-    <MESSAGE value="Changed database name to database in codebase" />
-    <MESSAGE value="Changed database name to database in codebase." />
     <MESSAGE value="Add" />
-    <MESSAGE value="Add database" />
-    <MESSAGE value="Add database connect" />
-    <MESSAGE value="Add database connectivity" />
-    <MESSAGE value="Add database connectivity check" />
-    <MESSAGE value="Add database connectivity check API" />
-    <MESSAGE value="Add database connectivity check API and" />
-    <MESSAGE value="Add database connectivity check API and associated" />
-    <MESSAGE value="Add database connectivity check API and associated views" />
-    <MESSAGE value="Add database connectivity check API and associated views and" />
-    <MESSAGE value="Add database connectivity check API and associated views and da" />
-    <MESSAGE value="Add database connectivity check API and associated views and dao" />
-    <MESSAGE value="Add database connectivity check API and associated views and dao." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add database connectivity check API and associated views and dao." />
+    <MESSAGE value="Added" />
+    <MESSAGE value="Added static" />
+    <MESSAGE value="Added static methods" />
+    <MESSAGE value="Added static methods for" />
+    <MESSAGE value="Added static methods for saving" />
+    <MESSAGE value="Added static methods for saving/" />
+    <MESSAGE value="Added static methods for saving/up" />
+    <MESSAGE value="Added static methods for saving/updating" />
+    <MESSAGE value="Added static methods for saving/updating and" />
+    <MESSAGE value="Added static methods for saving/updating and loading" />
+    <MESSAGE value="Added static methods for saving/updating and loading functions" />
+    <MESSAGE value="Added static methods for saving/updating and loading functions," />
+    <MESSAGE value="Added static methods for saving/updating and loading functions, and" />
+    <MESSAGE value="Added static methods for saving/updating and loading functions, and ref" />
+    <MESSAGE value="Added static methods for saving/updating and loading functions, and refact" />
+    <MESSAGE value="Added static methods for saving/updating and loading functions, and refactored" />
+    <MESSAGE value="Added static methods for saving/updating and loading functions, and refactored the" />
+    <MESSAGE value="Added static methods for saving/updating and loading functions, and refactored the load" />
+    <MESSAGE value="Added static methods for saving/updating and loading functions, and refactored the load\_" />
+    <MESSAGE value="Added static methods for saving/updating and loading functions, and refactored the load\_func" />
+    <MESSAGE value="Added static methods for saving/updating and loading functions, and refactored the load\_func\_" />
+    <MESSAGE value="Added static methods for saving/updating and loading functions, and refactored the load\_func\_content" />
+    <MESSAGE value="Added static methods for saving/updating and loading functions, and refactored the load\_func\_content method" />
+    <MESSAGE value="Added static methods for saving/updating and loading functions, and refactored the load\_func\_content method." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added static methods for saving/updating and loading functions, and refactored the load\_func\_content method." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$__init____2_.coverage" NAME="__init__ (2) Coverage Results" MODIFIED="1706696733502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/management/commands" />
@@ -910,11 +912,11 @@
     <SUITE FILE_PATH="coverage/http_handler_py$test.coverage" NAME="test Coverage Results" MODIFIED="1699719681836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/request" />
     <SUITE FILE_PATH="coverage/http_handler_py$.coverage" NAME=" Coverage Results" MODIFIED="1699719668172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/backend$test.coverage" NAME="test Coverage Results" MODIFIED="1706681056646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/events" />
-    <SUITE FILE_PATH="coverage/backend$Test__api_tests_test_user_list.coverage" NAME="Test: api.tests.test_user_list Coverage Results" MODIFIED="1712038993489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/backend$Test__api_tests_test_user_list.coverage" NAME="Test: api.tests.test_user_list Coverage Results" MODIFIED="1712039022358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/backend$functions.coverage" NAME="functions Coverage Results" MODIFIED="1711604944057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/builitin" />
     <SUITE FILE_PATH="coverage/backend$event_manager.coverage" NAME="event_manager Coverage Results" MODIFIED="1706679188463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/events" />
     <SUITE FILE_PATH="coverage/backend$__init____1_.coverage" NAME="__init__ (1) Coverage Results" MODIFIED="1712038426851" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/dao" />
-    <SUITE FILE_PATH="coverage/backend$Test__api_tests_test_user_list_TestUserListViewSet_test_hello.coverage" NAME="Test: api.tests.test_user_list.TestUserListViewSet.test_hello Coverage Results" MODIFIED="1712038977580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/backend$Test__api_tests_test_user_list_TestUserListViewSet_test_hello.coverage" NAME="Test: api.tests.test_user_list.TestUserListViewSet.test_hello Coverage Results" MODIFIED="1712039113885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/backend$Test__api_tests_test_custom_token_TestCustomJsonWebToken.coverage" NAME="Test: api.tests.test_custom_token.TestCustomJsonWebToken Coverage Results" MODIFIED="1711522004553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/backend$render_template_obj.coverage" NAME="render_template_obj Coverage Results" MODIFIED="1706090193785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/backend$Test__api_tests_test_project_destory_ProjectDestroyViewSetTests.coverage" NAME="Test: api.tests.test_project_destory.ProjectDestroyViewSetTests Coverage Results" MODIFIED="1711592068338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
