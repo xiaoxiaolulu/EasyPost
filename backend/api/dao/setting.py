@@ -390,7 +390,8 @@ class SettingDao:
             args_info = {key: parse_string_value(value) for key, value in params.get('args_info', {}).items()}
 
             # Execute the function and return the result
-            return func(**args_info)
+            ret = f"{func(**args_info)}\n\t\nProcess finished with exit code 0\n"
+            return ret
 
         except Exception as err:
             raise ValueError(f"函数调试错误：{err}") from err

@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Add debug function API view and update setting DAO.">
-      <change beforePath="$PROJECT_DIR$/api/schema/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/schema/setting.py" afterDir="false" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Add Functions API view, serializers, and filter.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +237,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="setting" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -245,12 +246,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api/dao" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/dao/setting.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/__init__.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -291,15 +292,15 @@
       <item itemvalue="Django tests.Test: api.tests.test_user_list.TestUserListViewSet" />
       <item itemvalue="Django tests.Test: api.tests.test_user_list.TestUserListViewSet.test_hello" />
       <item itemvalue="Python.__init__ (1)" />
-      <item itemvalue="Python.setting" />
+      <item itemvalue="Python.__init__" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.__init__ (1)" />
+        <item itemvalue="Python.__init__" />
         <item itemvalue="Django tests.Test: api.tests.test_user_list.TestUserListViewSet.test_hello" />
         <item itemvalue="Django tests.Test: api.tests.test_user_list" />
         <item itemvalue="Django tests.Test: api.tests.test_user_list.TestUserListViewSet" />
-        <item itemvalue="Python.setting" />
       </list>
     </recent_temporary>
   </component>
@@ -443,15 +444,7 @@
       <workItem from="1711534478853" duration="111000" />
       <workItem from="1711591405569" duration="42079000" />
       <workItem from="1711962633078" duration="55000" />
-      <workItem from="1711962720464" duration="30282000" />
-    </task>
-    <task id="LOCAL-00279" summary="Added several new functions to the built-in library: random_string, array_range, guid, url, and postcode.">
-      <option name="closed" value="true" />
-      <created>1711595020198</created>
-      <option name="number" value="00279" />
-      <option name="presentableId" value="LOCAL-00279" />
-      <option name="project" value="LOCAL" />
-      <updated>1711595020198</updated>
+      <workItem from="1711962720464" duration="31318000" />
     </task>
     <task id="LOCAL-00280" summary="Added several new functions to the built-in library: random_string, array_range, guid, url, and postcode.">
       <option name="closed" value="true" />
@@ -837,7 +830,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712128245939</updated>
     </task>
-    <option name="localTasksCounter" value="328" />
+    <task id="LOCAL-00328" summary="Add Functions API view, serializers, and filter.">
+      <option name="closed" value="true" />
+      <created>1712128508687</created>
+      <option name="number" value="00328" />
+      <option name="presentableId" value="LOCAL-00328" />
+      <option name="project" value="LOCAL" />
+      <updated>1712128508687</updated>
+    </task>
+    <option name="localTasksCounter" value="329" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -867,21 +868,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_function` method" />
-    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_function` method to" />
-    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_function` method to `" />
-    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_function` method to `Setting" />
-    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_function` method to `SettingDA" />
-    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_function` method to `SettingDAO" />
-    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_function` method to `SettingDAO`" />
-    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_function` method to `SettingDAO` class" />
-    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_function` method to `SettingDAO` class in" />
-    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_function` method to `SettingDAO` class in `" />
-    <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_function` method to `SettingDAO` class in `setting" />
     <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_function` method to `SettingDAO` class in `setting." />
     <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_function` method to `SettingDAO` class in `setting.py" />
     <MESSAGE value="Added `parse_string_value` function to `encoder.py` and `run_function` method to `SettingDAO` class in `setting.py`." />
-    <MESSAGE value="Add" />
     <MESSAGE value="Add debug" />
     <MESSAGE value="Add debug function" />
     <MESSAGE value="Add debug function API" />
@@ -892,7 +881,19 @@
     <MESSAGE value="Add debug function API view and update setting DA" />
     <MESSAGE value="Add debug function API view and update setting DAO" />
     <MESSAGE value="Add debug function API view and update setting DAO." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add debug function API view and update setting DAO." />
+    <MESSAGE value="Add" />
+    <MESSAGE value="Add Function" />
+    <MESSAGE value="Add Functions" />
+    <MESSAGE value="Add Functions API" />
+    <MESSAGE value="Add Functions API view" />
+    <MESSAGE value="Add Functions API view," />
+    <MESSAGE value="Add Functions API view, serial" />
+    <MESSAGE value="Add Functions API view, serializers" />
+    <MESSAGE value="Add Functions API view, serializers," />
+    <MESSAGE value="Add Functions API view, serializers, and" />
+    <MESSAGE value="Add Functions API view, serializers, and filter" />
+    <MESSAGE value="Add Functions API view, serializers, and filter." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Functions API view, serializers, and filter." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$__init____2_.coverage" NAME="__init__ (2) Coverage Results" MODIFIED="1706696733502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/management/commands" />
