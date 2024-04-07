@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="&quot;Modify setting.py to add exit code message in debug function&quot;">
-      <change afterPath="$PROJECT_DIR$/../web/src/views/system/function/components/detail.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/src/views/system/function/index.vue" afterDir="false" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="This commit includes changes to several files. In the `ReportList.vue` file, the `queryList` function has been modified to handle errors more gracefully and to show a message when there are no results. The `ReportDetail and a new `ReportDetailInfo` component has been added to display detailed information about a selected report.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/setting.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/recursion.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/recursion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/api/setting.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/api/setting.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/routers/modules/system.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/routers/modules/system.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/system/function/components/detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/system/function/components/detail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/system/function/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/system/function/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -457,23 +453,7 @@
       <workItem from="1711962720464" duration="39413000" />
       <workItem from="1712461013459" duration="87000" />
       <workItem from="1712461146657" duration="56000" />
-      <workItem from="1712461413811" duration="3843000" />
-    </task>
-    <task id="LOCAL-00282" summary="Added built-in comparison functions for validating data.">
-      <option name="closed" value="true" />
-      <created>1711604765297</created>
-      <option name="number" value="00282" />
-      <option name="presentableId" value="LOCAL-00282" />
-      <option name="project" value="LOCAL" />
-      <updated>1711604765297</updated>
-    </task>
-    <task id="LOCAL-00283" summary="Added new built-in function `get_time_stamp` to generate time stamps.">
-      <option name="closed" value="true" />
-      <created>1711604981914</created>
-      <option name="number" value="00283" />
-      <option name="presentableId" value="LOCAL-00283" />
-      <option name="project" value="LOCAL" />
-      <updated>1711604981915</updated>
+      <workItem from="1712461413811" duration="4694000" />
     </task>
     <task id="LOCAL-00284" summary="Update base.py: remove unused imports, adjust code structure.">
       <option name="closed" value="true" />
@@ -851,7 +831,23 @@
       <option name="project" value="LOCAL" />
       <updated>1712135866698</updated>
     </task>
-    <option name="localTasksCounter" value="331" />
+    <task id="LOCAL-00331" summary="This commit includes changes to several files. In the `ReportList.vue` file, the `queryList` function has been modified to handle errors more gracefully and to show a message when there are no results. The `ReportDetail.vue` file has been updated to include a `ReportDetailInfo` component that displays detailed information about a selected report. The `styles.scss` file includes some new styles for the `ReportDetailInfo` component. The `index.vue` file has been updated with some new data">
+      <option name="closed" value="true" />
+      <created>1712471710236</created>
+      <option name="number" value="00331" />
+      <option name="presentableId" value="LOCAL-00331" />
+      <option name="project" value="LOCAL" />
+      <updated>1712471710236</updated>
+    </task>
+    <task id="LOCAL-00332" summary="This commit includes changes to several files. In the `ReportList.vue` file, the `queryList` function has been modified to handle errors more gracefully and to show a message when there are no results. The `ReportDetail and a new `ReportDetailInfo` component has been added to display detailed information about a selected report.">
+      <option name="closed" value="true" />
+      <created>1712471718343</created>
+      <option name="number" value="00332" />
+      <option name="presentableId" value="LOCAL-00332" />
+      <option name="project" value="LOCAL" />
+      <updated>1712471718343</updated>
+    </task>
+    <option name="localTasksCounter" value="333" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -881,32 +877,32 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add Functions" />
-    <MESSAGE value="Add Functions API" />
-    <MESSAGE value="Add Functions API view" />
-    <MESSAGE value="Add Functions API view," />
-    <MESSAGE value="Add Functions API view, serial" />
-    <MESSAGE value="Add Functions API view, serializers" />
-    <MESSAGE value="Add Functions API view, serializers," />
-    <MESSAGE value="Add Functions API view, serializers, and" />
-    <MESSAGE value="Add Functions API view, serializers, and filter" />
-    <MESSAGE value="Add Functions API view, serializers, and filter." />
-    <MESSAGE value="&quot;" />
-    <MESSAGE value="&quot;Mod" />
-    <MESSAGE value="&quot;Modify" />
-    <MESSAGE value="&quot;Modify setting" />
-    <MESSAGE value="&quot;Modify setting." />
-    <MESSAGE value="&quot;Modify setting.py" />
-    <MESSAGE value="&quot;Modify setting.py to" />
-    <MESSAGE value="&quot;Modify setting.py to add" />
-    <MESSAGE value="&quot;Modify setting.py to add exit" />
-    <MESSAGE value="&quot;Modify setting.py to add exit code" />
-    <MESSAGE value="&quot;Modify setting.py to add exit code message" />
-    <MESSAGE value="&quot;Modify setting.py to add exit code message in" />
-    <MESSAGE value="&quot;Modify setting.py to add exit code message in debug" />
-    <MESSAGE value="&quot;Modify setting.py to add exit code message in debug function" />
-    <MESSAGE value="&quot;Modify setting.py to add exit code message in debug function&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Modify setting.py to add exit code message in debug function&quot;" />
+    <MESSAGE value="This commit includes changes to several files. In the `ReportList.vue` file, the `queryList` function has been modified to handle errors more gracefully and to show a message when there are no results. The `ReportDetail.vue` file has been updated to include a `ReportDetailInfo` component that displays detailed information about a selected report. The `styles.scss` file includes some new styles for the `ReportDetailInfo` component. The `index.vue` file has been updated with" />
+    <MESSAGE value="This commit includes changes to several files. In the `ReportList.vue` file, the `queryList` function has been modified to handle errors more gracefully and to show a message when there are no results. The `ReportDetail.vue` file has been updated to include a `ReportDetailInfo` component that displays detailed information about a selected report. The `styles.scss` file includes some new styles for the `ReportDetailInfo` component. The `index.vue` file has been updated with some" />
+    <MESSAGE value="This commit includes changes to several files. In the `ReportList.vue` file, the `queryList` function has been modified to handle errors more gracefully and to show a message when there are no results. The `ReportDetail.vue` file has been updated to include a `ReportDetailInfo` component that displays detailed information about a selected report. The `styles.scss` file includes some new styles for the `ReportDetailInfo` component. The `index.vue` file has been updated with some new" />
+    <MESSAGE value="This commit includes changes to several files. In the `ReportList.vue` file, the `queryList` function has been modified to handle errors more gracefully and to show a message when there are no results. The `ReportDetail" />
+    <MESSAGE value="This commit includes changes to several files. In the `ReportList.vue` file, the `queryList` function has been modified to handle errors more gracefully and to show a message when there are no results. The `ReportDetail and" />
+    <MESSAGE value="This commit includes changes to several files. In the `ReportList.vue` file, the `queryList` function has been modified to handle errors more gracefully and to show a message when there are no results. The `ReportDetail and a" />
+    <MESSAGE value="This commit includes changes to several files. In the `ReportList.vue` file, the `queryList` function has been modified to handle errors more gracefully and to show a message when there are no results. The `ReportDetail and a new" />
+    <MESSAGE value="This commit includes changes to several files. In the `ReportList.vue` file, the `queryList` function has been modified to handle errors more gracefully and to show a message when there are no results. The `ReportDetail and a new `" />
+    <MESSAGE value="This commit includes changes to several files. In the `ReportList.vue` file, the `queryList` function has been modified to handle errors more gracefully and to show a message when there are no results. The `ReportDetail and a new `Report" />
+    <MESSAGE value="This commit includes changes to several files. In the `ReportList.vue` file, the `queryList` function has been modified to handle errors more gracefully and to show a message when there are no results. The `ReportDetail and a new `ReportDetail" />
+    <MESSAGE value="This commit includes changes to several files. In the `ReportList.vue` file, the `queryList` function has been modified to handle errors more gracefully and to show a message when there are no results. The `ReportDetail and a new `ReportDetailInfo" />
+    <MESSAGE value="This commit includes changes to several files. In the `ReportList.vue` file, the `queryList` function has been modified to handle errors more gracefully and to show a message when there are no results. The `ReportDetail and a new `ReportDetailInfo`" />
+    <MESSAGE value="This commit includes changes to several files. In the `ReportList.vue` file, the `queryList` function has been modified to handle errors more gracefully and to show a message when there are no results. The `ReportDetail and a new `ReportDetailInfo` component" />
+    <MESSAGE value="This commit includes changes to several files. In the `ReportList.vue` file, the `queryList` function has been modified to handle errors more gracefully and to show a message when there are no results. The `ReportDetail and a new `ReportDetailInfo` component has" />
+    <MESSAGE value="This commit includes changes to several files. In the `ReportList.vue` file, the `queryList` function has been modified to handle errors more gracefully and to show a message when there are no results. The `ReportDetail and a new `ReportDetailInfo` component has been" />
+    <MESSAGE value="This commit includes changes to several files. In the `ReportList.vue` file, the `queryList` function has been modified to handle errors more gracefully and to show a message when there are no results. The `ReportDetail and a new `ReportDetailInfo` component has been added" />
+    <MESSAGE value="This commit includes changes to several files. In the `ReportList.vue` file, the `queryList` function has been modified to handle errors more gracefully and to show a message when there are no results. The `ReportDetail and a new `ReportDetailInfo` component has been added to" />
+    <MESSAGE value="This commit includes changes to several files. In the `ReportList.vue` file, the `queryList` function has been modified to handle errors more gracefully and to show a message when there are no results. The `ReportDetail and a new `ReportDetailInfo` component has been added to display" />
+    <MESSAGE value="This commit includes changes to several files. In the `ReportList.vue` file, the `queryList` function has been modified to handle errors more gracefully and to show a message when there are no results. The `ReportDetail and a new `ReportDetailInfo` component has been added to display detailed" />
+    <MESSAGE value="This commit includes changes to several files. In the `ReportList.vue` file, the `queryList` function has been modified to handle errors more gracefully and to show a message when there are no results. The `ReportDetail and a new `ReportDetailInfo` component has been added to display detailed information" />
+    <MESSAGE value="This commit includes changes to several files. In the `ReportList.vue` file, the `queryList` function has been modified to handle errors more gracefully and to show a message when there are no results. The `ReportDetail and a new `ReportDetailInfo` component has been added to display detailed information about" />
+    <MESSAGE value="This commit includes changes to several files. In the `ReportList.vue` file, the `queryList` function has been modified to handle errors more gracefully and to show a message when there are no results. The `ReportDetail and a new `ReportDetailInfo` component has been added to display detailed information about a" />
+    <MESSAGE value="This commit includes changes to several files. In the `ReportList.vue` file, the `queryList` function has been modified to handle errors more gracefully and to show a message when there are no results. The `ReportDetail and a new `ReportDetailInfo` component has been added to display detailed information about a selected" />
+    <MESSAGE value="This commit includes changes to several files. In the `ReportList.vue` file, the `queryList` function has been modified to handle errors more gracefully and to show a message when there are no results. The `ReportDetail and a new `ReportDetailInfo` component has been added to display detailed information about a selected report" />
+    <MESSAGE value="This commit includes changes to several files. In the `ReportList.vue` file, the `queryList` function has been modified to handle errors more gracefully and to show a message when there are no results. The `ReportDetail and a new `ReportDetailInfo` component has been added to display detailed information about a selected report." />
+    <option name="LAST_COMMIT_MESSAGE" value="This commit includes changes to several files. In the `ReportList.vue` file, the `queryList` function has been modified to handle errors more gracefully and to show a message when there are no results. The `ReportDetail and a new `ReportDetailInfo` component has been added to display detailed information about a selected report." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$recursion.coverage" NAME="recursion Coverage Results" MODIFIED="1712139211023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />

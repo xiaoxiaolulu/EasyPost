@@ -102,11 +102,11 @@ const handlePageChange = (newPage: any) => {
 const editHandler = (row) => {
   if (row) {
     router.push({
-      name: "recordDetail",
+      name: "functionDetail",
       query: {id: row.id}
     });
   } else {
-    ElMessage.error("查询测试报告异常请重试!");
+    ElMessage.error("查询内置函数异常请重试!");
   }
 }
 </script>

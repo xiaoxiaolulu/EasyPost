@@ -1,17 +1,5 @@
 <template>
   <div class="app-container">
-    <el-card style="margin-bottom: 10px">
-      <div class="report-seal"
-           :style="{border: `solid 4px var(${reportStatus? '--el-color-success': '--el-color-danger'})`}">
-        <div class="report-seal-son"
-             :style="{border: `solid 2px var(${reportStatus? '--el-color-success': '--el-color-danger'})`,
-           color: `var(${reportStatus? '--el-color-success': '--el-color-danger'})`
-      }">
-          <span class="report-seal-text">{{ reportStatus ? "通过" : "不通过" }}</span>
-        </div>
-      </div>
-      <ReportStatistics :data="state.statisticsData"></ReportStatistics>
-    </el-card>
     <el-card>
       <div>
         <el-form :inline="true" :model="queryParams">

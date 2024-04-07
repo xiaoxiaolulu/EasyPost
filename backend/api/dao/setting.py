@@ -298,15 +298,13 @@ class SettingDao:
         # Load functions from combined content
         functions_mapping = self.load_func_content(f"{common_content}\n{content}", module_name)
 
-        func_list = []
-        for func_name, func in functions_mapping.items():
-            # Early termination if function definition is absent
-            if file_content.find(f'def {func_name}(') == -1:
-                continue
-
-            # Concisely filter based on search terms and handle potential absence of a docstring
-            if self.handler_func_list(func, params):
-                func_list.append(self.handle_func_info(func))
+        func_list = [
+            self.handle_func_info(func)
+            for func_name, func in functions_mapping.items()
+            if f"def {func_name}(" in file_content  # Check for function definition
+               and self.handler_func_list(func, params)  # Apply filtering
+               and (not params.get('name') or func_name.__contains__(params.get('name', '')))  # Handle name filtering
+        ]
 
         func_data = {
             'func_list': func_list,
