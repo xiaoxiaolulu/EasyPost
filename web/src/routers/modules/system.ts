@@ -31,6 +31,19 @@ const systemRouter = [{
             meta: { title: '数据库管理' , icon: 'AddLocation'}
         },
         {
+            path: '/function/detail',
+            component: () => import('@/views/system/function/components/detail.vue'),
+            name: 'functionDetail',
+            hidden: true,
+            meta: { title: '内置函数详情' , icon: 'AddLocation'}
+        },
+        {
+            path: '/system/function',
+            component: () => import('@/views/system/function/index.vue'),
+            name: 'function',
+            meta: { title: '内置函数' , icon: 'AddLocation'}
+        },
+        {
             path: '/system/user',
             component: () => import('@/views/system/user/index.vue'),
             name: 'user',

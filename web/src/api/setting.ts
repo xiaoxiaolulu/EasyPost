@@ -96,3 +96,29 @@ export function databaseCreate(data: any) {
         data
     })
 }
+
+export function functionList(params: any) {
+    return request({
+        url: `/api/function/list`,
+        method: 'get',
+        params
+    })
+}
+
+
+export function functionDebug(data: any) {
+    return request({
+        url: `/api/function/debug/${data.id}`,
+        method: 'post',
+        data
+    })
+}
+
+
+export function functionDetailList(data: any) {
+    return request({
+        url: `/api/function/detailList/${data.id}`,
+        method: 'post',
+        data
+    })
+}

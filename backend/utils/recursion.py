@@ -48,7 +48,7 @@ class GetJsonParams(object):
         """
         parent_level = cls.get_value(my_dict=my_dict, key=parent_key)
         for index, content in enumerate(parent_level):
-            for key, value in content.items(): # noqa
+            for key, value in content.items():  # noqa
                 if key == sibling_key and value == int(sibling_value):
                     return_value = cls.get_value(my_dict=my_dict, key=parent_key)[index][same_key]  # noqa
                     return return_value
