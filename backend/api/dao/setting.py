@@ -268,7 +268,7 @@ class SettingDao:
         )
         return condition
 
-    def get_function_by_id(self, params: typing.Union[typing.Dict], pk: int):
+    def get_function_by_id(self, params: typing.Union[typing.Dict]):
         """
         Retrieves functions based on ID and filters by optional parameters.
 
@@ -279,21 +279,21 @@ class SettingDao:
         Returns:
             dict: A dictionary containing a list of function information and the function mapping.
         """
-        if not pk:
+        if not params.get('id'):
             raise ValueError("参数错误！")
 
         # Retrieve function content based on ID
-        func_info = self.get_func_content(func_key=pk)
+        func_info = self.get_func_content(func_key=params.get('id'))
 
         # Extract content and common content (if available)
         content = func_info.get('content', '')
         common_content = func_info.get('common_content', '')
 
         # Combine content for function loading
-        file_content = content if pk else common_content  # Use content for specific ID, common content for all
+        file_content = content if params.get('id') else common_content  # Use content for specific ID, common content for all
 
         # Generate unique module name using UUID hash
-        module_name = f"{pk}_{uuid.uuid4().__hash__()}"
+        module_name = f"{params.get('id')}_{uuid.uuid4().__hash__()}"
 
         # Load functions from combined content
         functions_mapping = self.load_func_content(f"{common_content}\n{content}", module_name)

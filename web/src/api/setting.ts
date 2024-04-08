@@ -117,7 +117,7 @@ export function functionDebug(data: any) {
 
 export function functionDetailList(data: any) {
     return request({
-        url: `/api/function/detailList/${data.id}`,
+        url: `/api/function/detailList`,
         method: 'post',
         data
     })

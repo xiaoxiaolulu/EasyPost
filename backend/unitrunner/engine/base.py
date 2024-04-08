@@ -765,7 +765,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             """
         print = ep.print  # noqa
         env = ep.env  # noqa
-        setup_script = data.get('setup_script')
+        setup_script = data.get('setup_script', '')
         if setup_script:
             try:
                 exec(setup_script)
@@ -773,8 +773,9 @@ class BaseTest(unittest.TestCase, CaseRunLog):
                 ep.error_log('❌前置脚本执行错误: {}\n'.format(e))
                 delattr(ep, 'hook_gen')
                 raise
+
         response = yield  # noqa
-        teardown_script = data.get('teardown_script')
+        teardown_script = data.get('teardown_script', '')
         if teardown_script:
             try:
                 exec(teardown_script)

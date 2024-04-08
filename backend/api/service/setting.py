@@ -170,7 +170,7 @@ class GetFunctionListApiView(APIView):
 
         try:
             dao = SettingDao()
-            response = dao.get_function_by_id(request.data, kwargs['pk'])
+            response = dao.get_function_by_id(request.data)
             return Response(ResponseStandard.success(
                 data=response.get('func_list', [])
             ))

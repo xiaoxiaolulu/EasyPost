@@ -44,59 +44,11 @@
                   </div>
                 </div>
               </div>
-              <el-drawer
-                  v-model="state.showDetailInfo"
-                  size="70%"
-                  append-to-body
-                  direction="ltr"
-                  destroy-on-close
-                  :with-header="true">
-                <template #header>
-                        <span>
-                          <strong class="pr10">报告详情</strong>
-                          <el-tag type="danger" v-if="state.statisticsData.success === 0">不通过</el-tag>
-                          <el-tag type="success" v-else>通过</el-tag>
-                        </span>
-                </template>
-                <div style="height: 500px; overflow-y: auto">
-                  <case-step-detail :reportData="ResponseData"></case-step-detail>
-                </div>
-              </el-drawer>
             </template>
           </el-table-column>
-          <el-table-column prop="name" label="用例名称"></el-table-column>
-          <el-table-column prop="all" label="步骤总数">
-            <template #default="scope">
-              <el-tag type="info">{{scope.row.all}}</el-tag>
-            </template>
-          </el-table-column>
-          <el-table-column prop="success" label="成功数">
-            <template #header="{ column }">
-              <span>{{ column.label }}</span>
-              <el-icon style="color: #7a8b9a"><Select/></el-icon>
-            </template>
-            <template #default="scope">
-              <el-tag type="success">{{scope.row.success}}</el-tag>
-            </template>
-          </el-table-column>
-          <el-table-column prop="fail" label="失败数">
-            <template #header="{ column }">
-              <span>{{ column.label }}</span>
-              <el-icon style="color: red"><Close /></el-icon>
-            </template>
-            <template #default="scope">
-              <el-tag type="danger">{{scope.row.fail}}</el-tag>
-            </template>
-          </el-table-column>
-          <el-table-column prop="error" label="错误数">
-            <template #header="{ column }">
-              <span>{{ column.label }}</span>
-              <el-icon style="color: orange"><WarningFilled /></el-icon>
-            </template>
-            <template #default="scope">
-              <el-tag type="warning">{{scope.row.error}}</el-tag>
-            </template>
-          </el-table-column>
+          <el-table-column prop="func_name" label="函数名称"></el-table-column>
+          <el-table-column prop="func_args" label="函数参数"></el-table-column>
+          <el-table-column prop="func_doc" label="函数说明"></el-table-column>
         <!--分页组件-->
           <el-pagination
               style="margin-top: 8px;"
@@ -116,11 +68,9 @@
 <script setup lang="ts">
 import {useRoute} from "vue-router";
 import {h, reactive, nextTick, watch, onMounted, computed, ref} from "vue";
-import ReportStatistics from "./ReportStatistics.vue"
 import {Close, Search, WarningFilled} from "@element-plus/icons-vue";
 import {ElMessage, ElPagination} from "element-plus";
-import {recordDetail} from "@/api/record";
-import CaseStepDetail from "@/views/record/build/components/caseStepDetail.vue";
+import {functionDetailList} from "@/api/setting";
 
 const route = useRoute()
 
@@ -149,8 +99,7 @@ const state = reactive({
 
 const queryParams = reactive({
   id: '',
-  name: '',
-  page: 1
+  name: ''
 })
 
 const tableLoading = ref(false)
@@ -161,21 +110,16 @@ const count = ref(0)
 
 const ResponseData = ref()
 
-const reportStatus = computed(() => {
-  return state.statisticsData?.success === 1 || state.statisticsData?.success
-})
-
 const queryList = () => {
   tableLoading.value = true;
   queryParams.id = route.query.id
   console.log(queryParams)
-  recordDetail(queryParams).then((response) => {
+  functionDetailList(queryParams).then((response) => {
     tableLoading.value = false;
-    tableData.value = response.data.results;
-    count.value = response.data.count;
+    tableData.value = response.data.data;
   }).catch((error) => {
     // console.log(error.response)
-    ElMessage.error("获取报告数据失败;请重试！")
+    ElMessage.error("获取内置函数数据失败;请重试！")
   })
 }
 

@@ -106,7 +106,7 @@ if __name__ == '__main__':
                 #         'expect': '$.user_mobile'}]
                 # },
                 {
-                    "title": "测试用例44442",
+                    "title": "33333333",
                     # "host": "http://httpbin.org/post",
                     "interface": {
                         "url": "http://httpbin.org/post",
@@ -119,7 +119,7 @@ if __name__ == '__main__':
                     "request": {
                         'json': {"mobile_phone": "${{user_mobile}}", "pwd": "lemonban"},
                     },
-                    'setup_script': "print('前置脚本123')",
+                    'setup_script': "global_func.get_timestamp()",
                     'teardown_script': "ep.assertion('相等',200, 200)",
                     'validators': [{
                         'method': '相等',

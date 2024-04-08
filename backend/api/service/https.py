@@ -29,7 +29,6 @@ from utils.trees import (
 
 
 class ApiFastView(APIView):
-
     permission_classes = [IsAuthenticated]
 
     @staticmethod
@@ -46,7 +45,6 @@ class ApiFastView(APIView):
 
 
 class TreeView(APIView):
-
     serializer_class = RelationSerializer
     permission_classes = [IsAuthenticated]
 
@@ -91,7 +89,6 @@ class TreeView(APIView):
 
 
 class ApiTestListView(mixins.ListModelMixin, viewsets.GenericViewSet):
-
     serializer_class = ApiSerializer
     queryset = Api.objects
     permission_classes = [IsAuthenticated]
@@ -101,7 +98,7 @@ class ApiTestListView(mixins.ListModelMixin, viewsets.GenericViewSet):
             "request": request,
         }
         serializer = ApiSerializer(data=request.query_params, context=context)
-        if serializer.is_valid(): # noqa
+        if serializer.is_valid():  # noqa
             project = request.query_params.get("project")
             node = request.query_params.get("node")
             name = request.query_params.get("name")
@@ -136,14 +133,12 @@ class ApiTestListView(mixins.ListModelMixin, viewsets.GenericViewSet):
 
 
 class ApiDetailView(MagicRetrieveApi):
-
     serializer_class = ApiSerializer
     queryset = Api.objects.all()
     permission_classes = [IsAuthenticated]
-    
+
 
 class DelApiView(APIView):
-
     permission_classes = [IsAuthenticated]
 
     @staticmethod
@@ -156,7 +151,6 @@ class DelApiView(APIView):
 
 
 class SaveOrUpdateApiView(APIView):
-
     permission_classes = [IsAuthenticated]
 
     @staticmethod
@@ -172,7 +166,6 @@ class SaveOrUpdateApiView(APIView):
 
 
 class RunApiView(APIView):
-
     permission_classes = [IsAuthenticated]
 
     @staticmethod
@@ -186,7 +179,6 @@ class RunApiView(APIView):
 
 
 class SaveOrUpdateCaseView(APIView):
-
     permission_classes = [IsAuthenticated]
 
     @staticmethod
@@ -202,7 +194,6 @@ class SaveOrUpdateCaseView(APIView):
 
 
 class DelCaseView(APIView):
-
     permission_classes = [IsAuthenticated]
 
     @staticmethod
@@ -221,7 +212,6 @@ class CaseDetailView(MagicRetrieveApi):
 
 
 class RunCaseView(APIView):
-
     permission_classes = [IsAuthenticated]
 
     @staticmethod
@@ -235,7 +225,6 @@ class RunCaseView(APIView):
 
 
 class ApiSnapshotView(AsyncAPIView):
-
     permission_classes = [IsAuthenticated]
 
     @staticmethod
@@ -249,7 +238,6 @@ class ApiSnapshotView(AsyncAPIView):
 
 
 class CaseListView(mixins.ListModelMixin, viewsets.GenericViewSet):
-
     serializer_class = CaseSerializers
     queryset = Case.objects
     permission_classes = [IsAuthenticated]
@@ -260,7 +248,7 @@ class CaseListView(mixins.ListModelMixin, viewsets.GenericViewSet):
         }
         serializer = CaseSerializers(data=request.query_params, context=context)
 
-        if serializer.is_valid(): # noqa
+        if serializer.is_valid():  # noqa
             project = request.query_params.get("project")
             node = request.query_params.get("node")
             name = request.query_params.get("name")
