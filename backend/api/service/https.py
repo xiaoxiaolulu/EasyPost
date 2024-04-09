@@ -1,4 +1,6 @@
 import json
+import os
+
 from django.core.exceptions import ObjectDoesNotExist
 from rest_framework import (
     status,
@@ -21,8 +23,14 @@ from api.schema.https import (
     ApiSerializer,
     CaseSerializers
 )
+from config.settings import MEDIA_ROOT
 from unitrunner.request.http_handler import HttpHandler
 from api.response.fatcory import ResponseStandard
+from utils.api_migrate import (
+    DataMigrator,
+    SwaggerDataSource,
+    UitRunnerSource
+)
 from utils.trees import (
     get_tree_max_id
 )
@@ -220,6 +228,30 @@ class RunCaseView(APIView):
         try:
             response = HttpDao.run_case_steps(request.data)
             return Response(ResponseStandard.success(data=response))
+        except Exception as err:
+            return Response(ResponseStandard.failed(msg=str(err)))
+
+
+class ImportApiView(APIView):
+
+    permission_classes = [IsAuthenticated]
+
+    @staticmethod
+    def post(request, *args, **kwargs):
+
+        try:
+            files = request.FILES.get('file')
+            filepath = os.path.join(MEDIA_ROOT, files.name)
+
+            with open(filepath, 'wb+') as f:
+                for chunk in files.chunks():
+                    f.write(chunk)
+
+            migrator = DataMigrator(SwaggerDataSource(), UitRunnerSource())
+            migrator.migrate(filename=filepath, request=request, pk=kwargs["pk"])
+
+            return Response(ResponseStandard.success())
+
         except Exception as err:
             return Response(ResponseStandard.failed(msg=str(err)))
 

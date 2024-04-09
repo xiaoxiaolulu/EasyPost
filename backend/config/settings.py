@@ -147,7 +147,7 @@ STATIC_URL = "/static/"
 # MEDIA
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#media-root
-
+MEDIA_ROOT = os.path.join(BASE_DIR, "api", "templates", "media")
 # https://docs.djangoproject.com/en/dev/ref/settings/#media-url
 MEDIA_URL = "/media/"
 

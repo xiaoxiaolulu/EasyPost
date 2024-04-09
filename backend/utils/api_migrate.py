@@ -338,11 +338,12 @@ class DataMigrator:
         self.source = source
         self.target = target
 
-    def migrate(self, request=None, pk=None):
+    def migrate(self, filename=None, request=None, pk=None):
         """
         Migrates test case data from source to target.
 
         Args:
+            filename: filepath
             request (HttpRequest, optional): The Django request object (if applicable).
             pk (int, optional): Primary key of the project (if applicable).
 
@@ -352,7 +353,7 @@ class DataMigrator:
 
         try:
             # Read test case data from the source (assuming 'middle.json')
-            ctx = self.source.read('middle.json')
+            ctx = self.source.read(filename)
 
             # Add request and pk information to each context dictionary
             ctx = [
