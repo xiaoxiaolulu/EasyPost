@@ -4,21 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="&quot;Add Swagger data source and API migration&quot;">
-      <change afterPath="$PROJECT_DIR$/../pyobfuscate.py" afterDir="false" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="&quot;Add import API view and associated functionality&quot;">
+      <change afterPath="$PROJECT_DIR$/../web/src/views/https/api/components/importDialog.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/service/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/https.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/templates/asserts/0105142655.png" beforeDir="false" afterPath="$PROJECT_DIR$/api/templates/media/middle.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/templates/asserts/1219141210.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/templates/asserts/1219141313.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/templates/asserts/1221160034.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/templates/asserts/219141328.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/templates/asserts/221134334.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/api_migrate.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/api_migrate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/api/http.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/api/http.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/https/api/components/Table.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/api/components/Table.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -468,15 +459,7 @@
       <workItem from="1711962720464" duration="39413000" />
       <workItem from="1712461013459" duration="87000" />
       <workItem from="1712461146657" duration="56000" />
-      <workItem from="1712461413811" duration="32176000" />
-    </task>
-    <task id="LOCAL-00287" summary="Refactored code for better readability and maintainability.">
-      <option name="closed" value="true" />
-      <created>1711615779292</created>
-      <option name="number" value="00287" />
-      <option name="presentableId" value="LOCAL-00287" />
-      <option name="project" value="LOCAL" />
-      <updated>1711615779292</updated>
+      <workItem from="1712461413811" duration="35405000" />
     </task>
     <task id="LOCAL-00288" summary="Updated code documentation and added new methods for handling test cases and generating test functions.">
       <option name="closed" value="true" />
@@ -862,7 +845,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712631615825</updated>
     </task>
-    <option name="localTasksCounter" value="336" />
+    <task id="LOCAL-00336" summary="&quot;Add import API view and associated functionality&quot;">
+      <option name="closed" value="true" />
+      <created>1712643798168</created>
+      <option name="number" value="00336" />
+      <option name="presentableId" value="LOCAL-00336" />
+      <option name="project" value="LOCAL" />
+      <updated>1712643798168</updated>
+    </task>
+    <option name="localTasksCounter" value="337" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -892,23 +883,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Improve code readability and maintainability by using list comprehension, handle" />
-    <MESSAGE value="Improve code readability and maintainability by using list comprehension, handle name" />
-    <MESSAGE value="Improve code readability and maintainability by using list comprehension, handle name filtering" />
-    <MESSAGE value="Improve code readability and maintainability by using list comprehension, handle name filtering in" />
-    <MESSAGE value="Improve code readability and maintainability by using list comprehension, handle name filtering in `" />
-    <MESSAGE value="Improve code readability and maintainability by using list comprehension, handle name filtering in `Setting" />
-    <MESSAGE value="Improve code readability and maintainability by using list comprehension, handle name filtering in `SettingD" />
-    <MESSAGE value="Improve code readability and maintainability by using list comprehension, handle name filtering in `SettingDao" />
-    <MESSAGE value="Improve code readability and maintainability by using list comprehension, handle name filtering in `SettingDao`" />
     <MESSAGE value="Improve code readability and maintainability by using list comprehension, handle name filtering in `SettingDao` and" />
     <MESSAGE value="Improve code readability and maintainability by using list comprehension, handle name filtering in `SettingDao` and update" />
     <MESSAGE value="Improve code readability and maintainability by using list comprehension, handle name filtering in `SettingDao` and update component" />
     <MESSAGE value="Improve code readability and maintainability by using list comprehension, handle name filtering in `SettingDao` and update component route" />
     <MESSAGE value="Improve code readability and maintainability by using list comprehension, handle name filtering in `SettingDao` and update component route name" />
     <MESSAGE value="Improve code readability and maintainability by using list comprehension, handle name filtering in `SettingDao` and update component route name." />
-    <MESSAGE value="&quot;" />
-    <MESSAGE value="&quot;Add" />
     <MESSAGE value="&quot;Add Sw" />
     <MESSAGE value="&quot;Add Swagger" />
     <MESSAGE value="&quot;Add Swagger data" />
@@ -917,7 +897,18 @@
     <MESSAGE value="&quot;Add Swagger data source and API" />
     <MESSAGE value="&quot;Add Swagger data source and API migration" />
     <MESSAGE value="&quot;Add Swagger data source and API migration&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Add Swagger data source and API migration&quot;" />
+    <MESSAGE value="Changed" />
+    <MESSAGE value="Changed:" />
+    <MESSAGE value="&quot;" />
+    <MESSAGE value="&quot;Add" />
+    <MESSAGE value="&quot;Add import" />
+    <MESSAGE value="&quot;Add import API" />
+    <MESSAGE value="&quot;Add import API view" />
+    <MESSAGE value="&quot;Add import API view and" />
+    <MESSAGE value="&quot;Add import API view and associated" />
+    <MESSAGE value="&quot;Add import API view and associated functionality" />
+    <MESSAGE value="&quot;Add import API view and associated functionality&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Add import API view and associated functionality&quot;" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$recursion.coverage" NAME="recursion Coverage Results" MODIFIED="1712139211023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />

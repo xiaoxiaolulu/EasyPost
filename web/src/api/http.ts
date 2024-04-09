@@ -144,3 +144,13 @@ export function savePlanOrUpdate(data: any) {
         data
     })
 }
+
+
+export function importApi(data: any) {
+    return request({
+        url: `/api/http/importApi/${data.id}`,
+        method: 'post',
+        headers: {'Content-Type': 'multipart/form-data'},
+        data
+    })
+}

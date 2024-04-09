@@ -21,6 +21,12 @@
           </el-icon>
           新建接口
         </el-button>
+        <el-button type="primary" @click="upload">
+          <el-icon>
+            <UploadFilled/>
+          </el-icon>
+          导入接口
+        </el-button>
       </div>
       <div class="table-inner">
         <el-table
@@ -77,17 +83,18 @@
         />
       </div>
     </div>
-
+    <import-api v-model="isShow" :rowData="rowData" @onChangeDialog="onChangeDialog"/>
   </div>
 </template>
 <script lang="ts" setup>
 import {ElMessageBox, ElMessage, FormInstance, ElPagination} from 'element-plus'
-import {Search, Plus} from '@element-plus/icons-vue'
+import {Search, Plus, UploadFilled} from '@element-plus/icons-vue'
 import {onMounted, reactive, ref} from 'vue'
 import {useRouter} from "vue-router";
 import {getHttpList, deleteHttp} from "@/api/http";
 import {parseTime} from "@/utils";
 import {showErrMessage} from "@/utils/element";
+import ImportApi from "./importDialog.vue"
 
 const tableData = ref([])
 const dialogVisible = ref(false)
@@ -108,6 +115,8 @@ const queryParams = reactive({
 
 const count = ref(0)
 
+const isShow = ref(false)
+
 const tags =  reactive([
   { id: 0, name: '调试中', status: 'debug' },
   { id: 1, name: '已废弃', status: 'discard'},
@@ -125,6 +134,8 @@ const selectionData = ref()
 
 const selectionShow = ref(false)
 
+const rowData = ref({})
+
 const reset = (formEl: FormInstance | undefined) => {
   loading.value = true
   setTimeout(() => {
@@ -141,6 +152,16 @@ const queryList = () => {
     ElMessage.error("获取接口列表数据失败;请重试！")
   })
 }
+
+const upload = () => {
+  isShow.value = true
+  rowData.value["pk"] = queryParams.project
+}
+
+const onChangeDialog = () => {
+  isShow.value = false;
+  queryList()
+};
 
 const setCurrentProject = (data) => {
   queryParams.project = data ? data : ''
