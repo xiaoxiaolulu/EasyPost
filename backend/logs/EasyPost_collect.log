@@ -5480,3 +5480,11 @@ INFO     [2024-04-08 16:02:56,093] [fa1f52f407c34e8fadd3430c7d5558f7] django.ser
 INFO     [2024-04-08 16:02:56,103] [1ef0fcfaf5bf41abb1f580a9e468c892] django.server: "POST /api/http/saveOrUpdate/5 HTTP/1.1" 200 54
 INFO     [2024-04-08 16:08:53,944] [ec29b2671ae34b1eb5c7ae630cf776e4] django.server: "OPTIONS /api/http/saveOrUpdate/5 HTTP/1.1" 200 0
 INFO     [2024-04-08 16:08:53,955] [0f90640aebd24182b9cbfbceb972b9b7] django.server: "POST /api/http/saveOrUpdate/5 HTTP/1.1" 200 54
+INFO     [2024-04-08 18:29:35,569] [0a2a24adf9bc44ad95d6c717c47139a1] django.server: "OPTIONS /api/http/list?name=&page=1&project=&node=1 HTTP/1.1" 200 0
+INFO     [2024-04-08 18:29:35,586] [2be592d07cf0402ca8997184e0f3ed2f] django.server: "OPTIONS /api/project/list HTTP/1.1" 200 0
+INFO     [2024-04-08 18:29:35,596] [6362a3afdf134463a975065f0dac55bc] django.server: "GET /api/http/list?name=&page=1&project=&node=1 HTTP/1.1" 200 341
+INFO     [2024-04-08 18:29:35,596] [ee0252e658ee4cc7aab75a9c764f067d] django.server: "GET /api/project/list HTTP/1.1" 200 341
+INFO     [2024-04-09 09:54:12,826] [8825f78ca3984bc6a93fd18fcea602b4] django.server: "OPTIONS /api/http/list?name=&page=1&project=&node=1 HTTP/1.1" 200 0
+INFO     [2024-04-09 09:54:12,826] [81e887d46c18425f8cf3ee3582cb7971] django.server: "GET /api/http/list?name=&page=1&project=&node=1 HTTP/1.1" 200 341
+INFO     [2024-04-09 09:54:12,873] [3e0be9ecdd56479184df7c3ea4111fd6] django.server: "OPTIONS /api/project/list HTTP/1.1" 200 0
+INFO     [2024-04-09 09:54:12,873] [4035fa4633f545b7ae97def356594883] django.server: "GET /api/project/list HTTP/1.1" 200 341

@@ -4,21 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Improve code readability and maintainability by using list comprehension, handle name filtering in `SettingDao` and update component route name.">
-      <change afterPath="$PROJECT_DIR$/utils/api_migrate.py" afterDir="false" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="&quot;Add Swagger data source and API migration&quot;">
       <change afterPath="$PROJECT_DIR$/utils/middle.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/swagger.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/dao/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/setting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/service/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/https.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/service/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/setting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/tests/engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/tests/engine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unitrunner/engine/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/unitrunner/engine/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/api/setting.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/api/setting.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/system/function/components/detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/system/function/components/detail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/api_migrate.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/api_migrate.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -468,15 +458,7 @@
       <workItem from="1711962720464" duration="39413000" />
       <workItem from="1712461013459" duration="87000" />
       <workItem from="1712461146657" duration="56000" />
-      <workItem from="1712461413811" duration="23490000" />
-    </task>
-    <task id="LOCAL-00285" summary="Changed test code structure, added new classes and methods for test case generation and execution.">
-      <option name="closed" value="true" />
-      <created>1711612838161</created>
-      <option name="number" value="00285" />
-      <option name="presentableId" value="LOCAL-00285" />
-      <option name="project" value="LOCAL" />
-      <updated>1711612838161</updated>
+      <workItem from="1712461413811" duration="27877000" />
     </task>
     <task id="LOCAL-00286" summary="&quot;Refactor code to handle database connection failures gracefully&quot;">
       <option name="closed" value="true" />
@@ -862,7 +844,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712472796777</updated>
     </task>
-    <option name="localTasksCounter" value="334" />
+    <task id="LOCAL-00334" summary="&quot;Add Swagger data source and API migration&quot;">
+      <option name="closed" value="true" />
+      <created>1712567563360</created>
+      <option name="number" value="00334" />
+      <option name="presentableId" value="LOCAL-00334" />
+      <option name="project" value="LOCAL" />
+      <updated>1712567563360</updated>
+    </task>
+    <option name="localTasksCounter" value="335" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -892,16 +882,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Improve code readability" />
-    <MESSAGE value="Improve code readability and" />
-    <MESSAGE value="Improve code readability and maintain" />
-    <MESSAGE value="Improve code readability and maintainability" />
-    <MESSAGE value="Improve code readability and maintainability by" />
-    <MESSAGE value="Improve code readability and maintainability by using" />
-    <MESSAGE value="Improve code readability and maintainability by using list" />
-    <MESSAGE value="Improve code readability and maintainability by using list compreh" />
-    <MESSAGE value="Improve code readability and maintainability by using list comprehension" />
-    <MESSAGE value="Improve code readability and maintainability by using list comprehension," />
     <MESSAGE value="Improve code readability and maintainability by using list comprehension, handle" />
     <MESSAGE value="Improve code readability and maintainability by using list comprehension, handle name" />
     <MESSAGE value="Improve code readability and maintainability by using list comprehension, handle name filtering" />
@@ -917,7 +897,17 @@
     <MESSAGE value="Improve code readability and maintainability by using list comprehension, handle name filtering in `SettingDao` and update component route" />
     <MESSAGE value="Improve code readability and maintainability by using list comprehension, handle name filtering in `SettingDao` and update component route name" />
     <MESSAGE value="Improve code readability and maintainability by using list comprehension, handle name filtering in `SettingDao` and update component route name." />
-    <option name="LAST_COMMIT_MESSAGE" value="Improve code readability and maintainability by using list comprehension, handle name filtering in `SettingDao` and update component route name." />
+    <MESSAGE value="&quot;" />
+    <MESSAGE value="&quot;Add" />
+    <MESSAGE value="&quot;Add Sw" />
+    <MESSAGE value="&quot;Add Swagger" />
+    <MESSAGE value="&quot;Add Swagger data" />
+    <MESSAGE value="&quot;Add Swagger data source" />
+    <MESSAGE value="&quot;Add Swagger data source and" />
+    <MESSAGE value="&quot;Add Swagger data source and API" />
+    <MESSAGE value="&quot;Add Swagger data source and API migration" />
+    <MESSAGE value="&quot;Add Swagger data source and API migration&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Add Swagger data source and API migration&quot;" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$recursion.coverage" NAME="recursion Coverage Results" MODIFIED="1712139211023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
@@ -926,7 +916,7 @@
     <SUITE FILE_PATH="coverage/backend$registry.coverage" NAME="registry Coverage Results" MODIFIED="1705542881675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/events" />
     <SUITE FILE_PATH="coverage/backend$.coverage" NAME=" Coverage Results" MODIFIED="1711611032672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/tests" />
     <SUITE FILE_PATH="coverage/backend$cl.coverage" NAME="cl Coverage Results" MODIFIED="1692972573609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/protobuf_test" />
-    <SUITE FILE_PATH="coverage/backend$api_migrate.coverage" NAME="api_migrate Coverage Results" MODIFIED="1712567257841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/backend$api_migrate.coverage" NAME="api_migrate Coverage Results" MODIFIED="1712569497858" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/backend$eternity.coverage" NAME="eternity Coverage Results" MODIFIED="1701253455406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/constructor" />
     <SUITE FILE_PATH="coverage/http_handler_py$test.coverage" NAME="test Coverage Results" MODIFIED="1699719681836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/request" />
     <SUITE FILE_PATH="coverage/http_handler_py$.coverage" NAME=" Coverage Results" MODIFIED="1699719668172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />

@@ -4,6 +4,8 @@ from urllib.parse import (
     urljoin,
     urlparse
 )
+from api.models.https import Api
+from api.models.project import Project
 from utils.logger import logger
 from utils.recursion import GetJsonParams
 
@@ -289,8 +291,46 @@ class UitRunnerSource(DataSource):
     def read(self, filename):
         pass
 
-    def write(self, ctx):
-        print(ctx)
+    def write(self, context):
+        """
+        Writes test case data to the database.
+
+        Args:
+            context (list): A list of dictionaries representing individual test cases.
+
+        Raises:
+            Exception: If any data insertion fails due to missing objects or other errors.
+        """
+
+        for ctx in context:
+            try:
+
+                project = Project.objects.get(id=ctx.get('pk'))
+                Api.objects.create(
+                    name=ctx.get('name', ''),
+                    priority=1,
+                    project=project,
+                    directory_id=1,
+                    status=0,
+                    method=ctx.get('method'),
+                    url=ctx.get('url'),
+                    desc=ctx.get('desc'),
+                    headers=ctx.get('headers', {}),
+                    params="",
+                    raw=ctx.get('raw'),
+                    setup_script="",
+                    teardown_script="",
+                    validate="",
+                    extract="",
+                    user=ctx.get('request').user
+                )
+
+            except (Api.DoesNotExist, Project.DoesNotExist) as e:
+                logger.error(f"Error creating API object: {ctx.get('name')} - {e}")
+                raise ValueError(f"Project or API data not found for test case: {ctx.get('name')}")
+            except Exception as e:
+                logger.exception(f"Unexpected error writing test case data: {e}")
+                raise Exception("An error occurred while importing test cases.")
 
 
 class DataMigrator:
@@ -299,8 +339,31 @@ class DataMigrator:
         self.target = target
 
     def migrate(self, request=None, pk=None):
-        ctx = self.source.read('middle.json')
-        self.target.write(ctx)
+        """
+        Migrates test case data from source to target.
+
+        Args:
+            request (HttpRequest, optional): The Django request object (if applicable).
+            pk (int, optional): Primary key of the project (if applicable).
+
+        Raises:
+            Exception: If any errors occur during data reading or writing.
+        """
+
+        try:
+            # Read test case data from the source (assuming 'middle.json')
+            ctx = self.source.read('middle.json')
+
+            # Add request and pk information to each context dictionary
+            ctx = [
+                {**c, **{'request': request, 'pk': pk}} for c in ctx
+            ]
+
+            self.target.write(ctx)
+
+        except Exception as e:
+            logger.exception(f"Error migrating test case data: {e}")
+            raise Exception("An error occurred while migrating test cases.")
 
 
 if __name__ == '__main__':
