@@ -19,9 +19,9 @@
         <div v-show="!selectStatus" class="el-upload__text">
           将文件拖到此处，或<em>点击上传</em>
         </div>
-        <i v-show="selectStatus" style="color: #00a854;text-align:center;margin-top: 50px"
+        <i v-show="selectStatus" style="color: #00a854;text-align:center;margin-top: 50px;"
            class="el-icon-check"></i>
-        <div v-show="selectStatus" style="text-align:center;" class="el-upload__text">
+        <div v-show="selectStatus" style="text-align:center;height: 100px;" class="el-upload__text">
           已选择文件：{{selectUpload}}
         </div>
       </el-upload>
@@ -126,5 +126,9 @@ watch(() => props.rowData, () => {
 .pull-right {
   float: right;
 
+}
+
+.upload {
+  margin-bottom: 20px;
 }
 </style>

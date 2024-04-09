@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="&quot;Add import API view and associated functionality&quot;">
-      <change afterPath="$PROJECT_DIR$/../web/src/views/https/api/components/importDialog.vue" afterDir="false" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Add import API feature and UI components.">
+      <change afterPath="$PROJECT_DIR$/api/migrations/0015_alter_project_avatar.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/templates/media/default.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/models/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/project.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/api/http.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/api/http.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/https/api/components/Table.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/api/components/Table.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/https/api/components/importDialog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/api/components/importDialog.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +124,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/86135/Desktop/EasyPost/backend/utils",
+    "last_opened_file_path": "C:/Users/86135/Desktop/EasyPost/backend/api/templates/media",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.stylelint": "true",
     "node.js.detected.package.tslint": "true",
@@ -142,11 +144,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\templates\media" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\utils" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\dao" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\scheduler" />
-      <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\response" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\tests" />
@@ -459,15 +461,7 @@
       <workItem from="1711962720464" duration="39413000" />
       <workItem from="1712461013459" duration="87000" />
       <workItem from="1712461146657" duration="56000" />
-      <workItem from="1712461413811" duration="35405000" />
-    </task>
-    <task id="LOCAL-00288" summary="Updated code documentation and added new methods for handling test cases and generating test functions.">
-      <option name="closed" value="true" />
-      <created>1711617972541</created>
-      <option name="number" value="00288" />
-      <option name="presentableId" value="LOCAL-00288" />
-      <option name="project" value="LOCAL" />
-      <updated>1711617972541</updated>
+      <workItem from="1712461413811" duration="36447000" />
     </task>
     <task id="LOCAL-00289" summary="Updated code documentation and added new methods for handling test cases and generating test functions.">
       <option name="closed" value="true" />
@@ -853,7 +847,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712643798168</updated>
     </task>
-    <option name="localTasksCounter" value="337" />
+    <task id="LOCAL-00337" summary="Add import API feature and UI components.">
+      <option name="closed" value="true" />
+      <created>1712656260539</created>
+      <option name="number" value="00337" />
+      <option name="presentableId" value="LOCAL-00337" />
+      <option name="project" value="LOCAL" />
+      <updated>1712656260539</updated>
+    </task>
+    <option name="localTasksCounter" value="338" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -883,14 +885,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Improve code readability and maintainability by using list comprehension, handle name filtering in `SettingDao` and" />
-    <MESSAGE value="Improve code readability and maintainability by using list comprehension, handle name filtering in `SettingDao` and update" />
-    <MESSAGE value="Improve code readability and maintainability by using list comprehension, handle name filtering in `SettingDao` and update component" />
-    <MESSAGE value="Improve code readability and maintainability by using list comprehension, handle name filtering in `SettingDao` and update component route" />
-    <MESSAGE value="Improve code readability and maintainability by using list comprehension, handle name filtering in `SettingDao` and update component route name" />
-    <MESSAGE value="Improve code readability and maintainability by using list comprehension, handle name filtering in `SettingDao` and update component route name." />
-    <MESSAGE value="&quot;Add Sw" />
-    <MESSAGE value="&quot;Add Swagger" />
     <MESSAGE value="&quot;Add Swagger data" />
     <MESSAGE value="&quot;Add Swagger data source" />
     <MESSAGE value="&quot;Add Swagger data source and" />
@@ -908,7 +902,15 @@
     <MESSAGE value="&quot;Add import API view and associated" />
     <MESSAGE value="&quot;Add import API view and associated functionality" />
     <MESSAGE value="&quot;Add import API view and associated functionality&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Add import API view and associated functionality&quot;" />
+    <MESSAGE value="Add" />
+    <MESSAGE value="Add import" />
+    <MESSAGE value="Add import API" />
+    <MESSAGE value="Add import API feature" />
+    <MESSAGE value="Add import API feature and" />
+    <MESSAGE value="Add import API feature and UI" />
+    <MESSAGE value="Add import API feature and UI components" />
+    <MESSAGE value="Add import API feature and UI components." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add import API feature and UI components." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$recursion.coverage" NAME="recursion Coverage Results" MODIFIED="1712139211023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />

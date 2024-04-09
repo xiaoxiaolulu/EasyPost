@@ -5,6 +5,8 @@ DESCRIPTION：项目配置模型
  * table-Project: 项目配置
  * table-ProjectRole: 项目权限配置
 """
+from os import path
+
 from django.contrib.auth import get_user_model
 from django.core.cache import cache
 from django.db.models import (
@@ -22,6 +24,7 @@ from django.db.models.signals import (
     post_save
 )
 from django.utils.translation import gettext_lazy as _
+from config.settings import MEDIA_ROOT
 
 User = get_user_model()
 
@@ -69,7 +72,7 @@ class Project(Model):
                      default=Defaults.PROJECT_TYPE)
     private = CharField(max_length=50, verbose_name=_('Project private'), choices=Defaults.PRIVATE_TYPE_CHOICES,
                         default=Defaults.PRIVATE_TYPE)
-    avatar = ImageField(upload_to='avatar/', default="avatar/default.png", null=True, blank=True,
+    avatar = ImageField(upload_to=MEDIA_ROOT, default=path.join(MEDIA_ROOT, 'default.png'), null=True, blank=True,
                         verbose_name=_('Project Avatar'))
     desc = TextField(null=True, blank=True, verbose_name=_('Project Desc'))
     create_time = DateTimeField(auto_now_add=True, verbose_name=_('Project CreateTime'))
