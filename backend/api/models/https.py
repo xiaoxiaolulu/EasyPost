@@ -107,7 +107,7 @@ class Api(Model):
     * update_time: 更新时间
     """
     id = AutoField(primary_key=True)
-    name = CharField(max_length=50, null=True, blank=True, verbose_name=_('Api Name'))
+    name = CharField(max_length=250, null=True, blank=True, verbose_name=_('Api Name'))
     project = ForeignKey(Project, on_delete=CASCADE, db_constraint=False)
     directory_id = CharField(max_length=50, null=True, blank=True, verbose_name=_('Api DirectoryId'))
     method = CharField(max_length=50, null=True, blank=True, verbose_name=_('Api Method'))
@@ -125,6 +125,7 @@ class Api(Model):
     validate = TextField(verbose_name=_('Api Validate'), null=False, default=None)
     extract = TextField(verbose_name=_('Api Extract'), null=False, default=None)
     user = ForeignKey(User, related_name="api_creator", null=True, on_delete=SET_NULL, verbose_name=_('User'))
+    source = TextField(verbose_name=_('Api Source'), null=False, default=None)
     create_time = DateTimeField(auto_now_add=True, verbose_name=_('Api CreateTime'))
     update_time = DateTimeField(auto_now=True, verbose_name=_('Api UpdateTime'))
 

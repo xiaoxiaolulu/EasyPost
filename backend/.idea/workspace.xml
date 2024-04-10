@@ -5,12 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Add import API feature and UI components.">
-      <change afterPath="$PROJECT_DIR$/api/migrations/0015_alter_project_avatar.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/templates/media/default.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/migrations/0016_alter_api_method.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/migrations/0017_alter_api_method_alter_api_name.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/templates/media/777.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/templates/media/New Collection.postman_collection.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/templates/media/middle.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/templates/media/test.postman_collection.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/templates/media/优惠券码.postman_collection.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/优惠券码.postman_collection.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/models/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/https.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/models/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/project.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/service/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/https.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/api_migrate.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/api_migrate.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/src/views/https/api/components/importDialog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/api/components/importDialog.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -151,14 +160,14 @@
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\scheduler" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\86135\Desktop\EasyPost\backend\utils" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\tests" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\templates" />
-      <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\templates\asserts" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.__init__ (1)">
+  <component name="RunManager" selected="Python.api_migrate">
     <configuration name="__init__ (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <option name="ENV_FILES" value="" />
@@ -310,8 +319,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.__init__ (1)" />
         <item itemvalue="Python.api_migrate" />
+        <item itemvalue="Python.__init__ (1)" />
         <item itemvalue="Python.engine" />
         <item itemvalue="Python.__init__ (2)" />
         <item itemvalue="Python.recursion" />
@@ -461,15 +470,7 @@
       <workItem from="1711962720464" duration="39413000" />
       <workItem from="1712461013459" duration="87000" />
       <workItem from="1712461146657" duration="56000" />
-      <workItem from="1712461413811" duration="36447000" />
-    </task>
-    <task id="LOCAL-00289" summary="Updated code documentation and added new methods for handling test cases and generating test functions.">
-      <option name="closed" value="true" />
-      <created>1711618470152</created>
-      <option name="number" value="00289" />
-      <option name="presentableId" value="LOCAL-00289" />
-      <option name="project" value="LOCAL" />
-      <updated>1711618470152</updated>
+      <workItem from="1712461413811" duration="48999000" />
     </task>
     <task id="LOCAL-00290" summary="Updated code documentation and comments for better understanding.">
       <option name="closed" value="true" />
@@ -855,7 +856,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712656260539</updated>
     </task>
-    <option name="localTasksCounter" value="338" />
+    <task id="LOCAL-00338" summary="Add import API feature and UI components.">
+      <option name="closed" value="true" />
+      <created>1712657307027</created>
+      <option name="number" value="00338" />
+      <option name="presentableId" value="LOCAL-00338" />
+      <option name="project" value="LOCAL" />
+      <updated>1712657307027</updated>
+    </task>
+    <option name="localTasksCounter" value="339" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -919,7 +928,7 @@
     <SUITE FILE_PATH="coverage/backend$registry.coverage" NAME="registry Coverage Results" MODIFIED="1705542881675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/events" />
     <SUITE FILE_PATH="coverage/backend$.coverage" NAME=" Coverage Results" MODIFIED="1711611032672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/tests" />
     <SUITE FILE_PATH="coverage/backend$cl.coverage" NAME="cl Coverage Results" MODIFIED="1692972573609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/protobuf_test" />
-    <SUITE FILE_PATH="coverage/backend$api_migrate.coverage" NAME="api_migrate Coverage Results" MODIFIED="1712569497858" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/backend$api_migrate.coverage" NAME="api_migrate Coverage Results" MODIFIED="1712728494452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/backend$eternity.coverage" NAME="eternity Coverage Results" MODIFIED="1701253455406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/constructor" />
     <SUITE FILE_PATH="coverage/http_handler_py$test.coverage" NAME="test Coverage Results" MODIFIED="1699719681836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/request" />
     <SUITE FILE_PATH="coverage/http_handler_py$.coverage" NAME=" Coverage Results" MODIFIED="1699719668172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />

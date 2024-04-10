@@ -1,6 +1,5 @@
 import json
 import os
-
 from django.core.exceptions import ObjectDoesNotExist
 from rest_framework import (
     status,
@@ -29,7 +28,8 @@ from api.response.fatcory import ResponseStandard
 from utils.api_migrate import (
     DataMigrator,
     SwaggerDataSource,
-    UitRunnerSource
+    UitRunnerSource,
+    PostManDataSource
 )
 from utils.trees import (
     get_tree_max_id
@@ -233,7 +233,6 @@ class RunCaseView(APIView):
 
 
 class ImportApiView(APIView):
-
     permission_classes = [IsAuthenticated]
 
     @staticmethod
@@ -247,10 +246,15 @@ class ImportApiView(APIView):
                 for chunk in files.chunks():
                     f.write(chunk)
 
-            migrator = DataMigrator(SwaggerDataSource(), UitRunnerSource())
-            migrator.migrate(filename=filepath, request=request, pk=kwargs["pk"])
-
-            return Response(ResponseStandard.success())
+            import_type = request.data.get("type", "swagger")
+            if import_type:
+                import_mapping = {
+                    "swagger": SwaggerDataSource(),
+                    "postman": PostManDataSource()
+                }
+                migrator = DataMigrator(import_mapping.get(import_type), UitRunnerSource())
+                migrator.migrate(filename=filepath, request=request, pk=kwargs["pk"], type=import_type)
+                return Response(ResponseStandard.success())
 
         except Exception as err:
             return Response(ResponseStandard.failed(msg=str(err)))

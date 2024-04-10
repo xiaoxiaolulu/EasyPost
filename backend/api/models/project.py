@@ -6,7 +6,6 @@ DESCRIPTION：项目配置模型
  * table-ProjectRole: 项目权限配置
 """
 from os import path
-
 from django.contrib.auth import get_user_model
 from django.core.cache import cache
 from django.db.models import (

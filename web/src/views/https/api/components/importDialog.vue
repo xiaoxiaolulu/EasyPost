@@ -4,6 +4,15 @@
              :show-close="false"
              center
              class="importWidth">
+    <el-space :size="10">
+      <el-check-tag
+          class="custom-check-tag"
+          v-for="(button, index) in buttons" @change="onChange(button)"
+                     :checked="button.checked" :key="index" style="width: 110px;height: 48px;margin-bottom: 10px">
+        <i :class="`opblock opblock-${button.style}`"/>
+        <span class="content">{{button.content}}</span>
+      </el-check-tag>
+    </el-space>
     <div class="upload">
       <el-upload
           drag
@@ -55,6 +64,12 @@ const props = defineProps({
   }
 })
 
+const buttons = ref([
+  {id: 1,  content: 'Swagger', style: 'swagger', checked: false},
+  {id: 2, content: 'Postman', style: 'postman', checked: false},
+]);
+
+
 const uploadRefs = ref<UploadInstance>()
 
 const pk = ref();
@@ -77,6 +92,13 @@ let form = reactive<any>({
   file: '',
   fileList: []
 })
+
+const onChange = (button) => {
+  let buttonW = buttons.value.find(item => item.id === button.id);
+  if (buttonW) {
+    buttonW["checked"] = !buttonW["checked"];
+  }
+}
 
 const onSureClick = () => {
   try {
@@ -120,7 +142,7 @@ watch(() => props.rowData, () => {
 <style lang="scss">
 .importWidth {
   width: 30%;
-  height: 45%
+  height: 55%
 }
 
 .pull-right {
@@ -131,4 +153,35 @@ watch(() => props.rowData, () => {
 .upload {
   margin-bottom: 20px;
 }
+
+.opblock-swagger {
+  background: url('https://cdn.eolink.com/saas_10.9.301/ng14/assets/images/logo/swagger.gif') center no-repeat;
+}
+
+.opblock-postman {
+  background: url('https://cdn.eolink.com/saas_11.4.35/ng14/assets/images/logo/postman.gif') center no-repeat;
+}
+
+.opblock {
+  margin-right: -10px;
+  border-radius: var(--border-radius);
+  display: inline-block;
+  background-size: contain;
+  height: 30px;
+  width: 30px;
+  vertical-align: middle;
+}
+
+.content {
+  margin-left: 15px;
+  vertical-align: middle;
+}
+
+.custom-check-tag {
+  background-color: #ffffff;
+  border-style: solid;
+  border-color: #f7f2fd;
+  border-radius: 8px
+}
+
 </style>
