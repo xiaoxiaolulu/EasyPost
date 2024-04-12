@@ -21,3 +21,72 @@ INFO     [2024-04-12 16:09:55,497] [a1c625f6d7814bd6aee1adcb18c8299e] django.ser
 INFO     [2024-04-12 16:09:55,520] [21abab974ede46f5b9275bf397a2cc11] django.server: "GET /api/http/list?name=&page=1&project=4&node=1 HTTP/1.1" 200 14053
 INFO     [2024-04-12 16:15:32,993] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\urls.py changed, reloading.
 INFO     [2024-04-12 16:15:33,737] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-12 16:21:16,292] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\user.py changed, reloading.
+INFO     [2024-04-12 16:21:17,027] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-12 16:21:35,852] [ca6245d2b4eb4e11a726db4f2e53eb33] django.server: "POST /api/login/ HTTP/1.1" 200 773
+INFO     [2024-04-12 16:29:22,756] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\user.py changed, reloading.
+INFO     [2024-04-12 16:29:23,524] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-12 16:30:55,235] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-04-12 16:30:55,944] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-12 16:31:10,707] [d281cb3184f2458c9afaf070546fd096] django.server: "POST /api/login/ HTTP/1.1" 200 773
+INFO     [2024-04-12 16:33:16,318] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-04-12 16:33:17,049] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-12 16:33:20,824] [ae9636124b9c46dfabc6901cd9734988] django.server: "POST /api/login/ HTTP/1.1" 200 773
+INFO     [2024-04-12 16:34:03,386] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-04-12 16:34:04,077] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-12 16:34:08,662] [96c4b415e7484747ac5fb87bf55aef3f] django.server: "POST /api/login/ HTTP/1.1" 200 773
+INFO     [2024-04-12 16:34:33,347] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-04-12 16:34:34,052] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-12 16:34:38,614] [7420397ecfe046c8a4e867f9bea76e18] django.server: "POST /api/login/ HTTP/1.1" 200 1293
+INFO     [2024-04-12 16:34:48,395] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-04-12 16:34:49,090] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-12 16:34:53,021] [e45f275b81c0462d90d2ffe8e66d2756] django.server: "POST /api/login/ HTTP/1.1" 200 773
+INFO     [2024-04-12 16:35:21,574] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-04-12 16:35:22,257] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-12 16:35:27,873] [f71f79b93399461f99f9cef6f783719d] django.server: "POST /api/login/ HTTP/1.1" 200 1285
+INFO     [2024-04-12 16:35:53,547] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-04-12 16:35:54,302] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-12 16:36:00,803] [fbb87df23b5744c9ab11774d4237fe6b] django.server: "POST /api/login/ HTTP/1.1" 200 773
+INFO     [2024-04-12 16:36:18,529] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-04-12 16:36:19,264] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-12 16:36:24,170] [d7fa1359629c4110988234335435ecae] django.server: "POST /api/login/ HTTP/1.1" 200 773
+INFO     [2024-04-12 16:36:43,238] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-04-12 16:36:43,903] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-12 16:36:47,520] [af7b23441c5e42dcbf5bbf4201cb4ac9] django.server: "POST /api/login/ HTTP/1.1" 200 1946
+INFO     [2024-04-12 16:36:57,213] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-04-12 16:36:57,981] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-12 16:37:02,427] [4b0d5cfdde45451db547e03050f5ea0b] django.server: "POST /api/login/ HTTP/1.1" 200 773
+INFO     [2024-04-12 16:37:24,267] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-04-12 16:37:24,985] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-12 16:37:36,991] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-04-12 16:37:37,670] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-12 16:37:43,485] [6519e0fdf21d483b8dca2727f2ff0f9b] django.server: "POST /api/login/ HTTP/1.1" 200 1957
+INFO     [2024-04-12 16:37:50,912] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-04-12 16:37:51,627] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-12 16:37:55,267] [eb543e2103704578a4e28105d5e7f3a7] django.server: "POST /api/login/ HTTP/1.1" 200 1948
+INFO     [2024-04-12 16:38:01,623] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-04-12 16:38:02,402] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-12 16:38:06,122] [7bc16ead7efe47e4be4cf9a813ec15c1] django.server: "POST /api/login/ HTTP/1.1" 200 773
+INFO     [2024-04-12 16:38:46,676] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-04-12 16:38:47,374] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-12 16:40:20,779] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\user.py changed, reloading.
+INFO     [2024-04-12 16:40:21,467] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-12 16:40:27,281] [e1991a05abdb43679f8c2ba715c1a727] django.server: "POST /api/login/ HTTP/1.1" 200 773
+INFO     [2024-04-12 16:41:11,737] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\__init__.py changed, reloading.
+INFO     [2024-04-12 16:41:12,450] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-12 16:41:14,717] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\__init__.py changed, reloading.
+INFO     [2024-04-12 16:41:15,441] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-12 16:41:48,755] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-04-12 16:41:49,426] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-12 16:41:55,589] [2e05cb786c814837b416c641930cc32a] django.server: "POST /api/login/ HTTP/1.1" 200 773
+INFO     [2024-04-12 16:42:23,975] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-04-12 16:42:24,694] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-12 16:42:28,961] [09da4119c77b429187b5b4d01e7ba136] django.server: "POST /api/login/ HTTP/1.1" 200 773
+INFO     [2024-04-12 16:42:55,574] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-04-12 16:42:56,272] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-12 16:43:02,863] [2358422674084028854ca8847b7bb0b3] django.server: "POST /api/login/ HTTP/1.1" 200 773
+INFO     [2024-04-12 16:45:03,198] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-04-12 16:45:03,883] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-12 16:46:13,303] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-04-12 16:46:14,062] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-12 16:46:25,733] [9ed8c71e72e54eeeaa6d2eb0a4731dc5] django.server: "POST /api/login/ HTTP/1.1" 200 773

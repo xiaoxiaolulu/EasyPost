@@ -3,11 +3,15 @@ DESCRIPTION：用户数据访问对象
 :Created by Null.
 """
 import re
+import socket
 from datetime import (
     datetime,
     timedelta
 )
-from typing import Any
+from typing import (
+    Any,
+    Optional
+)
 from django.core.exceptions import ImproperlyConfigured
 from django.db.models import Q
 from api.models.user import (
@@ -199,3 +203,20 @@ class UserDao:
 
         except (User.DoesNotExist, ImproperlyConfigured):
             return None
+
+    @staticmethod
+    def update_user_ip(pk: int) -> None:
+        """Updates the IP address of a user based on the current host's IP.
+
+        Args:
+            pk: The primary key of the user to update.
+
+        Returns:
+            None
+        """
+        try:
+            user = User.objects.get(pk=pk)
+            user.ip_address = str(socket.gethostbyname(socket.gethostname()))
+            user.save()
+        except (User.DoesNotExist, ImproperlyConfigured):
+            pass

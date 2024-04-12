@@ -75,6 +75,8 @@ class User(AbstractUser):
     gender = CharField(verbose_name=_('User Gender'), choices=Defaults.GENDER_CHOICES, max_length=6,
                        default=Defaults.GENDER)
     dept = CharField(blank=True, null=True, verbose_name=_('User Dept'), max_length=125, default=Defaults.DEPT)
+    ip_address = CharField(null=True, max_length=125, verbose_name=_('User IpAddress'))
+    last_login_time = DateTimeField(default=timezone.now, verbose_name=_('User LastLoginTime'))
     # 临时
     role = CharField(max_length=20, null=True, blank=True, verbose_name=_('User Role'))
 

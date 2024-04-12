@@ -7,6 +7,8 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.settings import api_settings
 from rest_framework_simplejwt.views import TokenObtainPairView
+
+from api.dao.user import UserDao
 from api.mixins.magic import MagicListAPI
 from api.schema.user import UserSimpleSerializers
 from api.response.fatcory import ResponseStandard
@@ -39,8 +41,8 @@ class NewTokenObtainPairSerializer(TokenObtainPairSerializer):
         data = super().validate(attrs)
         user_info = {"username": self.user.username, "nickname": self.user.nickname, "userid": self.user.pk}
 
+        UserDao.update_user_ip(self.user.pk)
         refresh = self.get_token(self.user)
-
         data['token'] = str(refresh.access_token)
         data['userInfo'] = user_info
         data['roles'] = [self.user.role]
