@@ -574,7 +574,7 @@ class DataMigrator:
             logger.exception(f"Error migrating test case data: {e}")
             raise Exception("An error occurred while migrating test cases.")
 
-#
-# if __name__ == '__main__':
-#     migrator = DataMigrator(SwaggerDataSource(), UitRunnerSource())
-#     migrator.migrate()
+
+if __name__ == '__main__':
+    migrator = DataMigrator(SwaggerDataSource(), UitRunnerSource())
+    migrator.migrate()

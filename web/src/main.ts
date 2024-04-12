@@ -21,6 +21,7 @@ import "@/styles/element-dark.scss";
 // 引入阿里图标库
 import "@/assets/iconfont/iconfont.css";
 import "@/assets/iconfont/iconfont.js";
+import VueApexCharts from "vue3-apexcharts";
 
 const app = createApp(App)
 registerElIcons(app)
@@ -32,4 +33,5 @@ app.component('PageWrapLayout',PageWrapLayout)
 // @ts-ignore
 app.use(pinia)
 app.use(router)
+app.use(VueApexCharts);
 app.use(ElementPlus).mount('#app')

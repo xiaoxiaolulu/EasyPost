@@ -65,8 +65,8 @@ const props = defineProps({
 })
 
 const buttons = ref([
-  {id: 1,  content: 'Swagger', style: 'swagger', checked: false},
-  {id: 2, content: 'Postman', style: 'postman', checked: false},
+  {id: 1,  content: 'Swagger', style: 'swagger', checked: true},
+  {id: 2, content: 'Postman', style: 'postman', checked: false}
 ]);
 
 
@@ -94,10 +94,18 @@ let form = reactive<any>({
 })
 
 const onChange = (button) => {
-  let buttonW = buttons.value.find(item => item.id === button.id);
-  if (buttonW) {
-    buttonW["checked"] = !buttonW["checked"];
+
+  let buttonT = buttons.value.find(item => item.id === button.id);
+  let buttonF = buttons.value.filter(item => item.id !== button.id);
+
+  if (buttonT) {
+    // 选中的设置为相反值
+    buttonT["checked"] = !buttonT["checked"];
   }
+  // 未当次选中设置为false, 避免出现多个按钮出现选中状态
+  buttonF.forEach(item => {
+    item["checked"] = false;
+  });
 }
 
 const onSureClick = () => {
