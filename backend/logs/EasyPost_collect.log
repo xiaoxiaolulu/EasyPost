@@ -1,0 +1,23 @@
+INFO     [2024-04-12 15:49:08,066] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-12 16:09:41,745] [d5de614bb0c6421b9a5337ff0b7ceccf] django.server: "OPTIONS /api/env/list?name=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-12 16:09:41,755] [671800a0b126427692db41b7024f552d] django.server: "GET /api/env/list?name=&page=1 HTTP/1.1" 200 341
+INFO     [2024-04-12 16:09:46,018] [79134119d1de48539a98b094f616cf65] django.server: "OPTIONS /api/login/ HTTP/1.1" 200 0
+INFO     [2024-04-12 16:09:46,203] [e79ec863b7a14a719871cfbcb0dadca2] django.server: "POST /api/login/ HTTP/1.1" 200 773
+INFO     [2024-04-12 16:09:48,943] [71360e7190fc4029b5c7395ec4e80eda] django.server: "OPTIONS /api/project/list?name=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-12 16:09:48,964] [2208bd29781a4202baf3a71cb40e81fb] django.server: "GET /api/project/list?name=&page=1 HTTP/1.1" 200 1991
+WARNING  [2024-04-12 16:09:49,002] [304dbfb3cd0343a3b35d45c46f1a7643] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-12 16:09:49,006] [304dbfb3cd0343a3b35d45c46f1a7643] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-12 16:09:50,877] [e6655c0c51224300b3a81264b5782040] django.server: "OPTIONS /api/env/list?name=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-12 16:09:50,898] [b5d1c47afcbc48c18dcfe768b8851392] django.server: "GET /api/env/list?name=&page=1 HTTP/1.1" 200 276
+WARNING  [2024-04-12 16:09:50,919] [6dc28664db4e4313a088e6246a3aece7] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-12 16:09:50,922] [6dc28664db4e4313a088e6246a3aece7] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-12 16:09:55,436] [de9dd7cc74f4400c880e34b688e4b3bb] django.server: "OPTIONS /api/http/list?name=&page=1&project=&node=1 HTTP/1.1" 200 0
+INFO     [2024-04-12 16:09:55,441] [cc347f8429a9475cb75382738bec826a] django.server: "OPTIONS /api/project/list HTTP/1.1" 200 0
+INFO     [2024-04-12 16:09:55,475] [25eb48dba2a24595b009bf0ee2c126d3] django.server: "GET /api/project/list HTTP/1.1" 200 1991
+INFO     [2024-04-12 16:09:55,486] [e121728eb38a4cbd86d05164722bbaa3] django.server: "GET /api/http/list?name=&page=1&project=&node=1 HTTP/1.1" 200 14053
+INFO     [2024-04-12 16:09:55,486] [d22b1991d0a4466cb0407203a515407f] django.server: "OPTIONS /api/http/list?name=&page=1&project=4&node=1 HTTP/1.1" 200 0
+INFO     [2024-04-12 16:09:55,486] [0f78a3eef64d458ea86398d9e847cfc5] django.server: "OPTIONS /api/tree/4&0 HTTP/1.1" 200 0
+INFO     [2024-04-12 16:09:55,497] [a1c625f6d7814bd6aee1adcb18c8299e] django.server: "GET /api/tree/4&0 HTTP/1.1" 200 123
+INFO     [2024-04-12 16:09:55,520] [21abab974ede46f5b9275bf397a2cc11] django.server: "GET /api/http/list?name=&page=1&project=4&node=1 HTTP/1.1" 200 14053
+INFO     [2024-04-12 16:15:32,993] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\urls.py changed, reloading.
+INFO     [2024-04-12 16:15:33,737] [none] django.utils.autoreload: Watching for file changes with StatReloader

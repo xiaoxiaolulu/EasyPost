@@ -1,7 +1,7 @@
 <template>
   <div class="home-container">
-    <div>
-      <el-card class="box-card" style="height: 100%; width: 100%">
+    <div style="height: 100%; width: 100%">
+      <el-card class="box-card">
         <div class="pageHeaderContent">
           <div class="avatar">
             <span class="avatar-lg">
@@ -41,71 +41,74 @@
           </div>
         </div>
       </el-card>
-    </div>
-    <div style="margin-top: 10px">
-      <el-row :gutter="10">
-        <el-col :span="8">
-          <el-card style="height: 100%">
-            <template #header><strong>Swagger配置</strong></template>
-            <el-space :size="30" :spacer="spacer">
-              <div v-for="(card, index) in swagger" :key="index">
-                <div class="span-container">
-                  <span><strong style="font-size: 20px; color: #1f2d3d">{{ card.state }}</strong></span>
-                  <span>{{ card.content }}</span>
+      <div style="margin-top: 10px">
+        <el-row :gutter="10">
+          <el-col :span="8">
+            <el-card style="height: 100%">
+              <template #header><strong>Swagger配置</strong></template>
+              <el-space :size="30" :spacer="spacer">
+                <div v-for="(card, index) in swagger" :key="index">
+                  <div class="span-container">
+                    <span><strong style="font-size: 20px; color: #1f2d3d">{{ card.state }}</strong></span>
+                    <span>{{ card.content }}</span>
+                  </div>
                 </div>
-              </div>
-            </el-space>
-            <apexchart style="margin-top: 5px" type="polarArea" :options="chartOptions" :series="series"></apexchart>
-          </el-card>
-        </el-col>
-        <el-col :span="8">
-          <el-card style="height: 100%">
-            <template #header><strong>APIs</strong></template>
-            <el-space :size="100" :spacer="spacer">
-              <div v-for="(card, index) in apis" :key="index">
-                <div class="span-container">
-                  <span><strong style="font-size: 20px; color: #1f2d3d">{{ card.state }}</strong></span>
-                  <span>{{ card.content }}</span>
-                  <span style="margin-top: 50px">{{card.label}}:<strong style="color: #181616">{{ card.count }}</strong></span>
-                </div>
-              </div>
-            </el-space>
-            <el-card style="margin-top: 10px">
-              <div class="span-container">
-                <div v-for="(card, index) in summary" :key="index">
-                  <span>{{card.label}}:{{card.state}}
-                    <strong :class="`opblock-${card.style}`">{{card.type}}:{{card.count}}</strong>
-                  </span>
-                </div>
-              </div>
+              </el-space>
+              <apexchart style="margin-top: 5px" type="polarArea" :options="chartOptions" :series="series"></apexchart>
             </el-card>
-          </el-card>
-        </el-col>
-        <el-col :span="8">
-          <el-card style="height: 100%">
-            <template #header><strong>Jobs</strong></template>
-            <el-space :size="100" :spacer="spacer">
-              <div v-for="(card, index) in jobs" :key="index">
+          </el-col>
+          <el-col :span="8">
+            <el-card style="height: 100%">
+              <template #header><strong>APIs</strong></template>
+              <el-space :size="100" :spacer="spacer">
+                <div v-for="(card, index) in apis" :key="index">
+                  <div class="span-container">
+                    <span><strong style="font-size: 20px; color: #1f2d3d">{{ card.state }}</strong></span>
+                    <span>{{ card.content }}</span>
+                    <span style="margin-top: 50px">{{ card.label }}:<strong style="color: #181616">{{
+                        card.count
+                      }}</strong></span>
+                  </div>
+                </div>
+              </el-space>
+              <el-card style="margin-top: 10px">
                 <div class="span-container">
-                  <span><strong style="font-size: 20px; color: #1f2d3d">{{ card.state }}</strong></span>
-                  <span>{{ card.content }}</span>
-                  <span>{{card.status}}: {{card.number}}</span>
-                </div>
-              </div>
-            </el-space>
-            <el-card style="margin-top: 60px">
-              <div class="span-container">
-                <div v-for="(card, index) in summary" :key="index">
-                  <span>{{card.label}}:{{card.state}}
-                    <strong :class="`opblock-${card.style}`">{{card.type}}:{{card.count}}</strong>
+                  <div v-for="(card, index) in summary" :key="index">
+                  <span>{{ card.label }}:{{ card.state }}
+                    <strong :class="`opblock-${card.style}`">{{ card.type }}:{{ card.count }}</strong>
                   </span>
+                  </div>
                 </div>
-              </div>
+              </el-card>
             </el-card>
-          </el-card>
-        </el-col>
-      </el-row>
+          </el-col>
+          <el-col :span="8">
+            <el-card style="height: 100%">
+              <template #header><strong>Jobs</strong></template>
+              <el-space :size="100" :spacer="spacer">
+                <div v-for="(card, index) in jobs" :key="index">
+                  <div class="span-container">
+                    <span><strong style="font-size: 20px; color: #1f2d3d">{{ card.state }}</strong></span>
+                    <span>{{ card.content }}</span>
+                    <span>{{ card.status }}: {{ card.number }}</span>
+                  </div>
+                </div>
+              </el-space>
+              <el-card style="margin-top: 60px">
+                <div class="span-container">
+                  <div v-for="(card, index) in summary" :key="index">
+                  <span>{{ card.label }}:{{ card.state }}
+                    <strong :class="`opblock-${card.style}`">{{ card.type }}:{{ card.count }}</strong>
+                  </span>
+                  </div>
+                </div>
+              </el-card>
+            </el-card>
+          </el-col>
+        </el-row>
+      </div>
     </div>
+
   </div>
 </template>
 <script setup lang="ts">
