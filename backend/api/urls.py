@@ -130,6 +130,5 @@ app_urls = [
     path("report/list", ReportListViewSet.as_view())
 ]
 
-# Final URL configuration
 app_name = "api"
 urlpatterns = app_urls + router.urls
