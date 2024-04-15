@@ -34,7 +34,6 @@ export const showErrMessage  = (code:string, msg:string) => {
             showMessage(msg, "waining")
             break
     }
-
 }
 
 export const showMessage = (msg:string, type:any= 'error') =>{

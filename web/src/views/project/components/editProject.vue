@@ -76,9 +76,9 @@
                     :icon="Plus"
                     size="default"
                     type="primary"
-                    icon="el-icon-plus"
                     @click="dialogVisible = true">
                   添加成员
+                  <Plus></Plus>
                 </el-button>
               </el-form-item>
             </el-form>
@@ -97,7 +97,7 @@
               </el-table-column>
               <el-table-column label="" prop="rode_id">
                 <template #default="scope">
-                  <el-tag :type="scope.row.rode_id=='0'?'':'success'"
+                  <el-tag :type="scope.row.rode_id=='0'?'primary':'success'"
                   >{{ scope.row.rode_id == '0' ? '负责人' : '组员' }}
                   </el-tag>
                 </template>
@@ -302,7 +302,6 @@ const handleAdd = () => {
     showErrMessage(code.toString(), msg)
     dialogVisible.value = false
   }).catch(_ => {
-    ElMessage.error("添加成员权限失败请重试");
   })
 }
 

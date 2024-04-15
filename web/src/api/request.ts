@@ -55,7 +55,7 @@ service.interceptors.response.use(
                     .catch(() => {
                     });
             } else {
-                ElMessage.error('接口错误！');
+                ElMessage.error(res.msg);
             }
             return Promise.reject(service.interceptors.response);
         } else {

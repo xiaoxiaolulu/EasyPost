@@ -1028,3 +1028,152 @@ INFO     [2024-04-15 14:41:59,967] [b8e5c46b5c034e998dfda0065cfc1f90] django.ser
 INFO     [2024-04-15 14:41:59,980] [ef57f0affcce4168ba85fc060840bfb1] django.server: "GET /api/project/list?name=&page=1 HTTP/1.1" 200 2040
 WARNING  [2024-04-15 14:42:00,028] [0f7eeaca9338467cb89b8c02a35b6699] django.request: Not Found: /media/avatar/default.png
 WARNING  [2024-04-15 14:42:00,028] [0f7eeaca9338467cb89b8c02a35b6699] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-15 14:42:42,479] [96ced6dc106e4be584527441926d29d4] django.server: "OPTIONS /api/project/detail/5 HTTP/1.1" 200 0
+INFO     [2024-04-15 14:42:42,479] [054f64f3b5134f2ea0e63e0a028e9d1d] django.server: "OPTIONS /api/user/list HTTP/1.1" 200 0
+INFO     [2024-04-15 14:42:42,486] [a2b1b90424444d3093f74b908e44dc57] django.server: "GET /api/project/detail/5 HTTP/1.1" 200 562
+INFO     [2024-04-15 14:42:42,492] [306678bdb9ec409289dadca999bcb9d8] django.server: "GET /api/user/list HTTP/1.1" 200 156
+WARNING  [2024-04-15 14:42:42,504] [5b454361ccd443cd8e1568232597dc01] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-15 14:42:42,506] [5b454361ccd443cd8e1568232597dc01] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+WARNING  [2024-04-15 14:42:46,221] [00f4ddb00ede430fb77a4d0e55c8f03b] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-15 14:42:46,221] [00f4ddb00ede430fb77a4d0e55c8f03b] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+WARNING  [2024-04-15 14:42:48,420] [391ea29dec44462e9c29e5b000dd41e3] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-15 14:42:48,420] [391ea29dec44462e9c29e5b000dd41e3] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+WARNING  [2024-04-15 14:42:49,902] [1b2f7e2cf43e4a8e83cfdf72b8867785] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-15 14:42:49,903] [1b2f7e2cf43e4a8e83cfdf72b8867785] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+WARNING  [2024-04-15 14:42:51,087] [a9163d77ea2e4b12b8f6ff34359d7ee2] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-15 14:42:51,088] [a9163d77ea2e4b12b8f6ff34359d7ee2] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-15 14:42:55,744] [7cddd94860324863baf2eee59356b9c7] django.server: "OPTIONS /api/project/role/add HTTP/1.1" 200 0
+INFO     [2024-04-15 14:42:55,749] [4c04323bb93a46ee8d676d0439d83a58] django.server: "POST /api/project/role/add HTTP/1.1" 200 61
+INFO     [2024-04-15 14:42:59,146] [ce4276f6fa8048e4966c89457da1c571] django.server: "OPTIONS /api/project/role/add HTTP/1.1" 200 0
+INFO     [2024-04-15 14:42:59,151] [0abb4ea0211b4a019e8a903cce7e2a84] django.server: "POST /api/project/role/add HTTP/1.1" 200 61
+INFO     [2024-04-15 14:42:59,930] [69b7a224fb294d38a92b98615caa6b33] django.server: "OPTIONS /api/project/role/add HTTP/1.1" 200 0
+INFO     [2024-04-15 14:42:59,935] [179c2e0b12514df3972fe2336f196f71] django.server: "POST /api/project/role/add HTTP/1.1" 200 61
+INFO     [2024-04-15 14:43:06,698] [92fd09b533344d5e9952701c1670377d] django.server: "OPTIONS /api/project/role/add HTTP/1.1" 200 0
+INFO     [2024-04-15 14:43:06,704] [92bdc66412374833ab4a81c5263e7d27] django.server: "POST /api/project/role/add HTTP/1.1" 200 61
+INFO     [2024-04-15 14:43:11,558] [5730dafc3a0343b299371cd08e9cb27c] django.server: "OPTIONS /api/project/role/add HTTP/1.1" 200 0
+INFO     [2024-04-15 14:43:11,566] [8d48ccafc8d1424fb8d0e5a162c6e565] django.server: "POST /api/project/role/add HTTP/1.1" 200 61
+INFO     [2024-04-15 14:43:12,048] [de607200ed47488f8a6cda0f434a807b] django.server: "OPTIONS /api/project/role/add HTTP/1.1" 200 0
+INFO     [2024-04-15 14:43:12,055] [e3be17b34aa948b2a24d2697e9cba03f] django.server: "POST /api/project/role/add HTTP/1.1" 200 61
+INFO     [2024-04-15 14:43:12,264] [41fcb7c1dbfe463095331f8cc9b50607] django.server: "OPTIONS /api/project/role/add HTTP/1.1" 200 0
+INFO     [2024-04-15 14:43:12,272] [b032fe2c70914ae68eacf8512771146d] django.server: "POST /api/project/role/add HTTP/1.1" 200 61
+INFO     [2024-04-15 14:43:12,687] [55aa618d633b4941a92eefd407332bd1] django.server: "OPTIONS /api/project/role/add HTTP/1.1" 200 0
+INFO     [2024-04-15 14:43:12,692] [032622ef5bff45e3803404925c35175c] django.server: "POST /api/project/role/add HTTP/1.1" 200 61
+INFO     [2024-04-15 14:44:40,074] [98295fc1a76b4197a8e39a8c65625d99] django.server: "OPTIONS /api/user/list HTTP/1.1" 200 0
+INFO     [2024-04-15 14:44:40,074] [e25140b831684dfea1b8682163713b05] django.server: "OPTIONS /api/project/detail/5 HTTP/1.1" 200 0
+INFO     [2024-04-15 14:44:40,084] [d0a86e59115c4fc183a10d20ff7873a8] django.server: "GET /api/user/list HTTP/1.1" 200 255
+INFO     [2024-04-15 14:44:40,085] [87458075463f4840b24840b6f222cc2d] django.server: "GET /api/project/detail/5 HTTP/1.1" 200 562
+WARNING  [2024-04-15 14:44:40,113] [59a7de04e7874f169a2da5d169c28ab7] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-15 14:44:40,113] [59a7de04e7874f169a2da5d169c28ab7] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-15 14:44:48,592] [a5ef4cfd2ba04e65959c17d5464af3a7] django.server: "OPTIONS /api/project/role/add HTTP/1.1" 200 0
+INFO     [2024-04-15 14:44:48,608] [4360d5ed35b24bcf883702a877d04a4b] django.server: "POST /api/project/role/add HTTP/1.1" 200 184
+WARNING  [2024-04-15 14:44:48,628] [81d59e97e59740079bd1188947950ed5] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-15 14:44:48,629] [81d59e97e59740079bd1188947950ed5] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-15 14:44:54,943] [cd196e28a266418cada21fd44cdfc258] django.server: "OPTIONS /api/project/role/add HTTP/1.1" 200 0
+INFO     [2024-04-15 14:44:54,949] [b61017459c86404b9b7501835dc95ad9] django.server: "POST /api/project/role/add HTTP/1.1" 200 61
+INFO     [2024-04-15 14:46:21,116] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\user.py changed, reloading.
+INFO     [2024-04-15 14:46:21,874] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-15 14:46:24,685] [fd527088636c48ba9a993471a23dc462] django.server: "OPTIONS /api/project/role/add HTTP/1.1" 200 0
+INFO     [2024-04-15 14:46:24,701] [9c2ae16095124060b266882736c82f45] django.server: "POST /api/project/role/add HTTP/1.1" 200 61
+INFO     [2024-04-15 14:49:27,337] [73fb5117d37d4a52abe7484c17e6ed6c] django.server: "OPTIONS /api/project/detail/5 HTTP/1.1" 200 0
+INFO     [2024-04-15 14:49:27,338] [258455ee038845f7abbe427b5608df5c] django.server: "OPTIONS /api/user/list HTTP/1.1" 200 0
+INFO     [2024-04-15 14:49:27,352] [a4404eaf08d142688cdcb63d33f93ef6] django.server: "GET /api/project/detail/5 HTTP/1.1" 200 703
+INFO     [2024-04-15 14:49:27,361] [426ddcf2710d4b9aa683d08d3c2f9c0a] django.server: "GET /api/user/list HTTP/1.1" 200 255
+WARNING  [2024-04-15 14:49:27,377] [fd84214ebe30407790541a0298d066d9] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-15 14:49:27,377] [fd84214ebe30407790541a0298d066d9] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-15 14:49:38,088] [50ef03dc6e24444d9a526d6219e023d6] django.server: "OPTIONS /api/project/role/add HTTP/1.1" 200 0
+INFO     [2024-04-15 14:49:38,095] [d3c04218b34246f5b7219438da64d15b] django.server: "POST /api/project/role/add HTTP/1.1" 200 61
+INFO     [2024-04-15 14:49:49,168] [27261d714ae942e699f92c9c483eb50d] django.server: "GET /api/project/role/add HTTP/1.1" 200 8803
+WARNING  [2024-04-15 14:49:49,217] [d7bd3488cc474b3586a970771ed87b20] django.request: Not Found: /static/rest_framework/css/bootstrap-tweaks.css
+WARNING  [2024-04-15 14:49:49,219] [5a1b5a67450d4a7fb983637ca921d9d5] django.request: Not Found: /static/rest_framework/css/bootstrap.min.css
+WARNING  [2024-04-15 14:49:49,224] [d3043aa6fa794989b58549734ed93198] django.request: Not Found: /static/rest_framework/css/prettify.css
+WARNING  [2024-04-15 14:49:49,228] [79efc40f72e449ed9b217db6a8417b50] django.request: Not Found: /static/rest_framework/js/ajax-form.js
+WARNING  [2024-04-15 14:49:49,228] [d7bd3488cc474b3586a970771ed87b20] django.server: "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 404 2969
+WARNING  [2024-04-15 14:49:49,235] [4e9726e0e6944532950c38a6d8b50828] django.request: Not Found: /static/rest_framework/css/default.css
+WARNING  [2024-04-15 14:49:49,236] [5a1b5a67450d4a7fb983637ca921d9d5] django.server: "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 404 2960
+WARNING  [2024-04-15 14:49:49,237] [d3043aa6fa794989b58549734ed93198] django.server: "GET /static/rest_framework/css/prettify.css HTTP/1.1" 404 2945
+WARNING  [2024-04-15 14:49:49,237] [79efc40f72e449ed9b217db6a8417b50] django.server: "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 404 2942
+WARNING  [2024-04-15 14:49:49,241] [bb1f56ad05f44103860cd9a9b1cac92d] django.request: Not Found: /static/rest_framework/js/jquery-3.5.1.min.js
+WARNING  [2024-04-15 14:49:49,242] [4e9726e0e6944532950c38a6d8b50828] django.server: "GET /static/rest_framework/css/default.css HTTP/1.1" 404 2942
+WARNING  [2024-04-15 14:49:49,253] [bb1f56ad05f44103860cd9a9b1cac92d] django.server: "GET /static/rest_framework/js/jquery-3.5.1.min.js HTTP/1.1" 404 2963
+WARNING  [2024-04-15 14:49:49,255] [c35d068b489c408a8bd1ae734f35cd1f] django.request: Not Found: /static/rest_framework/js/csrf.js
+WARNING  [2024-04-15 14:49:49,260] [4f8bd1ee560d4a689706ff1a05e40389] django.request: Not Found: /static/rest_framework/js/bootstrap.min.js
+WARNING  [2024-04-15 14:49:49,260] [c35d068b489c408a8bd1ae734f35cd1f] django.server: "GET /static/rest_framework/js/csrf.js HTTP/1.1" 404 2927
+WARNING  [2024-04-15 14:49:49,262] [4f8bd1ee560d4a689706ff1a05e40389] django.server: "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 404 2954
+WARNING  [2024-04-15 14:49:49,263] [361e487e17b0470ba48cae326a9e0ecc] django.request: Not Found: /static/rest_framework/js/default.js
+WARNING  [2024-04-15 14:49:49,264] [c8a5d2d2478348fcab5a7405abbdc0bd] django.request: Not Found: /static/rest_framework/js/prettify-min.js
+WARNING  [2024-04-15 14:49:49,264] [361e487e17b0470ba48cae326a9e0ecc] django.server: "GET /static/rest_framework/js/default.js HTTP/1.1" 404 2936
+WARNING  [2024-04-15 14:49:49,265] [c8a5d2d2478348fcab5a7405abbdc0bd] django.server: "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 404 2951
+WARNING  [2024-04-15 14:49:49,294] [bea15e438aee4027a76ad8116ec1b21b] django.request: Not Found: /favicon.ico
+WARNING  [2024-04-15 14:49:49,294] [bea15e438aee4027a76ad8116ec1b21b] django.server: "GET /favicon.ico HTTP/1.1" 404 2864
+INFO     [2024-04-15 14:50:14,500] [e42d9681c6b34c559e17a10acb872bba] django.server: "OPTIONS /api/project/detail/5 HTTP/1.1" 200 0
+INFO     [2024-04-15 14:50:14,501] [49fe22b00ade431ba8fc2ef9c4819175] django.server: "OPTIONS /api/user/list HTTP/1.1" 200 0
+INFO     [2024-04-15 14:50:14,515] [c3805f023a39445a8f70fdaa638de3b5] django.server: "GET /api/user/list HTTP/1.1" 200 255
+INFO     [2024-04-15 14:50:14,515] [c51f6d29a7ec489abd0e9fd8daa09170] django.server: "GET /api/project/detail/5 HTTP/1.1" 200 703
+WARNING  [2024-04-15 14:50:14,537] [c36d0db76cf8464c814597dfb3001e56] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-15 14:50:14,537] [c36d0db76cf8464c814597dfb3001e56] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-15 14:50:25,704] [9b7f82e165994302a4ceb9a9a6e4451e] django.server: "OPTIONS /api/project/role/add HTTP/1.1" 200 0
+INFO     [2024-04-15 14:50:25,711] [852374e366584993b1da6b146feafbd2] django.server: "POST /api/project/role/add HTTP/1.1" 200 61
+INFO     [2024-04-15 14:50:59,545] [3872ac4f1c404357810477d5820977c3] django.server: "OPTIONS /api/user/list HTTP/1.1" 200 0
+INFO     [2024-04-15 14:50:59,545] [b29dc017e53644e9b783787b095f9830] django.server: "OPTIONS /api/project/detail/5 HTTP/1.1" 200 0
+INFO     [2024-04-15 14:50:59,562] [bd4ad0c15ab64a97aec9ada622d81874] django.server: "GET /api/project/detail/5 HTTP/1.1" 200 703
+INFO     [2024-04-15 14:50:59,562] [326c86adfe4d4f298e40c78bd3610a85] django.server: "GET /api/user/list HTTP/1.1" 200 255
+WARNING  [2024-04-15 14:50:59,605] [0f0e655c58b1471da79f58bf6595d50c] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-15 14:50:59,606] [0f0e655c58b1471da79f58bf6595d50c] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-15 14:51:04,769] [b916cb8bae1f4986a5f2288307eee170] django.server: "OPTIONS /api/project/role/add HTTP/1.1" 200 0
+INFO     [2024-04-15 14:51:04,776] [c62be5e4166945389cdebc723af604b6] django.server: "POST /api/project/role/add HTTP/1.1" 200 61
+INFO     [2024-04-15 14:51:05,287] [0f67f616c34c427d910f1b811ad464b9] django.server: "OPTIONS /api/project/role/add HTTP/1.1" 200 0
+INFO     [2024-04-15 14:51:05,293] [f948db31a14b44069be6b05db5763fec] django.server: "POST /api/project/role/add HTTP/1.1" 200 61
+INFO     [2024-04-15 14:51:05,484] [6b2e657876ac4d79b80e9542d19e7f9a] django.server: "OPTIONS /api/project/role/add HTTP/1.1" 200 0
+INFO     [2024-04-15 14:51:05,493] [7c5bbf560bce41779e8ce6df160186e6] django.server: "POST /api/project/role/add HTTP/1.1" 200 61
+INFO     [2024-04-15 14:51:13,737] [1e172284ed5f46ee9e7f7c8668f97ab4] django.server: "OPTIONS /api/user/list HTTP/1.1" 200 0
+INFO     [2024-04-15 14:51:13,737] [4e392cfc49254e62922e8f3a9189ad5b] django.server: "OPTIONS /api/project/detail/5 HTTP/1.1" 200 0
+INFO     [2024-04-15 14:51:13,749] [0de01e21e975409a9feedd4144f6c6be] django.server: "GET /api/project/detail/5 HTTP/1.1" 200 703
+INFO     [2024-04-15 14:51:13,749] [211190d5ef3a4ba887a28ce400e5882e] django.server: "GET /api/user/list HTTP/1.1" 200 255
+WARNING  [2024-04-15 14:51:13,777] [ec01239991544978bf1d8456ea7ff971] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-15 14:51:13,777] [ec01239991544978bf1d8456ea7ff971] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-15 14:51:22,230] [46b6da1d7dbd4ba9b9559c5c1a4c686b] django.server: "OPTIONS /api/user/list HTTP/1.1" 200 0
+INFO     [2024-04-15 14:51:22,230] [ed57a0fef75f45cd91225669d2880025] django.server: "OPTIONS /api/project/detail/5 HTTP/1.1" 200 0
+INFO     [2024-04-15 14:51:22,246] [9e6e6313d73e4998b1c802cecb91dacf] django.server: "GET /api/project/detail/5 HTTP/1.1" 200 703
+INFO     [2024-04-15 14:51:22,246] [1749ecc5655d49b08d1b7fcb675f853f] django.server: "GET /api/user/list HTTP/1.1" 200 255
+WARNING  [2024-04-15 14:51:22,286] [6245bbc793424c14b2f6839ef0b1bf90] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-15 14:51:22,290] [6245bbc793424c14b2f6839ef0b1bf90] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-15 14:51:44,221] [71db5f6333554625a7aa1dd325b51bd1] django.server: "OPTIONS /api/project/detail/5 HTTP/1.1" 200 0
+INFO     [2024-04-15 14:51:44,222] [6f4ccb4a6f1f4d62b0203d64622f3ffe] django.server: "OPTIONS /api/user/list HTTP/1.1" 200 0
+INFO     [2024-04-15 14:51:44,236] [5fa9a2f0e0f94fde94588d56763d6d6b] django.server: "GET /api/project/detail/5 HTTP/1.1" 200 703
+INFO     [2024-04-15 14:51:44,237] [a8dd285d874c450ba6cfa3a785ebad64] django.server: "GET /api/user/list HTTP/1.1" 200 255
+WARNING  [2024-04-15 14:51:44,273] [6aac286d05ce4456b87d5788bac0ef3e] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-15 14:51:44,274] [6aac286d05ce4456b87d5788bac0ef3e] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-15 14:51:48,910] [4760e9965cba46d0aac8c91f7730473d] django.server: "OPTIONS /api/project/role/add HTTP/1.1" 200 0
+INFO     [2024-04-15 14:51:48,914] [a41e5f3aa40f48c08d28503cfc55df7d] django.server: "POST /api/project/role/add HTTP/1.1" 200 61
+INFO     [2024-04-15 14:52:06,285] [9b7270f5a6a442a59a875489abcfe83e] django.server: "OPTIONS /api/project/list?name=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-15 14:52:06,301] [b27c70745bbc403db9eaec042fe1d756] django.server: "GET /api/project/list?name=&page=1 HTTP/1.1" 200 2181
+WARNING  [2024-04-15 14:52:06,372] [70b7fc13ca6a431b95640f07730ab977] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-15 14:52:06,372] [70b7fc13ca6a431b95640f07730ab977] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-15 14:52:10,010] [54a3e39343024033b380367d15824bc8] django.server: "OPTIONS /api/project/list?name=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-15 14:52:10,036] [8bbc4d624c10497ba08db8726b21df20] django.server: "GET /api/project/list?name=&page=1 HTTP/1.1" 200 2181
+WARNING  [2024-04-15 14:52:10,081] [2ca748f41de84e1d9ed5538b77d1a48e] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-15 14:52:10,081] [2ca748f41de84e1d9ed5538b77d1a48e] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-15 14:52:16,534] [2156c906d1394488b3d28c3a59d6ea61] django.server: "OPTIONS /api/project/detail/5 HTTP/1.1" 200 0
+INFO     [2024-04-15 14:52:16,535] [47749523892b4fc492d41e5ccace6b12] django.server: "OPTIONS /api/user/list HTTP/1.1" 200 0
+INFO     [2024-04-15 14:52:16,548] [dde40abd713d4dde9baa2924c5f7940d] django.server: "GET /api/project/detail/5 HTTP/1.1" 200 703
+INFO     [2024-04-15 14:52:16,551] [a4934362ae2c4fc2991dfcaaabc91fbc] django.server: "GET /api/user/list HTTP/1.1" 200 255
+WARNING  [2024-04-15 14:52:16,567] [7795821e3c7840c49dceeba2fc0043ba] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-15 14:52:16,567] [7795821e3c7840c49dceeba2fc0043ba] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+WARNING  [2024-04-15 14:56:13,662] [9d8f3a2e56184761b349d8609fad952d] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-15 14:56:13,663] [9d8f3a2e56184761b349d8609fad952d] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+WARNING  [2024-04-15 14:56:16,494] [2dcaa1fba33e448c8f6b21d653eaf1cc] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-15 14:56:16,495] [2dcaa1fba33e448c8f6b21d653eaf1cc] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+WARNING  [2024-04-15 14:56:18,076] [812f843e935d446c84f4bedaaab7c630] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-15 14:56:18,077] [812f843e935d446c84f4bedaaab7c630] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-15 14:56:23,765] [c4c44aac9f2643f2a6551a27aceb7e86] django.server: "OPTIONS /api/project/role/delete HTTP/1.1" 200 0
+INFO     [2024-04-15 14:56:23,773] [c91b6e0c0c4e4921900ed6c26e278de1] django.server: "DELETE /api/project/role/delete HTTP/1.1" 200 46
+INFO     [2024-04-15 14:56:27,025] [184f5e1a4d9b4cd882435f12ded173f0] django.server: "OPTIONS /api/project/list?name=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-15 14:56:27,047] [89568523ccd64ee1929c698d9ebcfcff] django.server: "GET /api/project/list?name=&page=1 HTTP/1.1" 200 2040
+WARNING  [2024-04-15 14:56:27,081] [91371b49b7da445fadc71a8157196b5b] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-15 14:56:27,082] [91371b49b7da445fadc71a8157196b5b] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-15 14:58:09,421] [8fe0c2b3001c4c53b2ed906b6b65784e] django.server: "OPTIONS /api/project/detail/5 HTTP/1.1" 200 0
+INFO     [2024-04-15 14:58:09,423] [1458bc135ede427181af630bb62edd16] django.server: "OPTIONS /api/user/list HTTP/1.1" 200 0
+INFO     [2024-04-15 14:58:09,430] [494e99d501b84fff8bc176cfc3af37aa] django.server: "GET /api/project/detail/5 HTTP/1.1" 200 562
+INFO     [2024-04-15 14:58:09,437] [b52adaf66601428a8bfa9bc917264fbd] django.server: "GET /api/user/list HTTP/1.1" 200 255
+WARNING  [2024-04-15 14:58:09,449] [27b90e6bf43345f59f7bfd11184b05b4] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-15 14:58:09,449] [27b90e6bf43345f59f7bfd11184b05b4] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692

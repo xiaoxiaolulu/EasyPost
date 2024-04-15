@@ -6,6 +6,7 @@ DESCRIPTION：用户模型
  * table-UserProfile: 用户扩展
  * table-VerifyCode: 验证码
 """
+from os import path
 from django.contrib.auth.models import AbstractUser
 from django.db.models import (
     Model,
@@ -18,6 +19,7 @@ from django.db.models import (
 )
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
+from config.settings import MEDIA_ROOT
 
 
 class Defaults(object):
@@ -69,7 +71,8 @@ class User(AbstractUser):
     mobile = CharField(max_length=11, null=True, blank=True, verbose_name=_('User Mobile'))
     email = CharField(max_length=125, null=True, blank=True, verbose_name=_('User Email'))
     introduction = TextField(blank=True, null=True, verbose_name=_('User Introduction'), default=Defaults.INTRODUCTION)
-    avatar = ImageField(upload_to='avatar/', default="avatar/default.png", null=True, blank=True, verbose_name=_('User Avatar'))
+    avatar = ImageField(upload_to=MEDIA_ROOT, default=path.join(MEDIA_ROOT, 'default.png'),
+                        null=True, blank=True, verbose_name=_('User Avatar'))
     address = CharField(max_length=100, null=True, blank=True, verbose_name=_('User Address'))
     birthday = DateField(verbose_name=_('User Birthday'), blank=True, null=True, default=timezone.now)
     gender = CharField(verbose_name=_('User Gender'), choices=Defaults.GENDER_CHOICES, max_length=6,
