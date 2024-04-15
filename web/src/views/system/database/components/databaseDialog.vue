@@ -24,8 +24,8 @@
         <el-input v-model="form.password" placeholder="请输入密码">></el-input>
       </el-form-item>
     </el-form>
-
     <div class="pull-right">
+      <el-button type="success" @click="DbSettingTest(ruleFormRef)">测试连接</el-button>
       <el-button type="primary" @click="onSureClick(ruleFormRef)">确 认</el-button>
       <el-button @click="dialog = false">取消</el-button>
     </div>
@@ -34,9 +34,9 @@
 
 <script lang="ts" setup>
 
-import {computed, reactive, ref, watch} from "vue";
+import {reactive, ref} from "vue";
 import {ElMessage, FormInstance} from "element-plus";
-import {databaseCreate, databaseUpdate} from "@/api/setting";
+import {databaseCreate, databaseUpdate, databaseDebug} from "@/api/setting";
 import {showErrMessage} from "@/utils/element";
 
 const dialog = ref<boolean>(false)
@@ -71,6 +71,21 @@ function close() {
     form[key] = null
   })
   emits('queryList');
+}
+
+const DbSettingTest = (formName: FormInstance | undefined) => {
+  if (!formName) return
+  formName.validate(async (valid) => {
+    if (valid) {
+      const ret = await databaseDebug(form)
+      const {code, data, msg} = ret.data
+      showErrMessage(code.toString(), msg)
+    } else {
+      console.log('error submit!')
+      ElMessage.error("数据库新增失败请重试!")
+      return false
+    }
+  })
 }
 
 const onSureClick = (formName: FormInstance | undefined) => {

@@ -12,12 +12,12 @@ import types
 import typing
 import uuid
 from typing import (
-    Dict,
     Any
 )
 from api.models.setting import Functions
+from api.response.fatcory import ResponseStandard
 from config.settings import BASE_DIR
-from unitrunner.database.DBClient import DBClient
+from unitrunner.database.DBClient import DBMysql
 from unitrunner import builitin
 from utils.encoder import parse_string_value
 from utils.logger import logger
@@ -26,7 +26,7 @@ from utils.logger import logger
 class SettingDao:
 
     @staticmethod
-    def database_is_connect(config: dict) -> bool:
+    def database_is_connect(config: dict) -> ResponseStandard | dict[str, str | bool]:
         """
         This static method checks if a database connection can be established
         using the provided configuration.
@@ -44,11 +44,11 @@ class SettingDao:
             True if the connection is successful, False otherwise.
         """
         try:
-            db = DBClient()
-            ret = db.is_connect(**config)
+            db = DBMysql(config)
+            ret = db.connect()
             return ret
         except (Exception,):
-            return False
+            pass
 
     @staticmethod
     def handle_function_content(func_key: typing.Union[int, str, None]) -> typing.Dict:

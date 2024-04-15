@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Improve error handling and messaging in API requestsUpdate ElMessage usage for better error displayAdd missing import in user modelFix avatar image path in user modelUpdate editProject.vue for better code readability and proper icon displayAdjust tag type in editProject.vue">
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Update EasyPost logging and editProject.vue file.">
+      <change beforePath="$PROJECT_DIR$/api/dao/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/setting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/service/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/setting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/project/components/editProject.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/project/components/editProject.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/database/DBClient.py" beforeDir="false" afterPath="$PROJECT_DIR$/unitrunner/database/DBClient.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/api/setting.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/api/setting.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/system/database/components/databaseDialog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/system/database/components/databaseDialog.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/system/database/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/system/database/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +126,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/86135/Desktop/EasyPost/backend",
+    "last_opened_file_path": "E:/resources/zerorunner/backend",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.stylelint": "true",
     "node.js.detected.package.tslint": "true",
@@ -153,7 +160,30 @@
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Django Server.backend">
+  <component name="RunManager" selected="Python.DBClient">
+    <configuration name="DBClient" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/unitrunner/database" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/unitrunner/database/DBClient.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="__init__ (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <option name="ENV_FILES" value="" />
@@ -223,29 +253,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="engine" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="backend" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/tests/engine.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="time" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <option name="ENV_FILES" value="" />
@@ -297,19 +304,19 @@
     </configuration>
     <list>
       <item itemvalue="Django Server.backend" />
+      <item itemvalue="Python.DBClient" />
       <item itemvalue="Python.__init__" />
       <item itemvalue="Python.time" />
       <item itemvalue="Python.api_migrate" />
-      <item itemvalue="Python.engine" />
       <item itemvalue="Python.__init__ (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.DBClient" />
         <item itemvalue="Python.time" />
         <item itemvalue="Python.__init__" />
         <item itemvalue="Python.__init__ (1)" />
         <item itemvalue="Python.api_migrate" />
-        <item itemvalue="Python.engine" />
       </list>
     </recent_temporary>
   </component>
@@ -458,15 +465,7 @@
       <workItem from="1712461146657" duration="56000" />
       <workItem from="1712461413811" duration="49812000" />
       <workItem from="1712801065778" duration="11896000" />
-      <workItem from="1712908146550" duration="17940000" />
-    </task>
-    <task id="LOCAL-00297" summary="&quot;Refactor code for unit test&quot;">
-      <option name="closed" value="true" />
-      <created>1711707135129</created>
-      <option name="number" value="00297" />
-      <option name="presentableId" value="LOCAL-00297" />
-      <option name="project" value="LOCAL" />
-      <updated>1711707135129</updated>
+      <workItem from="1712908146550" duration="22917000" />
     </task>
     <task id="LOCAL-00298" summary="&quot;Add docstring comments to scheduler base and scheduler py files.&quot;">
       <option name="closed" value="true" />
@@ -852,7 +851,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713164331527</updated>
     </task>
-    <option name="localTasksCounter" value="346" />
+    <task id="LOCAL-00346" summary="Update EasyPost logging and editProject.vue file.">
+      <option name="closed" value="true" />
+      <created>1713164735265</created>
+      <option name="number" value="00346" />
+      <option name="presentableId" value="LOCAL-00346" />
+      <option name="project" value="LOCAL" />
+      <updated>1713164735265</updated>
+    </task>
+    <option name="localTasksCounter" value="347" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -882,18 +889,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Improve error handling and messaging in API requestsUpdate ElMessage usage for better error displayAdd missing import in user modelFix avatar image path in user" />
-    <MESSAGE value="Improve error handling and messaging in API requestsUpdate ElMessage usage for better error displayAdd missing import in user modelFix avatar image path in user model" />
-    <MESSAGE value="Improve error handling and messaging in API requestsUpdate ElMessage usage for better error displayAdd missing import in user modelFix avatar image path in user modelUpdate" />
-    <MESSAGE value="Improve error handling and messaging in API requestsUpdate ElMessage usage for better error displayAdd missing import in user modelFix avatar image path in user modelUpdate edit" />
-    <MESSAGE value="Improve error handling and messaging in API requestsUpdate ElMessage usage for better error displayAdd missing import in user modelFix avatar image path in user modelUpdate editProject" />
-    <MESSAGE value="Improve error handling and messaging in API requestsUpdate ElMessage usage for better error displayAdd missing import in user modelFix avatar image path in user modelUpdate editProject." />
-    <MESSAGE value="Improve error handling and messaging in API requestsUpdate ElMessage usage for better error displayAdd missing import in user modelFix avatar image path in user modelUpdate editProject.vue" />
-    <MESSAGE value="Improve error handling and messaging in API requestsUpdate ElMessage usage for better error displayAdd missing import in user modelFix avatar image path in user modelUpdate editProject.vue for" />
-    <MESSAGE value="Improve error handling and messaging in API requestsUpdate ElMessage usage for better error displayAdd missing import in user modelFix avatar image path in user modelUpdate editProject.vue for better" />
-    <MESSAGE value="Improve error handling and messaging in API requestsUpdate ElMessage usage for better error displayAdd missing import in user modelFix avatar image path in user modelUpdate editProject.vue for better code" />
-    <MESSAGE value="Improve error handling and messaging in API requestsUpdate ElMessage usage for better error displayAdd missing import in user modelFix avatar image path in user modelUpdate editProject.vue for better code read" />
-    <MESSAGE value="Improve error handling and messaging in API requestsUpdate ElMessage usage for better error displayAdd missing import in user modelFix avatar image path in user modelUpdate editProject.vue for better code readability" />
     <MESSAGE value="Improve error handling and messaging in API requestsUpdate ElMessage usage for better error displayAdd missing import in user modelFix avatar image path in user modelUpdate editProject.vue for better code readability and" />
     <MESSAGE value="Improve error handling and messaging in API requestsUpdate ElMessage usage for better error displayAdd missing import in user modelFix avatar image path in user modelUpdate editProject.vue for better code readability and proper" />
     <MESSAGE value="Improve error handling and messaging in API requestsUpdate ElMessage usage for better error displayAdd missing import in user modelFix avatar image path in user modelUpdate editProject.vue for better code readability and proper icon" />
@@ -907,7 +902,19 @@
     <MESSAGE value="Improve error handling and messaging in API requestsUpdate ElMessage usage for better error displayAdd missing import in user modelFix avatar image path in user modelUpdate editProject.vue for better code readability and proper icon displayAdjust tag type in editProject" />
     <MESSAGE value="Improve error handling and messaging in API requestsUpdate ElMessage usage for better error displayAdd missing import in user modelFix avatar image path in user modelUpdate editProject.vue for better code readability and proper icon displayAdjust tag type in editProject." />
     <MESSAGE value="Improve error handling and messaging in API requestsUpdate ElMessage usage for better error displayAdd missing import in user modelFix avatar image path in user modelUpdate editProject.vue for better code readability and proper icon displayAdjust tag type in editProject.vue" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improve error handling and messaging in API requestsUpdate ElMessage usage for better error displayAdd missing import in user modelFix avatar image path in user modelUpdate editProject.vue for better code readability and proper icon displayAdjust tag type in editProject.vue" />
+    <MESSAGE value="Update" />
+    <MESSAGE value="Update E" />
+    <MESSAGE value="Update Easy" />
+    <MESSAGE value="Update EasyPost" />
+    <MESSAGE value="Update EasyPost logging" />
+    <MESSAGE value="Update EasyPost logging and" />
+    <MESSAGE value="Update EasyPost logging and edit" />
+    <MESSAGE value="Update EasyPost logging and editProject" />
+    <MESSAGE value="Update EasyPost logging and editProject." />
+    <MESSAGE value="Update EasyPost logging and editProject.vue" />
+    <MESSAGE value="Update EasyPost logging and editProject.vue file" />
+    <MESSAGE value="Update EasyPost logging and editProject.vue file." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update EasyPost logging and editProject.vue file." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$recursion.coverage" NAME="recursion Coverage Results" MODIFIED="1712139211023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
@@ -935,7 +942,7 @@
     <SUITE FILE_PATH="coverage/backend$http_handler.coverage" NAME="http_handler Coverage Results" MODIFIED="1691322735662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/request" />
     <SUITE FILE_PATH="coverage/http_handler_py$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1699847256865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/http_handler_py$global_func.coverage" NAME="global_func Coverage Results" MODIFIED="1699843223150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/backend$DBClient.coverage" NAME="DBClient Coverage Results" MODIFIED="1712027308955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/unitrunner/database" />
+    <SUITE FILE_PATH="coverage/backend$DBClient.coverage" NAME="DBClient Coverage Results" MODIFIED="1713167891785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/unitrunner/database" />
     <SUITE FILE_PATH="coverage/backend$step.coverage" NAME="step Coverage Results" MODIFIED="1705474725686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/models" />
     <SUITE FILE_PATH="coverage/backend$async_mixins.coverage" NAME="async_mixins Coverage Results" MODIFIED="1705914322987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/mixins" />
     <SUITE FILE_PATH="coverage/http_handler_py$__init____1_.coverage" NAME="__init__ (1) Coverage Results" MODIFIED="1695113385741" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />

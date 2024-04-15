@@ -1,5 +1,5 @@
-from contextlib import closing
 import MySQLdb
+from api.response.fatcory import ResponseStandard
 from utils.logger import logger as log
 
 
@@ -23,8 +23,9 @@ class DBMysql:
                 (Optional) - autocommit (bool): Whether to enable autocommit mode (defaults to True).
         """
         config['autocommit'] = True
-        self.con = MySQLdb.connect(**config)
-        self.cur = self.con.cursor(MySQLdb.cursors.DictCursor)
+        self.config = config
+        self.cur = None
+        self.con = None
 
     def execute(self, sql):
         """
@@ -39,6 +40,7 @@ class DBMysql:
         Returns:
             dict: The first row of the result set as a dictionary, or None if no rows were returned.
         """
+        self.connect()
         self.cur.execute(sql)
         return self.cur.fetchone()
 
@@ -55,8 +57,38 @@ class DBMysql:
         Returns:
             list: A list of dictionaries representing all rows of the result set.
         """
+        self.connect()
         self.cur.execute(sql)
         return self.cur.fetchall()
+
+    def connect(self) -> ResponseStandard | dict[str, str | bool]:
+        """
+        Checks if a connection to a MySQL database can be established with the provided configuration.
+
+        This method attempts to connect to a MySQL database using the given configuration dictionary (`config`).
+        It uses a context manager (`closing`) to ensure the connection is properly closed regardless of
+        success or failure.
+
+        Returns:
+            bool: True if the connection is successful, False otherwise.
+        """
+        try:
+            self.config['port'] = int(self.config.get('config', 3306))
+            self.con = MySQLdb.connect(**self.config)
+            self.cur = self.con.cursor(MySQLdb.cursors.DictCursor)
+            if isinstance(self.con, MySQLdb.connections.Connection):
+                log.info(f'mysql connect success -> {self.config.get("database")}')
+
+                return ResponseStandard.success(
+                    data={"database_status": True},
+                    msg="mysql connect success"
+                )
+        except Exception as err:
+            log.error(f"mysql connect error -> {err}")
+            return ResponseStandard.failed(
+                data={"database_status": False},
+                msg="mysql connect error"
+            )
 
     def __del__(self):
         """
@@ -71,7 +103,7 @@ class DBMysql:
 
 class DBClient:
 
-    def init_connect(self, DB): # noqa
+    def init_connect(self, DB):  # noqa
         """
         Initializes database connections based on input configuration.
 
@@ -138,32 +170,26 @@ class DBClient:
         for db in list(self.__dict__.keys()):
             delattr(self, db)
 
-    def is_connect(self, config) -> bool:
-        """
-        Checks if a connection to a MySQL database can be established with the provided configuration.
 
-        This method attempts to connect to a MySQL database using the given configuration dictionary (`config`).
-        It uses a context manager (`closing`) to ensure the connection is properly closed regardless of
-        success or failure.
-
-        Args:
-            config (dict): A dictionary containing the database configuration details.
-                Expected keys include host, user, password, and db.
-
-        Returns:
-            bool: True if the connection is successful, False otherwise.
-        """
-        try:
-            with closing(MySQLdb.connect(**config)) as conn:
-
-                if isinstance(conn, MySQLdb.connections.Connection):
-                    log.info(f'mysql connect success -> {config.get("db")} ✅')
-                    return True
-        except Exception as err:
-            log.error(f"mysql connect error -> {err} ❌")
-            return False
-        finally:
-            try:
-                self.close_connect()
-            except AttributeError:
-                pass
+if __name__ == '__main__':
+    """
+        :param str host:        host to connect
+        :param str user:        user to connect as
+        :param str password:    password to use
+        :param str passwd:      alias of password (deprecated)
+        :param str database:    database to use
+        :param str db:          alias of database (deprecated)
+        :param int port:        TCP/IP port to connect to
+    """
+    config = {
+        "host": "localhost",
+        "user": "root",
+        "password": "123456",
+        "database": "easypost",
+        "port": 3306,
+    }
+    db = DBMysql(config)
+    connect = db.connect()
+    print(connect)
+    # ret = db.execute("select * from api_api")
+    # print(ret)

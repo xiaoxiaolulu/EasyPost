@@ -1847,3 +1847,735 @@ Quit the server with CTRL-BREAK.
              \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
               \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
             
+2024-04-15 15:33:35 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 15:33:36 [django-main-thread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 15:33:36 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 15:33:36 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 15:33:36 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 15:33:36
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 15:34:39 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 15:34:40 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 15:34:40 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 15:34:40 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 15:34:40 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 15:34:40
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 15:35:05 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 15:35:06 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 15:35:06 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 15:35:06 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 15:35:06 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 15:35:06
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 15:36:47 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 15:36:47 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 15:36:47 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 15:36:47 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 15:36:47 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 15:36:47
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 15:39:22 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 15:39:23 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 15:39:23 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 15:39:23 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 15:39:23 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 15:39:23
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 15:41:08 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 15:41:09 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 15:41:09 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 15:41:09 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 15:41:09 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 15:41:09
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 15:41:19 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 15:41:19 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 15:41:19 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 15:41:19 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 15:41:20 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 15:41:20
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 15:41:33 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 15:41:33 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 15:41:33 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 15:41:33 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 15:41:33 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 15:41:33
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 15:41:48 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 15:41:49 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 15:41:49 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 15:41:49 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 15:41:49 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 15:41:49
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 15:48:20 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 15:48:21 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 15:48:21 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 15:48:21 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 15:48:21 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 15:48:21
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 15:48:45 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 15:48:45 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 15:48:45 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 15:48:45 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 15:48:45 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 15:48:45
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 15:50:01 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 15:50:02 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 15:50:02 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 15:50:02 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 15:50:02 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 15:50:02
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 15:50:31 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 15:50:32 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 15:50:32 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 15:50:32 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 15:50:32 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 15:50:32
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 15:50:59 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 15:51:00 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 15:51:00 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 15:51:00 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 15:51:00 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 15:51:00
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 15:51:29 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 15:51:30 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 15:51:30 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 15:51:30 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 15:51:30 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 15:51:30
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 15:51:39 [MainThread]-[DBClient.connect:88]-[ERROR]:mysql connect error -> (1045, "Access denied for user 'root'@'localhost' (using password: YES)") ❌
+2024-04-15 15:51:41 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 15:51:41 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 15:51:41 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 15:51:41 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 15:51:41 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 15:51:41
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 15:52:22 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 15:52:23 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 15:52:23 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 15:52:23 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 15:52:23 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 15:52:23
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 15:52:28 [MainThread]-[DBClient.connect:90]-[ERROR]:mysql connect error -> (1045, "Access denied for user 'root'@'localhost' (using password: YES)") ❌
+2024-04-15 15:52:29 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 15:52:29 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 15:52:29 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 15:52:29 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 15:52:30 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 15:52:30
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 15:53:24 [MainThread]-[DBClient.connect:80]-[INFO]:mysql connect success -> None ✅
+2024-04-15 15:53:26 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 15:53:26 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 15:53:26 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 15:53:26 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 15:53:26 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 15:53:26
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 15:55:21 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 15:55:22 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 15:55:22 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 15:55:22 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 15:55:22 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 15:55:22
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 15:55:22 [Thread-1 (process_request_thread)]-[DBClient.connect:81]-[ERROR]:mysql connect error -> name 'config' is not defined ❌
+2024-04-15 15:55:25 [Thread-2 (process_request_thread)]-[DBClient.connect:81]-[ERROR]:mysql connect error -> name 'config' is not defined ❌
+2024-04-15 15:55:53 [Thread-4 (process_request_thread)]-[DBClient.connect:81]-[ERROR]:mysql connect error -> name 'config' is not defined ❌
+2024-04-15 15:55:55 [Thread-5 (process_request_thread)]-[DBClient.connect:81]-[ERROR]:mysql connect error -> name 'config' is not defined ❌
+2024-04-15 15:56:27 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 15:56:27 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 15:56:27 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 15:56:27 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 15:56:27 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 15:56:27
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 15:56:28 [Thread-1 (process_request_thread)]-[setting.post:140]-[DEBUG]:{'host': 'localhost', 'user': 'root', 'password': '123456', 'database': 'easypost', 'port': 3306}
+2024-04-15 15:56:28 [Thread-1 (process_request_thread)]-[DBClient.connect:81]-[ERROR]:mysql connect error -> name 'config' is not defined ❌
+2024-04-15 15:56:48 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 15:56:48 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 15:56:48 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 15:56:48 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 15:56:49 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 15:56:49
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 15:56:49 [Thread-1 (process_request_thread)]-[setting.post:140]-[DEBUG]:b'{\r\n        "host": "localhost",\r\n        "user": "root",\r\n        "password": "123456",\r\n        "database": "easypost",\r\n        "port": 3306\r\n    }'
+2024-04-15 15:56:49 [Thread-1 (process_request_thread)]-[DBClient.connect:81]-[ERROR]:mysql connect error -> name 'config' is not defined ❌
+2024-04-15 15:57:13 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 15:57:13 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 15:57:13 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 15:57:13 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 15:57:13 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 15:57:13
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 15:57:16 [Thread-1 (process_request_thread)]-[setting.post:140]-[DEBUG]:b'{\r\n        "host": "localhost",\r\n        "user": "root",\r\n        "password": "123456",\r\n        "database": "easypost",\r\n        "port": 3306\r\n    }'
+2024-04-15 15:57:16 [Thread-1 (process_request_thread)]-[DBClient.connect:81]-[ERROR]:mysql connect error -> name 'config' is not defined ❌
+2024-04-15 15:57:32 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 15:57:32 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 15:57:32 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 15:57:32 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 15:57:33 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 15:57:33
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 15:57:55 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 15:57:56 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 15:57:56 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 15:57:56 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 15:57:56 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 15:57:56
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 15:57:56 [Thread-1 (process_request_thread)]-[DBClient.connect:81]-[ERROR]:mysql connect error -> name 'config' is not defined ❌
+2024-04-15 15:58:11 [MainThread]-[DBClient.connect:78]-[INFO]:mysql connect success -> None ✅
+2024-04-15 15:59:12 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 15:59:13 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 15:59:13 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 15:59:13 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 15:59:13 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 15:59:13
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 15:59:13 [Thread-1 (process_request_thread)]-[DBClient.connect:81]-[ERROR]:mysql connect error -> name 'config' is not defined ❌
+2024-04-15 15:59:25 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 15:59:25 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 15:59:25 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 15:59:25 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 15:59:26 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 15:59:26
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 15:59:27 [Thread-1 (process_request_thread)]-[DBClient.connect:81]-[ERROR]:mysql connect error -> name 'config' is not defined ❌
+2024-04-15 16:00:05 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 16:00:06 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 16:00:06 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 16:00:06 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 16:00:06 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 16:00:06
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 16:00:09 [Thread-1 (process_request_thread)]-[DBClient.connect:81]-[ERROR]:mysql connect error -> name 'config' is not defined ❌
+2024-04-15 16:00:29 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 16:00:30 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 16:00:30 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 16:00:30 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 16:00:30 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 16:00:30
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 16:00:32 [Thread-1 (process_request_thread)]-[DBClient.connect:81]-[ERROR]:mysql connect error -> name 'config' is not defined ❌
+2024-04-15 16:01:02 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 16:01:03 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 16:01:03 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 16:01:03 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 16:01:03 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 16:01:03
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 16:01:06 [Thread-1 (process_request_thread)]-[DBClient.connect:78]-[INFO]:mysql connect success -> easypost ✅
+2024-04-15 16:01:19 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 16:01:20 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 16:01:20 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 16:01:20 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 16:01:20 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 16:01:20
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 16:01:20 [Thread-1 (process_request_thread)]-[DBClient.connect:78]-[INFO]:mysql connect success -> easypost
+2024-04-15 16:01:28 [Thread-2 (process_request_thread)]-[DBClient.connect:78]-[INFO]:mysql connect success -> easypost
+2024-04-15 16:01:40 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 16:01:40 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 16:01:40 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 16:01:40 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 16:01:41 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 16:01:41
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 16:01:41 [Thread-1 (process_request_thread)]-[DBClient.connect:81]-[ERROR]:mysql connect error -> (1049, "Unknown database 'easypo1st'") ❌
+2024-04-15 16:02:10 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 16:02:10 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 16:02:10 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 16:02:10 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 16:02:10 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 16:02:10
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 16:02:10 [Thread-1 (process_request_thread)]-[DBClient.connect:81]-[ERROR]:mysql connect error -> (1049, "Unknown database 'easypo1st'")
+2024-04-15 16:02:44 [Thread-2 (process_request_thread)]-[DBClient.connect:78]-[INFO]:mysql connect success -> easypost
+2024-04-15 16:07:09 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 16:07:10 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 16:07:10 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 16:07:10 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 16:07:10 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 16:07:10
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 16:09:16 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 16:09:17 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 16:09:17 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 16:09:17 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 16:09:17 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 16:09:17
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 16:09:17 [Thread-1 (process_request_thread)]-[DBClient.connect:80]-[INFO]:mysql connect success -> easypost
+2024-04-15 16:09:19 [Thread-2 (process_request_thread)]-[DBClient.connect:80]-[INFO]:mysql connect success -> easypost
+2024-04-15 16:09:27 [Thread-3 (process_request_thread)]-[DBClient.connect:88]-[ERROR]:mysql connect error -> 'str' object cannot be interpreted as an integer
+2024-04-15 16:09:30 [Thread-3 (process_request_thread)]-[DBClient.connect:88]-[ERROR]:mysql connect error -> 'str' object cannot be interpreted as an integer
+2024-04-15 16:13:09 [Thread-3 (process_request_thread)]-[DBClient.connect:88]-[ERROR]:mysql connect error -> 'str' object cannot be interpreted as an integer
+2024-04-15 16:13:12 [Thread-3 (process_request_thread)]-[DBClient.connect:88]-[ERROR]:mysql connect error -> 'str' object cannot be interpreted as an integer
+2024-04-15 16:13:16 [Thread-3 (process_request_thread)]-[DBClient.connect:88]-[ERROR]:mysql connect error -> 'str' object cannot be interpreted as an integer
+2024-04-15 16:13:28 [Thread-3 (process_request_thread)]-[DBClient.connect:88]-[ERROR]:mysql connect error -> 'str' object cannot be interpreted as an integer
+2024-04-15 16:13:30 [Thread-3 (process_request_thread)]-[DBClient.connect:88]-[ERROR]:mysql connect error -> 'str' object cannot be interpreted as an integer
+2024-04-15 16:13:34 [Thread-3 (process_request_thread)]-[DBClient.connect:88]-[ERROR]:mysql connect error -> 'str' object cannot be interpreted as an integer
+2024-04-15 16:13:52 [Thread-4 (process_request_thread)]-[DBClient.connect:88]-[ERROR]:mysql connect error -> (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+2024-04-15 16:13:55 [Thread-5 (process_request_thread)]-[DBClient.connect:80]-[INFO]:mysql connect success -> easypost
+2024-04-15 16:14:15 [Thread-3 (process_request_thread)]-[DBClient.connect:88]-[ERROR]:mysql connect error -> 'str' object cannot be interpreted as an integer
+2024-04-15 16:14:27 [Thread-3 (process_request_thread)]-[DBClient.connect:88]-[ERROR]:mysql connect error -> 'str' object cannot be interpreted as an integer
+2024-04-15 16:14:32 [Thread-3 (process_request_thread)]-[DBClient.connect:88]-[ERROR]:mysql connect error -> 'str' object cannot be interpreted as an integer
+2024-04-15 16:14:39 [Thread-3 (process_request_thread)]-[DBClient.connect:88]-[ERROR]:mysql connect error -> 'str' object cannot be interpreted as an integer
+2024-04-15 16:14:44 [Thread-3 (process_request_thread)]-[DBClient.connect:88]-[ERROR]:mysql connect error -> 'str' object cannot be interpreted as an integer
+2024-04-15 16:14:45 [Thread-3 (process_request_thread)]-[DBClient.connect:88]-[ERROR]:mysql connect error -> 'str' object cannot be interpreted as an integer
+2024-04-15 16:14:45 [Thread-3 (process_request_thread)]-[DBClient.connect:88]-[ERROR]:mysql connect error -> 'str' object cannot be interpreted as an integer
+2024-04-15 16:14:45 [Thread-3 (process_request_thread)]-[DBClient.connect:88]-[ERROR]:mysql connect error -> 'str' object cannot be interpreted as an integer
+2024-04-15 16:14:45 [Thread-3 (process_request_thread)]-[DBClient.connect:88]-[ERROR]:mysql connect error -> 'str' object cannot be interpreted as an integer
+2024-04-15 16:15:19 [Thread-7 (process_request_thread)]-[DBClient.connect:80]-[INFO]:mysql connect success -> easypost
+2024-04-15 16:15:23 [Thread-8 (process_request_thread)]-[DBClient.connect:88]-[ERROR]:mysql connect error -> (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+2024-04-15 16:15:45 [Thread-3 (process_request_thread)]-[DBClient.connect:88]-[ERROR]:mysql connect error -> 'str' object cannot be interpreted as an integer
+2024-04-15 16:15:47 [Thread-3 (process_request_thread)]-[DBClient.connect:88]-[ERROR]:mysql connect error -> 'str' object cannot be interpreted as an integer
+2024-04-15 16:15:47 [Thread-3 (process_request_thread)]-[DBClient.connect:88]-[ERROR]:mysql connect error -> 'str' object cannot be interpreted as an integer
+2024-04-15 16:15:47 [Thread-3 (process_request_thread)]-[DBClient.connect:88]-[ERROR]:mysql connect error -> 'str' object cannot be interpreted as an integer
+2024-04-15 16:15:48 [Thread-3 (process_request_thread)]-[DBClient.connect:88]-[ERROR]:mysql connect error -> 'str' object cannot be interpreted as an integer
+2024-04-15 16:15:48 [Thread-3 (process_request_thread)]-[DBClient.connect:88]-[ERROR]:mysql connect error -> 'str' object cannot be interpreted as an integer
+2024-04-15 16:15:49 [Thread-3 (process_request_thread)]-[DBClient.connect:88]-[ERROR]:mysql connect error -> 'str' object cannot be interpreted as an integer
+2024-04-15 16:18:36 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 16:18:36 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 16:18:36 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 16:18:36 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 16:18:37 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 16:18:37
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 16:19:52 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 16:19:52 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 16:19:52 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 16:19:52 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 16:19:53 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 16:19:53
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 16:22:13 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 16:22:14 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 16:22:14 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 16:22:14 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 16:22:14 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 16:22:14
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 16:22:14 [Thread-1 (process_request_thread)]-[DBClient.connect:86]-[ERROR]:mysql connect error -> (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+2024-04-15 16:22:19 [Thread-2 (process_request_thread)]-[DBClient.connect:79]-[INFO]:mysql connect success -> easypost
+2024-04-15 16:22:25 [Thread-3 (process_request_thread)]-[DBClient.connect:86]-[ERROR]:mysql connect error -> 'str' object cannot be interpreted as an integer
+2024-04-15 16:22:32 [Thread-3 (process_request_thread)]-[DBClient.connect:86]-[ERROR]:mysql connect error -> 'str' object cannot be interpreted as an integer
+2024-04-15 16:26:00 [Thread-3 (process_request_thread)]-[DBClient.connect:86]-[ERROR]:mysql connect error -> 'str' object cannot be interpreted as an integer
+2024-04-15 16:26:03 [Thread-3 (process_request_thread)]-[DBClient.connect:86]-[ERROR]:mysql connect error -> 'str' object cannot be interpreted as an integer
+2024-04-15 16:26:12 [Thread-4 (process_request_thread)]-[DBClient.connect:79]-[INFO]:mysql connect success -> easypost
+2024-04-15 16:26:22 [Thread-5 (process_request_thread)]-[DBClient.connect:86]-[ERROR]:mysql connect error -> 'str' object cannot be interpreted as an integer
+2024-04-15 16:26:24 [Thread-6 (process_request_thread)]-[DBClient.connect:86]-[ERROR]:mysql connect error -> 'str' object cannot be interpreted as an integer
+2024-04-15 16:26:25 [Thread-7 (process_request_thread)]-[DBClient.connect:86]-[ERROR]:mysql connect error -> 'str' object cannot be interpreted as an integer
+2024-04-15 16:28:07 [django-main-thread]-[runserver.inner_run:140]-[INFO]:Performing system checks...
+
+
+2024-04-15 16:28:08 [django-main-thread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-15 16:28:08 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-15 16:28:08 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-15 16:28:08 [django-main-thread]-[runserver.on_bind:188]-[INFO]:April 15, 2024 - 16:28:08
+Django version 4.2, using settings 'config.settings'
+Starting development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+            ______     ______     ______     __  __     ______   ______     ______     ______  
+            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+            
+2024-04-15 16:28:08 [Thread-1 (process_request_thread)]-[DBClient.connect:80]-[INFO]:mysql connect success -> easypost
+2024-04-15 16:28:13 [Thread-2 (process_request_thread)]-[DBClient.connect:80]-[INFO]:mysql connect success -> easypost
+2024-04-15 16:28:15 [Thread-2 (process_request_thread)]-[DBClient.connect:87]-[ERROR]:mysql connect error -> (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+2024-04-15 16:28:21 [Thread-2 (process_request_thread)]-[DBClient.connect:87]-[ERROR]:mysql connect error -> (1045, "Access denied for user 'root'@'localhost' (using password: YES)")

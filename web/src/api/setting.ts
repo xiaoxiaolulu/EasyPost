@@ -97,6 +97,14 @@ export function databaseCreate(data: any) {
     })
 }
 
+export function databaseDebug(data: any) {
+    return request({
+        url: '/api/database/isConnect',
+        method: 'post',
+        data
+    })
+}
+
 export function functionList(params: any) {
     return request({
         url: `/api/function/list`,

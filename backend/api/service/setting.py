@@ -137,9 +137,7 @@ class DatabaseIsConnectView(APIView):
         try:
             request_body = json.loads(request.body.decode())
             ret = SettingDao.database_is_connect(config=request_body)
-            return Response(ResponseStandard.success(
-                data={"database_status": ret}
-            ))
+            return Response(ret)
         except Exception as err:
             return Response(ResponseStandard.failed(err))
 

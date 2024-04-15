@@ -41,8 +41,8 @@
         </el-table-column>
         <el-table-column label="操作" width="150px" align="center">
           <template #default="scope">
-            <el-button @click="editAddress(scope.row)" type="primary" link>编辑</el-button>
-            <el-button @click="deleteAddressData(scope.row)" type="primary" link>删除</el-button>
+            <el-button @click="editData(scope.row)" type="primary" link>编辑</el-button>
+            <el-button @click="deleteData(scope.row)" type="primary" link>删除</el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -86,7 +86,7 @@ const rowData = ref({})
 
 const dialog = ref(null)
 
-const editAddress = (row: any) => {
+const editData = (row: any) => {
   rowData.value = row
   dialog.value.show(row)
 };
@@ -115,7 +115,7 @@ const handlePageChange = (newPage: any) => {
   queryList()
 }
 
-const deleteDatabaseData = (row: any) => {
+const deleteData = (row: any) => {
   ElMessageBox.confirm(`确认删除数据库数据 - ${row.name}?`).then(_ => {
     databaseDelete({id: row.id}).then((response) => {
       const {data, code, msg} = response.data
