@@ -5,8 +5,10 @@
         <el-form-item>
           <el-button
               type="primary"
-              icon="el-icon-plus"
               @click="addProject">
+            <el-icon>
+              <component :is="Plus"/>
+            </el-icon>
             创建项目
           </el-button>
         </el-form-item>
@@ -83,7 +85,7 @@ import {projectList, projectDelete} from "@/api/project";
 import {ElMessage, ElMessageBox, ElPagination} from "element-plus";
 import {useRouter} from "vue-router";
 import {parseTime} from "@/utils";
-import {More, Delete, Search} from "@element-plus/icons-vue";
+import {More, Delete, Search, Plus} from "@element-plus/icons-vue";
 import addDialog from './components/addDialog.vue'
 import {showErrMessage} from "@/utils/element";
 

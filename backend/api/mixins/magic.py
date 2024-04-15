@@ -66,6 +66,7 @@ class MagicUpdateApi(generics.UpdateAPIView):
         serializer = self.get_serializer(instance, data=request.data, partial=partial)
 
         if serializer.is_valid(raise_exception=True):
+            self.perform_update(serializer)
             response = ResponseStandard.success(data=serializer.data)
 
         if getattr(instance, '_prefetched_objects_cache', None):

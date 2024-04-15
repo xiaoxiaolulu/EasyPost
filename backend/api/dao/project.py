@@ -59,6 +59,25 @@ class ProjectDao:
             return False
 
     @staticmethod
+    def project_same_validate(name: str) -> bool:
+        """
+        Checks if a project name already exists in the database.
+
+        Args:
+            name: The project name to validate.
+
+        Returns:
+            True if the name already exists, False otherwise.
+        """
+        try:
+            model_object = Project.objects.filter(name=name).count()
+
+            if model_object > 1:
+                return True
+        except (Project.DoesNotExist,):
+            return False
+
+    @staticmethod
     def get_node_template():
         """
         Generates a default tree template for the node list.

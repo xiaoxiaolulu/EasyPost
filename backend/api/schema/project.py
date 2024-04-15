@@ -38,9 +38,11 @@ class ProjectSerializers(serializers.ModelSerializer):
         return instance
 
     def update(self, instance, validated_data):
+        name = validated_data.get("name", instance)
+        if ProjectDao.project_same_validate(name):
+            raise serializers.ValidationError('项目名称已存在!❌')
         for attr, value in validated_data.items():
             setattr(instance, attr, value)
-
         instance.save()
         return instance
 

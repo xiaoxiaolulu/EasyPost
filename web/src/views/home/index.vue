@@ -46,7 +46,7 @@
           <el-col :span="8">
             <el-card style="height: 100%">
               <template #header><strong>Swagger配置</strong></template>
-              <el-space :size="30" :spacer="spacer">
+              <el-space :size="20" :spacer="spacer">
                 <div v-for="(card, index) in swagger" :key="index">
                   <div class="span-container">
                     <span><strong style="font-size: 20px; color: #1f2d3d">{{ card.state }}</strong></span>
