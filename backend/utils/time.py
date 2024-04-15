@@ -1,6 +1,7 @@
 import calendar
 import datetime
 from typing import List
+from dateutil import relativedelta
 
 __all__ = [
     "now_time",
@@ -12,7 +13,8 @@ __all__ = [
     "month_start",
     "month_end",
     "yesterday",
-    "get_before_day"
+    "get_before_day",
+    "get_last_day_of_previous_month"
 ]
 
 
@@ -111,3 +113,45 @@ def get_before_day(days: int) -> List[datetime.date]:
     today = datetime.date.today()
     date_list = [today - datetime.timedelta(days=i) for i in range(days)]
     return date_list
+
+
+def get_last_day_of_previous_month(current_date: datetime.date) -> datetime.date:
+    """计算上个月的最后一天。
+
+    Args:
+        current_date: 当前日期。
+
+    Returns:
+        上个月的最后一天。
+    """
+    previous_month = current_date - relativedelta.relativedelta(months=+1)
+    last_day = calendar.monthrange(previous_month.year, previous_month.month)[1]
+    return previous_month.replace(day=last_day)
+
+
+def get_previous_month_start():
+    """
+    获取上个月月初的日期
+
+    这个函数计算并返回上个月的月初日期。
+
+    Returns:
+        datetime.date: 上个月月初的日期
+    """
+    today = datetime.date.today()
+    previous_month_start = today - relativedelta.relativedelta(months=+1, day=1)
+    return previous_month_start
+
+
+def get_previous_month_end():
+    """
+    获取上个月月末的日期
+
+    这个函数调用 get_last_day_of_previous_month 函数计算并返回上个月的月末日期。
+
+    Returns:
+        datetime.date: 上个月月末的日期
+    """
+    today = datetime.date.today()
+    previous_month_end = get_last_day_of_previous_month(today)
+    return previous_month_end

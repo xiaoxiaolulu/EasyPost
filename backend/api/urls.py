@@ -3,6 +3,7 @@ from django.urls import (
     include
 )
 from rest_framework.routers import DefaultRouter
+from api.service.dashboard import StatisticsView
 from api.service.https import (
     ApiFastView,
     TreeView,
@@ -72,6 +73,9 @@ app_urls = [
     # API Authentication
     path("login/", CustomJsonWebToken.as_view()),
     path("user/list", UserListViewSet.as_view()),
+
+    # 看板
+    path("statistics/summay", StatisticsView.as_view()),
 
     # 项目管理
     path("project/list", ProjectListViewSet.as_view()),

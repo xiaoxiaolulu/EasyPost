@@ -56,24 +56,6 @@
                   </div>
                 </div>
               </div>
-              <el-drawer
-                  v-model="state.showDetailInfo"
-                  size="70%"
-                  append-to-body
-                  direction="ltr"
-                  destroy-on-close
-                  :with-header="true">
-                <template #header>
-                        <span>
-                          <strong class="pr10">报告详情</strong>
-                          <el-tag type="danger" v-if="state.statisticsData.success === 0">不通过</el-tag>
-                          <el-tag type="success" v-else>通过</el-tag>
-                        </span>
-                </template>
-                <div style="height: 500px; overflow-y: auto">
-                  <case-step-detail :reportData="ResponseData"></case-step-detail>
-                </div>
-              </el-drawer>
             </template>
           </el-table-column>
           <el-table-column prop="name" label="用例名称"></el-table-column>
@@ -120,6 +102,24 @@
               @current-change="handlePageChange"
           />
         </el-table>
+        <el-drawer
+            v-model="state.showDetailInfo"
+            size="70%"
+            append-to-body
+            direction="ltr"
+            destroy-on-close
+            :with-header="true">
+          <template #header>
+                        <span>
+                          <strong class="pr10">报告详情</strong>
+                          <el-tag type="danger" v-if="state.statisticsData.success === 0">不通过</el-tag>
+                          <el-tag type="success" v-else>通过</el-tag>
+                        </span>
+          </template>
+          <div style="height: 500px; overflow-y: auto">
+            <case-step-detail :reportData="ResponseData"></case-step-detail>
+          </div>
+        </el-drawer>
       </div>
     </el-card>
   </div>
