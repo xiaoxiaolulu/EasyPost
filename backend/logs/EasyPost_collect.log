@@ -1177,3 +1177,11 @@ INFO     [2024-04-15 14:58:09,430] [494e99d501b84fff8bc176cfc3af37aa] django.ser
 INFO     [2024-04-15 14:58:09,437] [b52adaf66601428a8bfa9bc917264fbd] django.server: "GET /api/user/list HTTP/1.1" 200 255
 WARNING  [2024-04-15 14:58:09,449] [27b90e6bf43345f59f7bfd11184b05b4] django.request: Not Found: /media/avatar/default.png
 WARNING  [2024-04-15 14:58:09,449] [27b90e6bf43345f59f7bfd11184b05b4] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-15 15:04:30,496] [7ba6fb002af249f193c977dcc6d26d10] django.server: "OPTIONS /api/project/list?name=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-15 15:04:30,501] [885204ff06d2467e9cc96f3d745ecb69] django.server: "GET /api/project/list?name=&page=1 HTTP/1.1" 200 2040
+WARNING  [2024-04-15 15:04:30,552] [b2f13a5f88554683b988840608cc9019] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-15 15:04:30,553] [b2f13a5f88554683b988840608cc9019] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-15 15:04:33,989] [e9ecf6d6cd9d487989b19a1d72e8bcf3] django.server: "OPTIONS /api/env/list?name=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-15 15:04:33,998] [2f7a2b6e20d848f2bdb13ff2a978bb15] django.server: "GET /api/env/list?name=&page=1 HTTP/1.1" 200 276
+WARNING  [2024-04-15 15:04:34,002] [a50ca3b24c734966a7c304d57f0e1c29] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-15 15:04:34,002] [a50ca3b24c734966a7c304d57f0e1c29] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692

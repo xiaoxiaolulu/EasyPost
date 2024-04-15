@@ -159,7 +159,7 @@
 
 <script lang="ts" setup>
 import {ref, reactive, onMounted, watch, computed} from 'vue'
-import {Back, Delete} from "@element-plus/icons-vue";
+import {Delete} from "@element-plus/icons-vue";
 import {projectDetail, projectUpdate, projectRoleDelete, projectRoleAdd} from "@/api/project";
 import {userList} from "@/api/user";
 import {Collection, Plus} from "@element-plus/icons-vue";
