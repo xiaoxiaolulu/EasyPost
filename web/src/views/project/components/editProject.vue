@@ -3,12 +3,14 @@
     <div class="header-container">
       <div class="card-head-title">
         <div class="card-description">
-                    <span class="page-header-back-button el-icon-back" @click="goProjectList">
-                      <el-icon>
-                        <component :is="Back"/>
-                      </el-icon>
-                    </span>
-          <span class="page-header-heading-title">{{ projectName }}</span>
+          <CardHeader
+              style="margin: 5px 0;"
+              @back="goBack"
+          >
+            <template #content>
+              <span style="padding-right: 10px;">{{ route.query.editType === 'update' ? "更新" : "新增" }}</span>
+            </template>
+          </CardHeader>
         </div>
       </div>
     </div>
@@ -39,7 +41,7 @@
                 <el-input v-model="form.name" style="width: 350px;" placeholder="请输入项目名称"></el-input>
               </el-form-item>
               <el-form-item label="项目类型" :required="true" prop="type">
-                <el-select type="type" v-model="form.type" v-loading="loading"
+                <el-select type="type" v-model="form.type" v-loading="loading" style="width: 350px"
                            element-loading-spinner="el-icon-loading" clearable filterable>
                   <el-option v-for="item in type" :value="item" :key="null" style="font-size: 12px">
                   </el-option>
@@ -161,10 +163,11 @@ import {Back, Delete} from "@element-plus/icons-vue";
 import {projectDetail, projectUpdate, projectRoleDelete, projectRoleAdd} from "@/api/project";
 import {userList} from "@/api/user";
 import {Collection, Plus} from "@element-plus/icons-vue";
-import {useRouter} from "vue-router";
+import {useRoute, useRouter} from "vue-router";
 import {showErrMessage} from "@/utils/element";
 import {ElMessage, ElMessageBox, FormInstance} from "element-plus";
 import type {UploadInstance} from 'element-plus'
+import CardHeader from '@/components/CardHeader/index.vue'
 
 const search = ref('')
 
@@ -180,8 +183,6 @@ const type = ref([
   'Pc',
   'MiniProgram'
 ])
-
-const projectName = ref("")
 
 const ruleFormRef = ref<FormInstance>()
 
@@ -214,17 +215,12 @@ const loading = ref(false)
 
 const router = useRouter()
 
-const goProjectList = () => {
-  router.push({
-    name: "projectList",
-  })
-}
+const route = useRoute()
 
 onMounted(() => {
   const pk = router.currentRoute.value.query.id
   projectDetail({id: pk}).then(res => {
     const {code, data, msg} = res.data
-    projectName.value = data.name
     form.name = data.name;
     form.type = data.type;
     form.desc = data.desc;
@@ -318,6 +314,10 @@ const filterTableData = computed(() =>
     )
 )
 
+const goBack = () => {
+  router.push({name: 'projectList'})
+}
+
 watch(tableData, (newName, oldName) => {
   console.log(`tableData ${newName} -> ${oldName}`)
 })
@@ -336,29 +336,6 @@ watch(tableData, (newName, oldName) => {
 
 .card-description {
   float: left;
-}
-
-.page-header-heading-title {
-  margin-right: 12px;
-  margin-bottom: 0;
-  color: rgba(0, 0, 0, .85);
-  font-weight: 600;
-  font-size: 19px;
-  line-height: 32px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis
-}
-
-.page-header-back-button {
-  text-decoration: none;
-  outline: none;
-  transition: color .3s;
-  color: #000;
-  cursor: pointer;
-  margin-right: 16px;
-  font-size: 16px;
-  line-height: 1;
 }
 
 .project-avatar-image {

@@ -139,7 +139,7 @@ const editProject = (row: any) => {
   rowData.value = row;
   router.push({
     name: "projectDetail",
-    query: {id: row.id}
+    query: {editType: 'update', id: row.id}
   });
 }
 
