@@ -34,7 +34,7 @@
         </el-table-column>
         <el-table-column prop="update_time" label="更新时间" width="200px">
           <template #default="scope">
-            <span>{{ parseTime(scope.row.update_time) }}</span>
+            <span>{{parseTime(scope.row.update_time)}}</span>
           </template>
         </el-table-column>
         <el-table-column label="操作" width="150px" align="center">
@@ -57,20 +57,17 @@
 </template>
 
 <script lang="ts" setup>
-import {Plus, Search, Close, WarningFilled} from "@element-plus/icons-vue";
+import {Search} from "@element-plus/icons-vue";
 import {ref, reactive} from 'vue'
 import {useRouter} from "vue-router";
 import {functionList} from "@/api/setting";
 import {parseTime} from "@/utils";
 import {ElMessage, ElPagination} from "element-plus";
-import {showErrMessage} from "@/utils/element";
 
 const queryParams = reactive({
   name: '',
   page: 1
 })
-
-const loading = ref(false)
 
 const tableData = ref(null)
 
@@ -99,7 +96,7 @@ const handlePageChange = (newPage: any) => {
   queryList()
 }
 
-const editHandler = (row) => {
+const editHandler = (row: any) => {
   if (row) {
     router.push({
       name: "functionDetail",

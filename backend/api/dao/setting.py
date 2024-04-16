@@ -376,7 +376,8 @@ class SettingDao:
                 raise ValueError("参数错误！")
 
             # Retrieve function information
-            data = self.get_function_by_id(params, pk)
+            params = {**params, **{"id": pk}}
+            data = self.get_function_by_id(params)
             functions_mapping = data.get('functions_mapping')
             func = self.get_mapping_function(params.get("func_name"), functions_mapping)
 

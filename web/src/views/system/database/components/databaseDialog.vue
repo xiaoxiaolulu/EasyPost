@@ -1,10 +1,10 @@
 <template>
   <el-dialog
-             @close="close"
-             v-model="dialog"
-             :title="title"
-             :show-close="false"
-             class="databaseWidth">
+      @close="close"
+      v-model="dialog"
+      :title="title"
+      :show-close="false"
+      class="databaseWidth">
     <el-form autoComplete="on" :model="form" :rules="rules" ref="ruleFormRef"
              label-position="right"
              label-width="100px">
@@ -67,7 +67,7 @@ const emits = defineEmits(['queryList'])
 
 function close() {
   ruleFormRef.value.resetFields()
-  Object.keys(form).forEach(key=>{
+  Object.keys(form).forEach(key => {
     form[key] = null
   })
   emits('queryList');
@@ -75,17 +75,17 @@ function close() {
 
 const DbSettingTest = (formName: FormInstance | undefined) => {
   if (!formName) return
-  formName.validate(async (valid) => {
-    if (valid) {
-      const ret = await databaseDebug(form)
-      const {code, data, msg} = ret.data
-      showErrMessage(code.toString(), msg)
-    } else {
-      console.log('error submit!')
-      ElMessage.error("数据库新增失败请重试!")
-      return false
-    }
-  })
+    formName.validate(async (valid) => {
+      if (valid) {
+        const ret = await databaseDebug(form)
+        const {code, data, msg} = ret.data
+        showErrMessage(code.toString(), msg)
+      } else {
+        console.log('error submit!')
+        ElMessage.error("数据库新增失败请重试!")
+        return false
+      }
+    })
 }
 
 const onSureClick = (formName: FormInstance | undefined) => {
@@ -94,7 +94,7 @@ const onSureClick = (formName: FormInstance | undefined) => {
     if (valid) {
       let ret: any = null
       console.log(pk.value)
-      if(pk.value){
+      if (pk.value) {
         form["id"] = pk.value
         ret = await databaseUpdate(form)
       } else {
@@ -113,12 +113,12 @@ const onSureClick = (formName: FormInstance | undefined) => {
   })
 }
 
-const show = (item={})=>{
+const show = (item = {}) => {
   title.value = '新增数据库'
-  if(item.id){
+  if (item.id) {
     title.value = '编辑数据库'
     pk.value = item.id
-    Object.keys(item).forEach(key=>{
+    Object.keys(item).forEach(key => {
       form.database = item.database
       form.host = item.host
       form.port = item.port
