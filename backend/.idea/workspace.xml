@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="The changes made to the codebase are as follows:1. `backend/api/service/setting.py`:* Imported `ResponseStandard` from `api.response.factory`.* Modified the `database_is_connect` function to return a `ResponseStandard` object instead of a tuple.2. `backend/unitrunner/database/DBClient.py`:* Renamed `DBClient` to `DBMysql`.* Added a new `connect` method to the `DBMysql` class.* Modified the `is_connect` method to be a static method and to return a `ResponseStandard` object instead of a boolean value.* Removed the `close_connect` method.3. `backend/api/dao/setting.">
-      <change beforePath="$PROJECT_DIR$/api/dao/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/setting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="The changes made to the codebase are as follows:```diffIndex: backend/unitrunner/builti```">
+      <change afterPath="$PROJECT_DIR$/../web/src/views/system/env/components/DatabseSetting.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web/src/views/system/env/components/VariablePool.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web/src/views/system/env/components/dbConfig.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web/src/views/system/env/components/selectDatabase.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unitrunner/builitin/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/unitrunner/builitin/functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/system/address/components/addressDialog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/system/address/components/addressDialog.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/system/database/components/databaseDialog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/system/database/components/databaseDialog.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/system/function/components/detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/system/function/components/detail.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/system/function/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/system/function/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/system/env/components/detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/system/env/components/detail.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -464,31 +463,7 @@
       <workItem from="1712461146657" duration="56000" />
       <workItem from="1712461413811" duration="49812000" />
       <workItem from="1712801065778" duration="11896000" />
-      <workItem from="1712908146550" duration="31307000" />
-    </task>
-    <task id="LOCAL-00299" summary="Add case step detail component and drawer for report detail view.">
-      <option name="closed" value="true" />
-      <created>1711962758078</created>
-      <option name="number" value="00299" />
-      <option name="presentableId" value="LOCAL-00299" />
-      <option name="project" value="LOCAL" />
-      <updated>1711962758078</updated>
-    </task>
-    <task id="LOCAL-00300" summary="Add case step detail component and drawer for report detail view.">
-      <option name="closed" value="true" />
-      <created>1711962834200</created>
-      <option name="number" value="00300" />
-      <option name="presentableId" value="LOCAL-00300" />
-      <option name="project" value="LOCAL" />
-      <updated>1711962834200</updated>
-    </task>
-    <task id="LOCAL-00301" summary="Changed related\_name in models: plan, https, case, step, api\_copy, and added data\_source model.">
-      <option name="closed" value="true" />
-      <created>1711963783346</created>
-      <option name="number" value="00301" />
-      <option name="presentableId" value="LOCAL-00301" />
-      <option name="project" value="LOCAL" />
-      <updated>1711963783346</updated>
+      <workItem from="1712908146550" duration="34648000" />
     </task>
     <task id="LOCAL-00302" summary="&quot;Add DataSource model, refine relationships in Plan, Https, Case, Step, ApiCopy, and Setting models&quot;">
       <option name="closed" value="true" />
@@ -858,7 +833,31 @@
       <option name="project" value="LOCAL" />
       <updated>1713169753614</updated>
     </task>
-    <option name="localTasksCounter" value="348" />
+    <task id="LOCAL-00348" summary="The changes made to the codebase are as follows:```diffIndex: backend/unitrunner/builti```">
+      <option name="closed" value="true" />
+      <created>1713250254330</created>
+      <option name="number" value="00348" />
+      <option name="presentableId" value="LOCAL-00348" />
+      <option name="project" value="LOCAL" />
+      <updated>1713250254330</updated>
+    </task>
+    <task id="LOCAL-00349" summary="The changes made to the codebase are as follows:```diffIndex: backend/unitrunner/builti```">
+      <option name="closed" value="true" />
+      <created>1713250419210</created>
+      <option name="number" value="00349" />
+      <option name="presentableId" value="LOCAL-00349" />
+      <option name="project" value="LOCAL" />
+      <updated>1713250419210</updated>
+    </task>
+    <task id="LOCAL-00350" summary="The changes made to the codebase are as follows:```diffIndex: backend/unitrunner/builti```">
+      <option name="closed" value="true" />
+      <created>1713258852279</created>
+      <option name="number" value="00350" />
+      <option name="presentableId" value="LOCAL-00350" />
+      <option name="project" value="LOCAL" />
+      <updated>1713258852279</updated>
+    </task>
+    <option name="localTasksCounter" value="351" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -888,32 +887,32 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="The changes made to the codebase are as follows:1. `backend/api/service/setting.py`:* Imported `ResponseStandard` from `api.response.factory`.* Modified the `database_is_connect` function to return a `ResponseStandard` object instead of a tuple.2. `backend/unitrunner/database/DBClient.py`:* Renamed `DBClient` to `DBMysql`.* Added a new `connect` method to the `DBMysql` class.* Modified the `is_connect` method to be a static method and to return a `ResponseStandard` object instead of a boolean value.* Removed the `close_connect` method.3. `backend/api/dao/setting.py`:* Modified the `database_is_connect` function to call the new `connect` method of the `DBMysql` class and to return the `ResponseStandard` object instead of a boolean value" />
-    <MESSAGE value="The changes made to the codebase are as follows:1. `backend/api/service/setting.py`:* Imported `ResponseStandard` from `api.response.factory`.* Modified the `database_is_connect` function to return a `ResponseStandard` object instead of a tuple.2. `backend/unitrunner/database/DBClient.py`:* Renamed `DBClient` to `DBMysql`.* Added a new `connect` method to the `DBMysql` class.* Modified the `is_connect` method to be a static method and to return a `ResponseStandard` object instead of a boolean value.* Removed the `close_connect` method.3. `backend/api/dao/setting.py`:* Modified the `database_is_connect` function to call the new `connect` method of the `DBMysql` class and to return the `ResponseStandard` object instead of a boolean value." />
-    <MESSAGE value="The changes made to the codebase are as follows:1. `backend/api/service/setting.py`:* Imported `ResponseStandard` from `api.response.factory`.* Modified the `database_is_connect` function to return a `ResponseStandard` object instead of a tuple.2. `backend/unitrunner/database/DBClient.py`:* Renamed `DBClient` to `DBMysql`.* Added a new `connect` method to the `DBMysql` class.* Modified the `is_connect` method to be a static method and to return a `ResponseStandard` object instead of a boolean value.* Removed the `close_connect` method.3. `backend/api/dao/setting.py`:* Modified the `database_is_connect` function to call the new `connect` method of the `DBMysql` class and to return the `ResponseStandard` object instead of a boolean value.4" />
-    <MESSAGE value="The changes made to the codebase are as follows:1. `backend/api/service/setting.py`:* Imported `ResponseStandard` from `api.response.factory`.* Modified the `database_is_connect` function to return a `ResponseStandard` object instead of a tuple.2. `backend/unitrunner/database/DBClient.py`:* Renamed `DBClient` to `DBMysql`.* Added a new `connect` method to the `DBMysql` class.* Modified the `is_connect` method to be a static method and to return a `ResponseStandard` object instead of a boolean value.* Removed the `close_connect` method.3. `backend/api/dao/setting.py`:* Modified the `database_is_connect` function to call the new `connect` method of the `DBMysql` class and to return the `ResponseStandard` object instead of a boolean value.4." />
-    <MESSAGE value="The changes made to the codebase are as follows:1. `backend/api/service/setting.py`:* Imported `ResponseStandard` from `api.response.factory`.* Modified the `database_is_connect` function to return a `ResponseStandard` object instead of a tuple.2. `backend/unitrunner/database/DBClient.py`:* Renamed `DBClient` to `DBMysql`.* Added a new `connect` method to the `DBMysql` class.* Modified the `is_connect` method to be a static method and to return a `ResponseStandard` object instead of a boolean value.* Removed the `close_connect` method.3. `backend/api/dao/setting.py`:* Modified the `database_is_connect` function to call the new `connect` method of the `DBMysql` class and to return the `ResponseStandard` object instead of a boolean value.4. `" />
-    <MESSAGE value="The changes made to the codebase are as follows:1. `backend/api/service/setting.py`:* Imported `ResponseStandard` from `api.response.factory`.* Modified the `database_is_connect` function to return a `ResponseStandard` object instead of a tuple.2. `backend/unitrunner/database/DBClient.py`:* Renamed `DBClient` to `DBMysql`.* Added a new `connect` method to the `DBMysql` class.* Modified the `is_connect` method to be a static method and to return a `ResponseStandard` object instead of a boolean value.* Removed the `close_connect` method.3. `backend/api/dao/setting.py`:* Modified the `database_is_connect` function to call the new `connect` method of the `DBMysql` class and to return the `ResponseStandard` object instead of a boolean value.4. `web" />
-    <MESSAGE value="The changes made to the codebase are as follows:1. `backend/api/service/setting.py`:* Imported `ResponseStandard` from `api.response.factory`.* Modified the `database_is_connect` function to return a `ResponseStandard` object instead of a tuple.2. `backend/unitrunner/database/DBClient.py`:* Renamed `DBClient` to `DBMysql`.* Added a new `connect` method to the `DBMysql` class.* Modified the `is_connect` method to be a static method and to return a `ResponseStandard` object instead of a boolean value.* Removed the `close_connect` method.3. `backend/api/dao/setting.py`:* Modified the `database_is_connect` function to call the new `connect` method of the `DBMysql` class and to return the `ResponseStandard` object instead of a boolean value.4. `web/" />
-    <MESSAGE value="The changes made to the codebase are as follows:1. `backend/api/service/setting.py`:* Imported `ResponseStandard` from `api.response.factory`.* Modified the `database_is_connect` function to return a `ResponseStandard` object instead of a tuple.2. `backend/unitrunner/database/DBClient.py`:* Renamed `DBClient` to `DBMysql`.* Added a new `connect` method to the `DBMysql` class.* Modified the `is_connect` method to be a static method and to return a `ResponseStandard` object instead of a boolean value.* Removed the `close_connect` method.3. `backend/api/dao/setting.py`:* Modified the `database_is_connect` function to call the new `connect` method of the `DBMysql` class and to return the `ResponseStandard` object instead of a boolean value.4. `web/src" />
-    <MESSAGE value="The changes made to the codebase are as follows:1. `backend/api/service/setting.py`:* Imported `ResponseStandard` from `api.response.factory`.* Modified the `database_is_connect` function to return a `ResponseStandard` object instead of a tuple.2. `backend/unitrunner/database/DBClient.py`:* Renamed `DBClient` to `DBMysql`.* Added a new `connect` method to the `DBMysql` class.* Modified the `is_connect` method to be a static method and to return a `ResponseStandard` object instead of a boolean value.* Removed the `close_connect` method.3. `backend/api/dao/setting.py`:* Modified the `database_is_connect` function to call the new `connect` method of the `DBMysql` class and to return the `ResponseStandard` object instead of a boolean value.4. `web/src/" />
-    <MESSAGE value="The changes made to the codebase are as follows:1. `backend/api/service/setting.py`:* Imported `ResponseStandard` from `api.response.factory`.* Modified the `database_is_connect` function to return a `ResponseStandard` object instead of a tuple.2. `backend/unitrunner/database/DBClient.py`:* Renamed `DBClient` to `DBMysql`.* Added a new `connect` method to the `DBMysql` class.* Modified the `is_connect` method to be a static method and to return a `ResponseStandard` object instead of a boolean value.* Removed the `close_connect` method.3. `backend/api/dao/setting.py`:* Modified the `database_is_connect` function to call the new `connect` method of the `DBMysql` class and to return the `ResponseStandard` object instead of a boolean value.4. `web/src/views" />
-    <MESSAGE value="The changes made to the codebase are as follows:1. `backend/api/service/setting.py`:* Imported `ResponseStandard` from `api.response.factory`.* Modified the `database_is_connect` function to return a `ResponseStandard` object instead of a tuple.2. `backend/unitrunner/database/DBClient.py`:* Renamed `DBClient` to `DBMysql`.* Added a new `connect` method to the `DBMysql` class.* Modified the `is_connect` method to be a static method and to return a `ResponseStandard` object instead of a boolean value.* Removed the `close_connect` method.3. `backend/api/dao/setting.py`:* Modified the `database_is_connect` function to call the new `connect` method of the `DBMysql` class and to return the `ResponseStandard` object instead of a boolean value.4. `web/src/views/" />
-    <MESSAGE value="The changes made to the codebase are as follows:1. `backend/api/service/setting.py`:* Imported `ResponseStandard` from `api.response.factory`.* Modified the `database_is_connect` function to return a `ResponseStandard` object instead of a tuple.2. `backend/unitrunner/database/DBClient.py`:* Renamed `DBClient` to `DBMysql`.* Added a new `connect` method to the `DBMysql` class.* Modified the `is_connect` method to be a static method and to return a `ResponseStandard` object instead of a boolean value.* Removed the `close_connect` method.3. `backend/api/dao/setting.py`:* Modified the `database_is_connect` function to call the new `connect` method of the `DBMysql` class and to return the `ResponseStandard` object instead of a boolean value.4. `web/src/views/system" />
-    <MESSAGE value="The changes made to the codebase are as follows:1. `backend/api/service/setting.py`:* Imported `ResponseStandard` from `api.response.factory`.* Modified the `database_is_connect` function to return a `ResponseStandard` object instead of a tuple.2. `backend/unitrunner/database/DBClient.py`:* Renamed `DBClient` to `DBMysql`.* Added a new `connect` method to the `DBMysql` class.* Modified the `is_connect` method to be a static method and to return a `ResponseStandard` object instead of a boolean value.* Removed the `close_connect` method.3. `backend/api/dao/setting.py`:* Modified the `database_is_connect` function to call the new `connect` method of the `DBMysql` class and to return the `ResponseStandard` object instead of a boolean value.4. `web/src/views/system/" />
-    <MESSAGE value="The changes made to the codebase are as follows:1. `backend/api/service/setting.py`:* Imported `ResponseStandard` from `api.response.factory`.* Modified the `database_is_connect` function to return a `ResponseStandard` object instead of a tuple.2. `backend/unitrunner/database/DBClient.py`:* Renamed `DBClient` to `DBMysql`.* Added a new `connect` method to the `DBMysql` class.* Modified the `is_connect` method to be a static method and to return a `ResponseStandard` object instead of a boolean value.* Removed the `close_connect` method.3. `backend/api/dao/setting.py`:* Modified the `database_is_connect` function to call the new `connect` method of the `DBMysql` class and to return the `ResponseStandard` object instead of a boolean value.4. `web/src/views/system/database" />
-    <MESSAGE value="The changes made to the codebase are as follows:1. `backend/api/service/setting.py`:* Imported `ResponseStandard` from `api.response.factory`.* Modified the `database_is_connect` function to return a `ResponseStandard` object instead of a tuple.2. `backend/unitrunner/database/DBClient.py`:* Renamed `DBClient` to `DBMysql`.* Added a new `connect` method to the `DBMysql` class.* Modified the `is_connect` method to be a static method and to return a `ResponseStandard` object instead of a boolean value.* Removed the `close_connect` method.3. `backend/api/dao/setting.py`:* Modified the `database_is_connect` function to call the new `connect` method of the `DBMysql` class and to return the `ResponseStandard` object instead of a boolean value.4. `web/src/views/system/database/" />
-    <MESSAGE value="The changes made to the codebase are as follows:1. `backend/api/service/setting.py`:* Imported `ResponseStandard` from `api.response.factory`.* Modified the `database_is_connect` function to return a `ResponseStandard` object instead of a tuple.2. `backend/unitrunner/database/DBClient.py`:* Renamed `DBClient` to `DBMysql`.* Added a new `connect` method to the `DBMysql` class.* Modified the `is_connect` method to be a static method and to return a `ResponseStandard` object instead of a boolean value.* Removed the `close_connect` method.3. `backend/api/dao/setting.py`:* Modified the `database_is_connect` function to call the new `connect` method of the `DBMysql` class and to return the `ResponseStandard` object instead of a boolean value.4. `web/src/views/system/database/index" />
-    <MESSAGE value="The changes made to the codebase are as follows:1. `backend/api/service/setting.py`:* Imported `ResponseStandard` from `api.response.factory`.* Modified the `database_is_connect` function to return a `ResponseStandard` object instead of a tuple.2. `backend/unitrunner/database/DBClient.py`:* Renamed `DBClient` to `DBMysql`.* Added a new `connect` method to the `DBMysql` class.* Modified the `is_connect` method to be a static method and to return a `ResponseStandard` object instead of a boolean value.* Removed the `close_connect` method.3. `backend/api/dao/setting.py`:* Modified the `database_is_connect` function to call the new `connect` method of the `DBMysql` class and to return the `ResponseStandard` object instead of a boolean value.4. `web/src/views/system/database/index." />
-    <MESSAGE value="The changes made to the codebase are as follows:1. `backend/api/service/setting.py`:* Imported `ResponseStandard` from `api.response.factory`.* Modified the `database_is_connect` function to return a `ResponseStandard` object instead of a tuple.2. `backend/unitrunner/database/DBClient.py`:* Renamed `DBClient` to `DBMysql`.* Added a new `connect` method to the `DBMysql` class.* Modified the `is_connect` method to be a static method and to return a `ResponseStandard` object instead of a boolean value.* Removed the `close_connect` method.3. `backend/api/dao/setting.py`:* Modified the `database_is_connect` function to call the new `connect` method of the `DBMysql` class and to return the `ResponseStandard` object instead of a boolean value.4. `web/src/views/system/database/index.vue" />
-    <MESSAGE value="The changes made to the codebase are as follows:1. `backend/api/service/setting.py`:* Imported `ResponseStandard` from `api.response.factory`.* Modified the `database_is_connect` function to return a `ResponseStandard` object instead of a tuple.2. `backend/unitrunner/database/DBClient.py`:* Renamed `DBClient` to `DBMysql`.* Added a new `connect` method to the `DBMysql` class.* Modified the `is_connect` method to be a static method and to return a `ResponseStandard` object instead of a boolean value.* Removed the `close_connect` method.3. `backend/api/dao/setting.py`:* Modified the `database_is_connect` function to call the new `connect` method of the `DBMysql` class and to return the `ResponseStandard` object instead of a boolean value.4. `web/src/views/system/database/index.vue`:" />
-    <MESSAGE value="The changes made to the codebase are as follows:1. `backend/api/service/setting.py`:* Imported `ResponseStandard` from `api.response.factory`.* Modified the `database_is_connect` function to return a `ResponseStandard` object instead of a tuple.2. `backend/unitrunner/database/DBClient.py`:* Renamed `DBClient` to `DBMysql`.* Added a new `connect` method to the `DBMysql` class.* Modified the `is_connect` method to be a static method and to return a `ResponseStandard` object instead of a boolean value.* Removed the `close_connect` method.3. `backend/api/dao/setting." />
-    <MESSAGE value="The changes made to the codebase are as follows:1. `backend/api/service/setting.py`:* Imported `ResponseStandard` from `api.response.factory`.* Modified the `database_is_connect` function to return a `ResponseStandard` object instead of a tuple.2. `backend/unitrunner/database/DBClient.py`:* Renamed `DBClient` to `DBMysql`.* Added a new `connect` method to the `DBMysql` class.* Modified the `is_connect` method to be a static method and to return a `ResponseStandard` object instead of a boolean value.* Removed the `close_connect` method.3. `backend/api/dao/setting.*" />
-    <MESSAGE value="The changes made to the codebase are as follows:1. `backend/api/service/setting.py`:* Imported `ResponseStandard` from `api.response.factory`.* Modified the `database_is_connect` function to return a `ResponseStandard` object instead of a tuple.2. `backend/unitrunner/database/DBClient.py`:* Renamed `DBClient` to `DBMysql`.* Added a new `connect` method to the `DBMysql` class.* Modified the `is_connect` method to be a static method and to return a `ResponseStandard` object instead of a boolean value.* Removed the `close_connect` method.3. `backend/api/dao/setting.* Mod" />
-    <MESSAGE value="The changes made to the codebase are as follows:1. `backend/api/service/setting.py`:* Imported `ResponseStandard` from `api.response.factory`.* Modified the `database_is_connect` function to return a `ResponseStandard` object instead of a tuple.2. `backend/unitrunner/database/DBClient.py`:* Renamed `DBClient` to `DBMysql`.* Added a new `connect` method to the `DBMysql` class.* Modified the `is_connect` method to be a static method and to return a `ResponseStandard` object instead of a boolean value.* Removed the `close_connect` method.3. `backend/api/dao/setting.* Modified" />
-    <MESSAGE value="The changes made to the codebase are as follows:1. `backend/api/service/setting.py`:* Imported `ResponseStandard` from `api.response.factory`.* Modified the `database_is_connect` function to return a `ResponseStandard` object instead of a tuple.2. `backend/unitrunner/database/DBClient.py`:* Renamed `DBClient` to `DBMysql`.* Added a new `connect` method to the `DBMysql` class.* Modified the `is_connect` method to be a static method and to return a `ResponseStandard` object instead of a boolean value.* Removed the `close_connect` method.3. `backend/api/dao/setting.* Modified the" />
-    <MESSAGE value="The changes made to the codebase are as follows:1. `backend/api/service/setting.py`:* Imported `ResponseStandard` from `api.response.factory`.* Modified the `database_is_connect` function to return a `ResponseStandard` object instead of a tuple.2. `backend/unitrunner/database/DBClient.py`:* Renamed `DBClient` to `DBMysql`.* Added a new `connect` method to the `DBMysql` class.* Modified the `is_connect` method to be a static method and to return a `ResponseStandard` object instead of a boolean value.* Removed the `close_connect` method.3. `backend/api/dao/setting.* Modified the `" />
-    <option name="LAST_COMMIT_MESSAGE" value="The changes made to the codebase are as follows:1. `backend/api/service/setting.py`:* Imported `ResponseStandard` from `api.response.factory`.* Modified the `database_is_connect` function to return a `ResponseStandard` object instead of a tuple.2. `backend/unitrunner/database/DBClient.py`:* Renamed `DBClient` to `DBMysql`.* Added a new `connect` method to the `DBMysql` class.* Modified the `is_connect` method to be a static method and to return a `ResponseStandard` object instead of a boolean value.* Removed the `close_connect` method.3. `backend/api/dao/setting.* Modified the `" />
+    <MESSAGE value="Index: web/src/views/system/function/components/detail.vue===================================================================--- old/web/src/views/system/function/components/detail.vue+++ new/web/src/views/system/function/components/detail.vue@@ -15,50 +15,54 @@ &lt;/el-form&gt; &lt;/div&gt; &lt;div&gt;- &lt;el-table :data=&quot;tableData&quot;- v-loading=&quot;tableLoading&quot;- element-loading-text=&quot;拼命加载中&quot;- :header-cell-style=&quot;{'background-color':'#ffffff','color':'#babac0' }&quot;- style=&quot;width:100%&quot;+ &lt;el-table+ ref=&quot;revRef&quot;+ :data=&quot;tableData&quot;+ v-loading=&quot;tableLoading&quot;+ element-loading-text=&quot;拼命加载中&quot;+ :header-cell-style=&quot;{'background-color':'#ffffff','color':'#babac0' }&quot;" />
+    <MESSAGE value="The" />
+    <MESSAGE value="The changes" />
+    <MESSAGE value="The changes made" />
+    <MESSAGE value="The changes made to" />
+    <MESSAGE value="The changes made to the" />
+    <MESSAGE value="The changes made to the code" />
+    <MESSAGE value="The changes made to the codebase" />
+    <MESSAGE value="The changes made to the codebase are" />
+    <MESSAGE value="The changes made to the codebase are as" />
+    <MESSAGE value="The changes made to the codebase are as follows" />
+    <MESSAGE value="The changes made to the codebase are as follows:" />
+    <MESSAGE value="The changes made to the codebase are as follows:```" />
+    <MESSAGE value="The changes made to the codebase are as follows:```diff" />
+    <MESSAGE value="The changes made to the codebase are as follows:```diffIndex" />
+    <MESSAGE value="The changes made to the codebase are as follows:```diffIndex:" />
+    <MESSAGE value="The changes made to the codebase are as follows:```diffIndex: backend" />
+    <MESSAGE value="The changes made to the codebase are as follows:```diffIndex: backend/" />
+    <MESSAGE value="The changes made to the codebase are as follows:```diffIndex: backend/unit" />
+    <MESSAGE value="The changes made to the codebase are as follows:```diffIndex: backend/unitrunner" />
+    <MESSAGE value="The changes made to the codebase are as follows:```diffIndex: backend/unitrunner/" />
+    <MESSAGE value="The changes made to the codebase are as follows:```diffIndex: backend/unitrunner/bu" />
+    <MESSAGE value="The changes made to the codebase are as follows:```diffIndex: backend/unitrunner/buil" />
+    <MESSAGE value="The changes made to the codebase are as follows:```diffIndex: backend/unitrunner/builti" />
+    <MESSAGE value="The changes made to the codebase are as follows:```diffIndex: backend/unitrunner/builti```" />
+    <option name="LAST_COMMIT_MESSAGE" value="The changes made to the codebase are as follows:```diffIndex: backend/unitrunner/builti```" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$recursion.coverage" NAME="recursion Coverage Results" MODIFIED="1712139211023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />

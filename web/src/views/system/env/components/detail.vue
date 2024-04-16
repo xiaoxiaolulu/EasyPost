@@ -84,6 +84,7 @@
                 <strong>变量池</strong>
               </template>
               <div>
+                <variable-pool ref="VariablePoolRef"></variable-pool>
               </div>
             </el-tab-pane>
             <el-tab-pane name='DbSetting'>
@@ -91,6 +92,7 @@
                 <strong>数据库配置</strong>
               </template>
               <div>
+                <database-setting ref="DatabaseSettingRef"></database-setting>
               </div>
             </el-tab-pane>
           </el-tabs>
@@ -105,10 +107,16 @@ import {useRoute, useRouter} from "vue-router";
 import {computed, reactive, ref} from "vue";
 import {FormInstance} from "element-plus";
 import {ArrowDown, ArrowUp} from "@element-plus/icons-vue";
+import VariablePool from "@/views/system/env/components/VariablePool.vue";
+import DatabaseSetting from "@/views/system/env/components/DatabseSetting.vue"
 
 const route = useRoute()
 
 const router = useRouter()
+
+const VariablePoolRef = ref()
+
+const DatabaseSettingRef = ref()
 
 const ruleForm = reactive({
   name: "",
