@@ -19,6 +19,13 @@ const systemRouter = [{
             meta: { title: '环境管理' , icon: 'Eleme'}
         },
         {
+            path: '/environment/detail',
+            component: () => import('@/views/system/env/components/detail.vue'),
+            name: 'environmentDetail',
+            hidden: true,
+            meta: { title: '环境管理详情' , icon: 'AddLocation'}
+        },
+        {
             path: '/system/address',
             component: () => import('@/views/system/address/index.vue'),
             name: 'host',

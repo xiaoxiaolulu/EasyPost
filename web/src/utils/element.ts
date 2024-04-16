@@ -4,7 +4,7 @@ import {
 } from '@element-plus/icons-vue'
 let loading = null
 
-export const openLoading = (options={})=>{
+export const openLoading = (options:any ={})=>{
     const text = options.text||'加载中'
     loading = ElLoading.service({
         lock: true,

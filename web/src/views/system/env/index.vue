@@ -75,11 +75,14 @@ import {ElMessage, ElMessageBox, ElPagination} from "element-plus";
 import {showErrMessage} from "@/utils/element";
 import addDialog from './components/addDialog.vue'
 import editDialog from './components/editDialog.vue'
+import {useRouter} from "vue-router";
 
 const queryParams = reactive({
   name: '',
   page: 1
 })
+
+const router = useRouter()
 
 const loading = ref(false)
 
@@ -96,7 +99,11 @@ const editShow = ref(false);
 const rowData = ref({})
 
 const addEnv = () => {
-  isShow.value = true;
+  // isShow.value = true;
+  router.push({
+    name: "environmentDetail",
+    query: {editType: 'save'}
+  });
 };
 
 const editEnv = (row: any) => {

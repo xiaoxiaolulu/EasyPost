@@ -3,7 +3,7 @@
     <div class="header-container">
       <div class="card-head-title">
         <div class="card-description">
-                    <span class="page-header-back-button el-icon-back" @click="goBack">
+          <span class="page-header-back-button el-icon-back" @click="goBack">
                       <el-icon>
                         <component :is="Back"/>
                       </el-icon>
