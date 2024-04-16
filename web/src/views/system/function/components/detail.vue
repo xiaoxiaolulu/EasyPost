@@ -118,6 +118,7 @@ const debugHandler = (row: any) => {
 
 const debugFunc = (row: any) => {
   ElMessageBox.confirm(`确认运行该函数 - ${row.func_name}?`).then(_ => {
+    loading.value = true
     functionDebug({
       id: router.currentRoute.value.query.id,
       func_name: row.func_name,
@@ -125,9 +126,11 @@ const debugFunc = (row: any) => {
     }).then((response) => {
       const {data, code, msg} = response.data
       state.script_code = data.ret
+      loading.value = false
       showErrMessage(code.toString(), msg)
     })
   }).catch(_ => {
+    loading.value = false
     ElMessage.error("函数运行失败请重试");
   })
 }

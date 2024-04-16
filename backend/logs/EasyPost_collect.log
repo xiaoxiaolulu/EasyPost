@@ -2111,3 +2111,31 @@ INFO     [2024-04-16 14:48:41,612] [cc0b031a28964765b159405975f256c1] django.ser
 INFO     [2024-04-16 14:48:41,699] [a2fb91ff6f364a13b551d346c37b3eba] django.server: "POST /api/function/debug/2 HTTP/1.1" 200 104
 INFO     [2024-04-16 14:49:51,416] [1cb75b31c1bf437fa88a754d7da35054] django.server: "OPTIONS /api/function/detailList HTTP/1.1" 200 0
 INFO     [2024-04-16 14:49:51,510] [b72427921ccb4466b900b6816d4aba48] django.server: "POST /api/function/detailList HTTP/1.1" 200 3386
+INFO     [2024-04-16 14:52:10,126] [0fbda3fb5b2b4bdc8d80d8aec7642e81] django.server: "OPTIONS /api/database/list?database=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-16 14:52:10,140] [a406500e392e49c4b385b15c87a37d8a] django.server: "GET /api/database/list?database=&page=1 HTTP/1.1" 200 619
+WARNING  [2024-04-16 14:52:10,161] [89a76ebb7af14c3ba129ce82b3cb7079] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-16 14:52:10,161] [89a76ebb7af14c3ba129ce82b3cb7079] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-16 14:52:11,308] [f5ee88db5dfc40518acffa9d962a3e21] django.server: "OPTIONS /api/function/list?name=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-16 14:52:11,319] [7e05eea07b1041a4ba211bdd435a3335] django.server: "GET /api/function/list?name=&page=1 HTTP/1.1" 200 5280
+WARNING  [2024-04-16 14:52:11,337] [f97d0bb92268448292d9f7862ac225df] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-16 14:52:11,338] [f97d0bb92268448292d9f7862ac225df] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-16 14:52:12,936] [b5929bf1db454b0f8ec39efb3009538e] django.server: "OPTIONS /api/address/list?name=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-16 14:52:12,937] [f377e2c66c4a44f6ac99d696ce0dce1f] django.server: "OPTIONS /api/env/list HTTP/1.1" 200 0
+INFO     [2024-04-16 14:52:12,946] [4951ada4107745a9982cd86f59b49433] django.server: "GET /api/env/list HTTP/1.1" 200 276
+INFO     [2024-04-16 14:52:12,946] [352a68358e6f4b9ea218e58677bcf1fa] django.server: "GET /api/address/list?name=&page=1 HTTP/1.1" 200 625
+INFO     [2024-04-16 14:52:14,928] [4f230caf30604afa9bd0acaf2f0923e1] django.server: "OPTIONS /api/database/list?database=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-16 14:52:14,932] [fc8489090ec94c28afd64f4040f049fb] django.server: "GET /api/database/list?database=&page=1 HTTP/1.1" 200 619
+WARNING  [2024-04-16 14:52:14,944] [2891b2e37ff14d96bb826639d0ad9a2b] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-16 14:52:14,944] [2891b2e37ff14d96bb826639d0ad9a2b] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-16 14:52:15,978] [9ee970e47a274daba4db5423da57bde5] django.server: "OPTIONS /api/function/list?name=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-16 14:52:15,984] [bd5f4cf79b6d495c91d4d30dd917a6bd] django.server: "GET /api/function/list?name=&page=1 HTTP/1.1" 200 5280
+WARNING  [2024-04-16 14:52:15,997] [ef0b579c230b4d5dac6e10d3bb62578f] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-16 14:52:15,997] [ef0b579c230b4d5dac6e10d3bb62578f] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-16 14:52:17,457] [ad846ef4327346ce9f882708118bc195] django.server: "OPTIONS /api/function/detailList HTTP/1.1" 200 0
+INFO     [2024-04-16 14:52:17,590] [4e693b66854b4e07a33e40ba8f2fa5e9] django.server: "POST /api/function/detailList HTTP/1.1" 200 3386
+INFO     [2024-04-16 14:52:22,521] [5dfa99a1af644894a873a34107b2f815] django.server: "OPTIONS /api/function/debug/2 HTTP/1.1" 200 0
+INFO     [2024-04-16 14:52:22,696] [21d0fad4039a450f9ff7f324586dd316] django.server: "POST /api/function/debug/2 HTTP/1.1" 200 104
+INFO     [2024-04-16 14:53:24,644] [00b2400c21ea4a9cb6796d95342fd2f1] django.server: "OPTIONS /api/function/detailList HTTP/1.1" 200 0
+INFO     [2024-04-16 14:53:24,910] [7c256ad6b7f946bca165be4a67e5047d] django.server: "POST /api/function/detailList HTTP/1.1" 200 3386
+INFO     [2024-04-16 14:53:28,266] [07b838d95e314256870d8bcaa9f23305] django.server: "OPTIONS /api/function/debug/2 HTTP/1.1" 200 0
+INFO     [2024-04-16 14:53:28,453] [c60e4a46e85d42a19e22243400d2d05f] django.server: "POST /api/function/debug/2 HTTP/1.1" 200 104
