@@ -14,7 +14,7 @@ import uuid
 from typing import (
     Any
 )
-from api.models.setting import Functions
+from api.models.setting import Functions, TestEnvironment, DataSource, BindDataSource
 from api.response.fatcory import ResponseStandard
 from config.settings import BASE_DIR
 from unitrunner.database.DBClient import DBMysql
@@ -394,3 +394,60 @@ class SettingDao:
 
         except Exception as err:
             raise ValueError(f"函数调试错误：{err}") from err
+
+    @classmethod
+    def database_bind_environment(cls, request, environment_pk: int) -> None:
+        global c
+        try:
+            if not environment_pk:
+                raise ValueError("参数错误！")
+
+            bean_bind = BindDataSource.objects.filter(env__id=environment_pk)
+            bean_bind.delete()
+
+            for db in request.data.get('data_source'):
+                BindDataSource.objects.create(
+                    database=db.get('database'),
+                    env=TestEnvironment.objects.get(id=environment_pk),
+                    host=db.get('host'),
+                    port=db.get('port'),
+                    user=db.get('user'),
+                    password=db.get('password'),
+                    creator=request.user
+                )
+        except Exception as err:
+            logger.debug(
+                f"🏓数据库绑定环境失败 -> {err}"
+            )
+            raise Exception(f"{err} ❌")
+
+    @classmethod
+    def environment_save(cls, request: Any, pk):
+        try:
+
+            if pk:
+                update_obj = TestEnvironment.objects.filter(id=pk)
+                update_obj.update(
+                    name=request.data.get('name'),
+                    host=request.data.get('host'),
+                    variables=request.data.get('variables'),
+                    user=request.user
+                )
+                update_pk = pk
+
+            else:
+                create_obj = TestEnvironment.objects.create(
+                    name=request.data.get('name'),
+                    host=request.data.get('host'),
+                    variables=request.data.get('variables'),
+                    user=request.user
+                )
+                update_pk = create_obj.id
+
+            cls.database_bind_environment(request, update_pk)
+            return update_pk
+        except Exception as err:
+            logger.debug(
+                f"🏓编辑环境配置数据失败 -> {err}"
+            )
+            raise Exception(f"{err} ❌")
