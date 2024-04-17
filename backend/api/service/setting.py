@@ -21,7 +21,8 @@ from api.mixins.magic import (
     MagicListAPI,
     MagicUpdateApi,
     MagicDestroyApi,
-    MagicCreateApi
+    MagicCreateApi,
+    MagicRetrieveApi
 )
 from api.response.fatcory import ResponseStandard
 from api.schema.setting import (
@@ -50,6 +51,13 @@ class TestEnvironmentDestroyViewSet(MagicDestroyApi):
     serializer_class = TestEnvironmentSerializers
     permission_classes = [IsAuthenticated]
     
+
+class EnvironmentDetailView(MagicRetrieveApi):
+
+    serializer_class = TestEnvironmentSerializers
+    queryset = TestEnvironment.objects.all()
+    permission_classes = [IsAuthenticated]
+
 
 class EnvironmentSaveOrUpdateApiView(APIView):
 

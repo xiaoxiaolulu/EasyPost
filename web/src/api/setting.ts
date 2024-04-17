@@ -41,6 +41,14 @@ export function envSaveOrUpdate(data: any) {
     })
 }
 
+export function getEnvDetail(data: any) {
+    return request({
+        url: `/api/env/detail/${data.id}`,
+        method: 'get',
+        data
+    })
+}
+
 export function addressList(params: any) {
     return request({
         url: `/api/address/list`,

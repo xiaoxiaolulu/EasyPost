@@ -22,7 +22,7 @@
         </el-form-item>
       </el-form>
     </div>
-    <div style="margin-top: 15px" v-show="selectDbData">
+    <div style="margin-top: 15px" v-show="selectDbData.length">
       <el-table
           :header-cell-style="{ color: '#adaaaa', fontSize: '13px', fontWeight: 'bold'}"
           :data="tableData"
@@ -134,7 +134,8 @@ const handleSelectionChange = (val: any) => {
 
 defineExpose({
   setData,
-  getData
+  getData,
+  changeAction
 })
 </script>
 <style scoped lang="scss">

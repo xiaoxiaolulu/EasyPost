@@ -3071,3 +3071,79 @@ INFO     [2024-04-17 16:56:55,634] [none] django.utils.autoreload: C:\Users\8613
 INFO     [2024-04-17 16:56:55,914] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
 INFO     [2024-04-17 16:56:56,387] [none] django.utils.autoreload: Watching for file changes with StatReloader
 INFO     [2024-04-17 16:56:56,679] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-17 16:59:33,738] [53100cba06c441269d04eb64cce2dd42] django.server: "OPTIONS /api/database/list?database=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-17 16:59:33,759] [8a89ff422aed4e9183c33576c75c2976] django.server: "GET /api/database/list?database=&page=1 HTTP/1.1" 200 619
+WARNING  [2024-04-17 16:59:33,781] [597e3ea884b24709a6a67544e0742e52] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-17 16:59:33,781] [597e3ea884b24709a6a67544e0742e52] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-17 17:01:59,707] [f1d67fc8f802480a82ec4286e7c92401] django.server: "OPTIONS /api/env/list?name=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-17 17:01:59,753] [a7dc6a3425474e60a5ce79e0ae26c97a] django.server: "GET /api/env/list?name=&page=1 HTTP/1.1" 200 7674
+WARNING  [2024-04-17 17:01:59,800] [d75e384531bf4c9ab5db4aae6da39553] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-17 17:01:59,801] [d75e384531bf4c9ab5db4aae6da39553] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-17 17:04:16,540] [8274ece091df4fa1a4ed38082518550b] django.server: "OPTIONS /api/env/list?name=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-17 17:04:16,602] [d580def1dc8a486eb0ff5c9d9094bf4e] django.server: "GET /api/env/list?name=&page=1 HTTP/1.1" 200 7674
+WARNING  [2024-04-17 17:04:16,667] [1a97d95b3d464acdafd0a1316c4c36cf] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-17 17:04:16,668] [1a97d95b3d464acdafd0a1316c4c36cf] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-17 17:09:50,602] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\setting.py changed, reloading.
+INFO     [2024-04-17 17:09:51,214] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\setting.py changed, reloading.
+INFO     [2024-04-17 17:09:51,340] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-17 17:09:52,021] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-17 17:15:04,640] [9d4a3fa800ea49729b01df76067aaf95] django.server: "OPTIONS /api/http/detail/37 HTTP/1.1" 200 0
+INFO     [2024-04-17 17:15:04,655] [3125ad1951384a72b4a0a9a5d1f87854] django.server: "GET /api/http/detail/37 HTTP/1.1" 200 43
+INFO     [2024-04-17 17:15:04,701] [34c7ae99381043ada56d2d4201050260] django.server: "OPTIONS /api/http/detail/37 HTTP/1.1" 200 0
+INFO     [2024-04-17 17:15:04,708] [5c28b9fe8c944b0693641c73259451ad] django.server: "GET /api/http/detail/37 HTTP/1.1" 200 43
+INFO     [2024-04-17 17:15:19,243] [0d01aa2264b944149eec9ed6ba5237f5] django.server: "OPTIONS /api/env/detail/37 HTTP/1.1" 200 0
+INFO     [2024-04-17 17:15:19,257] [63723c7df77a45bf94e493eafa0d37a5] django.server: "GET /api/env/detail/37 HTTP/1.1" 200 687
+WARNING  [2024-04-17 17:15:19,286] [bd0452af828749ba8f571e012fcc20f4] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-17 17:15:19,286] [bd0452af828749ba8f571e012fcc20f4] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-17 17:15:29,887] [16fde8acd15549278fd4119764aacddf] django.server: "OPTIONS /api/env/detail/37 HTTP/1.1" 200 0
+INFO     [2024-04-17 17:15:29,897] [f7ff7a1f2877443e9167bc10d7ff43c5] django.server: "GET /api/env/detail/37 HTTP/1.1" 200 687
+WARNING  [2024-04-17 17:15:29,934] [76c2e85845c54f01b756e560211eee21] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-17 17:15:29,935] [76c2e85845c54f01b756e560211eee21] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-17 17:15:59,521] [198e810e3cff4ef1ad4d493ac5eb4cf1] django.server: "OPTIONS /api/env/detail/37 HTTP/1.1" 200 0
+INFO     [2024-04-17 17:15:59,533] [0a77f149d7e34ae5a5760dfc21c7c831] django.server: "GET /api/env/detail/37 HTTP/1.1" 200 687
+WARNING  [2024-04-17 17:15:59,564] [ee71024041b841a3bdbcdfb40d234ed8] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-17 17:15:59,565] [ee71024041b841a3bdbcdfb40d234ed8] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-17 17:16:11,393] [0b9a218e91a84f05bcf067a4bac86c9c] django.server: "OPTIONS /api/env/saveOrUpdate/37 HTTP/1.1" 200 0
+INFO     [2024-04-17 17:16:11,406] [90e9411505e343c09d647d91f73b1743] django.server: "POST /api/env/saveOrUpdate/37 HTTP/1.1" 200 63
+INFO     [2024-04-17 17:16:13,588] [fe301e9df90b46208e390077eb2f2d3e] django.server: "OPTIONS /api/env/detail/37 HTTP/1.1" 200 0
+INFO     [2024-04-17 17:16:13,599] [4a03457055ee4b74bb86cbdb5fd3ccc6] django.server: "GET /api/env/detail/37 HTTP/1.1" 200 783
+WARNING  [2024-04-17 17:16:13,649] [2aebb1bcae0240f9b7736eaf5eec9535] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-17 17:16:13,650] [2aebb1bcae0240f9b7736eaf5eec9535] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-17 17:16:17,166] [a1efb130cc734d45abaeed7fd90f7756] django.server: "OPTIONS /api/database/list?database=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-17 17:16:17,180] [3f88c490d72f49198bfb666dc3b3fb9e] django.server: "GET /api/database/list?database=&page=1 HTTP/1.1" 200 619
+WARNING  [2024-04-17 17:16:17,198] [fb126a0bf53a43aaaf87d5fd1176ff40] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-17 17:16:17,198] [fb126a0bf53a43aaaf87d5fd1176ff40] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+WARNING  [2024-04-17 17:16:20,340] [d416d9211ef64225aeef85c69ec8e87f] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-17 17:16:20,340] [d416d9211ef64225aeef85c69ec8e87f] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-17 17:16:21,666] [5ca43bd2afa94f93a327dd61a6177b18] django.server: "OPTIONS /api/env/saveOrUpdate/37 HTTP/1.1" 200 0
+INFO     [2024-04-17 17:16:21,680] [f15832e329b14e5c985dac4cabe660d9] django.server: "POST /api/env/saveOrUpdate/37 HTTP/1.1" 200 63
+INFO     [2024-04-17 17:16:24,001] [d33f9a670c64406cbf90a1e1ca481dfa] django.server: "OPTIONS /api/env/detail/37 HTTP/1.1" 200 0
+INFO     [2024-04-17 17:16:24,012] [ab892764a9ac4ac2ad08151e4fe5b737] django.server: "GET /api/env/detail/37 HTTP/1.1" 200 1090
+WARNING  [2024-04-17 17:16:24,057] [5f36e1b2a62a4bb88402873bd5dbab58] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-17 17:16:24,057] [5f36e1b2a62a4bb88402873bd5dbab58] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-17 17:17:15,657] [49f09a54ea9f405c9d9aa98bd65526bf] django.server: "OPTIONS /api/env/detail/37 HTTP/1.1" 200 0
+INFO     [2024-04-17 17:17:15,665] [acb30ba842244013813a018de2b1dcd7] django.server: "GET /api/env/detail/37 HTTP/1.1" 200 1090
+WARNING  [2024-04-17 17:17:15,712] [e18b61ef909440b8a863f1f60a08d541] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-17 17:17:15,712] [e18b61ef909440b8a863f1f60a08d541] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-17 17:17:18,919] [4b1cd208a8224ea2820ed2ac3832e221] django.server: "OPTIONS /api/env/detail/37 HTTP/1.1" 200 0
+INFO     [2024-04-17 17:17:18,932] [5e553ba04a0a4cc5811de4a413d2e9dd] django.server: "GET /api/env/detail/37 HTTP/1.1" 200 1090
+WARNING  [2024-04-17 17:17:19,011] [272497360bb142d2999f0bf62cd9bee3] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-17 17:17:19,011] [272497360bb142d2999f0bf62cd9bee3] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-17 17:18:10,410] [b076d6257a404a37b546fcdc0e0761cf] django.server: "OPTIONS /api/env/detail/37 HTTP/1.1" 200 0
+INFO     [2024-04-17 17:18:10,431] [daa2583a3b0d44969f1db08b963bb1e2] django.server: "GET /api/env/detail/37 HTTP/1.1" 200 1090
+WARNING  [2024-04-17 17:18:10,483] [7632274347da4653b17e3b082a88665a] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-17 17:18:10,484] [7632274347da4653b17e3b082a88665a] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-17 17:18:13,581] [796f55253e7c4a02b75e04f64626a5d7] django.server: "OPTIONS /api/env/detail/37 HTTP/1.1" 200 0
+INFO     [2024-04-17 17:18:13,595] [8250778172064926be52b9c2fde2795a] django.server: "GET /api/env/detail/37 HTTP/1.1" 200 1090
+WARNING  [2024-04-17 17:18:13,661] [fe5d892b2fe14524a71a6d67458a1fa9] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-17 17:18:13,661] [fe5d892b2fe14524a71a6d67458a1fa9] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-17 17:18:21,355] [897cbb03eb44429d9cf5e25c6594ca9e] django.server: "OPTIONS /api/database/list?database=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-17 17:18:21,366] [966219ca674b42a2a33bb4ca4b70c4c3] django.server: "GET /api/database/list?database=&page=1 HTTP/1.1" 200 619
+WARNING  [2024-04-17 17:18:21,387] [8dd1a896f3fa4529be17b9fae8a24882] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-17 17:18:21,387] [8dd1a896f3fa4529be17b9fae8a24882] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+WARNING  [2024-04-17 17:18:24,348] [a8e9c0ec14144a8685830ec882946e94] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-17 17:18:24,348] [a8e9c0ec14144a8685830ec882946e94] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-17 17:18:40,082] [8cd44b7d49644de295fb0c9dc588cb9e] django.server: "OPTIONS /api/env/saveOrUpdate/37 HTTP/1.1" 200 0
+INFO     [2024-04-17 17:18:40,101] [5b7398fd204a4bda8a3f10c74c65b317] django.server: "POST /api/env/saveOrUpdate/37 HTTP/1.1" 200 63
+INFO     [2024-04-17 17:18:54,223] [f903b52a07574388a58eb0a85d2a43d6] django.server: "OPTIONS /api/env/saveOrUpdate/37 HTTP/1.1" 200 0
+INFO     [2024-04-17 17:18:54,238] [3ac59e6ad62645b89b796843ba799517] django.server: "POST /api/env/saveOrUpdate/37 HTTP/1.1" 200 63

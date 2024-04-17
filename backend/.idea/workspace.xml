@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Add environment save or update API and fix test environment update view set.">
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Improve code readability, error handling, and comments for better maintainability.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/dao/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/setting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/models/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/setting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/service/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/setting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/api/setting.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/api/setting.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/system/env/components/DatabseSetting.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/system/env/components/DatabseSetting.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/system/env/components/detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/system/env/components/detail.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -462,23 +464,7 @@
       <workItem from="1712461413811" duration="49812000" />
       <workItem from="1712801065778" duration="11896000" />
       <workItem from="1712908146550" duration="34648000" />
-      <workItem from="1713319714158" duration="10071000" />
-    </task>
-    <task id="LOCAL-00311" summary="Added static methods for saving/updating and loading functions, and refactored the load\_func\_content method.">
-      <option name="closed" value="true" />
-      <created>1712111522237</created>
-      <option name="number" value="00311" />
-      <option name="presentableId" value="LOCAL-00311" />
-      <option name="project" value="LOCAL" />
-      <updated>1712111522237</updated>
-    </task>
-    <task id="LOCAL-00312" summary="Update API doc and test case count methods.">
-      <option name="closed" value="true" />
-      <created>1712113617160</created>
-      <option name="number" value="00312" />
-      <option name="presentableId" value="LOCAL-00312" />
-      <option name="project" value="LOCAL" />
-      <updated>1712113617160</updated>
+      <workItem from="1713319714158" duration="12055000" />
     </task>
     <task id="LOCAL-00313" summary="Update code comments and docstrings for backend API module.">
       <option name="closed" value="true" />
@@ -856,7 +842,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713343102218</updated>
     </task>
-    <option name="localTasksCounter" value="360" />
+    <task id="LOCAL-00360" summary="Improve code readability, error handling, and comments for better maintainability.">
+      <option name="closed" value="true" />
+      <created>1713343563898</created>
+      <option name="number" value="00360" />
+      <option name="presentableId" value="LOCAL-00360" />
+      <option name="project" value="LOCAL" />
+      <updated>1713343563898</updated>
+    </task>
+    <task id="LOCAL-00361" summary="Improve code readability, error handling, and comments for better maintainability.">
+      <option name="closed" value="true" />
+      <created>1713344220994</created>
+      <option name="number" value="00361" />
+      <option name="presentableId" value="LOCAL-00361" />
+      <option name="project" value="LOCAL" />
+      <updated>1713344220994</updated>
+    </task>
+    <option name="localTasksCounter" value="362" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -886,23 +888,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="&quot;Refactor: Rename Address" />
-    <MESSAGE value="&quot;Refactor: Rename Address model" />
-    <MESSAGE value="&quot;Refactor: Rename Address model to" />
-    <MESSAGE value="&quot;Refactor: Rename Address model to Data" />
-    <MESSAGE value="&quot;Refactor: Rename Address model to DataSource" />
-    <MESSAGE value="&quot;Refactor: Rename Address model to DataSource," />
-    <MESSAGE value="&quot;Refactor: Rename Address model to DataSource, add" />
-    <MESSAGE value="&quot;Refactor: Rename Address model to DataSource, add new" />
-    <MESSAGE value="&quot;Refactor: Rename Address model to DataSource, add new Address" />
-    <MESSAGE value="&quot;Refactor: Rename Address model to DataSource, add new Address model" />
-    <MESSAGE value="&quot;Refactor: Rename Address model to DataSource, add new Address model.&quot;" />
-    <MESSAGE value="Add" />
-    <MESSAGE value="Add environment" />
-    <MESSAGE value="Add environment save" />
-    <MESSAGE value="Add environment save or" />
-    <MESSAGE value="Add environment save or update" />
-    <MESSAGE value="Add environment save or update API" />
     <MESSAGE value="Add environment save or update API and" />
     <MESSAGE value="Add environment save or update API and fix" />
     <MESSAGE value="Add environment save or update API and fix test" />
@@ -911,7 +896,24 @@
     <MESSAGE value="Add environment save or update API and fix test environment update view" />
     <MESSAGE value="Add environment save or update API and fix test environment update view set" />
     <MESSAGE value="Add environment save or update API and fix test environment update view set." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add environment save or update API and fix test environment update view set." />
+    <MESSAGE value="Im" />
+    <MESSAGE value="Impro" />
+    <MESSAGE value="Improve" />
+    <MESSAGE value="Improve code" />
+    <MESSAGE value="Improve code read" />
+    <MESSAGE value="Improve code readability" />
+    <MESSAGE value="Improve code readability," />
+    <MESSAGE value="Improve code readability, error" />
+    <MESSAGE value="Improve code readability, error handling" />
+    <MESSAGE value="Improve code readability, error handling," />
+    <MESSAGE value="Improve code readability, error handling, and" />
+    <MESSAGE value="Improve code readability, error handling, and comments" />
+    <MESSAGE value="Improve code readability, error handling, and comments for" />
+    <MESSAGE value="Improve code readability, error handling, and comments for better" />
+    <MESSAGE value="Improve code readability, error handling, and comments for better maintain" />
+    <MESSAGE value="Improve code readability, error handling, and comments for better maintainability" />
+    <MESSAGE value="Improve code readability, error handling, and comments for better maintainability." />
+    <option name="LAST_COMMIT_MESSAGE" value="Improve code readability, error handling, and comments for better maintainability." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$recursion.coverage" NAME="recursion Coverage Results" MODIFIED="1712139211023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />

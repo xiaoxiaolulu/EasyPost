@@ -104,12 +104,12 @@
 <script setup lang="ts">
 import CardHeader from "@/components/CardHeader/index.vue";
 import {useRoute, useRouter} from "vue-router";
-import {computed, reactive, ref} from "vue";
+import {computed, onMounted, reactive, ref} from "vue";
 import {ElMessage, FormInstance} from "element-plus";
 import {ArrowDown, ArrowUp} from "@element-plus/icons-vue";
 import VariablePool from "@/views/system/env/components/VariablePool.vue";
 import DatabaseSetting from "@/views/system/env/components/DatabseSetting.vue"
-import {envSaveOrUpdate} from "@/api/setting";
+import {envSaveOrUpdate, getEnvDetail} from "@/api/setting";
 import {showErrMessage} from "@/utils/element";
 
 const route = useRoute()
@@ -177,6 +177,25 @@ const onSureClick = (formName: FormInstance | undefined) => {
   })
 }
 
+const initApi = () => {
+  let environment_id = route.query.id
+  if(environment_id){
+    state.environment_id = environment_id
+  }
+  console.log("api_id------>", environment_id)
+  if (environment_id) {
+    getEnvDetail({id: environment_id}).then((response) => {
+      const {data, code, msg} = response.data
+      VariablePoolRef.value.setData(eval(data.variables))
+      DatabaseSettingRef.value.changeAction(data.data_source)
+      ruleForm.name = data.name
+      ruleForm.host = data.host
+      ruleForm.remarks = data.desc
+      showErrMessage(code.toString(), msg)
+    })
+  }
+}
+
 const settings = computed(() => {
   if (showSetting.value == false) {
     return "更多设置";
@@ -188,6 +207,10 @@ const settings = computed(() => {
 const closeSetting = () => {
   showSetting.value = !showSetting.value
 }
+
+onMounted(() => {
+  initApi()
+})
 </script>
 <style scoped lang="scss">
 
