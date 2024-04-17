@@ -3,7 +3,6 @@ DESCRIPTION：设置模型
 :Created by Null.
 
  * table-TestEnvironment: 环境配置
- * table-Address: 地址配置
  * table-DataSource: 数据库配置
  * table-BindDataSource: 关联的数据库
 """
@@ -119,35 +118,6 @@ class BindDataSource(Model):
         return self.database
 
 
-class Address(Model):
-    """
-    项目地址配置
-    * env: 所属环境
-    * name: 环境名称
-    * host: 地址
-    * user: 用户
-    * create_time: 创建时间
-    * update_time: 更新时间
-    """
-    id = AutoField(primary_key=True)
-    name = CharField(max_length=50, null=True, blank=True, verbose_name=_('Address Name'))
-    env = ForeignKey(TestEnvironment, null=True, on_delete=SET_NULL, verbose_name=_('Address Env'))
-    host = CharField(max_length=100, null=True, blank=True, verbose_name=_('Address Host'))
-    variables = TextField(null=True, blank=True, verbose_name=_('Address Variables'))
-    headers = TextField(null=True, blank=True, verbose_name=_('Address Headers'))
-    user = ForeignKey(User, related_name="address_creator", null=True, on_delete=SET_NULL, verbose_name=_('User'))
-    create_time = DateTimeField(auto_now_add=True, verbose_name=_('Address CreateTime'))
-    update_time = DateTimeField(auto_now=True, verbose_name=_('Address UpdateTime'))
-
-    class Meta:
-        verbose_name = _("Address")
-        verbose_name_plural = verbose_name
-        ordering = ("-create_time",)
-
-    def __str__(self):
-        return self.name
-
-
 class Functions(Model):
     """
     内置函数
@@ -199,5 +169,3 @@ def _delete_cache(sender, **kwargs):
 
 post_save.connect(_update_cache, sender=TestEnvironment)
 post_delete.connect(_delete_cache, sender=TestEnvironment)
-post_save.connect(_update_cache, sender=Address)
-post_delete.connect(_delete_cache, sender=Address)

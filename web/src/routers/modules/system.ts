@@ -26,12 +26,6 @@ const systemRouter = [{
             meta: { title: '环境管理详情' , icon: 'AddLocation'}
         },
         {
-            path: '/system/address',
-            component: () => import('@/views/system/address/index.vue'),
-            name: 'host',
-            meta: { title: '地址管理' , icon: 'AddLocation'}
-        },
-        {
             path: '/system/database',
             component: () => import('@/views/system/database/index.vue'),
             name: 'database',

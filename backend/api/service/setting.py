@@ -7,13 +7,11 @@ from rest_framework.views import APIView
 from api.dao.setting import SettingDao
 from api.filters.setting import (
     TestEnvironmentFilter,
-    AddressFilter,
     DataSourceFilter,
     FunctionsFilter
 )
 from api.models.setting import (
     TestEnvironment,
-    Address,
     DataSource,
     Functions
 )
@@ -27,8 +25,6 @@ from api.mixins.magic import (
 from api.response.fatcory import ResponseStandard
 from api.schema.setting import (
     TestEnvironmentSerializers,
-    AddressSerializers,
-    AddressWriteSerializers,
     DataSourceSerializers,
     FunctionsSerializers
 )
@@ -73,52 +69,6 @@ class EnvironmentSaveOrUpdateApiView(APIView):
             ))
         except Exception as err:
             return Response(ResponseStandard.failed(msg=str(err)))
-
-
-class TestEnvironmentUpdateViewSet(MagicUpdateApi):
-
-    queryset = TestEnvironment.objects.all()
-    serializer_class = TestEnvironmentSerializers
-    permission_classes = [IsAuthenticated]
-
-
-class TestEnvironmentCreateViewSet(MagicCreateApi):
-
-    queryset = TestEnvironment.objects.all()
-    serializer_class = TestEnvironmentSerializers
-    permission_classes = [IsAuthenticated]
-    
-
-class AddressListViewSet(MagicListAPI):  # noqa
-
-    queryset = Address.objects.all()
-    serializer_class = AddressSerializers
-    permission_classes = [IsAuthenticated]
-    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
-    filterset_class = AddressFilter  # noqa
-    search_fields = ['name']
-    ordering_fields = ['create_time']
-
-
-class AddressDestroyViewSet(MagicDestroyApi):  # noqa
-
-    queryset = Address.objects.all()
-    serializer_class = AddressSerializers
-    permission_classes = [IsAuthenticated]
-
-
-class AddressUpdateViewSet(MagicUpdateApi):
-
-    queryset = Address.objects.all()
-    serializer_class = AddressWriteSerializers
-    permission_classes = [IsAuthenticated]
-    
-
-class AddressCreateViewSet(MagicCreateApi):  # noqa
-
-    queryset = Address.objects.all()
-    serializer_class = AddressWriteSerializers
-    permission_classes = [IsAuthenticated]
 
 
 class DataSourceListViewSet(MagicListAPI):  # noqa

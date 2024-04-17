@@ -27,9 +27,13 @@
                 element-loading-text="拼命加载中"
                 style="width: 100%">
         <el-table-column type="index" width="55" label="id"></el-table-column>
-        <el-table-column prop="name" label="环境名称"></el-table-column>
-        <el-table-column prop="desc" label="备注"></el-table-column>
-        <el-table-column prop="user.username" label="创建者">
+        <el-table-column prop="name" width="200" label="环境名称"></el-table-column>
+        <el-table-column prop="host" label="环境地址">
+          <template #default="scope">
+            <a :href="scope.row.host" target="_blank">{{ scope.row.host }}</a>
+          </template>
+        </el-table-column>
+        <el-table-column prop="user.username" width="150" label="创建者">
           <template #default="scope">
             <div style="margin-inline-end:16px;display:inline">
               <img v-if="scope.row.user.avatar" :src="scope.row.user.avatar" class="avatar" alt="">
@@ -39,7 +43,7 @@
             </div>
           </template>
         </el-table-column>
-        <el-table-column prop="create_time" label="更新日期">
+        <el-table-column prop="create_time" width="200" label="更新日期">
           <template #default="scope">
             <span>{{ parseTime(scope.row.update_time) }}</span>
           </template>
@@ -61,8 +65,6 @@
           @current-change="handlePageChange"
       />
     </div>
-    <add-dialog v-model="isShow" @onChangeDialog="onChangeDialog"/>
-    <edit-dialog v-model="editShow" :rowData="rowData" @onChangeDialog="onChangeDialog"></edit-dialog>
   </div>
 </template>
 
@@ -73,8 +75,6 @@ import {envList, envDelete} from "@/api/setting";
 import {parseTime} from "@/utils";
 import {ElMessage, ElMessageBox, ElPagination} from "element-plus";
 import {showErrMessage} from "@/utils/element";
-import addDialog from './components/addDialog.vue'
-import editDialog from './components/editDialog.vue'
 import {useRouter} from "vue-router";
 
 const queryParams = reactive({
@@ -84,22 +84,13 @@ const queryParams = reactive({
 
 const router = useRouter()
 
-const loading = ref(false)
-
 const tableData = ref(null)
 
 const tableLoading = ref(false)
 
 const count = ref(0)
 
-const isShow = ref(false);
-
-const editShow = ref(false);
-
-const rowData = ref({})
-
 const addEnv = () => {
-  // isShow.value = true;
   router.push({
     name: "environmentDetail",
     query: {editType: 'save'}
@@ -107,14 +98,14 @@ const addEnv = () => {
 };
 
 const editEnv = (row: any) => {
-  editShow.value = true
-  rowData.value = row
-};
-
-const onChangeDialog = (val: any) => {
-  isShow.value = false;
-  editShow.value = false;
-  queryList()
+  if (row) {
+    router.push({
+      name: "environmentDetail",
+      query: {editType: 'update', id: row.id}
+    });
+  } else {
+    ElMessage.error("编辑环境配置异常请重试!");
+  }
 };
 
 const queryList = () => {

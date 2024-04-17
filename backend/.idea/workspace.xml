@@ -5,13 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Improve code readability, error handling, and comments for better maintainability.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/migrations/0025_alter_binddatasource_create_time_and_more.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/filters/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/filters/setting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/models/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/setting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/schema/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/schema/setting.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/service/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/setting.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/src/api/setting.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/api/setting.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/system/env/components/DatabseSetting.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/system/env/components/DatabseSetting.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/system/env/components/detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/system/env/components/detail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/routers/modules/system.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/routers/modules/system.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/system/address/components/addressDialog.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/system/address/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/system/env/components/addDialog.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/system/env/components/editDialog.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/system/env/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/system/env/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -464,15 +472,7 @@
       <workItem from="1712461413811" duration="49812000" />
       <workItem from="1712801065778" duration="11896000" />
       <workItem from="1712908146550" duration="34648000" />
-      <workItem from="1713319714158" duration="12055000" />
-    </task>
-    <task id="LOCAL-00313" summary="Update code comments and docstrings for backend API module.">
-      <option name="closed" value="true" />
-      <created>1712113631436</created>
-      <option name="number" value="00313" />
-      <option name="presentableId" value="LOCAL-00313" />
-      <option name="project" value="LOCAL" />
-      <updated>1712113631436</updated>
+      <workItem from="1713319714158" duration="12789000" />
     </task>
     <task id="LOCAL-00314" summary="Update plan.py docstring and comments to improve clarity and consistency.">
       <option name="closed" value="true" />
@@ -858,7 +858,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713344220994</updated>
     </task>
-    <option name="localTasksCounter" value="362" />
+    <task id="LOCAL-00362" summary="Improve code readability, error handling, and comments for better maintainability.">
+      <option name="closed" value="true" />
+      <created>1713345558039</created>
+      <option name="number" value="00362" />
+      <option name="presentableId" value="LOCAL-00362" />
+      <option name="project" value="LOCAL" />
+      <updated>1713345558039</updated>
+    </task>
+    <option name="localTasksCounter" value="363" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
