@@ -100,15 +100,15 @@ class BindDataSource(Model):
     """
     id = AutoField(primary_key=True)
     env = ForeignKey(
-        TestEnvironment, null=True, on_delete=SET_NULL, related_name='data_source', verbose_name=_('DataSource env'))
-    database = CharField(max_length=50, null=True, blank=True, verbose_name=_('DataSource Name'))
-    host = CharField(max_length=100, null=True, blank=True, verbose_name=_('DataSource Host'))
-    port = CharField(max_length=100, null=True, blank=True, verbose_name=_('DataSource Port'))
-    user = CharField(max_length=100, null=True, blank=True, verbose_name=_('DataSource User'))
-    password = CharField(max_length=100, null=True, blank=True, verbose_name=_('DataSource Host'))
+        TestEnvironment, null=True, on_delete=SET_NULL, related_name='data_source', verbose_name=_('BindDataSource env'))
+    database = CharField(max_length=50, null=True, blank=True, verbose_name=_('BindDataSource Name'))
+    host = CharField(max_length=100, null=True, blank=True, verbose_name=_('BindDataSource Host'))
+    port = CharField(max_length=100, null=True, blank=True, verbose_name=_('BindDataSource Port'))
+    user = CharField(max_length=100, null=True, blank=True, verbose_name=_('BindDataSource User'))
+    password = CharField(max_length=100, null=True, blank=True, verbose_name=_('BindDataSource Host'))
     creator = ForeignKey(User, related_name="bind_source", null=True, on_delete=SET_NULL, verbose_name=_('User'))
-    create_time = DateTimeField(auto_now_add=True, verbose_name=_('DataSource CreateTime'))
-    update_time = DateTimeField(auto_now=True, verbose_name=_('DataSource UpdateTime'))
+    create_time = DateTimeField(auto_now_add=True, verbose_name=_('BindDataSource CreateTime'))
+    update_time = DateTimeField(auto_now=True, verbose_name=_('BindDataSource UpdateTime'))
 
     class Meta:
         verbose_name = _("DataSource")

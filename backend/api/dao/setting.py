@@ -401,8 +401,6 @@ class SettingDao:
         except Exception as err:
             raise ValueError(f"函数调试错误：{err}") from err
 
-    from django.db import IntegrityError
-
     @classmethod
     def database_bind_environment(cls, request, environment_pk: int) -> None:
         """Binds database configurations to a specific test environment.
@@ -445,8 +443,6 @@ class SettingDao:
 
         except TestEnvironment.DoesNotExist:
             raise ValueError("The specified test environment does not exist.")
-
-    from django.core.exceptions import ValidationError
 
     @classmethod
     def environment_save(cls, request: Any, pk: int) -> int:

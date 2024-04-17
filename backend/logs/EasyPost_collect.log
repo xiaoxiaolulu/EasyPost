@@ -3028,3 +3028,46 @@ INFO     [2024-04-17 16:45:53,240] [none] django.utils.autoreload: C:\Users\8613
 INFO     [2024-04-17 16:45:53,683] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
 INFO     [2024-04-17 16:45:53,940] [none] django.utils.autoreload: Watching for file changes with StatReloader
 INFO     [2024-04-17 16:45:54,416] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-17 16:47:14,266] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-04-17 16:47:14,499] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-04-17 16:47:14,959] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-17 16:47:15,214] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-17 16:49:53,989] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-04-17 16:49:54,672] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-17 16:49:54,701] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-04-17 16:49:55,434] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-17 16:51:49,709] [db328eaf0af442dd9400b23cb5287459] django.server: "OPTIONS /api/project/list?name=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-17 16:51:49,732] [611a89c8d9624ce6ab6fc333692db14e] django.server: "GET /api/project/list?name=&page=1 HTTP/1.1" 200 2040
+WARNING  [2024-04-17 16:51:49,789] [d932b56b58ae44cd9c55ce7bc3f932da] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-17 16:51:49,790] [d932b56b58ae44cd9c55ce7bc3f932da] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-17 16:51:51,434] [dd81bbda70fa420a8bb5beac6e55d21d] django.server: "OPTIONS /api/env/list?name=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-17 16:51:51,489] [a3677c7dff4e4faf92811dd2a2ac5561] django.server: "GET /api/env/list?name=&page=1 HTTP/1.1" 200 7674
+WARNING  [2024-04-17 16:51:51,518] [32b8ecd423e24807bffb5bf921862d43] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-17 16:51:51,520] [32b8ecd423e24807bffb5bf921862d43] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-17 16:51:52,337] [5c639287af7a4c0eb453410f34de5ec2] django.server: "OPTIONS /api/address/list?name=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-17 16:51:52,340] [b878f0db4c194c3cb007a70a723ae6da] django.server: "OPTIONS /api/env/list HTTP/1.1" 200 0
+INFO     [2024-04-17 16:51:52,365] [e42328fd2ad74aacba85c8aec78637f7] django.server: "GET /api/address/list?name=&page=1 HTTP/1.1" 200 673
+INFO     [2024-04-17 16:51:52,413] [6ce994b22c5949d58cd66b05be620078] django.server: "GET /api/env/list HTTP/1.1" 200 7668
+INFO     [2024-04-17 16:51:53,109] [a05f3a54c4e44dbcaf1eb85b63f4e85f] django.server: "OPTIONS /api/database/list?database=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-17 16:51:53,119] [c895924ca0714fc78b36bb4e0415f3e6] django.server: "GET /api/database/list?database=&page=1 HTTP/1.1" 200 619
+WARNING  [2024-04-17 16:51:53,137] [ff2863488e7344f49c4c00ed008b5ca7] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-17 16:51:53,137] [ff2863488e7344f49c4c00ed008b5ca7] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-17 16:51:55,300] [dc4150a6a3534ccb92398a28f38eb081] django.server: "OPTIONS /api/env/list?name=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-17 16:51:55,353] [4319f172f020455dbe8e0e088a308f76] django.server: "GET /api/env/list?name=&page=1 HTTP/1.1" 200 7674
+WARNING  [2024-04-17 16:51:55,377] [9b9b0a60d1a94a9a92a4c1a6fc8ab2cc] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-17 16:51:55,377] [9b9b0a60d1a94a9a92a4c1a6fc8ab2cc] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-17 16:51:59,215] [cc467ef0fcd94e6bb2d0587533145bb7] django.server: "OPTIONS /api/env/list?name=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-17 16:51:59,270] [528c3748d864479bb87cfff06b7d837e] django.server: "GET /api/env/list?name=&page=1 HTTP/1.1" 200 7674
+WARNING  [2024-04-17 16:51:59,294] [7a0faf88d89645a19195c9e3933812dd] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-17 16:51:59,294] [7a0faf88d89645a19195c9e3933812dd] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-17 16:53:56,206] [ad4f26a4d974457a856976568138198a] django.server: "OPTIONS /api/env/list?name=&page=2 HTTP/1.1" 200 0
+INFO     [2024-04-17 16:53:56,236] [6c6a85de4cf1405db39b5b0bbe1116d6] django.server: "GET /api/env/list?name=&page=2 HTTP/1.1" 200 6097
+INFO     [2024-04-17 16:54:00,544] [a107190135b24931bac88a70ac79787a] django.server: "OPTIONS /api/env/list?name=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-17 16:54:00,603] [531f37088cdf4bee84c3b5307e7cec76] django.server: "GET /api/env/list?name=&page=1 HTTP/1.1" 200 7674
+WARNING  [2024-04-17 16:54:00,633] [0b223f1465c340638e533ee591af7721] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-17 16:54:00,641] [0b223f1465c340638e533ee591af7721] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-17 16:54:00,642] [0b223f1465c340638e533ee591af7721] django.server: - Broken pipe from ('127.0.0.1', 62955)
+INFO     [2024-04-17 16:56:55,634] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-04-17 16:56:55,914] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-04-17 16:56:56,387] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-17 16:56:56,679] [none] django.utils.autoreload: Watching for file changes with StatReloader
