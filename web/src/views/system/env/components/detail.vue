@@ -35,11 +35,11 @@
                 >
                 </el-input>
               </el-form-item>
-              <el-form-item label="环境地址" prop="name" :required="true">
+              <el-form-item label="环境地址" prop="host" :required="true">
                 <el-input
                     style="width: 500px"
                     size="default"
-                    v-model="ruleForm.name"
+                    v-model="ruleForm.host"
                     placeholder="请输入请求路径"
                 >
                 </el-input>
@@ -65,7 +65,7 @@
             </el-col>
             <el-col :xs="6" :sm="6" :md="6" :lg="6" :xl="6">
               <div style="padding-left: 12px">
-                <el-button type="primary" @click="onSureClick(ruleFormRef)">保存</el-button>
+                <el-button size="default" type="primary" @click="onSureClick(ruleFormRef)">保存</el-button>
               </div>
             </el-col>
           </el-row>
@@ -105,10 +105,12 @@
 import CardHeader from "@/components/CardHeader/index.vue";
 import {useRoute, useRouter} from "vue-router";
 import {computed, reactive, ref} from "vue";
-import {FormInstance} from "element-plus";
+import {ElMessage, FormInstance} from "element-plus";
 import {ArrowDown, ArrowUp} from "@element-plus/icons-vue";
 import VariablePool from "@/views/system/env/components/VariablePool.vue";
 import DatabaseSetting from "@/views/system/env/components/DatabseSetting.vue"
+import {envSaveOrUpdate} from "@/api/setting";
+import {showErrMessage} from "@/utils/element";
 
 const route = useRoute()
 
@@ -119,11 +121,20 @@ const VariablePoolRef = ref()
 const DatabaseSettingRef = ref()
 
 const ruleForm = reactive({
-  name: "",
-  remarks: ""
+  name: '',
+  host: '',
+  variables: [],
+  remarks: '',
+  data_source: []
+})
+
+const state = reactive({
+  environment_id: 0
 })
 
 const rules = reactive({
+  name: [{required: true, trigger: "blur", message: "请输入名称环境！"}],
+  host: [{required: true, trigger: "blur", message: "请输入环境地址！"}]
 })
 
 const ruleFormRef = ref<FormInstance>()
@@ -137,7 +148,33 @@ const goBack = () => {
 }
 
 const onSureClick = (formName: FormInstance | undefined) => {
-
+  if (!formName) return
+  formName.validate(async (valid) => {
+    ruleForm.variables = VariablePoolRef.value.getData()
+    ruleForm.data_source = DatabaseSettingRef.value.getData()
+    if (valid) {
+      try{
+        let formData = {
+          id: state.environment_id,
+          name: ruleForm.name,
+          host: ruleForm.host,
+          remarks: ruleForm.remarks,
+          variables: ruleForm.variables,
+          data_source: ruleForm.data_source
+        }
+        const ret = await envSaveOrUpdate(formData)
+        const {code, data, msg} = ret.data
+        state.environment_id = data.environment_id
+        showErrMessage(code.toString(), msg)
+      } catch (e) {
+        console.log(e)
+      }
+    } else {
+      console.log('error submit!')
+      ElMessage.error("新增接口失败请重试!")
+      return false
+    }
+  })
 }
 
 const settings = computed(() => {

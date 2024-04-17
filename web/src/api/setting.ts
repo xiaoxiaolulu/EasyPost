@@ -1,5 +1,6 @@
 import request from './request'
 
+
 export function envList(params: any) {
     return request({
         url: `/api/env/list`,
@@ -27,6 +28,14 @@ export function envUpdate(data: any) {
 export function envCreate(data: any) {
     return request({
         url: '/api/env/create',
+        method: 'post',
+        data
+    })
+}
+
+export function envSaveOrUpdate(data: any) {
+    return request({
+        url: `/api/env/saveOrUpdate/${data.id}`,
         method: 'post',
         data
     })
