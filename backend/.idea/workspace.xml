@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="The changes made to the codebase are as follows:```diffIndex: backend/unitrunner/builti```">
-      <change afterPath="$PROJECT_DIR$/../web/src/views/system/env/components/DatabseSetting.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/src/views/system/env/components/VariablePool.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/src/views/system/env/components/dbConfig.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/src/views/system/env/components/selectDatabase.vue" afterDir="false" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Add environment save or update API and fix test environment update view set.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/setting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/models/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/setting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/system/env/components/detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/system/env/components/detail.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,60 +86,60 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Django Server.backend.executor": "Run",
-    "Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken.executor": "Run",
-    "Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken.setUp.executor": "Run",
-    "Django tests.Test: api.tests.test_project_destory.ProjectDestroyViewSetTests.executor": "Run",
-    "Django tests.Test: api.tests.test_user_list.TestUserListViewSet.executor": "Run",
-    "Django tests.Test: api.tests.test_user_list.TestUserListViewSet.test_hello.executor": "Run",
-    "Django tests.Test: api.tests.test_user_list.executor": "Run",
-    "Python tests.Python tests for MyAssertTest.executor": "Run",
-    "Python tests.Python tests for MyAssertTest.test_assertNotEqual.executor": "Run",
-    "Python tests.Python tests for Test1.executor": "Run",
-    "Python tests.Python tests for Test1.test1.executor": "Run",
-    "Python tests.Python tests for test_assert.MyAssertTest.test_assertNotEqual.executor": "Run",
-    "Python tests.Python tests in __init__.py.executor": "Run",
-    "Python tests.Python tests in test_custom_token.py.executor": "Run",
-    "Python tests.Python tests in test_engine.py.executor": "Run",
-    "Python.DBClient.executor": "Run",
-    "Python.__init__ (1).executor": "Run",
-    "Python.__init__ (2).executor": "Run",
-    "Python.__init__.executor": "Run",
-    "Python.api_migrate.executor": "Run",
-    "Python.engine.executor": "Run",
-    "Python.functions.executor": "Run",
-    "Python.manage.executor": "Run",
-    "Python.recursion.executor": "Run",
-    "Python.setting.executor": "Run",
-    "Python.time.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "E:/codes/django-vue3-admin",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.stylelint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.stylelint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "D:\\Program Files\\JetBrains\\PyCharm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Django Server.backend.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken.setUp.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: api.tests.test_project_destory.ProjectDestroyViewSetTests.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: api.tests.test_user_list.TestUserListViewSet.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: api.tests.test_user_list.TestUserListViewSet.test_hello.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: api.tests.test_user_list.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for MyAssertTest.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for MyAssertTest.test_assertNotEqual.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for Test1.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for Test1.test1.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_assert.MyAssertTest.test_assertNotEqual.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in __init__.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_custom_token.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_engine.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.DBClient.executor&quot;: &quot;Run&quot;,
+    &quot;Python.__init__ (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.__init__ (2).executor&quot;: &quot;Run&quot;,
+    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.api_migrate.executor&quot;: &quot;Run&quot;,
+    &quot;Python.engine.executor&quot;: &quot;Run&quot;,
+    &quot;Python.functions.executor&quot;: &quot;Run&quot;,
+    &quot;Python.manage.executor&quot;: &quot;Run&quot;,
+    &quot;Python.recursion.executor&quot;: &quot;Run&quot;,
+    &quot;Python.setting.executor&quot;: &quot;Run&quot;,
+    &quot;Python.time.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/codes/django-vue3-admin&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Program Files\\JetBrains\\PyCharm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "directory"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\templates\media" />
@@ -158,7 +156,7 @@
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.DBClient">
+  <component name="RunManager" selected="Django Server.backend">
     <configuration name="DBClient" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <option name="ENV_FILES" value="" />
@@ -464,78 +462,7 @@
       <workItem from="1712461413811" duration="49812000" />
       <workItem from="1712801065778" duration="11896000" />
       <workItem from="1712908146550" duration="34648000" />
-    </task>
-    <task id="LOCAL-00302" summary="&quot;Add DataSource model, refine relationships in Plan, Https, Case, Step, ApiCopy, and Setting models&quot;">
-      <option name="closed" value="true" />
-      <created>1711963945424</created>
-      <option name="number" value="00302" />
-      <option name="presentableId" value="LOCAL-00302" />
-      <option name="project" value="LOCAL" />
-      <updated>1711963945424</updated>
-    </task>
-    <task id="LOCAL-00303" summary="&quot;Add DataSource model, refine relationships in Plan, Https, Case, Step, ApiCopy, and Setting models&quot;">
-      <option name="closed" value="true" />
-      <created>1711963956563</created>
-      <option name="number" value="00303" />
-      <option name="presentableId" value="LOCAL-00303" />
-      <option name="project" value="LOCAL" />
-      <updated>1711963956563</updated>
-    </task>
-    <task id="LOCAL-00304" summary="Added new API endpoints for data source management.">
-      <option name="closed" value="true" />
-      <created>1711964451049</created>
-      <option name="number" value="00304" />
-      <option name="presentableId" value="LOCAL-00304" />
-      <option name="project" value="LOCAL" />
-      <updated>1711964451049</updated>
-    </task>
-    <task id="LOCAL-00305" summary="Added new API endpoints for data source management.">
-      <option name="closed" value="true" />
-      <created>1711965185301</created>
-      <option name="number" value="00305" />
-      <option name="presentableId" value="LOCAL-00305" />
-      <option name="project" value="LOCAL" />
-      <updated>1711965185301</updated>
-    </task>
-    <task id="LOCAL-00306" summary="Add database management page and related API calls for adding, editing, and deleting databases.">
-      <option name="closed" value="true" />
-      <created>1712026350732</created>
-      <option name="number" value="00306" />
-      <option name="presentableId" value="LOCAL-00306" />
-      <option name="project" value="LOCAL" />
-      <updated>1712026350732</updated>
-    </task>
-    <task id="LOCAL-00307" summary="Changed database name to database in codebase.">
-      <option name="closed" value="true" />
-      <created>1712027289170</created>
-      <option name="number" value="00307" />
-      <option name="presentableId" value="LOCAL-00307" />
-      <option name="project" value="LOCAL" />
-      <updated>1712027289170</updated>
-    </task>
-    <task id="LOCAL-00308" summary="Add database connectivity check API and associated views and dao.">
-      <option name="closed" value="true" />
-      <created>1712027804937</created>
-      <option name="number" value="00308" />
-      <option name="presentableId" value="LOCAL-00308" />
-      <option name="project" value="LOCAL" />
-      <updated>1712027804937</updated>
-    </task>
-    <task id="LOCAL-00309" summary="Changed codebase to handle exceptions and added new methods for getting function content.">
-      <option name="closed" value="true" />
-      <created>1712039255746</created>
-      <option name="number" value="00309" />
-      <option name="presentableId" value="LOCAL-00309" />
-      <option name="project" value="LOCAL" />
-      <updated>1712039255746</updated>
-    </task>
-    <task id="LOCAL-00310" summary="Changed codebase to handle exceptions and added new methods for getting function content.">
-      <option name="closed" value="true" />
-      <created>1712039293049</created>
-      <option name="number" value="00310" />
-      <option name="presentableId" value="LOCAL-00310" />
-      <option name="project" value="LOCAL" />
-      <updated>1712039293049</updated>
+      <workItem from="1713319714158" duration="10071000" />
     </task>
     <task id="LOCAL-00311" summary="Added static methods for saving/updating and loading functions, and refactored the load\_func\_content method.">
       <option name="closed" value="true" />
@@ -857,7 +784,79 @@
       <option name="project" value="LOCAL" />
       <updated>1713258852279</updated>
     </task>
-    <option name="localTasksCounter" value="351" />
+    <task id="LOCAL-00351" summary="&quot;alter test environment and datasource models&quot;">
+      <option name="closed" value="true" />
+      <created>1713342945471</created>
+      <option name="number" value="00351" />
+      <option name="presentableId" value="LOCAL-00351" />
+      <option name="project" value="LOCAL" />
+      <updated>1713342945471</updated>
+    </task>
+    <task id="LOCAL-00352" summary="&quot;alter test environment and datasource models&quot;">
+      <option name="closed" value="true" />
+      <created>1713342959077</created>
+      <option name="number" value="00352" />
+      <option name="presentableId" value="LOCAL-00352" />
+      <option name="project" value="LOCAL" />
+      <updated>1713342959077</updated>
+    </task>
+    <task id="LOCAL-00353" summary="Add database setting component and table display for selected databases.">
+      <option name="closed" value="true" />
+      <created>1713342991010</created>
+      <option name="number" value="00353" />
+      <option name="presentableId" value="LOCAL-00353" />
+      <option name="project" value="LOCAL" />
+      <updated>1713342991010</updated>
+    </task>
+    <task id="LOCAL-00354" summary="Change event name and ref function in dbConfig.vue:```Change event name and ref function in dbConfig.vue```">
+      <option name="closed" value="true" />
+      <created>1713343003034</created>
+      <option name="number" value="00354" />
+      <option name="presentableId" value="LOCAL-00354" />
+      <option name="project" value="LOCAL" />
+      <updated>1713343003034</updated>
+    </task>
+    <task id="LOCAL-00355" summary="Change commit message: &quot;Rename methods and refs for database selection&quot;">
+      <option name="closed" value="true" />
+      <created>1713343015645</created>
+      <option name="number" value="00355" />
+      <option name="presentableId" value="LOCAL-00355" />
+      <option name="project" value="LOCAL" />
+      <updated>1713343015645</updated>
+    </task>
+    <task id="LOCAL-00356" summary="Update code for saving and updating environment details.">
+      <option name="closed" value="true" />
+      <created>1713343031288</created>
+      <option name="number" value="00356" />
+      <option name="presentableId" value="LOCAL-00356" />
+      <option name="project" value="LOCAL" />
+      <updated>1713343031288</updated>
+    </task>
+    <task id="LOCAL-00357" summary="Added new methods `database_bind_environment` and `environment_save` to `SettingDAO` class.">
+      <option name="closed" value="true" />
+      <created>1713343064618</created>
+      <option name="number" value="00357" />
+      <option name="presentableId" value="LOCAL-00357" />
+      <option name="project" value="LOCAL" />
+      <updated>1713343064619</updated>
+    </task>
+    <task id="LOCAL-00358" summary="&quot;Refactor: Rename Address model to DataSource, add new Address model.&quot;">
+      <option name="closed" value="true" />
+      <created>1713343088332</created>
+      <option name="number" value="00358" />
+      <option name="presentableId" value="LOCAL-00358" />
+      <option name="project" value="LOCAL" />
+      <updated>1713343088332</updated>
+    </task>
+    <task id="LOCAL-00359" summary="Add environment save or update API and fix test environment update view set.">
+      <option name="closed" value="true" />
+      <created>1713343102218</created>
+      <option name="number" value="00359" />
+      <option name="presentableId" value="LOCAL-00359" />
+      <option name="project" value="LOCAL" />
+      <updated>1713343102218</updated>
+    </task>
+    <option name="localTasksCounter" value="360" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -887,32 +886,32 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Index: web/src/views/system/function/components/detail.vue===================================================================--- old/web/src/views/system/function/components/detail.vue+++ new/web/src/views/system/function/components/detail.vue@@ -15,50 +15,54 @@ &lt;/el-form&gt; &lt;/div&gt; &lt;div&gt;- &lt;el-table :data=&quot;tableData&quot;- v-loading=&quot;tableLoading&quot;- element-loading-text=&quot;拼命加载中&quot;- :header-cell-style=&quot;{'background-color':'#ffffff','color':'#babac0' }&quot;- style=&quot;width:100%&quot;+ &lt;el-table+ ref=&quot;revRef&quot;+ :data=&quot;tableData&quot;+ v-loading=&quot;tableLoading&quot;+ element-loading-text=&quot;拼命加载中&quot;+ :header-cell-style=&quot;{'background-color':'#ffffff','color':'#babac0' }&quot;" />
-    <MESSAGE value="The" />
-    <MESSAGE value="The changes" />
-    <MESSAGE value="The changes made" />
-    <MESSAGE value="The changes made to" />
-    <MESSAGE value="The changes made to the" />
-    <MESSAGE value="The changes made to the code" />
-    <MESSAGE value="The changes made to the codebase" />
-    <MESSAGE value="The changes made to the codebase are" />
-    <MESSAGE value="The changes made to the codebase are as" />
-    <MESSAGE value="The changes made to the codebase are as follows" />
-    <MESSAGE value="The changes made to the codebase are as follows:" />
-    <MESSAGE value="The changes made to the codebase are as follows:```" />
-    <MESSAGE value="The changes made to the codebase are as follows:```diff" />
-    <MESSAGE value="The changes made to the codebase are as follows:```diffIndex" />
-    <MESSAGE value="The changes made to the codebase are as follows:```diffIndex:" />
-    <MESSAGE value="The changes made to the codebase are as follows:```diffIndex: backend" />
-    <MESSAGE value="The changes made to the codebase are as follows:```diffIndex: backend/" />
-    <MESSAGE value="The changes made to the codebase are as follows:```diffIndex: backend/unit" />
-    <MESSAGE value="The changes made to the codebase are as follows:```diffIndex: backend/unitrunner" />
-    <MESSAGE value="The changes made to the codebase are as follows:```diffIndex: backend/unitrunner/" />
-    <MESSAGE value="The changes made to the codebase are as follows:```diffIndex: backend/unitrunner/bu" />
-    <MESSAGE value="The changes made to the codebase are as follows:```diffIndex: backend/unitrunner/buil" />
-    <MESSAGE value="The changes made to the codebase are as follows:```diffIndex: backend/unitrunner/builti" />
-    <MESSAGE value="The changes made to the codebase are as follows:```diffIndex: backend/unitrunner/builti```" />
-    <option name="LAST_COMMIT_MESSAGE" value="The changes made to the codebase are as follows:```diffIndex: backend/unitrunner/builti```" />
+    <MESSAGE value="&quot;Refactor: Rename Address" />
+    <MESSAGE value="&quot;Refactor: Rename Address model" />
+    <MESSAGE value="&quot;Refactor: Rename Address model to" />
+    <MESSAGE value="&quot;Refactor: Rename Address model to Data" />
+    <MESSAGE value="&quot;Refactor: Rename Address model to DataSource" />
+    <MESSAGE value="&quot;Refactor: Rename Address model to DataSource," />
+    <MESSAGE value="&quot;Refactor: Rename Address model to DataSource, add" />
+    <MESSAGE value="&quot;Refactor: Rename Address model to DataSource, add new" />
+    <MESSAGE value="&quot;Refactor: Rename Address model to DataSource, add new Address" />
+    <MESSAGE value="&quot;Refactor: Rename Address model to DataSource, add new Address model" />
+    <MESSAGE value="&quot;Refactor: Rename Address model to DataSource, add new Address model.&quot;" />
+    <MESSAGE value="Add" />
+    <MESSAGE value="Add environment" />
+    <MESSAGE value="Add environment save" />
+    <MESSAGE value="Add environment save or" />
+    <MESSAGE value="Add environment save or update" />
+    <MESSAGE value="Add environment save or update API" />
+    <MESSAGE value="Add environment save or update API and" />
+    <MESSAGE value="Add environment save or update API and fix" />
+    <MESSAGE value="Add environment save or update API and fix test" />
+    <MESSAGE value="Add environment save or update API and fix test environment" />
+    <MESSAGE value="Add environment save or update API and fix test environment update" />
+    <MESSAGE value="Add environment save or update API and fix test environment update view" />
+    <MESSAGE value="Add environment save or update API and fix test environment update view set" />
+    <MESSAGE value="Add environment save or update API and fix test environment update view set." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add environment save or update API and fix test environment update view set." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$recursion.coverage" NAME="recursion Coverage Results" MODIFIED="1712139211023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />

@@ -5,6 +5,7 @@ DESCRIPTION：设置模型
  * table-TestEnvironment: 环境配置
  * table-Address: 地址配置
  * table-DataSource: 数据库配置
+ * table-BindDataSource: 关联的数据库
 """
 from django.contrib.auth import get_user_model
 from django.core.cache import cache
@@ -57,7 +58,6 @@ class DataSource(Model):
     """
     数据库配置
     * name: 数据库名称
-    * env: 所属环境
     * host: 地址
     * port: 端口
     * user: 账号

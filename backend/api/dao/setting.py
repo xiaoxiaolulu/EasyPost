@@ -14,7 +14,13 @@ import uuid
 from typing import (
     Any
 )
-from api.models.setting import Functions, TestEnvironment, DataSource, BindDataSource
+from django.core.exceptions import ValidationError
+from django.db import IntegrityError
+from api.models.setting import (
+    Functions,
+    TestEnvironment,
+    BindDataSource
+)
 from api.response.fatcory import ResponseStandard
 from config.settings import BASE_DIR
 from unitrunner.database.DBClient import DBMysql
@@ -395,59 +401,93 @@ class SettingDao:
         except Exception as err:
             raise ValueError(f"函数调试错误：{err}") from err
 
+    from django.db import IntegrityError
+
     @classmethod
     def database_bind_environment(cls, request, environment_pk: int) -> None:
-        global c
+        """Binds database configurations to a specific test environment.
+
+        Args:
+            request (HttpRequest): The Django request object.
+            environment_pk (int): The primary key of the TestEnvironment object.
+
+        Raises:
+            ValueError: If environment_pk is invalid.
+            Exception: If any other error occurs during binding.
+        """
+
+        if not environment_pk:
+            raise ValueError("Invalid environment PK provided.")
+
         try:
-            if not environment_pk:
-                raise ValueError("参数错误！")
+            # Efficient deletion using bulk_delete for existing bindings
+            BindDataSource.objects.filter(env=environment_pk).delete()
 
-            bean_bind = BindDataSource.objects.filter(env__id=environment_pk)
-            bean_bind.delete()
+            # Create new bindings with validation and error handling
+            for db in request.data.get('data_source', []):
+                data = {
+                    'database': db.get('database'),
+                    'env': TestEnvironment.objects.get(pk=environment_pk),  # Use pk for clarity
+                    'host': db.get('host'),
+                    'port': db.get('port'),
+                    'user': db.get('user'),
+                    'password': db.get('password'),
+                    'creator': request.user,
+                }
+                try:
+                    BindDataSource.objects.create(**data)
+                except IntegrityError as e:
+                    logger.warning(f"Duplicate database binding attempted: {e}")
+                    raise Exception("Database binding failed. Potential duplicate configuration.")
+                except Exception as e:
+                    logger.error(f"Database binding error: {e}")
+                    raise Exception(f"An error occurred while binding databases: {e}")
 
-            for db in request.data.get('data_source'):
-                BindDataSource.objects.create(
-                    database=db.get('database'),
-                    env=TestEnvironment.objects.get(id=environment_pk),
-                    host=db.get('host'),
-                    port=db.get('port'),
-                    user=db.get('user'),
-                    password=db.get('password'),
-                    creator=request.user
-                )
-        except Exception as err:
-            logger.debug(
-                f"🏓数据库绑定环境失败 -> {err}"
-            )
-            raise Exception(f"{err} ❌")
+        except TestEnvironment.DoesNotExist:
+            raise ValueError("The specified test environment does not exist.")
+
+    from django.core.exceptions import ValidationError
 
     @classmethod
-    def environment_save(cls, request: Any, pk):
+    def environment_save(cls, request: Any, pk: int) -> int:
+        """Saves test environment data.
+
+        Args:
+            request (HttpRequest): The Django request object.
+            pk (int): The primary key of the TestEnvironment object (or None for creation).
+
+        Returns:
+            int: The primary key of the saved TestEnvironment object.
+
+        Raises:
+            ValidationError: If there are validation errors in the data.
+            Exception: If any other error occurs during saving.
+        """
+
         try:
-
             if pk:
-                update_obj = TestEnvironment.objects.filter(id=pk)
-                update_obj.update(
-                    name=request.data.get('name'),
-                    host=request.data.get('host'),
-                    variables=request.data.get('variables'),
-                    user=request.user
-                )
+                environment = TestEnvironment.objects.get(pk=pk)
+                environment.name = request.data.get('name')
+                environment.host = request.data.get('host')
+                environment.variables = request.data.get('variables')
+                environment.full_clean()  # Perform validation before saving
+                environment.save()
                 update_pk = pk
-
             else:
-                create_obj = TestEnvironment.objects.create(
+                environment = TestEnvironment.objects.create(
                     name=request.data.get('name'),
                     host=request.data.get('host'),
                     variables=request.data.get('variables'),
                     user=request.user
                 )
-                update_pk = create_obj.id
+                update_pk = environment.id
 
             cls.database_bind_environment(request, update_pk)
             return update_pk
-        except Exception as err:
-            logger.debug(
-                f"🏓编辑环境配置数据失败 -> {err}"
-            )
-            raise Exception(f"{err} ❌")
+
+        except ValidationError as e:
+            logger.error(f"Test environment validation error: {e}")
+            raise ValidationError(f"Invalid data provided: {e}")
+        except Exception as e:
+            logger.error(f"Error saving test environment: {e}")
+            raise Exception(f"An error occurred while saving the environment: {e}")
