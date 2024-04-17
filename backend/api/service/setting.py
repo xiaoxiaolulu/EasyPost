@@ -51,6 +51,22 @@ class TestEnvironmentDestroyViewSet(MagicDestroyApi):
     permission_classes = [IsAuthenticated]
     
 
+class EnvironmentSaveOrUpdateApiView(APIView):
+
+    permission_classes = [IsAuthenticated]
+
+    @staticmethod
+    def post(request, **kwargs):
+
+        try:
+            response = SettingDao.environment_save(request, pk=kwargs['pk'])
+            return Response(ResponseStandard.success(
+                data={"environment_id": response}
+            ))
+        except Exception as err:
+            return Response(ResponseStandard.failed(msg=str(err)))
+
+
 class TestEnvironmentUpdateViewSet(MagicUpdateApi):
 
     queryset = TestEnvironment.objects.all()

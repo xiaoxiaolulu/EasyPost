@@ -17,7 +17,8 @@ from api.service.https import (
     DelCaseView,
     CaseDetailView,
     ApiSnapshotView,
-    CaseListView, ImportApiView
+    CaseListView,
+    ImportApiView
 )
 from api.service.plan import (
     UpdatePlanStateView,
@@ -57,7 +58,8 @@ from api.service.setting import (
     FunctionSaveOrUpdateApiView,
     GetFunctionListApiView,
     DebugFunctionApiView,
-    FunctionsListViewSet
+    FunctionsListViewSet,
+    EnvironmentSaveOrUpdateApiView
 )
 from api.service.user import (
     CustomJsonWebToken,
@@ -91,6 +93,7 @@ app_urls = [
     path("env/delete/<int:pk>", TestEnvironmentDestroyViewSet.as_view()),
     path("env/update/<int:pk>", TestEnvironmentUpdateViewSet.as_view()),
     path("env/create", TestEnvironmentCreateViewSet.as_view()),
+    path("env/saveOrUpdate/<int:pk>", EnvironmentSaveOrUpdateApiView.as_view()),
     path("address/list", AddressListViewSet.as_view()),
     path("address/delete/<int:pk>", AddressDestroyViewSet.as_view()),
     path("address/update/<int:pk>", AddressUpdateViewSet.as_view()),
