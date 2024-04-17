@@ -9,7 +9,7 @@
 
     <template #footer>
       <span class="dialog-footer">
-        <el-button type="primary" @click="addDatabaseSetting">添加</el-button>
+        <el-button type="primary" @click="addDbSetting">添加</el-button>
       </span>
     </template>
   </el-dialog>
@@ -20,7 +20,7 @@
 import {reactive, ref} from 'vue';
 import DatabaseList from "@/views/system/database/index.vue";
 
-const emit = defineEmits(['addDatabaseSetting'])
+const emit = defineEmits(['addDbSetting'])
 
 const databaseListRef = ref()
 
@@ -28,14 +28,13 @@ const state = reactive({
   showDatabaseList: false,
 });
 
-// 获取选中用例
 const getSelectionData = () => {
-  return databaseListRef.value.getSelectionData()
+  return databaseListRef.value.getData()
 }
 
 
-const addDatabaseSetting = () => {
-  emit("addDatabaseSetting")
+const addDbSetting = () => {
+  emit("addDbSetting")
   onOpenDatabaseList()
 }
 

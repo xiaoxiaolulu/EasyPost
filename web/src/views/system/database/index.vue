@@ -25,7 +25,9 @@
       <el-table :data="tableData"
                 v-loading="tableLoading"
                 element-loading-text="拼命加载中"
+                @selection-change="handleSelectionChange"
                 style="width: 100%">
+        <el-table-column type="selection" width="55" />
         <el-table-column prop="database" label="数据库名称"></el-table-column>
         <el-table-column prop="host" label="地址"></el-table-column>
         <el-table-column prop="port" label="端口"></el-table-column>
@@ -37,6 +39,11 @@
             <div style="display:inline;color: rgba(0, 0, 0, 0.88);">
               <span style="color:rgb(22, 119, 255)">{{ scope.row.creator.username }}</span>
             </div>
+          </template>
+        </el-table-column>
+        <el-table-column prop="update_time" label="更新时间" width="200px">
+          <template #default="scope">
+            <span>{{parseTime(scope.row.update_time)}}</span>
           </template>
         </el-table-column>
         <el-table-column label="操作" width="150px" align="center">
@@ -68,6 +75,7 @@ import {databaseDelete, databaseList} from "@/api/setting";
 import {ElMessage, ElMessageBox, ElPagination} from "element-plus";
 import databaseDialog from "./components/databaseDialog.vue"
 import {showErrMessage} from "@/utils/element";
+import {parseTime} from "@/utils";
 
 const queryParams = reactive({
   database: '',
@@ -85,6 +93,8 @@ const count = ref(0)
 const rowData = ref({})
 
 const dialog = ref(null)
+
+const selectionData = ref()
 
 const editData = (row: any) => {
   rowData.value = row
@@ -110,6 +120,10 @@ const queryList = () => {
 
 queryList()
 
+const handleSelectionChange = (val: any) => {
+  selectionData.value = val
+}
+
 const handlePageChange = (newPage: any) => {
   queryParams.page = newPage
   queryList()
@@ -126,6 +140,14 @@ const deleteData = (row: any) => {
     ElMessage.error("数据库删除失败请重试");
   })
 }
+
+const getData = () => {
+  return selectionData.value
+}
+
+defineExpose({
+  getData
+})
 </script>
 
 <style lang="scss" scoped>
