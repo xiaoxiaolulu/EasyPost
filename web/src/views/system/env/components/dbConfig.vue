@@ -6,11 +6,11 @@ const emit = defineEmits(['change'])
 
 const selectDatabaseRef = ref()
 
-const handleAddData = async () => {
+const handleAddData = () => {
   selectDatabaseRef.value.onOpenDatabaseList()
 }
 
-const getDatabaseStep = () => {
+const getDbSetting = () => {
   let steps = selectDatabaseRef.value.getSelectionData()
   emit('change', steps)
 }
@@ -22,7 +22,7 @@ defineExpose({
 
 <template>
   <div>
-    <select-database ref="selectDatabaseRef" @getDatabaseStep="getDatabaseStep"></select-database>
+    <select-database ref="selectDatabaseRef" @addDbSetting="getDbSetting"></select-database>
   </div>
 </template>
 
