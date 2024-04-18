@@ -35,15 +35,15 @@
                 >
                 </el-input>
               </el-form-item>
-              <el-form-item label="环境地址" prop="host" :required="true">
-                <el-input
-                    style="width: 500px"
-                    size="default"
-                    v-model="ruleForm.host"
-                    placeholder="请输入请求路径"
-                >
-                </el-input>
-              </el-form-item>
+<!--              <el-form-item label="环境地址" prop="host" :required="true">-->
+<!--                <el-input-->
+<!--                    style="width: 500px"-->
+<!--                    size="default"-->
+<!--                    v-model="ruleForm.host"-->
+<!--                    placeholder="请输入请求路径"-->
+<!--                >-->
+<!--                </el-input>-->
+<!--              </el-form-item>-->
               <div style="margin-bottom: 20px">
                 <el-button  size="default" type="primary" link style="margin-left:10px" id="closeSearchBtn" @click="closeSetting">
                   {{ settings }}
@@ -79,6 +79,14 @@
         </template>
         <div>
           <el-tabs v-model="activeName" style="overflow-y: auto">
+            <el-tab-pane name='AddressSetting'>
+              <template #label>
+                <strong>服务</strong>
+              </template>
+              <div>
+                <address-setting ref="AddressSettingRef"></address-setting>
+              </div>
+            </el-tab-pane>
             <el-tab-pane name='VariablePoolSetting'>
               <template #label>
                 <strong>变量池</strong>
@@ -111,6 +119,7 @@ import VariablePool from "@/views/system/env/components/VariablePool.vue";
 import DatabaseSetting from "@/views/system/env/components/DatabseSetting.vue"
 import {envSaveOrUpdate, getEnvDetail} from "@/api/setting";
 import {showErrMessage} from "@/utils/element";
+import AddressSetting from "@/views/system/env/components/addressSetting.vue";
 
 const route = useRoute()
 
@@ -120,9 +129,11 @@ const VariablePoolRef = ref()
 
 const DatabaseSettingRef = ref()
 
+const AddressSettingRef = ref()
+
 const ruleForm = reactive({
   name: '',
-  host: '',
+  server: '',
   variables: [],
   remarks: '',
   data_source: []
@@ -133,15 +144,14 @@ const state = reactive({
 })
 
 const rules = reactive({
-  name: [{required: true, trigger: "blur", message: "请输入名称环境！"}],
-  host: [{required: true, trigger: "blur", message: "请输入环境地址！"}]
+  name: [{required: true, trigger: "blur", message: "请输入名称环境！"}]
 })
 
 const ruleFormRef = ref<FormInstance>()
 
 const showSetting = ref(false)
 
-const activeName =  ref('VariablePoolSetting')
+const activeName =  ref('AddressSetting')
 
 const goBack = () => {
   router.push({name: 'env'})
@@ -152,12 +162,13 @@ const onSureClick = (formName: FormInstance | undefined) => {
   formName.validate(async (valid) => {
     ruleForm.variables = VariablePoolRef.value.getData()
     ruleForm.data_source = DatabaseSettingRef.value.getData()
+    ruleForm.server = AddressSettingRef.value.getData()
     if (valid) {
       try{
         let formData = {
           id: state.environment_id,
           name: ruleForm.name,
-          host: ruleForm.host,
+          server: ruleForm.server,
           remarks: ruleForm.remarks,
           variables: ruleForm.variables,
           data_source: ruleForm.data_source
@@ -177,7 +188,7 @@ const onSureClick = (formName: FormInstance | undefined) => {
   })
 }
 
-const initApi = () => {
+const init = () => {
   let environment_id = route.query.id
   if(environment_id){
     state.environment_id = environment_id
@@ -186,10 +197,10 @@ const initApi = () => {
   if (environment_id) {
     getEnvDetail({id: environment_id}).then((response) => {
       const {data, code, msg} = response.data
-      VariablePoolRef.value.setData(eval(data.variables))
+      VariablePoolRef.value.setData(data.variables)
       DatabaseSettingRef.value.changeAction(data.data_source)
+      AddressSettingRef.value.setData(data.server)
       ruleForm.name = data.name
-      ruleForm.host = data.host
       ruleForm.remarks = data.desc
       showErrMessage(code.toString(), msg)
     })
@@ -209,7 +220,7 @@ const closeSetting = () => {
 }
 
 onMounted(() => {
-  initApi()
+  init()
 })
 </script>
 <style scoped lang="scss">

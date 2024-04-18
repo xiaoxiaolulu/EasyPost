@@ -27,12 +27,8 @@
                 element-loading-text="拼命加载中"
                 style="width: 100%">
         <el-table-column type="index" width="55" label="id"></el-table-column>
-        <el-table-column prop="name" width="200" label="环境名称"></el-table-column>
-        <el-table-column prop="host" label="环境地址">
-          <template #default="scope">
-            <a :href="scope.row.host" target="_blank">{{ scope.row.host }}</a>
-          </template>
-        </el-table-column>
+        <el-table-column prop="name" width="300" label="环境名称"></el-table-column>
+        <el-table-column prop="remarks" label="备注"></el-table-column>
         <el-table-column prop="user.username" width="150" label="创建者">
           <template #default="scope">
             <div style="margin-inline-end:16px;display:inline">

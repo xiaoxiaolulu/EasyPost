@@ -45,21 +45,21 @@ class TestEnvironmentSerializers(serializers.ModelSerializer):
     create_time = serializers.DateTimeField(read_only=True)
     update_time = serializers.DateTimeField(read_only=True)
 
-    def validate(self, attrs):
-        # 验证url是否合法
-        host_address = attrs.get('host')
-        if not re.match(REGEX_URL_PATH, host_address):
-            raise serializers.ValidationError("请输入正确的URL地址")
-
-        # if 'user' in self.initial_data.keys():
-        #     userid = int(self.initial_data.get('user'))
-        #     attrs['user'] = User.objects.get(id=userid)
-        return attrs
+    # def validate(self, attrs):
+    #     # 验证url是否合法
+    #     host_address = attrs.get('host')
+    #     if not re.match(REGEX_URL_PATH, host_address):
+    #         raise serializers.ValidationError("请输入正确的URL地址")
+    #
+    #     # if 'user' in self.initial_data.keys():
+    #     #     userid = int(self.initial_data.get('user'))
+    #     #     attrs['user'] = User.objects.get(id=userid)
+    #     return attrs
 
     class Meta:
         model = TestEnvironment
         fields = "__all__"
-        read_only_fields = ('name', 'host', 'variables', 'remarks',
+        read_only_fields = ('name', 'server', 'variables', 'remarks',
                             'user', 'create_time', 'update_time',
                             'data_source')
 

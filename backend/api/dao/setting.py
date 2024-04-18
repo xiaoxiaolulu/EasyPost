@@ -464,7 +464,7 @@ class SettingDao:
             if pk:
                 environment = TestEnvironment.objects.get(pk=pk)
                 environment.name = request.data.get('name')
-                environment.host = request.data.get('host')
+                environment.host = request.data.get('server')
                 environment.variables = request.data.get('variables')
                 environment.full_clean()  # Perform validation before saving
                 environment.save()
@@ -472,7 +472,7 @@ class SettingDao:
             else:
                 environment = TestEnvironment.objects.create(
                     name=request.data.get('name'),
-                    host=request.data.get('host'),
+                    server=request.data.get('server'),
                     variables=request.data.get('variables'),
                     user=request.user
                 )

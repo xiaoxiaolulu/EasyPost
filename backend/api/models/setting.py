@@ -30,6 +30,8 @@ class TestEnvironment(Model):
     """
     项目环境配置
     * name: 环境名称
+    * server: 环境配置
+    * variables: 变量池
     * user: 用户
     * desc: 描述
     * create_time: 创建时间
@@ -37,7 +39,7 @@ class TestEnvironment(Model):
     """
     id = AutoField(primary_key=True)
     name = CharField(max_length=50, null=True, blank=True, verbose_name=_('TestEnvironment Name'))
-    host = CharField(max_length=100, null=True, blank=True, verbose_name=_('TestEnvironment Host'))
+    server = TextField(null=True, blank=True, verbose_name=_('TestEnvironment Server'))
     variables = TextField(null=True, blank=True, verbose_name=_('TestEnvironment Variables'))
     user = ForeignKey(User, null=True, on_delete=SET_NULL, verbose_name=_('User'))
     remarks = TextField(null=True, blank=True, verbose_name=_('TestEnvironment Desc'))
