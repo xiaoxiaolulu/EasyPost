@@ -112,14 +112,10 @@
   </div>
 </template>
 <script setup lang="ts">
-import {User, Top, Bottom, InfoFilled, Warning} from '@element-plus/icons-vue'
+import {Top, Bottom, InfoFilled, Warning} from '@element-plus/icons-vue'
 import {ref, reactive, h} from 'vue'
 import AvatarLogo from '@/assets/image/avatar.png'
 import {ElDivider} from 'element-plus'
-import weLogo from '@/assets/image/we.png'
-import CountTo from '@/components/CountTo/index.vue'
-import BarCharts from '@/views/echarts/simple/components/bar.vue'
-import {c} from "unimport/dist/types-43c63a16";
 
 const spacer = h(ElDivider, {direction: 'vertical'})
 
