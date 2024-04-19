@@ -1,5 +1,6 @@
 <template>
   <div class="m-tool-right">
+    <SwitchEnvList class="item-children"></SwitchEnvList>
     <GlobalComSize class="item-children"/>
     <HeaderSearch class="item-children"/>
     <Remind class="item-children"/>
@@ -16,6 +17,7 @@ import Remind from './components/Remind.vue'
 import ScreenFull from './components/ScreenFull.vue'
 import Setting from './components/Setting.vue'
 import Avatar from './components/Avatar.vue'
+import SwitchEnvList from "@/layout/components/Header/components/SwitchEnvList.vue";
 </script>
 
 <style lang="scss" scoped>

@@ -13,7 +13,6 @@
         <slot name="extra"></slot>
       </template>
     </el-page-header>
-
   </div>
 </template>
 

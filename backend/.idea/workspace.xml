@@ -4,22 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Improve code readability, error handling, and comments for better maintainability.">
-      <change afterPath="$PROJECT_DIR$/api/migrations/0025_alter_binddatasource_create_time_and_more.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/filters/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/filters/setting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/models/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/setting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/schema/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/schema/setting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/service/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/setting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="&quot;Add migration for altering BindDataSource model fields.&quot;">
+      <change afterPath="$PROJECT_DIR$/../web/src/layout/components/Header/components/SwitchEnvList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/api/setting.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/api/setting.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/routers/modules/system.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/routers/modules/system.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/system/address/components/addressDialog.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/system/address/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/system/env/components/addDialog.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/system/env/components/editDialog.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/system/env/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/system/env/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/components/CardHeader/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/components/CardHeader/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/layout/components/Header/ToolRight.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/layout/components/Header/ToolRight.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,60 +86,60 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Django Server.backend.executor&quot;: &quot;Run&quot;,
-    &quot;Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken.executor&quot;: &quot;Run&quot;,
-    &quot;Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken.setUp.executor&quot;: &quot;Run&quot;,
-    &quot;Django tests.Test: api.tests.test_project_destory.ProjectDestroyViewSetTests.executor&quot;: &quot;Run&quot;,
-    &quot;Django tests.Test: api.tests.test_user_list.TestUserListViewSet.executor&quot;: &quot;Run&quot;,
-    &quot;Django tests.Test: api.tests.test_user_list.TestUserListViewSet.test_hello.executor&quot;: &quot;Run&quot;,
-    &quot;Django tests.Test: api.tests.test_user_list.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for MyAssertTest.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for MyAssertTest.test_assertNotEqual.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for Test1.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for Test1.test1.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_assert.MyAssertTest.test_assertNotEqual.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in __init__.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_custom_token.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_engine.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.DBClient.executor&quot;: &quot;Run&quot;,
-    &quot;Python.__init__ (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.__init__ (2).executor&quot;: &quot;Run&quot;,
-    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
-    &quot;Python.api_migrate.executor&quot;: &quot;Run&quot;,
-    &quot;Python.engine.executor&quot;: &quot;Run&quot;,
-    &quot;Python.functions.executor&quot;: &quot;Run&quot;,
-    &quot;Python.manage.executor&quot;: &quot;Run&quot;,
-    &quot;Python.recursion.executor&quot;: &quot;Run&quot;,
-    &quot;Python.setting.executor&quot;: &quot;Run&quot;,
-    &quot;Python.time.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/codes/django-vue3-admin&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\Program Files\\JetBrains\\PyCharm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Django Server.backend.executor": "Run",
+    "Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken.executor": "Run",
+    "Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken.setUp.executor": "Run",
+    "Django tests.Test: api.tests.test_project_destory.ProjectDestroyViewSetTests.executor": "Run",
+    "Django tests.Test: api.tests.test_user_list.TestUserListViewSet.executor": "Run",
+    "Django tests.Test: api.tests.test_user_list.TestUserListViewSet.test_hello.executor": "Run",
+    "Django tests.Test: api.tests.test_user_list.executor": "Run",
+    "Python tests.Python tests for MyAssertTest.executor": "Run",
+    "Python tests.Python tests for MyAssertTest.test_assertNotEqual.executor": "Run",
+    "Python tests.Python tests for Test1.executor": "Run",
+    "Python tests.Python tests for Test1.test1.executor": "Run",
+    "Python tests.Python tests for test_assert.MyAssertTest.test_assertNotEqual.executor": "Run",
+    "Python tests.Python tests in __init__.py.executor": "Run",
+    "Python tests.Python tests in test_custom_token.py.executor": "Run",
+    "Python tests.Python tests in test_engine.py.executor": "Run",
+    "Python.DBClient.executor": "Run",
+    "Python.__init__ (1).executor": "Run",
+    "Python.__init__ (2).executor": "Run",
+    "Python.__init__.executor": "Run",
+    "Python.api_migrate.executor": "Run",
+    "Python.engine.executor": "Run",
+    "Python.functions.executor": "Run",
+    "Python.manage.executor": "Run",
+    "Python.recursion.executor": "Run",
+    "Python.setting.executor": "Run",
+    "Python.time.executor": "Run",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "E:/EasyPost/EasyPost",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "D:\\Program Files\\JetBrains\\PyCharm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;ChangesTree.GroupingKeys&quot;: [
-      &quot;directory&quot;
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\templates\media" />
@@ -472,23 +462,7 @@
       <workItem from="1712461413811" duration="49812000" />
       <workItem from="1712801065778" duration="11896000" />
       <workItem from="1712908146550" duration="34648000" />
-      <workItem from="1713319714158" duration="12789000" />
-    </task>
-    <task id="LOCAL-00314" summary="Update plan.py docstring and comments to improve clarity and consistency.">
-      <option name="closed" value="true" />
-      <created>1712113643657</created>
-      <option name="number" value="00314" />
-      <option name="presentableId" value="LOCAL-00314" />
-      <option name="project" value="LOCAL" />
-      <updated>1712113643658</updated>
-    </task>
-    <task id="LOCAL-00315" summary="Update API DAO project docstrings to use numpydoc format and improve descriptions.">
-      <option name="closed" value="true" />
-      <created>1712113656314</created>
-      <option name="number" value="00315" />
-      <option name="presentableId" value="LOCAL-00315" />
-      <option name="project" value="LOCAL" />
-      <updated>1712113656314</updated>
+      <workItem from="1713319714158" duration="22615000" />
     </task>
     <task id="LOCAL-00316" summary="Updated code comments to provide more context and improve clarity.">
       <option name="closed" value="true" />
@@ -866,7 +840,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713345558039</updated>
     </task>
-    <option name="localTasksCounter" value="363" />
+    <task id="LOCAL-00363" summary="&quot;Add migration for altering BindDataSource model fields.&quot;">
+      <option name="closed" value="true" />
+      <created>1713346324024</created>
+      <option name="number" value="00363" />
+      <option name="presentableId" value="LOCAL-00363" />
+      <option name="project" value="LOCAL" />
+      <updated>1713346324024</updated>
+    </task>
+    <task id="LOCAL-00364" summary="&quot;Add migration for altering BindDataSource model fields.&quot;">
+      <option name="closed" value="true" />
+      <created>1713423544918</created>
+      <option name="number" value="00364" />
+      <option name="presentableId" value="LOCAL-00364" />
+      <option name="project" value="LOCAL" />
+      <updated>1713423544918</updated>
+    </task>
+    <option name="localTasksCounter" value="365" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -896,17 +886,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add environment save or update API and" />
-    <MESSAGE value="Add environment save or update API and fix" />
-    <MESSAGE value="Add environment save or update API and fix test" />
-    <MESSAGE value="Add environment save or update API and fix test environment" />
-    <MESSAGE value="Add environment save or update API and fix test environment update" />
-    <MESSAGE value="Add environment save or update API and fix test environment update view" />
-    <MESSAGE value="Add environment save or update API and fix test environment update view set" />
-    <MESSAGE value="Add environment save or update API and fix test environment update view set." />
-    <MESSAGE value="Im" />
-    <MESSAGE value="Impro" />
-    <MESSAGE value="Improve" />
     <MESSAGE value="Improve code" />
     <MESSAGE value="Improve code read" />
     <MESSAGE value="Improve code readability" />
@@ -921,7 +900,18 @@
     <MESSAGE value="Improve code readability, error handling, and comments for better maintain" />
     <MESSAGE value="Improve code readability, error handling, and comments for better maintainability" />
     <MESSAGE value="Improve code readability, error handling, and comments for better maintainability." />
-    <option name="LAST_COMMIT_MESSAGE" value="Improve code readability, error handling, and comments for better maintainability." />
+    <MESSAGE value="&quot;" />
+    <MESSAGE value="&quot;Add" />
+    <MESSAGE value="&quot;Add migration" />
+    <MESSAGE value="&quot;Add migration for" />
+    <MESSAGE value="&quot;Add migration for alter" />
+    <MESSAGE value="&quot;Add migration for altering" />
+    <MESSAGE value="&quot;Add migration for altering Bind" />
+    <MESSAGE value="&quot;Add migration for altering BindDataSource" />
+    <MESSAGE value="&quot;Add migration for altering BindDataSource model" />
+    <MESSAGE value="&quot;Add migration for altering BindDataSource model fields" />
+    <MESSAGE value="&quot;Add migration for altering BindDataSource model fields.&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Add migration for altering BindDataSource model fields.&quot;" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$recursion.coverage" NAME="recursion Coverage Results" MODIFIED="1712139211023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
