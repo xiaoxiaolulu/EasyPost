@@ -5,85 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Add SwitchEnvList component with dropdown menu for environment selection, and options to add or edit environments.">
-      <change beforePath="$PROJECT_DIR$/api/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/components/CodeMirror/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/components/CountTo/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/components/CountTo/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/components/CountTo/requestAnimationFrame.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/components/DataScreen/migrationEcharts/data.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/components/DataScreen/migrationEcharts/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/components/DataScreen/migrationEcharts/map.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/components/RightClickMenu/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/components/Upload/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/components/WangEdior/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/hooks/useResizeElement.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/mock/table.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/routers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/routers/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/routers/modules/echarts.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/routers/modules/excel.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/routers/modules/functionPage.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/routers/modules/other.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/routers/modules/other.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/routers/modules/tools.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/utils/downloadzip.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/utils/exprotExcel.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/utils/waterMarker.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/echarts/barEcharts/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/echarts/graphEcharts/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/echarts/migrationMap/index.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/echarts/migrationMap/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/echarts/pieEcharts/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/echarts/simple/components/bar.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/echarts/simple/components/candlestick.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/echarts/simple/components/funnel.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/echarts/simple/components/gauge.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/echarts/simple/components/graph.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/echarts/simple/components/line.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/echarts/simple/components/pictorialBar.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/echarts/simple/components/pie.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/echarts/simple/components/radar.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/echarts/simple/components/scatter.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/echarts/simple/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/excel/exportExcel/index.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/excel/exportExcel/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/excel/exportMergeHeader/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/excel/exportSelectedExcel/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/excel/exportStyleExcel/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/excel/uploadExcel/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/excel/zip/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/functionPage/fullscreen/index.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/functionPage/fullscreen/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/functionPage/informationList/components/List.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/functionPage/informationList/components/Pagination.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/functionPage/informationList/components/Search.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/functionPage/informationList/components/SingleCheck.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/functionPage/informationList/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/functionPage/tools/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/https/api/components/importDialog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/api/components/importDialog.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/other/cardDrag/data.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/other/cardDrag/index.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/other/cardDrag/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/other/codeMirror/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/other/count/index.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/other/count/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/other/cropper/components/CustomCropper.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/other/cropper/components/HeaderAvatar.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/other/cropper/index.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/other/cropper/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/other/editor/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/other/fullScreen/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/other/markDown/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/other/print/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/other/qrcode/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/other/rightMenu/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/other/textClamp/index.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/other/textClamp/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/other/upload/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/other/waterMarker/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/tools/components/RequestParser.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/tools/components/request4.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/tools/components/response.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/tools/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/components/DataScreen/Multiline/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/components/DataScreen/barEcharts/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/components/DataScreen/lineEcharts/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/components/DataScreen/pie/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/components/SearchForm/advancedForm/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/components/pipeline/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/components/pipeline/zb-pipeline-start.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/layout/components/Header/ToolRight.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/layout/components/Header/ToolRight.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/layout/components/Header/components/HeaderSearch.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/home/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/home/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +129,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "E:/EasyPost/EasyPost",
+    "last_opened_file_path": "C:/Users/86135/Desktop/EasyPost/web",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.stylelint": "true",
     "node.js.detected.package.tslint": "true",
@@ -536,31 +469,7 @@
       <workItem from="1712461413811" duration="49812000" />
       <workItem from="1712801065778" duration="11896000" />
       <workItem from="1712908146550" duration="34648000" />
-      <workItem from="1713319714158" duration="23824000" />
-    </task>
-    <task id="LOCAL-00317" summary="Updated docstrings for user DAO methods.">
-      <option name="closed" value="true" />
-      <created>1712113680326</created>
-      <option name="number" value="00317" />
-      <option name="presentableId" value="LOCAL-00317" />
-      <option name="project" value="LOCAL" />
-      <updated>1712113680326</updated>
-    </task>
-    <task id="LOCAL-00318" summary="Updated docstrings for user DAO methods.">
-      <option name="closed" value="true" />
-      <created>1712113693002</created>
-      <option name="number" value="00318" />
-      <option name="presentableId" value="LOCAL-00318" />
-      <option name="project" value="LOCAL" />
-      <updated>1712113693002</updated>
-    </task>
-    <task id="LOCAL-00319" summary="Added new API endpoint for editing built-in functions and associated test code.">
-      <option name="closed" value="true" />
-      <created>1712115672285</created>
-      <option name="number" value="00319" />
-      <option name="presentableId" value="LOCAL-00319" />
-      <option name="project" value="LOCAL" />
-      <updated>1712115672285</updated>
+      <workItem from="1713319714158" duration="24461000" />
     </task>
     <task id="LOCAL-00320" summary="Added `GetFunctionListApiView` and updated `urls.py` to include the new view.">
       <option name="closed" value="true" />
@@ -930,7 +839,31 @@
       <option name="project" value="LOCAL" />
       <updated>1713507537562</updated>
     </task>
-    <option name="localTasksCounter" value="366" />
+    <task id="LOCAL-00366" summary="Add SwitchEnvList component with dropdown menu for environment selection, and options to add or edit environments.">
+      <option name="closed" value="true" />
+      <created>1713512991792</created>
+      <option name="number" value="00366" />
+      <option name="presentableId" value="LOCAL-00366" />
+      <option name="project" value="LOCAL" />
+      <updated>1713512991792</updated>
+    </task>
+    <task id="LOCAL-00367" summary="Add SwitchEnvList component with dropdown menu for environment selection, and options to add or edit environments.">
+      <option name="closed" value="true" />
+      <created>1713513006603</created>
+      <option name="number" value="00367" />
+      <option name="presentableId" value="LOCAL-00367" />
+      <option name="project" value="LOCAL" />
+      <updated>1713513006603</updated>
+    </task>
+    <task id="LOCAL-00368" summary="Add SwitchEnvList component with dropdown menu for environment selection, and options to add or edit environments.">
+      <option name="closed" value="true" />
+      <created>1713515133764</created>
+      <option name="number" value="00368" />
+      <option name="presentableId" value="LOCAL-00368" />
+      <option name="project" value="LOCAL" />
+      <updated>1713515133764</updated>
+    </task>
+    <option name="localTasksCounter" value="369" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

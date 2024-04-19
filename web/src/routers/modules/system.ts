@@ -45,6 +45,12 @@ const systemRouter = [{
             meta: { title: '内置函数' , icon: 'AddLocation'}
         },
         {
+            path: '/system/notice',
+            component: () => import('@/views/system/notice/index.vue'),
+            name: 'notice',
+            meta: { title: '通知设置' , icon: 'AddLocation'}
+        },
+        {
             path: '/system/user',
             component: () => import('@/views/system/user/index.vue'),
             name: 'user',
