@@ -4,12 +4,86 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="&quot;Add migration for altering BindDataSource model fields.&quot;">
-      <change afterPath="$PROJECT_DIR$/../web/src/layout/components/Header/components/SwitchEnvList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Add SwitchEnvList component with dropdown menu for environment selection, and options to add or edit environments.">
+      <change beforePath="$PROJECT_DIR$/api/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/components/CardHeader/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/components/CardHeader/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/layout/components/Header/ToolRight.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/layout/components/Header/ToolRight.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/components/CodeMirror/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/components/CountTo/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/components/CountTo/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/components/CountTo/requestAnimationFrame.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/components/DataScreen/migrationEcharts/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/components/DataScreen/migrationEcharts/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/components/DataScreen/migrationEcharts/map.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/components/RightClickMenu/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/components/Upload/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/components/WangEdior/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/hooks/useResizeElement.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/mock/table.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/routers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/routers/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/routers/modules/echarts.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/routers/modules/excel.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/routers/modules/functionPage.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/routers/modules/other.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/routers/modules/other.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/routers/modules/tools.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/utils/downloadzip.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/utils/exprotExcel.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/utils/waterMarker.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/echarts/barEcharts/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/echarts/graphEcharts/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/echarts/migrationMap/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/echarts/migrationMap/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/echarts/pieEcharts/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/echarts/simple/components/bar.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/echarts/simple/components/candlestick.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/echarts/simple/components/funnel.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/echarts/simple/components/gauge.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/echarts/simple/components/graph.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/echarts/simple/components/line.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/echarts/simple/components/pictorialBar.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/echarts/simple/components/pie.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/echarts/simple/components/radar.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/echarts/simple/components/scatter.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/echarts/simple/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/excel/exportExcel/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/excel/exportExcel/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/excel/exportMergeHeader/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/excel/exportSelectedExcel/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/excel/exportStyleExcel/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/excel/uploadExcel/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/excel/zip/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/functionPage/fullscreen/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/functionPage/fullscreen/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/functionPage/informationList/components/List.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/functionPage/informationList/components/Pagination.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/functionPage/informationList/components/Search.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/functionPage/informationList/components/SingleCheck.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/functionPage/informationList/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/functionPage/tools/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/https/api/components/importDialog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/api/components/importDialog.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/other/cardDrag/data.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/other/cardDrag/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/other/cardDrag/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/other/codeMirror/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/other/count/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/other/count/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/other/cropper/components/CustomCropper.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/other/cropper/components/HeaderAvatar.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/other/cropper/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/other/cropper/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/other/editor/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/other/fullScreen/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/other/markDown/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/other/print/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/other/qrcode/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/other/rightMenu/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/other/textClamp/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/other/textClamp/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/other/upload/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/other/waterMarker/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/tools/components/RequestParser.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/tools/components/request4.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/tools/components/response.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/tools/index.vue" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -462,15 +536,7 @@
       <workItem from="1712461413811" duration="49812000" />
       <workItem from="1712801065778" duration="11896000" />
       <workItem from="1712908146550" duration="34648000" />
-      <workItem from="1713319714158" duration="22615000" />
-    </task>
-    <task id="LOCAL-00316" summary="Updated code comments to provide more context and improve clarity.">
-      <option name="closed" value="true" />
-      <created>1712113668213</created>
-      <option name="number" value="00316" />
-      <option name="presentableId" value="LOCAL-00316" />
-      <option name="project" value="LOCAL" />
-      <updated>1712113668213</updated>
+      <workItem from="1713319714158" duration="23824000" />
     </task>
     <task id="LOCAL-00317" summary="Updated docstrings for user DAO methods.">
       <option name="closed" value="true" />
@@ -856,7 +922,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713423544918</updated>
     </task>
-    <option name="localTasksCounter" value="365" />
+    <task id="LOCAL-00365" summary="Add SwitchEnvList component with dropdown menu for environment selection, and options to add or edit environments.">
+      <option name="closed" value="true" />
+      <created>1713507537562</created>
+      <option name="number" value="00365" />
+      <option name="presentableId" value="LOCAL-00365" />
+      <option name="project" value="LOCAL" />
+      <updated>1713507537562</updated>
+    </task>
+    <option name="localTasksCounter" value="366" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -886,32 +960,32 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Improve code" />
-    <MESSAGE value="Improve code read" />
-    <MESSAGE value="Improve code readability" />
-    <MESSAGE value="Improve code readability," />
-    <MESSAGE value="Improve code readability, error" />
-    <MESSAGE value="Improve code readability, error handling" />
-    <MESSAGE value="Improve code readability, error handling," />
-    <MESSAGE value="Improve code readability, error handling, and" />
-    <MESSAGE value="Improve code readability, error handling, and comments" />
-    <MESSAGE value="Improve code readability, error handling, and comments for" />
-    <MESSAGE value="Improve code readability, error handling, and comments for better" />
-    <MESSAGE value="Improve code readability, error handling, and comments for better maintain" />
-    <MESSAGE value="Improve code readability, error handling, and comments for better maintainability" />
-    <MESSAGE value="Improve code readability, error handling, and comments for better maintainability." />
-    <MESSAGE value="&quot;" />
-    <MESSAGE value="&quot;Add" />
-    <MESSAGE value="&quot;Add migration" />
-    <MESSAGE value="&quot;Add migration for" />
-    <MESSAGE value="&quot;Add migration for alter" />
-    <MESSAGE value="&quot;Add migration for altering" />
     <MESSAGE value="&quot;Add migration for altering Bind" />
     <MESSAGE value="&quot;Add migration for altering BindDataSource" />
     <MESSAGE value="&quot;Add migration for altering BindDataSource model" />
     <MESSAGE value="&quot;Add migration for altering BindDataSource model fields" />
     <MESSAGE value="&quot;Add migration for altering BindDataSource model fields.&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Add migration for altering BindDataSource model fields.&quot;" />
+    <MESSAGE value="Add" />
+    <MESSAGE value="Add Switch" />
+    <MESSAGE value="Add SwitchEnv" />
+    <MESSAGE value="Add SwitchEnvList" />
+    <MESSAGE value="Add SwitchEnvList component" />
+    <MESSAGE value="Add SwitchEnvList component with" />
+    <MESSAGE value="Add SwitchEnvList component with dropdown" />
+    <MESSAGE value="Add SwitchEnvList component with dropdown menu" />
+    <MESSAGE value="Add SwitchEnvList component with dropdown menu for" />
+    <MESSAGE value="Add SwitchEnvList component with dropdown menu for environment" />
+    <MESSAGE value="Add SwitchEnvList component with dropdown menu for environment selection" />
+    <MESSAGE value="Add SwitchEnvList component with dropdown menu for environment selection," />
+    <MESSAGE value="Add SwitchEnvList component with dropdown menu for environment selection, and" />
+    <MESSAGE value="Add SwitchEnvList component with dropdown menu for environment selection, and options" />
+    <MESSAGE value="Add SwitchEnvList component with dropdown menu for environment selection, and options to" />
+    <MESSAGE value="Add SwitchEnvList component with dropdown menu for environment selection, and options to add" />
+    <MESSAGE value="Add SwitchEnvList component with dropdown menu for environment selection, and options to add or" />
+    <MESSAGE value="Add SwitchEnvList component with dropdown menu for environment selection, and options to add or edit" />
+    <MESSAGE value="Add SwitchEnvList component with dropdown menu for environment selection, and options to add or edit environments" />
+    <MESSAGE value="Add SwitchEnvList component with dropdown menu for environment selection, and options to add or edit environments." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add SwitchEnvList component with dropdown menu for environment selection, and options to add or edit environments." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$recursion.coverage" NAME="recursion Coverage Results" MODIFIED="1712139211023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />

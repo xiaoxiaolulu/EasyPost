@@ -4,13 +4,13 @@
              :show-close="false"
              center
              class="importWidth">
-    <el-space :size="10">
+    <el-space :size="10" class="button-container">
       <el-check-tag
           class="custom-check-tag"
           v-for="(button, index) in buttons" @change="onChange(button)"
                      :checked="button.checked" :key="index" style="width: 110px;height: 48px;margin-bottom: 10px">
         <i :class="`opblock opblock-${button.style}`"/>
-        <span class="content">{{button.content}}</span>
+        <span class="content" style="">{{button.content}}</span>
       </el-check-tag>
     </el-space>
     <div class="upload">
@@ -66,7 +66,7 @@ const props = defineProps({
 
 const buttons = ref([
   {id: 1,  content: 'Swagger', style: 'swagger', checked: true},
-  {id: 2, content: 'Postman', style: 'postman', checked: false}
+  {id: 2, content: 'Postman', style: 'postman', checked: false},
 ]);
 
 
@@ -149,7 +149,7 @@ watch(() => props.rowData, () => {
 
 <style lang="scss">
 .importWidth {
-  width: 30%;
+  width: 35%;
   height: 55%
 }
 
@@ -183,13 +183,21 @@ watch(() => props.rowData, () => {
 .content {
   margin-left: 15px;
   vertical-align: middle;
+  font-family: STXihei,serif;
+  font-size: 14px;
+  color: #0e0f10;
+  font-weight: normal;
 }
 
 .custom-check-tag {
   background-color: #ffffff;
   border-style: solid;
   border-color: #f7f2fd;
-  border-radius: 8px
+  border-radius: 8px;
 }
 
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+}
 </style>

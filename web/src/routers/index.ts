@@ -5,12 +5,8 @@ interface extendRoute {
     hidden?:boolean
 }
 
-import excelRouter from './modules/excel'
 import systemRouter from './modules/system'
-import echartsRouter from './modules/echarts'
 import othersRouter from './modules/other'
-import functionPageRouter from './modules/functionPage'
-import toolsRouter  from "./modules/tools"
 import projectRouter from "./modules/project"
 import httpsRouter from "./modules/https"
 import recordRouter from './modules/record'
@@ -22,11 +18,7 @@ export const asyncRoutes = [
     ...systemRouter,
     ...httpsRouter,
     ...recordRouter,
-    ...toolsRouter,
-    ...echartsRouter,
     ...othersRouter,
-    ...functionPageRouter,
-    ...excelRouter
 ]
 
 /**
