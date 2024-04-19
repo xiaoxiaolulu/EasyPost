@@ -4511,3 +4511,7 @@ INFO     [2024-04-19 15:48:36,472] [546e63d6eb544cf5af3776f75521110e] django.ser
 INFO     [2024-04-19 15:48:36,472] [703baef70ce944aaa206d847d88b5e88] django.server: "OPTIONS /api/http/list?name=&page=1&project=5&node=1 HTTP/1.1" 200 0
 INFO     [2024-04-19 15:48:36,480] [216a02a174e241b8892ce1f42c8f88d5] django.server: "GET /api/tree/5&0 HTTP/1.1" 200 124
 INFO     [2024-04-19 15:48:36,484] [1b461f362bee4174b07e012dd3b195fd] django.server: "GET /api/http/list?name=&page=1&project=5&node=1 HTTP/1.1" 200 52
+INFO     [2024-04-19 15:49:53,601] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\__init__.py changed, reloading.
+INFO     [2024-04-19 15:49:53,999] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\__init__.py changed, reloading.
+INFO     [2024-04-19 15:49:54,390] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-19 15:49:54,804] [none] django.utils.autoreload: Watching for file changes with StatReloader
