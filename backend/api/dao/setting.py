@@ -16,10 +16,12 @@ from typing import (
 )
 from django.core.exceptions import ValidationError
 from django.db import IntegrityError
+
+from api.models.project import Project
 from api.models.setting import (
     Functions,
     TestEnvironment,
-    BindDataSource
+    BindDataSource, Notice
 )
 from api.response.fatcory import ResponseStandard
 from config.settings import BASE_DIR
@@ -487,3 +489,48 @@ class SettingDao:
         except Exception as e:
             logger.error(f"Error saving test environment: {e}")
             raise Exception(f"An error occurred while saving the environment: {e}")
+
+    @classmethod
+    def notice_saved(cls, request: Any, pk: int = None) -> int:
+        """
+        Saves or updates a Notice object based on the provided data.
+
+        Args:
+            request (Any): The Django request object containing form data.
+            pk (int, optional): The primary key of the Notice object to update. Defaults to None (create new).
+
+        Returns:
+            int: The primary key of the saved Notice object.
+
+        Raises:
+            ValidationError: If the provided data fails validation.
+            Exception: If an unexpected error occurs during saving.
+        """
+
+        try:
+            if pk:
+                notice = Notice.objects.get(pk=pk)
+                notice.name = request.data.get('name')
+                notice.trigger_events = request.data.get('trigger_events')
+                notice.msg_type = request.data.get('msg_type')
+                notice.url = request.data.get('url')
+                notice.save()
+                update_pk = pk
+
+            else:
+                notice = Notice.objects.create(
+                    name=request.data.get('name'),
+                    trigger_events=request.data.get('trigger_events'),
+                    msg_type=request.data.get('msg_type'),
+                    url=request.data.get('url'),
+                    user=request.user
+                )
+                update_pk = notice.id
+
+            return update_pk
+        except ValidationError as e:
+            logger.error(f"Notice validation error: {e}")
+            raise ValidationError(f"Invalid data provided: {e}")
+        except Exception as e:
+            logger.error(f"Error saving notice: {e}")
+            raise Exception(f"An error occurred while saving the notice: {e}")

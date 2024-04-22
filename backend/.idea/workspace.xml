@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook, feishu, weixin, and dingtalk classes for handling corresponding message notifications.">
-      <change afterPath="$PROJECT_DIR$/api/migrations/0027_notice.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/setting.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/models/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/setting.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
@@ -465,15 +465,7 @@
       <workItem from="1712801065778" duration="11896000" />
       <workItem from="1712908146550" duration="34648000" />
       <workItem from="1713319714158" duration="24461000" />
-      <workItem from="1713754708273" duration="4362000" />
-    </task>
-    <task id="LOCAL-00323" summary="Add static method `handler_func_list` to `BaseDao` to check if a function should be included in the list based on optional filtering parameters.">
-      <option name="closed" value="true" />
-      <created>1712124860971</created>
-      <option name="number" value="00323" />
-      <option name="presentableId" value="LOCAL-00323" />
-      <option name="project" value="LOCAL" />
-      <updated>1712124860971</updated>
+      <workItem from="1713754708273" duration="6390000" />
     </task>
     <task id="LOCAL-00324" summary="Added loading of built-in functions and retrieval of functions from multiple sources.">
       <option name="closed" value="true" />
@@ -859,7 +851,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713765242021</updated>
     </task>
-    <option name="localTasksCounter" value="372" />
+    <task id="LOCAL-00372" summary="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook, feishu, weixin, and dingtalk classes for handling corresponding message notifications.">
+      <option name="closed" value="true" />
+      <created>1713765876773</created>
+      <option name="number" value="00372" />
+      <option name="presentableId" value="LOCAL-00372" />
+      <option name="project" value="LOCAL" />
+      <updated>1713765876773</updated>
+    </task>
+    <option name="localTasksCounter" value="373" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
