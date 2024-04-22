@@ -53,12 +53,7 @@ from api.service.setting import (
     GetFunctionListApiView,
     DebugFunctionApiView,
     FunctionsListViewSet,
-    EnvironmentSaveOrUpdateApiView,
-    EnvironmentDetailView,
-    NoticeListViewSet,
-    NoticeDestroyViewSet,
-    NoticeDetailView,
-    NoticeSaveOrUpdateApiView
+    EnvironmentSaveOrUpdateApiView, EnvironmentDetailView
 )
 from api.service.user import (
     CustomJsonWebToken,
@@ -67,7 +62,7 @@ from api.service.user import (
 
 router = DefaultRouter()
 
-app_urls = {
+app_urls = [
     # API
     path("", include(router.urls)),
 
@@ -101,10 +96,6 @@ app_urls = {
     path("function/detailList", GetFunctionListApiView.as_view()),
     path("function/debug/<int:pk>", DebugFunctionApiView.as_view()),
     path("function/list", FunctionsListViewSet.as_view()),
-    path("notice/list", NoticeListViewSet.as_view()),
-    path("notice/delete/<int:pk>", NoticeDestroyViewSet.as_view()),
-    path("notice/detail/<int:pk>", NoticeDetailView.as_view()),
-    path("notice/saveOrUpdate/<int:pk>", NoticeSaveOrUpdateApiView.as_view()),
 
     # 接口测试
     path("http/", ApiFastView.as_view()),
@@ -133,7 +124,7 @@ app_urls = {
     # 测试报告
     path("report/detail", ReportDetailView.as_view({'get': 'list'})),
     path("report/list", ReportListViewSet.as_view())
-}
+]
 
 
 app_name = "api"

@@ -3,6 +3,7 @@ DESCRIPTION：接口测试数据访问对象
 :Created by Null.
 """
 import json
+import os
 from typing import (
     Any,
     List
@@ -13,6 +14,7 @@ from django.db.models import Q
 from django.forms import model_to_dict
 from api.dao.report import ReportDao
 from api.emus import treesEnum
+from api.events.event_manager import EventManager
 from api.models.https import (
     Relation,
     Api,
@@ -26,6 +28,10 @@ from unitrunner.engine.base import (
     run_api
 )
 from unitrunner.request.parser import HandelTestData
+from utils.api_migrate import (
+    DataMigrator,
+    UitRunnerSource
+)
 from utils.decorator import lock
 from utils.logger import logger
 from utils.trees import (
@@ -531,3 +537,32 @@ class HttpDao:
                 f"🏓创建接口快照失败 {e}"
             )
             raise Exception(f"{e} ❌")
+
+    # @staticmethod
+    # def import_api_docs(request, pk, filepath, files, import_type):
+    #
+    #     if not pk:
+    #         raise ValueError("Invalid api docs PK provided.")
+    #
+    #     if not import_type:
+    #         raise ValueError("Invalid import type provided.")
+    #
+    #     try:
+    #         if not os.path.exists(filepath):
+    #             raise FileExistsError(f"File not exists: {filepath}")
+    #
+    #         with open(filepath, 'wb+') as f:
+    #             for chunk in files.chunks():
+    #                 f.write(chunk)
+    #
+    #         # More specific object retrieval based on import_type
+    #         import_objects = EventManager.map.get(import_type)
+    #         if not import_objects:
+    #             raise ValueError(f"Invalid import type: {import_type}")
+    #
+    #         migrator = DataMigrator(import_objects, UitRunnerSource())
+    #         migrator.migrate(filename=filepath, request=request, pk=pk, type=import_type)
+    #
+    #     except (FileNotFoundError, PermissionError, FileExistsError) as e:
+    #         logger.error(f"{e}")
+    #         raise ValueError(f"An error occurred during import: {e}")
