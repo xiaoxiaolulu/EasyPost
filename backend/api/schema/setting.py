@@ -4,7 +4,8 @@ from api.models.setting import (
     TestEnvironment,
     DataSource,
     Functions,
-    BindDataSource
+    BindDataSource,
+    Notice
 )
 from api.schema.user import UserSimpleSerializers
 
@@ -73,4 +74,16 @@ class FunctionsSerializers(serializers.ModelSerializer):
 
     class Meta:
         model = Functions
+        fields = "__all__"
+
+
+class NoticeSerializers(serializers.ModelSerializer):
+
+    id = serializers.IntegerField(read_only=True)
+    creator = UserSimpleSerializers(required=False, default=serializers.CurrentUserDefault())
+    create_time = serializers.DateTimeField(read_only=True)
+    update_time = serializers.DateTimeField(read_only=True)
+
+    class Meta:
+        model = Notice
         fields = "__all__"

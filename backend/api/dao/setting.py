@@ -16,12 +16,11 @@ from typing import (
 )
 from django.core.exceptions import ValidationError
 from django.db import IntegrityError
-
-from api.models.project import Project
 from api.models.setting import (
     Functions,
     TestEnvironment,
-    BindDataSource, Notice
+    BindDataSource,
+    Notice
 )
 from api.response.fatcory import ResponseStandard
 from config.settings import BASE_DIR
@@ -491,7 +490,7 @@ class SettingDao:
             raise Exception(f"An error occurred while saving the environment: {e}")
 
     @classmethod
-    def notice_saved(cls, request: Any, pk: int = None) -> int:
+    def notice_save(cls, request: Any, pk: int = None) -> int:
         """
         Saves or updates a Notice object based on the provided data.
 

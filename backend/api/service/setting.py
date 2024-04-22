@@ -8,12 +8,14 @@ from api.dao.setting import SettingDao
 from api.filters.setting import (
     TestEnvironmentFilter,
     DataSourceFilter,
-    FunctionsFilter
+    FunctionsFilter,
+    NoticeFilter
 )
 from api.models.setting import (
     TestEnvironment,
     DataSource,
-    Functions
+    Functions,
+    Notice
 )
 from api.mixins.magic import (
     MagicListAPI,
@@ -26,8 +28,50 @@ from api.response.fatcory import ResponseStandard
 from api.schema.setting import (
     TestEnvironmentSerializers,
     DataSourceSerializers,
-    FunctionsSerializers
+    FunctionsSerializers,
+    NoticeSerializers
 )
+
+
+class NoticeListViewSet(MagicListAPI): # noqa
+
+    queryset = Notice.objects.all()
+    serializer_class = NoticeSerializers
+    permission_classes = [IsAuthenticated]
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
+    filterset_class = NoticeFilter  # noqa
+    search_fields = ['name']
+    ordering_fields = ['create_time']
+
+
+class NoticeDestroyViewSet(MagicDestroyApi):
+
+    queryset = Notice.objects.all()
+    serializer_class = NoticeSerializers
+    permission_classes = [IsAuthenticated]
+
+
+class NoticeDetailView(MagicRetrieveApi):
+
+    serializer_class = NoticeSerializers
+    queryset = Notice.objects.all()
+    permission_classes = [IsAuthenticated]
+
+
+class NoticeSaveOrUpdateApiView(APIView):
+
+    permission_classes = [IsAuthenticated]
+
+    @staticmethod
+    def post(request, **kwargs):
+
+        try:
+            response = SettingDao.notice_save(request, pk=kwargs['pk'])
+            return Response(ResponseStandard.success(
+                data={"notice_id": response}
+            ))
+        except Exception as err:
+            return Response(ResponseStandard.failed(msg=str(err)))
 
 
 class TestEnvironmentListViewSet(MagicListAPI): # noqa

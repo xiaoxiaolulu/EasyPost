@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook, feishu, weixin, and dingtalk classes for handling corresponding message notifications.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Add notice model and related methods.">
       <change beforePath="$PROJECT_DIR$/api/dao/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/setting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/models/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/setting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/filters/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/filters/setting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/schema/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/schema/setting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/service/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/setting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -465,23 +465,7 @@
       <workItem from="1712801065778" duration="11896000" />
       <workItem from="1712908146550" duration="34648000" />
       <workItem from="1713319714158" duration="24461000" />
-      <workItem from="1713754708273" duration="6390000" />
-    </task>
-    <task id="LOCAL-00324" summary="Added loading of built-in functions and retrieval of functions from multiple sources.">
-      <option name="closed" value="true" />
-      <created>1712126439130</created>
-      <option name="number" value="00324" />
-      <option name="presentableId" value="LOCAL-00324" />
-      <option name="project" value="LOCAL" />
-      <updated>1712126439130</updated>
-    </task>
-    <task id="LOCAL-00325" summary="Added `parse_string_value` function to `encoder.py` and `run_function` method to `SettingDAO` class in `setting.py`.">
-      <option name="closed" value="true" />
-      <created>1712127047308</created>
-      <option name="number" value="00325" />
-      <option name="presentableId" value="LOCAL-00325" />
-      <option name="project" value="LOCAL" />
-      <updated>1712127047308</updated>
+      <workItem from="1713754708273" duration="7294000" />
     </task>
     <task id="LOCAL-00326" summary="Add debug function API view and update setting DAO.">
       <option name="closed" value="true" />
@@ -859,7 +843,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713765876773</updated>
     </task>
-    <option name="localTasksCounter" value="373" />
+    <task id="LOCAL-00373" summary="Add notice model and related methods.">
+      <option name="closed" value="true" />
+      <created>1713768561545</created>
+      <option name="number" value="00373" />
+      <option name="presentableId" value="LOCAL-00373" />
+      <option name="project" value="LOCAL" />
+      <updated>1713768561545</updated>
+    </task>
+    <task id="LOCAL-00374" summary="Add notice model and related methods.">
+      <option name="closed" value="true" />
+      <created>1713768814349</created>
+      <option name="number" value="00374" />
+      <option name="presentableId" value="LOCAL-00374" />
+      <option name="project" value="LOCAL" />
+      <updated>1713768814349</updated>
+    </task>
+    <option name="localTasksCounter" value="375" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -889,13 +889,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services" />
-    <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services." />
-    <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added" />
-    <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added web" />
-    <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook" />
-    <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook," />
-    <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook, fe" />
     <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook, feish" />
     <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook, feishu" />
     <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook, feishu," />
@@ -914,7 +907,14 @@
     <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook, feishu, weixin, and dingtalk classes for handling corresponding message" />
     <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook, feishu, weixin, and dingtalk classes for handling corresponding message notifications" />
     <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook, feishu, weixin, and dingtalk classes for handling corresponding message notifications." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook, feishu, weixin, and dingtalk classes for handling corresponding message notifications." />
+    <MESSAGE value="Add" />
+    <MESSAGE value="Add notice" />
+    <MESSAGE value="Add notice model" />
+    <MESSAGE value="Add notice model and" />
+    <MESSAGE value="Add notice model and related" />
+    <MESSAGE value="Add notice model and related methods" />
+    <MESSAGE value="Add notice model and related methods." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add notice model and related methods." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$recursion.coverage" NAME="recursion Coverage Results" MODIFIED="1712139211023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
