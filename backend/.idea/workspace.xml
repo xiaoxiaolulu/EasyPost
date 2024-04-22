@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Add SwitchEnvList component with dropdown menu for environment selection, and options to add or edit environments.">
-      <change afterPath="$PROJECT_DIR$/unitrunner/msg/dingtalk.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unitrunner/msg/feishu.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unitrunner/msg/webhook.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unitrunner/msg/weixin.py" afterDir="false" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook, feishu, weixin, and dingtalk classes for handling corresponding message notifications.">
+      <change afterPath="$PROJECT_DIR$/api/migrations/0027_notice.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/models/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/setting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unitrunner/msg/qy.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +158,7 @@
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.weixin">
+  <component name="RunManager" selected="Django Server.backend">
     <configuration name="DBClient" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <option name="ENV_FILES" value="" />
@@ -467,15 +465,7 @@
       <workItem from="1712801065778" duration="11896000" />
       <workItem from="1712908146550" duration="34648000" />
       <workItem from="1713319714158" duration="24461000" />
-      <workItem from="1713754708273" duration="3692000" />
-    </task>
-    <task id="LOCAL-00322" summary="Added `GetFunctionListApiView` and updated `urls.py` to include the new view.">
-      <option name="closed" value="true" />
-      <created>1712123714472</created>
-      <option name="number" value="00322" />
-      <option name="presentableId" value="LOCAL-00322" />
-      <option name="project" value="LOCAL" />
-      <updated>1712123714472</updated>
+      <workItem from="1713754708273" duration="4362000" />
     </task>
     <task id="LOCAL-00323" summary="Add static method `handler_func_list` to `BaseDao` to check if a function should be included in the list based on optional filtering parameters.">
       <option name="closed" value="true" />
@@ -861,7 +851,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713522507545</updated>
     </task>
-    <option name="localTasksCounter" value="371" />
+    <task id="LOCAL-00371" summary="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook, feishu, weixin, and dingtalk classes for handling corresponding message notifications.">
+      <option name="closed" value="true" />
+      <created>1713765242021</created>
+      <option name="number" value="00371" />
+      <option name="presentableId" value="LOCAL-00371" />
+      <option name="project" value="LOCAL" />
+      <updated>1713765242021</updated>
+    </task>
+    <option name="localTasksCounter" value="372" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -891,32 +889,32 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="&quot;Add migration for altering Bind" />
-    <MESSAGE value="&quot;Add migration for altering BindDataSource" />
-    <MESSAGE value="&quot;Add migration for altering BindDataSource model" />
-    <MESSAGE value="&quot;Add migration for altering BindDataSource model fields" />
-    <MESSAGE value="&quot;Add migration for altering BindDataSource model fields.&quot;" />
-    <MESSAGE value="Add" />
-    <MESSAGE value="Add Switch" />
-    <MESSAGE value="Add SwitchEnv" />
-    <MESSAGE value="Add SwitchEnvList" />
-    <MESSAGE value="Add SwitchEnvList component" />
-    <MESSAGE value="Add SwitchEnvList component with" />
-    <MESSAGE value="Add SwitchEnvList component with dropdown" />
-    <MESSAGE value="Add SwitchEnvList component with dropdown menu" />
-    <MESSAGE value="Add SwitchEnvList component with dropdown menu for" />
-    <MESSAGE value="Add SwitchEnvList component with dropdown menu for environment" />
-    <MESSAGE value="Add SwitchEnvList component with dropdown menu for environment selection" />
-    <MESSAGE value="Add SwitchEnvList component with dropdown menu for environment selection," />
-    <MESSAGE value="Add SwitchEnvList component with dropdown menu for environment selection, and" />
-    <MESSAGE value="Add SwitchEnvList component with dropdown menu for environment selection, and options" />
-    <MESSAGE value="Add SwitchEnvList component with dropdown menu for environment selection, and options to" />
-    <MESSAGE value="Add SwitchEnvList component with dropdown menu for environment selection, and options to add" />
-    <MESSAGE value="Add SwitchEnvList component with dropdown menu for environment selection, and options to add or" />
-    <MESSAGE value="Add SwitchEnvList component with dropdown menu for environment selection, and options to add or edit" />
-    <MESSAGE value="Add SwitchEnvList component with dropdown menu for environment selection, and options to add or edit environments" />
-    <MESSAGE value="Add SwitchEnvList component with dropdown menu for environment selection, and options to add or edit environments." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add SwitchEnvList component with dropdown menu for environment selection, and options to add or edit environments." />
+    <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services" />
+    <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services." />
+    <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added" />
+    <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added web" />
+    <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook" />
+    <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook," />
+    <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook, fe" />
+    <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook, feish" />
+    <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook, feishu" />
+    <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook, feishu," />
+    <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook, feishu, we" />
+    <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook, feishu, weix" />
+    <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook, feishu, weixin" />
+    <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook, feishu, weixin," />
+    <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook, feishu, weixin, and" />
+    <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook, feishu, weixin, and d" />
+    <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook, feishu, weixin, and dingt" />
+    <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook, feishu, weixin, and dingtalk" />
+    <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook, feishu, weixin, and dingtalk classes" />
+    <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook, feishu, weixin, and dingtalk classes for" />
+    <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook, feishu, weixin, and dingtalk classes for handling" />
+    <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook, feishu, weixin, and dingtalk classes for handling corresponding" />
+    <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook, feishu, weixin, and dingtalk classes for handling corresponding message" />
+    <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook, feishu, weixin, and dingtalk classes for handling corresponding message notifications" />
+    <MESSAGE value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook, feishu, weixin, and dingtalk classes for handling corresponding message notifications." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: added webhook, feishu, weixin, and dingtalk message classesChanged several classes to send notifications via different platforms and services. Added webhook, feishu, weixin, and dingtalk classes for handling corresponding message notifications." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$recursion.coverage" NAME="recursion Coverage Results" MODIFIED="1712139211023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />

@@ -5,6 +5,7 @@ DESCRIPTION：设置模型
  * table-TestEnvironment: 环境配置
  * table-DataSource: 数据库配置
  * table-BindDataSource: 关联的数据库
+ * table-Notice: 消息通知
 """
 from django.contrib.auth import get_user_model
 from django.core.cache import cache
@@ -22,6 +23,8 @@ from django.db.models.signals import (
     post_delete
 )
 from django.utils.translation import gettext_lazy as _
+from api.models.project import Project
+
 
 User = get_user_model()
 
@@ -118,6 +121,35 @@ class BindDataSource(Model):
 
     def __str__(self):
         return self.database
+
+
+class Notice(Model):
+    """
+    通知消息
+    * name: 内置函数名称
+    * msg_type: 通知渠道
+    * url: 服务URL
+    * creator: 用户
+    * create_time: 创建时间
+    * update_time: 更新时间
+    """
+    id = AutoField(primary_key=True)
+    name = CharField(max_length=50, null=True, blank=True, verbose_name=_('Notice Name'))
+    project = ForeignKey(Project, null=True, on_delete=SET_NULL, related_name='notice', verbose_name=_('Project'))
+    msg_type = CharField(max_length=50, null=True, blank=True, verbose_name=_('Notice MsgType'))
+    url = TextField(null=True, blank=True, verbose_name=_('Notice Url'))
+    creator = ForeignKey(User, related_name="notice_creator", null=True, on_delete=SET_NULL,
+                         verbose_name=_('User'))
+    create_time = DateTimeField(auto_now_add=True, verbose_name=_('Notice CreateTime'))
+    update_time = DateTimeField(auto_now=True, verbose_name=_('Notice UpdateTime'))
+
+    class Meta:
+        verbose_name = _("Notice")
+        verbose_name_plural = verbose_name
+        ordering = ("-create_time",)
+
+    def __str__(self):
+        return self.name
 
 
 class Functions(Model):

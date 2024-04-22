@@ -5185,3 +5185,32 @@ WARNING  [2024-04-22 10:22:17,593] [a1989554d1a441f99f9826f2e7837799] django.req
 WARNING  [2024-04-22 10:22:17,594] [a1989554d1a441f99f9826f2e7837799] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
 INFO     [2024-04-22 10:23:02,711] [d61ee014a5354e7a95465d0ec2f839ef] django.server: "OPTIONS /api/database/list?database=&page=1 HTTP/1.1" 200 0
 INFO     [2024-04-22 10:23:02,720] [f9ac6fd7bcf548a1999d0c40c5335c54] django.server: "GET /api/database/list?database=&page=1 HTTP/1.1" 200 619
+INFO     [2024-04-22 13:56:43,814] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-22 13:56:48,544] [bd4c7c04209a4613aff4439b8c288c9f] django.server: "OPTIONS /api/env/list HTTP/1.1" 200 0
+INFO     [2024-04-22 13:56:48,544] [51a663ff31b94ce0aeffbcf8cfc269aa] django.server: "OPTIONS /api/database/list?database=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-22 13:56:48,544] [cb649f3f2d8d4c43818dff2a1fbf5270] django.server: "OPTIONS /api/project/list HTTP/1.1" 200 0
+INFO     [2024-04-22 13:56:48,573] [89dafc76c47e462aabc16976974637ba] django.server: "GET /api/project/list HTTP/1.1" 200 2040
+INFO     [2024-04-22 13:56:48,584] [922c9db99bbe481aa23936d256b0b782] django.server: "GET /api/database/list?database=&page=1 HTTP/1.1" 200 619
+INFO     [2024-04-22 13:56:48,622] [f8871610ef64452aa27994d3179ea48d] django.server: "GET /api/env/list HTTP/1.1" 200 6413
+WARNING  [2024-04-22 13:56:48,623] [9c9b30cd0efc496ea7bfecbae3034219] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-22 13:56:48,624] [9c9b30cd0efc496ea7bfecbae3034219] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-22 13:57:46,306] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-04-22 13:57:46,349] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-04-22 13:57:47,174] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-22 13:57:47,322] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-22 13:59:14,112] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-04-22 13:59:14,120] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-04-22 13:59:14,916] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-22 13:59:14,916] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-22 14:01:02,764] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-04-22 14:01:02,983] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-04-22 14:01:03,569] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-22 14:01:03,735] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-22 14:03:11,308] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-04-22 14:03:11,400] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-04-22 14:03:12,151] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-22 14:03:12,233] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-22 14:04:32,099] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-04-22 14:04:32,140] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-04-22 14:04:32,863] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-22 14:04:32,889] [none] django.utils.autoreload: Watching for file changes with StatReloader
