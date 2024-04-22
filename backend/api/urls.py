@@ -53,7 +53,8 @@ from api.service.setting import (
     GetFunctionListApiView,
     DebugFunctionApiView,
     FunctionsListViewSet,
-    EnvironmentSaveOrUpdateApiView, EnvironmentDetailView
+    EnvironmentSaveOrUpdateApiView,
+    EnvironmentDetailView
 )
 from api.service.user import (
     CustomJsonWebToken,
