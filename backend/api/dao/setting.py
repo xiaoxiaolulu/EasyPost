@@ -522,7 +522,7 @@ class SettingDao:
                     trigger_events=request.data.get('trigger_events'),
                     msg_type=request.data.get('msg_type'),
                     url=request.data.get('url'),
-                    user=request.user
+                    creator=request.user
                 )
                 update_pk = notice.id
 

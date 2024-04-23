@@ -15,8 +15,8 @@
             <el-input
                 :suffix-icon="Search"
                 clearable
-                v-model.trim="queryParams.database"
-                placeholder="请输入数据库名称"
+                v-model.trim="queryParams.name"
+                placeholder="请输入通知名称"
                 @keyup.enter.native="queryList">
             </el-input>
           </el-form-item>
@@ -25,13 +25,17 @@
       <el-table :data="tableData"
                 v-loading="tableLoading"
                 element-loading-text="拼命加载中"
-                @selection-change="handleSelectionChange"
                 style="width: 100%">
-        <el-table-column type="selection" width="55" />
-        <el-table-column prop="database" label="数据库名称"></el-table-column>
-        <el-table-column prop="host" label="地址"></el-table-column>
-        <el-table-column prop="port" label="端口"></el-table-column>
-        <el-table-column prop="creator.username" label="创建者">
+        <el-table-column prop="index" label="序号" width="55" />
+        <el-table-column prop="name" label="通知名称"></el-table-column>
+        <el-table-column prop="msg_type" label="通知渠道" width="100">
+          <template #default="scope">
+            <SvgIcon :icon-class="scope.row.msg_type"
+                     style="width: 20px; height: 20px;"/>
+          </template>
+        </el-table-column>
+        <el-table-column prop="url" label="服务URL" width="300"></el-table-column>
+        <el-table-column prop="creator.username" label="创建者" width="150">
           <template #default="scope">
             <div style="margin-inline-end:16px;display:inline">
               <img v-if="scope.row.creator.avatar" :src="scope.row.creator.avatar" class="avatar" alt="">
@@ -71,14 +75,15 @@
 <script lang="ts" setup>
 import {reactive, ref} from "vue";
 import {Plus, Search} from "@element-plus/icons-vue";
-import {databaseDelete, databaseList} from "@/api/setting";
+import { databaseDelete, noticeDelete, noticeList } from "@/api/setting";
 import {ElMessage, ElMessageBox, ElPagination} from "element-plus";
 import databaseDialog from "./components/databaseDialog.vue"
 import {showErrMessage} from "@/utils/element";
 import {parseTime} from "@/utils";
+import SvgIcon from "@/components/SvgIcon/index.vue";
 
 const queryParams = reactive({
-  database: '',
+  name: '',
   page: 1
 })
 
@@ -94,35 +99,27 @@ const rowData = ref({})
 
 const dialog = ref(null)
 
-const selectionData = ref()
-
 const editData = (row: any) => {
   rowData.value = row
   dialog.value.show(row)
 };
 
 const add = () => {
-  rowData.value["treeData"] = tableData.value
-  dialog.value.show(rowData)
+  dialog.value.show()
 };
 
 const queryList = () => {
   tableLoading.value = true;
-  databaseList(queryParams).then((response) => {
+  noticeList(queryParams).then((response) => {
     tableLoading.value = false;
     tableData.value = response.data.results;
     count.value = response.data.count;
   }).catch((error) => {
-    // console.log(error.response)
-    ElMessage.error("获取地址列表数据失败;请重试！")
+    ElMessage.error("获取通知信息列表数据失败;请重试！")
   })
 }
 
 queryList()
-
-const handleSelectionChange = (val: any) => {
-  selectionData.value = val
-}
 
 const handlePageChange = (newPage: any) => {
   queryParams.page = newPage
@@ -130,23 +127,18 @@ const handlePageChange = (newPage: any) => {
 }
 
 const deleteData = (row: any) => {
-  ElMessageBox.confirm(`确认删除数据库数据 - ${row.name}?`).then(_ => {
-    databaseDelete({id: row.id}).then((response) => {
+  ElMessageBox.confirm(`确认删除通知配置数据 - ${row.name}?`).then(_ => {
+    noticeDelete({id: row.id}).then((response) => {
       const {data, code, msg} = response.data
       showErrMessage(code.toString(), msg)
       queryList();
     })
   }).catch(_ => {
-    ElMessage.error("数据库删除失败请重试");
+    ElMessage.error("通知配置删除失败请重试");
   })
 }
 
-const getData = () => {
-  return selectionData.value
-}
-
 defineExpose({
-  getData
 })
 </script>
 

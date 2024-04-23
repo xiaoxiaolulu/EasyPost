@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Add Notice API views and serializers for listing, creating, updating, and deleting notices. Also, add filter backends for searching and ordering notices.">
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Add notice API endpoints for frontend consumption.">
+      <change beforePath="$PROJECT_DIR$/api/dao/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/setting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/filters/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/filters/project.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/src/api/setting.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/api/setting.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/system/notice/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/system/notice/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -464,15 +467,7 @@
       <workItem from="1712801065778" duration="11896000" />
       <workItem from="1712908146550" duration="34648000" />
       <workItem from="1713319714158" duration="24461000" />
-      <workItem from="1713754708273" duration="12084000" />
-    </task>
-    <task id="LOCAL-00329" summary="&quot;Modify setting.py to add exit code message in debug function&quot;">
-      <option name="closed" value="true" />
-      <created>1712129660174</created>
-      <option name="number" value="00329" />
-      <option name="presentableId" value="LOCAL-00329" />
-      <option name="project" value="LOCAL" />
-      <updated>1712129660174</updated>
+      <workItem from="1713754708273" duration="15313000" />
     </task>
     <task id="LOCAL-00330" summary="&quot;Modify setting.py to add exit code message in debug function&quot;">
       <option name="closed" value="true" />
@@ -858,7 +853,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713770904478</updated>
     </task>
-    <option name="localTasksCounter" value="378" />
+    <task id="LOCAL-00378" summary="Add notice API endpoints for frontend consumption.">
+      <option name="closed" value="true" />
+      <created>1713852002573</created>
+      <option name="number" value="00378" />
+      <option name="presentableId" value="LOCAL-00378" />
+      <option name="project" value="LOCAL" />
+      <updated>1713852002573</updated>
+    </task>
+    <option name="localTasksCounter" value="379" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -888,16 +891,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add Notice API views and serializers for" />
-    <MESSAGE value="Add Notice API views and serializers for listing" />
-    <MESSAGE value="Add Notice API views and serializers for listing," />
-    <MESSAGE value="Add Notice API views and serializers for listing, creating" />
-    <MESSAGE value="Add Notice API views and serializers for listing, creating," />
-    <MESSAGE value="Add Notice API views and serializers for listing, creating, updating" />
-    <MESSAGE value="Add Notice API views and serializers for listing, creating, updating," />
-    <MESSAGE value="Add Notice API views and serializers for listing, creating, updating, and" />
-    <MESSAGE value="Add Notice API views and serializers for listing, creating, updating, and deleting" />
-    <MESSAGE value="Add Notice API views and serializers for listing, creating, updating, and deleting not" />
     <MESSAGE value="Add Notice API views and serializers for listing, creating, updating, and deleting notices" />
     <MESSAGE value="Add Notice API views and serializers for listing, creating, updating, and deleting notices." />
     <MESSAGE value="Add Notice API views and serializers for listing, creating, updating, and deleting notices. Also" />
@@ -913,7 +906,17 @@
     <MESSAGE value="Add Notice API views and serializers for listing, creating, updating, and deleting notices. Also, add filter backends for searching and ordering not" />
     <MESSAGE value="Add Notice API views and serializers for listing, creating, updating, and deleting notices. Also, add filter backends for searching and ordering notices" />
     <MESSAGE value="Add Notice API views and serializers for listing, creating, updating, and deleting notices. Also, add filter backends for searching and ordering notices." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Notice API views and serializers for listing, creating, updating, and deleting notices. Also, add filter backends for searching and ordering notices." />
+    <MESSAGE value="Add" />
+    <MESSAGE value="Add notice" />
+    <MESSAGE value="Add notice API" />
+    <MESSAGE value="Add notice API end" />
+    <MESSAGE value="Add notice API endpoints" />
+    <MESSAGE value="Add notice API endpoints for" />
+    <MESSAGE value="Add notice API endpoints for front" />
+    <MESSAGE value="Add notice API endpoints for frontend" />
+    <MESSAGE value="Add notice API endpoints for frontend consumption" />
+    <MESSAGE value="Add notice API endpoints for frontend consumption." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add notice API endpoints for frontend consumption." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$recursion.coverage" NAME="recursion Coverage Results" MODIFIED="1712139211023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />

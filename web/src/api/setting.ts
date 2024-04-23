@@ -114,3 +114,19 @@ export function noticeDelete(data: any) {
         data
     })
 }
+
+export function getNoticeDetail(data: any) {
+    return request({
+        url: `/api/notice/detail/${data.id}`,
+        method: 'get',
+        data
+    })
+}
+
+export function noticeSaveOrUpdate(data: any) {
+    return request({
+        url: `/api/notice/saveOrUpdate/${data.id}`,
+        method: 'post',
+        data
+    })
+}

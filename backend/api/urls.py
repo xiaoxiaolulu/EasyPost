@@ -54,7 +54,11 @@ from api.service.setting import (
     DebugFunctionApiView,
     FunctionsListViewSet,
     EnvironmentSaveOrUpdateApiView,
-    EnvironmentDetailView, NoticeListViewSet, NoticeDestroyViewSet
+    EnvironmentDetailView,
+    NoticeListViewSet,
+    NoticeDestroyViewSet,
+    NoticeDetailView,
+    NoticeSaveOrUpdateApiView
 )
 from api.service.user import (
     CustomJsonWebToken,
@@ -99,6 +103,8 @@ app_urls = [
     path("function/list", FunctionsListViewSet.as_view()),
     path("notice/list", NoticeListViewSet.as_view()),
     path("notice/delete/<int:pk>", NoticeDestroyViewSet.as_view()),
+    path("notice/detail/<int:pk>", NoticeDetailView.as_view()),
+    path("notice/saveOrUpdate/<int:pk>", NoticeSaveOrUpdateApiView.as_view()),
 
     # 接口测试
     path("http/", ApiFastView.as_view()),
