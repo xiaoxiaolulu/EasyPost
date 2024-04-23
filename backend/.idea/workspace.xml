@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Add Notice API views and serializers for listing, creating, updating, and deleting notices. Also, add filter backends for searching and ordering notices.">
-      <change beforePath="$PROJECT_DIR$/api/dao/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/https.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/api/setting.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/api/setting.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -464,23 +464,7 @@
       <workItem from="1712801065778" duration="11896000" />
       <workItem from="1712908146550" duration="34648000" />
       <workItem from="1713319714158" duration="24461000" />
-      <workItem from="1713754708273" duration="8689000" />
-    </task>
-    <task id="LOCAL-00327" summary="Add debug function API view and update setting DAO.">
-      <option name="closed" value="true" />
-      <created>1712128245939</created>
-      <option name="number" value="00327" />
-      <option name="presentableId" value="LOCAL-00327" />
-      <option name="project" value="LOCAL" />
-      <updated>1712128245939</updated>
-    </task>
-    <task id="LOCAL-00328" summary="Add Functions API view, serializers, and filter.">
-      <option name="closed" value="true" />
-      <created>1712128508687</created>
-      <option name="number" value="00328" />
-      <option name="presentableId" value="LOCAL-00328" />
-      <option name="project" value="LOCAL" />
-      <updated>1712128508687</updated>
+      <workItem from="1713754708273" duration="12084000" />
     </task>
     <task id="LOCAL-00329" summary="&quot;Modify setting.py to add exit code message in debug function&quot;">
       <option name="closed" value="true" />
@@ -858,7 +842,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713769449111</updated>
     </task>
-    <option name="localTasksCounter" value="376" />
+    <task id="LOCAL-00376" summary="Add Notice API views and serializers for listing, creating, updating, and deleting notices. Also, add filter backends for searching and ordering notices.">
+      <option name="closed" value="true" />
+      <created>1713770838649</created>
+      <option name="number" value="00376" />
+      <option name="presentableId" value="LOCAL-00376" />
+      <option name="project" value="LOCAL" />
+      <updated>1713770838649</updated>
+    </task>
+    <task id="LOCAL-00377" summary="Add Notice API views and serializers for listing, creating, updating, and deleting notices. Also, add filter backends for searching and ordering notices.">
+      <option name="closed" value="true" />
+      <created>1713770904478</created>
+      <option name="number" value="00377" />
+      <option name="presentableId" value="LOCAL-00377" />
+      <option name="project" value="LOCAL" />
+      <updated>1713770904478</updated>
+    </task>
+    <option name="localTasksCounter" value="378" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -5254,3 +5254,110 @@ INFO     [2024-04-22 15:25:53,236] [none] django.utils.autoreload: C:\Users\8613
 INFO     [2024-04-22 15:25:53,986] [none] django.utils.autoreload: Watching for file changes with StatReloader
 INFO     [2024-04-22 15:26:03,543] [none] django.utils.autoreload: Watching for file changes with StatReloader
 INFO     [2024-04-22 15:26:35,805] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-22 15:28:20,186] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\urls.py changed, reloading.
+INFO     [2024-04-22 15:28:20,925] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-22 15:32:37,825] [b44fa166a8bc47ff9ae7f5bac686529a] django.server: "OPTIONS /api/database/list?database=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-22 15:32:37,825] [8ad32e41ec7b4974a1bf084b154adfc3] django.server: "OPTIONS /api/project/list HTTP/1.1" 200 0
+INFO     [2024-04-22 15:32:37,860] [b7eb6bee77a74fbea6831d586a4cd128] django.server: "GET /api/database/list?database=&page=1 HTTP/1.1" 200 619
+INFO     [2024-04-22 15:32:37,865] [ea887317db2a4daaac88069449411af0] django.server: "GET /api/project/list HTTP/1.1" 200 2040
+WARNING  [2024-04-22 15:32:37,882] [eb50e45d49c64aa78da218ec331034bd] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-22 15:32:37,883] [eb50e45d49c64aa78da218ec331034bd] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-22 15:33:26,270] [708d396ec695471d9a8ef0c0799de996] django.server: "OPTIONS /api/database/list?database=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-22 15:33:26,281] [91d64912fbf24877bde6c50f7234b2b5] django.server: "GET /api/database/list?database=&page=1 HTTP/1.1" 200 619
+INFO     [2024-04-22 15:33:29,169] [fb05b4201e284e28b6d33498c1b37624] django.server: "OPTIONS /api/database/list?database=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-22 15:33:29,190] [471f9727b8bf44bc8dc1950b0fb6c552] django.server: "GET /api/database/list?database=&page=1 HTTP/1.1" 200 619
+INFO     [2024-04-22 15:33:36,865] [61158277ba2348e2b4ae19ed4964da95] django.server: "OPTIONS /api/database/list?database=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-22 15:33:36,882] [a2db9e6ee80d4d20b0e2f57ff1f84745] django.server: "GET /api/database/list?database=&page=1 HTTP/1.1" 200 619
+INFO     [2024-04-23 10:01:00,949] [e1108fae884b42759f8bdc6c09fc0088] django.server: "OPTIONS /api/env/list HTTP/1.1" 200 0
+INFO     [2024-04-23 10:01:00,986] [1310e2f4f96b430caabd5fb901c9c553] django.server: "GET /api/env/list HTTP/1.1" 200 341
+INFO     [2024-04-23 10:01:01,276] [607d079db1954674a48ae95472ef1055] django.server: "OPTIONS /api/env/list HTTP/1.1" 200 0
+INFO     [2024-04-23 10:01:01,289] [3ae7518beb424cc88a2e4201a28fdec6] django.server: "OPTIONS /api/database/list?database=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-23 10:01:01,290] [11fd8764c5004d338323c01979c873ef] django.server: "OPTIONS /api/project/list HTTP/1.1" 200 0
+INFO     [2024-04-23 10:01:01,378] [9e3a98f7dfa94c678fcd2ccb9660f0aa] django.server: "GET /api/database/list?database=&page=1 HTTP/1.1" 200 619
+INFO     [2024-04-23 10:01:01,399] [e7ef5b88b78448b38dd2d56ff8abb34d] django.server: "GET /api/project/list HTTP/1.1" 200 2040
+WARNING  [2024-04-23 10:01:01,454] [b304a5d6696d459786b5f6253185a5cc] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-23 10:01:01,459] [b304a5d6696d459786b5f6253185a5cc] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-23 10:01:01,461] [b304a5d6696d459786b5f6253185a5cc] django.server: - Broken pipe from ('127.0.0.1', 54391)
+INFO     [2024-04-23 10:01:01,465] [e51f37ebe6f142139c4bb6836beace16] django.server: "GET /api/env/list HTTP/1.1" 200 6413
+INFO     [2024-04-23 10:01:01,722] [3cce7b6ded1d4fa19d0532bdd1884dfa] django.server: "OPTIONS /api/env/list HTTP/1.1" 200 0
+INFO     [2024-04-23 10:01:01,726] [473ff2d1afde48e39e987377c94ab528] django.server: "OPTIONS /api/http/list?name=&page=1&project=&node=1 HTTP/1.1" 200 0
+INFO     [2024-04-23 10:01:01,727] [9bce7b51bf974b39a493a9d6fba7b0aa] django.server: "OPTIONS /api/project/list HTTP/1.1" 200 0
+INFO     [2024-04-23 10:01:01,727] [635beecfbeec464891edc7c3317158c5] django.server: "GET /api/env/list HTTP/1.1" 200 341
+INFO     [2024-04-23 10:01:01,733] [f6bfcc00eb014d59976c4588ddf5441c] django.server: "GET /api/project/list HTTP/1.1" 200 341
+INFO     [2024-04-23 10:01:01,733] [147fe2f572bb4aa7a1b0cb3fa90930a5] django.server: "GET /api/http/list?name=&page=1&project=&node=1 HTTP/1.1" 200 341
+INFO     [2024-04-23 13:30:23,674] [e705ecc19f494964ba1e6ac4abc82acf] django.server: "OPTIONS /api/env/list HTTP/1.1" 200 0
+INFO     [2024-04-23 13:30:23,677] [e9ec7e65c6bc44f7959dda70d0b68a5c] django.server: "OPTIONS /api/database/list?database=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-23 13:30:23,691] [9d8ebc9f98a7419881ff558b00cd04d0] django.server: "OPTIONS /api/project/list HTTP/1.1" 200 0
+INFO     [2024-04-23 13:30:23,691] [ec6d31a6062d4aa3af69e7c03145a873] django.server: "GET /api/env/list HTTP/1.1" 200 341
+INFO     [2024-04-23 13:30:23,691] [39559f644bd447b2b6c34c2106220e54] django.server: "GET /api/database/list?database=&page=1 HTTP/1.1" 200 341
+INFO     [2024-04-23 13:30:23,693] [bdfe7d3929a04798913416958a1bd715] django.server: "GET /api/project/list HTTP/1.1" 200 341
+INFO     [2024-04-23 13:30:23,714] [d0d408eb2d9c44d197d9f4ac44cb979e] django.server: "OPTIONS /api/env/list HTTP/1.1" 200 0
+INFO     [2024-04-23 13:30:23,718] [1effb764ccc3434395e6836e7ad84bf7] django.server: "GET /api/env/list HTTP/1.1" 200 341
+INFO     [2024-04-23 13:30:24,012] [c3f007554df245aa8428968509a5d9f2] django.server: "OPTIONS /api/env/list HTTP/1.1" 200 0
+INFO     [2024-04-23 13:30:24,014] [67c651b1349d46ef9c7f728eb94aa7a4] django.server: "GET /api/env/list HTTP/1.1" 200 341
+INFO     [2024-04-23 13:30:24,050] [5ddbc1f534d94870b221d852fb5b95f0] django.server: "OPTIONS /api/http/list?name=&page=1&project=&node=1 HTTP/1.1" 200 0
+INFO     [2024-04-23 13:30:24,052] [95e319a562db4819a3d2e10f84775f80] django.server: "OPTIONS /api/project/list HTTP/1.1" 200 0
+INFO     [2024-04-23 13:30:24,056] [abed24c7ffe14f7bbedc2607ecac2472] django.server: "GET /api/http/list?name=&page=1&project=&node=1 HTTP/1.1" 200 341
+INFO     [2024-04-23 13:30:24,056] [02278da75b5249c0b418065bb18c1d53] django.server: "GET /api/project/list HTTP/1.1" 200 341
+INFO     [2024-04-23 13:49:01,334] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\urls.py changed, reloading.
+INFO     [2024-04-23 13:49:02,566] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 13:49:06,815] [648516b3c5864719ade1091aac775a10] django.server: "OPTIONS /api/login/ HTTP/1.1" 200 0
+INFO     [2024-04-23 13:49:06,976] [59716c01f28d48d58563fd0474ba48ce] django.server: "POST /api/login/ HTTP/1.1" 200 773
+INFO     [2024-04-23 13:49:07,083] [bf14d48b2bd24ea09ce7ac35c58a1e1c] django.server: "OPTIONS /api/env/list HTTP/1.1" 200 0
+INFO     [2024-04-23 13:49:07,157] [0156ec90e2aa49ae953bd7d2b173370c] django.server: "GET /api/env/list HTTP/1.1" 200 6413
+INFO     [2024-04-23 13:52:29,694] [6d65733e3eb94bd3b84fb5cb02d8f384] django.server: "OPTIONS /api/env/list HTTP/1.1" 200 0
+INFO     [2024-04-23 13:52:29,698] [0df460137920477092336ea112104485] django.server: "OPTIONS /api/env/list HTTP/1.1" 200 0
+INFO     [2024-04-23 13:52:29,699] [b5c918a530d0443dab28a8299b65835a] django.server: "GET /api/env/list HTTP/1.1" 200 341
+INFO     [2024-04-23 13:52:29,702] [2b02e8fa6d4c494ca6da58aed07b2d6d] django.server: "GET /api/env/list HTTP/1.1" 200 341
+INFO     [2024-04-23 13:52:29,707] [2fc9418eddab40e19e64043d811291f7] django.server: "OPTIONS /api/env/list HTTP/1.1" 200 0
+INFO     [2024-04-23 13:52:29,756] [4938d002e7014b9ea2cb93368489b7ec] django.server: "GET /api/env/list HTTP/1.1" 200 6413
+INFO     [2024-04-23 13:52:33,794] [dc7bf9d1a2d840a5957f738b047f9cc0] django.server: "OPTIONS /api/notice/list?database=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-23 13:52:33,795] [218e220898f244e0a8381d6933bf8953] django.server: "OPTIONS /api/project/list HTTP/1.1" 200 0
+INFO     [2024-04-23 13:52:33,818] [14813b766d0d4057b98fec61a362d24a] django.server: "GET /api/notice/list?database=&page=1 HTTP/1.1" 200 320
+INFO     [2024-04-23 13:52:33,827] [4ec9b791ec714a329fd99266932dc5a7] django.server: "GET /api/project/list HTTP/1.1" 200 2040
+WARNING  [2024-04-23 13:52:33,848] [a6285e8563b8485aa5ce38f6d6fba79a] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-23 13:52:33,850] [a6285e8563b8485aa5ce38f6d6fba79a] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-23 13:52:50,626] [c7b4faf174044ceeb3b03b7bac26fa22] django.server: "OPTIONS /api/env/list HTTP/1.1" 200 0
+INFO     [2024-04-23 13:52:50,626] [1a05f41d78c04db2af180483249d214f] django.server: "OPTIONS /api/notice/list?database=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-23 13:52:50,627] [4ecb4dfed71a44f69e77a2505578306c] django.server: "OPTIONS /api/project/list HTTP/1.1" 200 0
+INFO     [2024-04-23 13:52:50,671] [8178495ff709421ca764a89bd756fee3] django.server: "GET /api/notice/list?database=&page=1 HTTP/1.1" 200 320
+INFO     [2024-04-23 13:52:50,673] [64a5b1afa2a84e9c837aaf9b2aa3a2ee] django.server: "GET /api/project/list HTTP/1.1" 200 2040
+WARNING  [2024-04-23 13:52:50,703] [a9512ef063c340698de2aa36a5960bb0] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-23 13:52:50,706] [a9512ef063c340698de2aa36a5960bb0] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-23 13:52:50,708] [b100770e0fa541a583c059de7c0c5d0f] django.server: "GET /api/env/list HTTP/1.1" 200 6413
+INFO     [2024-04-23 13:53:49,760] [c078ea00f73c41c494da249b3a9dae30] django.server: "OPTIONS /api/notice/list?name=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-23 13:53:49,760] [e1246ba5cbce4733a4557af1941053e7] django.server: "OPTIONS /api/project/list HTTP/1.1" 200 0
+INFO     [2024-04-23 13:53:49,776] [163c7621ed3043b9af6821a55b148281] django.server: "GET /api/notice/list?name=&page=1 HTTP/1.1" 200 320
+INFO     [2024-04-23 13:53:49,795] [913715aff14c418ba3adf546d8528cfd] django.server: "GET /api/project/list HTTP/1.1" 200 2040
+WARNING  [2024-04-23 13:53:49,801] [cab61f9c2d544ab59d2f29fdb6f3bfd2] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-23 13:53:49,803] [cab61f9c2d544ab59d2f29fdb6f3bfd2] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-23 13:53:55,183] [f6ecfef3d9cb43e7894d75c25eae751f] django.server: "OPTIONS /api/notice/list?name=1&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-23 13:53:55,192] [6c4ab18640644e2e9e322e1088b17850] django.server: "GET /api/notice/list?name=1&page=1 HTTP/1.1" 200 320
+INFO     [2024-04-23 13:56:18,290] [58a5edb5872f45b3852609ec9346a5f9] django.server: "OPTIONS /api/project/list HTTP/1.1" 200 0
+INFO     [2024-04-23 13:56:18,291] [cf09f3d6d36840ef8a50fc35d21633dd] django.server: "OPTIONS /api/notice/list?name=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-23 13:56:18,307] [a40610d5b0bb47a9a55bcf0e1cb700c3] django.server: "GET /api/notice/list?name=&page=1 HTTP/1.1" 200 320
+INFO     [2024-04-23 13:56:18,314] [62c54ae11c6147a0a8280b680671d49f] django.server: "GET /api/project/list HTTP/1.1" 200 2040
+WARNING  [2024-04-23 13:56:18,323] [701ab25f6ab34ad58a72f6cb83e8849f] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-23 13:56:18,323] [701ab25f6ab34ad58a72f6cb83e8849f] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-23 13:57:42,377] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\urls.py changed, reloading.
+INFO     [2024-04-23 13:57:43,174] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 13:58:34,053] [6cdaec140ace4ac8814107bd2f4f5fff] django.server: "OPTIONS /api/env/list HTTP/1.1" 200 0
+INFO     [2024-04-23 13:58:34,054] [c75902248e0f4fd7ab409348bf137b68] django.server: "OPTIONS /api/env/list HTTP/1.1" 200 0
+INFO     [2024-04-23 13:58:34,057] [fc94d60efe2e41c6acdb3042729c834d] django.server: "OPTIONS /api/notice/list?name=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-23 13:58:34,057] [37aa4bbccea743d6abb91bc807f8902a] django.server: "OPTIONS /api/project/list HTTP/1.1" 200 0
+INFO     [2024-04-23 13:58:34,067] [87d977a35c974c1aa0948102823b9156] django.server: "GET /api/env/list HTTP/1.1" 200 341
+INFO     [2024-04-23 13:58:34,073] [5f58ce8674e14b00b89e69a493006f8a] django.server: "GET /api/env/list HTTP/1.1" 200 341
+INFO     [2024-04-23 13:58:34,098] [e12e154f76314043a34bb6fdb1b6eb35] django.server: "GET /api/project/list HTTP/1.1" 200 2040
+INFO     [2024-04-23 13:58:34,111] [93e1429cd19d4e18b7015bc2c7a2e101] django.server: "GET /api/notice/list?name=&page=1 HTTP/1.1" 200 320
+INFO     [2024-04-23 13:58:34,128] [00e3ce3f0e6f4c8a9d9c36d5819e8849] django.server: "OPTIONS /api/env/list HTTP/1.1" 200 0
+INFO     [2024-04-23 13:58:34,128] [44a822731d9d49f9aec1da88434d777a] django.server: "OPTIONS /api/notice/list?name=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-23 13:58:34,128] [f947c32841264c469628b5422ea57edf] django.server: "OPTIONS /api/project/list HTTP/1.1" 200 0
+INFO     [2024-04-23 13:58:34,173] [4f40a5fed0684697ad23965716ab4825] django.server: "GET /api/notice/list?name=&page=1 HTTP/1.1" 200 320
+INFO     [2024-04-23 13:58:34,177] [719e0276af9d4aefbf657b9e063f48ca] django.server: "GET /api/project/list HTTP/1.1" 200 2040
+INFO     [2024-04-23 13:58:34,212] [94e219a630524a81bae2d6b66f10e093] django.server: "GET /api/env/list HTTP/1.1" 200 6413
+WARNING  [2024-04-23 13:58:34,217] [6d15184f6b10474c8c8bffa488f315dc] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-23 13:58:34,217] [6d15184f6b10474c8c8bffa488f315dc] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-23 13:58:38,471] [e6967db43d76476aa471291680958194] django.server: "OPTIONS /api/notice/delete/1 HTTP/1.1" 200 0
+INFO     [2024-04-23 13:58:38,486] [38de625a99ae4218995d8360ea2ab60f] django.server: "DELETE /api/notice/delete/1 HTTP/1.1" 200 46
+INFO     [2024-04-23 13:58:38,497] [3650c43126894298be681bc3df3c5191] django.server: "OPTIONS /api/notice/list?name=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-23 13:58:38,504] [1faf500d153c48a39ed43b8d7f6e97ed] django.server: "GET /api/notice/list?name=&page=1 HTTP/1.1" 200 52

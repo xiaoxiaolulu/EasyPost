@@ -98,3 +98,19 @@ export function functionDetailList(data: any) {
         data
     })
 }
+
+export function noticeList(params: any) {
+    return request({
+        url: `/api/notice/list`,
+        method: 'get',
+        params
+    })
+}
+
+export function noticeDelete(data: any) {
+    return request({
+        url: `/api/notice/delete/${data.id}`,
+        method: 'delete',
+        data
+    })
+}
