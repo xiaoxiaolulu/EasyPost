@@ -31,6 +31,7 @@ LOCAL_APPS = [
 ]
 
 THIRD_PARTY_APPS = [
+    "daphne",
     "drf_yasg",
     "rest_framework",
     "rest_framework.authtoken",
@@ -325,3 +326,5 @@ DRF_VIEWSET_PROFILER = {
     "DEFAULT_OUTPUT_LOCATION": "",
     "ENABLE_SERIALIZER_PROFILER": True
 }
+
+ASGI_APPLICATION = "config.asgi.application"

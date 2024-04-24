@@ -1,200 +1,193 @@
-import errno
-import os
-import re
-import socket
+import datetime
+import importlib
 import sys
-from datetime import datetime
+from django.apps import apps
 from django.conf import settings
-from django.core.management.base import (
-    BaseCommand,
-    CommandError
-)
-from django.core.servers.basehttp import (
-    WSGIServer,
-    get_internal_wsgi_application,
-    run
-)
-from django.utils import autoreload
-from django.utils.regex_helper import _lazy_re_compile
-from utils.logger import logger as logging
+from django.contrib.staticfiles.handlers import ASGIStaticFilesHandler
+from django.core.exceptions import ImproperlyConfigured
+from django.core.management import CommandError
+from django.core.management.commands.runserver import Command as RunserverCommand
+from daphne import __version__
+from daphne.endpoints import build_endpoint_description_strings
+from daphne.server import Server
+from utils.logger import logger
 
 
-naiveip_re = _lazy_re_compile(
-    r"""^(?:
-(?P<addr>
-    (?P<ipv4>\d{1,3}(?:\.\d{1,3}){3}) |         # IPv4 address
-    (?P<ipv6>\[[a-fA-F0-9:]+\]) |               # IPv6 address
-    (?P<fqdn>[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*) # FQDN
-):)?(?P<port>\d+)$""",
-    re.X,
-)
+def get_default_application():
+    """
+    Gets the default application, set in the ASGI_APPLICATION setting.
+    """
+    try:
+        path, name = settings.ASGI_APPLICATION.rsplit(".", 1)
+    except (ValueError, AttributeError):
+        raise ImproperlyConfigured("Cannot find ASGI_APPLICATION setting.")
+    try:
+        module = importlib.import_module(path)
+    except ImportError:
+        raise ImproperlyConfigured("Cannot import ASGI_APPLICATION module %r" % path)
+    try:
+        value = getattr(module, name)
+    except AttributeError:
+        raise ImproperlyConfigured(
+            f"Cannot find {name!r} in ASGI_APPLICATION module {path}"
+        )
+    return value
 
 
-class Command(BaseCommand):
-    help = "♻️Starts a lightweight web server for development."
-
-    # Validation is called explicitly each time the server is reloaded.
-    requires_system_checks = []
-    stealth_options = ("shutdown_message",)
-    suppressed_base_arguments = {"--verbosity", "--traceback"}
-
-    default_addr = "127.0.0.1"
-    default_addr_ipv6 = "::1"
-    default_port = "8000"
+class Command(RunserverCommand):
     protocol = "http"
-    server_cls = WSGIServer
+    server_cls = Server
 
     def add_arguments(self, parser):
+        super().add_arguments(parser)
         parser.add_argument(
-            "addrport", nargs="?", help="Optional port number, or ipaddr:port"
-        )
-        parser.add_argument(
-            "--ipv6",
-            "-6",
-            action="store_true",
-            dest="use_ipv6",
-            help="Tells Django to use an IPv6 address.",
-        )
-        parser.add_argument(
-            "--nothreading",
+            "--noasgi",
             action="store_false",
-            dest="use_threading",
-            help="Tells Django to NOT use threading.",
+            dest="use_asgi",
+            default=True,
+            help="Run the old WSGI-based runserver rather than the ASGI-based one",
         )
         parser.add_argument(
-            "--noreload",
-            action="store_false",
-            dest="use_reloader",
-            help="Tells Django to NOT use the auto-reloader.",
+            "--http_timeout",
+            action="store",
+            dest="http_timeout",
+            type=int,
+            default=None,
+            help=(
+                "Specify the daphne http_timeout interval in seconds "
+                "(default: no timeout)"
+            ),
         )
         parser.add_argument(
-            "--skip-checks",
-            action="store_true",
-            help="Skip system checks.",
+            "--websocket_handshake_timeout",
+            action="store",
+            dest="websocket_handshake_timeout",
+            type=int,
+            default=5,
+            help=(
+                "Specify the daphne websocket_handshake_timeout interval in "
+                "seconds (default: 5)"
+            ),
         )
-
-    def execute(self, *args, **options):
-        if options["no_color"]:
-            # We rely on the environment because it's currently the only
-            # way to reach WSGIRequestHandler. This seems an acceptable
-            # compromise considering `runserver` runs indefinitely.
-            os.environ["DJANGO_COLORS"] = "nocolor"
-        super().execute(*args, **options)
-
-    def get_handler(self, *args, **options):
-        """Return the default WSGI handler for the runner."""
-        return get_internal_wsgi_application()
 
     def handle(self, *args, **options):
-        if not settings.DEBUG and not settings.ALLOWED_HOSTS:
-            raise CommandError("You must set settings.ALLOWED_HOSTS if DEBUG is False. ❌")
-
-        self.use_ipv6 = options["use_ipv6"]
-        if self.use_ipv6 and not socket.has_ipv6:
-            raise CommandError("Your Python does not support IPv6. ❌")
-        self._raw_ipv6 = False
-        if not options["addrport"]:
-            self.addr = ""
-            self.port = self.default_port
-        else:
-            m = re.match(naiveip_re, options["addrport"])
-            if m is None:
-                raise CommandError(
-                    '"%s" is not a valid port number '
-                    "or address:port pair. ❌" % options["addrport"]
-                )
-            self.addr, _ipv4, _ipv6, _fqdn, self.port = m.groups()
-            if not self.port.isdigit():
-                raise CommandError("%r is not a valid port number." % self.port)
-            if self.addr:
-                if _ipv6:
-                    self.addr = self.addr[1:-1]
-                    self.use_ipv6 = True
-                    self._raw_ipv6 = True
-                elif self.use_ipv6 and not _fqdn:
-                    raise CommandError('"%s" is not a valid IPv6 address.❌' % self.addr)
-        if not self.addr:
-            self.addr = self.default_addr_ipv6 if self.use_ipv6 else self.default_addr
-            self._raw_ipv6 = self.use_ipv6
-        self.run(**options)
-
-    def run(self, **options):
-        """Run the server, using the autoreloader if needed."""
-        use_reloader = options["use_reloader"]
-
-        if use_reloader:
-            autoreload.run_with_reloader(self.inner_run, **options)
-        else:
-            self.inner_run(None, **options)
+        self.http_timeout = options.get("http_timeout", None)
+        self.websocket_handshake_timeout = options.get("websocket_handshake_timeout", 5)
+        # Check Channels is installed right
+        if options["use_asgi"] and not hasattr(settings, "ASGI_APPLICATION"):
+            raise CommandError(
+                "You have not set ASGI_APPLICATION, which is needed to run the server."
+            )
+        # Dispatch upward
+        super().handle(*args, **options)
 
     def inner_run(self, *args, **options):
-        # If an exception was silenced in ManagementUtility.execute in order
-        # to be raised in the child process, raise it now.
-        autoreload.raise_last_exception()
-
-        threading = options["use_threading"]
-        # 'shutdown_message' is a stealth option.
-        shutdown_message = options.get("shutdown_message", "")
-
-        if not options["skip_checks"]:
-            logging.info("Performing system checks...\n\n")
-            self.check(display_num_errors=True)
-        # Need to check migrations here, so can't use the
-        # requires_migrations_check attribute.
+        # Maybe they want the wsgi one?
+        if not options.get("use_asgi", True):
+            if hasattr(RunserverCommand, "server_cls"):
+                self.server_cls = RunserverCommand.server_cls
+            return RunserverCommand.inner_run(self, *args, **options)
+        # Run checks
+        logger.info("Performing system checks...\n\n")
+        self.check(display_num_errors=True)
         self.check_migrations()
-
-        try:
-            handler = self.get_handler(*args, **options)
-            run(
-                self.addr,
-                int(self.port),
-                handler,
-                ipv6=self.use_ipv6,
-                threading=threading,
-                on_bind=self.on_bind,
-                server_cls=self.server_cls,
+        # Print helpful text
+        quit_command = "CTRL-BREAK" if sys.platform == "win32" else "CONTROL-C"
+        now = datetime.datetime.now().strftime("%B %d, %Y - %X")
+        logger.info(now)
+        logger.info(
+            (
+                "Django version %(version)s, using settings %(settings)r\n"
+                "Starting ASGI/Daphne version %(daphne_version)s development server"
+                " at %(protocol)s://%(addr)s:%(port)s/\n"
+                "Quit the server with %(quit_command)s.\n"
+                r"""
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                """
             )
-        except OSError as e:
-            # Use helpful error messages instead of ugly tracebacks.
-            ERRORS = {
-                errno.EACCES: "You don't have permission to access that port.",
-                errno.EADDRINUSE: "That port is already in use.",
-                errno.EADDRNOTAVAIL: "That IP address can't be assigned to.",
+            % {
+                "version": self.get_version(),
+                "daphne_version": __version__,
+                "settings": settings.SETTINGS_MODULE,
+                "protocol": self.protocol,
+                "addr": "[%s]" % self.addr if self._raw_ipv6 else self.addr,
+                "port": self.port,
+                "quit_command": quit_command,
             }
-            try:
-                error_text = ERRORS[e.errno]
-            except KeyError:
-                error_text = e
-            self.stderr.write("Error: %s" % error_text)
-            # Need to use an OS exit because sys.exit doesn't work in a thread
-            os._exit(1)
+        )
+        # Launch server in 'main' thread. Signals are disabled as it's still
+        # actually a subthread under the autoreloader.
+        logger.info("Daphne running, listening on %s:%s", self.addr, self.port)
+
+        # build the endpoint description string from host/port options
+        endpoints = build_endpoint_description_strings(host=self.addr, port=self.port)
+        try:
+            self.server_cls(
+                application=self.get_application(options),
+                endpoints=endpoints,
+                signal_handlers=not options["use_reloader"],
+                action_logger=self.log_action,
+                http_timeout=self.http_timeout,
+                root_path=getattr(settings, "FORCE_SCRIPT_NAME", "") or "",
+                websocket_handshake_timeout=self.websocket_handshake_timeout,
+            ).run()
+            logger.debug("Daphne exited")
         except KeyboardInterrupt:
+            shutdown_message = options.get("shutdown_message", "")
             if shutdown_message:
                 self.stdout.write(shutdown_message)
-            sys.exit(0)
+            return
 
-    def on_bind(self, server_port):
-        quit_command = "CTRL-BREAK" if sys.platform == "win32" else "CONTROL-C"
-
-        if self._raw_ipv6:
-            addr = f"[{self.addr}]"
-        elif self.addr == "0":
-            addr = "0.0.0.0"
+    def get_application(self, options):
+        """
+        Returns the static files serving application wrapping the default application,
+        if static files should be served. Otherwise just returns the default
+        handler.
+        """
+        staticfiles_installed = apps.is_installed("django.contrib.staticfiles")
+        use_static_handler = options.get("use_static_handler", staticfiles_installed)
+        insecure_serving = options.get("insecure_serving", False)
+        if use_static_handler and (settings.DEBUG or insecure_serving):
+            return ASGIStaticFilesHandler(get_default_application())
         else:
-            addr = self.addr
+            return get_default_application()
 
-        now = datetime.now().strftime("%B %d, %Y - %X")
-        version = self.get_version()
-        logging.info(
-            f"{now}\n"
-            f"Django version {version}, using settings {settings.SETTINGS_MODULE!r}\n"
-            f"Starting development server at {self.protocol}://{addr}:{server_port}/\n"
-            f"Quit the server with {quit_command}.\n"
-            r"""
-            ______     ______     ______     __  __     ______   ______     ______     ______  
-            /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
-            \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
-             \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
-              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
-            """
-        )
+    def log_action(self, protocol, action, details):
+        """
+        Logs various different kinds of requests to the console.
+        """
+        # HTTP requests
+        if protocol == "http" and action == "complete":
+            msg = "HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]"
+
+            # Utilize terminal colors, if available
+            if 200 <= details["status"] < 300:
+                # Put 2XX first, since it should be the common case
+                logger.info(self.style.HTTP_SUCCESS(msg), details)
+            elif 100 <= details["status"] < 200:
+                logger.info(self.style.HTTP_INFO(msg), details)
+            elif details["status"] == 304:
+                logger.info(self.style.HTTP_NOT_MODIFIED(msg), details)
+            elif 300 <= details["status"] < 400:
+                logger.info(self.style.HTTP_REDIRECT(msg), details)
+            elif details["status"] == 404:
+                logger.warning(self.style.HTTP_NOT_FOUND(msg), details)
+            elif 400 <= details["status"] < 500:
+                logger.warning(self.style.HTTP_BAD_REQUEST(msg), details)
+            else:
+                # Any 5XX, or any other response
+                logger.error(self.style.HTTP_SERVER_ERROR(msg), details)
+
+        # Websocket requests
+        elif protocol == "websocket" and action == "connected":
+            logger.info("WebSocket CONNECT %(path)s [%(client)s]", details)
+        elif protocol == "websocket" and action == "disconnected":
+            logger.info("WebSocket DISCONNECT %(path)s [%(client)s]", details)
+        elif protocol == "websocket" and action == "connecting":
+            logger.info("WebSocket HANDSHAKING %(path)s [%(client)s]", details)
+        elif protocol == "websocket" and action == "rejected":
+            logger.info("WebSocket REJECT %(path)s [%(client)s]", details)

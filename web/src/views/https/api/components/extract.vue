@@ -75,9 +75,8 @@
 </template>
 
 <script setup lang="ts">
-import {ref, reactive} from "vue";
-import {ElMessage} from "element-plus";
-import {deepObjClone} from "@/utils";
+import {reactive} from "vue";
+import ws from 'ws';
 
 const sate = reactive({
   params: []

@@ -19,12 +19,6 @@ const othersRouter = [{
       meta: { title: '剪贴板',  roles:['other'] ,icon: 'MenuIcon',}
     },
     {
-      path: '/other/svgIcon',
-      component: () => import('@/views/other/svgIcon/index.vue'),
-      name: 'svgIcon',
-      meta: { title: 'svg 图标', icon: 'MenuIcon' }
-    },
-    {
       path: '/other/iconfont',
       component: () => import('@/views/other/iconfont/index.vue'),
       name: 'iconfont',

@@ -6518,3 +6518,541 @@ WARNING  [2024-04-23 15:13:08,850] [1aa9b3eb7f8a44c08578f947bc2cc8d5] django.req
 WARNING  [2024-04-23 15:13:08,868] [1aa9b3eb7f8a44c08578f947bc2cc8d5] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
 INFO     [2024-04-23 15:13:08,874] [c4b2df42b3ab4b9e871066d245a9def5] django.server: "GET /api/env/list HTTP/1.1" 200 6413
 INFO     [2024-04-23 15:13:08,876] [1aa9b3eb7f8a44c08578f947bc2cc8d5] django.server: - Broken pipe from ('127.0.0.1', 56755)
+INFO     [2024-04-23 15:13:50,089] [932ea922f83c4951878bc27bcc5971cf] django.server: "OPTIONS /api/notice/list?name=1&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-23 15:13:50,098] [a2b53c33484640a1987800998eb9b2bc] django.server: "GET /api/notice/list?name=1&page=1 HTTP/1.1" 200 1425
+INFO     [2024-04-23 15:13:51,825] [ca6b095c9d3e4194929e81569eb290ce] django.server: "OPTIONS /api/notice/list?name=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-23 15:13:51,835] [cb90a8eddf1440a5af877f8870458e86] django.server: "GET /api/notice/list?name=&page=1 HTTP/1.1" 200 1688
+WARNING  [2024-04-23 15:13:51,849] [386c5d9cf13840ea89532d7c0622799c] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-23 15:13:51,849] [386c5d9cf13840ea89532d7c0622799c] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-23 15:13:54,514] [5ef0dab045234d4eb248d35da2657c29] django.server: "OPTIONS /api/notice/list?name=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-23 15:13:54,540] [2b7f9b0514c644b3b572f33adb45e505] django.server: "GET /api/notice/list?name=&page=1 HTTP/1.1" 200 1688
+INFO     [2024-04-23 15:14:02,791] [a91ba31563c147269e15355329429a47] django.server: "OPTIONS /api/http/list?name=&page=1&project=&node=1 HTTP/1.1" 200 0
+INFO     [2024-04-23 15:14:02,796] [8896f70996674f33a2f20afaffb34ff2] django.server: "OPTIONS /api/project/list HTTP/1.1" 200 0
+INFO     [2024-04-23 15:14:02,825] [efc591428c124d748377f440c56ecdc0] django.server: "GET /api/project/list HTTP/1.1" 200 2040
+INFO     [2024-04-23 15:14:02,834] [b698e5b0ec124325a6a71c5db59ac437] django.server: "OPTIONS /api/http/list?name=&page=1&project=5&node=1 HTTP/1.1" 200 0
+INFO     [2024-04-23 15:14:02,834] [d8b06840b5354c2c80e74cdfd3530d3a] django.server: "GET /api/http/list?name=&page=1&project=&node=1 HTTP/1.1" 200 14076
+INFO     [2024-04-23 15:14:02,839] [1e89a70be9c84b08b37e3ef9a51d6fa2] django.server: "OPTIONS /api/tree/5&0 HTTP/1.1" 200 0
+INFO     [2024-04-23 15:14:02,847] [6b558222d91747efaae1fc75bcb35a25] django.server: "GET /api/tree/5&0 HTTP/1.1" 200 124
+INFO     [2024-04-23 15:14:02,847] [6f1fb47bc36d4201abd2a2decd1d2619] django.server: "GET /api/http/list?name=&page=1&project=5&node=1 HTTP/1.1" 200 52
+INFO     [2024-04-23 15:16:46,557] [3af0d1c5a4f7410ebc3b8c56f687493f] django.server: "OPTIONS /api/http/list?name=&page=1&project=&node=1 HTTP/1.1" 200 0
+INFO     [2024-04-23 15:16:46,559] [77014b7168b14f3a91545ebc50ee2731] django.server: "OPTIONS /api/project/list HTTP/1.1" 200 0
+INFO     [2024-04-23 15:16:46,596] [8a2795be8e35478d962592a751464ebf] django.server: "GET /api/project/list HTTP/1.1" 200 2040
+INFO     [2024-04-23 15:16:46,604] [db7e07f2c818475c94349217a7302fa4] django.server: "OPTIONS /api/tree/5&0 HTTP/1.1" 200 0
+INFO     [2024-04-23 15:16:46,604] [6d58368103a14ddbba6fa1d41e71f9f6] django.server: "GET /api/http/list?name=&page=1&project=&node=1 HTTP/1.1" 200 14076
+INFO     [2024-04-23 15:16:46,605] [1eb2261ce85749c2921a676725a93e64] django.server: "OPTIONS /api/http/list?name=&page=1&project=5&node=1 HTTP/1.1" 200 0
+INFO     [2024-04-23 15:16:46,615] [ab2e9e79c81541c9b64274d1dfe42d8f] django.server: "GET /api/tree/5&0 HTTP/1.1" 200 124
+INFO     [2024-04-23 15:16:46,616] [6683a8f8433941fc8d485341b97030be] django.server: "GET /api/http/list?name=&page=1&project=5&node=1 HTTP/1.1" 200 52
+INFO     [2024-04-23 15:17:15,203] [59b22b467ad741ddae325524cb1cbba5] django.server: "OPTIONS /api/project/list HTTP/1.1" 200 0
+INFO     [2024-04-23 15:17:15,204] [8f4c4fae4f9d4335ac0dd60c22d67fb6] django.server: "OPTIONS /api/notice/list?name=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-23 15:17:15,227] [5b06c811f3c24e628a6acbe835640af0] django.server: "GET /api/notice/list?name=&page=1 HTTP/1.1" 200 1688
+INFO     [2024-04-23 15:17:15,231] [1fbda66da12b4e45893a54f4c0295929] django.server: "GET /api/project/list HTTP/1.1" 200 2040
+WARNING  [2024-04-23 15:17:15,250] [c732627abd4a483d874799c6cb078573] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-23 15:17:15,251] [c732627abd4a483d874799c6cb078573] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+WARNING  [2024-04-23 15:31:29,318] [b84100719a72435b973fa55f09aa3f30] django.request: Not Found: /
+WARNING  [2024-04-23 15:31:29,318] [b84100719a72435b973fa55f09aa3f30] django.server: "GET / HTTP/1.1" 404 2813
+WARNING  [2024-04-23 15:31:29,413] [791c2dadc95e42cbb8273bf6014f48a5] django.request: Not Found: /favicon.ico
+WARNING  [2024-04-23 15:31:29,413] [791c2dadc95e42cbb8273bf6014f48a5] django.server: "GET /favicon.ico HTTP/1.1" 404 2864
+INFO     [2024-04-23 16:55:37,512] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 16:55:37,574] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 16:55:38,414] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 16:55:38,507] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 16:55:57,070] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 16:55:57,857] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 16:55:58,040] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 16:55:58,842] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 16:56:46,888] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 16:56:47,306] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 16:56:47,852] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 16:56:48,209] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 16:57:04,553] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 16:57:05,293] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 16:57:05,404] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 16:57:06,200] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 16:58:00,455] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 16:58:00,596] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 16:58:01,207] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 16:58:01,366] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 17:00:22,365] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 17:00:22,752] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 17:00:23,133] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 17:00:23,530] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 17:01:55,344] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 17:01:55,356] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 17:01:56,161] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 17:01:56,162] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 17:02:42,069] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 17:02:42,116] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 17:02:42,896] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 17:02:42,941] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 17:04:27,837] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 17:04:28,612] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 17:04:28,630] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 17:04:29,399] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 17:04:57,976] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 17:04:58,010] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 17:04:58,835] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 17:04:58,837] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 17:09:53,997] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 17:09:54,292] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 17:09:54,797] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 17:09:55,138] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 17:11:01,899] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 17:11:01,965] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 17:11:02,691] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 17:11:02,790] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 17:11:47,987] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 17:11:48,263] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 17:11:48,907] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 17:11:49,118] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 17:12:12,791] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 17:12:13,610] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 17:12:13,695] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 17:12:14,384] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 17:12:41,652] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 17:12:41,829] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 17:12:42,410] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 17:12:42,592] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 17:13:02,170] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 17:13:02,594] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 17:13:02,921] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 17:13:03,396] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 17:13:13,924] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 17:13:14,362] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 17:13:14,658] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 17:13:15,122] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 17:13:34,775] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 17:13:35,387] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 17:13:35,592] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 17:13:36,162] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 17:14:32,201] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 17:14:32,236] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\__init__.py changed, reloading.
+INFO     [2024-04-23 17:14:33,031] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 17:14:33,062] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 18:10:48,188] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\https.py changed, reloading.
+INFO     [2024-04-23 18:10:48,204] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\https.py changed, reloading.
+INFO     [2024-04-23 18:10:49,144] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 18:10:49,144] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 18:12:03,184] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\https.py changed, reloading.
+INFO     [2024-04-23 18:12:03,349] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\https.py changed, reloading.
+INFO     [2024-04-23 18:12:04,050] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 18:12:04,165] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 18:15:29,606] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\https.py changed, reloading.
+INFO     [2024-04-23 18:15:29,759] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\https.py changed, reloading.
+INFO     [2024-04-23 18:15:30,425] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 18:15:30,548] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 18:19:11,752] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\https.py changed, reloading.
+INFO     [2024-04-23 18:19:12,147] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\https.py changed, reloading.
+INFO     [2024-04-23 18:19:12,892] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 18:19:13,137] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 18:29:19,382] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\https.py changed, reloading.
+INFO     [2024-04-23 18:29:19,847] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\https.py changed, reloading.
+INFO     [2024-04-23 18:29:20,158] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-23 18:29:20,628] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 10:11:03,632] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\config\settings.py changed, reloading.
+INFO     [2024-04-24 10:11:03,889] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\config\settings.py changed, reloading.
+INFO     [2024-04-24 10:11:04,632] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 10:11:04,703] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 10:12:07,769] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\config\settings.py changed, reloading.
+INFO     [2024-04-24 10:12:07,772] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\config\settings.py changed, reloading.
+INFO     [2024-04-24 10:12:08,652] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 10:12:08,652] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 10:12:36,321] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\config\settings.py changed, reloading.
+INFO     [2024-04-24 10:12:36,872] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\config\settings.py changed, reloading.
+INFO     [2024-04-24 10:12:37,169] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 10:12:37,744] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 10:12:53,984] [none] django.utils.autoreload: C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\redis\sentinel.py changed, reloading.
+INFO     [2024-04-24 10:12:54,079] [none] django.utils.autoreload: C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\redis\commands\sentinel.py changed, reloading.
+INFO     [2024-04-24 10:12:54,760] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 10:12:54,877] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 10:17:35,018] [none] django.utils.autoreload: Watching for file changes with StatReloader
+WARNING  [2024-04-24 10:18:35,847] [deaedf4136cc47aebc94838bc5b903cf] django.request: Not Found: /chat/socket/
+WARNING  [2024-04-24 10:18:35,847] [deaedf4136cc47aebc94838bc5b903cf] django.server: "GET /chat/socket/ HTTP/1.1" 404 2867
+WARNING  [2024-04-24 10:18:47,480] [20a35ceb915a4a3c82bf4961008c2833] django.request: Not Found: /chat/socket/
+WARNING  [2024-04-24 10:18:47,481] [20a35ceb915a4a3c82bf4961008c2833] django.server: "GET /chat/socket/ HTTP/1.1" 404 2867
+INFO     [2024-04-24 10:19:33,120] [2efc8c182351466990b8edc742a15860] django.server: "OPTIONS /api/env/list HTTP/1.1" 200 0
+INFO     [2024-04-24 10:19:33,127] [26276091b0c74167aa911bae99c215d3] django.server: "OPTIONS /api/project/list?name=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-24 10:19:33,154] [d53582b3cc054b50aa2ffcfb78c01660] django.server: "GET /api/project/list?name=&page=1 HTTP/1.1" 200 2040
+INFO     [2024-04-24 10:19:33,203] [166af8e3a9ff47f7afebc7baf898d18a] django.server: "GET /api/env/list HTTP/1.1" 200 6413
+INFO     [2024-04-24 10:19:33,209] [1c50e01f37744199b9bde705898548f0] django.server: "OPTIONS /api/env/list HTTP/1.1" 200 0
+INFO     [2024-04-24 10:19:33,214] [5ce87cfb648e44c1a82d5f69e2ac549e] django.server: "GET /api/env/list HTTP/1.1" 200 341
+WARNING  [2024-04-24 10:19:33,236] [fe5b17cc94fa4caa953f620b0fa5bf02] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-24 10:19:33,237] [fe5b17cc94fa4caa953f620b0fa5bf02] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-24 10:19:33,416] [46806efd15f849d188e0b8b2178bacb7] django.server: "OPTIONS /api/env/list HTTP/1.1" 200 0
+INFO     [2024-04-24 10:19:33,418] [9e6d075a03fa4e02b05d36a240438c3a] django.server: "GET /api/env/list HTTP/1.1" 200 341
+INFO     [2024-04-24 10:19:33,442] [a2fbe5459deb4676b944b6348318cda1] django.server: "OPTIONS /api/http/list?name=&page=1&project=&node=1 HTTP/1.1" 200 0
+INFO     [2024-04-24 10:19:33,443] [a7e289a58bd0470299eed41160c02bc4] django.server: "OPTIONS /api/project/list HTTP/1.1" 200 0
+INFO     [2024-04-24 10:19:33,446] [c65b3e6d9ced45c3968d44ebc610970f] django.server: "GET /api/project/list HTTP/1.1" 200 341
+INFO     [2024-04-24 10:19:33,446] [2c5be121e71f48e6ba86409b19a0888f] django.server: "GET /api/http/list?name=&page=1&project=&node=1 HTTP/1.1" 200 341
+INFO     [2024-04-24 10:20:17,889] [7b563ded57924d20982b884134712805] django.server: "OPTIONS /api/env/list HTTP/1.1" 200 0
+INFO     [2024-04-24 10:20:17,889] [d377654aab2c472995b00a40475a7990] django.server: "OPTIONS /api/project/list?name=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-24 10:20:17,934] [35f21b119a304e96a8e2aed4b96c209e] django.server: "GET /api/project/list?name=&page=1 HTTP/1.1" 200 2040
+INFO     [2024-04-24 10:20:17,968] [019ca57186204f82899f5262de4c9c3f] django.server: "GET /api/env/list HTTP/1.1" 200 6413
+WARNING  [2024-04-24 10:20:17,975] [9ef5a6c375a0466d9cc5cff616adedbe] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-24 10:20:17,976] [9ef5a6c375a0466d9cc5cff616adedbe] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-24 10:20:18,482] [61f79142eb4443a69f91aa2d9375920d] django.server: "OPTIONS /api/env/list HTTP/1.1" 200 0
+INFO     [2024-04-24 10:20:18,484] [8cf9fb90d03d4cc2adda6479bd73524f] django.server: "GET /api/env/list HTTP/1.1" 200 341
+INFO     [2024-04-24 10:20:18,674] [0db89621420e42bebf48fb9f9f9304a5] django.server: "OPTIONS /api/env/list HTTP/1.1" 200 0
+INFO     [2024-04-24 10:20:18,679] [e464cf62bb014aa2baa4df220abce3f3] django.server: "GET /api/env/list HTTP/1.1" 200 341
+INFO     [2024-04-24 10:20:18,707] [2a6a7a99e5fb451e814da729bc226c10] django.server: "OPTIONS /api/project/list HTTP/1.1" 200 0
+INFO     [2024-04-24 10:20:18,707] [db811c97e3794fb5a722fba75508e7a1] django.server: "OPTIONS /api/http/list?name=&page=1&project=&node=1 HTTP/1.1" 200 0
+INFO     [2024-04-24 10:20:18,712] [7bf90e9fcc3d453fb7e669d216a5a35b] django.server: "GET /api/http/list?name=&page=1&project=&node=1 HTTP/1.1" 200 341
+INFO     [2024-04-24 10:20:18,712] [04fab700ed0d400287de8f256460f782] django.server: "GET /api/project/list HTTP/1.1" 200 341
+INFO     [2024-04-24 10:20:21,619] [b4a813d2d3554943a43cb3965c76e22a] django.server: "OPTIONS /api/project/detail/5 HTTP/1.1" 200 0
+INFO     [2024-04-24 10:20:21,619] [8cceb48ab24f4e7f9b2d3a2ac7026471] django.server: "OPTIONS /api/user/list HTTP/1.1" 200 0
+INFO     [2024-04-24 10:20:21,632] [53df3bba388e449a87f56abeefb5d426] django.server: "GET /api/user/list HTTP/1.1" 200 255
+INFO     [2024-04-24 10:20:21,632] [959dbc838b2447428a857b3e32ab594e] django.server: "GET /api/project/detail/5 HTTP/1.1" 200 562
+WARNING  [2024-04-24 10:20:21,648] [c1ec227de97b4d80aa3a20a247ba50f9] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-24 10:20:21,649] [c1ec227de97b4d80aa3a20a247ba50f9] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-24 10:20:24,388] [d91a12422a32444f8f9c3b789d39579e] django.server: "OPTIONS /api/env/list?name=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-24 10:20:24,446] [b04e3dddfd7d4e63bf1b9e27ac75487a] django.server: "GET /api/env/list?name=&page=1 HTTP/1.1" 200 6419
+WARNING  [2024-04-24 10:20:24,476] [7297d28308ce472d80edc427ec93f3b3] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-24 10:20:24,477] [7297d28308ce472d80edc427ec93f3b3] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-24 10:20:25,646] [33639bf8ad4545b89454e8c123a912ee] django.server: "OPTIONS /api/database/list?database=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-24 10:20:25,658] [81ad2a27e6d041b6b5bfaa9a0b6700e2] django.server: "GET /api/database/list?database=&page=1 HTTP/1.1" 200 619
+WARNING  [2024-04-24 10:20:25,679] [e08acb3e6341426eb6523cde4b9fb50d] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-24 10:20:25,679] [e08acb3e6341426eb6523cde4b9fb50d] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-24 10:21:14,311] [e4663be322624e47b971d10c8cc58a56] django.server: "OPTIONS /api/env/list HTTP/1.1" 200 0
+INFO     [2024-04-24 10:21:14,311] [bc926e600f2842b5a753cfdba3609f8c] django.server: "OPTIONS /api/database/list?database=&page=1 HTTP/1.1" 200 0
+INFO     [2024-04-24 10:21:14,330] [8fb3d693db9d41d9bbccbe7025f33e74] django.server: "GET /api/database/list?database=&page=1 HTTP/1.1" 200 619
+WARNING  [2024-04-24 10:21:14,387] [9d2f9257d4f542fc8770aae947b22798] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-24 10:21:14,390] [9d2f9257d4f542fc8770aae947b22798] django.server: "GET /media/avatar/default.png HTTP/1.1" 404 2692
+INFO     [2024-04-24 10:21:14,393] [870ce66e7ab141919541146d477a1200] django.server: "GET /api/env/list HTTP/1.1" 200 6413
+WARNING  [2024-04-24 10:22:22,304] [7f5707fa2b064e0aabc0fe784a59056b] django.request: Not Found: /chat/socket/
+WARNING  [2024-04-24 10:22:22,305] [7f5707fa2b064e0aabc0fe784a59056b] django.server: "GET /chat/socket/ HTTP/1.1" 404 2867
+WARNING  [2024-04-24 10:22:23,533] [efc9da3bae3d43a79ff5cce38e986fd2] django.request: Not Found: /chat/socket/
+WARNING  [2024-04-24 10:22:23,534] [efc9da3bae3d43a79ff5cce38e986fd2] django.server: "GET /chat/socket/ HTTP/1.1" 404 2867
+WARNING  [2024-04-24 10:22:31,035] [c1880d997d214412aad9690b47b6d077] django.request: Not Found: /api/chat/socket/
+WARNING  [2024-04-24 10:22:31,036] [c1880d997d214412aad9690b47b6d077] django.server: "GET /api/chat/socket/ HTTP/1.1" 404 12067
+INFO     [2024-04-24 10:25:22,863] [none] django.utils.autoreload: Watching for file changes with StatReloader
+WARNING  [2024-04-24 10:25:36,415] [f6b73f93329045c1b9a603c7000644cb] django.request: Not Found: /chat/socket/
+WARNING  [2024-04-24 10:25:36,416] [f6b73f93329045c1b9a603c7000644cb] django.server: "GET /chat/socket/ HTTP/1.1" 404 2867
+WARNING  [2024-04-24 10:25:38,287] [2e2dfa3d49144c8280851ca0357da575] django.request: Not Found: /chat/socket/
+WARNING  [2024-04-24 10:25:38,287] [2e2dfa3d49144c8280851ca0357da575] django.server: "GET /chat/socket/ HTTP/1.1" 404 2867
+WARNING  [2024-04-24 10:25:38,508] [d3f0588eaf054f21aefb872cf7997983] django.request: Not Found: /chat/socket/
+WARNING  [2024-04-24 10:25:38,512] [d3f0588eaf054f21aefb872cf7997983] django.server: "GET /chat/socket/ HTTP/1.1" 404 2867
+WARNING  [2024-04-24 10:25:38,728] [169feb905dbe4c0790bc9660b3a2ac77] django.request: Not Found: /chat/socket/
+WARNING  [2024-04-24 10:25:38,728] [169feb905dbe4c0790bc9660b3a2ac77] django.server: "GET /chat/socket/ HTTP/1.1" 404 2867
+WARNING  [2024-04-24 10:25:38,931] [520c5f290748470bbc11d4a8fbb1e561] django.request: Not Found: /chat/socket/
+WARNING  [2024-04-24 10:25:38,933] [520c5f290748470bbc11d4a8fbb1e561] django.server: "GET /chat/socket/ HTTP/1.1" 404 2867
+WARNING  [2024-04-24 10:26:05,839] [0555a83a841d43a9a8348765e1f9cdbd] django.request: Not Found: /chat/socket/
+WARNING  [2024-04-24 10:26:05,840] [0555a83a841d43a9a8348765e1f9cdbd] django.server: "GET /chat/socket/ HTTP/1.1" 404 2867
+WARNING  [2024-04-24 10:28:05,847] [624d4d25309b4ebcadac3e9f2d39a3b6] django.request: Not Found: /chat/socket/
+WARNING  [2024-04-24 10:28:05,848] [624d4d25309b4ebcadac3e9f2d39a3b6] django.server: "GET /chat/socket/ HTTP/1.1" 404 2867
+WARNING  [2024-04-24 10:28:06,696] [051898a96f5c4cc2a130f31bbcce78e0] django.request: Not Found: /chat/socket/
+WARNING  [2024-04-24 10:28:06,697] [051898a96f5c4cc2a130f31bbcce78e0] django.server: "GET /chat/socket/ HTTP/1.1" 404 2867
+WARNING  [2024-04-24 10:28:06,878] [d9b7766edf9f49bcbee570bfe21c7a30] django.request: Not Found: /chat/socket/
+WARNING  [2024-04-24 10:28:06,879] [d9b7766edf9f49bcbee570bfe21c7a30] django.server: "GET /chat/socket/ HTTP/1.1" 404 2867
+WARNING  [2024-04-24 10:28:07,052] [46f599b1df314132811e19f8c07119ed] django.request: Not Found: /chat/socket/
+WARNING  [2024-04-24 10:28:07,053] [46f599b1df314132811e19f8c07119ed] django.server: "GET /chat/socket/ HTTP/1.1" 404 2867
+WARNING  [2024-04-24 10:28:07,223] [04278ce7ebe74967a73f548f0e20a107] django.request: Not Found: /chat/socket/
+WARNING  [2024-04-24 10:28:07,224] [04278ce7ebe74967a73f548f0e20a107] django.server: "GET /chat/socket/ HTTP/1.1" 404 2867
+WARNING  [2024-04-24 10:28:07,412] [06bcb3267fe54183ae7cf969765d5a2d] django.request: Not Found: /chat/socket/
+WARNING  [2024-04-24 10:28:07,412] [06bcb3267fe54183ae7cf969765d5a2d] django.server: "GET /chat/socket/ HTTP/1.1" 404 2867
+WARNING  [2024-04-24 10:28:25,133] [6850d8ca430140c2a1be05af2557b4d8] django.request: Not Found: /chat/socket/
+WARNING  [2024-04-24 10:28:25,134] [6850d8ca430140c2a1be05af2557b4d8] django.server: "GET /chat/socket/ HTTP/1.1" 404 2867
+INFO     [2024-04-24 10:43:59,420] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 10:59:13,953] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\config\settings.py changed, reloading.
+INFO     [2024-04-24 10:59:14,945] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 10:59:15,011] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 10:59:47,606] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\config\settings.py changed, reloading.
+INFO     [2024-04-24 10:59:48,241] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\config\settings.py changed, reloading.
+INFO     [2024-04-24 10:59:48,384] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 10:59:49,015] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:01:04,250] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:02:01,131] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\config\settings.py changed, reloading.
+INFO     [2024-04-24 11:02:01,541] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\config\settings.py changed, reloading.
+INFO     [2024-04-24 11:02:02,260] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:02:02,517] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:06:15,948] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\config\settings.py changed, reloading.
+INFO     [2024-04-24 11:06:16,702] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:06:16,866] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:07:41,226] [none] django.utils.autoreload: C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\cryptography\hazmat\primitives\serialization\base.py changed, reloading.
+INFO     [2024-04-24 11:07:41,508] [none] django.utils.autoreload: C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\cryptography\utils.py changed, reloading.
+INFO     [2024-04-24 11:07:41,915] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:07:42,256] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:09:15,756] [none] django.utils.autoreload: C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\channels\__init__.py changed, reloading.
+INFO     [2024-04-24 11:09:15,816] [none] django.utils.autoreload: C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\channels\utils.py changed, reloading.
+INFO     [2024-04-24 11:09:16,485] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:09:16,565] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:10:43,997] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\config\settings.py changed, reloading.
+INFO     [2024-04-24 11:10:43,999] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\config\settings.py changed, reloading.
+INFO     [2024-04-24 11:10:45,003] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:10:45,003] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:11:50,622] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\config\asgi.py changed, reloading.
+INFO     [2024-04-24 11:11:51,722] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:14:30,542] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\config\asgi.py changed, reloading.
+INFO     [2024-04-24 11:14:31,592] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:14:41,653] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:14:59,528] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:59563]
+INFO     [2024-04-24 11:14:59,529] [none] django.channels.server: WebSocket CONNECT /ws/chat [127.0.0.1:59563]
+INFO     [2024-04-24 11:14:59,770] [none] django.channels.server: WebSocket DISCONNECT /ws/chat [127.0.0.1:59563]
+INFO     [2024-04-24 11:15:01,528] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:59565]
+INFO     [2024-04-24 11:15:01,528] [none] django.channels.server: WebSocket CONNECT /ws/chat [127.0.0.1:59565]
+INFO     [2024-04-24 11:22:56,703] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\consumers.py changed, reloading.
+INFO     [2024-04-24 11:22:57,766] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:24:15,000] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\consumers.py changed, reloading.
+INFO     [2024-04-24 11:24:16,127] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:24:49,275] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:24:59,881] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:54419]
+INFO     [2024-04-24 11:24:59,883] [none] django.channels.server: WebSocket CONNECT /ws/chat [127.0.0.1:54419]
+INFO     [2024-04-24 11:26:22,146] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\consumers.py changed, reloading.
+INFO     [2024-04-24 11:26:23,190] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:26:24,479] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:55532]
+INFO     [2024-04-24 11:26:24,482] [none] django.channels.server: WebSocket CONNECT /ws/chat [127.0.0.1:55532]
+INFO     [2024-04-24 11:27:16,168] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\consumers.py changed, reloading.
+INFO     [2024-04-24 11:27:17,152] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:27:18,053] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:61100]
+INFO     [2024-04-24 11:27:18,055] [none] django.channels.server: WebSocket CONNECT /ws/chat [127.0.0.1:61100]
+INFO     [2024-04-24 11:28:04,131] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\consumers.py changed, reloading.
+INFO     [2024-04-24 11:28:05,199] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:28:34,633] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:28:40,551] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:63108]
+INFO     [2024-04-24 11:28:40,553] [none] django.channels.server: WebSocket CONNECT /ws/chat [127.0.0.1:63108]
+INFO     [2024-04-24 11:29:08,328] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\consumers.py changed, reloading.
+INFO     [2024-04-24 11:29:09,312] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:29:27,359] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\consumers.py changed, reloading.
+INFO     [2024-04-24 11:29:28,351] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:29:37,379] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\consumers.py changed, reloading.
+INFO     [2024-04-24 11:29:38,340] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:30:07,826] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\consumers.py changed, reloading.
+INFO     [2024-04-24 11:30:08,867] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:30:26,856] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\consumers.py changed, reloading.
+INFO     [2024-04-24 11:30:27,959] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:30:39,228] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:57906]
+INFO     [2024-04-24 11:30:44,013] [none] django.channels.server: WebSocket DISCONNECT /ws/chat [127.0.0.1:57906]
+INFO     [2024-04-24 11:30:44,030] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:57926]
+INFO     [2024-04-24 11:30:49,009] [none] django.channels.server: WebSocket DISCONNECT /ws/chat [127.0.0.1:57926]
+INFO     [2024-04-24 11:30:49,026] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:57937]
+INFO     [2024-04-24 11:30:54,003] [none] django.channels.server: WebSocket DISCONNECT /ws/chat [127.0.0.1:57937]
+INFO     [2024-04-24 11:30:54,019] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:57944]
+INFO     [2024-04-24 11:30:59,007] [none] django.channels.server: WebSocket DISCONNECT /ws/chat [127.0.0.1:57944]
+INFO     [2024-04-24 11:30:59,024] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:57952]
+INFO     [2024-04-24 11:31:04,012] [none] django.channels.server: WebSocket DISCONNECT /ws/chat [127.0.0.1:57952]
+INFO     [2024-04-24 11:31:04,029] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:57956]
+INFO     [2024-04-24 11:31:06,194] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:31:07,476] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:57973]
+INFO     [2024-04-24 11:31:12,006] [none] django.channels.server: WebSocket DISCONNECT /ws/chat [127.0.0.1:57973]
+INFO     [2024-04-24 11:31:12,023] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:57980]
+INFO     [2024-04-24 11:31:17,013] [none] django.channels.server: WebSocket DISCONNECT /ws/chat [127.0.0.1:57980]
+INFO     [2024-04-24 11:31:17,029] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:50788]
+INFO     [2024-04-24 11:31:22,012] [none] django.channels.server: WebSocket DISCONNECT /ws/chat [127.0.0.1:50788]
+INFO     [2024-04-24 11:31:22,030] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:50866]
+INFO     [2024-04-24 11:31:27,012] [none] django.channels.server: WebSocket DISCONNECT /ws/chat [127.0.0.1:50866]
+INFO     [2024-04-24 11:31:27,029] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:50933]
+INFO     [2024-04-24 11:31:32,002] [none] django.channels.server: WebSocket DISCONNECT /ws/chat [127.0.0.1:50933]
+INFO     [2024-04-24 11:31:32,019] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:51014]
+INFO     [2024-04-24 11:31:37,006] [none] django.channels.server: WebSocket DISCONNECT /ws/chat [127.0.0.1:51014]
+INFO     [2024-04-24 11:31:37,023] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:50659]
+INFO     [2024-04-24 11:31:42,009] [none] django.channels.server: WebSocket DISCONNECT /ws/chat [127.0.0.1:50659]
+INFO     [2024-04-24 11:31:42,025] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:50663]
+INFO     [2024-04-24 11:31:47,012] [none] django.channels.server: WebSocket DISCONNECT /ws/chat [127.0.0.1:50663]
+INFO     [2024-04-24 11:31:47,029] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:50671]
+INFO     [2024-04-24 11:31:52,003] [none] django.channels.server: WebSocket DISCONNECT /ws/chat [127.0.0.1:50671]
+INFO     [2024-04-24 11:32:18,656] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:32:24,275] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:50890]
+INFO     [2024-04-24 11:32:24,277] [none] django.channels.server: WebSocket CONNECT /ws/chat [127.0.0.1:50890]
+INFO     [2024-04-24 11:33:01,822] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\consumers.py changed, reloading.
+INFO     [2024-04-24 11:33:02,849] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:33:03,787] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:61226]
+INFO     [2024-04-24 11:33:03,788] [none] django.channels.server: WebSocket CONNECT /ws/chat [127.0.0.1:61226]
+INFO     [2024-04-24 11:33:21,042] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\consumers.py changed, reloading.
+INFO     [2024-04-24 11:33:22,002] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:33:23,293] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:61252]
+INFO     [2024-04-24 11:33:23,294] [none] django.channels.server: WebSocket CONNECT /ws/chat [127.0.0.1:61252]
+INFO     [2024-04-24 11:33:46,171] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\consumers.py changed, reloading.
+INFO     [2024-04-24 11:33:47,204] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:33:48,249] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:52297]
+INFO     [2024-04-24 11:33:48,250] [none] django.channels.server: WebSocket CONNECT /ws/chat [127.0.0.1:52297]
+INFO     [2024-04-24 11:33:59,450] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\consumers.py changed, reloading.
+INFO     [2024-04-24 11:34:00,483] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:34:03,307] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:52320]
+INFO     [2024-04-24 11:34:03,308] [none] django.channels.server: WebSocket CONNECT /ws/chat [127.0.0.1:52320]
+INFO     [2024-04-24 11:35:43,075] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\consumers.py changed, reloading.
+INFO     [2024-04-24 11:35:44,199] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:37:24,432] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\consumers.py changed, reloading.
+INFO     [2024-04-24 11:37:25,521] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:37:26,689] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:61899]
+INFO     [2024-04-24 11:37:26,690] [none] django.channels.server: WebSocket CONNECT /ws/chat [127.0.0.1:61899]
+INFO     [2024-04-24 11:37:29,396] [none] django.channels.server: WebSocket DISCONNECT /ws/chat [127.0.0.1:61899]
+INFO     [2024-04-24 11:38:13,437] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 11:38:16,277] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:55571]
+INFO     [2024-04-24 11:38:16,278] [none] django.channels.server: WebSocket CONNECT /ws/chat [127.0.0.1:55571]
+INFO     [2024-04-24 11:39:58,714] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:57458]
+INFO     [2024-04-24 11:39:58,714] [none] django.channels.server: WebSocket CONNECT /ws/chat [127.0.0.1:57458]
+INFO     [2024-04-24 12:11:59,161] [none] django.channels.server: WebSocket DISCONNECT /ws/chat [127.0.0.1:55571]
+INFO     [2024-04-24 13:30:38,679] [d978078cc99e4b0d95723d47ccadc273] django.channels.server: HTTP OPTIONS /api/env/list 200 [0.00, 127.0.0.1:52215]
+INFO     [2024-04-24 13:30:38,700] [cd63c40f579f4d2887496e787952e38b] django.channels.server: HTTP GET /api/env/list 200 [0.02, 127.0.0.1:52215]
+INFO     [2024-04-24 13:30:38,758] [0f74d881d32448c98f855d121fe70c11] django.channels.server: HTTP OPTIONS /api/env/list 200 [0.01, 127.0.0.1:52218]
+INFO     [2024-04-24 13:30:38,761] [0fa7b0e8148242929063389996acc265] django.channels.server: HTTP OPTIONS /api/database/list?database=&page=1 200 [0.00, 127.0.0.1:52219]
+INFO     [2024-04-24 13:30:38,825] [18b44b59c2bf48ad82d108f3c47c69b9] django.channels.server: HTTP GET /api/database/list?database=&page=1 200 [0.06, 127.0.0.1:52219]
+INFO     [2024-04-24 13:30:38,876] [6451ca51e810425dbdaf058fd52a2ee8] django.channels.server: HTTP GET /api/env/list 200 [0.11, 127.0.0.1:52218]
+WARNING  [2024-04-24 13:30:38,895] [41b656c38d324f2e95b099f1ab5de5bc] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-24 13:30:38,897] [41b656c38d324f2e95b099f1ab5de5bc] django.channels.server: HTTP GET /media/avatar/default.png 404 [0.02, 127.0.0.1:52229]
+INFO     [2024-04-24 13:30:38,922] [d50c970273e84c6ea2dc940e4bc3ca2a] django.channels.server: HTTP OPTIONS /api/http/list?name=&page=1&project=&node=1 200 [0.00, 127.0.0.1:52215]
+INFO     [2024-04-24 13:30:38,931] [946d756d6d134825b5fd0cddbd2b5645] django.channels.server: HTTP OPTIONS /api/project/list 200 [0.01, 127.0.0.1:52215]
+INFO     [2024-04-24 13:30:38,941] [c6a29e848c6c4d2fb3de503045fcfbcd] django.channels.server: HTTP GET /api/http/list?name=&page=1&project=&node=1 200 [0.01, 127.0.0.1:52230]
+INFO     [2024-04-24 13:30:38,948] [63d5cc8c1ff3401ab5a2a795b85afcaf] django.channels.server: HTTP GET /api/project/list 200 [0.01, 127.0.0.1:52215]
+INFO     [2024-04-24 13:30:39,027] [413c1d68e97a47428ca5394f10642d90] django.channels.server: HTTP OPTIONS /api/env/list 200 [0.00, 127.0.0.1:52215]
+INFO     [2024-04-24 13:30:39,037] [4c0b97eebdc04874863295aa40199ae7] django.channels.server: HTTP GET /api/env/list 200 [0.01, 127.0.0.1:52215]
+INFO     [2024-04-24 13:34:47,761] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:49628]
+INFO     [2024-04-24 13:34:47,762] [none] django.channels.server: WebSocket CONNECT /ws/chat [127.0.0.1:49628]
+INFO     [2024-04-24 13:34:49,099] [none] django.channels.server: WebSocket DISCONNECT /ws/chat [127.0.0.1:49628]
+INFO     [2024-04-24 13:40:08,304] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:55746]
+INFO     [2024-04-24 13:40:08,306] [none] django.channels.server: WebSocket CONNECT /ws/chat [127.0.0.1:55746]
+INFO     [2024-04-24 13:40:09,499] [none] django.channels.server: WebSocket DISCONNECT /ws/chat [127.0.0.1:55746]
+INFO     [2024-04-24 13:40:10,032] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:55749]
+INFO     [2024-04-24 13:40:10,033] [none] django.channels.server: WebSocket CONNECT /ws/chat [127.0.0.1:55749]
+INFO     [2024-04-24 13:40:10,534] [none] django.channels.server: WebSocket DISCONNECT /ws/chat [127.0.0.1:55749]
+INFO     [2024-04-24 13:40:10,911] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:55750]
+INFO     [2024-04-24 13:40:10,912] [none] django.channels.server: WebSocket CONNECT /ws/chat [127.0.0.1:55750]
+INFO     [2024-04-24 13:40:11,435] [none] django.channels.server: WebSocket DISCONNECT /ws/chat [127.0.0.1:55750]
+INFO     [2024-04-24 13:40:11,941] [none] django.channels.server: WebSocket HANDSHAKING /ws/chat [127.0.0.1:55752]
+INFO     [2024-04-24 13:40:11,942] [none] django.channels.server: WebSocket CONNECT /ws/chat [127.0.0.1:55752]
+INFO     [2024-04-24 13:55:00,688] [6a581c7dbead497cb02d564f27f73dd7] django.channels.server: HTTP OPTIONS /api/env/list 200 [0.00, 127.0.0.1:49222]
+INFO     [2024-04-24 13:55:00,690] [48051b91f70644d29eeb882527b49c8d] django.channels.server: HTTP OPTIONS /api/http/list?name=&page=1&project=&node=1 200 [0.00, 127.0.0.1:49223]
+INFO     [2024-04-24 13:55:00,692] [9474d3c50dbf4505acee99d98c3ef363] django.channels.server: HTTP OPTIONS /api/project/list 200 [0.01, 127.0.0.1:49224]
+INFO     [2024-04-24 13:55:00,707] [3dd84501cc2d42c7831e09d918323f48] django.channels.server: HTTP GET /api/env/list 200 [0.01, 127.0.0.1:49222]
+INFO     [2024-04-24 13:55:00,708] [ab53c730ba3b414989d59ac3b8a8b852] django.channels.server: HTTP GET /api/http/list?name=&page=1&project=&node=1 200 [0.01, 127.0.0.1:49223]
+INFO     [2024-04-24 13:55:00,710] [0d93a59775304a21ae9eadae7f2ac36e] django.channels.server: HTTP GET /api/project/list 200 [0.01, 127.0.0.1:49224]
+INFO     [2024-04-24 13:55:00,749] [6bae2b96c7a246e6ab2ada528f0d10d6] django.channels.server: HTTP OPTIONS /api/env/list 200 [0.00, 127.0.0.1:49225]
+INFO     [2024-04-24 13:55:00,751] [6abb329132c14cba9e93eeac8f07127a] django.channels.server: HTTP OPTIONS /api/database/list?database=&page=1 200 [0.00, 127.0.0.1:49226]
+INFO     [2024-04-24 13:55:00,791] [76fce6cf070141578ebdf3884dbc8288] django.channels.server: HTTP GET /api/database/list?database=&page=1 200 [0.04, 127.0.0.1:49226]
+INFO     [2024-04-24 13:55:00,823] [edfca6a541a145c2a6cf1179b8774c2d] django.channels.server: HTTP OPTIONS /api/env/list 200 [0.00, 127.0.0.1:49224]
+INFO     [2024-04-24 13:55:00,825] [25218921da61454994601da2abd3e220] django.channels.server: HTTP GET /api/env/list 200 [0.07, 127.0.0.1:49225]
+INFO     [2024-04-24 13:55:00,844] [3cb306ad71f8473ebd25e381d308707e] django.channels.server: HTTP GET /api/env/list 200 [0.02, 127.0.0.1:49224]
+WARNING  [2024-04-24 13:55:00,845] [1b7fa30a415c4e5685eb76a68de4e1f5] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-24 13:55:00,846] [1b7fa30a415c4e5685eb76a68de4e1f5] django.channels.server: HTTP GET /media/avatar/default.png 404 [0.03, 127.0.0.1:49235]
+INFO     [2024-04-24 13:55:29,343] [ff4d1d7d8aba48fdb293500846019df7] django.channels.server: HTTP OPTIONS /api/env/list 200 [0.00, 127.0.0.1:49224]
+INFO     [2024-04-24 13:55:29,354] [f248762323cc4efeabefd4d402403d7d] django.channels.server: HTTP GET /api/env/list 200 [0.01, 127.0.0.1:49224]
+INFO     [2024-04-24 13:55:29,386] [3b5825bc89314c458c95420c744e1fe5] django.channels.server: HTTP OPTIONS /api/http/list?name=&page=1&project=&node=1 200 [0.00, 127.0.0.1:49224]
+INFO     [2024-04-24 13:55:29,389] [2f67721ad9c147d8b7031ca1cf0e8010] django.channels.server: HTTP OPTIONS /api/project/list 200 [0.00, 127.0.0.1:49223]
+INFO     [2024-04-24 13:55:29,437] [89c2dd080e344cbbafd032c4b35c23e2] django.channels.server: HTTP GET /api/http/list?name=&page=1&project=&node=1 200 [0.05, 127.0.0.1:49224]
+INFO     [2024-04-24 13:55:29,440] [8cecb20cb2a447efbcfb4fe29a5bb13f] django.channels.server: HTTP GET /api/project/list 200 [0.05, 127.0.0.1:49223]
+INFO     [2024-04-24 13:55:29,568] [e113cf41202846559cf4affc47c852f5] django.channels.server: HTTP OPTIONS /api/env/list 200 [0.00, 127.0.0.1:49223]
+INFO     [2024-04-24 13:55:29,578] [e314859acfd3472c9fec08358768fd41] django.channels.server: HTTP GET /api/env/list 200 [0.01, 127.0.0.1:49223]
+INFO     [2024-04-24 13:55:29,582] [484b56ed09d447b2b99d1a9f573dd876] django.channels.server: HTTP OPTIONS /api/env/list 200 [0.00, 127.0.0.1:49225]
+INFO     [2024-04-24 13:55:29,585] [6dbfaa65200549b187b8e241d958155a] django.channels.server: HTTP OPTIONS /api/database/list?database=&page=1 200 [0.00, 127.0.0.1:49226]
+INFO     [2024-04-24 13:55:29,617] [91a160dc50ca4a398381c160f12b8e38] django.channels.server: HTTP GET /api/database/list?database=&page=1 200 [0.03, 127.0.0.1:49226]
+INFO     [2024-04-24 13:55:29,648] [8a71e94be14c486f9723175b225cb300] django.channels.server: HTTP GET /api/env/list 200 [0.06, 127.0.0.1:49225]
+WARNING  [2024-04-24 13:55:29,658] [e133b7e9ccc84708a72bf7a2a1ee535d] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-24 13:55:29,659] [e133b7e9ccc84708a72bf7a2a1ee535d] django.channels.server: HTTP GET /media/avatar/default.png 404 [0.02, 127.0.0.1:49310]
+INFO     [2024-04-24 13:55:36,543] [f1c8c1d68629475790f9e8a8977d9c36] django.channels.server: HTTP OPTIONS /api/http/list?name=&page=1&project=&node=1 200 [0.00, 127.0.0.1:49225]
+INFO     [2024-04-24 13:55:36,551] [03017175b74e45a696cd7048decb89ad] django.channels.server: HTTP OPTIONS /api/project/list 200 [0.00, 127.0.0.1:49226]
+INFO     [2024-04-24 13:55:36,616] [85db3d5e764848c28fcfd74dd18973e5] django.channels.server: HTTP GET /api/project/list 200 [0.06, 127.0.0.1:49226]
+INFO     [2024-04-24 13:55:36,618] [acf03731157c4509a68f920b81df5378] django.channels.server: HTTP GET /api/http/list?name=&page=1&project=&node=1 200 [0.07, 127.0.0.1:49225]
+INFO     [2024-04-24 13:55:36,630] [04532841ab7b4d44b5bfb4622622df8e] django.channels.server: HTTP OPTIONS /api/http/list?name=&page=1&project=5&node=1 200 [0.00, 127.0.0.1:49225]
+INFO     [2024-04-24 13:55:36,631] [a32ec0af75fe405ca919c11408b35fcf] django.channels.server: HTTP OPTIONS /api/tree/5&0 200 [0.00, 127.0.0.1:49226]
+INFO     [2024-04-24 13:55:36,652] [b6b804ef8ce843ddbb1c4bb7990ab238] django.channels.server: HTTP GET /api/http/list?name=&page=1&project=5&node=1 200 [0.02, 127.0.0.1:49226]
+INFO     [2024-04-24 13:55:36,654] [8345433b681c49b6995900fcda90cad9] django.channels.server: HTTP GET /api/tree/5&0 200 [0.02, 127.0.0.1:49225]
+INFO     [2024-04-24 13:55:39,820] [32182ed2955d43ec9861a9be73152ed2] django.channels.server: HTTP OPTIONS /api/http/list?name=&page=1&project=5&node=1 200 [0.00, 127.0.0.1:49225]
+INFO     [2024-04-24 13:55:39,835] [f82ed64cd633439c99767b8ca4c04354] django.channels.server: HTTP GET /api/http/list?name=&page=1&project=5&node=1 200 [0.01, 127.0.0.1:49225]
+INFO     [2024-04-24 13:55:43,144] [f3072e95018647478bf4585ead9e5bdc] django.channels.server: HTTP OPTIONS /api/http/list?name=&page=1&project=5&node=1 200 [0.00, 127.0.0.1:49225]
+INFO     [2024-04-24 13:55:43,164] [5e90b30e9ad34519bfce430bade3bba9] django.channels.server: HTTP GET /api/http/list?name=&page=1&project=5&node=1 200 [0.02, 127.0.0.1:49225]
+INFO     [2024-04-24 13:58:26,454] [ca1a9a392a7b471c938870a3f3ad71e4] django.channels.server: HTTP OPTIONS /api/http/list?name=&page=1&project=&node=1 200 [0.01, 127.0.0.1:62049]
+INFO     [2024-04-24 13:58:26,457] [11beddca73ef466ea3870aeed0fb61f8] django.channels.server: HTTP OPTIONS /api/project/list 200 [0.00, 127.0.0.1:62050]
+INFO     [2024-04-24 13:58:26,515] [ee0723bef76a422eb3b6e875ec39ad5a] django.channels.server: HTTP GET /api/project/list 200 [0.05, 127.0.0.1:62049]
+INFO     [2024-04-24 13:58:26,517] [e9e2f717b0aa4684a3b9613302db28d4] django.channels.server: HTTP GET /api/http/list?name=&page=1&project=&node=1 200 [0.06, 127.0.0.1:62050]
+INFO     [2024-04-24 13:58:26,525] [38efc0f861084292982215720250482a] django.channels.server: HTTP OPTIONS /api/http/list?name=&page=1&project=5&node=1 200 [0.00, 127.0.0.1:62050]
+INFO     [2024-04-24 13:58:26,529] [894fee538571489b98437365e3c5803f] django.channels.server: HTTP OPTIONS /api/tree/5&0 200 [0.01, 127.0.0.1:62049]
+INFO     [2024-04-24 13:58:26,550] [68af96a3e84547ddb2724d4d7ce9e6d2] django.channels.server: HTTP GET /api/http/list?name=&page=1&project=5&node=1 200 [0.02, 127.0.0.1:62050]
+INFO     [2024-04-24 13:58:26,551] [6ff53ac183434584b31f235e17da080b] django.channels.server: HTTP GET /api/tree/5&0 200 [0.02, 127.0.0.1:62049]
+INFO     [2024-04-24 14:07:13,977] [5615c419a86644dbb176917d9fd220d2] django.channels.server: HTTP OPTIONS /api/env/list 200 [0.00, 127.0.0.1:54060]
+INFO     [2024-04-24 14:07:14,045] [6ea6c3a3167e48a8bd271bcd9b3ca9c3] django.channels.server: HTTP GET /api/env/list 200 [0.06, 127.0.0.1:54060]
+INFO     [2024-04-24 14:22:06,779] [4d20274b69b24290a8014fa132b6489c] django.channels.server: HTTP OPTIONS /api/env/list 200 [0.00, 127.0.0.1:55700]
+INFO     [2024-04-24 14:22:06,787] [0723b2d443404f69a60a4da6aff02d93] django.channels.server: HTTP GET /api/env/list 200 [0.01, 127.0.0.1:55700]
+INFO     [2024-04-24 14:22:22,649] [2b0a800be1814b4db67d270496ac1f9d] django.channels.server: HTTP OPTIONS /api/env/list 200 [0.00, 127.0.0.1:55700]
+INFO     [2024-04-24 14:22:22,659] [e21f2bbd9aef4f3a9768cac2401e315e] django.channels.server: HTTP GET /api/env/list 200 [0.01, 127.0.0.1:55700]
+INFO     [2024-04-24 14:23:49,735] [bfe56d9aade14a899237dfddd0055c61] django.channels.server: HTTP OPTIONS /api/env/list 200 [0.00, 127.0.0.1:55796]
+INFO     [2024-04-24 14:23:49,739] [6da9676c278645e1843af25c54f73e87] django.channels.server: HTTP OPTIONS /api/env/list 200 [0.00, 127.0.0.1:55797]
+INFO     [2024-04-24 14:23:49,746] [666eef1395db4273aac99b1f81dcc3b9] django.channels.server: HTTP GET /api/env/list 200 [0.01, 127.0.0.1:55796]
+INFO     [2024-04-24 14:23:49,754] [d5b25fdde41741479ad60014ab3b4935] django.channels.server: HTTP GET /api/env/list 200 [0.01, 127.0.0.1:55796]
+INFO     [2024-04-24 14:23:53,910] [ad0482138bde4057b8ddd0e79ebd26d5] django.channels.server: HTTP OPTIONS /api/login/ 200 [0.00, 127.0.0.1:55796]
+INFO     [2024-04-24 14:23:54,128] [1d7edd09a130445c834c82db99d0ffa4] django.channels.server: HTTP POST /api/login/ 200 [0.22, 127.0.0.1:55796]
+INFO     [2024-04-24 14:23:54,354] [88960c176e1a4133b8ac6cfff849062a] django.channels.server: HTTP OPTIONS /api/env/list 200 [0.00, 127.0.0.1:55796]
+INFO     [2024-04-24 14:23:54,356] [dc18feb0e3224aed93e369e44b24a077] django.channels.server: HTTP OPTIONS /api/env/list 200 [0.00, 127.0.0.1:55797]
+INFO     [2024-04-24 14:23:54,415] [a1adf2b4e8a941d2bce208aaa2bf241e] django.channels.server: HTTP GET /api/env/list 200 [0.06, 127.0.0.1:55796]
+INFO     [2024-04-24 14:23:54,470] [536d728d00434ce4b82f3dfff3d04b78] django.channels.server: HTTP GET /api/env/list 200 [0.05, 127.0.0.1:55797]
+INFO     [2024-04-24 14:23:58,604] [3502b05a2f014ac3be85431ace68d18f] django.channels.server: HTTP OPTIONS /api/http/list?name=&page=1&project=&node=1 200 [0.00, 127.0.0.1:55797]
+INFO     [2024-04-24 14:23:58,608] [14a749097dcd4cf79851b8a5b78c393b] django.channels.server: HTTP OPTIONS /api/project/list 200 [0.00, 127.0.0.1:55796]
+INFO     [2024-04-24 14:23:58,656] [47f59bb708614f29b53c67da30952f7c] django.channels.server: HTTP GET /api/project/list 200 [0.05, 127.0.0.1:55796]
+INFO     [2024-04-24 14:23:58,658] [9b400e1ca340443492962149113dd720] django.channels.server: HTTP GET /api/http/list?name=&page=1&project=&node=1 200 [0.05, 127.0.0.1:55797]
+INFO     [2024-04-24 14:23:58,670] [1340d3b66d964c5488888b4ad972b144] django.channels.server: HTTP OPTIONS /api/http/list?name=&page=1&project=5&node=1 200 [0.00, 127.0.0.1:55797]
+INFO     [2024-04-24 14:23:58,676] [68a7a5049e614624aca152c96f9e4cc5] django.channels.server: HTTP OPTIONS /api/tree/5&0 200 [0.00, 127.0.0.1:55796]
+INFO     [2024-04-24 14:23:58,688] [33440936ab944057abd2f8c0fef3cff9] django.channels.server: HTTP GET /api/http/list?name=&page=1&project=5&node=1 200 [0.02, 127.0.0.1:55797]
+INFO     [2024-04-24 14:23:58,695] [23e92de0758a4297ac9ba8b174c7517f] django.channels.server: HTTP GET /api/tree/5&0 200 [0.01, 127.0.0.1:55796]
+INFO     [2024-04-24 14:24:05,521] [7eede7cfaa7a453b8b419dc105ae940b] django.channels.server: HTTP OPTIONS /api/env/list 200 [0.00, 127.0.0.1:55796]
+INFO     [2024-04-24 14:24:05,522] [a73244fe9838442ab7cfcce713b8f691] django.channels.server: HTTP OPTIONS /api/http/list?name=&page=1&project=&node=1 200 [0.00, 127.0.0.1:55797]
+INFO     [2024-04-24 14:24:05,528] [70df794861a94e55b357a2bc8c182db3] django.channels.server: HTTP OPTIONS /api/project/list 200 [0.00, 127.0.0.1:55796]
+INFO     [2024-04-24 14:24:05,611] [efcc8e952efa497f9ebc9c0d623e8f05] django.channels.server: HTTP GET /api/http/list?name=&page=1&project=&node=1 200 [0.09, 127.0.0.1:55797]
+INFO     [2024-04-24 14:24:05,617] [fbdd10725e47416e8a1c29adb90bc0b4] django.channels.server: HTTP GET /api/project/list 200 [0.09, 127.0.0.1:55796]
+INFO     [2024-04-24 14:24:05,625] [e2312ca9d17948e0b69271888a135f35] django.channels.server: HTTP GET /api/env/list 200 [0.10, 127.0.0.1:55841]
+INFO     [2024-04-24 14:24:05,779] [5512b5e8d23e45e7beee43406ab3788b] django.channels.server: HTTP OPTIONS /api/http/list?name=&page=1&project=5&node=1 200 [0.00, 127.0.0.1:55841]
+INFO     [2024-04-24 14:24:05,795] [9b5cddc0c2e140a9ab7a46a27df0071a] django.channels.server: HTTP GET /api/http/list?name=&page=1&project=5&node=1 200 [0.01, 127.0.0.1:55841]
+INFO     [2024-04-24 14:24:05,844] [47961039f7c1430581c146399471f541] django.channels.server: HTTP OPTIONS /api/tree/5&0 200 [0.00, 127.0.0.1:55841]
+INFO     [2024-04-24 14:24:05,861] [f03175f8d367452e97b7077443389afa] django.channels.server: HTTP GET /api/tree/5&0 200 [0.01, 127.0.0.1:55841]
+INFO     [2024-04-24 14:24:10,588] [88c093315bc44ce39c77f6471d9cf080] django.channels.server: HTTP OPTIONS /api/env/list 200 [0.00, 127.0.0.1:55841]
+INFO     [2024-04-24 14:24:10,589] [548bdcb5dcad4018ae28317d3e1b16fc] django.channels.server: HTTP OPTIONS /api/env/list 200 [0.00, 127.0.0.1:55796]
+INFO     [2024-04-24 14:24:10,671] [fea7014ad6434fc9ae0f7fcf73054840] django.channels.server: HTTP GET /api/env/list 200 [0.08, 127.0.0.1:55796]
+INFO     [2024-04-24 14:24:10,728] [1b94150e8989447aafe2d3103355576f] django.channels.server: HTTP GET /api/env/list 200 [0.06, 127.0.0.1:55841]
+INFO     [2024-04-24 14:24:15,844] [8cb08e5d40634717891e83ee718391b6] django.channels.server: HTTP OPTIONS /api/http/list?name=&page=1&project=&node=1 200 [0.01, 127.0.0.1:55841]
+INFO     [2024-04-24 14:24:15,852] [5f857c583b24469f9de2d0a151eaba4d] django.channels.server: HTTP OPTIONS /api/project/list 200 [0.00, 127.0.0.1:55796]
+INFO     [2024-04-24 14:24:15,905] [c1d93352bc1343a5ac82c4b7f7d8aac5] django.channels.server: HTTP GET /api/project/list 200 [0.05, 127.0.0.1:55796]
+INFO     [2024-04-24 14:24:15,909] [d834eecdc4ea48de8e90b2233718c2af] django.channels.server: HTTP GET /api/http/list?name=&page=1&project=&node=1 200 [0.06, 127.0.0.1:55841]
+INFO     [2024-04-24 14:24:15,918] [6a6372bcf4bc49ddbf563afc2cbf5b19] django.channels.server: HTTP OPTIONS /api/http/list?name=&page=1&project=5&node=1 200 [0.00, 127.0.0.1:55841]
+INFO     [2024-04-24 14:24:15,919] [1a69a2a1584c48bf8280d4e25ff6ee30] django.channels.server: HTTP OPTIONS /api/tree/5&0 200 [0.00, 127.0.0.1:55796]
+INFO     [2024-04-24 14:24:15,939] [1085543caba541ba986093ab11a12af7] django.channels.server: HTTP GET /api/tree/5&0 200 [0.02, 127.0.0.1:55841]
+INFO     [2024-04-24 14:24:15,945] [509b30367be1412093c2fc29b0321ad5] django.channels.server: HTTP GET /api/http/list?name=&page=1&project=5&node=1 200 [0.02, 127.0.0.1:55796]
+INFO     [2024-04-24 14:24:17,166] [ce16478060f04547a5c94f6444319ba1] django.channels.server: HTTP OPTIONS /api/http/list?name=&page=1&project=5&node=1 200 [0.00, 127.0.0.1:55796]
+INFO     [2024-04-24 14:24:17,183] [e69113200a8d4ce39dead8a5d8babe56] django.channels.server: HTTP GET /api/http/list?name=&page=1&project=5&node=1 200 [0.02, 127.0.0.1:55796]
+INFO     [2024-04-24 14:24:21,751] [76692e444772435ab2e5399325f0010b] django.channels.server: HTTP OPTIONS /api/env/list 200 [0.00, 127.0.0.1:55796]
+INFO     [2024-04-24 14:24:21,752] [f3f86bedaeb847779b8763560b16f574] django.channels.server: HTTP OPTIONS /api/http/list?name=&page=1&project=&node=1 200 [0.00, 127.0.0.1:55841]
+INFO     [2024-04-24 14:24:21,760] [882d274edb694a25b8dfe94b7489c6d9] django.channels.server: HTTP OPTIONS /api/project/list 200 [0.00, 127.0.0.1:55797]
+INFO     [2024-04-24 14:24:21,852] [52b51e6b84c04a2fb20040083966c08d] django.channels.server: HTTP GET /api/http/list?name=&page=1&project=&node=1 200 [0.10, 127.0.0.1:55841]
+INFO     [2024-04-24 14:24:21,853] [838f0167678741798e5759e23fe77b3b] django.channels.server: HTTP GET /api/project/list 200 [0.09, 127.0.0.1:55797]
+INFO     [2024-04-24 14:24:21,857] [c78c37ceb0224924802c83c5294de5a8] django.channels.server: HTTP GET /api/env/list 200 [0.10, 127.0.0.1:55796]
+INFO     [2024-04-24 14:24:21,962] [d7739128e9a34541b338d5f70a13cf58] django.channels.server: HTTP OPTIONS /api/http/list?name=&page=1&project=5&node=1 200 [0.00, 127.0.0.1:55796]
+INFO     [2024-04-24 14:24:21,963] [044e0859e99741e09ccda50c18e3dd9a] django.channels.server: HTTP OPTIONS /api/tree/5&0 200 [0.00, 127.0.0.1:55797]
+INFO     [2024-04-24 14:24:21,986] [76d0fcdad2484bfbb4314b8311596f5e] django.channels.server: HTTP GET /api/http/list?name=&page=1&project=5&node=1 200 [0.02, 127.0.0.1:55797]
+INFO     [2024-04-24 14:24:21,988] [b6e1ded2ac7f45d4a49b72d2f44afd18] django.channels.server: HTTP GET /api/tree/5&0 200 [0.02, 127.0.0.1:55796]
+INFO     [2024-04-24 14:24:31,162] [9d68938a1e014c5f90b9df5d556f11ad] django.channels.server: HTTP OPTIONS /api/env/list 200 [0.00, 127.0.0.1:55797]
+INFO     [2024-04-24 14:24:31,231] [87b469fe960a471aa6f78525870df7cb] django.channels.server: HTTP GET /api/env/list 200 [0.07, 127.0.0.1:55797]
+INFO     [2024-04-24 14:25:15,707] [2d24ff32d63e416f80ce94554ff702ce] django.channels.server: HTTP OPTIONS /api/env/list 200 [0.00, 127.0.0.1:55797]
+INFO     [2024-04-24 14:25:15,766] [41b6979fe8684dbcb5be85188430e567] django.channels.server: HTTP GET /api/env/list 200 [0.06, 127.0.0.1:55797]
+INFO     [2024-04-24 14:26:13,049] [adbb663d342c4c8a83a1c899291f67ac] django.channels.server: HTTP OPTIONS /api/env/list 200 [0.00, 127.0.0.1:55797]
+INFO     [2024-04-24 14:26:13,111] [9422d0fec3b54462a3966edfce670628] django.channels.server: HTTP GET /api/env/list 200 [0.06, 127.0.0.1:55797]
+INFO     [2024-04-24 15:07:41,727] [none] django.utils.autoreload: Watching for file changes with StatReloader
+WARNING  [2024-04-24 15:07:54,338] [65ea141bf7d94dfeb9dd9a24c24fbe13] django.request: Not Found: /ws/chat
+WARNING  [2024-04-24 15:07:54,338] [65ea141bf7d94dfeb9dd9a24c24fbe13] django.server: "GET /ws/chat HTTP/1.1" 404 2852
+WARNING  [2024-04-24 15:07:55,581] [cbfd15ecf4794726b0fb53b1163a8114] django.request: Not Found: /ws/chat
+WARNING  [2024-04-24 15:07:55,582] [cbfd15ecf4794726b0fb53b1163a8114] django.server: "GET /ws/chat HTTP/1.1" 404 2852
+WARNING  [2024-04-24 15:07:56,469] [40f4d2a124974bf8b898761ee0b0608c] django.request: Not Found: /ws/chat
+WARNING  [2024-04-24 15:07:56,469] [40f4d2a124974bf8b898761ee0b0608c] django.server: "GET /ws/chat HTTP/1.1" 404 2852
+WARNING  [2024-04-24 15:07:57,082] [7386628a75f5440ca4d01dc7efa7a25c] django.request: Not Found: /ws/chat
+WARNING  [2024-04-24 15:07:57,084] [7386628a75f5440ca4d01dc7efa7a25c] django.server: "GET /ws/chat HTTP/1.1" 404 2852
+WARNING  [2024-04-24 15:07:57,322] [d78556cd53894e28a0f141817a2775c4] django.request: Not Found: /ws/chat
+WARNING  [2024-04-24 15:07:57,323] [d78556cd53894e28a0f141817a2775c4] django.server: "GET /ws/chat HTTP/1.1" 404 2852
+WARNING  [2024-04-24 15:07:57,534] [8c5a5ffee4814b57aacf48c537791bb7] django.request: Not Found: /ws/chat
+WARNING  [2024-04-24 15:07:57,535] [8c5a5ffee4814b57aacf48c537791bb7] django.server: "GET /ws/chat HTTP/1.1" 404 2852
+WARNING  [2024-04-24 15:07:57,735] [8aa2afefaa1a442da027a6caaba5af44] django.request: Not Found: /ws/chat
+WARNING  [2024-04-24 15:07:57,736] [8aa2afefaa1a442da027a6caaba5af44] django.server: "GET /ws/chat HTTP/1.1" 404 2852
+WARNING  [2024-04-24 15:07:57,972] [dd2e6c7cf240474db12255aacd1dc34f] django.request: Not Found: /ws/chat
+WARNING  [2024-04-24 15:07:57,973] [dd2e6c7cf240474db12255aacd1dc34f] django.server: "GET /ws/chat HTTP/1.1" 404 2852
+WARNING  [2024-04-24 15:07:58,172] [1b982c8b60544a7cb0d8ed7a67a31a62] django.request: Not Found: /ws/chat
+WARNING  [2024-04-24 15:07:58,173] [1b982c8b60544a7cb0d8ed7a67a31a62] django.server: "GET /ws/chat HTTP/1.1" 404 2852
+WARNING  [2024-04-24 15:07:58,355] [320d668a24194d6cbae84e8b3f99ed3c] django.request: Not Found: /ws/chat
+WARNING  [2024-04-24 15:07:58,356] [320d668a24194d6cbae84e8b3f99ed3c] django.server: "GET /ws/chat HTTP/1.1" 404 2852
+WARNING  [2024-04-24 15:07:58,590] [c2e50000e77e4aab9c15d0ec4a5defe6] django.request: Not Found: /ws/chat
+WARNING  [2024-04-24 15:07:58,591] [c2e50000e77e4aab9c15d0ec4a5defe6] django.server: "GET /ws/chat HTTP/1.1" 404 2852
+WARNING  [2024-04-24 15:07:58,759] [f145c01c42b040b6a601a57fe530707d] django.request: Not Found: /ws/chat
+WARNING  [2024-04-24 15:07:58,759] [f145c01c42b040b6a601a57fe530707d] django.server: "GET /ws/chat HTTP/1.1" 404 2852
+WARNING  [2024-04-24 15:07:59,085] [76cbcfb3171e48b693e1ba323864a522] django.request: Not Found: /ws/chat
+WARNING  [2024-04-24 15:07:59,086] [76cbcfb3171e48b693e1ba323864a522] django.server: "GET /ws/chat HTTP/1.1" 404 2852
+INFO     [2024-04-24 15:08:20,225] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 15:08:32,664] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 15:09:17,239] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 15:16:16,304] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 15:17:12,698] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 15:17:40,503] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 15:18:53,563] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 15:19:39,577] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-24 15:20:41,330] [none] django.utils.autoreload: Watching for file changes with StatReloader

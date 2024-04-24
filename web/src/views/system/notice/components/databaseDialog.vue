@@ -11,14 +11,14 @@
       <el-form-item label="通知名称" :required="true" prop="name">
         <el-input v-model="form.name" placeholder="写一个第三方通知名称，标记用途"></el-input>
       </el-form-item>
-      <el-form-item label="触发事件" :required="true" prop="host">
+      <el-form-item label="触发事件" prop="project">
         <el-select
           popper-class="custom-header"
           multiple
           clearable
           collapse-tags
           :max-collapse-tags="1"
-          class="selectOpt" v-model="form.project" placeholder="请选择触发项目"
+          class="selectOpt" v-model="form.trigger_events" placeholder="请选择触发项目"
           :popper-append-to-body="false"
           style="width: 150px;"
         >
@@ -39,11 +39,11 @@
           </el-option>
         </el-select>
       </el-form-item>
-      <el-form-item label="通知渠道" :required="true" prop="port">
+      <el-form-item label="通知渠道" prop="msg_type">
         <el-space :size="10" class="button-container">
           <el-check-tag
             class="custom-check-tag"
-            v-for="(button, index) in buttons" @change="onChange(button)"
+            v-for="(button, index) in buttons" @change="onChange(button)" v-model="form.msg_type"
             :checked="button.checked" :key="index" style="width: 110px;height: 48px;margin-bottom: 10px">
             <SvgIcon :icon-class="button.svg"
                      style="width: 30px; height: 30px"/>
@@ -51,8 +51,8 @@
           </el-check-tag>
         </el-space>
       </el-form-item>
-      <el-form-item label="服务URL" :required="true" prop="user">
-        <el-input v-model="form.user" placeholder="请输入账号"></el-input>
+      <el-form-item label="服务URL" :required="true" prop="url">
+        <el-input v-model="form.url" placeholder="请输入账号"></el-input>
       </el-form-item>
     </el-form>
     <div class="pull-right">
@@ -63,11 +63,11 @@
 </template>
 
 <script lang="ts" setup>
-import {reactive, ref, watch} from "vue";
+import { onMounted, reactive, ref, watch } from "vue";
 import {ElMessage, FormInstance} from "element-plus";
-import {} from "@/api/setting";
+import {noticeSaveOrUpdate} from "@/api/setting";
 import {showErrMessage} from "@/utils/element";
-import { projectList } from "@/api/project";
+import { projectList, projectDetail } from "@/api/project";
 import SvgIcon from "@/components/SvgIcon/index.vue";
 
 const dialog = ref<boolean>(false)
@@ -76,18 +76,20 @@ const checkAll = ref(false)
 
 const indeterminate = ref(false)
 
+const queryParams = reactive({
+  id: []
+})
+
 let form = reactive({
   name: '',
-  project: ref<CheckboxValueType[]>([]),
-  host: '',
-  port: '',
-  user: '',
-  password: ''
+  trigger_events: [],
+  url: '',
+  msg_type: 'qiyeweixin'
 })
 
 const ruleFormRef = ref<FormInstance>()
 
-const pk = ref()
+const pk = ref(0)
 
 const title = ref()
 
@@ -101,11 +103,8 @@ const buttons = ref([
 ]);
 
 const rules = reactive({
-  database: [{required: true, trigger: "blur", message: "请输入数据库名称！"}],
-  host: [{required: true, trigger: "blur", message: "请输入地址！"}],
-  port: [{required: true, trigger: "blur", message: "请输入端口！"}],
-  user: [{required: true, trigger: "blur", message: "请输入账号！"}],
-  password: [{required: true, trigger: "blur", message: "请输入密码！"}],
+  name: [{required: true, trigger: "blur", message: "请输入通知名称！"}],
+  url: [{required: true, trigger: "blur", message: "请输入服务URL！"}],
 })
 
 const emits = defineEmits(['queryList'])
@@ -121,14 +120,30 @@ function close() {
 const handleCheckAll = (val: CheckboxValueType) => {
   indeterminate.value = false
   if (val) {
-    form.project = projectOption.value.map((_) => _.value)
+    form.trigger_events = projectOption.value.map((_) => _.value)
   } else {
-    form.project = []
+    form.trigger_events = []
   }
 }
 
+const onChange = (button) => {
+
+  let buttonT = buttons.value.find(item => item.id === button.id);
+  let buttonF = buttons.value.filter(item => item.id !== button.id);
+
+  if (buttonT) {
+    // 选中的设置为相反值
+    buttonT["checked"] = !buttonT["checked"];
+  }
+  // 未当次选中设置为false, 避免出现多个按钮出现选中状态
+  buttonF.forEach(item => {
+    item["checked"] = false;
+  });
+  form.msg_type = button.svg
+}
+
 const initProjectList = () => {
-  projectList({}).then((response) => {
+  projectList().then((response) => {
     let res = response.data.results
     for (let i = 0; i < res.length; i++) {
       projectOption.value.push({
@@ -141,28 +156,38 @@ const initProjectList = () => {
   })
 }
 
-initProjectList()
+const initTriggerEvents = () => {
+  for (let i = 0; i < queryParams.id.length; i++) {
+
+    projectDetail({id: queryParams.id[i]}).then((response) => {
+      let res = response.data.data
+      console.log(res['name'])
+      console.log(res['id'])
+      form.trigger_events.push({
+        "label": res["name"],
+        "value": res["id"],
+        "avatar": res["avatar"]
+      })
+      console.log(form.trigger_events)
+    }).catch((error) => {
+    })
+  }
+}
 
 const onSureClick = (formName: FormInstance | undefined) => {
   if (!formName) return
   formName.validate(async (valid) => {
     if (valid) {
       let ret: any = null
-      console.log(pk.value)
-      if (pk.value) {
-        form["id"] = pk.value
-        ret = await databaseUpdate(form)
-      } else {
-        ret = await databaseCreate(form)
-
-      }
+      form["id"] = pk.value
+      ret = await noticeSaveOrUpdate(form)
       const {code, data, msg} = ret.data
       dialog.value = false
       showErrMessage(code.toString(), msg)
       formName.resetFields()
     } else {
       console.log('error submit!')
-      ElMessage.error("数据库新增失败请重试!")
+      ElMessage.error("通知设置编辑失败请重试!")
       return false
     }
   })
@@ -170,19 +195,25 @@ const onSureClick = (formName: FormInstance | undefined) => {
 
 const show = (item = {}) => {
   title.value = '新增通知事件'
+  queryParams.id = []
+  form.trigger_events = []
   if (item.id) {
     title.value = '编辑通知事件'
     pk.value = item.id
     Object.keys(item).forEach(key => {
-      form.database = item.database
-      form.host = item.host
-      form.port = item.port
-      form.user = item.user
-      form.password = item.password
+      form.name = item.name
+      form.msg_type = item.msg_type
+      queryParams.id = eval(item.trigger_events)
+      form.url = item.url
+      initTriggerEvents()
     })
   }
   dialog.value = true
 }
+
+onMounted(() => {
+  initProjectList()
+})
 
 watch(form.project, (val) => {
   if (val.length === 0) {

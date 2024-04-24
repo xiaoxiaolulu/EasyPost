@@ -1,5 +1,7 @@
 import json
 import os
+
+from channels.generic.websocket import AsyncWebsocketConsumer
 from django.core.exceptions import ObjectDoesNotExist
 from rest_framework import (
     status,

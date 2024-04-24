@@ -4,14 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Add notice API endpoints for frontend consumption.">
-      <change beforePath="$PROJECT_DIR$/api/dao/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/setting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/filters/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/filters/project.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Changed API endpoints and added new columns in the database for notices.">
+      <change afterPath="$PROJECT_DIR$/api/service/consumers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/service/routings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/tests/websocket.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web/src/views/https/api/components/websocket.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/management/commands/runserver.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/management/commands/runserver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/service/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/https.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/asgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/api/setting.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/api/setting.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/system/notice/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/system/notice/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/routers/modules/https.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/routers/modules/https.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/routers/modules/other.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/routers/modules/other.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/https/api/components/extract.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/api/components/extract.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/other/svgIcon/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/other/svgIcon/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/system/notice/components/databaseDialog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/system/notice/components/databaseDialog.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +119,7 @@
     "Python tests.Python tests in __init__.py.executor": "Run",
     "Python tests.Python tests in test_custom_token.py.executor": "Run",
     "Python tests.Python tests in test_engine.py.executor": "Run",
+    "Python tests.Python tests in ws_handler.py.executor": "Run",
     "Python.DBClient.executor": "Run",
     "Python.__init__ (1).executor": "Run",
     "Python.__init__ (2).executor": "Run",
@@ -118,7 +132,9 @@
     "Python.recursion.executor": "Run",
     "Python.setting.executor": "Run",
     "Python.time.executor": "Run",
+    "Python.websocket.executor": "Run",
     "Python.weixin.executor": "Run",
+    "Python.ws_handler.executor": "Run",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -153,37 +169,14 @@
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\scheduler" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\86135\Desktop\EasyPost\backend\config" />
+      <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\service" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\utils" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\tests" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api" />
-      <recent name="C:\Users\86135\Desktop\EasyPost\backend" />
-      <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Django Server.backend">
-    <configuration name="DBClient" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="backend" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/unitrunner/database" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/unitrunner/database/DBClient.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.ws_handler">
     <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <option name="ENV_FILES" value="" />
@@ -193,12 +186,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api/service" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/unitrunner/request" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/service/__init__.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/unitrunner/request/__init__.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -207,7 +200,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="qy" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="websocket" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -216,35 +209,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/unitrunner/msg" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api/tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/unitrunner/msg/qy.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="time" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="backend" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/time.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/tests/websocket.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -268,6 +238,29 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/unitrunner/msg/weixin.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ws_handler" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/unitrunner/request" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/unitrunner/request/ws_handler.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -302,21 +295,37 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests in C:/Users/86135/Desktop/EasyPost/backend/unitrunner/request/ws_handler.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/unitrunner/request" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/unitrunner/request/ws_handler.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Django Server.backend" />
+      <item itemvalue="Python.websocket" />
       <item itemvalue="Python.weixin" />
-      <item itemvalue="Python.qy" />
-      <item itemvalue="Python.DBClient" />
+      <item itemvalue="Python.ws_handler" />
       <item itemvalue="Python.__init__" />
-      <item itemvalue="Python.time" />
+      <item itemvalue="Python tests.Python tests in C:/Users/86135/Desktop/EasyPost/backend/unitrunner/request/ws_handler.py" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.weixin" />
-        <item itemvalue="Python.qy" />
-        <item itemvalue="Python.DBClient" />
-        <item itemvalue="Python.time" />
+        <item itemvalue="Python.websocket" />
+        <item itemvalue="Python.ws_handler" />
         <item itemvalue="Python.__init__" />
+        <item itemvalue="Python tests.Python tests in C:/Users/86135/Desktop/EasyPost/backend/unitrunner/request/ws_handler.py" />
+        <item itemvalue="Python.weixin" />
       </list>
     </recent_temporary>
   </component>
@@ -467,15 +476,7 @@
       <workItem from="1712801065778" duration="11896000" />
       <workItem from="1712908146550" duration="34648000" />
       <workItem from="1713319714158" duration="24461000" />
-      <workItem from="1713754708273" duration="15313000" />
-    </task>
-    <task id="LOCAL-00330" summary="&quot;Modify setting.py to add exit code message in debug function&quot;">
-      <option name="closed" value="true" />
-      <created>1712135866698</created>
-      <option name="number" value="00330" />
-      <option name="presentableId" value="LOCAL-00330" />
-      <option name="project" value="LOCAL" />
-      <updated>1712135866698</updated>
+      <workItem from="1713754708273" duration="34896000" />
     </task>
     <task id="LOCAL-00331" summary="This commit includes changes to several files. In the `ReportList.vue` file, the `queryList` function has been modified to handle errors more gracefully and to show a message when there are no results. The `ReportDetail.vue` file has been updated to include a `ReportDetailInfo` component that displays detailed information about a selected report. The `styles.scss` file includes some new styles for the `ReportDetailInfo` component. The `index.vue` file has been updated with some new data">
       <option name="closed" value="true" />
@@ -861,7 +862,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713852002573</updated>
     </task>
-    <option name="localTasksCounter" value="379" />
+    <task id="LOCAL-00379" summary="Changed API endpoints and added new columns in the database for notices.">
+      <option name="closed" value="true" />
+      <created>1713856411251</created>
+      <option name="number" value="00379" />
+      <option name="presentableId" value="LOCAL-00379" />
+      <option name="project" value="LOCAL" />
+      <updated>1713856411255</updated>
+    </task>
+    <option name="localTasksCounter" value="380" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -891,21 +900,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add Notice API views and serializers for listing, creating, updating, and deleting notices" />
-    <MESSAGE value="Add Notice API views and serializers for listing, creating, updating, and deleting notices." />
-    <MESSAGE value="Add Notice API views and serializers for listing, creating, updating, and deleting notices. Also" />
-    <MESSAGE value="Add Notice API views and serializers for listing, creating, updating, and deleting notices. Also," />
-    <MESSAGE value="Add Notice API views and serializers for listing, creating, updating, and deleting notices. Also, add" />
-    <MESSAGE value="Add Notice API views and serializers for listing, creating, updating, and deleting notices. Also, add filter" />
-    <MESSAGE value="Add Notice API views and serializers for listing, creating, updating, and deleting notices. Also, add filter back" />
-    <MESSAGE value="Add Notice API views and serializers for listing, creating, updating, and deleting notices. Also, add filter backends" />
-    <MESSAGE value="Add Notice API views and serializers for listing, creating, updating, and deleting notices. Also, add filter backends for" />
-    <MESSAGE value="Add Notice API views and serializers for listing, creating, updating, and deleting notices. Also, add filter backends for searching" />
-    <MESSAGE value="Add Notice API views and serializers for listing, creating, updating, and deleting notices. Also, add filter backends for searching and" />
-    <MESSAGE value="Add Notice API views and serializers for listing, creating, updating, and deleting notices. Also, add filter backends for searching and ordering" />
-    <MESSAGE value="Add Notice API views and serializers for listing, creating, updating, and deleting notices. Also, add filter backends for searching and ordering not" />
-    <MESSAGE value="Add Notice API views and serializers for listing, creating, updating, and deleting notices. Also, add filter backends for searching and ordering notices" />
-    <MESSAGE value="Add Notice API views and serializers for listing, creating, updating, and deleting notices. Also, add filter backends for searching and ordering notices." />
     <MESSAGE value="Add" />
     <MESSAGE value="Add notice" />
     <MESSAGE value="Add notice API" />
@@ -916,14 +910,29 @@
     <MESSAGE value="Add notice API endpoints for frontend" />
     <MESSAGE value="Add notice API endpoints for frontend consumption" />
     <MESSAGE value="Add notice API endpoints for frontend consumption." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add notice API endpoints for frontend consumption." />
+    <MESSAGE value="Changed" />
+    <MESSAGE value="Changed API" />
+    <MESSAGE value="Changed API end" />
+    <MESSAGE value="Changed API endpoints" />
+    <MESSAGE value="Changed API endpoints and" />
+    <MESSAGE value="Changed API endpoints and added" />
+    <MESSAGE value="Changed API endpoints and added new" />
+    <MESSAGE value="Changed API endpoints and added new columns" />
+    <MESSAGE value="Changed API endpoints and added new columns in" />
+    <MESSAGE value="Changed API endpoints and added new columns in the" />
+    <MESSAGE value="Changed API endpoints and added new columns in the database" />
+    <MESSAGE value="Changed API endpoints and added new columns in the database for" />
+    <MESSAGE value="Changed API endpoints and added new columns in the database for not" />
+    <MESSAGE value="Changed API endpoints and added new columns in the database for notices" />
+    <MESSAGE value="Changed API endpoints and added new columns in the database for notices." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed API endpoints and added new columns in the database for notices." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$recursion.coverage" NAME="recursion Coverage Results" MODIFIED="1712139211023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/backend$__init____2_.coverage" NAME="__init__ (2) Coverage Results" MODIFIED="1712555116629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/unitrunner/engine" />
     <SUITE FILE_PATH="coverage/backend$trees.coverage" NAME="trees Coverage Results" MODIFIED="1701767218934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/backend$registry.coverage" NAME="registry Coverage Results" MODIFIED="1705542881675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/events" />
-    <SUITE FILE_PATH="coverage/backend$.coverage" NAME=" Coverage Results" MODIFIED="1711611032672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/tests" />
+    <SUITE FILE_PATH="coverage/backend$.coverage" NAME=" Coverage Results" MODIFIED="1713860647019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/unitrunner/request" />
     <SUITE FILE_PATH="coverage/backend$cl.coverage" NAME="cl Coverage Results" MODIFIED="1692972573609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/protobuf_test" />
     <SUITE FILE_PATH="coverage/backend$api_migrate.coverage" NAME="api_migrate Coverage Results" MODIFIED="1712728494452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/backend$eternity.coverage" NAME="eternity Coverage Results" MODIFIED="1701253455406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/constructor" />
@@ -943,6 +952,7 @@
     <SUITE FILE_PATH="coverage/http_handler_py$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1699871291170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/backend$http_handler.coverage" NAME="http_handler Coverage Results" MODIFIED="1691322735662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/request" />
     <SUITE FILE_PATH="coverage/http_handler_py$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1699847256865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/backend$ws_handler.coverage" NAME="ws_handler Coverage Results" MODIFIED="1713929054730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/unitrunner/request" />
     <SUITE FILE_PATH="coverage/http_handler_py$global_func.coverage" NAME="global_func Coverage Results" MODIFIED="1699843223150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/backend$DBClient.coverage" NAME="DBClient Coverage Results" MODIFIED="1713167891785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/unitrunner/database" />
     <SUITE FILE_PATH="coverage/backend$step.coverage" NAME="step Coverage Results" MODIFIED="1705474725686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/models" />
@@ -951,14 +961,15 @@
     <SUITE FILE_PATH="coverage/backend$engine.coverage" NAME="engine Coverage Results" MODIFIED="1712555853037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/tests" />
     <SUITE FILE_PATH="coverage/backend$time.coverage" NAME="time Coverage Results" MODIFIED="1712916587385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/backend$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1707391988545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/backend$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1712911271463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/service" />
     <SUITE FILE_PATH="coverage/backend$qy.coverage" NAME="qy Coverage Results" MODIFIED="1713753970534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/unitrunner/msg" />
+    <SUITE FILE_PATH="coverage/backend$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1713863614387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/unitrunner/request" />
     <SUITE FILE_PATH="coverage/backend$__init____3_.coverage" NAME="__init__ (3) Coverage Results" MODIFIED="1709112766835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/dao" />
     <SUITE FILE_PATH="coverage/backend$Test__api_tests_test_user_list_TestUserListViewSet.coverage" NAME="Test: api.tests.test_user_list.TestUserListViewSet Coverage Results" MODIFIED="1712038591853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/backend$setting.coverage" NAME="setting Coverage Results" MODIFIED="1712038164027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/dao" />
     <SUITE FILE_PATH="coverage/backend$main.coverage" NAME="main Coverage Results" MODIFIED="1706091376465" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/celery_work" />
     <SUITE FILE_PATH="coverage/backend$manage.coverage" NAME="manage Coverage Results" MODIFIED="1711526108828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/backend$init_task.coverage" NAME="init_task Coverage Results" MODIFIED="1705894334573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/events" />
+    <SUITE FILE_PATH="coverage/backend$websocket.coverage" NAME="websocket Coverage Results" MODIFIED="1713929066201" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/tests" />
     <SUITE FILE_PATH="coverage/backend$decorator.coverage" NAME="decorator Coverage Results" MODIFIED="1706064703211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/backend$snowflake.coverage" NAME="snowflake Coverage Results" MODIFIED="1705989296959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/backend$weixin.coverage" NAME="weixin Coverage Results" MODIFIED="1713755686292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/unitrunner/msg" />
