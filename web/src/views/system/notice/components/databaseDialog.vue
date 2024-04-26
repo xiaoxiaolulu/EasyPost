@@ -267,14 +267,4 @@ defineExpose({
   width: 96px;
   height: 75px;
 }
-
-.content {
-  margin-left: 15px;
-  vertical-align: middle;
-  font-family: STXihei,serif;
-  color: #0e0f10;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 20px;
-}
 </style>

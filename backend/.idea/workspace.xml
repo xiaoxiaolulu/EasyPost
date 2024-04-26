@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Changed API endpoints and added new columns in the database for notices.">
+      <change afterPath="$PROJECT_DIR$/../web/src/icons/svg/mistake.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web/src/icons/svg/right.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/service/routings.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/routings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/styles/common.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/styles/common.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/src/views/https/api/components/websocket.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/api/components/websocket.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/system/notice/components/databaseDialog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/system/notice/components/databaseDialog.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -462,23 +464,7 @@
       <workItem from="1712908146550" duration="34648000" />
       <workItem from="1713319714158" duration="24461000" />
       <workItem from="1713754708273" duration="34896000" />
-      <workItem from="1714116470185" duration="1576000" />
-    </task>
-    <task id="LOCAL-00332" summary="This commit includes changes to several files. In the `ReportList.vue` file, the `queryList` function has been modified to handle errors more gracefully and to show a message when there are no results. The `ReportDetail and a new `ReportDetailInfo` component has been added to display detailed information about a selected report.">
-      <option name="closed" value="true" />
-      <created>1712471718343</created>
-      <option name="number" value="00332" />
-      <option name="presentableId" value="LOCAL-00332" />
-      <option name="project" value="LOCAL" />
-      <updated>1712471718343</updated>
-    </task>
-    <task id="LOCAL-00333" summary="Improve code readability and maintainability by using list comprehension, handle name filtering in `SettingDao` and update component route name.">
-      <option name="closed" value="true" />
-      <created>1712472796777</created>
-      <option name="number" value="00333" />
-      <option name="presentableId" value="LOCAL-00333" />
-      <option name="project" value="LOCAL" />
-      <updated>1712472796777</updated>
+      <workItem from="1714116470185" duration="2897000" />
     </task>
     <task id="LOCAL-00334" summary="&quot;Add Swagger data source and API migration&quot;">
       <option name="closed" value="true" />
@@ -856,7 +842,23 @@
       <option name="project" value="LOCAL" />
       <updated>1714116908441</updated>
     </task>
-    <option name="localTasksCounter" value="381" />
+    <task id="LOCAL-00381" summary="Changed API endpoints and added new columns in the database for notices.">
+      <option name="closed" value="true" />
+      <created>1714118481733</created>
+      <option name="number" value="00381" />
+      <option name="presentableId" value="LOCAL-00381" />
+      <option name="project" value="LOCAL" />
+      <updated>1714118481733</updated>
+    </task>
+    <task id="LOCAL-00382" summary="Changed API endpoints and added new columns in the database for notices.">
+      <option name="closed" value="true" />
+      <created>1714118681053</created>
+      <option name="number" value="00382" />
+      <option name="presentableId" value="LOCAL-00382" />
+      <option name="project" value="LOCAL" />
+      <updated>1714118681053</updated>
+    </task>
+    <option name="localTasksCounter" value="383" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

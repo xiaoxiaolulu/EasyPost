@@ -7112,3 +7112,16 @@ INFO     [2024-04-26 15:44:21,133] [none] django.utils.autoreload: C:\Users\8613
 INFO     [2024-04-26 15:44:22,130] [none] django.utils.autoreload: Watching for file changes with StatReloader
 WARNING  [2024-04-26 15:46:56,030] [4af0431db510498c9c3287eb4b20ec86] django.request: Not Found: /media/avatar/default.png
 WARNING  [2024-04-26 15:47:12,479] [8f55c1fe50914bb1a1e8609c88bddbbd] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-26 16:22:18,593] [d12426e6b0d54704a3b6351c0ddde7df] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-26 16:22:28,893] [5c455a6e91074842bed3966d59229b18] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-26 16:22:32,866] [c3c80662c29c4dd18a168f77c8d2de9b] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-26 16:22:34,228] [5210dc61dfca4282bbcd9e48efbb7d5d] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-26 16:22:38,213] [e70e170e55ab4164a07c46bc2dc6775b] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-26 16:22:39,390] [e4e59543cbe541e0801bcbc555d87cf2] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-26 16:22:40,567] [b5402b0c13834309aab41eea56bbd4d2] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-26 16:22:42,768] [bab361e0290e4cbaa7bbfddd296249ac] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-26 16:22:51,814] [605bbfc618cf4830a05af34f320819de] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-26 16:23:01,292] [9de61e9f365547fdbe4920f222d1dee6] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-26 16:23:41,698] [9a8f5c8829bc4504a223b5938c1247de] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-26 16:35:46,802] [624efe6ddda84be0a10bb7e0ff0e3d6f] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-26 16:35:56,856] [e443c93ca84e47ed9b481ec0ed8b1121] django.request: Not Found: /media/avatar/default.png
