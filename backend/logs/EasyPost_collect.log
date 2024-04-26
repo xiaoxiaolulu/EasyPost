@@ -7105,3 +7105,6 @@ INFO     [2024-04-25 17:47:54,995] [none] django.utils.autoreload: Watching for 
 WARNING  [2024-04-26 10:20:23,669] [d12eef8ade964118a3be11b2a904dd4d] django.request: Not Found: /media/avatar/default.png
 WARNING  [2024-04-26 11:11:10,308] [3ed2a506653f451c883be59b542781d9] django.request: Not Found: /media/avatar/default.png
 WARNING  [2024-04-26 11:28:10,582] [6afc2ebd0eb54979a8248e9dafb7e894] django.request: Not Found: /media/avatar/default.png
+INFO     [2024-04-26 15:28:03,570] [none] django.utils.autoreload: Watching for file changes with StatReloader
+WARNING  [2024-04-26 15:31:56,417] [90697a0b25f748298568616247a15225] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-26 15:32:45,650] [55999df4f02d48789c2d5368e46f3a37] django.request: Not Found: /media/avatar/default.png
