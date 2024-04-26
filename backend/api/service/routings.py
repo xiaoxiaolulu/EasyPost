@@ -4,5 +4,5 @@ from . import consumers
 
 # 这个变量是存放websocket的路由
 socket_urlpatterns = [
-    path('ws/chat', consumers.WebSocketForwardConsumer.as_asgi()),
+    path('websocket/test', consumers.WebSocketForwardConsumer.as_asgi()),
 ]

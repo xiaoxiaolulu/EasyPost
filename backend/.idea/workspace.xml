@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Changed API endpoints and added new columns in the database for notices.">
-      <change afterPath="$PROJECT_DIR$/../web/src/icons/svg/arrowdown.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/src/icons/svg/arrowup.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024_1_22_18_24__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024_1_22_18_24__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/service/routings.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/routings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/https/api/components/websocket.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/api/components/websocket.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -464,15 +462,7 @@
       <workItem from="1712908146550" duration="34648000" />
       <workItem from="1713319714158" duration="24461000" />
       <workItem from="1713754708273" duration="34896000" />
-      <workItem from="1714116470185" duration="428000" />
-    </task>
-    <task id="LOCAL-00331" summary="This commit includes changes to several files. In the `ReportList.vue` file, the `queryList` function has been modified to handle errors more gracefully and to show a message when there are no results. The `ReportDetail.vue` file has been updated to include a `ReportDetailInfo` component that displays detailed information about a selected report. The `styles.scss` file includes some new styles for the `ReportDetailInfo` component. The `index.vue` file has been updated with some new data">
-      <option name="closed" value="true" />
-      <created>1712471710236</created>
-      <option name="number" value="00331" />
-      <option name="presentableId" value="LOCAL-00331" />
-      <option name="project" value="LOCAL" />
-      <updated>1712471710236</updated>
+      <workItem from="1714116470185" duration="1576000" />
     </task>
     <task id="LOCAL-00332" summary="This commit includes changes to several files. In the `ReportList.vue` file, the `queryList` function has been modified to handle errors more gracefully and to show a message when there are no results. The `ReportDetail and a new `ReportDetailInfo` component has been added to display detailed information about a selected report.">
       <option name="closed" value="true" />
@@ -858,7 +848,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713856411255</updated>
     </task>
-    <option name="localTasksCounter" value="380" />
+    <task id="LOCAL-00380" summary="Changed API endpoints and added new columns in the database for notices.">
+      <option name="closed" value="true" />
+      <created>1714116908441</created>
+      <option name="number" value="00380" />
+      <option name="presentableId" value="LOCAL-00380" />
+      <option name="project" value="LOCAL" />
+      <updated>1714116908441</updated>
+    </task>
+    <option name="localTasksCounter" value="381" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

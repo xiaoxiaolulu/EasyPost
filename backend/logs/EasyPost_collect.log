@@ -7108,3 +7108,7 @@ WARNING  [2024-04-26 11:28:10,582] [6afc2ebd0eb54979a8248e9dafb7e894] django.req
 INFO     [2024-04-26 15:28:03,570] [none] django.utils.autoreload: Watching for file changes with StatReloader
 WARNING  [2024-04-26 15:31:56,417] [90697a0b25f748298568616247a15225] django.request: Not Found: /media/avatar/default.png
 WARNING  [2024-04-26 15:32:45,650] [55999df4f02d48789c2d5368e46f3a37] django.request: Not Found: /media/avatar/default.png
+INFO     [2024-04-26 15:44:21,133] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\routings.py changed, reloading.
+INFO     [2024-04-26 15:44:22,130] [none] django.utils.autoreload: Watching for file changes with StatReloader
+WARNING  [2024-04-26 15:46:56,030] [4af0431db510498c9c3287eb4b20ec86] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-26 15:47:12,479] [8f55c1fe50914bb1a1e8609c88bddbbd] django.request: Not Found: /media/avatar/default.png

@@ -151,24 +151,19 @@ import {showErrMessage} from "@/utils/element";
 import MirrorCode from "@/components/MirrorCode/index.vue";
 import {useSocket} from "@/store/modules/socket"
 
-const { socketData, wsInit, sendSocket } = useSocket();
+const { socketData, wsInit, sendSocket,} = useSocket();
 
-wsInit("ws://localhost:8889/ws")
 
-watch(
-  () => socketData,
-  (data) => {
-    console.log("ws: ", data);
-  },
-  {
-    immediate: true,
-  }
-);
+
+
 // 主动向服务端发送数据
 const onsend = () => {
-  sendSocket("shenjilin");
+  wsInit("ws://127.0.0.1:8000/websocket/test")
+  sendSocket({
+    "url": "ws://localhost:8889/ws",
+    "message": "313131"
+  });
 };
-
 const route = useRoute()
 
 const router = useRouter()
@@ -492,10 +487,15 @@ watch(() => ruleForm.status, (newVal, oldVal) => {
 })
 
 
-// window.setInterval(() => {
-//   setTimeout(Snapshot, 0)
-// }, 1000)
-
+watch(
+  () => socketData,
+  (data) => {
+    console.log("ws: ", data);
+  },
+  {
+    immediate: true,
+  }
+);
 </script>
 <style lang="scss">
 .page-header-back-button {
