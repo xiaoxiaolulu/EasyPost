@@ -7125,3 +7125,16 @@ WARNING  [2024-04-26 16:23:01,292] [9de61e9f365547fdbe4920f222d1dee6] django.req
 WARNING  [2024-04-26 16:23:41,698] [9a8f5c8829bc4504a223b5938c1247de] django.request: Not Found: /media/avatar/default.png
 WARNING  [2024-04-26 16:35:46,802] [624efe6ddda84be0a10bb7e0ff0e3d6f] django.request: Not Found: /media/avatar/default.png
 WARNING  [2024-04-26 16:35:56,856] [e443c93ca84e47ed9b481ec0ed8b1121] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-26 17:30:59,844] [25c8972c1fe74af9b0e8e1924d10f405] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-26 17:33:03,293] [feb89eca9c4444adad467210c86462e4] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-26 17:33:04,192] [7b544fc195cd41d7b35171004e08a9f9] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-26 17:33:05,819] [cf2a48b1529c41ccab16d5bda2571580] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-26 17:33:46,638] [afc38d09b5b1460db608a192def1c157] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-26 17:33:47,272] [e28e2f06cc7b42f38dc9fe6751bc537f] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-26 17:33:47,776] [e65d797e338b44728404fa2fc55c93d7] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-26 17:34:05,652] [2252763be18b4d828b8d92ce182eacbf] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-26 17:34:11,633] [2b9bc664bf534e3190f1d86bf46249d6] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-26 17:55:46,602] [98eb009ef19b4a279014bd8054b69cd5] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-26 17:55:48,618] [e3219d9533e44bfab1ce81d666c43a95] django.request: Not Found: /media/avatar/default.png
+INFO     [2024-04-26 17:58:02,234] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-26 17:59:12,163] [none] django.utils.autoreload: Watching for file changes with StatReloader

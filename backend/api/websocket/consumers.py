@@ -2,11 +2,10 @@ import json
 import websockets
 from channels.generic.websocket import AsyncWebsocketConsumer
 from django.core.exceptions import SuspiciousOperation
-
 from utils.logger import logger
 
 
-class WebSocketForwardConsumer(AsyncWebsocketConsumer):
+class WebSocketConsumer(AsyncWebsocketConsumer):
     async def connect(self):
         await self.accept()
 
@@ -30,8 +29,6 @@ class WebSocketForwardConsumer(AsyncWebsocketConsumer):
         except Exception as e:
             print(f"Error forwarding message: {e}")
             await self.send(json.dumps({'error': str(e)}))
-
-            # Optional: handle binary data
 
     async def receive_bytes(self, bytes_data):
         pass

@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Changed API endpoints and added new columns in the database for notices.">
-      <change afterPath="$PROJECT_DIR$/../web/src/icons/svg/mistake.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/src/icons/svg/right.svg" afterDir="false" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Add debug mode and response panel to HTTP API settings page.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/styles/common.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/styles/common.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/src/views/https/api/components/websocket.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/api/components/websocket.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/system/notice/components/databaseDialog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/system/notice/components/databaseDialog.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -464,15 +460,7 @@
       <workItem from="1712908146550" duration="34648000" />
       <workItem from="1713319714158" duration="24461000" />
       <workItem from="1713754708273" duration="34896000" />
-      <workItem from="1714116470185" duration="2897000" />
-    </task>
-    <task id="LOCAL-00334" summary="&quot;Add Swagger data source and API migration&quot;">
-      <option name="closed" value="true" />
-      <created>1712567563360</created>
-      <option name="number" value="00334" />
-      <option name="presentableId" value="LOCAL-00334" />
-      <option name="project" value="LOCAL" />
-      <updated>1712567563360</updated>
+      <workItem from="1714116470185" duration="4162000" />
     </task>
     <task id="LOCAL-00335" summary="&quot;Add Swagger data source and API migration&quot;">
       <option name="closed" value="true" />
@@ -858,7 +846,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714118681053</updated>
     </task>
-    <option name="localTasksCounter" value="383" />
+    <task id="LOCAL-00383" summary="Add debug mode and response panel to HTTP API settings page.">
+      <option name="closed" value="true" />
+      <created>1714122596148</created>
+      <option name="number" value="00383" />
+      <option name="presentableId" value="LOCAL-00383" />
+      <option name="project" value="LOCAL" />
+      <updated>1714122596148</updated>
+    </task>
+    <option name="localTasksCounter" value="384" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -888,18 +884,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add" />
-    <MESSAGE value="Add notice" />
-    <MESSAGE value="Add notice API" />
-    <MESSAGE value="Add notice API end" />
-    <MESSAGE value="Add notice API endpoints" />
-    <MESSAGE value="Add notice API endpoints for" />
-    <MESSAGE value="Add notice API endpoints for front" />
-    <MESSAGE value="Add notice API endpoints for frontend" />
-    <MESSAGE value="Add notice API endpoints for frontend consumption" />
-    <MESSAGE value="Add notice API endpoints for frontend consumption." />
-    <MESSAGE value="Changed" />
-    <MESSAGE value="Changed API" />
     <MESSAGE value="Changed API end" />
     <MESSAGE value="Changed API endpoints" />
     <MESSAGE value="Changed API endpoints and" />
@@ -913,7 +897,19 @@
     <MESSAGE value="Changed API endpoints and added new columns in the database for not" />
     <MESSAGE value="Changed API endpoints and added new columns in the database for notices" />
     <MESSAGE value="Changed API endpoints and added new columns in the database for notices." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed API endpoints and added new columns in the database for notices." />
+    <MESSAGE value="Add" />
+    <MESSAGE value="Add debug" />
+    <MESSAGE value="Add debug mode" />
+    <MESSAGE value="Add debug mode and" />
+    <MESSAGE value="Add debug mode and response" />
+    <MESSAGE value="Add debug mode and response panel" />
+    <MESSAGE value="Add debug mode and response panel to" />
+    <MESSAGE value="Add debug mode and response panel to HTTP" />
+    <MESSAGE value="Add debug mode and response panel to HTTP API" />
+    <MESSAGE value="Add debug mode and response panel to HTTP API settings" />
+    <MESSAGE value="Add debug mode and response panel to HTTP API settings page" />
+    <MESSAGE value="Add debug mode and response panel to HTTP API settings page." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add debug mode and response panel to HTTP API settings page." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$recursion.coverage" NAME="recursion Coverage Results" MODIFIED="1712139211023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />

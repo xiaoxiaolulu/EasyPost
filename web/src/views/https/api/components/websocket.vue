@@ -174,7 +174,7 @@ import {ArrowDown, ArrowUp, Back} from "@element-plus/icons-vue";
 import {useRoute, useRouter} from "vue-router";
 import {computed, onMounted, reactive, ref, watch, nextTick} from "vue";
 import {ElMessage, FormInstance} from "element-plus";
-import {saveOrUpdate, getHttpDetail, httpSnapshot} from "@/api/http";
+import {saveOrUpdate, getHttpDetail} from "@/api/http";
 import {showErrMessage} from "@/utils/element";
 import MirrorCode from "@/components/MirrorCode/index.vue";
 import {useSocket} from "@/store/modules/socket"
@@ -318,7 +318,8 @@ const onSureClick = (formName: FormInstance | undefined) => {
           method: ruleForm.method,
           priority: ruleForm.priority,
           status: ruleForm.status,
-          desc: ruleForm.remarks
+          desc: ruleForm.remarks,
+          raw: state.rawData
         }
         const ret = await saveOrUpdate(apiData)
         const {code, data, msg} = ret.data
@@ -374,6 +375,7 @@ const initApi = () => {
       ruleForm.name = data.name
       ruleForm.status = data.status
       ruleForm.remarks = data.desc
+      state.rawData  = JSON.parse(data.raw)
       showErrMessage(code.toString(), msg)
     })
   }

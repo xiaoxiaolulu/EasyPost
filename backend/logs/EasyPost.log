@@ -6557,3 +6557,1541 @@ Quit the server with CTRL-BREAK.
 2024-04-26 16:01:10 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
 2024-04-26 16:01:14 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
 2024-04-26 16:01:14 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:01:28 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:01:28 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:01:32 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:01:32 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:01:44 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:01:44 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:01:47 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:01:47 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:02:01 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:02:01 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:02:05 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:02:05 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:02:19 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:02:19 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:02:23 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:02:23 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:02:37 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:02:37 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:02:41 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:02:41 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:02:55 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:02:55 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:02:59 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:02:59 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:03:11 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:03:11 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:03:14 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:03:14 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:03:26 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:03:26 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:03:30 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:03:30 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:03:43 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:03:43 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:03:46 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:03:46 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:04:03 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:04:03 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:04:07 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:04:07 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:04:11 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:04:11 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code 1001
+2024-04-26 16:04:12 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:04:12 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:04:12 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:04:12 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:04:14 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:04:14 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:04:28 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:04:28 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:04:31 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:04:31 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:04:45 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:04:45 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:04:49 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:04:49 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:05:03 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:05:03 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:05:07 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:05:07 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:05:21 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:05:21 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:05:25 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:05:25 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:05:39 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:05:39 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:05:42 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:05:42 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:05:56 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:05:56 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:06:00 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:06:00 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:06:13 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:06:13 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:06:17 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:06:17 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:06:31 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:06:31 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:06:34 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:06:34 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:06:48 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:06:48 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:06:52 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:06:52 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:07:06 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:07:06 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:07:10 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:07:10 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:07:24 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:07:24 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:07:28 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:07:28 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:07:42 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:07:42 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:07:46 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:07:46 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:08:00 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:08:00 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:08:04 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:08:04 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:08:18 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:08:18 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:08:22 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:08:22 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:08:36 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:08:36 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:08:40 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:08:40 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:08:54 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:08:54 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:08:58 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:08:58 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:09:11 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:09:11 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:09:15 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:09:15 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:09:29 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:09:29 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:09:33 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:09:33 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:09:47 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:09:47 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:09:51 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:09:51 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:10:05 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:10:05 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:10:09 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:10:09 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:10:23 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:10:23 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:10:27 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:10:27 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:10:41 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:10:41 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:10:45 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:10:45 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:10:59 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:10:59 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:11:03 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:11:03 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:11:16 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:11:16 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:11:19 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:11:19 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:11:33 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:11:33 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:11:37 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:11:37 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:11:51 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:11:51 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:11:55 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:11:55 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:12:09 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:12:09 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:12:13 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:12:13 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:12:27 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:12:27 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:12:31 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:12:31 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:12:45 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:12:45 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:12:49 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:12:49 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:13:03 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:13:03 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:13:07 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:13:07 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:13:21 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:13:21 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:13:25 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:13:25 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:13:39 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:13:39 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:13:43 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:13:43 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:13:57 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:13:57 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:14:01 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:14:01 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:14:15 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:14:15 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:14:19 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:14:19 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:14:33 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:14:33 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:14:36 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:14:36 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:14:50 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:14:50 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:14:54 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:14:54 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:15:08 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:15:08 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:15:12 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:15:12 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:15:26 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:15:26 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:15:30 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:15:30 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:15:43 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:15:43 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:15:47 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:15:47 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:16:01 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:16:01 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:16:05 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:16:05 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:16:11 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:16:11 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:16:14 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:16:14 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:16:18 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:16:18 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:16:22 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:16:22 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:16:36 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:16:36 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:16:40 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:16:40 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:16:53 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:16:53 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:16:56 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:16:56 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:17:10 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:17:10 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:17:13 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:17:13 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:17:25 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:17:25 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:17:28 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:17:28 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:17:40 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:17:40 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:17:43 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:17:43 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:17:55 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:17:55 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:17:58 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:17:58 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:18:10 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:18:10 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:18:14 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:18:14 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:18:28 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:18:28 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:18:32 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:18:32 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:18:46 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:18:46 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:18:50 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:18:50 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:19:04 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:19:04 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:19:08 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:19:08 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:19:22 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:19:22 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:19:26 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:19:26 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:19:40 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:19:40 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:19:44 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:19:44 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:19:58 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:19:58 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:20:02 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:20:02 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:20:16 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:20:16 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:20:20 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:20:20 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:20:34 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:20:34 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:20:37 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:20:37 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:20:49 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:20:49 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:20:52 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:20:52 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:21:04 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:21:04 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:21:08 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:21:08 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:21:22 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:21:22 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:21:26 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:21:26 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:21:40 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:21:40 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:21:44 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:21:44 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:21:58 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:21:58 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:22:02 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:22:02 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:22:15 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:22:15 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:22:16 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:16 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:18 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:22:18 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:22:18 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:18 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:18 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:18 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:28 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:28 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:28 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:29 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:22:29 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code 1001
+2024-04-26 16:22:32 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:32 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:32 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:32 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:32 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:32 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:32 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:32 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:32 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:34 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:34 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:34 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:38 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:38 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:38 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:39 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:39 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:39 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:40 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:40 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:40 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:40 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:40 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:42 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:42 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:42 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:45 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:45 [ThreadPoolExecutor-96_0]-[DBClient.connect:87]-[ERROR]:mysql connect error -> (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+2024-04-26 16:22:45 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:49 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:49 [ThreadPoolExecutor-98_0]-[DBClient.connect:80]-[INFO]:mysql connect success -> easypost
+2024-04-26 16:22:49 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:50 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:50 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:51 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:51 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:51 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:54 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:54 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:59 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:22:59 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:01 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:01 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:01 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:01 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:01 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:08 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:08 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:12 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:12 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:12 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:12 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:12 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:12 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:12 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:12 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:13 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:13 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:17 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:17 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:17 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:17 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:17 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:17 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:17 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:17 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:20 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:20 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:28 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:28 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:28 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:28 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:28 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:28 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:28 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:28 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:31 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:31 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:37 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:37 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:37 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:37 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:41 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:41 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:41 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:41 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:41 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:41 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:41 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:41 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:41 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:41 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:41 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:48 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:23:48 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:24:03 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:24:03 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:24:19 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:24:19 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:24:23 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:24:23 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:24:37 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:24:37 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:24:41 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:24:41 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:24:55 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:24:55 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:24:59 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:24:59 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:25:13 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:25:13 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:25:17 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:25:17 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:25:31 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:25:31 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:25:35 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:25:35 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:25:49 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:25:49 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:25:53 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:25:53 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:26:07 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:26:07 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:26:11 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:26:11 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:26:25 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:26:25 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:26:29 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:26:29 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:26:43 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:26:43 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:26:47 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:26:47 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:27:01 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:27:01 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:27:04 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:27:04 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:27:22 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:27:22 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:27:26 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:27:26 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:27:40 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:27:40 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:27:43 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:27:43 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:27:57 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:27:57 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:28:00 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:28:00 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:28:30 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:28:30 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:28:34 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:28:34 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:28:48 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:28:48 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:28:52 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:28:52 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:29:05 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:29:05 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:29:09 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:29:09 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:29:23 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:29:23 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:29:27 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:29:27 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:29:41 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:29:41 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:29:45 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:29:45 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:29:59 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:29:59 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:30:03 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:30:03 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:30:17 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:30:17 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:30:21 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:30:21 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:30:35 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:30:35 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:30:39 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:30:39 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:30:53 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:30:53 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:30:57 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:30:57 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:31:11 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:31:11 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:31:15 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:31:15 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:31:29 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:31:29 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:31:33 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:31:33 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:31:47 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:31:47 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:31:51 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:31:51 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:32:05 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:32:05 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:32:09 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:32:09 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:32:23 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:32:23 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:32:27 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:32:27 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:32:41 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:32:41 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:32:45 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:32:45 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:32:59 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:32:59 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:33:03 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:33:03 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:33:17 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:33:17 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:33:21 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:33:21 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:33:53 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:33:53 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:33:57 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:33:57 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:34:11 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:34:11 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:34:15 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:34:15 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:34:29 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:34:29 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:34:33 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:34:33 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:34:47 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:34:47 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:34:51 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:34:51 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:35:04 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:35:04 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:35:07 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:35:07 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:35:19 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:35:19 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code 1001
+2024-04-26 16:35:38 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:35:38 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:35:43 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:35:43 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:35:46 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:35:46 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:35:46 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:35:46 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:35:46 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:35:56 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:35:56 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:35:56 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:35:56 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:35:56 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:35:56 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:35:56 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:35:56 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:35:56 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:35:56 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:35:56 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:35:59 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:35:59 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:36:15 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:36:15 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:36:18 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:36:18 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:36:23 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:36:23 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:36:47 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:36:47 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:36:51 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:36:51 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:37:04 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:37:04 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:37:08 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:37:08 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:37:35 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:37:35 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:37:39 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:37:39 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:37:52 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:37:52 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:37:55 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:37:55 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:38:11 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:38:11 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:38:14 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:38:14 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:38:26 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:38:26 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:38:30 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:38:30 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:38:44 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:38:44 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:38:48 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:38:48 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:39:02 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:39:02 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:39:06 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:39:06 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:39:20 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:39:20 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:39:24 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:39:24 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:39:38 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:39:38 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:39:42 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:39:42 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:39:56 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:39:56 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:40:00 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:40:00 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:40:14 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:40:14 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:40:18 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:40:18 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:40:32 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:40:32 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:40:36 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:40:36 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:40:50 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:40:50 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:40:54 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:40:54 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:41:08 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:41:08 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:41:12 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:41:12 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:41:26 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:41:26 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:41:30 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:41:30 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:41:44 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:41:44 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:41:48 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:41:48 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:42:01 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:42:01 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:42:04 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:42:04 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:42:23 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:42:23 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:42:26 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:42:26 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:42:38 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:42:38 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:42:41 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:42:41 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:42:54 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:42:54 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:42:58 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:42:58 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:43:12 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:43:12 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:43:16 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:43:16 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:43:30 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:43:30 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:43:34 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:43:34 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:43:48 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:43:48 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:43:52 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:43:52 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:44:06 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:44:06 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:44:09 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:44:09 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:44:14 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:44:14 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code 1001
+2024-04-26 16:44:16 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:44:16 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:44:16 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:44:16 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 16:44:24 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:44:24 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:44:39 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:44:39 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:44:42 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:44:42 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:44:54 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:44:54 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:44:58 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:44:58 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:45:12 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:45:12 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:45:16 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:45:16 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:45:29 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:45:29 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:45:33 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:45:33 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:45:45 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:45:45 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:45:49 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:45:49 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:46:02 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:46:02 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:46:06 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:46:06 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:46:20 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:46:20 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:46:24 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:46:24 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:46:38 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:46:38 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:46:42 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:46:42 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:46:54 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:46:56 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:46:57 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:46:57 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:47:20 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:47:21 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:47:23 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:47:23 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:47:35 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:47:35 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:47:38 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:47:38 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:47:52 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:47:52 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:47:56 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:47:56 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:48:10 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:48:10 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:48:13 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:48:13 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:48:26 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:48:26 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:48:29 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:48:29 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:48:42 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:48:42 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:48:46 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:48:46 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:49:00 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:49:00 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:49:04 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:49:04 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:49:17 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:49:17 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:49:21 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:49:21 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:49:35 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:49:35 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:49:39 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:49:39 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:50:06 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:50:06 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:50:09 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:50:09 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:50:32 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:50:32 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:50:35 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:50:35 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:50:47 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:50:47 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:50:50 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:50:50 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:51:02 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:51:02 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:51:05 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:51:05 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:51:25 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:51:25 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:51:29 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:51:29 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:51:43 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:51:43 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:51:47 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:51:47 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:52:01 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:52:01 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:52:05 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:52:05 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:52:19 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:52:19 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:52:23 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:52:23 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:52:37 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:52:37 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:52:41 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:52:41 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:52:55 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:52:55 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:52:59 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:52:59 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:53:13 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:53:13 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:53:16 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:53:16 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:53:29 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:53:29 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:53:32 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:53:32 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:53:50 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:53:50 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:53:54 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:53:54 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:54:08 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:54:08 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:54:12 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:54:12 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:54:26 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:54:26 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:54:29 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:54:29 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:54:41 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:54:41 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:54:44 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:54:44 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:54:57 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:54:57 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:55:01 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:55:01 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:55:15 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:55:15 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:55:19 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:55:19 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:55:33 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:55:33 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:55:37 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:55:37 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:55:51 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:55:51 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:55:55 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:55:55 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:56:09 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:56:09 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:56:13 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:56:13 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:56:27 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:56:27 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:56:31 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:56:31 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:56:45 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:56:45 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:56:49 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:56:49 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:57:03 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:57:03 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:57:07 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:57:07 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:57:21 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:57:21 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:57:25 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:57:25 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:57:39 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:57:39 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:57:43 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:57:43 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:57:57 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:57:57 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:58:01 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:58:01 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:58:14 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:58:14 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:58:18 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:58:18 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:58:32 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:58:32 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:58:36 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:58:36 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:58:50 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:58:50 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:58:54 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:58:54 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:59:08 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:59:08 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:59:12 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:59:12 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:59:26 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:59:26 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:59:30 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:59:30 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 16:59:44 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 16:59:44 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 16:59:48 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 16:59:48 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:00:02 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:00:02 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:00:05 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:00:05 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:00:17 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:00:17 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:00:20 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:00:20 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:00:37 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:00:38 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:00:48 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:00:48 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:00:51 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:00:51 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:01:03 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:01:03 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:01:07 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:01:07 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:01:19 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:01:19 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:01:22 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:01:22 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:01:36 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:01:36 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:01:39 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:01:39 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:01:53 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:01:53 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:01:57 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:01:57 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:02:11 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:02:11 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:02:15 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:02:15 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:02:29 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:02:29 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:02:33 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:02:33 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:02:45 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:02:45 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:02:48 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:02:48 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:03:14 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:03:14 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:03:17 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:03:17 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:03:29 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:03:29 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:03:32 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:03:32 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:03:44 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:03:44 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:03:47 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:03:47 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:03:59 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:03:59 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:04:02 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:04:02 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:04:14 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:04:14 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:04:17 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:04:17 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:04:29 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:04:29 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:04:32 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:04:32 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:04:44 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:04:44 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:04:47 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:04:47 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:04:59 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:04:59 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:05:02 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:05:02 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:05:15 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:05:15 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:05:19 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:05:19 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:05:33 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:05:33 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:05:37 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:05:37 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:05:51 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:05:51 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:05:55 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:05:55 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:06:09 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:06:09 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:06:13 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:06:13 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:06:27 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:06:27 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:06:31 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:06:31 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:06:45 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:06:45 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:06:49 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:06:49 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:07:03 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:07:03 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:07:07 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:07:07 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:07:21 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:07:21 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:07:25 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:07:25 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:07:39 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:07:39 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:07:43 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:07:43 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:07:57 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:07:57 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:08:01 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:08:01 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:08:15 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:08:15 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:08:19 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:08:19 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:08:33 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:08:33 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:08:37 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:08:37 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:08:51 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:08:51 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:08:55 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:08:55 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:09:06 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:09:06 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:09:07 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:09:07 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:09:11 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:09:11 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:09:23 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:09:23 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:09:26 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:09:26 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:09:42 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:09:42 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:09:46 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:09:46 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:10:00 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:10:00 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:10:04 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:10:04 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:10:17 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:10:17 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:10:21 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:10:21 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:10:35 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:10:35 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:10:39 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:10:39 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:10:52 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:10:52 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:10:55 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:10:55 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:11:07 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:11:07 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:11:10 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:11:10 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:11:22 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:11:22 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:11:25 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:11:25 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:11:37 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:11:37 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:11:40 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:11:40 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:11:53 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:11:53 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:11:56 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:11:56 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:12:08 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:12:08 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:12:11 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:12:11 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:12:24 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:12:24 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:12:26 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:12:27 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:12:27 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:12:27 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:12:39 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:12:39 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:12:42 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:12:42 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:12:56 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:12:56 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:13:00 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:13:00 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:13:14 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:13:14 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:13:17 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:13:17 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:13:29 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:13:29 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:13:33 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:13:33 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:13:47 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:13:47 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:13:51 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:13:51 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:14:05 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:14:05 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:14:09 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:14:09 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:14:23 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:14:23 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:14:27 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:14:27 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:14:41 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:14:41 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:14:45 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:14:45 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:14:59 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:14:59 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:15:03 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:15:03 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:15:17 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:15:17 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:15:21 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:15:21 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:15:35 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:15:35 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:15:39 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:15:39 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:15:53 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:15:53 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:15:57 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:15:57 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:16:11 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:16:11 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:16:15 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:16:15 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:16:29 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:16:29 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:16:33 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:16:33 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:16:47 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:16:47 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:16:51 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:16:51 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:17:05 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:17:05 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:17:09 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:17:09 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:17:23 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:17:23 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:17:27 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:17:27 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:17:41 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:17:41 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:17:45 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:17:45 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:17:59 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:17:59 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:18:03 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:18:03 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:18:17 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:18:17 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:18:21 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:18:21 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:18:35 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:18:35 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:18:39 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:18:39 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:18:52 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:18:52 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:18:53 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:18:53 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:18:55 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:18:55 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:18:55 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:18:55 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:18:55 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:18:55 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:18:55 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:18:55 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:19:08 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:19:08 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:19:11 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:19:11 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:19:23 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:19:23 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:19:26 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:19:26 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:19:38 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:19:38 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:19:41 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:19:41 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:19:53 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:19:53 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:19:56 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:19:56 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:20:08 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:20:08 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:20:11 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:20:11 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:20:23 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:20:23 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:20:26 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:20:26 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:20:39 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:20:39 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:20:43 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:20:43 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:20:57 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:20:57 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:21:01 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:21:01 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:21:15 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:21:15 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:21:19 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:21:19 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:21:33 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:21:33 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:21:36 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:21:36 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:21:50 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:21:50 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:21:54 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:21:54 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:22:08 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:22:08 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:22:12 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:22:12 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:22:26 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:22:26 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:22:30 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:22:30 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:22:44 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:22:44 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:22:48 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:22:48 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:23:02 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:23:02 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:23:06 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:23:06 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:23:20 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:23:20 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:23:24 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:23:24 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:23:38 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:23:38 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:23:42 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:23:42 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:23:56 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:23:56 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:24:00 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:24:00 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:24:14 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:24:14 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:24:18 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:24:18 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:24:32 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:24:32 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:24:36 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:24:36 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:24:50 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:24:50 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:24:54 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:24:54 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:25:08 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:25:08 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:25:12 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:25:12 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:25:26 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:25:26 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:25:30 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:25:30 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:25:44 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:25:44 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:25:48 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:25:48 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:26:02 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:26:02 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:26:06 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:26:06 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:26:20 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:26:20 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:26:24 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:26:24 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:26:38 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:26:38 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:26:42 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:26:42 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:26:56 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:26:56 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:27:00 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:27:00 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:27:14 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:27:14 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:27:18 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:27:18 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:27:32 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:27:32 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:27:36 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:27:36 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:27:50 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:27:50 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:27:54 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:27:54 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:28:08 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:28:08 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:28:12 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:28:12 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:28:26 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:28:26 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:28:30 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:28:30 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:28:44 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:28:44 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:28:48 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:28:48 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:29:02 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:29:02 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:29:06 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:29:06 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:29:20 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:29:20 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:29:24 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:29:24 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:29:38 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:29:38 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:29:42 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:29:42 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:29:56 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:29:56 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:30:00 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:30:00 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:30:14 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:30:14 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:30:18 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:30:18 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:30:32 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:30:32 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:30:36 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:30:36 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:30:50 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:30:50 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:30:53 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:30:53 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:30:59 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:30:59 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:30:59 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:30:59 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:05 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:31:05 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:31:08 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:31:08 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:31:20 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:31:20 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:31:24 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:31:24 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:31:36 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:31:36 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:31:39 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:31:39 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:31:43 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:43 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:43 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:43 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:43 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:43 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:43 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:43 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:47 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:47 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:48 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:49 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:49 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:49 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:49 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:49 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:49 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:49 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:49 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:49 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:49 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:49 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:49 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:49 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:49 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:49 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:51 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:31:51 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:31:51 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:51 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:51 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:51 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:51 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:51 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:51 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:51 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:31:54 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:31:54 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:32:06 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:32:06 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:32:09 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:32:09 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:32:21 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:32:21 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:32:24 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:32:24 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:32:36 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:32:36 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:32:39 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:32:39 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:32:52 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:32:52 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:32:56 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:32:56 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:33:03 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:03 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:03 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:04 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:04 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:04 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:05 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:05 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:05 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:10 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:33:10 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:33:14 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:33:14 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:33:28 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:33:28 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:33:32 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:33:32 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:33:36 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:36 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:39 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:40 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:46 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:33:46 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code None
+2024-04-26 17:33:46 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:46 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:46 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:47 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:47 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:47 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:47 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:47 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:47 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:50 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:33:50 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:33:51 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:51 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:51 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:51 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:51 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:51 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:51 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:51 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:52 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:52 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:53 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:53 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:53 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:53 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:53 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:53 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:53 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:53 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:54 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:33:54 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:34:01 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-26 17:34:01 [django-main-thread]-[consumers.disconnect:14]-[INFO]:WebSocket connection closed with code 1001
+2024-04-26 17:34:03 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:34:03 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:34:03 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:34:03 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:34:04 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:34:04 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:34:04 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:34:04 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:34:05 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:34:05 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:34:05 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:34:05 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:34:05 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:34:05 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:34:05 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:34:05 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:34:05 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:34:06 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:34:06 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:34:06 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:34:06 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:34:11 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:34:11 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:34:11 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:34:15 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:34:15 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:34:15 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:34:15 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:34:15 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:34:15 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:34:15 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:34:15 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:35:44 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:35:44 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:55:46 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:55:46 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:55:46 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:55:48 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:55:48 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:55:48 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 17:58:02 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-26 17:58:02 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-26 17:58:02 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-26 17:58:02 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-26 17:58:02 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 26, 2024 - 17:58:02
+2024-04-26 17:58:02 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-26 17:58:02 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-26 17:58:15 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:58:15 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 17:59:12 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-26 17:59:12 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-26 17:59:12 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-26 17:59:12 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-26 17:59:12 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 26, 2024 - 17:59:12
+2024-04-26 17:59:12 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-26 17:59:12 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-26 17:59:14 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-26 17:59:14 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
