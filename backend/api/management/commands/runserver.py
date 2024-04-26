@@ -120,7 +120,7 @@ class Command(RunserverCommand):
             }
         )
         # Launch server in 'main' thread. Signals are disabled as it's still
-        # actually a subthread under the autoreloader.
+        # actually a sub thread under the autoloader.
         logger.info("Daphne running, listening on %s:%s", self.addr, self.port)
 
         # build the endpoint description string from host/port options
@@ -142,10 +142,11 @@ class Command(RunserverCommand):
                 self.stdout.write(shutdown_message)
             return
 
-    def get_application(self, options):
+    @staticmethod
+    def get_application(options):
         """
         Returns the static files serving application wrapping the default application,
-        if static files should be served. Otherwise just returns the default
+        if static files should be served. Otherwise, just returns the default
         handler.
         """
         staticfiles_installed = apps.is_installed("django.contrib.staticfiles")

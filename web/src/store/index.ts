@@ -1,4 +1,4 @@
-import {defineStore,createPinia} from 'pinia'
+import {defineStore, createPinia} from 'pinia'
 // 引入持久化插件
 import piniaPluginPersistedstate  from 'pinia-plugin-persistedstate'
 

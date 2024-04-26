@@ -45,7 +45,7 @@
           <el-col :xs="6" :sm="6" :md="6" :lg="6" :xl="6">
             <div style="padding-left: 12px">
               <el-button type="primary" @click="onSureClick(ruleFormRef)">保存</el-button>
-              <el-button type="success" @click="debug(ruleFormRef)">调试</el-button>
+              <el-button type="success" @click="onsend()">调试</el-button>
             </div>
           </el-col>
         </el-row>
@@ -125,6 +125,14 @@
               <strong>发送信息</strong>
             </template>
             <div>
+              <mirror-code
+                style="height: 420px"
+                ref="rawRef"
+                v-model="state.rawData"
+                :constModelData="state.rawData"
+                :editorConfig="state.editorConfig"
+              >
+              </mirror-code>
             </div>
           </el-tab-pane>
         </el-tabs>
@@ -140,11 +148,32 @@ import {computed, onMounted, reactive, ref, watch, nextTick} from "vue";
 import {ElMessage, FormInstance} from "element-plus";
 import {saveOrUpdate, runApi, getHttpDetail, httpSnapshot} from "@/api/http";
 import {showErrMessage} from "@/utils/element";
+import MirrorCode from "@/components/MirrorCode/index.vue";
+import {useSocket} from "@/store/modules/socket"
+
+const { socketData, wsInit, sendSocket } = useSocket();
+
+wsInit("ws://localhost:8889/ws")
+
+watch(
+  () => socketData,
+  (data) => {
+    console.log("ws: ", data);
+  },
+  {
+    immediate: true,
+  }
+);
+// 主动向服务端发送数据
+const onsend = () => {
+  sendSocket("shenjilin");
+};
 
 const route = useRoute()
+
 const router = useRouter()
 
-const methodRef = ref()
+const rawRef = ref()
 
 const responseReport = ref(false)
 
@@ -227,7 +256,9 @@ const performResponseShow = ref(false)
 const performLoading = ref(false)
 
 const state = reactive({
-  api_id: 0
+  api_id: 0,
+  rawData: "",
+  editorConfig: { language: 'json', theme: 'vs' }
 })
 
 const settings = computed(() => {

@@ -64,7 +64,7 @@
 
 <script lang="ts" setup>
 import { onMounted, reactive, ref, watch } from "vue";
-import {ElMessage, FormInstance} from "element-plus";
+import { CheckboxValueType, ElMessage, FormInstance } from "element-plus";
 import {noticeSaveOrUpdate} from "@/api/setting";
 import {showErrMessage} from "@/utils/element";
 import { projectList, projectDetail } from "@/api/project";
