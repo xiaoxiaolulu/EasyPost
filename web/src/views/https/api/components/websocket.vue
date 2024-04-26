@@ -153,17 +153,6 @@ import {useSocket} from "@/store/modules/socket"
 
 const { socketData, wsInit, sendSocket,} = useSocket();
 
-
-
-
-// 主动向服务端发送数据
-const onsend = () => {
-  wsInit("ws://127.0.0.1:8000/websocket/test")
-  sendSocket({
-    "url": "ws://localhost:8889/ws",
-    "message": "313131"
-  });
-};
 const route = useRoute()
 
 const router = useRouter()
@@ -292,6 +281,23 @@ const rules = reactive({
   priority: [{required: true, trigger: "blur", message: "请输入接口优先级！"}],
   status: [{required: true, trigger: "blur", message: "请选择接口当前状态！"}]
 })
+
+const wsSend = (url: string, data: any) => {
+  try {
+    wsInit(url);
+    sendSocket(data);
+  } catch (error) {
+    console.error('Failed to send message:', error);
+  }
+};
+
+// 主动向服务端发送数据
+const onsend = () => {
+  wsSend("ws://127.0.0.1:8000/websocket/test", {
+    "url": "ws://localhost:8889/ws",
+    "message": "313131"
+  })
+};
 
 const onSureClick = (formName: FormInstance | undefined) => {
   if (!formName) return
