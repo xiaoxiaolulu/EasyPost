@@ -16,7 +16,7 @@ from api.service.https import (
 router = DefaultRouter()
 
 app_urls = [
-    path("/", ApiFastView.as_view()),
+    path("", ApiFastView.as_view()),
     path("delete/<int:pk>", DelApiView.as_view()),
     path("detail/<int:pk>", ApiDetailView.as_view()),
     path("saveOrUpdate/<int:pk>", SaveOrUpdateApiView.as_view()),

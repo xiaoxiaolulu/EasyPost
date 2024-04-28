@@ -10158,3 +10158,217 @@ Quit the server with CTRL-BREAK.
 2024-04-28 17:05:06 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
 2024-04-28 17:05:10 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
 2024-04-28 17:05:10 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 17:05:24 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 17:05:24 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 17:05:28 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 17:05:28 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 17:05:42 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 17:05:42 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 17:05:46 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 17:05:46 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 17:06:00 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 17:06:00 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 17:06:04 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 17:06:04 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 17:06:18 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 17:06:18 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 17:06:22 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 17:06:22 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 17:06:36 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 17:06:36 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 17:06:40 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 17:06:40 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 17:06:54 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 17:06:54 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 17:06:58 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 17:06:58 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 17:07:12 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 17:07:12 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 17:07:16 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 17:07:16 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 17:07:29 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 17:07:29 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 17:07:32 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 17:07:32 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 17:07:44 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 17:07:44 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 17:07:48 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 17:07:48 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 17:08:02 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 17:08:02 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 17:08:06 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 17:08:06 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 17:08:20 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 17:08:20 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 17:08:23 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 17:08:23 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 17:09:00 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 17:09:00 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 17:09:03 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 17:09:03 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 17:09:15 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 17:09:15 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 17:09:18 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 17:09:18 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 17:09:46 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 17:09:46 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 17:14:08 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 17:14:08 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 17:14:11 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 17:14:12 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 17:14:12 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 17:24:27 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 17:24:27 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 17:26:36 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 17:26:36 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 17:26:37 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 17:26:37 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 17:26:37 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 17:26:37 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 17:26:37 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 17:26:37 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 17:27:18 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 17:27:18 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 17:27:19 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 17:27:19 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 17:27:19 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 17:27:19 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 17:27:19 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 17:27:19 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 17:28:08 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 17:28:08 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 17:28:08 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 17:28:08 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 17:28:08 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 17:28:08 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 17:28:08 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 17:28:08 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 17:28:47 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 17:28:47 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 17:28:47 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 17:28:47 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 17:28:47 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 17:28:48 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 17:28:48 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 17:28:48 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 17:30:27 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 17:30:27 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 17:30:27 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 17:30:27 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 17:30:27 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 17:30:28 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 17:30:28 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 17:30:28 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 17:34:06 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 17:34:06 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 17:34:07 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 17:34:07 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 17:34:07 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 17:34:07 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 17:34:07 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 17:34:07 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 17:35:10 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 17:35:11 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 17:35:11 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 17:35:11 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 17:35:11 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 17:35:12 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 17:35:12 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 17:35:12 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 17:35:57 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 17:35:58 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 17:35:58 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 17:35:58 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 17:35:58 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 17:35:58 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 17:35:58 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 17:35:58 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 17:36:03 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 17:36:03 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 17:36:03 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 17:37:19 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 17:37:20 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 17:37:20 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 17:37:20 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 17:37:20 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 17:37:20 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 28, 2024 - 17:37:20
+2024-04-28 17:37:20 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-28 17:37:20 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-28 17:37:20 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 17:37:20 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 17:37:20 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 17:37:21 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 17:37:21 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 17:37:21 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 17:37:28 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 17:37:28 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 17:37:28 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 17:38:11 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 17:38:11 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 17:38:12 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 17:38:12 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 17:38:12 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 17:38:12 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 17:38:12 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 17:38:12 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 17:38:12 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 28, 2024 - 17:38:12
+2024-04-28 17:38:12 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-28 17:38:12 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
