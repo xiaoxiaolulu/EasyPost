@@ -4,30 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Add debug mode and response panel to HTTP API settings page.">
-      <change afterPath="$PROJECT_DIR$/api/routers/case.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/routers/database.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/routers/env.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/routers/function.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/routers/http.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/routers/notice.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/routers/plan.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/routers/project.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/routers/report.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/routers/statistics.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/routers/tree.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/routers/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/tests/engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/tests/engine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/websocket/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/routers/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/websocket/consumers.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/consumers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/websocket/routings.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/routers/websocket.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/asgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="&quot;Refactor URL routing for better separation of concerns.&quot;">
+      <change beforePath="$PROJECT_DIR$/api/emus/GconfigEnum.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/emus/RouterConfigEnum.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/routers/case.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/routers/case.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/routers/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/routers/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/routers/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/routers/env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/routers/function.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/routers/function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/routers/http.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/routers/http.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/routers/notice.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/routers/notice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/routers/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/routers/plan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/routers/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/routers/project.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/routers/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/routers/report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/routers/statistics.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/routers/statistics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/routers/tree.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/routers/tree.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/routers/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/routers/user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/api/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/api/user.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +171,30 @@
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.websocket">
+  <component name="RunManager" selected="Python.__init__ (1)">
+    <configuration name="__init__ (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api/emus" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/emus/__init__.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <option name="ENV_FILES" value="" />
@@ -218,29 +233,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/tests/websocket.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="weixin" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="backend" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/unitrunner/msg" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/unitrunner/msg/weixin.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -316,19 +308,19 @@
     </configuration>
     <list>
       <item itemvalue="Django Server.backend" />
+      <item itemvalue="Python.__init__ (1)" />
       <item itemvalue="Python.__init__" />
       <item itemvalue="Python.websocket" />
-      <item itemvalue="Python.weixin" />
       <item itemvalue="Python.ws_handler" />
       <item itemvalue="Python tests.Python tests in C:/Users/86135/Desktop/EasyPost/backend/unitrunner/request/ws_handler.py" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.__init__ (1)" />
         <item itemvalue="Python.websocket" />
         <item itemvalue="Python.ws_handler" />
         <item itemvalue="Python.__init__" />
         <item itemvalue="Python tests.Python tests in C:/Users/86135/Desktop/EasyPost/backend/unitrunner/request/ws_handler.py" />
-        <item itemvalue="Python.weixin" />
       </list>
     </recent_temporary>
   </component>
@@ -481,39 +473,7 @@
       <workItem from="1713319714158" duration="24461000" />
       <workItem from="1713754708273" duration="34896000" />
       <workItem from="1714116470185" duration="5019000" />
-      <workItem from="1714271913866" duration="3871000" />
-    </task>
-    <task id="LOCAL-00336" summary="&quot;Add import API view and associated functionality&quot;">
-      <option name="closed" value="true" />
-      <created>1712643798168</created>
-      <option name="number" value="00336" />
-      <option name="presentableId" value="LOCAL-00336" />
-      <option name="project" value="LOCAL" />
-      <updated>1712643798168</updated>
-    </task>
-    <task id="LOCAL-00337" summary="Add import API feature and UI components.">
-      <option name="closed" value="true" />
-      <created>1712656260539</created>
-      <option name="number" value="00337" />
-      <option name="presentableId" value="LOCAL-00337" />
-      <option name="project" value="LOCAL" />
-      <updated>1712656260539</updated>
-    </task>
-    <task id="LOCAL-00338" summary="Add import API feature and UI components.">
-      <option name="closed" value="true" />
-      <created>1712657307027</created>
-      <option name="number" value="00338" />
-      <option name="presentableId" value="LOCAL-00338" />
-      <option name="project" value="LOCAL" />
-      <updated>1712657307027</updated>
-    </task>
-    <task id="LOCAL-00339" summary="Change1: Added import statements for `os.path` and `json` in `utils.py`.Change2: Modified `DataSource` class to use a dynamic import based on the `type` parameter.Change3: Added `PostManDataSource` class to handle Postman collections.Change4: Updated `Api` model to include a `source` field.Change5: Modified `ImportApiView` to accept a `type` parameter and pass it to the `migrate` method.">
-      <option name="closed" value="true" />
-      <created>1712735591724</created>
-      <option name="number" value="00339" />
-      <option name="presentableId" value="LOCAL-00339" />
-      <option name="project" value="LOCAL" />
-      <updated>1712735591724</updated>
+      <workItem from="1714271913866" duration="5075000" />
     </task>
     <task id="LOCAL-00340" summary="Change1: Added import statements for `os.path` and `json` in `utils.py`.Change2: Modified `DataSource` class to use a dynamic import based on the `type` parameter.Change3: Added `PostManDataSource` class to handle Postman collections.Change4: Updated `Api` model to include a `source` field.Change5: Modified `ImportApiView` to accept a `type` parameter and pass it to the `migrate` method.">
       <option name="closed" value="true" />
@@ -875,7 +835,39 @@
       <option name="project" value="LOCAL" />
       <updated>1714125578769</updated>
     </task>
-    <option name="localTasksCounter" value="385" />
+    <task id="LOCAL-00385" summary="Change websocket consumers import path in asgi.py and rename websocket consumers file.">
+      <option name="closed" value="true" />
+      <created>1714283908603</created>
+      <option name="number" value="00385" />
+      <option name="presentableId" value="LOCAL-00385" />
+      <option name="project" value="LOCAL" />
+      <updated>1714283908603</updated>
+    </task>
+    <task id="LOCAL-00386" summary="&quot;Refactor API endpoints and websocket URL&quot;">
+      <option name="closed" value="true" />
+      <created>1714283953457</created>
+      <option name="number" value="00386" />
+      <option name="presentableId" value="LOCAL-00386" />
+      <option name="project" value="LOCAL" />
+      <updated>1714283953457</updated>
+    </task>
+    <task id="LOCAL-00387" summary="&quot;Refactor URL routing for better separation of concerns.&quot;">
+      <option name="closed" value="true" />
+      <created>1714283978887</created>
+      <option name="number" value="00387" />
+      <option name="presentableId" value="LOCAL-00387" />
+      <option name="project" value="LOCAL" />
+      <updated>1714283978887</updated>
+    </task>
+    <task id="LOCAL-00388" summary="&quot;Refactor URL routing for better separation of concerns.&quot;">
+      <option name="closed" value="true" />
+      <created>1714283992014</created>
+      <option name="number" value="00388" />
+      <option name="presentableId" value="LOCAL-00388" />
+      <option name="project" value="LOCAL" />
+      <updated>1714283992014</updated>
+    </task>
+    <option name="localTasksCounter" value="389" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -905,32 +897,32 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Changed API end" />
-    <MESSAGE value="Changed API endpoints" />
-    <MESSAGE value="Changed API endpoints and" />
-    <MESSAGE value="Changed API endpoints and added" />
-    <MESSAGE value="Changed API endpoints and added new" />
-    <MESSAGE value="Changed API endpoints and added new columns" />
-    <MESSAGE value="Changed API endpoints and added new columns in" />
-    <MESSAGE value="Changed API endpoints and added new columns in the" />
-    <MESSAGE value="Changed API endpoints and added new columns in the database" />
-    <MESSAGE value="Changed API endpoints and added new columns in the database for" />
-    <MESSAGE value="Changed API endpoints and added new columns in the database for not" />
-    <MESSAGE value="Changed API endpoints and added new columns in the database for notices" />
-    <MESSAGE value="Changed API endpoints and added new columns in the database for notices." />
-    <MESSAGE value="Add" />
-    <MESSAGE value="Add debug" />
-    <MESSAGE value="Add debug mode" />
-    <MESSAGE value="Add debug mode and" />
-    <MESSAGE value="Add debug mode and response" />
-    <MESSAGE value="Add debug mode and response panel" />
-    <MESSAGE value="Add debug mode and response panel to" />
-    <MESSAGE value="Add debug mode and response panel to HTTP" />
-    <MESSAGE value="Add debug mode and response panel to HTTP API" />
-    <MESSAGE value="Add debug mode and response panel to HTTP API settings" />
-    <MESSAGE value="Add debug mode and response panel to HTTP API settings page" />
-    <MESSAGE value="Add debug mode and response panel to HTTP API settings page." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add debug mode and response panel to HTTP API settings page." />
+    <MESSAGE value="Change websocket consumers import path in asgi.py and rename web" />
+    <MESSAGE value="Change websocket consumers import path in asgi.py and rename websocket" />
+    <MESSAGE value="Change websocket consumers import path in asgi.py and rename websocket consum" />
+    <MESSAGE value="Change websocket consumers import path in asgi.py and rename websocket consumers" />
+    <MESSAGE value="Change websocket consumers import path in asgi.py and rename websocket consumers file" />
+    <MESSAGE value="Change websocket consumers import path in asgi.py and rename websocket consumers file." />
+    <MESSAGE value="&quot;Refactor API" />
+    <MESSAGE value="&quot;Refactor API end" />
+    <MESSAGE value="&quot;Refactor API endpoints" />
+    <MESSAGE value="&quot;Refactor API endpoints and" />
+    <MESSAGE value="&quot;Refactor API endpoints and web" />
+    <MESSAGE value="&quot;Refactor API endpoints and websocket" />
+    <MESSAGE value="&quot;Refactor API endpoints and websocket URL" />
+    <MESSAGE value="&quot;Refactor API endpoints and websocket URL&quot;" />
+    <MESSAGE value="&quot;" />
+    <MESSAGE value="&quot;Ref" />
+    <MESSAGE value="&quot;Refactor" />
+    <MESSAGE value="&quot;Refactor URL" />
+    <MESSAGE value="&quot;Refactor URL routing" />
+    <MESSAGE value="&quot;Refactor URL routing for" />
+    <MESSAGE value="&quot;Refactor URL routing for better" />
+    <MESSAGE value="&quot;Refactor URL routing for better separation" />
+    <MESSAGE value="&quot;Refactor URL routing for better separation of" />
+    <MESSAGE value="&quot;Refactor URL routing for better separation of concerns" />
+    <MESSAGE value="&quot;Refactor URL routing for better separation of concerns.&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Refactor URL routing for better separation of concerns.&quot;" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$recursion.coverage" NAME="recursion Coverage Results" MODIFIED="1712139211023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
@@ -947,7 +939,7 @@
     <SUITE FILE_PATH="coverage/backend$Test__api_tests_test_user_list.coverage" NAME="Test: api.tests.test_user_list Coverage Results" MODIFIED="1712039022358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/backend$functions.coverage" NAME="functions Coverage Results" MODIFIED="1711604944057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/builitin" />
     <SUITE FILE_PATH="coverage/backend$event_manager.coverage" NAME="event_manager Coverage Results" MODIFIED="1706679188463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/events" />
-    <SUITE FILE_PATH="coverage/backend$__init____1_.coverage" NAME="__init__ (1) Coverage Results" MODIFIED="1712804435593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/dao" />
+    <SUITE FILE_PATH="coverage/backend$__init____1_.coverage" NAME="__init__ (1) Coverage Results" MODIFIED="1714284385232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/emus" />
     <SUITE FILE_PATH="coverage/backend$Test__api_tests_test_user_list_TestUserListViewSet_test_hello.coverage" NAME="Test: api.tests.test_user_list.TestUserListViewSet.test_hello Coverage Results" MODIFIED="1712039113885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/backend$Test__api_tests_test_custom_token_TestCustomJsonWebToken.coverage" NAME="Test: api.tests.test_custom_token.TestCustomJsonWebToken Coverage Results" MODIFIED="1711522004553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/backend$render_template_obj.coverage" NAME="render_template_obj Coverage Results" MODIFIED="1706090193785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
