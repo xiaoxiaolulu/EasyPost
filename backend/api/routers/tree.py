@@ -1,5 +1,6 @@
 from django.urls import path
 from rest_framework.routers import DefaultRouter
+from api.emus.RouterConfigEnum import RouterConfigEnum
 from api.service.https import (
     TreeView
 )
@@ -12,5 +13,5 @@ app_urls = [
 ]
 
 
-app_name = "tree"
+app_name = RouterConfigEnum.TREE
 urlpatterns = app_urls + router.urls

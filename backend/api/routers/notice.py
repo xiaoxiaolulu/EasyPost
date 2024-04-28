@@ -1,5 +1,6 @@
 from django.urls import path
 from rest_framework.routers import DefaultRouter
+from api.emus.RouterConfigEnum import RouterConfigEnum
 from api.service.setting import (
     NoticeListViewSet,
     NoticeDestroyViewSet,
@@ -18,5 +19,5 @@ app_urls = [
 ]
 
 
-app_name = "notice"
+app_name = RouterConfigEnum.NOTICE
 urlpatterns = app_urls + router.urls

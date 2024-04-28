@@ -1,5 +1,6 @@
 from django.urls import path
 from rest_framework.routers import DefaultRouter
+from api.emus.RouterConfigEnum import RouterConfigEnum
 from api.service.setting import (
     DataSourceListViewSet,
     DataSourceDestroyViewSet,
@@ -20,5 +21,5 @@ app_urls = [
 ]
 
 
-app_name = "database"
+app_name = RouterConfigEnum.DATABASE
 urlpatterns = app_urls + router.urls

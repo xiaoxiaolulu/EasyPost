@@ -1,5 +1,6 @@
 from django.urls import path
 from rest_framework.routers import DefaultRouter
+from api.emus.RouterConfigEnum import RouterConfigEnum
 from api.service.https import (
     SaveOrUpdateCaseView,
     DelCaseView,
@@ -20,5 +21,5 @@ app_urls = [
 ]
 
 
-app_name = "case"
+app_name = RouterConfigEnum.CASE
 urlpatterns = app_urls + router.urls

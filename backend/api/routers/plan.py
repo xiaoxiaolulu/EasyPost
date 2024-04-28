@@ -1,5 +1,6 @@
 from django.urls import path
 from rest_framework.routers import DefaultRouter
+from api.emus.RouterConfigEnum import RouterConfigEnum
 from api.service.plan import (
     SaveOrUpdatePlanView,
     UpdatePlanStateView,
@@ -22,5 +23,5 @@ app_urls = [
 ]
 
 
-app_name = "plan"
+app_name = RouterConfigEnum.PLAN
 urlpatterns = app_urls + router.urls

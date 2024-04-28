@@ -1,5 +1,6 @@
 from django.urls import path
 from rest_framework.routers import DefaultRouter
+from api.emus.RouterConfigEnum import RouterConfigEnum
 from api.service.setting import (
     TestEnvironmentListViewSet,
     TestEnvironmentDestroyViewSet,
@@ -18,5 +19,5 @@ app_urls = [
 ]
 
 
-app_name = "env"
+app_name = RouterConfigEnum.ENV
 urlpatterns = app_urls + router.urls

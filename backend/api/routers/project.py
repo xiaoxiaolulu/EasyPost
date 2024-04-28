@@ -1,5 +1,6 @@
 from django.urls import path
 from rest_framework.routers import DefaultRouter
+from api.emus.RouterConfigEnum import RouterConfigEnum
 from api.service.project import (
     ProjectListViewSet,
     ProjectDestroyViewSet,
@@ -24,5 +25,5 @@ app_urls = [
 ]
 
 
-app_name = "project"
+app_name = RouterConfigEnum.PROJECT
 urlpatterns = app_urls + router.urls

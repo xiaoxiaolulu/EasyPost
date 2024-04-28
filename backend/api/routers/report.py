@@ -1,5 +1,6 @@
 from django.urls import path
 from rest_framework.routers import DefaultRouter
+from api.emus.RouterConfigEnum import RouterConfigEnum
 from api.service.report import (
     ReportDetailView,
     ReportListViewSet
@@ -14,5 +15,5 @@ app_urls = [
 ]
 
 
-app_name = "report"
+app_name = RouterConfigEnum.REPORT
 urlpatterns = app_urls + router.urls

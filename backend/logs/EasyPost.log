@@ -8652,3 +8652,83 @@ Quit the server with CTRL-BREAK.
                   \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
                 
 2024-04-28 13:57:48 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-28 14:02:51 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 14:02:51 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 14:02:51 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 14:02:51 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 14:02:51 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 14:02:51 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 14:02:51 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 14:02:51 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 14:06:27 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 14:06:27 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 14:06:27 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 14:06:27 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 14:06:27 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 28, 2024 - 14:06:27
+2024-04-28 14:06:27 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-28 14:06:27 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-28 14:06:33 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 14:06:34 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 14:06:34 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 14:06:34 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 14:06:34 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 28, 2024 - 14:06:34
+2024-04-28 14:06:34 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-28 14:06:34 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-28 14:13:25 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 14:13:25 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 14:13:25 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 14:13:25 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 14:13:26 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 28, 2024 - 14:13:26
+2024-04-28 14:13:26 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-28 14:13:26 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-28 14:17:52 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 14:17:53 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 14:17:53 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 14:17:53 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 14:17:53 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 28, 2024 - 14:17:53
+2024-04-28 14:17:53 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-28 14:17:53 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s

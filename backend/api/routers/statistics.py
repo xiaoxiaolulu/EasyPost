@@ -1,5 +1,6 @@
 from django.urls import path
 from rest_framework.routers import DefaultRouter
+from api.emus.RouterConfigEnum import RouterConfigEnum
 from api.service.dashboard import StatisticsView
 
 
@@ -10,5 +11,5 @@ app_urls = [
 ]
 
 
-app_name = "statistics"
+app_name = RouterConfigEnum.STATISTICS
 urlpatterns = app_urls + router.urls
