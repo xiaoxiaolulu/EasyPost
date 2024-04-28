@@ -34,7 +34,7 @@ if __name__ == '__main__':
                 #     #             # 'teardown_script': "test.assertion('相等',200,response.status_code)",
                 #     #             "extract": {
                 #     #                 # 通过jsonpath提取
-                #     #                 "router": ("env", "jsonpath", "$.url"),
+                #     #                 "routers": ("env", "jsonpath", "$.url"),
                 #     #                 # 通过正则表达式提取
                 #     #             },
                 #     #             'validators': [{
@@ -90,7 +90,7 @@ if __name__ == '__main__':
                 #     # #'teardown_script': "test.assertion('相等',200,response.status_code)",
                 #     #  #   "extract": {
                 #     #  #       # 通过jsonpath提取
-                #     #  #       "router": ("env", "jsonpath", "$.url"),
+                #     #  #       "routers": ("env", "jsonpath", "$.url"),
                 #     #         # 通过正则表达式提取
                 #     #  #   },
                 #     # 'validators': [{
@@ -127,7 +127,7 @@ if __name__ == '__main__':
                         'expect': '$.url'}],
                     "extract": {
                         # 通过jsonpath提取
-                        "router": ("env", "jsonpath", "$.url"),
+                        "routers": ("env", "jsonpath", "$.url"),
                         # 通过正则表达式提取
                     }
                 },
@@ -162,7 +162,7 @@ if __name__ == '__main__':
                 #     #             # 'teardown_script': "test.assertion('相等',200,response.status_code)",
                 #     #             "extract": {
                 #     #                 # 通过jsonpath提取
-                #     #                 "router": ("env", "jsonpath", "$.url"),
+                #     #                 "routers": ("env", "jsonpath", "$.url"),
                 #     #                 # 通过正则表达式提取
                 #     #             },
                 #     #             'validators': [{
@@ -218,7 +218,7 @@ if __name__ == '__main__':
                 #     # #'teardown_script': "test.assertion('相等',200,response.status_code)",
                 #     #  #   "extract": {
                 #     #  #       # 通过jsonpath提取
-                #     #  #       "router": ("env", "jsonpath", "$.url"),
+                #     #  #       "routers": ("env", "jsonpath", "$.url"),
                 #     #         # 通过正则表达式提取
                 #     #  #   },
                 #     # 'validators': [{
@@ -255,7 +255,7 @@ if __name__ == '__main__':
                         'expect': '$.url'}],
                     "extract": {
                         # 通过jsonpath提取
-                        "router": ("env", "jsonpath", "$.url"),
+                        "routers": ("env", "jsonpath", "$.url"),
                         # 通过正则表达式提取
                     }
                 },
@@ -294,7 +294,7 @@ if __name__ == '__main__':
     #     #'teardown_script': "test.assertion('相等',200,response.status_code)",
     #         "extract": {
     #             # 通过jsonpath提取
-    #             "router": ("env", "jsonpath", "$.url"),
+    #             "routers": ("env", "jsonpath", "$.url"),
     #             # 通过正则表达式提取
     #         },
     #     'validators': [{

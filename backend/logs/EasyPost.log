@@ -8095,3 +8095,560 @@ Quit the server with CTRL-BREAK.
 2024-04-26 17:59:12 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
 2024-04-26 17:59:14 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
 2024-04-26 17:59:14 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-26 18:02:28 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 18:02:28 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 18:02:28 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 18:02:28 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 18:02:28 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 18:02:30 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 18:02:30 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 18:02:30 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 18:02:30 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 18:02:30 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 18:10:23 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 18:10:23 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 18:10:23 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 18:10:43 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 18:10:43 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 18:10:43 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 18:10:46 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 18:12:03 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 18:12:03 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 18:12:03 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 18:12:04 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 18:12:04 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 18:12:05 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 18:12:05 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 18:12:05 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 18:12:05 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 18:12:06 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 18:12:06 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 18:12:06 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 18:12:07 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 18:12:07 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 18:12:07 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 18:12:07 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-26 18:12:07 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:02:14 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 10:02:14 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code 1006
+2024-04-28 10:02:31 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:02:31 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:02:31 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:02:31 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:02:31 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:02:31 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:02:31 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:02:31 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:02:31 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:02:31 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:02:32 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:02:32 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:02:33 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:02:33 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:14 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:14 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:14 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:14 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:16 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:16 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:16 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:18 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:18 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:18 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:18 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:18 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:18 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:18 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:18 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:23 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:23 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:23 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:23 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:23 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:25 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:25 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:29 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:29 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:29 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:29 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:46 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:46 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:46 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:46 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:46 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:49 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:49 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:58 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:58 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:33:58 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:40:12 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:40:12 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:40:12 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:40:14 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:40:14 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:40:14 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:40:16 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:40:16 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:40:16 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:40:17 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:40:17 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:40:17 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:40:17 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:40:17 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:40:22 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:40:22 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:40:24 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:40:24 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:40:24 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:40:29 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:40:29 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:40:33 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:40:33 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:40:36 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:40:36 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:41:28 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:41:28 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:41:28 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:43:45 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:43:45 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:43:45 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:44:04 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:44:04 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:44:04 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:44:05 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:44:05 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:44:05 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:44:05 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:44:05 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:44:06 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:44:06 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:44:06 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:44:09 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:44:09 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:44:09 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:44:09 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:44:09 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:44:09 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:44:09 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:44:09 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:44:10 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:44:10 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:44:10 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:44:10 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:44:10 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:44:10 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:44:10 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:44:10 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:44:10 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:44:10 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:44:15 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:44:15 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:46:44 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:46:44 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:46:44 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:46:47 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:46:47 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:46:47 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:46:48 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:46:48 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:46:48 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:46:48 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:46:48 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:46:48 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:46:48 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:46:48 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:46:49 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:46:49 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:46:54 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:46:54 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:46:54 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:46:54 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:46:54 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:46:54 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:46:54 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:46:54 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:46:55 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:46:55 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:47:05 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:47:05 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:47:25 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:47:25 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:47:25 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:47:26 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:47:26 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:47:26 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:47:27 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:47:27 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:47:27 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:47:28 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:47:28 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:47:28 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:47:29 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:47:29 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:47:29 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:47:29 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:47:29 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:48:07 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 10:48:07 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 11:20:07 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 11:20:07 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 11:20:08 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 11:20:08 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 11:20:08 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 11:20:08 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 28, 2024 - 11:20:08
+2024-04-28 11:20:08 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-28 11:20:08 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-28 11:20:08 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 11:20:08 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 11:20:08 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 11:21:09 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 11:21:09 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 11:21:28 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 11:21:28 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 11:21:31 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 11:21:31 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 11:21:39 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 11:21:39 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code 1001
+2024-04-28 11:21:40 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 11:21:40 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 11:21:49 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 11:21:50 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 11:21:50 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 11:21:50 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 11:22:17 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 11:22:17 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 11:22:26 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 11:22:26 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 11:22:33 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 11:22:33 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 11:22:36 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 11:22:36 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 11:23:05 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 11:23:05 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 11:23:09 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 11:23:09 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 11:23:23 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 11:23:23 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 11:23:27 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 11:23:27 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 11:23:41 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 11:23:41 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 11:23:45 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 11:23:45 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 11:23:58 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 11:23:58 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 11:23:58 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 11:23:58 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 11:23:58 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 11:23:58 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 28, 2024 - 11:23:58
+2024-04-28 11:23:58 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-28 11:23:58 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-28 11:23:59 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 11:23:59 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 11:23:59 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 11:24:01 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 11:24:01 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 11:24:15 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 11:24:15 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 11:24:19 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 11:24:19 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 11:24:33 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 11:24:33 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 11:24:37 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 11:24:37 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 11:24:51 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 11:24:51 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 11:24:55 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 11:24:55 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 11:25:09 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 11:25:09 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 11:25:13 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 11:25:13 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 11:25:27 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 11:25:27 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 11:25:31 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 11:25:31 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 11:25:44 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 11:25:44 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 11:25:48 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 11:25:48 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 11:26:02 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 11:26:02 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 11:26:06 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 11:26:06 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 11:26:20 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 11:26:20 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 11:26:23 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 11:26:23 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 11:26:37 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 11:26:37 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 11:26:41 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 11:26:41 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 11:26:55 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 11:26:55 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 11:26:59 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 11:26:59 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 11:27:13 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 11:27:13 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 11:27:17 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 11:27:17 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 11:27:30 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 11:27:30 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 11:27:34 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 11:27:34 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 11:27:48 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 11:27:48 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 11:27:52 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 11:27:52 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 11:28:06 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 11:28:06 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 11:28:10 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 11:28:10 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 11:28:23 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 11:28:23 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 11:28:27 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 11:28:27 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 11:28:41 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 11:28:41 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 11:28:45 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 11:28:45 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 11:28:59 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 11:28:59 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 11:29:03 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 11:29:03 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 11:29:17 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 11:29:17 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 11:29:21 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 11:29:21 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 11:29:35 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 11:29:35 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 11:29:39 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 11:29:39 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 11:29:53 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 11:29:53 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 11:29:57 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 11:29:57 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 11:30:11 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 11:30:11 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 11:30:15 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 11:30:15 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 11:30:29 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 11:30:29 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 11:30:33 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 11:30:33 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 11:30:47 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 11:30:47 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 11:30:51 [django-main-thread]-[runserver.log_action:192]-[INFO]:WebSocket HANDSHAKING %(path)s [%(client)s]
+2024-04-28 11:30:51 [django-main-thread]-[runserver.log_action:188]-[INFO]:WebSocket CONNECT %(path)s [%(client)s]
+2024-04-28 11:31:05 [django-main-thread]-[runserver.log_action:190]-[INFO]:WebSocket DISCONNECT %(path)s [%(client)s]
+2024-04-28 11:31:05 [django-main-thread]-[consumers.disconnect:13]-[INFO]:WebSocket connection closed with code None
+2024-04-28 11:31:08 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 11:31:09 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 11:31:09 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 11:31:09 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 11:31:09 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 11:31:09 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 11:31:09 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 11:31:09 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 11:31:09 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 11:31:10 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 11:31:10 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 11:31:10 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 11:31:10 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 11:31:10 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 11:31:10 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 11:31:15 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 11:31:15 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 11:31:15 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 11:31:15 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 11:31:15 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 11:31:15 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 11:31:15 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 11:31:15 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 11:31:15 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 28, 2024 - 11:31:15
+2024-04-28 11:31:15 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-28 11:31:15 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-28 11:33:42 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 11:33:43 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 11:36:10 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 11:36:10 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 11:36:10 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 11:36:10 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 11:36:10 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 11:36:11 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 28, 2024 - 11:36:11
+2024-04-28 11:36:11 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-28 11:36:11 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-28 11:36:11 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 11:36:11 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 11:36:11 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 13:30:29 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:30:29 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:30:29 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:30:30 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:30:30 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:30:30 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:30:30 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:30:31 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:30:31 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:30:32 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:30:32 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:30:34 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:30:34 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:30:34 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:30:34 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:48:31 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 13:48:32 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 13:48:52 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 13:49:05 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 13:49:06 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 13:49:06 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 13:49:06 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 13:49:06 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 28, 2024 - 13:49:06
+2024-04-28 13:49:06 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-28 13:49:06 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-28 13:51:05 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 13:51:05 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 13:51:05 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 13:51:05 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 13:51:05 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 28, 2024 - 13:51:05
+2024-04-28 13:51:05 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-28 13:51:05 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-28 13:53:02 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 13:53:03 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 13:53:03 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 13:53:03 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 13:53:03 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 28, 2024 - 13:53:03
+2024-04-28 13:53:03 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-28 13:53:03 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-28 13:53:10 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:53:10 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:53:10 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:53:10 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:53:10 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:53:10 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:53:10 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:53:10 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:53:10 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:53:10 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:53:14 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:53:14 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:53:14 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:53:14 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:53:14 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:53:19 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:53:20 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:53:20 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:53:20 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-28 13:57:47 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-28 13:57:48 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-28 13:57:48 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-28 13:57:48 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-28 13:57:48 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 28, 2024 - 13:57:48
+2024-04-28 13:57:48 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-28 13:57:48 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
