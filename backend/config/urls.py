@@ -52,8 +52,30 @@ urlpatterns = [
     path("auth/", include("rest_framework.urls")),
     # Admin
     path("admin/", admin.site.urls),
-    # API
-    path("api/", include("api.urls", "api")),
+    # User
+    path("api/user/", include("api.routers.user", "user")),
+    # Statistics
+    path("api/statistics/", include("api.routers.statistics", "statistics")),
+    # Project
+    path("api/project/", include("api.routers.project", "project")),
+    # Env
+    path("api/env/", include("api.routers.env", "env")),
+    # Database
+    path("api/database/", include("api.routers.database", "database")),
+    # Function
+    path("api/function/", include("api.routers.function", "function")),
+    # Notice
+    path("api/notice/", include("api.routers.notice", "notice")),
+    # Tree
+    path("api/tree/", include("api.routers.tree", "tree")),
+    # Http
+    path("api/http/", include("api.routers.http", "http")),
+    # Case
+    path("api/case/", include("api.routers.case", "case")),
+    # Plan
+    path("api/plan/", include("api.routers.plan", "plan")),
+    # Report
+    path("api/report/", include("api.routers.report", "report")),
 
     re_path(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
 
