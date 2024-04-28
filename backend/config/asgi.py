@@ -9,7 +9,8 @@ https://docs.djangoproject.com/en/3.0/howto/deployment/asgi/
 import os
 from channels.routing import ProtocolTypeRouter, URLRouter
 from django.core.asgi import get_asgi_application
-from api.websocket import routings
+from api.routers.websocket import socket_urlpatterns
+
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
 
@@ -17,5 +18,5 @@ application = ProtocolTypeRouter({
     # 当存在http请求时，路由走这里
     "http": get_asgi_application(),
     # 当存在websocket请求时，将请求交给指定应用中的路由模块处理
-    "websocket": URLRouter(routings.socket_urlpatterns)
+    "websocket": URLRouter(socket_urlpatterns)
 })
