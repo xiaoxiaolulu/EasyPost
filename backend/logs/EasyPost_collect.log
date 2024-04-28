@@ -7277,3 +7277,22 @@ INFO     [2024-04-28 17:37:20,226] [none] django.utils.autoreload: Watching for 
 INFO     [2024-04-28 17:38:10,411] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\routers\http.py changed, reloading.
 INFO     [2024-04-28 17:38:11,455] [none] django.utils.autoreload: Watching for file changes with StatReloader
 INFO     [2024-04-28 17:38:11,866] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-28 17:40:01,420] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\https.py changed, reloading.
+INFO     [2024-04-28 17:40:01,672] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\https.py changed, reloading.
+INFO     [2024-04-28 17:40:02,494] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-28 17:40:02,801] [none] django.utils.autoreload: Watching for file changes with StatReloader
+WARNING  [2024-04-28 17:44:41,150] [aedcf65690f443aba47d7852e516cb56] django.request: Not Found: /media/avatar/default.png
+INFO     [2024-04-28 17:50:13,752] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\schema\https.py changed, reloading.
+INFO     [2024-04-28 17:50:14,578] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\schema\https.py changed, reloading.
+INFO     [2024-04-28 17:50:14,809] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-28 17:50:15,672] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-28 17:56:56,042] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\routers\http.py changed, reloading.
+INFO     [2024-04-28 17:56:56,648] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\https.py changed, reloading.
+INFO     [2024-04-28 17:56:57,242] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-28 17:56:57,966] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-28 18:02:12,020] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\emus\RouterConfigEnum.py changed, reloading.
+INFO     [2024-04-28 18:02:12,022] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\filters\setting.py changed, reloading.
+INFO     [2024-04-28 18:02:13,091] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-28 18:02:13,091] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-28 18:04:28,455] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\migrations\0029_datastructure.py changed, reloading.
+INFO     [2024-04-28 18:04:29,399] [none] django.utils.autoreload: Watching for file changes with StatReloader
