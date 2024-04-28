@@ -7,7 +7,6 @@ DESCRIPTION：接口测试模型
  * table-Case: 接口用例
  * table-Step: 接口步骤
  * table-ApiCopy: 接口快照
- * table-DataStructure: 数据结构
 """
 from django.contrib.auth import get_user_model
 from django.db.models import (
@@ -18,9 +17,7 @@ from django.db.models import (
     CharField,
     DateTimeField,
     SET_NULL,
-    AutoField,
-    ManyToManyField,
-    IntegerChoices
+    AutoField
 )
 from api.models.project import Project
 from django.utils.translation import gettext_lazy as _
@@ -216,44 +213,6 @@ class Step(Model):
 
     class Meta:
         verbose_name = _('Step')
-        verbose_name_plural = verbose_name
-
-    def __str__(self):
-        return self.name
-
-
-class DataStructureType(IntegerChoices):
-
-    NONE = 0
-    FORM_DATA = 1
-    X_WWW_FORM_URLENCODED = 2
-    RAW = 3
-
-
-class DataStructure(Model):
-
-    """
-    数据结构
-
-    * name: 数据结构名称
-    * desc: 描述
-    * raw: 参数
-    * user: 创建者
-    * create_time: 创建时间
-    * update_time: 更新时间
-    """
-    id = AutoField(primary_key=True)
-    name = CharField(max_length=50, null=True, blank=True, verbose_name=_('DataStructure Name'))
-    desc = TextField(null=True, blank=True, verbose_name=_('DataStructure Desc'))
-    type = CharField(max_length=50, verbose_name=_('DataStructure Type'), choices=DataStructureType,
-                     default=DataStructureType.NONE)
-    raw = TextField(verbose_name=_('DataStructure raw'), null=False,  default=None)
-    user = ForeignKey(User, related_name="datastructure_creator", null=True, on_delete=SET_NULL, verbose_name=_('User'))
-    create_time = DateTimeField(auto_now_add=True, verbose_name=_('DataStructure CreateTime'))
-    update_time = DateTimeField(auto_now=True, verbose_name=_('DataStructure UpdateTime'))
-
-    class Meta:
-        verbose_name = _('ApiCopy')
         verbose_name_plural = verbose_name
 
     def __str__(self):

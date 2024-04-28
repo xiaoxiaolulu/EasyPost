@@ -64,6 +64,8 @@ urlpatterns = [
     path("api/database/", include("api.routers.database", "database")),
     # Function
     path("api/function/", include("api.routers.function", "function")),
+    # DataStructure
+    path("api/datastructure/", include("api.routers.datastructure", "datastructure")),
     # Notice
     path("api/notice/", include("api.routers.notice", "notice")),
     # Tree

@@ -23,7 +23,7 @@ app_urls = [
     path('snapshot', ApiSnapshotView.as_view()),
     path("list", ApiTestListView.as_view({'get': 'list'})),
     path("importApi/<int:pk>", ImportApiView.as_view()),
-    path('run', RunApiView.as_view()),
+    path('run', RunApiView.as_view())
 ]
 
 

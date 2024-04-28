@@ -5,7 +5,7 @@ from api.models.setting import (
     DataSource,
     Functions,
     BindDataSource,
-    Notice
+    Notice, DataStructure
 )
 from api.schema.user import UserSimpleSerializers
 
@@ -86,4 +86,16 @@ class NoticeSerializers(serializers.ModelSerializer):
 
     class Meta:
         model = Notice
+        fields = "__all__"
+
+
+class DataStructureSerializers(serializers.ModelSerializer):
+
+    id = serializers.IntegerField(read_only=True)
+    creator = UserSimpleSerializers(required=False, default=serializers.CurrentUserDefault())
+    create_time = serializers.DateTimeField(read_only=True)
+    update_time = serializers.DateTimeField(read_only=True)
+
+    class Meta:
+        model = DataStructure
         fields = "__all__"

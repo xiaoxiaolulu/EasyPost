@@ -3,7 +3,8 @@ from api.models.setting import (
     TestEnvironment,
     DataSource,
     Functions,
-    Notice
+    Notice,
+    DataStructure
 )
 
 
@@ -40,4 +41,13 @@ class NoticeFilter(filters.FilterSet):
 
     class Meta:
         model = Notice
+        fields = ["name"]
+
+
+class DataStructureFilter(filters.FilterSet):
+
+    name = filters.CharFilter(field_name='name', help_text='按数据结构名称模糊查询', lookup_expr='icontains')
+
+    class Meta:
+        model = DataStructure
         fields = ["name"]

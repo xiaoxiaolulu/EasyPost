@@ -9,13 +9,15 @@ from api.filters.setting import (
     TestEnvironmentFilter,
     DataSourceFilter,
     FunctionsFilter,
-    NoticeFilter
+    NoticeFilter,
+    DataStructureFilter
 )
 from api.models.setting import (
     TestEnvironment,
     DataSource,
     Functions,
-    Notice
+    Notice,
+    DataStructure
 )
 from api.mixins.magic import (
     MagicListAPI,
@@ -29,7 +31,8 @@ from api.schema.setting import (
     TestEnvironmentSerializers,
     DataSourceSerializers,
     FunctionsSerializers,
-    NoticeSerializers
+    NoticeSerializers,
+    DataStructureSerializers
 )
 
 
@@ -220,3 +223,41 @@ class FunctionsListViewSet(MagicListAPI):  # noqa
     filterset_class = FunctionsFilter  # noqa
     search_fields = ['name']
     ordering_fields = ['create_time']
+
+
+class DataStructureListViewSet(MagicListAPI):
+
+    queryset = DataStructure.objects.all()
+    serializer_class = DataStructureSerializers
+    permission_classes = [IsAuthenticated]
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
+    filterset_class = DataStructureFilter
+    search_fields = ['name']
+    ordering_fields = ['create_time']
+
+
+class NoticeDestroyViewSet(MagicDestroyApi):
+
+    queryset = DataStructure.objects.all()
+    serializer_class = DataStructureSerializers
+    permission_classes = [IsAuthenticated]
+
+
+class NoticeDetailView(MagicRetrieveApi):
+
+    serializer_class = DataStructureSerializers
+    queryset = DataStructure.objects.all()
+    permission_classes = [IsAuthenticated]
+
+
+class DataSourceUpdateViewSet(MagicUpdateApi):
+    queryset = DataStructure.objects.all()
+    serializer_class = DataStructureSerializers
+    permission_classes = [IsAuthenticated]
+
+
+class DataSourceCreateViewSet(MagicCreateApi):
+
+    queryset = DataStructure.objects.all()
+    serializer_class = DataStructureSerializers
+    permission_classes = [IsAuthenticated]

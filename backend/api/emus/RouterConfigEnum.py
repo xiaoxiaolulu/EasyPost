@@ -12,3 +12,4 @@ class RouterConfigEnum:
     STATISTICS = "statistics"
     TREE = "tree"
     USER = "user"
+    DataStructure = "datastructure"

@@ -1,7 +1,5 @@
 import json
 import os
-
-from channels.generic.websocket import AsyncWebsocketConsumer
 from django.core.exceptions import ObjectDoesNotExist
 from rest_framework import (
     status,
@@ -18,7 +16,9 @@ from api.models.https import (
     Api,
     Case
 )
-from api.mixins.magic import MagicRetrieveApi
+from api.mixins.magic import (
+    MagicRetrieveApi
+)
 from api.schema.https import (
     RelationSerializer,
     ApiSerializer,
