@@ -2,11 +2,9 @@ from enum import IntEnum
 
 
 class CaseParametersEnum(IntEnum):
-    TEXT = 0
-    JSON = 1
+
+    NONE = 0
+    RAW = 1
     HEADER = 2
-    COOKIE = 3
-    STATUS_CODE = 4
-    BODY_REGEX = 5
-    BODY_JSON = 6
-    REQUEST_HEADER = 7
+    FORM_DATA = 3
+    X_WWW_FORM_URLENCODED = 4

@@ -25,6 +25,7 @@ from django.db.models.signals import (
     post_delete
 )
 from django.utils.translation import gettext_lazy as _
+from api.emus.CaseParametersEnum import CaseParametersEnum
 from api.models.project import Project
 
 
@@ -183,10 +184,10 @@ class Functions(Model):
 
 class DataStructureType(IntegerChoices):
 
-    NONE = 0
-    FORM_DATA = 1
-    X_WWW_FORM_URLENCODED = 2
-    RAW = 3
+    NONE = CaseParametersEnum.NONE
+    FORM_DATA = CaseParametersEnum.FORM_DATA
+    X_WWW_FORM_URLENCODED = CaseParametersEnum.X_WWW_FORM_URLENCODED
+    RAW = CaseParametersEnum.RAW
 
 
 class DataStructure(Model):

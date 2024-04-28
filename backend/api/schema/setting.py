@@ -5,7 +5,8 @@ from api.models.setting import (
     DataSource,
     Functions,
     BindDataSource,
-    Notice, DataStructure
+    Notice,
+    DataStructure
 )
 from api.schema.user import UserSimpleSerializers
 
