@@ -16,6 +16,7 @@ import othersRouter from './modules/other'
 import projectRouter from './modules/project'
 import httpsRouter from './modules/https'
 import recordRouter from './modules/record'
+import toolsRouter from './modules/tools'
 
 // 异步组件
 export const asyncRoutes = [
@@ -24,6 +25,7 @@ export const asyncRoutes = [
   ...httpsRouter,
   ...recordRouter,
   ...othersRouter,
+  ...toolsRouter
 ]
 
 /**

@@ -31,6 +31,8 @@ export const useSocket = defineStore("socket", () => {
    * @return {*}
    */
   const sendSocket = (data) => {
+    // 订阅type = notify 的消息
+    wsSubscribe("notify");
     instance.value.send(JSON.stringify(data));
   };
 
@@ -59,8 +61,6 @@ export const useSocket = defineStore("socket", () => {
     if (!instance.value) {
       const ws = new Ws(url);
       instance.value = ws;
-      // 订阅type = notify 的消息
-      wsSubscribe("notify");
     }
     return instance.value;
   };

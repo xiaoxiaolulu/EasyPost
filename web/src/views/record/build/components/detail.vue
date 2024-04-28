@@ -110,11 +110,11 @@
             destroy-on-close
             :with-header="true">
           <template #header>
-                        <span>
-                          <strong class="pr10">报告详情</strong>
-                          <el-tag type="danger" v-if="state.statisticsData.success === 0">不通过</el-tag>
-                          <el-tag type="success" v-else>通过</el-tag>
-                        </span>
+            <span>
+              <strong class="pr10">报告详情</strong>
+              <el-tag type="danger" v-if="state.statisticsData.success === 0">不通过</el-tag>
+              <el-tag type="success" v-else>通过</el-tag>
+            </span>
           </template>
           <div style="height: 500px; overflow-y: auto">
             <case-step-detail :reportData="ResponseData"></case-step-detail>

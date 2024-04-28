@@ -26,7 +26,7 @@ const httpsRouter = [{
             meta: { title: '接口详情', icon: 'FolderRemove'  }
         },{
             path: '/http/ws',
-            component: () => import('@/views/https/api/components/websocket.vue'),
+            component: () => import('@/views/tools/websocket/index.vue'),
             name: 'websocket',
             hidden: true,
             meta: { title: 'websocket', icon: 'FolderRemove'  }
