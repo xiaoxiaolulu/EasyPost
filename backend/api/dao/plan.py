@@ -6,6 +6,7 @@ from typing import Any
 from channels.db import database_sync_to_async
 from django.forms import model_to_dict
 from api.dao.https import HttpDao
+from api.emus.PlanEnum import PlanType
 from api.models.plan import Plan
 from api.models.project import Project
 from api.response.fatcory import ResponseStandard
@@ -131,7 +132,7 @@ class PlanDao:
             if plan.state == target_state:
                 return ResponseStandard.resp_400()
 
-            if target_state == 1:
+            if target_state == PlanType.START:
                 Scheduler.add_test_plan(
                     plan_parser_data.get("case_list", []),
                     plan.name,

@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="&quot;Add DataStructure model and migration, update router&quot;">
-      <change afterPath="$PROJECT_DIR$/api/filters/http.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/routers/datastructure.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/emus/RouterConfigEnum.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/emus/RouterConfigEnum.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/filters/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/filters/setting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/models/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/https.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/models/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/setting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/routers/http.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/routers/http.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/schema/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/schema/setting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/service/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/https.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/service/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/setting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Updated CaseParametersEnum and DataStructureType to use the same constants for data structure types.">
+      <change afterPath="$PROJECT_DIR$/api/emus/HttpEnum.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/https.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/plan.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
     </list>
@@ -135,7 +128,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/86135/Desktop/EasyPost/backend/api/routers",
+    "last_opened_file_path": "C:/Users/86135/Desktop/EasyPost/backend/api/emus",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.stylelint": "true",
     "node.js.detected.package.tslint": "true",
@@ -155,11 +148,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\emus" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\routers" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\router" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\templates\media" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\utils" />
-      <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\dao" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\service" />
@@ -471,31 +464,7 @@
       <workItem from="1713319714158" duration="24461000" />
       <workItem from="1713754708273" duration="34896000" />
       <workItem from="1714116470185" duration="5019000" />
-      <workItem from="1714271913866" duration="11923000" />
-    </task>
-    <task id="LOCAL-00345" summary="Improve error handling and messaging in API requestsUpdate ElMessage usage for better error displayAdd missing import in user modelFix avatar image path in user modelUpdate editProject.vue for better code readability and proper icon displayAdjust tag type in editProject.vue">
-      <option name="closed" value="true" />
-      <created>1713164331527</created>
-      <option name="number" value="00345" />
-      <option name="presentableId" value="LOCAL-00345" />
-      <option name="project" value="LOCAL" />
-      <updated>1713164331527</updated>
-    </task>
-    <task id="LOCAL-00346" summary="Update EasyPost logging and editProject.vue file.">
-      <option name="closed" value="true" />
-      <created>1713164735265</created>
-      <option name="number" value="00346" />
-      <option name="presentableId" value="LOCAL-00346" />
-      <option name="project" value="LOCAL" />
-      <updated>1713164735265</updated>
-    </task>
-    <task id="LOCAL-00347" summary="The changes made to the codebase are as follows:1. `backend/api/service/setting.py`:* Imported `ResponseStandard` from `api.response.factory`.* Modified the `database_is_connect` function to return a `ResponseStandard` object instead of a tuple.2. `backend/unitrunner/database/DBClient.py`:* Renamed `DBClient` to `DBMysql`.* Added a new `connect` method to the `DBMysql` class.* Modified the `is_connect` method to be a static method and to return a `ResponseStandard` object instead of a boolean value.* Removed the `close_connect` method.3. `backend/api/dao/setting.py`:* Modified the `database_is_connect` function to call the new `connect` method of the `DBMysql` class and to return the `ResponseStandard` object instead of a boolean value.4. `web/src/views/system/database/index.vue`:">
-      <option name="closed" value="true" />
-      <created>1713169753613</created>
-      <option name="number" value="00347" />
-      <option name="presentableId" value="LOCAL-00347" />
-      <option name="project" value="LOCAL" />
-      <updated>1713169753614</updated>
+      <workItem from="1714271913866" duration="13376000" />
     </task>
     <task id="LOCAL-00348" summary="The changes made to the codebase are as follows:```diffIndex: backend/unitrunner/builti```">
       <option name="closed" value="true" />
@@ -865,7 +834,31 @@
       <option name="project" value="LOCAL" />
       <updated>1714297204508</updated>
     </task>
-    <option name="localTasksCounter" value="394" />
+    <task id="LOCAL-00394" summary="Add DataStructure API and routers, refine Notice API.">
+      <option name="closed" value="true" />
+      <created>1714298549994</created>
+      <option name="number" value="00394" />
+      <option name="presentableId" value="LOCAL-00394" />
+      <option name="project" value="LOCAL" />
+      <updated>1714298549994</updated>
+    </task>
+    <task id="LOCAL-00395" summary="Add DataStructure API and routers, refine Notice API.">
+      <option name="closed" value="true" />
+      <created>1714298703169</created>
+      <option name="number" value="00395" />
+      <option name="presentableId" value="LOCAL-00395" />
+      <option name="project" value="LOCAL" />
+      <updated>1714298703169</updated>
+    </task>
+    <task id="LOCAL-00396" summary="Updated CaseParametersEnum and DataStructureType to use the same constants for data structure types.">
+      <option name="closed" value="true" />
+      <created>1714298966583</created>
+      <option name="number" value="00396" />
+      <option name="presentableId" value="LOCAL-00396" />
+      <option name="project" value="LOCAL" />
+      <updated>1714298966583</updated>
+    </task>
+    <option name="localTasksCounter" value="397" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -895,32 +888,32 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Change router app names to enum values==============================Changed `app_name` values in `user.py` and `statistics.py` from hardcoded strings to values from the `RouterConfigEnum` enum. This makes it easier to change the app names in the future and ensures consistency with other parts of the code that use the same enum values.Changed `app_name` values in `notifications.py` from hardcoded strings to values from the `RouterConfigEnum` enum. This makes it easier to change the app names in the future and ensures consistency with other parts of the code that use the same enum values.Updated `app_name` values in `api/emus.py` to match the new values in the `RouterConfigEnum` enum. This ensures consistency between the enum values and the app names used in the code.Updated `app_name` values in `api/emus.py` to match the new values in the `RouterConfigEnum` enum. This ensures consistency between the enum values and the app names used in the code." />
-    <MESSAGE value="Change router app names to enum values==============================Changed `app_name` values in `user.py` and `statistics.py` from hardcoded strings to values from the `RouterConfigEnum` enum. This makes it easier to change the app names in the future and ensures consistency with other parts of the code that use the same enum values.Changed `app_name` values in `notifications.py` from hardcoded strings to values from the `RouterConfigEnum` enum. This makes it easier to change the app names in the future and ensures consistency with other parts of the code that use the same enum values.Updated `app_name` values in `api/emus.py` to match the new values in the `RouterConfigEnum` enum. This ensures consistency between the enum values and the app names used in the code.Updated `app_name` values in `api/emus.py` to match the new values in the `RouterConfigEnum` enum. This ensures consistency between the enum values and the app names used in the code.Updated" />
-    <MESSAGE value="Change router app names to enum values==============================Changed `app_name` values in `user.py` and `statistics.py` from hardcoded strings to values from the `RouterConfigEnum` enum. This makes it easier to change the app names in the future and ensures consistency with other parts of the code that use the same enum values.Changed `app_name` values in `notifications.py` from hardcoded strings to values from the `RouterConfigEnum` enum. This makes it easier to change the app names in the future and ensures consistency with other parts of the code that use the same enum values.Updated `app_name` values in `api/emus.py` to match the new values in the `RouterConfigEnum` enum. This ensures consistency between the enum values and the app names used in the code.Updated `app_name` values in `api/emus.py` to match the new values in the `RouterConfigEnum` enum. This ensures consistency between the enum values and the app names used in the code.Updated `" />
-    <MESSAGE value="Change router app names to enum values==============================Changed `app_name` values in `user.py` and `statistics.py` from hardcoded strings to values from the `RouterConfigEnum` enum. This makes it easier to change the app names in the future and ensures consistency with other parts of the code that use the same enum values.Changed `app_name` values in `notifications.py` from hardcoded strings to values from the `RouterConfigEnum` enum. This makes it easier to change the app names in the future and ensures consistency with other parts of the code that use the same enum values.Updated `app_name` values in `api/emus.py` to match the new values in the `RouterConfigEnum` enum. This ensures consistency between the enum values and the app names used in the code.Updated `app_name` values in `api/emus.py` to match the new values in the `RouterConfigEnum` enum. This ensures consistency between the enum values and the app names used in the code.Updated `app" />
-    <MESSAGE value="Change router app names to enum values==============================Changed `app_name` values in `user.py` and `statistics.py` from hardcoded strings to values from the `RouterConfigEnum` enum. This makes it easier to change the app names in the future and ensures consistency with other parts of the code that use the same enum values.Changed `app_name` values in `notifications.py` from hardcoded strings to values from the `RouterConfigEnum` enum. This makes it easier to change the app names in the future and ensures consistency with other parts of the code that use the same enum values.Updated `app_name` values in `api/emus.py` to match the new values in the `RouterConfigEnum` enum. This ensures consistency between the enum values and the app names used in the code.Updated `app_name` values in `api/emus.py` to match the new values in the `RouterConfigEnum` enum. This ensures consistency between the enum values and the app names used in the code.Updated `app_" />
-    <MESSAGE value="Change router app names to enum values==============================Changed `app_name` values in `user.py` and `statistics.py` from hardcoded strings to values from the `RouterConfigEnum` enum. This makes it easier to change the app names in the future and ensures consistency with other parts of the code that use the same enum values.Changed `app_name` values in `notifications.py` from hardcoded strings to values from the `RouterConfigEnum` enum. This makes it easier to change the app names in the future and ensures consistency with other parts of the code that use the same enum values.Updated `app_name` values in `api/emus.py` to match the new values in the `RouterConfigEnum` enum. This ensures consistency between the enum values and the app names used in the code.Updated `app_name` values in `api/emus.py` to match the new values in the `RouterConfigEnum` enum. This ensures consistency between the enum values and the app names used in the code.Updated `app_name" />
-    <MESSAGE value="Change router app names to enum values==============================Changed `app_name` values in `user.py` and `statistics.py` from hardcoded strings to values from the `RouterConfigEnum` enum. This makes it easier to change the app names in the future and ensures consistency with other parts of the code that use the same enum values.Changed `app_name` values in `notifications.py` from hardcoded strings to values from the `RouterConfigEnum` enum. This makes it easier to change the app names in the future and ensures consistency with other parts of the code that use the same enum values.Updated `app_name` values in `api/emus.py` to match the new values in the `RouterConfigEnum` enum. This ensures consistency between the enum values and the app names used in the code.Updated `app_name` values in `api/emus.py` to match the new values in the `RouterConfigEnum` enum. This ensures consistency between the enum values and the app names used in the code.Updated `app_name`" />
-    <MESSAGE value="Change router app names to enum values==============================Changed `app_name` values in `user.py` and `statistics.py` from hardcoded strings to values from the `RouterConfigEnum` enum. This makes it easier to change the app names in the future and ensures consistency with other parts of the code that use the same enum values.Changed `app_name` values in `notifications.py` from hardcoded strings to values from the `RouterConfigEnum` enum. This makes it easier to change the app names in the future and ensures consistency with other parts of the code that use the same enum values.Updated `app_name` values in `api/emus.py` to match the new values in the `RouterConfigEnum` enum. This ensures consistency between the enum values and the app names used in the code.Updated `app_name` values in `api/emus.py` to match the new values in the `RouterConfigEnum` enum. This ensures consistency between the enum values and the app names used in the code.Updated `app_name` values" />
-    <MESSAGE value="Change router app names to enum values==============================Changed `app_name` values in `user.py` and `statistics.py` from hardcoded strings to values from the `RouterConfigEnum` enum. This makes it easier to change the app names in the future and ensures consistency with other parts of the code that use the same enum values.Changed `app_name` values in `notifications.py` from hardcoded strings to values from the `RouterConfigEnum` enum. This makes it easier to change the app names in the future and ensures consistency with other parts of the code that use the same enum values.Updated `app_name` values in `api/emus.py` to match the new values in the `RouterConfigEnum` enum. This ensures consistency between the enum values and the app names used in the code.Updated `app_name` values in `api/emus.py` to match the new values in the `RouterConfigEnum` enum. This ensures consistency between the enum values and the app names used in the code.Updated `app_name` values in" />
-    <MESSAGE value="Change router app names to enum values==============================Changed `app_name` values in `user.py` and `statistics.py` from hardcoded strings to values from the `RouterConfigEnum` enum. This makes it easier to change the app names in the future and ensures consistency with other parts of the code that use the same enum values.Changed `app_name` values in `notifications.py` from hardcoded strings to values from the `RouterConfigEnum` enum. This makes it easier to change the app names in the future and ensures consistency with other parts of the code that use the same enum values.Updated `app_name` values in `api/emus.py` to match the new values in the `RouterConfigEnum` enum. This ensures consistency between the enum values and the app names used in the code.Updated `app_name` values in `api/emus.py` to match the new values in the `RouterConfigEnum` enum. This ensures consistency between the enum values and the app names used in the code.Updated `app_name` values in `" />
-    <MESSAGE value="Change router app names to enum values==============================Changed `app_name` values in `user.py` and `statistics.py` from hardcoded strings to values from the `RouterConfigEnum` enum. This makes it easier to change the app names in the future and ensures consistency with other parts of the code that use the same enum values.Changed `app_name` values in `notifications.py` from hardcoded strings to values from the `RouterConfigEnum` enum. This makes it easier to change the app names in the future and ensures consistency with other parts of the code that use the same enum values.Updated `app_name` values in `api/emus.py` to match the new values in the `RouterConfigEnum` enum. This ensures consistency between the enum values and the app names used in the code.Updated `app_name` values in `api/emus.py` to match the new values in the `RouterConfigEnum` enum. This ensures consistency between the enum values and the app names used in the code.Updated `app_name` values in `api" />
-    <MESSAGE value="Change router app names to enum values==============================Changed `app_name` values in `user.py` and `statistics.py` from hardcoded strings to values from the `RouterConfigEnum` enum. This makes it easier to change the app names in the future and ensures consistency with other parts of the code that use the same enum values.Changed `app_name` values in `notifications.py` from hardcoded strings to values from the `RouterConfigEnum` enum. This makes it easier to change the app names in the future and ensures consistency with other parts of the code that use the same enum values.Updated `app_name` values in `api/emus.py` to match the new values in the `RouterConfigEnum` enum. This ensures consistency between the enum values and the app names used in the code.Updated `app_name` values in `api/emus.py` to match the new values in the `RouterConfigEnum` enum. This ensures consistency between the enum values and the app names used in the code.Updated `app_name` values in `api/" />
-    <MESSAGE value="Change router app names to enum" />
-    <MESSAGE value="&quot;" />
-    <MESSAGE value="&quot;Add" />
-    <MESSAGE value="&quot;Add Data" />
-    <MESSAGE value="&quot;Add DataStr" />
-    <MESSAGE value="&quot;Add DataStructure" />
-    <MESSAGE value="&quot;Add DataStructure model" />
-    <MESSAGE value="&quot;Add DataStructure model and" />
-    <MESSAGE value="&quot;Add DataStructure model and migration" />
-    <MESSAGE value="&quot;Add DataStructure model and migration," />
-    <MESSAGE value="&quot;Add DataStructure model and migration, update" />
-    <MESSAGE value="&quot;Add DataStructure model and migration, update router" />
-    <MESSAGE value="&quot;Add DataStructure model and migration, update router&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Add DataStructure model and migration, update router&quot;" />
+    <MESSAGE value="Add DataStructure API and routers," />
+    <MESSAGE value="Add DataStructure API and routers, ref" />
+    <MESSAGE value="Add DataStructure API and routers, refine" />
+    <MESSAGE value="Add DataStructure API and routers, refine Notice" />
+    <MESSAGE value="Add DataStructure API and routers, refine Notice API" />
+    <MESSAGE value="Add DataStructure API and routers, refine Notice API." />
+    <MESSAGE value="Updated" />
+    <MESSAGE value="Updated Case" />
+    <MESSAGE value="Updated CaseParameters" />
+    <MESSAGE value="Updated CaseParametersEnum" />
+    <MESSAGE value="Updated CaseParametersEnum and" />
+    <MESSAGE value="Updated CaseParametersEnum and Data" />
+    <MESSAGE value="Updated CaseParametersEnum and DataStr" />
+    <MESSAGE value="Updated CaseParametersEnum and DataStructure" />
+    <MESSAGE value="Updated CaseParametersEnum and DataStructureType" />
+    <MESSAGE value="Updated CaseParametersEnum and DataStructureType to" />
+    <MESSAGE value="Updated CaseParametersEnum and DataStructureType to use" />
+    <MESSAGE value="Updated CaseParametersEnum and DataStructureType to use the" />
+    <MESSAGE value="Updated CaseParametersEnum and DataStructureType to use the same" />
+    <MESSAGE value="Updated CaseParametersEnum and DataStructureType to use the same constants" />
+    <MESSAGE value="Updated CaseParametersEnum and DataStructureType to use the same constants for" />
+    <MESSAGE value="Updated CaseParametersEnum and DataStructureType to use the same constants for data" />
+    <MESSAGE value="Updated CaseParametersEnum and DataStructureType to use the same constants for data structure" />
+    <MESSAGE value="Updated CaseParametersEnum and DataStructureType to use the same constants for data structure types" />
+    <MESSAGE value="Updated CaseParametersEnum and DataStructureType to use the same constants for data structure types." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated CaseParametersEnum and DataStructureType to use the same constants for data structure types." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$recursion.coverage" NAME="recursion Coverage Results" MODIFIED="1712139211023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />

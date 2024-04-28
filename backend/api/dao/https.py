@@ -14,6 +14,10 @@ from django.db.models import Q
 from django.forms import model_to_dict
 from api.dao.report import ReportDao
 from api.emus import treesEnum
+from api.emus.HttpEnum import (
+    ApiSnapshotEnum,
+    TreeEnum
+)
 from api.events.event_manager import EventManager
 from api.models.https import (
     Relation,
@@ -120,7 +124,7 @@ class HttpDao:
                 tree = cls.get_directory_tree(project_id, treesEnum.TreeType.API)
                 node = int(node)
 
-                if node == 1:
+                if node == TreeEnum.current:
                     pass  # queryset remains unchanged for root node
                 else:
                     children_tree = get_relation_tree(tree, node)
@@ -526,8 +530,8 @@ class HttpDao:
             request_body = cls.parser_api_data(request)
             api_copy_records = ApiCopy.objects.filter(user=request.user).order_by('-create_time')
 
-            if len(api_copy_records) > 100:
-                oldest_record = api_copy_records[100]
+            if len(api_copy_records) > ApiSnapshotEnum.numbers:
+                oldest_record = api_copy_records[ApiSnapshotEnum.numbers]
                 ApiCopy.objects.filter(user=request.user).filter(
                     create_time__lt=oldest_record.create_time).delete()
 
