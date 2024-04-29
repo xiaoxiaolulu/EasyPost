@@ -3,8 +3,10 @@ Built-in validate comparators.
 """
 import re
 import typing
+from api.events.registry import registry
 
 
+@registry.register("相等")
 def equal(check_value: typing.Any, expect_value: typing.Any, message: str = ""):
     """
     This function compares two values and raises an assertion error if they are not equal.
@@ -20,6 +22,7 @@ def equal(check_value: typing.Any, expect_value: typing.Any, message: str = ""):
     assert check_value == expect_value, message
 
 
+@registry.register("大于")
 def greater_than(
     check_value: typing.Union[int, float], expect_value: typing.Union[int, float], message: str = ""
 ):
@@ -37,6 +40,7 @@ def greater_than(
     assert check_value > expect_value, message
 
 
+@registry.register("小于")
 def less_than(
     check_value: typing.Union[int, float], expect_value: typing.Union[int, float], message: str = ""
 ):
@@ -54,6 +58,7 @@ def less_than(
     assert check_value < expect_value, message
 
 
+@registry.register("大于等于")
 def greater_or_equals(
     check_value: typing.Union[int, float], expect_value: typing.Union[int, float], message: str = ""
 ):
@@ -71,6 +76,7 @@ def greater_or_equals(
     assert check_value >= expect_value, message
 
 
+@registry.register("小于等于")
 def less_or_equals(
     check_value: typing.Union[int, float], expect_value: typing.Union[int, float], message: str = ""
 ):
@@ -88,6 +94,7 @@ def less_or_equals(
     assert check_value <= expect_value, message
 
 
+@registry.register("不等于")
 def not_equal(check_value: typing.Any, expect_value: typing.Any, message: str = ""):
     """
     Asserts that two values are not equal, raising an AssertionError if they are equal.
@@ -103,6 +110,7 @@ def not_equal(check_value: typing.Any, expect_value: typing.Any, message: str = 
     assert check_value != expect_value, message
 
 
+@registry.register("不为空")
 def not_none(check_value: typing.Any, expect_value: typing.Any = None, message: str = ""):
     """
     Asserts that a value is not None and not an empty string, raising an AssertionError if either condition is not met.
@@ -117,6 +125,7 @@ def not_none(check_value: typing.Any, expect_value: typing.Any = None, message: 
     assert check_value is not None or check_value != "", message
 
 
+@registry.register("为空")
 def is_none(check_value: typing.Any, expect_value: typing.Any = None, message: str = ""):
     """
     Asserts that a value is None or an empty string, raising an AssertionError if not.
@@ -131,6 +140,7 @@ def is_none(check_value: typing.Any, expect_value: typing.Any = None, message: s
     assert check_value is None or check_value == "", message
 
 
+@registry.register("字符串类型相等")
 def string_equals(check_value: str, expect_value: typing.Any, message: str = ""):
     """
     Asserts that the string representation of a value is equal to an expected string, raising an AssertionError if not.
@@ -146,6 +156,7 @@ def string_equals(check_value: str, expect_value: typing.Any, message: str = "")
     assert str(check_value) == str(expect_value), message
 
 
+@registry.register("长度相等")
 def length_equal(check_value: str, expect_value: int, message: str = ""):
     """
     Asserts that the length of a string is equal to an expected integer value, raising Assertions if conditions aren't met.
@@ -164,6 +175,7 @@ def length_equal(check_value: str, expect_value: int, message: str = ""):
     assert len(check_value) == expect_value, message
 
 
+@registry.register("长度大于")
 def length_greater_than(
     check_value: str, expect_value: typing.Union[int, float], message: str = ""
 ):
@@ -186,6 +198,7 @@ def length_greater_than(
     assert len(check_value) > expect_value, message
 
 
+@registry.register("长度大于等于")
 def length_greater_or_equals(
     check_value: str, expect_value: typing.Union[int, float], message: str = ""
 ):
@@ -208,6 +221,7 @@ def length_greater_or_equals(
     assert len(check_value) >= expect_value, message
 
 
+@registry.register("长度小于")
 def length_less_than(
     check_value: str, expect_value: typing.Union[int, float], message: str = ""
 ):
@@ -230,6 +244,7 @@ def length_less_than(
     assert len(check_value) < expect_value, message
 
 
+@registry.register("长度小于等于")
 def length_less_or_equals(
     check_value: str, expect_value: typing.Union[int, float], message: str = ""
 ):
@@ -252,6 +267,7 @@ def length_less_or_equals(
     assert len(check_value) <= expect_value, message
 
 
+@registry.register("包含")
 def contains(check_value: typing.Any, expect_value: typing.Any, message: str = ""):
     assert isinstance(
         check_value, (list, tuple, dict, str, bytes)
@@ -272,6 +288,7 @@ def contains(check_value: typing.Any, expect_value: typing.Any, message: str = "
     assert expect_value in check_value, message
 
 
+@registry.register("包含常见类型")
 def contained_by(check_value: typing.Any, expect_value: typing.Any, message: str = ""):
     assert isinstance(
         expect_value, (list, tuple, dict, str, bytes)
@@ -292,6 +309,7 @@ def contained_by(check_value: typing.Any, expect_value: typing.Any, message: str
     assert check_value in expect_value, message
 
 
+@registry.register("类型匹配")
 def type_match(check_value: typing.Any, expect_value: typing.Any, message: str = ""):
     """
         Asserts that a value has the expected type, handling NoneType explicitly and allowing type names as strings for flexibility.
@@ -322,6 +340,7 @@ def type_match(check_value: typing.Any, expect_value: typing.Any, message: str =
         assert type(check_value) == get_type(expect_value), message
 
 
+@registry.register("正则匹配")
 def regex_match(check_value: str, expect_value: typing.Any, message: str = ""):
     """
         Asserts that a string value matches a specified regular expression pattern, raising Assertions if conditions aren't met.
@@ -342,6 +361,7 @@ def regex_match(check_value: str, expect_value: typing.Any, message: str = ""):
     assert re.match(expect_value, check_value), message
 
 
+@registry.register("前缀相等")
 def startswith(check_value: typing.Any, expect_value: typing.Any, message: str = ""):
     """
     Asserts that a string representation of a value starts with a specified prefix, raising Assertions if conditions aren't met.
@@ -357,6 +377,7 @@ def startswith(check_value: typing.Any, expect_value: typing.Any, message: str =
     assert str(check_value).startswith(str(expect_value)), message
 
 
+@registry.register("后缀相等")
 def endswith(check_value: str, expect_value: typing.Any, message: str = ""):
     """
         Asserts that a string value ends with a specified suffix, ensuring string conversion for both values.

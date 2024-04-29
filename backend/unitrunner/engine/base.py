@@ -23,7 +23,7 @@ import requests
 from jsonpath import jsonpath
 from requests_toolbelt import MultipartEncoder
 from api.emus.CaseBaseEnum import RunningTstCasesEnum
-from unitrunner.builitin import compares
+from api.events.registry import registry
 from unitrunner.engine.env import (
     BaseEnv,
     DEBUG,
@@ -677,45 +677,6 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             self.extras.append((name, ext, value))
             self.info_log("✴️提取变量：{},提取方式【{}】,提取表达式:{},提取值为:{}\n".format(name, ext[1], ext[2], value))
 
-    def get_assert_method(self) -> Any:
-        """
-        Retrieves the dictionary of assertion methods.
-
-        This function returns a dictionary mapping assertion method names to their corresponding functions.
-
-        Args:
-            self (object): The object instance.
-
-        Returns:
-            Dict: A dictionary of assertion methods.
-        """
-        methods_map = {
-            "相等": self.assertEqual,
-            "不相等": self.assertNotEqual,
-            "约等于": self.assertAlmostEqual,
-            "不约等于": self.assertNotAlmostEqual,
-            "大于": self.assertGreater,
-            "大于等于": self.assertGreaterEqual,
-            "小于": self.assertLess,
-            "小于等于": self.assertLessEqual,
-            "包含": self.assertIn,
-            "不包含": self.assertNotIn,
-            "不为空": compares.not_none,
-            "为空": compares.is_none,
-            "字符串类型相等": compares.string_equals,
-            "长度相等": compares.length_equal,
-            "长度大于": compares.length_greater_than,
-            "长度大于等于": compares.length_greater_or_equals,
-            "长度小于": compares.length_less_than,
-            "长度小于等于": compares.length_less_or_equals,
-            "包含常见类型": compares.contained_by,
-            "类型匹配": compares.type_match,
-            "正则匹配": compares.regex_match,
-            "前缀相等": compares.startswith,
-            "后缀相等": compares.endswith,
-        }
-        return methods_map
-
     def assertion(self, methods, expected, actual) -> None:
         """
         Performs an assertion based on the provided method and validates the results.
@@ -735,7 +696,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         """
 
         self.info_log('断言方法:{} 预期结果:{} 实际结果:{}\n'.format(methods, expected, actual))
-        assert_method = self.get_assert_method().get(methods)
+        assert_method = registry.get(methods)
         global result  # noqa
         if assert_method:
             try:

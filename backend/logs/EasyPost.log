@@ -11300,3 +11300,893 @@ Traceback (most recent call last):
 
 TypeError: SwaggerDataSource.read() missing 1 required positional argument: 'filename'
 2024-04-29 16:46:53 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-29 16:51:43 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 16:51:44 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 16:51:44 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 16:51:44 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 16:51:44 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 16:51:44
+2024-04-29 16:51:44 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 16:51:44 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 16:52:14 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 16:52:15 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 16:52:15 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 16:52:15 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 16:52:15 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 16:52:15
+2024-04-29 16:52:15 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 16:52:15 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 16:52:41 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 16:52:42 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 16:52:42 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 16:52:42 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 16:52:42 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 16:52:42
+2024-04-29 16:52:42 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 16:52:42 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 16:52:56 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 16:52:56 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 16:52:56 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 16:52:56 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 16:52:56 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 16:52:56
+2024-04-29 16:52:56 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 16:52:56 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 16:58:12 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 16:58:13 [MainThread]-[registry._register:39]-[INFO]:swagger `对象已经在` service_registry `中注册!”
+2024-04-29 16:58:13 [MainThread]-[registry._register:39]-[INFO]:postman `对象已经在` service_registry `中注册!”
+2024-04-29 16:58:13 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 16:58:13 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 16:58:13 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 16:58:13 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 16:58:13
+2024-04-29 16:58:13 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 16:58:13 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 16:58:52 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 16:58:53 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️swagger对象已经在service_registry中注册!
+2024-04-29 16:58:53 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️postman对象已经在service_registry中注册!
+2024-04-29 16:58:53 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 16:58:53 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 16:58:53 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 16:58:53 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 16:58:53
+2024-04-29 16:58:53 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 16:58:53 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 17:01:57 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:01:58 [MainThread]-[registry._register:39]-[INFO]:🏋swagger对象已经在service_registry中注册!
+2024-04-29 17:01:58 [MainThread]-[registry._register:39]-[INFO]:🏋postman对象已经在service_registry中注册!
+2024-04-29 17:01:58 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 17:01:58 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 17:01:58 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 17:01:58 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 17:01:58
+2024-04-29 17:01:58 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 17:01:58 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 17:02:07 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:02:07 [MainThread]-[registry._register:39]-[INFO]:swagger对象已经在service_registry中注册!
+2024-04-29 17:02:07 [MainThread]-[registry._register:39]-[INFO]:postman对象已经在service_registry中注册!
+2024-04-29 17:02:08 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 17:02:08 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 17:02:08 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 17:02:08 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 17:02:08
+2024-04-29 17:02:08 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 17:02:08 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 17:02:44 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:02:44 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️swagger对象已经在service_registry中注册!
+2024-04-29 17:02:44 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️postman对象已经在service_registry中注册!
+2024-04-29 17:02:45 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 17:02:45 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 17:02:45 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 17:02:45 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 17:02:45
+2024-04-29 17:02:45 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 17:02:45 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 17:04:16 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:04:16 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️swagger对象已经在service_registry中注册!
+2024-04-29 17:04:16 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️postman对象已经在service_registry中注册!
+2024-04-29 17:04:16 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 17:04:16 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 17:04:16 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 17:04:16 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 17:04:16
+2024-04-29 17:04:16 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 17:04:16 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 17:04:28 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:04:29 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️swagger对象已经在service_registry中注册!
+2024-04-29 17:04:29 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️postman对象已经在service_registry中注册!
+2024-04-29 17:04:29 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 17:04:29 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 17:04:29 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 17:04:29 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 17:04:29
+2024-04-29 17:04:29 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 17:04:29 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 17:09:46 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:09:46 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️swagger对象已经在service_registry中注册!
+2024-04-29 17:09:46 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️postman对象已经在service_registry中注册!
+2024-04-29 17:09:46 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 17:09:46 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 17:09:46 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 17:09:46 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 17:09:46
+2024-04-29 17:09:46 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 17:09:46 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 17:10:56 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:10:56 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️swagger对象已经在service_registry中注册!
+2024-04-29 17:10:56 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️postman对象已经在service_registry中注册!
+2024-04-29 17:10:56 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 17:10:56 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 17:10:56 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 17:10:57 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 17:10:57
+2024-04-29 17:10:57 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 17:10:57 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 17:11:33 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:11:33 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️swagger对象已经在service_registry中注册!
+2024-04-29 17:11:33 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️postman对象已经在service_registry中注册!
+2024-04-29 17:11:33 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 17:11:33 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 17:11:33 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 17:11:33 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 17:11:33
+2024-04-29 17:11:33 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 17:11:33 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 17:14:39 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:14:39 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️swagger对象已经在service_registry中注册!
+2024-04-29 17:14:39 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️postman对象已经在service_registry中注册!
+2024-04-29 17:14:39 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 17:14:39 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 17:14:39 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 17:14:39 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 17:14:39
+2024-04-29 17:14:39 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 17:14:39 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 17:14:54 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:14:54 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️swagger对象已经在service_registry中注册!
+2024-04-29 17:14:54 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️postman对象已经在service_registry中注册!
+2024-04-29 17:14:55 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 17:14:55 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 17:14:55 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 17:14:55 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 17:14:55
+2024-04-29 17:14:55 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 17:14:55 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 17:17:58 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:17:58 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️swagger对象已经在service_registry中注册!
+2024-04-29 17:17:58 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️postman对象已经在service_registry中注册!
+2024-04-29 17:17:58 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 17:17:58 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 17:17:58 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 17:17:58 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 17:17:58
+2024-04-29 17:17:58 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 17:17:58 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 17:18:50 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:18:51 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️swagger对象已经在service_registry中注册!
+2024-04-29 17:18:51 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️postman对象已经在service_registry中注册!
+2024-04-29 17:18:51 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 17:18:51 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 17:18:51 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 17:18:51 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 17:18:51
+2024-04-29 17:18:51 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 17:18:51 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 17:19:34 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:19:34 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️swagger对象已经在service_registry中注册!
+2024-04-29 17:19:34 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️postman对象已经在service_registry中注册!
+2024-04-29 17:19:35 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 17:19:35 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 17:19:35 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 17:19:35 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 17:19:35
+2024-04-29 17:19:35 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 17:19:35 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 17:22:17 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:22:18 [MainThread]-[registry._register:39]-[INFO]:b'\xf0\x9f\x8f\x8b\xef\xb8\x8f\xe2\x80\x8d\xe2\x99\x82\xef\xb8\x8fswagger\xe5\xaf\xb9\xe8\xb1\xa1\xe5\xb7\xb2\xe7\xbb\x8f\xe5\x9c\xa8service_registry\xe4\xb8\xad\xe6\xb3\xa8\xe5\x86\x8c!'
+2024-04-29 17:22:18 [MainThread]-[registry._register:39]-[INFO]:b'\xf0\x9f\x8f\x8b\xef\xb8\x8f\xe2\x80\x8d\xe2\x99\x82\xef\xb8\x8fpostman\xe5\xaf\xb9\xe8\xb1\xa1\xe5\xb7\xb2\xe7\xbb\x8f\xe5\x9c\xa8service_registry\xe4\xb8\xad\xe6\xb3\xa8\xe5\x86\x8c!'
+2024-04-29 17:22:18 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 17:22:18 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 17:22:18 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 17:22:18 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 17:22:18
+2024-04-29 17:22:18 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 17:22:18 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 17:22:36 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:22:54 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:22:54 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️swagger对象已经在service_registry中注册!
+2024-04-29 17:22:54 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️postman对象已经在service_registry中注册!
+2024-04-29 17:22:54 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 17:22:54 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 17:22:54 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 17:22:54 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 17:22:54
+2024-04-29 17:22:54 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 17:22:54 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 17:23:23 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:23:23 [MainThread]-[registry._register:39]-[INFO]:swagger对象已经在service_registry中注册!
+2024-04-29 17:23:23 [MainThread]-[registry._register:39]-[INFO]:postman对象已经在service_registry中注册!
+2024-04-29 17:23:24 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 17:23:24 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 17:23:24 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 17:23:24 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 17:23:24
+2024-04-29 17:23:24 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 17:23:24 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 17:29:03 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:29:04 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️swagger对象已经在service_registry中注册!
+2024-04-29 17:29:04 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️postman对象已经在service_registry中注册!
+2024-04-29 17:29:04 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 17:29:04 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 17:29:04 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 17:29:04 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 17:29:04
+2024-04-29 17:29:04 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 17:29:04 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 17:29:45 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:29:46 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️swagger对象已经在service_registry中注册!
+2024-04-29 17:29:46 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️postman对象已经在service_registry中注册!
+2024-04-29 17:29:46 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 17:29:46 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 17:29:46 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 17:29:46 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 17:29:46
+2024-04-29 17:29:46 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 17:29:46 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 17:29:55 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:29:56 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️swagger对象已经在service_registry中注册!
+2024-04-29 17:29:56 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️postman对象已经在service_registry中注册!
+2024-04-29 17:29:56 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 17:29:56 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 17:29:56 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 17:29:56 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 17:29:56
+2024-04-29 17:29:56 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 17:29:56 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 17:31:18 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:31:18 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️swagger对象已经在service_registry中注册!
+2024-04-29 17:31:18 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️postman对象已经在service_registry中注册!
+2024-04-29 17:31:18 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 17:31:18 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 17:31:18 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 17:31:18 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 17:31:18
+2024-04-29 17:31:18 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 17:31:18 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 17:33:20 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:33:21 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️swagger对象已经在service_registry中注册!
+2024-04-29 17:33:21 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️postman对象已经在service_registry中注册!
+2024-04-29 17:33:21 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 17:33:21 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 17:33:21 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 17:33:21 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 17:33:21
+2024-04-29 17:33:21 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 17:33:21 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 17:36:28 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:36:29 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️swagger对象已经在service_registry中注册!
+2024-04-29 17:36:29 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️postman对象已经在service_registry中注册!
+2024-04-29 17:36:29 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 17:36:29 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 17:36:29 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 17:36:29 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 17:36:29
+2024-04-29 17:36:29 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 17:36:29 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 17:37:12 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:37:13 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️swagger对象已经在service_registry中注册!
+2024-04-29 17:37:13 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️postman对象已经在service_registry中注册!
+2024-04-29 17:37:13 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 17:37:13 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 17:37:13 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 17:37:13 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 17:37:13
+2024-04-29 17:37:13 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 17:37:13 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 17:37:33 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:37:34 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️swagger对象已经在service_registry中注册!
+2024-04-29 17:37:34 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️postman对象已经在service_registry中注册!
+2024-04-29 17:37:34 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 17:37:34 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 17:37:34 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 17:37:34 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 17:37:34
+2024-04-29 17:37:34 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 17:37:34 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 17:38:12 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:38:13 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️swagger对象已经在service_registry中注册!
+2024-04-29 17:38:13 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️postman对象已经在service_registry中注册!
+2024-04-29 17:38:13 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 17:38:13 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 17:38:13 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 17:38:13 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 17:38:13
+2024-04-29 17:38:13 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 17:38:13 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 17:38:39 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:38:39 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️swagger对象已经在service_registry中注册!
+2024-04-29 17:38:39 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️postman对象已经在service_registry中注册!
+2024-04-29 17:38:40 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 17:38:40 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 17:38:40 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 17:38:40 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 17:38:40
+2024-04-29 17:38:40 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 17:38:40 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 17:39:47 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:39:47 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️swagger对象已经在service_registry中注册!
+2024-04-29 17:39:47 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️postman对象已经在service_registry中注册!
+2024-04-29 17:39:47 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 17:39:47 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 17:39:47 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 17:39:47 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 17:39:47
+2024-04-29 17:39:47 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 17:39:47 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 17:40:05 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:40:05 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️swagger对象已经在service_registry中注册!
+2024-04-29 17:40:05 [MainThread]-[registry._register:39]-[INFO]:🏋️‍♂️postman对象已经在service_registry中注册!
+2024-04-29 17:40:05 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 17:40:05 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 17:40:05 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 17:40:05 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 17:40:05
+2024-04-29 17:40:05 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 17:40:05 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 17:40:35 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:40:35 [MainThread]-[registry._register:39]-[INFO]:♂swagger对象已经在service_registry中注册!
+2024-04-29 17:40:35 [MainThread]-[registry._register:39]-[INFO]:♂postman对象已经在service_registry中注册!
+2024-04-29 17:40:36 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 17:40:36 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 17:40:36 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 17:40:36 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 17:40:36
+2024-04-29 17:40:36 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 17:40:36 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 17:41:49 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:41:49 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> swagger对象已经在service_registry中注册!
+2024-04-29 17:41:49 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> postman对象已经在service_registry中注册!
+2024-04-29 17:41:49 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 17:41:49 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 17:41:49 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 17:41:49 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 17:41:49
+2024-04-29 17:41:49 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 17:41:49 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 17:42:41 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:42:42 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 17:42:42 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 17:42:42 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 17:42:42 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 17:42:42
+2024-04-29 17:42:42 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 17:42:42 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 17:43:01 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:43:02 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> swagger对象已经在service_registry中注册!
+2024-04-29 17:43:02 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> postman对象已经在service_registry中注册!
+2024-04-29 17:43:02 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 17:43:02 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 17:43:02 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 17:43:02 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 17:43:02
+2024-04-29 17:43:02 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 17:43:02 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 17:47:18 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 17:47:18 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-04-29 17:47:18 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-04-29 17:47:18 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-04-29 17:47:18 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-04-29 17:47:18 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-04-29 17:47:18 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-04-29 17:47:18 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-04-29 17:47:18 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-04-29 17:47:18 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-04-29 17:47:18 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-04-29 17:47:18 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-04-29 17:47:18 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-04-29 17:47:18 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-04-29 17:47:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> swagger对象已经在service_registry中注册!
+2024-04-29 17:47:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> postman对象已经在service_registry中注册!
+2024-04-29 17:47:19 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-29 17:47:19 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-29 17:47:19 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-29 17:47:19 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 29, 2024 - 17:47:19
+2024-04-29 17:47:19 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-29 17:47:19 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-29 18:02:45 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-29 18:02:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-04-29 18:05:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-04-29 18:05:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-04-29 18:05:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-04-29 18:05:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-04-29 18:05:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-04-29 18:05:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-04-29 18:05:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-04-29 18:05:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-04-29 18:05:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-04-29 18:05:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-04-29 18:05:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-04-29 18:05:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-04-29 18:05:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-04-29 18:05:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-04-29 18:05:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-04-29 18:05:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-04-29 18:05:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-04-29 18:05:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-04-29 18:05:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-04-29 18:05:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-04-29 18:07:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-04-29 18:07:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-04-29 18:07:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-04-29 18:07:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-04-29 18:07:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-04-29 18:07:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-04-29 18:07:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-04-29 18:07:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-04-29 18:07:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-04-29 18:07:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-04-29 18:07:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-04-29 18:07:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-04-29 18:07:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-04-29 18:07:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-04-29 18:07:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-04-29 18:07:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-04-29 18:07:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-04-29 18:07:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-04-29 18:07:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-04-29 18:07:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-04-29 18:07:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-04-29 18:07:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-04-29 18:07:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-04-29 18:07:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-04-29 18:07:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-04-29 18:07:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-04-29 18:07:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-04-29 18:07:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-04-29 18:07:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-04-29 18:07:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-04-29 18:07:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-04-29 18:07:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-04-29 18:07:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-04-29 18:07:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-04-29 18:07:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-04-29 18:07:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-04-29 18:07:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-04-29 18:07:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-04-29 18:07:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-04-29 18:07:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-04-29 18:08:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-04-29 18:08:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-04-29 18:08:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-04-29 18:08:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-04-29 18:08:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-04-29 18:08:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-04-29 18:08:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-04-29 18:08:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-04-29 18:08:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-04-29 18:08:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-04-29 18:08:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-04-29 18:08:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-04-29 18:08:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-04-29 18:08:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-04-29 18:08:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-04-29 18:08:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-04-29 18:08:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-04-29 18:08:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-04-29 18:08:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-04-29 18:08:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-04-29 18:09:26 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-04-29 18:09:26 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-04-29 18:09:26 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-04-29 18:09:26 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-04-29 18:09:26 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-04-29 18:09:26 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-04-29 18:09:26 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-04-29 18:09:26 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-04-29 18:09:26 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-04-29 18:09:26 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-04-29 18:09:26 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-04-29 18:09:26 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-04-29 18:09:26 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-04-29 18:09:26 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-04-29 18:09:26 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-04-29 18:09:26 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-04-29 18:09:26 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-04-29 18:09:26 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-04-29 18:09:26 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-04-29 18:09:26 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!

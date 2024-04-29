@@ -3,6 +3,7 @@ from typing import (
     Optional,
     Iterator
 )
+from utils.logger import logger
 
 
 class Registry:
@@ -35,8 +36,7 @@ class Registry:
             name = f"{name}_{suffix}"  # F-string for cleaner string formatting
         assert name not in self._obj_map, f"Object '{name}' already registered in '{self._name}'!"
         self._obj_map[name] = obj
-        print(name)
-        print(self._obj_map)
+        logger.info(f"组件注册 -> {name}对象已经在{self._name}中注册!")
 
     def register(self, name: str = None, obj: Optional[object] = None, *, suffix: str = None) -> Optional[callable]:
         """
@@ -79,14 +79,14 @@ class Registry:
             KeyError: If the object with the given name (or name with default suffix)
                 is not found in the registry.
         """
-        obj = self._obj_map.get(name)
-        if obj is None:
-            obj = self._obj_map.get(f"{name}_{default_suffix}")
-            if obj:
-                print(f'Name {name} not found, using {name}_{default_suffix}')
-        if obj is None:
+        try:
+
+            obj = self._obj_map.get(name)
+            if obj is None:
+                obj = self._obj_map.get(f"{name}_{default_suffix}")
+            return obj
+        except (Exception, KeyError) as err:
             raise KeyError(f"No object named '{name}' found in '{self._name}' registry!")
-        return obj
 
     def __contains__(self, name: str) -> bool:
         """

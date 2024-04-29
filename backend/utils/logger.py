@@ -1,4 +1,5 @@
 import inspect
+import io
 import os
 import sys
 from loguru import logger as uru_logger
@@ -26,7 +27,7 @@ class Log:
                    "<cyan>[{module}</cyan>.<cyan>{function}</cyan>"
                    ":<cyan>{line}]</cyan>-"
                    "<blue>[{level}]</blue>: "
-                   "<magenta>{message}</magenta>",
+                   "<magenta>{message}</magenta>"
         )
         self.logger.add(
             os.path.join(base_log_dir, f"{self.business}.log"),
@@ -35,11 +36,12 @@ class Log:
                    "[{thread.name}]-"
                    "[{module}.{function}:{line}]-[{level}]:{message}",
             rotation="10 MB",
-            encoding="utf-8",
+            encoding="utf-8"
         )
 
     @classmethod
     def change_level(cls, level):
+
         cls.logger.remove(0)  # 移除控制台 handler
         cls.logger.add(
             sys.stdout,
@@ -50,7 +52,7 @@ class Log:
                    "<cyan>[{module}</cyan>.<cyan>{function}</cyan>"
                    ":<cyan>{line}]</cyan>-"
                    "<level>[{level}]</level>: "
-                   "<level>{message}</level>",
+                   "<level>{message}</level>"
         )
 
     def log(self, level, message):
