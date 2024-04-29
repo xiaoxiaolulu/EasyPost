@@ -6,6 +6,8 @@ from typing import (
     Any
 )
 
+from api.emus.CaseParametersEnum import CaseParametersEnum
+
 
 class HandelTestData(object):
 
@@ -253,10 +255,10 @@ class HandelTestData(object):
         except (SyntaxError, ValueError):
             raise ValueError("Invalid data format") from None
 
-        if 'json' in data_dict:
+        if CaseParametersEnum.JSON in data_dict:
             raw = data_dict.get('json', [])
             raw_content = self.resolve_json(raw)
-        elif 'form_data' in data_dict:
+        elif CaseParametersEnum.FORM_DATA in data_dict:
             raw = data_dict.get('form_data', [])
             raw_content = self.resolve_form_data(raw)
         else:
@@ -292,11 +294,11 @@ class HandelTestData(object):
             ValueError: If an invalid `use` flag is provided.
         """
 
-        valid_uses = ['setup_script', 'teardown_script']
+        valid_uses = [CaseParametersEnum.SETUP_SCRIPT, CaseParametersEnum.TEARDOWN_SCRIPT]
         if use not in valid_uses:
             raise ValueError(f"Invalid usage flag: {use}. Valid options are: {', '.join(valid_uses)}")
 
-        script = setup_script if use == 'setup_script' else teardown_script
+        script = setup_script if use == CaseParametersEnum.SETUP_SCRIPT else teardown_script
         return script
 
     @staticmethod

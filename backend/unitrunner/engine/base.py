@@ -22,6 +22,7 @@ from typing import (
 import requests
 from jsonpath import jsonpath
 from requests_toolbelt import MultipartEncoder
+from api.emus.CaseBaseEnum import RunningTstCasesEnum
 from unitrunner.builitin import compares
 from unitrunner.engine.env import (
     BaseEnv,
@@ -658,17 +659,17 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         # 遍历要提取的数据
         for name, ext in exts.items():
             # 判断提取数据的方式
-            if len(ext) == 3 and ext[1] == "jsonpath":
+            if len(ext) == 3 and ext[1] == RunningTstCasesEnum.EXTRACT_JSON_PATH:
                 value = self.json_extract(response, ext[2])
-            elif len(ext) == 3 and ext[1] == "re":
+            elif len(ext) == 3 and ext[1] == RunningTstCasesEnum.EXTRACT_RE:
                 value = self.re_extract(response, ext[2])
             else:
                 self.error_log("变量{},的提取表达式 :{}格式不对！\n".format(name, ext))
                 self.extras.append((name, ext, '提取失败！'))
                 break
-            if ext[0] == 'ENV':
+            if ext[0] == RunningTstCasesEnum.ENV_BIG:
                 ENV[name] = value
-            elif ext[0] == 'env':
+            elif ext[0] == RunningTstCasesEnum.ENV_LITTLE:
                 self.env[name] = value
             else:
                 self.error_log("❌错误的变量级别，变量提取表达式中的变量级别只能为ENV，或者env\n".format(ext[1]))
@@ -929,7 +930,8 @@ class GenerateCase:
 
         for index, case_ in enumerate(cases):
             mode = case_.get('mode', 'normal')
-            if mode == 'normal':
+
+            if mode == RunningTstCasesEnum.MODE:
                 global children  # noqa
                 try:
                     children = case_.get('children', None)

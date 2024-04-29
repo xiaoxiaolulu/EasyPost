@@ -4,6 +4,10 @@ from urllib.parse import (
     urljoin,
     urlparse
 )
+from api.emus.ApiParametersEnum import (
+    ApiHeadersEnum,
+    ApiModeEnum
+)
 from api.models.https import Api
 from api.models.project import Project
 from utils.logger import logger
@@ -114,11 +118,11 @@ class SwaggerDataSource(DataSource):
         headers = self.make_request_headers(main)
         content_type = headers.pop().get('Content-Type')
 
-        if content_type == "multipart/form-data":
+        if content_type == ApiHeadersEnum.FORM_DATA:
             return {"form_data": self.make_request_content(t_collection, main)}
-        if content_type == "application/json":
+        if content_type == ApiHeadersEnum.JSON:
             return {"json": {content.get('name', ''): "" for content in self.make_request_content(t_collection, main)}}
-        if content_type == "x_www_form_urlencoded":
+        if content_type == ApiHeadersEnum.X_WWW_FORM_URLENCODED:
             return {"x_www_form_urlencoded": self.make_request_content(t_collection, main)}
         else:
             return {"data": {}}
@@ -327,14 +331,14 @@ class PostManDataSource(DataSource):
     def make_request_body(item):
         request_body = GetJsonParams.get_value(item, 'body')
 
-        if request_body.get('mode') == "formdata":
+        if request_body.get('mode') == ApiModeEnum.FORM_DATA:
             return {"form_data": [{"name": p["key"], "value": p["value"], "description": "", "type": p.get("type", "")}
                                   for p in request_body.get('formdata')]}
-        if request_body.get('mode') == "x_www_form_urlencoded":
+        if request_body.get('mode') == ApiModeEnum.X_WWW_FORM_URLENCODED:
             return {"x_www_form_urlencoded": [
                 {"name": p["key"], "value": p["value"], "description": "", "type": p.get("type", "")}
                 for p in request_body.get('formdata')]}
-        if request_body.get("mode") == "raw":
+        if request_body.get("mode") == ApiModeEnum.RAW:
             return {"json": {request_body.get("raw")}}
         else:
             return {"data": {}}

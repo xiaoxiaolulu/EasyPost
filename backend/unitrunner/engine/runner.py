@@ -3,6 +3,10 @@ import time
 import traceback
 import unittest
 from concurrent.futures.thread import ThreadPoolExecutor
+from api.emus.CaseBaseEnum import (
+    CaseStatusEnum,
+    CaseStatusMessageEnum
+)
 
 
 class TestResult(unittest.TestResult):
@@ -60,11 +64,11 @@ class TestResult(unittest.TestResult):
             title (str, optional): A title for the test run (defaults to None).
         """
         if len(self.errors) > 0:
-            self.result['state'] = 'error'
+            self.result['state'] = CaseStatusEnum.ERROR
         elif len(self.failures) > 0:
-            self.result['state'] = 'fail'
+            self.result['state'] = CaseStatusEnum.FAIL
         else:
-            self.result['state'] = 'success'
+            self.result['state'] = CaseStatusEnum.SUCCESS
 
     def addSuccess(self, test):
         """
@@ -77,7 +81,7 @@ class TestResult(unittest.TestResult):
         """
         count = test._testMethodName.split("_").pop()
         self.result["success"] += 1
-        test.state = '成功'
+        test.state = CaseStatusMessageEnum.SUCCESS
         test.tag = f'循环{count}次' if count else '-'
         getattr(test, 'info_log')("{}执行——>【通过】\n".format(getattr(test, '_testMethodDoc')))
 
@@ -94,7 +98,7 @@ class TestResult(unittest.TestResult):
         count = test._testMethodName.split("_").pop()
         super().addFailure(test, err)
         self.result["fail"] += 1
-        test.state = '失败'
+        test.state = CaseStatusMessageEnum.FAIL
         test.tag = f'循环{count}次' if count else '-'
         getattr(test, 'warning_log')(err[1])
         getattr(test, 'warning_log')("{}执行——>【失败】\n".format(getattr(test, '_testMethodDoc')))
@@ -113,7 +117,7 @@ class TestResult(unittest.TestResult):
         count = test._testMethodName.split("_").pop()
         super().addError(test, err)
         self.result["error"] += 1
-        test.state = '错误'
+        test.state = CaseStatusMessageEnum.ERROR
         test.tag = f'循环{count}次' if count else '-'
         getattr(test, 'error_log')(str(err[1]))
         getattr(test, 'error_log')("{}执行——>【错误Error】\n".format(getattr(test, '_testMethodDoc')))
@@ -131,7 +135,7 @@ class TestResult(unittest.TestResult):
         """
         count = test._testMethodName.split("_").pop()
         super().addSkip(test, reason)
-        test.state = '跳过'
+        test.state = CaseStatusMessageEnum.SKIP
         test.tag = f'循环{count}次' if count else '-'
         getattr(test, 'info_log')("{}执行--【跳过Skip】\n".format(getattr(test, '_testMethodDoc')))
 
