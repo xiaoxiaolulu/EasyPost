@@ -184,10 +184,10 @@ class Functions(Model):
 
 class DataStructureType(IntegerChoices):
 
-    NONE = CaseParametersEnum.NONE
-    FORM_DATA = CaseParametersEnum.FORM_DATA
-    X_WWW_FORM_URLENCODED = CaseParametersEnum.X_WWW_FORM_URLENCODED
-    RAW = CaseParametersEnum.RAW
+    NONE = 0
+    FORM_DATA = 1
+    X_WWW_FORM_URLENCODED = 2
+    JSON = 3
 
 
 class DataStructure(Model):

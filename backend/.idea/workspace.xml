@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Updated CaseParametersEnum and DataStructureType to use the same constants for data structure types.">
-      <change afterPath="$PROJECT_DIR$/api/emus/ApiParametersEnum.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/emus/CaseParametersEnum.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/emus/CaseParametersEnum.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/emus/CaseStatusEnum.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/emus/CaseBaseEnum.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Changed CaseParametersEnum to use strings instead of ints and updated related code.">
+      <change afterPath="$PROJECT_DIR$/../web/src/views/system/datastructure/components/databaseDialog.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web/src/views/system/datastructure/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/models/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/setting.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unitrunner/engine/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/unitrunner/engine/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unitrunner/engine/runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/unitrunner/engine/runner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unitrunner/request/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/unitrunner/request/parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/api_migrate.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/api_migrate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/routers/modules/system.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/routers/modules/system.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +161,7 @@
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.__init__ (1)">
+  <component name="RunManager" selected="Django Server.backend">
     <configuration name="__init__ (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <option name="ENV_FILES" value="" />
@@ -468,15 +463,7 @@
       <workItem from="1713319714158" duration="24461000" />
       <workItem from="1713754708273" duration="34896000" />
       <workItem from="1714116470185" duration="5019000" />
-      <workItem from="1714271913866" duration="15959000" />
-    </task>
-    <task id="LOCAL-00349" summary="The changes made to the codebase are as follows:```diffIndex: backend/unitrunner/builti```">
-      <option name="closed" value="true" />
-      <created>1713250419210</created>
-      <option name="number" value="00349" />
-      <option name="presentableId" value="LOCAL-00349" />
-      <option name="project" value="LOCAL" />
-      <updated>1713250419210</updated>
+      <workItem from="1714271913866" duration="18474000" />
     </task>
     <task id="LOCAL-00350" summary="The changes made to the codebase are as follows:```diffIndex: backend/unitrunner/builti```">
       <option name="closed" value="true" />
@@ -862,7 +849,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714299993544</updated>
     </task>
-    <option name="localTasksCounter" value="398" />
+    <task id="LOCAL-00398" summary="Changed CaseParametersEnum to use strings instead of ints and updated related code.">
+      <option name="closed" value="true" />
+      <created>1714358964630</created>
+      <option name="number" value="00398" />
+      <option name="presentableId" value="LOCAL-00398" />
+      <option name="project" value="LOCAL" />
+      <updated>1714358964630</updated>
+    </task>
+    <option name="localTasksCounter" value="399" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -892,22 +887,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add DataStructure API and routers," />
-    <MESSAGE value="Add DataStructure API and routers, ref" />
-    <MESSAGE value="Add DataStructure API and routers, refine" />
-    <MESSAGE value="Add DataStructure API and routers, refine Notice" />
-    <MESSAGE value="Add DataStructure API and routers, refine Notice API" />
-    <MESSAGE value="Add DataStructure API and routers, refine Notice API." />
-    <MESSAGE value="Updated" />
-    <MESSAGE value="Updated Case" />
-    <MESSAGE value="Updated CaseParameters" />
-    <MESSAGE value="Updated CaseParametersEnum" />
-    <MESSAGE value="Updated CaseParametersEnum and" />
-    <MESSAGE value="Updated CaseParametersEnum and Data" />
-    <MESSAGE value="Updated CaseParametersEnum and DataStr" />
-    <MESSAGE value="Updated CaseParametersEnum and DataStructure" />
-    <MESSAGE value="Updated CaseParametersEnum and DataStructureType" />
-    <MESSAGE value="Updated CaseParametersEnum and DataStructureType to" />
     <MESSAGE value="Updated CaseParametersEnum and DataStructureType to use" />
     <MESSAGE value="Updated CaseParametersEnum and DataStructureType to use the" />
     <MESSAGE value="Updated CaseParametersEnum and DataStructureType to use the same" />
@@ -917,7 +896,23 @@
     <MESSAGE value="Updated CaseParametersEnum and DataStructureType to use the same constants for data structure" />
     <MESSAGE value="Updated CaseParametersEnum and DataStructureType to use the same constants for data structure types" />
     <MESSAGE value="Updated CaseParametersEnum and DataStructureType to use the same constants for data structure types." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated CaseParametersEnum and DataStructureType to use the same constants for data structure types." />
+    <MESSAGE value="Changed" />
+    <MESSAGE value="Changed Case" />
+    <MESSAGE value="Changed CaseParameters" />
+    <MESSAGE value="Changed CaseParametersEnum" />
+    <MESSAGE value="Changed CaseParametersEnum to" />
+    <MESSAGE value="Changed CaseParametersEnum to use" />
+    <MESSAGE value="Changed CaseParametersEnum to use strings" />
+    <MESSAGE value="Changed CaseParametersEnum to use strings instead" />
+    <MESSAGE value="Changed CaseParametersEnum to use strings instead of" />
+    <MESSAGE value="Changed CaseParametersEnum to use strings instead of int" />
+    <MESSAGE value="Changed CaseParametersEnum to use strings instead of ints" />
+    <MESSAGE value="Changed CaseParametersEnum to use strings instead of ints and" />
+    <MESSAGE value="Changed CaseParametersEnum to use strings instead of ints and updated" />
+    <MESSAGE value="Changed CaseParametersEnum to use strings instead of ints and updated related" />
+    <MESSAGE value="Changed CaseParametersEnum to use strings instead of ints and updated related code" />
+    <MESSAGE value="Changed CaseParametersEnum to use strings instead of ints and updated related code." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed CaseParametersEnum to use strings instead of ints and updated related code." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$recursion.coverage" NAME="recursion Coverage Results" MODIFIED="1712139211023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />

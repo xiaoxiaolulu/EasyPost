@@ -32,6 +32,12 @@ const systemRouter = [{
             meta: { title: '数据库管理' , icon: 'AddLocation'}
         },
         {
+            path: '/system/datastructure',
+            component: () => import('@/views/system/datastructure/index.vue'),
+            name: 'datastructure',
+            meta: { title: '数据结构' , icon: 'AddLocation'}
+        },
+        {
             path: '/function/detail',
             component: () => import('@/views/system/function/components/detail.vue'),
             name: 'functionDetail',

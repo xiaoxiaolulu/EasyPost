@@ -7336,3 +7336,18 @@ INFO     [2024-04-29 10:42:13,170] [none] django.utils.autoreload: C:\Users\8613
 INFO     [2024-04-29 10:42:13,201] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\emus\CaseParametersEnum.py changed, reloading.
 INFO     [2024-04-29 10:42:14,251] [none] django.utils.autoreload: Watching for file changes with StatReloader
 INFO     [2024-04-29 10:42:14,266] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-29 13:59:03,808] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-04-29 13:59:04,748] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-29 13:59:04,845] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-29 14:00:19,718] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\emus\CaseParametersEnum.py changed, reloading.
+INFO     [2024-04-29 14:00:20,551] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-29 14:00:20,714] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\emus\CaseParametersEnum.py changed, reloading.
+INFO     [2024-04-29 14:00:21,708] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-29 14:00:27,276] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-04-29 14:00:28,127] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-29 14:00:28,392] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-29 14:02:22,056] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-29 14:03:01,410] [none] django.utils.autoreload: Watching for file changes with StatReloader
+WARNING  [2024-04-29 14:03:07,042] [a4ce8687ad044c7484425ade040279e6] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-29 14:03:51,739] [4fb9c2b353bb4495aa51309a36709fe7] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-29 14:04:56,749] [bb6ecc788c9d4bd0a5af44d6efa02c2b] django.request: Not Found: /media/avatar/default.png
