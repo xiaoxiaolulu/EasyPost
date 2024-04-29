@@ -8,6 +8,7 @@ from api.emus.ApiParametersEnum import (
     ApiHeadersEnum,
     ApiModeEnum
 )
+from api.events.registry import registry
 from api.models.https import Api
 from api.models.project import Project
 from utils.logger import logger
@@ -57,6 +58,7 @@ class DataSource:
         ...
 
 
+@registry.register("swagger")
 class SwaggerDataSource(DataSource):
 
     def __init__(self):
@@ -288,6 +290,7 @@ class SwaggerDataSource(DataSource):
         pass
 
 
+@registry.register("postman")
 class PostManDataSource(DataSource):
 
     def __init__(self):

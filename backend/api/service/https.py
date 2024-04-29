@@ -10,6 +10,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from api.dao.https import HttpDao
+from api.events.registry import registry
 from api.mixins.async_generics import AsyncAPIView
 from api.models.https import (
     Relation,
@@ -249,14 +250,9 @@ class ImportApiView(APIView):
                     f.write(chunk)
 
             import_type = request.data.get("type", "swagger")
-            if import_type:
-                import_mapping = {
-                    "swagger": SwaggerDataSource(),
-                    "postman": PostManDataSource()
-                }
-                migrator = DataMigrator(import_mapping.get(import_type), UitRunnerSource())
-                migrator.migrate(filename=filepath, request=request, pk=kwargs["pk"], type=import_type)
-                return Response(ResponseStandard.success())
+            migrator = DataMigrator(registry.get(import_type), UitRunnerSource())
+            migrator.migrate(filename=filepath, request=request, pk=kwargs["pk"], type=import_type)
+            return Response(ResponseStandard.success())
 
         except Exception as err:
             return Response(ResponseStandard.failed(msg=str(err)))
