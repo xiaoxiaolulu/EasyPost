@@ -59,6 +59,6 @@ class ReportListViewSet(MagicListAPI):
     serializer_class = ReportMainSerializer
     permission_classes = [IsAuthenticated]
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
-    filterset_class = ReportFilter
+    filterset_class = ReportFilter  # noqa
     search_fields = ['name']
     ordering_fields = ['create_time']

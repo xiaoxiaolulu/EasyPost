@@ -30,9 +30,7 @@ from unitrunner.request.http_handler import HttpHandler
 from api.response.fatcory import ResponseStandard
 from utils.api_migrate import (
     DataMigrator,
-    SwaggerDataSource,
-    UitRunnerSource,
-    PostManDataSource
+    UitRunnerSource
 )
 from utils.trees import (
     get_tree_max_id
@@ -114,21 +112,6 @@ class ApiTestListView(mixins.ListModelMixin, viewsets.GenericViewSet):
             node = request.query_params.get("node")
             name = request.query_params.get("name")
 
-            # queryset = self.get_queryset().filter(project__id=project).order_by('-update_time')
-
-            # tree = Relation.objects.get(project__id=project)
-            # tree = eval(tree.tree)
-            #
-            # if node == 1:
-            #     queryset = queryset
-            #
-            # else:
-            #     children_tree = get_relation_tree(tree, node)
-            #     directory_ids = collections_directory_id(children_tree, node)
-            #     queryset = queryset.filter(project__id=project, directory_id__in=directory_ids)
-            #
-            # if name:
-            #     queryset = queryset.filter(name=name)
             queryset = self.get_queryset()
             queryset = HttpDao.list_test_case(queryset, node, project, name)
             page = self.paginate_queryset(queryset)

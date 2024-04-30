@@ -1,4 +1,4 @@
-from rest_framework import serializers
+from rest_framework import serializers # noqa
 from api.models.plan import Plan
 from api.schema.user import UserSimpleSerializers
 

@@ -24,7 +24,7 @@ class SaveOrUpdatePlanView(AsyncAPIView):
     async def post(request, **kwargs):
 
         try:
-            response = await PlanDao.create_or_update_plan(request, pk=kwargs['pk'])
+            response = await PlanDao.create_or_update_plan(request, pk=kwargs['pk'])  # noqa
             return Response(ResponseStandard.success(
                 data={"plan_id": response}
             ))

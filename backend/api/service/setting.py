@@ -225,38 +225,38 @@ class FunctionsListViewSet(MagicListAPI):  # noqa
     ordering_fields = ['create_time']
 
 
-class DataStructureListViewSet(MagicListAPI):
+class DataStructureListViewSet(MagicListAPI): # noqa
 
     queryset = DataStructure.objects.all()
     serializer_class = DataStructureSerializers
     permission_classes = [IsAuthenticated]
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
-    filterset_class = DataStructureFilter
+    filterset_class = DataStructureFilter # noqa
     search_fields = ['name']
     ordering_fields = ['create_time']
 
 
-class NoticeDestroyViewSet(MagicDestroyApi):
+class NoticeDestroyViewSet(MagicDestroyApi): # noqa
 
     queryset = DataStructure.objects.all()
     serializer_class = DataStructureSerializers
     permission_classes = [IsAuthenticated]
 
 
-class NoticeDetailView(MagicRetrieveApi):
+class NoticeDetailView(MagicRetrieveApi): # noqa
 
     serializer_class = DataStructureSerializers
     queryset = DataStructure.objects.all()
     permission_classes = [IsAuthenticated]
 
 
-class DataSourceUpdateViewSet(MagicUpdateApi):
+class DataSourceUpdateViewSet(MagicUpdateApi): # noqa
     queryset = DataStructure.objects.all()
     serializer_class = DataStructureSerializers
     permission_classes = [IsAuthenticated]
 
 
-class DataSourceCreateViewSet(MagicCreateApi):
+class DataSourceCreateViewSet(MagicCreateApi): # noqa
 
     queryset = DataStructure.objects.all()
     serializer_class = DataStructureSerializers

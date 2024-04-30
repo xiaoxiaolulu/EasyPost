@@ -12,7 +12,7 @@ class WebSocketConsumer(AsyncWebsocketConsumer):
     async def disconnect(self, close_code):
         logger.info(f"WebSocket connection closed with code {close_code}")
 
-    async def receive(self, text_data):
+    async def receive(self, text_data): # noqa
         try:
             data = json.loads(text_data)
             target_ws_url = data.get('url')

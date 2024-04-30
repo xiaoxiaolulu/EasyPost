@@ -24,9 +24,6 @@ class BaseScheduler(metaclass=type):
         This method is an abstract method that must be implemented by child classes.
         It is used to start the instance.
 
-        Args:
-            None: This method does not take any arguments.
-
         Returns:
             None: The method does not return any value.
         """

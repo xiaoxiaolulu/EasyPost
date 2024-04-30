@@ -1,4 +1,3 @@
-import re
 from rest_framework import serializers
 from api.models.setting import (
     TestEnvironment,
@@ -15,7 +14,7 @@ from api.schema.user import UserSimpleSerializers
 REGEX_URL_PATH = "(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]"
 
 
-class DataSourceSerializers(serializers.ModelSerializer):
+class DataSourceSerializers(serializers.ModelSerializer): # noqa
 
     id = serializers.IntegerField(read_only=True)
     creator = UserSimpleSerializers(required=False, default=serializers.CurrentUserDefault())
@@ -66,7 +65,7 @@ class TestEnvironmentSerializers(serializers.ModelSerializer):
                             'data_source')
 
 
-class FunctionsSerializers(serializers.ModelSerializer):
+class FunctionsSerializers(serializers.ModelSerializer):  # noqa
 
     id = serializers.IntegerField(read_only=True)
     creator = UserSimpleSerializers(required=False, default=serializers.CurrentUserDefault())
