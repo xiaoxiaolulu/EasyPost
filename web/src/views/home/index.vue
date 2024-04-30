@@ -107,8 +107,22 @@
           </el-col>
         </el-row>
       </div>
+      <div style="margin-top: 10px">
+        <el-row :gutter="10">
+          <el-col :span="14">
+            <el-card style="height: 100%">
+              <apexchart height="300" type="area" :options="chartOptions4" :series="series4"></apexchart>
+            </el-card>
+          </el-col>
+          <el-col :span="10">
+            <el-card style="height: 100%">
+              <template #header><strong>用例数Top10</strong></template>
+              <apexchart height="200" type="donut" :options="chartOptions5" :series="series5"></apexchart>
+            </el-card>
+          </el-col>
+        </el-row>
+      </div>
     </div>
-
   </div>
 </template>
 <script setup lang="ts">
@@ -168,6 +182,65 @@ const chartOptions = ref(
     },
 )
 
+const series4 =  ref([{
+  name: '成功',
+  data: [31, 40, 28, 51, 42, 109, 100]
+}, {
+  name: '失败',
+  data: [11, 32, 45, 32, 34, 52, 41]
+}])
+
+const chartOptions4 = ref({
+  chart: {
+    type: 'area',
+    stacked: false,
+    height: 350,
+    zoom: {
+      enabled: false
+    },
+  },
+  legend: {
+    position: 'top',
+    horizontalAlign: 'right',
+    offsetX: -10
+  },
+  dataLabels: {
+    enabled: false
+  },
+  markers: {
+    size: 0,
+  },
+  title: {
+    text: '用例运行趋势',
+    align: 'left',
+    offsetX: 14
+  },
+  tooltip: {
+    shared: true
+  },
+  xaxis: {
+    type: 'day',
+    categories: ["2018-09-19", "2018-09-29", "2018-09-30", "2018-10-19", "2018-09-20", "22018-09-21", "2018-09-22"]
+  },
+})
+
+const series5 =  ref([44, 55, 41, 17, 15])
+const chartOptions5 =  ref({
+  chart: {
+    type: 'donut',
+  },
+  responsive: [{
+    breakpoint: 480,
+    options: {
+      chart: {
+        width: 200
+      },
+      legend: {
+        position: 'bottom'
+      }
+    }
+  }]
+})
 const state = reactive({
   statisticsCredData: [
     {
