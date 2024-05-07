@@ -1,0 +1,671 @@
+2024-04-30 11:21:29 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-30 11:21:29 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-04-30 11:21:29 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-04-30 11:21:29 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-04-30 11:21:29 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-04-30 11:21:29 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-04-30 11:21:29 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-04-30 11:21:29 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-04-30 11:21:29 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-04-30 11:21:29 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-04-30 11:21:29 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-04-30 11:21:29 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-04-30 11:21:29 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-04-30 11:21:29 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-04-30 11:21:29 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-04-30 11:21:29 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-04-30 11:21:29 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-04-30 11:21:29 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-04-30 11:21:29 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-04-30 11:21:29 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-04-30 11:21:29 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-04-30 11:21:30 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> swagger对象已经在service_registry中注册!
+2024-04-30 11:21:30 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> postman对象已经在service_registry中注册!
+2024-04-30 11:21:30 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-30 11:21:30 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-30 11:21:30 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-30 11:21:30 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 30, 2024 - 11:21:30
+2024-04-30 11:21:30 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-30 11:21:30 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-30 11:25:12 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:25:12 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:25:19 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:25:19 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:25:19 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:25:19 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:25:36 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:25:36 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:25:36 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:25:46 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:25:46 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:25:46 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:25:51 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:25:51 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:25:51 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:25:57 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:25:57 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:25:57 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:25:59 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:25:59 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:25:59 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:26:01 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:26:01 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:26:01 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:26:02 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:26:02 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:26:02 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:26:02 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:26:02 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:26:24 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:26:25 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:26:33 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:26:33 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:26:59 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:26:59 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:26:59 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:26:59 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:27:02 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:27:02 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:27:02 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:27:02 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:27:02 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:27:02 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:27:06 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:27:06 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:27:09 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:27:09 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:27:14 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:27:14 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:27:34 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:27:34 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:27:42 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:27:42 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:27:42 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:27:42 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:27:51 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:27:51 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:27:59 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:27:59 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:28:00 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:28:00 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:28:04 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:28:04 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:32:20 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:32:20 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:32:20 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:35:26 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:35:26 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 11:35:26 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 13:30:09 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 13:30:09 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 13:30:09 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 13:30:09 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 13:30:09 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 13:30:10 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 13:30:10 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 13:30:10 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 13:30:10 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 13:30:10 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 13:30:10 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:11 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:11 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:11 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:12 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:12 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:12 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:13 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:13 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:13 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:13 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:13 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:13 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:14 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:14 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:14 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:14 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:14 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:18 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:18 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:18 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:18 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:18 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:18 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:18 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:18 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:19 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:19 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:19 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:19 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:19 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:19 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:19 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:19 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:20 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:10:20 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 15:13:19 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-30 15:13:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-04-30 15:13:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-04-30 15:13:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-04-30 15:13:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-04-30 15:13:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-04-30 15:13:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-04-30 15:13:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-04-30 15:13:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-04-30 15:13:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-04-30 15:13:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-04-30 15:13:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-04-30 15:13:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-04-30 15:13:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-04-30 15:13:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-04-30 15:13:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-04-30 15:13:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-04-30 15:13:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-04-30 15:13:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-04-30 15:13:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-04-30 15:13:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-04-30 15:13:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> swagger对象已经在service_registry中注册!
+2024-04-30 15:13:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> postman对象已经在service_registry中注册!
+2024-04-30 15:13:19 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-30 15:13:19 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-30 15:13:19 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-30 15:22:42 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-30 15:22:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-04-30 15:22:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-04-30 15:22:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-04-30 15:22:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-04-30 15:22:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-04-30 15:22:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-04-30 15:22:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-04-30 15:22:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-04-30 15:22:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-04-30 15:22:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-04-30 15:22:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-04-30 15:22:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-04-30 15:22:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-04-30 15:22:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-04-30 15:22:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-04-30 15:22:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-04-30 15:22:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-04-30 15:22:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-04-30 15:22:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-04-30 15:22:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-04-30 15:22:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> swagger对象已经在service_registry中注册!
+2024-04-30 15:22:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> postman对象已经在service_registry中注册!
+2024-04-30 15:22:43 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-30 15:22:43 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-30 15:22:43 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-30 16:28:52 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-30 16:28:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-04-30 16:28:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-04-30 16:28:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-04-30 16:28:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-04-30 16:28:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-04-30 16:28:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-04-30 16:28:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-04-30 16:28:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-04-30 16:28:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-04-30 16:28:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-04-30 16:28:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-04-30 16:28:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-04-30 16:28:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-04-30 16:28:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-04-30 16:28:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-04-30 16:28:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-04-30 16:28:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-04-30 16:28:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-04-30 16:28:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-04-30 16:28:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-04-30 16:28:53 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> swagger对象已经在service_registry中注册!
+2024-04-30 16:28:53 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> postman对象已经在service_registry中注册!
+2024-04-30 16:28:53 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-30 16:28:53 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-30 16:28:53 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-30 16:28:53 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 30, 2024 - 16:28:53
+2024-04-30 16:28:53 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-30 16:28:53 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-04-30 16:29:06 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:29:07 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:29:07 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:29:07 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:29:32 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:29:32 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:29:32 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:29:34 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:29:34 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:29:34 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:29:35 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:29:36 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:29:36 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:29:37 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:29:37 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:29:37 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:29:37 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:29:37 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:29:42 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:29:42 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:29:42 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:29:43 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:29:43 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:29:43 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:09 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:09 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:09 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:13 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:13 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:15 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:15 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:15 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:18 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:18 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:20 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:20 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:20 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:24 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:24 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:28 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:28 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:28 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:28 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:28 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:34 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:34 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:44 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:44 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:44 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:44 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:44 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:44 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:44 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:44 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:45 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:45 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:45 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:45 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:45 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:45 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:45 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:30:45 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:55:03 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:55:03 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:55:19 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:55:19 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:55:20 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:55:22 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:55:22 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:55:22 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:55:22 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:55:22 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:55:22 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:55:23 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:55:23 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:55:23 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:55:24 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:55:24 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:55:24 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:55:24 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 16:55:24 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-04-30 17:29:27 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-30 17:29:27 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> swagger对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> postman对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> swagger对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> postman对象已经在service_registry中注册!
+2024-04-30 17:29:27 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-04-30 17:29:27 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-30 17:29:27 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-30 17:29:27 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-30 17:29:27 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-30 17:29:27 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-30 17:29:27 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-04-30 17:29:27 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-04-30 17:29:28 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> swagger对象已经在service_registry中注册!
+2024-04-30 17:29:28 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> postman对象已经在service_registry中注册!
+2024-04-30 17:29:28 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-04-30 17:29:28 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-04-30 17:29:28 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-04-30 17:29:28 [django-main-thread]-[runserver.inner_run:97]-[INFO]:April 30, 2024 - 17:29:28
+2024-04-30 17:29:28 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-04-30 17:29:28 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-05-06 09:59:16 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 09:59:16 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 09:59:16 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 09:59:16 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 09:59:16 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 09:59:16 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 09:59:16 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 09:59:16 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 09:59:16 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 09:59:16 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 09:59:16 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 09:59:16 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 13:29:57 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 13:29:57 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 13:29:57 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 13:29:57 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 13:29:57 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 13:29:57 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 13:29:57 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 13:29:57 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 13:29:58 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 13:29:58 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 13:29:58 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 13:29:58 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:20 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:20 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:20 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:20 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:27 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:27 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:27 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:27 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:32 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:32 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:32 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:33 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:33 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:33 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:34 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:34 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:34 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:35 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:35 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:35 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:35 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:35 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:35 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:36 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:36 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:36 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:42 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:42 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:42 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:45 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:45 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:46 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:46 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:46 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:49 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:49 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:51 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:51 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:51 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:53 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:53 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:53 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:53 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:53 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:54 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:54 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:54 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:56 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:56 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:56 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:56 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:56 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:58 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:02:58 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:03:02 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:03:02 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:03:02 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:03:02 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:03:02 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:03:02 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:03:02 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:03:02 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:03:06 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:03:06 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:03:23 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:03:23 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:03:23 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:03:23 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:03:24 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:03:24 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:03:24 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-06 17:03:24 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-07 09:58:21 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-07 09:58:21 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-07 09:58:21 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-07 09:58:21 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-07 09:58:22 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-07 09:58:22 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-07 09:58:22 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-07 09:58:22 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-07 13:30:29 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-07 13:30:29 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-07 13:30:30 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-07 13:30:30 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-07 13:30:30 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-07 13:30:30 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-07 13:30:30 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-07 13:30:30 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-07 13:42:08 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-05-07 13:42:08 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-05-07 13:42:08 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-05-07 13:42:08 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-05-07 13:42:09 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> swagger对象已经在service_registry中注册!
+2024-05-07 13:42:09 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> swagger对象已经在service_registry中注册!
+2024-05-07 13:42:09 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> swagger对象已经在service_registry中注册!
+2024-05-07 13:42:09 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> postman对象已经在service_registry中注册!
+2024-05-07 13:42:09 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> postman对象已经在service_registry中注册!
+2024-05-07 13:42:09 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> postman对象已经在service_registry中注册!
+2024-05-07 13:42:09 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-05-07 13:42:09 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-05-07 13:42:09 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-05-07 13:42:09 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-05-07 13:42:09 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-05-07 13:42:09 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-05-07 13:42:09 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-05-07 13:42:09 [django-main-thread]-[runserver.inner_run:97]-[INFO]:May 07, 2024 - 13:42:09
+2024-05-07 13:42:09 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-05-07 13:42:09 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-05-07 13:58:27 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-05-07 13:58:28 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-05-07 13:58:28 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-05-07 13:58:28 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-05-07 13:58:28 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-05-07 13:58:28 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-05-07 13:58:28 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-05-07 13:58:28 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-05-07 13:58:28 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-05-07 13:58:28 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-05-07 13:58:28 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-05-07 13:58:28 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-05-07 13:58:28 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-05-07 13:58:28 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-05-07 13:58:28 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-05-07 13:58:28 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-05-07 13:58:28 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-05-07 13:58:28 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-05-07 13:58:28 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-05-07 13:58:28 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-05-07 13:58:28 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-05-07 13:58:28 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> swagger对象已经在service_registry中注册!
+2024-05-07 13:58:28 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> postman对象已经在service_registry中注册!
+2024-05-07 13:58:29 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-05-07 13:58:29 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-05-07 13:58:29 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-05-07 13:58:29 [django-main-thread]-[runserver.inner_run:97]-[INFO]:May 07, 2024 - 13:58:29
+2024-05-07 13:58:29 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-05-07 13:58:29 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s

@@ -1,0 +1,68 @@
+INFO     [2024-04-30 11:21:28,435] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\scheduler\base.py changed, reloading.
+INFO     [2024-04-30 11:21:29,637] [none] django.utils.autoreload: Watching for file changes with StatReloader
+WARNING  [2024-04-30 11:25:36,177] [2af0d50376af4480b033e5f344037e19] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-30 11:25:46,947] [745bfdbb608e43319e7a7ea6685a57ce] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-30 11:25:51,751] [c8759abd49fc43cebf32d7e9e217c0a6] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-30 11:25:57,976] [46c93b6db5934ccbb47d46e32fb943c9] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-30 11:25:59,336] [2c6c2271a9094f109241c6127ef10b03] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-30 11:26:01,345] [ce906afb6a374946ade09f6955897246] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-30 11:26:02,464] [851db444340c482abbf866a7666d80ee] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-30 11:32:20,338] [aaa63a08589d4abe8a890ed0c7c5a82c] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-30 11:35:26,829] [df0fcc36f47d4538abf7a2fe881455c4] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-30 13:30:09,371] [24c627d2df8444c98ea8347dfef4833d] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-30 15:10:11,115] [ab530058a2334e3a964ff5169a7d2a98] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-30 15:10:12,135] [a4660704195940d99ac8e3355406c968] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-30 15:10:13,128] [039340ac5dac401aa566ae15a978a7f5] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-30 15:10:13,777] [8ea074c31b604798acfa2cc2b2a46f45] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-30 15:10:14,622] [7c1c40271d824659a56264223f6a5706] django.request: Not Found: /media/avatar/default.png
+INFO     [2024-04-30 15:13:18,051] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\routers\websocket.py changed, reloading.
+INFO     [2024-04-30 15:13:19,106] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-30 15:22:41,559] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\unitrunner\request\parser.py changed, reloading.
+INFO     [2024-04-30 15:22:42,468] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-30 16:28:52,642] [none] django.utils.autoreload: Watching for file changes with StatReloader
+WARNING  [2024-04-30 16:29:32,444] [512eee621fda4d54b51c1d807d227277] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-30 16:29:34,716] [18af4aa5700d4a9ca13a1bf642bd2370] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-30 16:29:36,045] [df275db83f944e6ba2e9916445bd37f6] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-30 16:29:37,695] [fb9f87a982ec42e6912328f9e33c227c] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-30 16:29:42,159] [5b4b57642cea470d9c8054516e5a47c0] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-30 16:29:43,604] [6004bf259f0b4d2b8c87b2aafe88424a] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-30 16:30:09,513] [9c4ac1e9a1ed4c19b1e0450002c217bc] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-30 16:30:15,785] [58d9b751dc0c494191058f1895815183] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-30 16:30:20,300] [32032634f93c42b5b53edc7c10a7acfc] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-30 16:30:28,166] [cbd8a4e3bad3424597149957cfda91b7] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-30 16:55:20,008] [30b263b387724678af0ee945b23b84b1] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-30 16:55:22,147] [ddf5143758a04891a33fa3eedd3beccd] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-30 16:55:22,785] [2c21fb1ea3a146b98ed3b7ad015d4d08] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-30 16:55:23,440] [0260e15f874a497a86272d4a16554b43] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-04-30 16:55:24,111] [3e08f99a1a084617a79d653e60e4b9b2] django.request: Not Found: /media/avatar/default.png
+INFO     [2024-04-30 17:24:47,113] [none] django.utils.autoreload: C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\utils.py changed, reloading.
+INFO     [2024-04-30 17:24:47,134] [none] django.utils.autoreload: C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\utils.py changed, reloading.
+INFO     [2024-04-30 17:24:48,230] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-30 17:24:48,394] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-30 17:24:48,854] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-30 17:29:26,002] [none] django.utils.autoreload: C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\utils.py changed, reloading.
+INFO     [2024-04-30 17:29:26,130] [none] django.utils.autoreload: C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\utils.py changed, reloading.
+INFO     [2024-04-30 17:29:26,796] [none] django.utils.autoreload: C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\utils.py changed, reloading.
+INFO     [2024-04-30 17:29:27,013] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-30 17:29:27,085] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-04-30 17:29:27,747] [none] django.utils.autoreload: Watching for file changes with StatReloader
+WARNING  [2024-05-06 17:02:27,676] [6d0b209eab3442d6a495fb8fbfc159b7] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-05-06 17:02:32,192] [cd1afa120a9240a39553f84b07acd1eb] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-05-06 17:02:33,080] [dd0b24d1e0ff4790b31b1a28169b27e8] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-05-06 17:02:34,547] [659c3bb92c11446599edfc2e108e9352] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-05-06 17:02:35,262] [b6bfb9880b7b4066b1bd07bade126cf8] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-05-06 17:02:35,963] [862532c7c63946498f5716a90a354467] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-05-06 17:02:36,743] [fa2724ecfdf040f5856f0866eef906cf] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-05-06 17:02:42,346] [3cdcaad117ce44dfaf9af83f097d3950] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-05-06 17:02:46,559] [2071988e52af42fea5c0009d43951e19] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-05-06 17:02:51,556] [2f8be6cee95b4316950e211c39708371] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-05-06 17:02:53,121] [313fff5c6306420687f7b340ced807af] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-05-06 17:02:54,687] [4e4a0eeec08346f5bce0e0ebccf91891] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-05-06 17:02:56,199] [a89d2cf8e4b344ef91f69dc956282c4a] django.request: Not Found: /media/avatar/default.png
+INFO     [2024-05-07 13:42:07,056] [none] django.utils.autoreload: C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\exceptions.py changed, reloading.
+INFO     [2024-05-07 13:42:07,083] [none] django.utils.autoreload: C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\__init__.py changed, reloading.
+INFO     [2024-05-07 13:42:07,192] [none] django.utils.autoreload: C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\__init__.py changed, reloading.
+INFO     [2024-05-07 13:42:08,621] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-07 13:42:08,621] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-07 13:42:08,622] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-07 13:58:27,634] [none] django.utils.autoreload: Watching for file changes with StatReloader

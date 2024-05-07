@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Change assert method and add registry system.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/routers/websocket.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/routers/websocket.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/home/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/home/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/request/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/unitrunner/request/parser.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,66 +87,66 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Django Server.backend.executor": "Run",
-    "Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken.executor": "Run",
-    "Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken.setUp.executor": "Run",
-    "Django tests.Test: api.tests.test_project_destory.ProjectDestroyViewSetTests.executor": "Run",
-    "Django tests.Test: api.tests.test_user_list.TestUserListViewSet.executor": "Run",
-    "Django tests.Test: api.tests.test_user_list.TestUserListViewSet.test_hello.executor": "Run",
-    "Django tests.Test: api.tests.test_user_list.executor": "Run",
-    "Python tests.Python tests for MyAssertTest.executor": "Run",
-    "Python tests.Python tests for MyAssertTest.test_assertNotEqual.executor": "Run",
-    "Python tests.Python tests for Test1.executor": "Run",
-    "Python tests.Python tests for Test1.test1.executor": "Run",
-    "Python tests.Python tests for test_assert.MyAssertTest.test_assertNotEqual.executor": "Run",
-    "Python tests.Python tests in __init__.py.executor": "Run",
-    "Python tests.Python tests in test_custom_token.py.executor": "Run",
-    "Python tests.Python tests in test_engine.py.executor": "Run",
-    "Python tests.Python tests in ws_handler.py.executor": "Run",
-    "Python.DBClient.executor": "Run",
-    "Python.__init__ (1).executor": "Run",
-    "Python.__init__ (2).executor": "Run",
-    "Python.__init__.executor": "Run",
-    "Python.api_migrate.executor": "Run",
-    "Python.engine.executor": "Run",
-    "Python.functions.executor": "Run",
-    "Python.manage.executor": "Run",
-    "Python.qy.executor": "Run",
-    "Python.recursion.executor": "Run",
-    "Python.registry.executor": "Run",
-    "Python.setting.executor": "Run",
-    "Python.time.executor": "Run",
-    "Python.websocket.executor": "Run",
-    "Python.weixin.executor": "Run",
-    "Python.ws_handler.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/86135/Desktop/EasyPost/backend/api/emus",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.stylelint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.stylelint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "File.Encoding",
-    "ts.external.directory.path": "D:\\Program Files\\JetBrains\\PyCharm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Django Server.backend.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken.setUp.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: api.tests.test_project_destory.ProjectDestroyViewSetTests.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: api.tests.test_user_list.TestUserListViewSet.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: api.tests.test_user_list.TestUserListViewSet.test_hello.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: api.tests.test_user_list.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for MyAssertTest.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for MyAssertTest.test_assertNotEqual.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for Test1.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for Test1.test1.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_assert.MyAssertTest.test_assertNotEqual.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in __init__.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_custom_token.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_engine.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in ws_handler.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.DBClient.executor&quot;: &quot;Run&quot;,
+    &quot;Python.__init__ (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.__init__ (2).executor&quot;: &quot;Run&quot;,
+    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.api_migrate.executor&quot;: &quot;Run&quot;,
+    &quot;Python.engine.executor&quot;: &quot;Run&quot;,
+    &quot;Python.functions.executor&quot;: &quot;Run&quot;,
+    &quot;Python.manage.executor&quot;: &quot;Run&quot;,
+    &quot;Python.qy.executor&quot;: &quot;Run&quot;,
+    &quot;Python.recursion.executor&quot;: &quot;Run&quot;,
+    &quot;Python.registry.executor&quot;: &quot;Run&quot;,
+    &quot;Python.setting.executor&quot;: &quot;Run&quot;,
+    &quot;Python.time.executor&quot;: &quot;Run&quot;,
+    &quot;Python.websocket.executor&quot;: &quot;Run&quot;,
+    &quot;Python.weixin.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ws_handler.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/86135/Desktop/EasyPost/backend/api/emus&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Program Files\\JetBrains\\PyCharm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "directory"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\emus" />
@@ -161,7 +163,7 @@
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.engine">
+  <component name="RunManager" selected="Django Server.backend">
     <configuration name="__init__ (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <option name="ENV_FILES" value="" />
@@ -470,15 +472,10 @@
       <workItem from="1713319714158" duration="24461000" />
       <workItem from="1713754708273" duration="34896000" />
       <workItem from="1714116470185" duration="5019000" />
-      <workItem from="1714271913866" duration="30139000" />
-    </task>
-    <task id="LOCAL-00354" summary="Change event name and ref function in dbConfig.vue:```Change event name and ref function in dbConfig.vue```">
-      <option name="closed" value="true" />
-      <created>1713343003034</created>
-      <option name="number" value="00354" />
-      <option name="presentableId" value="LOCAL-00354" />
-      <option name="project" value="LOCAL" />
-      <updated>1713343003034</updated>
+      <workItem from="1714271913866" duration="30647000" />
+      <workItem from="1714455388897" duration="4431000" />
+      <workItem from="1715060836972" duration="30000" />
+      <workItem from="1715061316945" duration="488000" />
     </task>
     <task id="LOCAL-00355" summary="Change commit message: &quot;Rename methods and refs for database selection&quot;">
       <option name="closed" value="true" />
@@ -864,7 +861,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714442568838</updated>
     </task>
-    <option name="localTasksCounter" value="403" />
+    <task id="LOCAL-00403" summary="Change assert method and add registry system.">
+      <option name="closed" value="true" />
+      <created>1714446782878</created>
+      <option name="number" value="00403" />
+      <option name="presentableId" value="LOCAL-00403" />
+      <option name="project" value="LOCAL" />
+      <updated>1714446782878</updated>
+    </task>
+    <option name="localTasksCounter" value="404" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
