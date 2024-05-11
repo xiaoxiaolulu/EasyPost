@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Update dependencies to latest versions">
-      <change afterPath="$PROJECT_DIR$/api/migrations/0030_alter_datastructure_type_menu.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/migrations/0031_alter_menu_hidden.py" afterDir="false" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Change the menu structure to include a parent menu with submenus, and add a new menu item for the API documentation. Update the corresponding API endpoints to return the new menu structure, and modify the frontend code to display the updated menu structure.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/dao/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/setting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/models/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/setting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/routers/notice.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/routers/notice.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/service/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/setting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/src/routers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/routers/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/routers/modules/https.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/routers/modules/https.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/src/routers/modules/other.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/routers/modules/other.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/routers/modules/project.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/routers/modules/project.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/src/store/modules/permission.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/store/modules/permission.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/src/store/modules/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/store/modules/user.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/src/utils/routers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/utils/routers.ts" afterDir="false" />
@@ -173,7 +164,7 @@
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.__init__ (1)">
+  <component name="RunManager" selected="Django Server.backend">
     <configuration name="__init__ (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <option name="ENV_FILES" value="" />
@@ -487,23 +478,7 @@
       <workItem from="1715060836972" duration="30000" />
       <workItem from="1715061316945" duration="3123000" />
       <workItem from="1715065903841" duration="554000" />
-      <workItem from="1715326635433" duration="5243000" />
-    </task>
-    <task id="LOCAL-00356" summary="Update code for saving and updating environment details.">
-      <option name="closed" value="true" />
-      <created>1713343031288</created>
-      <option name="number" value="00356" />
-      <option name="presentableId" value="LOCAL-00356" />
-      <option name="project" value="LOCAL" />
-      <updated>1713343031288</updated>
-    </task>
-    <task id="LOCAL-00357" summary="Added new methods `database_bind_environment` and `environment_save` to `SettingDAO` class.">
-      <option name="closed" value="true" />
-      <created>1713343064618</created>
-      <option name="number" value="00357" />
-      <option name="presentableId" value="LOCAL-00357" />
-      <option name="project" value="LOCAL" />
-      <updated>1713343064619</updated>
+      <workItem from="1715326635433" duration="8536000" />
     </task>
     <task id="LOCAL-00358" summary="&quot;Refactor: Rename Address model to DataSource, add new Address model.&quot;">
       <option name="closed" value="true" />
@@ -881,7 +856,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715061971799</updated>
     </task>
-    <option name="localTasksCounter" value="405" />
+    <task id="LOCAL-00405" summary="Change the menu structure to include a parent menu with submenus, and add a new menu item for the API documentation. Update the corresponding API endpoints to return the new menu structure, and modify the frontend code to display the updated menu structure.">
+      <option name="closed" value="true" />
+      <created>1715399077999</created>
+      <option name="number" value="00405" />
+      <option name="presentableId" value="LOCAL-00405" />
+      <option name="project" value="LOCAL" />
+      <updated>1715399078000</updated>
+    </task>
+    <task id="LOCAL-00406" summary="Change the menu structure to include a parent menu with submenus, and add a new menu item for the API documentation. Update the corresponding API endpoints to return the new menu structure, and modify the frontend code to display the updated menu structure.">
+      <option name="closed" value="true" />
+      <created>1715399092890</created>
+      <option name="number" value="00406" />
+      <option name="presentableId" value="LOCAL-00406" />
+      <option name="project" value="LOCAL" />
+      <updated>1715399092890</updated>
+    </task>
+    <option name="localTasksCounter" value="407" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -911,32 +902,32 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="&quot;Ref" />
-    <MESSAGE value="&quot;Refactor" />
-    <MESSAGE value="&quot;Refactor code" />
-    <MESSAGE value="&quot;Refactor code for" />
-    <MESSAGE value="&quot;Refactor code for data" />
-    <MESSAGE value="&quot;Refactor code for data source" />
-    <MESSAGE value="&quot;Refactor code for data source registry" />
-    <MESSAGE value="&quot;Refactor code for data source registry and" />
-    <MESSAGE value="&quot;Refactor code for data source registry and fix" />
-    <MESSAGE value="&quot;Refactor code for data source registry and fix API" />
-    <MESSAGE value="&quot;Refactor code for data source registry and fix API endpoint" />
-    <MESSAGE value="&quot;Refactor code for data source registry and fix API endpoint&quot;" />
-    <MESSAGE value="Change" />
-    <MESSAGE value="Change assert" />
-    <MESSAGE value="Change assert method" />
-    <MESSAGE value="Change assert method and" />
-    <MESSAGE value="Change assert method and add" />
-    <MESSAGE value="Change assert method and add registry" />
-    <MESSAGE value="Change assert method and add registry system" />
-    <MESSAGE value="Change assert method and add registry system." />
-    <MESSAGE value="Update" />
-    <MESSAGE value="Update dependencies" />
-    <MESSAGE value="Update dependencies to" />
-    <MESSAGE value="Update dependencies to latest" />
-    <MESSAGE value="Update dependencies to latest versions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update dependencies to latest versions" />
+    <MESSAGE value="Change the menu structure to include a parent menu with submenus, and add a new menu item for the API documentation. Update the" />
+    <MESSAGE value="Change the menu structure to include a parent menu with submenus, and add a new menu item for the API documentation. Update the corresponding" />
+    <MESSAGE value="Change the menu structure to include a parent menu with submenus, and add a new menu item for the API documentation. Update the corresponding API" />
+    <MESSAGE value="Change the menu structure to include a parent menu with submenus, and add a new menu item for the API documentation. Update the corresponding API end" />
+    <MESSAGE value="Change the menu structure to include a parent menu with submenus, and add a new menu item for the API documentation. Update the corresponding API endpoints" />
+    <MESSAGE value="Change the menu structure to include a parent menu with submenus, and add a new menu item for the API documentation. Update the corresponding API endpoints to" />
+    <MESSAGE value="Change the menu structure to include a parent menu with submenus, and add a new menu item for the API documentation. Update the corresponding API endpoints to return" />
+    <MESSAGE value="Change the menu structure to include a parent menu with submenus, and add a new menu item for the API documentation. Update the corresponding API endpoints to return the" />
+    <MESSAGE value="Change the menu structure to include a parent menu with submenus, and add a new menu item for the API documentation. Update the corresponding API endpoints to return the new" />
+    <MESSAGE value="Change the menu structure to include a parent menu with submenus, and add a new menu item for the API documentation. Update the corresponding API endpoints to return the new menu" />
+    <MESSAGE value="Change the menu structure to include a parent menu with submenus, and add a new menu item for the API documentation. Update the corresponding API endpoints to return the new menu structure" />
+    <MESSAGE value="Change the menu structure to include a parent menu with submenus, and add a new menu item for the API documentation. Update the corresponding API endpoints to return the new menu structure," />
+    <MESSAGE value="Change the menu structure to include a parent menu with submenus, and add a new menu item for the API documentation. Update the corresponding API endpoints to return the new menu structure, and" />
+    <MESSAGE value="Change the menu structure to include a parent menu with submenus, and add a new menu item for the API documentation. Update the corresponding API endpoints to return the new menu structure, and modify" />
+    <MESSAGE value="Change the menu structure to include a parent menu with submenus, and add a new menu item for the API documentation. Update the corresponding API endpoints to return the new menu structure, and modify the" />
+    <MESSAGE value="Change the menu structure to include a parent menu with submenus, and add a new menu item for the API documentation. Update the corresponding API endpoints to return the new menu structure, and modify the front" />
+    <MESSAGE value="Change the menu structure to include a parent menu with submenus, and add a new menu item for the API documentation. Update the corresponding API endpoints to return the new menu structure, and modify the frontend" />
+    <MESSAGE value="Change the menu structure to include a parent menu with submenus, and add a new menu item for the API documentation. Update the corresponding API endpoints to return the new menu structure, and modify the frontend code" />
+    <MESSAGE value="Change the menu structure to include a parent menu with submenus, and add a new menu item for the API documentation. Update the corresponding API endpoints to return the new menu structure, and modify the frontend code to" />
+    <MESSAGE value="Change the menu structure to include a parent menu with submenus, and add a new menu item for the API documentation. Update the corresponding API endpoints to return the new menu structure, and modify the frontend code to display" />
+    <MESSAGE value="Change the menu structure to include a parent menu with submenus, and add a new menu item for the API documentation. Update the corresponding API endpoints to return the new menu structure, and modify the frontend code to display the" />
+    <MESSAGE value="Change the menu structure to include a parent menu with submenus, and add a new menu item for the API documentation. Update the corresponding API endpoints to return the new menu structure, and modify the frontend code to display the updated" />
+    <MESSAGE value="Change the menu structure to include a parent menu with submenus, and add a new menu item for the API documentation. Update the corresponding API endpoints to return the new menu structure, and modify the frontend code to display the updated menu" />
+    <MESSAGE value="Change the menu structure to include a parent menu with submenus, and add a new menu item for the API documentation. Update the corresponding API endpoints to return the new menu structure, and modify the frontend code to display the updated menu structure" />
+    <MESSAGE value="Change the menu structure to include a parent menu with submenus, and add a new menu item for the API documentation. Update the corresponding API endpoints to return the new menu structure, and modify the frontend code to display the updated menu structure." />
+    <option name="LAST_COMMIT_MESSAGE" value="Change the menu structure to include a parent menu with submenus, and add a new menu item for the API documentation. Update the corresponding API endpoints to return the new menu structure, and modify the frontend code to display the updated menu structure." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$recursion.coverage" NAME="recursion Coverage Results" MODIFIED="1712139211023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />

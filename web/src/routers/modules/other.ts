@@ -15,7 +15,7 @@ const othersRouter = [{
   children: [
     {
       path: '/other/clipboard',
-      component: "other/clipboard/index.vue",
+      component: "/other/clipboard/index.vue",
       name: 'clipboard',
       meta: { title: '剪贴板',  roles:['other'] ,icon: 'MenuIcon',}
     },

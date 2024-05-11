@@ -60,7 +60,6 @@ export const dynamicRoutes: Array<RouteRecordRaw & extendRoute> = [
   },
 ]
 
-
 /**
  * notFoundRouter(找不到路由)
  */
@@ -88,7 +87,6 @@ export const staticRoutes: Array<RouteRecordRaw & extendRoute> = [
     meta: { title: '登录' },
   },
 ]
-
 
 export const constantRoutes = [
   ...dynamicRoutes,

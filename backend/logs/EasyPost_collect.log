@@ -405,3 +405,7 @@ INFO     [2024-05-09 14:37:01,377] [none] django.utils.autoreload: C:\Users\8613
 INFO     [2024-05-09 14:37:01,401] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\__init__.py changed, reloading.
 INFO     [2024-05-09 14:37:02,416] [none] django.utils.autoreload: Watching for file changes with StatReloader
 INFO     [2024-05-09 14:37:02,432] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-11 14:56:27,760] [none] django.utils.autoreload: Watching for file changes with StatReloader
+WARNING  [2024-05-11 16:54:24,907] [45d4088615764b4aad519b1122016210] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-05-11 16:54:33,778] [d456106dae004bcaa6850b67916c0bf6] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-05-11 16:54:42,682] [d81e1ffe960940aebe50293cb2ffe667] django.request: Not Found: /media/avatar/default.png

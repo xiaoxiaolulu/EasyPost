@@ -1,7 +1,9 @@
 import path from "path-browserify";
 
-const modules = import.meta.glob('../../views/**/**.vue');
 export const Layout = () => import('@/layout/index.vue');
+const layoutModules = import.meta.glob('/src/layout/*.{vue,tsx}');
+const viewsModules = import.meta.glob('/src/views/**/*.{vue,tsx}');
+const dynamicViewsModules = { ...layoutModules, ...viewsModules }; // Concise object spread
 
 
 /**
@@ -67,4 +69,33 @@ export function handleRoutes(routers,pathUrl='') {
         if(item.children&&item.children.length){
         }
     })
+}
+
+export function dynamicImport(dynamicViewsModules, component) {
+    const keys = Object.keys(dynamicViewsModules);
+    const matchKeys = keys.filter((key) => {
+        const k = key.replace(/\/src\/views|../, '');
+        return k.startsWith(`${component}`) || k.startsWith(`/${component}`);
+    });
+    if (matchKeys?.length === 1) {
+        const matchKey = matchKeys[0];
+        return dynamicViewsModules[matchKey];
+    }
+    if (matchKeys?.length > 1) {
+        return false;
+    }
+}
+
+export function dynamicComponent(asyncRoutes) {
+
+    return asyncRoutes.map(route => {
+        const tmp = { ...route, component: Layout }; // Combine component assignment
+        if (tmp.children) {
+            tmp.children = tmp.children.map(child => ({
+                ...child,
+                component: dynamicImport(dynamicViewsModules, child.component),
+            }));
+        }
+        return tmp;
+    });
 }
