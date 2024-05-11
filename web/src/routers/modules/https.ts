@@ -9,14 +9,14 @@ const httpsRouter = [{
     name: 'https',
     meta: {
         title: '接口测试',
-        icon: 'ElementPlus'
+        icon: 'ElementPlus',
     },
     children: [
         {
             path: '/https/apis',
             component: () => import('@/views/https/api/index.vue'),
             name: 'apis',
-            meta: { title: '接口管理', icon: 'Lightning'  }
+            meta: { title: '接口管理', icon: 'Lightning'}
         },
         {
             path: '/http/detail',

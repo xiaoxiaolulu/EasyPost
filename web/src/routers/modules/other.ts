@@ -9,21 +9,22 @@ const othersRouter = [{
   name: 'other',
   meta: {
     title: '常用组件',
-    icon: 'management'
+    icon: 'management',
+    roles:['other']
   },
   children: [
     {
       path: '/other/clipboard',
-      component: () => import('@/views/other/clipboard/index.vue'),
+      component: "other/clipboard/index.vue",
       name: 'clipboard',
       meta: { title: '剪贴板',  roles:['other'] ,icon: 'MenuIcon',}
     },
-    {
-      path: '/other/iconfont',
-      component: () => import('@/views/other/iconfont/index.vue'),
-      name: 'iconfont',
-      meta: { title: '阿里图标库', icon: 'MenuIcon' }
-    },
+    // {
+    //   path: '/other/iconfont',
+    //   component: () => import('@/views/other/iconfont/index.vue'),
+    //   name: 'iconfont',
+    //   meta: { title: '阿里图标库', icon: 'MenuIcon' }
+    // },
   ]
 }]
 

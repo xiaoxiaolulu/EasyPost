@@ -10,7 +10,6 @@ import Layout from '@/layout/index.vue'
 interface extendRoute {
   hidden?: boolean
 }
-
 import systemRouter from './modules/system'
 import othersRouter from './modules/other'
 import projectRouter from './modules/project'
@@ -20,12 +19,12 @@ import toolsRouter from './modules/tools'
 
 // 异步组件
 export const asyncRoutes = [
-  ...projectRouter,
-  ...systemRouter,
-  ...httpsRouter,
-  ...recordRouter,
+  // ...projectRouter,
+  // ...systemRouter,
+  // ...httpsRouter,
+  // ...recordRouter,
+  // ...toolsRouter,
   ...othersRouter,
-  ...toolsRouter
 ]
 
 /**
@@ -43,26 +42,7 @@ export const asyncRoutes = [
  * meta.breadcrumb ==> 如果设置为false，该项将隐藏在breadcrumb中（默认值为true）
  */
 
-export const constantRoutes: Array<RouteRecordRaw & extendRoute> = [
-  {
-    path: '/404',
-    name: '404',
-    component: () => import('@/views/errorPages/404.vue'),
-    hidden: true,
-  },
-  {
-    path: '/403',
-    name: '403',
-    component: () => import('@/views/errorPages/403.vue'),
-    hidden: true,
-  },
-  {
-    path: '/login',
-    name: 'Login',
-    component: () => import('@/views/login/index.vue'),
-    hidden: true,
-    meta: { title: '登录' },
-  },
+export const dynamicRoutes: Array<RouteRecordRaw & extendRoute> = [
   {
     path: '/',
     name: 'layout',
@@ -80,14 +60,41 @@ export const constantRoutes: Array<RouteRecordRaw & extendRoute> = [
   },
 ]
 
+
 /**
  * notFoundRouter(找不到路由)
  */
-export const notFoundRouter = {
-  path: '/:pathMatch(.*)',
-  name: 'notFound',
-  redirect: '/404',
-}
+export const notFoundRouter: Array<RouteRecordRaw & extendRoute> = [
+  {
+    path: '/:pathMatch(.*)',
+    name: 'notFound',
+    redirect: '/404',
+  },
+  {
+    path: '/403',
+    name: '403',
+    component: () => import('@/views/errorPages/403.vue'),
+    hidden: true,
+  },
+]
+
+
+export const staticRoutes: Array<RouteRecordRaw & extendRoute> = [
+  {
+    path: '/login',
+    name: 'Login',
+    component: () => import('@/views/login/index.vue'),
+    hidden: true,
+    meta: { title: '登录' },
+  },
+]
+
+
+export const constantRoutes = [
+  ...dynamicRoutes,
+  ...staticRoutes
+]
+
 
 const router = createRouter({
   // history: createWebHistory(process.env.BASE_URL), // history

@@ -1,12 +1,12 @@
 """
 DESCRIPTION：设置模型
 :Created by Null.
-
  * table-TestEnvironment: 环境配置
  * table-DataSource: 数据库配置
  * table-BindDataSource: 关联的数据库
  * table-Notice: 消息通知
  * table-DataStructure: 数据结构
+ * table-Menu: 菜单管理
 """
 from django.contrib.auth import get_user_model
 from django.core.cache import cache
@@ -18,15 +18,13 @@ from django.db.models import (
     SET_NULL,
     TextField,
     AutoField,
-    IntegerChoices
+    IntegerChoices, BooleanField
 )
 from django.db.models.signals import (
     post_save,
     post_delete
 )
 from django.utils.translation import gettext_lazy as _
-from api.emus.CaseParametersEnum import CaseParametersEnum
-from api.models.project import Project
 
 
 User = get_user_model()
@@ -214,6 +212,46 @@ class DataStructure(Model):
 
     class Meta:
         verbose_name = _('ApiCopy')
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.name
+
+
+class Menu(Model):
+
+    """
+    菜单管理
+
+    * name: 菜单名称
+    * path: 页面路径
+    * component: 前端组件
+    * redirect: 重定向,
+    * title: 页面名称
+    * icon: 菜单Icon
+    * hidden: 是否隐藏
+    * roles: 菜单权限
+    * parent_id: 父级菜单
+    * user: 创建者
+    * create_time: 创建时间
+    * update_time: 更新时间
+    """
+    id = AutoField(primary_key=True)
+    name = CharField(max_length=50, null=True, blank=True, verbose_name=_('Menu Name'))
+    path = TextField(null=True, blank=True, verbose_name=_('Menu Path'))
+    component = TextField(null=True, blank=True, verbose_name=_('Menu Component'))
+    redirect = TextField(null=True, blank=True, verbose_name=_('Menu Redirect'))
+    title = CharField(max_length=200, null=True, blank=True, verbose_name=_('Menu Title'))
+    icon = CharField(max_length=200, null=True, blank=True, verbose_name=_('Menu Icon'))
+    hidden = BooleanField(default=False, null=True, blank=True, verbose_name=_('Menu Hidden'))
+    roles = TextField(null=True, blank=True, verbose_name=_('Menu Roles'))
+    parent_id = CharField(max_length=200, null=True, blank=True, verbose_name=_('Menu ParentId'))
+    user = ForeignKey(User, related_name="menu_creator", null=True, on_delete=SET_NULL, verbose_name=_('User'))
+    create_time = DateTimeField(auto_now_add=True, verbose_name=_('Menu CreateTime'))
+    update_time = DateTimeField(auto_now=True, verbose_name=_('Menu UpdateTime'))
+
+    class Meta:
+        verbose_name = _('Menu')
         verbose_name_plural = verbose_name
 
     def __str__(self):

@@ -12,15 +12,18 @@ import types
 import typing
 import uuid
 from typing import (
-    Any
+    Any,
+    List
 )
 from django.core.exceptions import ValidationError
 from django.db import IntegrityError
+from django.forms import model_to_dict
 from api.models.setting import (
     Functions,
     TestEnvironment,
     BindDataSource,
-    Notice
+    Notice,
+    Menu
 )
 from api.response.fatcory import ResponseStandard
 from config.settings import BASE_DIR
@@ -533,3 +536,56 @@ class SettingDao:
         except Exception as e:
             logger.error(f"Error saving notice: {e}")
             raise Exception(f"An error occurred while saving the notice: {e}")
+
+    @staticmethod
+    def get_all_menu():
+        try:
+            queryset = Menu.objects.all()
+            stmt = [model_to_dict(obj) for obj in queryset]
+            return stmt
+        except (Menu.DoesNotExist, Exception) as err:
+            logger.debug(
+                f"🏓查询菜单数据失败 -> {err}"
+            )
+            raise Exception(f"{err} ❌")
+
+    @staticmethod
+    def get_parent_menu():
+
+        try:
+            queryset = Menu.objects.filter(parent_id=0)
+            stmt = [model_to_dict(obj) for obj in queryset]
+            return stmt
+        except (Menu.DoesNotExist, Exception) as err:
+            logger.debug(
+                f"🏓查询父级菜单数据失败 -> {err}"
+            )
+            raise Exception(f"{err} ❌")
+
+    @staticmethod
+    def menu_assembly(parent_menu: typing.List[typing.Any], all_menu: typing.List[typing.Any]) -> list[Any]:
+        for parent in parent_menu:
+            SettingDao.assemble_meta_data(parent)
+            for menu in all_menu:
+                if int(menu['parent_id']) == int(parent['id']):
+                    parent['children'] = [] if not parent.get('children', None) else parent['children']
+                    SettingDao.assemble_meta_data(menu)
+                    parent['children'].append(menu)
+            SettingDao.menu_assembly(parent['children'], all_menu) if parent.get('children', None) else ...
+        return parent_menu
+
+    @staticmethod
+    def assemble_meta_data(menu: typing.Dict):
+        menu['meta'] = {
+            'title': menu.get('title', None),
+            'icon': menu.pop('icon', None),
+            'roles': ['all']
+        }
+        return menu
+
+    @staticmethod
+    def all_menu_nesting() -> typing.List[typing.Any]:
+        all_menu = SettingDao.get_all_menu()
+        parent_menu = SettingDao.get_parent_menu()
+        result = SettingDao.menu_assembly(parent_menu, all_menu)
+        return result

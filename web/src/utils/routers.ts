@@ -1,4 +1,9 @@
-import path from 'path-browserify'
+import path from "path-browserify";
+
+const modules = import.meta.glob('../../views/**/**.vue');
+export const Layout = () => import('@/layout/index.vue');
+
+
 /**
  * 通过递归过滤异步路由表
  * @param routes asyncRoutes

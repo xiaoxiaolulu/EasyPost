@@ -16,14 +16,14 @@ const projectRouter = [{
             path: '/project/list',
             component: () => import('@/views/project/index.vue'),
             name: 'projectList',
-            meta: { title: '项目管理', icon: 'FolderRemove'  }
+            meta: { title: '项目管理', icon: 'FolderRemove' }
         },
         {
             path: '/project/detail',
             component: () => import('@/views/project/components/editProject.vue'),
             name: 'projectDetail',
             hidden: true,
-            meta: { title: '项目详情', icon: 'FolderRemove'  }
+            meta: { title: '项目详情', icon: 'FolderRemove' }
         }
     ]
 }]

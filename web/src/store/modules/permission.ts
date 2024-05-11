@@ -1,7 +1,7 @@
 import {defineStore} from 'pinia'
-import { asyncRoutes, constantRoutes,routerArray,notFoundRouter } from '@/routers/index'
+import { asyncRoutes, constantRoutes, notFoundRouter } from "@/routers"
 import {hasPermission,filterAsyncRoutes} from "@/utils/routers"
-import {filterKeepAlive,filterRoutes} from "@/utils/routers";
+import {filterKeepAlive} from "@/utils/routers";
 export const usePermissionStore = defineStore({
     // id: 必须的，在所有 Store 中唯一
     id:'permissionState',
