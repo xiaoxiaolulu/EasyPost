@@ -66,3 +66,342 @@ INFO     [2024-05-07 13:42:08,621] [none] django.utils.autoreload: Watching for 
 INFO     [2024-05-07 13:42:08,621] [none] django.utils.autoreload: Watching for file changes with StatReloader
 INFO     [2024-05-07 13:42:08,622] [none] django.utils.autoreload: Watching for file changes with StatReloader
 INFO     [2024-05-07 13:58:27,634] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-07 14:50:20,630] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-07 14:53:09,057] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-05-07 14:53:10,028] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-07 14:53:33,392] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-05-07 14:53:34,431] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-07 14:53:36,959] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-05-07 14:53:37,921] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-07 14:54:08,429] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-05-07 14:54:09,417] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-07 14:56:23,823] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-05-07 14:56:24,894] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-07 14:56:45,910] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-05-07 14:56:46,855] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-07 14:57:57,063] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-05-07 14:57:58,012] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-07 14:58:29,950] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-05-07 14:58:30,904] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-07 14:58:50,588] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-05-07 14:58:51,598] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-07 14:59:12,580] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-05-07 14:59:13,530] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-07 14:59:48,633] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-05-07 14:59:49,621] [none] django.utils.autoreload: Watching for file changes with StatReloader
+ERROR    [2024-05-07 15:18:21,708] [3e55882d5e044f31bed1f84b5ed227bd] django.request: Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sites\models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\debug.py", line 143, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\views.py", line 112, in get_context_data
+    current_site = get_current_site(self.request)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sites\shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sites\models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\sites\models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+WARNING  [2024-05-07 15:18:54,366] [f41f200123c542cca583ab15065bf1d2] django.request: Not Found: /docs
+WARNING  [2024-05-07 15:19:10,187] [b30fb4c1c3204ddf98b3671e384dc202] django.request: Not Found: /auth/
+WARNING  [2024-05-07 15:20:14,136] [6c59b2016e764fdda1bf47e9c526b33e] django.request: Not Found: /api/v1/docs
+WARNING  [2024-05-07 15:20:14,192] [afe58302196842178516fc6ffc3a9a6d] django.request: Not Found: /favicon.ico
+WARNING  [2024-05-07 15:20:51,462] [65b6f511ecf049889cddab0eead1665d] django.request: Not Found: /api/
+WARNING  [2024-05-07 15:20:56,090] [342c96d323054daabb33fc3e40e8a4c2] django.request: Not Found: /auth
+WARNING  [2024-05-07 15:21:20,726] [47829e7e2ca1423f8b5753e79ffefc57] django.request: Not Found: /api/v1/docs
+WARNING  [2024-05-07 15:21:22,215] [4312aa1d754a4587bf6d70be11ea373c] django.request: Not Found: /api/v1/docs
+WARNING  [2024-05-07 15:21:34,843] [90bd50659731449c88b232eff61e9290] django.request: Not Found: /
+WARNING  [2024-05-07 15:21:36,643] [94e02b1e6ef34653b6e5b1d8052afc40] django.request: Not Found: /
+WARNING  [2024-05-07 15:21:38,536] [1a983111046b489d9763a21656621e8e] django.request: Not Found: /
+INFO     [2024-05-07 16:41:53,087] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-05-07 16:41:54,053] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-07 16:43:02,474] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-05-07 16:43:03,403] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 11:23:47,996] [none] django.utils.autoreload: Watching for file changes with StatReloader
+WARNING  [2024-05-08 13:59:41,050] [0ab5295ac33244bf8abee4b2ec1fba43] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-05-08 14:00:21,962] [1d774f7e38b74011bd79747fd20e385f] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-05-08 14:00:56,410] [a1331434b7fd4a098e1e067f4c6135b5] django.request: Not Found: /media/avatar/default.png
+INFO     [2024-05-08 14:12:00,533] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:12:00,751] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:12:01,791] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:12:01,904] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:12:31,148] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:12:31,418] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:12:32,163] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:12:32,411] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:18:17,112] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:18:17,386] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:18:18,234] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:18:18,462] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:18:41,562] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:18:42,578] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:18:42,584] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:18:43,664] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:19:54,075] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:19:54,399] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:19:55,172] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:19:55,486] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:20:18,311] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:20:18,449] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:20:19,379] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:20:19,497] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:20:47,957] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:20:47,965] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:20:48,997] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:20:48,997] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:21:41,702] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:21:41,724] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:21:42,750] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:21:42,753] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:21:51,826] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:21:51,851] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:21:52,944] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:21:52,956] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:22:57,320] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:22:57,600] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:22:58,219] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:22:58,524] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:23:13,187] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:23:13,442] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:23:14,054] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:23:14,325] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:24:26,349] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:24:26,506] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:24:27,439] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:24:27,587] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:24:56,897] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:24:57,053] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:24:57,928] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:24:58,083] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:26:47,389] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:26:47,695] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:26:48,391] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:26:48,681] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:32:21,830] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:32:21,843] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:32:22,966] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:32:22,966] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:33:01,367] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:33:02,184] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:33:02,396] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:33:03,233] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:37:11,163] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:37:11,719] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
+INFO     [2024-05-08 14:37:12,139] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:37:12,744] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:45:49,643] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 14:45:50,645] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 14:45:50,749] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:45:51,768] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:46:11,619] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 14:46:11,674] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 14:46:12,756] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:46:12,779] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:49:07,273] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\setting.py changed, reloading.
+INFO     [2024-05-08 14:49:07,847] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 14:49:08,356] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:49:08,943] [none] django.utils.autoreload: Watching for file changes with StatReloader
+WARNING  [2024-05-08 14:49:27,826] [8fed27c376fb43b79153dbcaf692c7ce] django.request: Not Found: /media/avatar/default.png
+INFO     [2024-05-08 14:49:59,174] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:51:59,556] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 14:52:00,245] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 14:52:00,621] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:52:01,347] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:52:08,291] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 14:52:08,842] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 14:52:09,391] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:52:09,960] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:53:47,954] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 14:53:48,598] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 14:53:49,018] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:53:49,668] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:55:04,781] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 14:55:04,789] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 14:55:05,784] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:55:05,784] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:57:21,936] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 14:57:21,981] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 14:57:23,030] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:57:23,059] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:57:33,167] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 14:57:33,180] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 14:57:34,242] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:57:34,260] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:58:10,221] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 14:58:10,231] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 14:58:11,538] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:58:11,538] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:59:40,057] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 14:59:40,382] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 14:59:41,032] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 14:59:41,357] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:00:44,422] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:00:44,782] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:00:45,504] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:00:45,813] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:01:17,527] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:01:17,807] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:01:18,593] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:01:18,852] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:02:00,499] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:02:00,526] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:02:01,708] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:02:01,708] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:02:18,530] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:02:19,448] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:02:19,579] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:02:20,525] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:03:08,896] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:03:09,395] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:03:10,228] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:03:10,654] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:03:45,777] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\setting.py changed, reloading.
+INFO     [2024-05-08 15:03:46,307] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:03:46,783] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:03:47,439] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:04:54,145] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:04:54,445] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:04:55,150] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:04:55,465] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:05:20,161] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:05:20,489] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:05:21,165] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:05:21,498] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:06:36,522] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:06:36,523] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:06:37,609] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:06:37,609] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:08:00,953] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\setting.py changed, reloading.
+INFO     [2024-05-08 15:08:01,035] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\setting.py changed, reloading.
+INFO     [2024-05-08 15:08:02,059] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:08:02,161] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:09:37,218] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:09:37,686] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:09:38,304] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:09:38,755] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:10:07,060] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:10:07,164] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:10:08,117] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:10:08,197] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:11:33,773] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:11:34,421] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:11:34,822] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:11:35,447] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:12:36,081] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:12:36,187] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:12:37,147] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:12:37,222] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:13:04,739] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:13:05,641] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:13:05,791] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:13:06,649] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:13:33,457] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:13:34,493] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:13:34,510] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:13:46,805] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:13:46,969] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:13:47,946] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:13:48,102] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:14:30,881] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:14:30,935] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:14:31,952] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:14:32,020] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:14:56,445] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:14:57,216] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:14:57,557] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:14:58,301] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:15:22,283] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:15:22,630] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:15:23,341] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:15:23,666] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:15:47,617] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:15:47,848] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:15:48,670] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:15:48,908] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:16:01,139] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:16:01,256] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:16:02,275] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:16:02,395] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:17:30,539] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:17:30,558] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\setting.py changed, reloading.
+INFO     [2024-05-08 15:17:31,625] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-08 15:17:31,626] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-09 14:36:55,790] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\__init__.py changed, reloading.
+INFO     [2024-05-09 14:36:55,883] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\__init__.py changed, reloading.
+INFO     [2024-05-09 14:36:57,487] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-09 14:37:01,377] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\__init__.py changed, reloading.
+INFO     [2024-05-09 14:37:01,401] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\dao\__init__.py changed, reloading.
+INFO     [2024-05-09 14:37:02,416] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-09 14:37:02,432] [none] django.utils.autoreload: Watching for file changes with StatReloader
