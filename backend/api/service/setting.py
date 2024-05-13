@@ -261,17 +261,3 @@ class DataSourceCreateViewSet(MagicCreateApi): # noqa
     queryset = DataStructure.objects.all()
     serializer_class = DataStructureSerializers
     permission_classes = [IsAuthenticated]
-
-
-class TestView(APIView):
-
-    permission_classes = [IsAuthenticated]
-
-    @staticmethod
-    def post(request, **kwargs):
-
-        try:
-            response = SettingDao.all_menu_nesting()
-            return Response(ResponseStandard.success(data=response))
-        except Exception as err:
-            return Response(ResponseStandard.failed(msg=str(err)))

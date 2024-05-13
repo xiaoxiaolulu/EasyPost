@@ -578,7 +578,7 @@ class SettingDao:
     def assemble_meta_data(menu: typing.Dict):
         menu['meta'] = {
             'title': menu.get('title', None),
-            'icon': menu.pop('icon', None),
+            'icon': menu.get('icon', None),
             'roles': ['all']
         }
         return menu
