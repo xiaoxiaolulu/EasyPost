@@ -1,7 +1,8 @@
 import {defineStore} from 'pinia'
-import { asyncRoutes, constantRoutes, notFoundRouter } from "@/routers"
+import { constantRoutes, notFoundRouter } from "@/routers"
 import { hasPermission, filterAsyncRoutes, dynamicImport, dynamicComponent } from "@/utils/routers";
 import {filterKeepAlive} from "@/utils/routers";
+import { useUserStore } from "@/store/modules/user";
 export const usePermissionStore = defineStore({
     // id: 必须的，在所有 Store 中唯一
     id:'permissionState',
@@ -13,13 +14,15 @@ export const usePermissionStore = defineStore({
         addRoutes:[],
         // 缓存路由
         cacheRoutes:{},
+
+        asyncRoutes: [],
     }),
     getters: {
         permission_routes:state=> {
             return state.routes
         },
         keepAliveRoutes: state=>{
-            return filterKeepAlive(asyncRoutes)
+            return filterKeepAlive(state.asyncRoutes)
         }
     },
 
@@ -27,10 +30,12 @@ export const usePermissionStore = defineStore({
     // 可以同步 也可以异步
     actions:{
         // 生成路由
-        generateRoutes(roles){
+        async generateRoutes(roles){
             return new Promise(resolve => {
-                let accessedRoutes
-                accessedRoutes = dynamicComponent(asyncRoutes)
+                const UserStore = useUserStore()
+                // UserStore.getRoles()
+                this.asyncRoutes = UserStore.menus
+                let accessedRoutes = dynamicComponent(this.asyncRoutes)
                 // 在这判断是否有权限，哪些角色拥有哪些权限
                 // if (roles&&roles.length&&!roles.includes('admin')) {
                 //     accessedRoutes = filterAsyncRoutes(accessedRoutes, roles)
@@ -50,7 +55,7 @@ export const usePermissionStore = defineStore({
             this.cacheRoutes = []
         },
         getCacheRoutes(){
-            this.cacheRoutes = filterKeepAlive(asyncRoutes)
+            this.cacheRoutes = filterKeepAlive(this.asyncRoutes)
             return this.cacheRoutes
         }
     },

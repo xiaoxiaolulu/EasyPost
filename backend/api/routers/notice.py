@@ -5,7 +5,7 @@ from api.service.setting import (
     NoticeListViewSet,
     NoticeDestroyViewSet,
     NoticeDetailView,
-    NoticeSaveOrUpdateApiView, TestView
+    NoticeSaveOrUpdateApiView
 )
 
 
@@ -16,7 +16,6 @@ app_urls = [
     path("delete/<int:pk>", NoticeDestroyViewSet.as_view()),
     path("detail/<int:pk>", NoticeDetailView.as_view()),
     path("saveOrUpdate/<int:pk>", NoticeSaveOrUpdateApiView.as_view()),
-    path("test", TestView.as_view())
 ]
 
 
