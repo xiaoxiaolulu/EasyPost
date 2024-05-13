@@ -1,5 +1,6 @@
 import {defineStore} from 'pinia'
 import {login} from "@/api/user";
+import { menuList } from "@/api/system";
 
 
 export const useUserStore = defineStore({
@@ -12,7 +13,8 @@ export const useUserStore = defineStore({
         // 登录用户信息
         userInfo: {},
         // 角色
-        roles: localStorage.roles ? JSON.parse(localStorage.roles) : []
+        roles: localStorage.roles ? JSON.parse(localStorage.roles) : [],
+        menus: localStorage.menus ? JSON.parse(localStorage.menus) : [],
 
     }),
     getters: {},
@@ -32,14 +34,22 @@ export const useUserStore = defineStore({
             }
         },
         // 获取用户授权角色信息，实际应用中 可以通过token通过请求接口在这里获取用户信息
-        getRoles() {
-            return new Promise((resolve, reject) => {
-                // 获取权限列表 默认就是超级管理员，因为没有进行接口请求 写死
-                this.roles = ['admin']
-                localStorage.roles = JSON.stringify(this.roles)
-                resolve(this.roles)
-            })
+        async getRoles() {
+            const ret = await menuList()
+            const {data, code} = ret.data
+            if (code === 0) {
+                return new Promise((resolve, reject) => {
+                    // 获取权限列表 默认就是超级管理员，因为没有进行接口请求 写死
+                    this.roles = ['admin']
+                    localStorage.roles = JSON.stringify(this.roles)
+                    resolve(this.roles)
+                    this.menus = data
+                    localStorage.menus = JSON.stringify(this.menus)
+                    resolve(this.menus)
+                })
+            }
         },
+
         // 获取用户信息 ，如实际应用中 可以通过token通过请求接口在这里获取用户信息
         getInfo(roles) {
             return new Promise((resolve, reject) => {

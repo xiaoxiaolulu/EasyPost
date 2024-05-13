@@ -5,10 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Change the menu structure to include a parent menu with submenus, and add a new menu item for the API documentation. Update the corresponding API endpoints to return the new menu structure, and modify the frontend code to display the updated menu structure.">
+      <change afterPath="$PROJECT_DIR$/api/management/commands/initmenus.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/routers/system.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/service/system.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web/src/api/system.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/setting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/routers/notice.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/routers/notice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/service/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/setting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/routers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/routers/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/routers/modules/other.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/routers/modules/other.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/routers/modules/https.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/routers/modules/project.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/routers/modules/record.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/routers/modules/system.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/src/store/modules/permission.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/store/modules/permission.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/src/store/modules/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/store/modules/user.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/src/utils/routers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/utils/routers.ts" afterDir="false" />
@@ -88,73 +99,74 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Django Server.backend.executor&quot;: &quot;Run&quot;,
-    &quot;Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken.executor&quot;: &quot;Run&quot;,
-    &quot;Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken.setUp.executor&quot;: &quot;Run&quot;,
-    &quot;Django tests.Test: api.tests.test_project_destory.ProjectDestroyViewSetTests.executor&quot;: &quot;Run&quot;,
-    &quot;Django tests.Test: api.tests.test_user_list.TestUserListViewSet.executor&quot;: &quot;Run&quot;,
-    &quot;Django tests.Test: api.tests.test_user_list.TestUserListViewSet.test_hello.executor&quot;: &quot;Run&quot;,
-    &quot;Django tests.Test: api.tests.test_user_list.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for MyAssertTest.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for MyAssertTest.test_assertNotEqual.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for Test1.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for Test1.test1.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_assert.MyAssertTest.test_assertNotEqual.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in __init__.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_custom_token.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_engine.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in ws_handler.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.DBClient.executor&quot;: &quot;Run&quot;,
-    &quot;Python.__init__ (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.__init__ (2).executor&quot;: &quot;Run&quot;,
-    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
-    &quot;Python.api_migrate.executor&quot;: &quot;Run&quot;,
-    &quot;Python.engine.executor&quot;: &quot;Run&quot;,
-    &quot;Python.functions.executor&quot;: &quot;Run&quot;,
-    &quot;Python.manage.executor&quot;: &quot;Run&quot;,
-    &quot;Python.qy.executor&quot;: &quot;Run&quot;,
-    &quot;Python.recursion.executor&quot;: &quot;Run&quot;,
-    &quot;Python.registry.executor&quot;: &quot;Run&quot;,
-    &quot;Python.setting.executor&quot;: &quot;Run&quot;,
-    &quot;Python.time.executor&quot;: &quot;Run&quot;,
-    &quot;Python.websocket.executor&quot;: &quot;Run&quot;,
-    &quot;Python.weixin.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ws_handler.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/86135/Downloads/oaback/oaback&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\Program Files\\JetBrains\\PyCharm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Django Server.backend.executor": "Run",
+    "Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken.executor": "Run",
+    "Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken.setUp.executor": "Run",
+    "Django tests.Test: api.tests.test_project_destory.ProjectDestroyViewSetTests.executor": "Run",
+    "Django tests.Test: api.tests.test_user_list.TestUserListViewSet.executor": "Run",
+    "Django tests.Test: api.tests.test_user_list.TestUserListViewSet.test_hello.executor": "Run",
+    "Django tests.Test: api.tests.test_user_list.executor": "Run",
+    "Python tests.Python tests for MyAssertTest.executor": "Run",
+    "Python tests.Python tests for MyAssertTest.test_assertNotEqual.executor": "Run",
+    "Python tests.Python tests for Test1.executor": "Run",
+    "Python tests.Python tests for Test1.test1.executor": "Run",
+    "Python tests.Python tests for test_assert.MyAssertTest.test_assertNotEqual.executor": "Run",
+    "Python tests.Python tests in __init__.py.executor": "Run",
+    "Python tests.Python tests in test_custom_token.py.executor": "Run",
+    "Python tests.Python tests in test_engine.py.executor": "Run",
+    "Python tests.Python tests in ws_handler.py.executor": "Run",
+    "Python.DBClient.executor": "Run",
+    "Python.__init__ (1).executor": "Run",
+    "Python.__init__ (2).executor": "Run",
+    "Python.__init__.executor": "Run",
+    "Python.api_migrate.executor": "Run",
+    "Python.engine.executor": "Run",
+    "Python.functions.executor": "Run",
+    "Python.initmenus.executor": "Run",
+    "Python.manage.executor": "Run",
+    "Python.qy.executor": "Run",
+    "Python.recursion.executor": "Run",
+    "Python.registry.executor": "Run",
+    "Python.setting.executor": "Run",
+    "Python.time.executor": "Run",
+    "Python.websocket.executor": "Run",
+    "Python.weixin.executor": "Run",
+    "Python.ws_handler.executor": "Run",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/86135/Desktop/EasyPost/backend/api/routers",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "File.Encoding",
+    "ts.external.directory.path": "D:\\Program Files\\JetBrains\\PyCharm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;ChangesTree.GroupingKeys&quot;: [
-      &quot;directory&quot;
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\emus" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\routers" />
+      <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\management\commands" />
+      <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\emus" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\router" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\templates\media" />
-      <recent name="C:\Users\86135\Desktop\EasyPost\backend\utils" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\service" />
@@ -164,7 +176,7 @@
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Django Server.backend">
+  <component name="RunManager" selected="Python.initmenus">
     <configuration name="__init__ (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <option name="ENV_FILES" value="" />
@@ -234,7 +246,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="registry" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="initmenus" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -243,12 +255,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api/events" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api/management/commands" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/events/registry.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/management/commands/initmenus.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -308,19 +320,19 @@
     </configuration>
     <list>
       <item itemvalue="Django Server.backend" />
+      <item itemvalue="Python.initmenus" />
       <item itemvalue="Python.__init__" />
       <item itemvalue="Python.__init__ (1)" />
       <item itemvalue="Python.engine" />
-      <item itemvalue="Python.registry" />
       <item itemvalue="Python.websocket" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.initmenus" />
         <item itemvalue="Python.__init__ (1)" />
         <item itemvalue="Python.websocket" />
         <item itemvalue="Python.__init__" />
         <item itemvalue="Python.engine" />
-        <item itemvalue="Python.registry" />
       </list>
     </recent_temporary>
   </component>
@@ -479,6 +491,7 @@
       <workItem from="1715061316945" duration="3123000" />
       <workItem from="1715065903841" duration="554000" />
       <workItem from="1715326635433" duration="8536000" />
+      <workItem from="1715578487233" duration="6554000" />
     </task>
     <task id="LOCAL-00358" summary="&quot;Refactor: Rename Address model to DataSource, add new Address model.&quot;">
       <option name="closed" value="true" />
@@ -970,6 +983,7 @@
     <SUITE FILE_PATH="coverage/backend$setting.coverage" NAME="setting Coverage Results" MODIFIED="1712038164027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/dao" />
     <SUITE FILE_PATH="coverage/backend$main.coverage" NAME="main Coverage Results" MODIFIED="1706091376465" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/celery_work" />
     <SUITE FILE_PATH="coverage/backend$manage.coverage" NAME="manage Coverage Results" MODIFIED="1711526108828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/backend$initmenus.coverage" NAME="initmenus Coverage Results" MODIFIED="1715579619374" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/management/commands" />
     <SUITE FILE_PATH="coverage/backend$init_task.coverage" NAME="init_task Coverage Results" MODIFIED="1705894334573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/events" />
     <SUITE FILE_PATH="coverage/backend$websocket.coverage" NAME="websocket Coverage Results" MODIFIED="1715329332910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/tests" />
     <SUITE FILE_PATH="coverage/backend$decorator.coverage" NAME="decorator Coverage Results" MODIFIED="1706064703211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />

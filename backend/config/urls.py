@@ -78,6 +78,8 @@ urlpatterns = [
     path("api/plan/", include("api.routers.plan", "plan")),
     # Report
     path("api/report/", include("api.routers.report", "report")),
+    # system
+    path("api/system/", include("api.routers.system", "system")),
 
     re_path(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
 
