@@ -33,7 +33,6 @@ export const usePermissionStore = defineStore({
         async generateRoutes(roles){
             return new Promise(resolve => {
                 const UserStore = useUserStore()
-                // UserStore.getRoles()
                 this.asyncRoutes = UserStore.menus
                 let accessedRoutes = dynamicComponent(this.asyncRoutes)
                 // 在这判断是否有权限，哪些角色拥有哪些权限

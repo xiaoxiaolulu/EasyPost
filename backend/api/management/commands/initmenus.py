@@ -53,7 +53,7 @@ class Command(BaseCommand):
             component="/https/plan/index.vue",
             title="测试计划",
             icon="ElementPlus",
-            parent_id=http_main_menu.id
+            parent_id=http_main_menu.id,
         )
         Menu.objects.get_or_create(
             name='planDetail',
@@ -61,7 +61,8 @@ class Command(BaseCommand):
             component="/https/plan/components/detail.vue",
             title="计划详情",
             icon="ElementPlus",
-            parent_id=http_main_menu.id
+            parent_id=http_main_menu.id,
+            hidden=True
         )
 
         project_main_menu, created = Menu.objects.get_or_create(
