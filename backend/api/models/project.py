@@ -99,6 +99,14 @@ class ProjectRole(Model):
     project = ForeignKey(Project, null=True, on_delete=SET_NULL, related_name='roles', verbose_name=_('Project'))
     rode_id = CharField(max_length=50, null=True, blank=True, verbose_name=_('ProjectRoleId'))
 
+    class Meta:
+        verbose_name = _('ProjectRole')
+        verbose_name_plural = verbose_name
+        app_label = 'api'
+
+    def __str__(self):
+        return self.id
+
 
 def _generate_cache_key(sender, instance):
     instance = instance

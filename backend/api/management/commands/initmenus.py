@@ -194,13 +194,23 @@ class Command(BaseCommand):
             icon="AddLocation",
             parent_id=system_main_menu.id
         )
+
+        config_main_menu, created = Menu.objects.get_or_create(
+            name='config',
+            path='/config',
+            component="Layout",
+            redirect="/config/404",
+            title="系统配置",
+            icon="Setting",
+            parent_id=0
+        )
         Menu.objects.get_or_create(
             name='user',
             path='/system/user',
             component="/system/user/index.vue",
             title="用户管理",
             icon="AddLocation",
-            parent_id=system_main_menu.id
+            parent_id=config_main_menu.id
         )
         Menu.objects.get_or_create(
             name='dept',
@@ -208,7 +218,7 @@ class Command(BaseCommand):
             component="/system/dept/index.vue",
             title="部门管理",
             icon="AddLocation",
-            parent_id=system_main_menu.id
+            parent_id=config_main_menu.id
         )
         Menu.objects.get_or_create(
             name='role',
@@ -216,7 +226,7 @@ class Command(BaseCommand):
             component="/system/role/index.vue",
             title="角色管理",
             icon="AddLocation",
-            parent_id=system_main_menu.id
+            parent_id=config_main_menu.id
         )
         Menu.objects.get_or_create(
             name='menu',
@@ -224,7 +234,7 @@ class Command(BaseCommand):
             component="/system/menu/index.vue",
             title="菜单管理",
             icon="AddLocation",
-            parent_id=system_main_menu.id
+            parent_id=config_main_menu.id
         )
         Menu.objects.get_or_create(
             name='dictionary',
@@ -232,6 +242,6 @@ class Command(BaseCommand):
             component="/system/dictionary/index.vue",
             title="字典管理",
             icon="AddLocation",
-            parent_id=system_main_menu.id
+            parent_id=config_main_menu.id
         )
         self.stdout.write('菜单初始化成功！')
