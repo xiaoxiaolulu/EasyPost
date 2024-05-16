@@ -17,7 +17,8 @@ from django.db.models import (
     CharField,
     DateTimeField,
     SET_NULL,
-    AutoField
+    AutoField,
+    IntegerChoices
 )
 from api.models.project import Project
 from django.utils.translation import gettext_lazy as _
@@ -25,37 +26,33 @@ from django.utils.translation import gettext_lazy as _
 User = get_user_model()
 
 
-class Defaults(object):
-    """
-    默认字段
-    * 状态
-    * 优先级
-    * 目录类型
-    """
-    STATUS_TYPE = 0
+class ApiStatusChoices(IntegerChoices):
 
-    STATUS_CHOICES = (
-        (0, 0),
-        (1, 1),
-        (2, 2)
-    )
+    DEBUGGING = 0
 
-    PRIORITY_TYPE = 0
+    OBSOLETED = 1
 
-    PRIORITY_TYPE_CHOICES = (
-        (0, 0),
-        (1, 1),
-        (2, 2),
-        (3, 3),
-        (4, 4)
-    )
+    NORMAL = 2
 
-    TREE_TYPE = 0
 
-    TREE_TYPE_CHOICES = (
-        (0, 0),
-        (1, 1)
-    )
+class ApiPriorityChoices(IntegerChoices):
+
+    P0 = 0
+
+    P1 = 1
+
+    P2 = 2
+
+    P3 = 3
+
+    P4 = 4
+
+
+class TreeTypeChoices(IntegerChoices):
+
+    API = 0
+
+    CASE = 1
 
 
 class Relation(Model):
@@ -69,8 +66,8 @@ class Relation(Model):
     id = AutoField(primary_key=True)
     project = ForeignKey(Project, on_delete=CASCADE, db_constraint=False)
     tree = TextField(verbose_name=_('Relation Tree'), null=False, default=[])
-    type = CharField(max_length=50, verbose_name=_('Relation Type'), default=Defaults.TREE_TYPE,
-                     choices=Defaults.TREE_TYPE_CHOICES)
+    type = CharField(max_length=50, verbose_name=_('Relation Type'), default=TreeTypeChoices.API,
+                     choices=TreeTypeChoices)
 
     class Meta:
         verbose_name = _('Relation')
@@ -111,10 +108,10 @@ class Api(Model):
     directory_id = CharField(max_length=50, null=True, blank=True, verbose_name=_('Api DirectoryId'))
     method = CharField(max_length=50, null=True, blank=True, verbose_name=_('Api Method'))
     url = TextField(verbose_name=_('Api Url'), null=False, default=None)
-    priority = CharField(max_length=50, verbose_name=_('Api Priority'), choices=Defaults.PRIORITY_TYPE_CHOICES,
-                         default=Defaults.PRIORITY_TYPE)
-    status = CharField(max_length=50, verbose_name=_('Api Status'), choices=Defaults.STATUS_CHOICES,
-                       default=Defaults.STATUS_TYPE)
+    priority = CharField(max_length=50, verbose_name=_('Api Priority'), choices=ApiPriorityChoices,
+                         default=ApiPriorityChoices.P0)
+    status = CharField(max_length=50, verbose_name=_('Api Status'), choices=ApiStatusChoices,
+                       default=ApiStatusChoices.DEBUGGING)
     desc = TextField(null=True, blank=True, verbose_name=_('Api Desc'))
     headers = TextField(verbose_name=_('Api Headers'), null=False, default=None)
     params = TextField(verbose_name=_('Api Params'), null=False, default=None)
@@ -155,8 +152,8 @@ class Case(Model):
     name = CharField(max_length=50, null=True, blank=True, verbose_name=_('Case Name'))
     project = ForeignKey(Project, on_delete=CASCADE, db_constraint=False)
     directory_id = CharField(max_length=50, null=True, blank=True, verbose_name=_('Case DirectoryId'))
-    priority = CharField(max_length=50, verbose_name=_('Case Priority'), choices=Defaults.PRIORITY_TYPE_CHOICES,
-                         default=Defaults.PRIORITY_TYPE)
+    priority = CharField(max_length=50, verbose_name=_('Case Priority'), choices=ApiPriorityChoices,
+                         default=ApiPriorityChoices.P0)
     rerun = CharField(max_length=50, null=True, blank=True, verbose_name=_('Case Name'))
     threads = CharField(max_length=50, null=True, blank=True, verbose_name=_('Case Name'))
     desc = TextField(null=True, blank=True, verbose_name=_('Case Desc'))
@@ -251,10 +248,10 @@ class ApiCopy(Model):
     directory_id = CharField(max_length=50, null=True, blank=True, verbose_name=_('ApiCopy DirectoryId'))
     method = CharField(max_length=50, null=True, blank=True, verbose_name=_('ApiCopy Method'))
     url = TextField(verbose_name=_('Api Url'), null=False, default=None)
-    priority = CharField(max_length=50, verbose_name=_('ApiCopy Priority'), choices=Defaults.PRIORITY_TYPE_CHOICES,
-                         default=Defaults.PRIORITY_TYPE)
-    status = CharField(max_length=50, verbose_name=_('ApiCopy Status'), choices=Defaults.STATUS_CHOICES,
-                       default=Defaults.STATUS_TYPE)
+    priority = CharField(max_length=50, verbose_name=_('ApiCopy Priority'), choices=ApiPriorityChoices,
+                         default=ApiPriorityChoices.P0)
+    status = CharField(max_length=50, verbose_name=_('ApiCopy Status'), choices=ApiStatusChoices,
+                       default=ApiStatusChoices.DEBUGGING)
     desc = TextField(null=True, blank=True, verbose_name=_('ApiCopy Desc'))
     headers = TextField(verbose_name=_('ApiCopy Headers'), null=False, default=None)
     params = TextField(verbose_name=_('ApiCopy Params'), null=False, default=None)

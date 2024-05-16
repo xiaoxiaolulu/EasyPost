@@ -15,41 +15,41 @@ from django.db.models import (
     ImageField,
     DateTimeField,
     DateField,
-    AutoField
+    AutoField,
+    IntegerChoices,
+    TextChoices
 )
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 from config.settings import MEDIA_ROOT
 
 
-class Defaults(object):
-    """
-    默认字段
-    * 性别
-    * 部门
-    * 简介
-    * 账号类型
-    """
+class UserStateChoices(IntegerChoices):
 
-    ACCOUNT_TYPE = "email"
+    VALID = 0
+
+    EXPIRED = 1
+
+
+class UserGenderChoices(TextChoices):
+
+    MALE = "male"
+
+    FEMALE = "female"
+
+
+class UserAccountTypeChoices(TextChoices):
+
+    EMAIL = "email"
+
+    MOBILE = "mobile"
+
+
+class UserExtendInformation(TextChoices):
+
     DEPT = "Quality Testing Department"
-    GENDER = "male"
+
     INTRODUCTION = "The user is lazy and didn't write anything..."
-
-    ACCOUNT_TYPE_CHOICES = (
-        ("email", "邮箱"),
-        ("mobile", "手机")
-    )
-
-    GENDER_CHOICES = (
-        ('male', '男'),
-        ('female', '女')
-    )
-
-    IS_VALID_CHOICES = (
-        (0, 0),
-        (1, 1)
-    )
 
 
 class User(AbstractUser):
@@ -70,14 +70,16 @@ class User(AbstractUser):
     nickname = CharField(max_length=20, null=True, blank=True, verbose_name=_('User Nickname'))
     mobile = CharField(max_length=11, null=True, blank=True, verbose_name=_('User Mobile'))
     email = CharField(max_length=125, null=True, blank=True, verbose_name=_('User Email'))
-    introduction = TextField(blank=True, null=True, verbose_name=_('User Introduction'), default=Defaults.INTRODUCTION)
+    introduction = TextField(blank=True, null=True, verbose_name=_('User Introduction'),
+                             default=UserExtendInformation.INTRODUCTION)
     avatar = ImageField(upload_to=MEDIA_ROOT, default=path.join(MEDIA_ROOT, 'default.png'),
                         null=True, blank=True, verbose_name=_('User Avatar'))
     address = CharField(max_length=100, null=True, blank=True, verbose_name=_('User Address'))
     birthday = DateField(verbose_name=_('User Birthday'), blank=True, null=True, default=timezone.now)
-    gender = CharField(verbose_name=_('User Gender'), choices=Defaults.GENDER_CHOICES, max_length=6,
-                       default=Defaults.GENDER)
-    dept = CharField(blank=True, null=True, verbose_name=_('User Dept'), max_length=125, default=Defaults.DEPT)
+    gender = CharField(verbose_name=_('User Gender'), choices=UserGenderChoices, max_length=6,
+                       default=UserGenderChoices.MALE)
+    dept = CharField(blank=True, null=True, verbose_name=_('User Dept'), max_length=125,
+                     default=UserExtendInformation.DEPT)
     ip_address = CharField(null=True, max_length=125, verbose_name=_('User IpAddress'))
     last_login_time = DateTimeField(default=timezone.now, verbose_name=_('User LastLoginTime'))
     # 临时
@@ -108,8 +110,8 @@ class VerifyCode(Model):
     id = AutoField(primary_key=True)
     code = CharField(max_length=10, verbose_name=_('VerifyCode Code'))
     account = CharField(max_length=125, verbose_name=_('VerifyCode Account'))
-    account_type = CharField(verbose_name=_('VerifyCode AccountType'), choices=Defaults.ACCOUNT_TYPE_CHOICES,
-                             default=Defaults.ACCOUNT_TYPE, max_length=6)
+    account_type = CharField(verbose_name=_('VerifyCode AccountType'), choices=UserAccountTypeChoices,
+                             default=UserAccountTypeChoices.EMAIL, max_length=6)
     add_time = DateTimeField(default=timezone.now, verbose_name=_('VerifyCode AddTime'))
 
     class Meta:

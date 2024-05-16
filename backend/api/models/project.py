@@ -16,7 +16,9 @@ from django.db.models import (
     ForeignKey,
     SET_NULL,
     ImageField,
-    AutoField
+    AutoField,
+    IntegerChoices,
+    TextChoices,
 )
 from django.db.models.signals import (
     post_delete,
@@ -28,28 +30,22 @@ from config.settings import MEDIA_ROOT
 User = get_user_model()
 
 
-class Defaults(object):
-    """
-    默认字段
-    * 项目类型
-    * 私有类型
-    """
+class ProjectTypeChoices(TextChoices):
 
-    PROJECT_TYPE = "Web"
+    WEB = "Web"
 
-    PROJECT_TYPE_CHOICES = (
-        ('Web', 'Web'),
-        ('App', 'App'),
-        ('Pc', 'Pc'),
-        ('MiniProgram', 'MiniProgram')
-    )
+    APP = "App"
 
-    PRIVATE_TYPE = 0
+    PC = "Pc"
 
-    PRIVATE_TYPE_CHOICES = (
-        (0, 0),
-        (1, 1)
-    )
+    MiniProgram = "MiniProgram"
+
+
+class ProjectOwnerShipChoices(IntegerChoices):
+
+    PUBLIC = 0
+
+    PRIVATE = 1
 
 
 class Project(Model):
@@ -67,10 +63,10 @@ class Project(Model):
     id = AutoField(primary_key=True)
     name = CharField(max_length=50, null=True, blank=True, verbose_name=_('Project Name'))
     user = ForeignKey(User, null=True, on_delete=SET_NULL, verbose_name=_('User'))
-    type = CharField(max_length=50, verbose_name=_('Project Type'), choices=Defaults.PROJECT_TYPE_CHOICES,
-                     default=Defaults.PROJECT_TYPE)
-    private = CharField(max_length=50, verbose_name=_('Project private'), choices=Defaults.PRIVATE_TYPE_CHOICES,
-                        default=Defaults.PRIVATE_TYPE)
+    type = CharField(max_length=50, verbose_name=_('Project Type'), choices=ProjectTypeChoices,
+                     default=ProjectTypeChoices.WEB)
+    private = CharField(max_length=50, verbose_name=_('Project private'), choices=ProjectOwnerShipChoices,
+                        default=ProjectOwnerShipChoices.PUBLIC)
     avatar = ImageField(upload_to=MEDIA_ROOT, default=path.join(MEDIA_ROOT, 'default.png'), null=True, blank=True,
                         verbose_name=_('Project Avatar'))
     desc = TextField(null=True, blank=True, verbose_name=_('Project Desc'))

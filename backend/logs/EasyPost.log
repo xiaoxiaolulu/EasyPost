@@ -9315,3 +9315,460 @@ Quit the server with CTRL-BREAK.
 2024-05-16 16:56:25 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
 2024-05-16 16:56:25 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
 2024-05-16 16:56:25 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 16:57:59 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 16:57:59 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 16:57:59 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:21:55 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-05-16 17:21:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-05-16 17:21:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-05-16 17:21:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-05-16 17:21:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-05-16 17:21:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-05-16 17:21:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-05-16 17:21:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-05-16 17:21:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-05-16 17:21:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-05-16 17:21:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-05-16 17:21:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-05-16 17:21:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-05-16 17:21:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-05-16 17:21:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-05-16 17:21:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-05-16 17:21:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-05-16 17:21:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-05-16 17:21:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-05-16 17:21:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-05-16 17:21:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-05-16 17:21:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> swagger对象已经在service_registry中注册!
+2024-05-16 17:21:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> postman对象已经在service_registry中注册!
+2024-05-16 17:21:55 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-05-16 17:21:55 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-05-16 17:21:55 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-05-16 17:21:55 [django-main-thread]-[runserver.inner_run:97]-[INFO]:May 16, 2024 - 17:21:55
+2024-05-16 17:21:55 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-05-16 17:21:55 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-05-16 17:21:56 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:21:56 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:21:56 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:21:56 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:21:56 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:21:58 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:21:58 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:21:58 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:21:58 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:21:58 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:21:58 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:21:58 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:21:58 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:21:59 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:21:59 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:22:51 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-05-16 17:22:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-05-16 17:22:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-05-16 17:22:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-05-16 17:22:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-05-16 17:22:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-05-16 17:22:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-05-16 17:22:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-05-16 17:22:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-05-16 17:22:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-05-16 17:22:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-05-16 17:22:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-05-16 17:22:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-05-16 17:22:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-05-16 17:22:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-05-16 17:22:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-05-16 17:22:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-05-16 17:22:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-05-16 17:22:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-05-16 17:22:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-05-16 17:22:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-05-16 17:22:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> swagger对象已经在service_registry中注册!
+2024-05-16 17:22:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> postman对象已经在service_registry中注册!
+2024-05-16 17:22:51 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-05-16 17:22:51 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-05-16 17:22:51 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-05-16 17:22:51 [django-main-thread]-[runserver.inner_run:97]-[INFO]:May 16, 2024 - 17:22:51
+2024-05-16 17:22:51 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-05-16 17:22:51 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-05-16 17:23:49 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-05-16 17:23:49 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-05-16 17:23:49 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-05-16 17:23:49 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-05-16 17:23:49 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-05-16 17:23:49 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-05-16 17:23:49 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-05-16 17:23:49 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-05-16 17:23:49 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-05-16 17:23:49 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-05-16 17:23:49 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-05-16 17:23:49 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-05-16 17:23:49 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-05-16 17:23:49 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-05-16 17:23:49 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-05-16 17:23:49 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-05-16 17:23:49 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-05-16 17:23:49 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-05-16 17:23:49 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-05-16 17:23:49 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-05-16 17:23:49 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-05-16 17:23:50 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> swagger对象已经在service_registry中注册!
+2024-05-16 17:23:50 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> postman对象已经在service_registry中注册!
+2024-05-16 17:23:50 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-05-16 17:23:50 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-05-16 17:23:50 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-05-16 17:23:50 [django-main-thread]-[runserver.inner_run:97]-[INFO]:May 16, 2024 - 17:23:50
+2024-05-16 17:23:50 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-05-16 17:23:50 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-05-16 17:24:32 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-05-16 17:24:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-05-16 17:24:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-05-16 17:24:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-05-16 17:24:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-05-16 17:24:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-05-16 17:24:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-05-16 17:24:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-05-16 17:24:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-05-16 17:24:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-05-16 17:24:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-05-16 17:24:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-05-16 17:24:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-05-16 17:24:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-05-16 17:24:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-05-16 17:24:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-05-16 17:24:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-05-16 17:24:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-05-16 17:24:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-05-16 17:24:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-05-16 17:24:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-05-16 17:24:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> swagger对象已经在service_registry中注册!
+2024-05-16 17:24:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> postman对象已经在service_registry中注册!
+2024-05-16 17:24:33 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-05-16 17:24:33 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-05-16 17:24:33 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-05-16 17:24:33 [django-main-thread]-[runserver.inner_run:97]-[INFO]:May 16, 2024 - 17:24:33
+2024-05-16 17:24:33 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-05-16 17:24:33 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-05-16 17:25:42 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-05-16 17:25:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-05-16 17:25:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-05-16 17:25:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-05-16 17:25:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-05-16 17:25:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-05-16 17:25:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-05-16 17:25:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-05-16 17:25:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-05-16 17:25:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-05-16 17:25:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-05-16 17:25:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-05-16 17:25:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-05-16 17:25:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-05-16 17:25:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-05-16 17:25:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-05-16 17:25:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-05-16 17:25:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-05-16 17:25:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-05-16 17:25:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-05-16 17:25:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-05-16 17:25:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> swagger对象已经在service_registry中注册!
+2024-05-16 17:25:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> postman对象已经在service_registry中注册!
+2024-05-16 17:25:42 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-05-16 17:25:42 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-05-16 17:25:42 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-05-16 17:25:42 [django-main-thread]-[runserver.inner_run:97]-[INFO]:May 16, 2024 - 17:25:42
+2024-05-16 17:25:42 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-05-16 17:25:42 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-05-16 17:46:12 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-05-16 17:46:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-05-16 17:46:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-05-16 17:46:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-05-16 17:46:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-05-16 17:46:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-05-16 17:46:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-05-16 17:46:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-05-16 17:46:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-05-16 17:46:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-05-16 17:46:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-05-16 17:46:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-05-16 17:46:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-05-16 17:46:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-05-16 17:46:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-05-16 17:46:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-05-16 17:46:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-05-16 17:46:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-05-16 17:46:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-05-16 17:46:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-05-16 17:46:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-05-16 17:46:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> swagger对象已经在service_registry中注册!
+2024-05-16 17:46:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> postman对象已经在service_registry中注册!
+2024-05-16 17:46:12 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-05-16 17:46:12 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-05-16 17:46:12 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-05-16 17:46:12 [django-main-thread]-[runserver.inner_run:97]-[INFO]:May 16, 2024 - 17:46:12
+2024-05-16 17:46:12 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-05-16 17:46:12 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-05-16 17:46:55 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-05-16 17:46:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-05-16 17:46:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-05-16 17:46:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-05-16 17:46:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-05-16 17:46:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-05-16 17:46:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-05-16 17:46:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-05-16 17:46:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-05-16 17:46:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-05-16 17:46:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-05-16 17:46:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-05-16 17:46:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-05-16 17:46:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-05-16 17:46:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-05-16 17:46:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-05-16 17:46:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-05-16 17:46:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-05-16 17:46:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-05-16 17:46:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-05-16 17:46:55 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-05-16 17:46:56 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> swagger对象已经在service_registry中注册!
+2024-05-16 17:46:56 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> postman对象已经在service_registry中注册!
+2024-05-16 17:46:56 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-05-16 17:46:56 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-05-16 17:46:56 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-05-16 17:46:56 [django-main-thread]-[runserver.inner_run:97]-[INFO]:May 16, 2024 - 17:46:56
+2024-05-16 17:46:56 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-05-16 17:46:56 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-05-16 17:47:53 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-05-16 17:47:53 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-05-16 17:47:53 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-05-16 17:47:53 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-05-16 17:47:53 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-05-16 17:47:53 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-05-16 17:47:53 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-05-16 17:47:53 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-05-16 17:47:53 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-05-16 17:47:53 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-05-16 17:47:53 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-05-16 17:47:53 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-05-16 17:47:53 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-05-16 17:47:53 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-05-16 17:47:53 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-05-16 17:47:53 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-05-16 17:47:53 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-05-16 17:47:53 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-05-16 17:47:53 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-05-16 17:47:53 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-05-16 17:47:53 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-05-16 17:47:53 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> swagger对象已经在service_registry中注册!
+2024-05-16 17:47:53 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> postman对象已经在service_registry中注册!
+2024-05-16 17:47:53 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-05-16 17:47:53 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-05-16 17:47:53 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-05-16 17:47:53 [django-main-thread]-[runserver.inner_run:97]-[INFO]:May 16, 2024 - 17:47:53
+2024-05-16 17:47:53 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-05-16 17:47:53 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-05-16 17:54:45 [django-main-thread]-[runserver.inner_run:91]-[INFO]:Performing system checks...
+
+
+2024-05-16 17:54:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-05-16 17:54:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-05-16 17:54:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-05-16 17:54:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-05-16 17:54:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-05-16 17:54:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-05-16 17:54:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-05-16 17:54:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-05-16 17:54:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-05-16 17:54:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-05-16 17:54:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-05-16 17:54:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-05-16 17:54:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-05-16 17:54:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-05-16 17:54:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-05-16 17:54:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-05-16 17:54:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-05-16 17:54:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-05-16 17:54:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-05-16 17:54:45 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-05-16 17:54:46 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> swagger对象已经在service_registry中注册!
+2024-05-16 17:54:46 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> postman对象已经在service_registry中注册!
+2024-05-16 17:54:46 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-05-16 17:54:46 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-05-16 17:54:46 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-05-16 17:54:46 [django-main-thread]-[runserver.inner_run:97]-[INFO]:May 16, 2024 - 17:54:46
+2024-05-16 17:54:46 [django-main-thread]-[runserver.inner_run:98]-[INFO]:Django version 5.0.4, using settings 'config.settings'
+Starting ASGI/Daphne version 4.1.2 development server at http://localhost:8000/
+Quit the server with CTRL-BREAK.
+
+                ______     ______     ______     __  __     ______   ______     ______     ______  
+                /\  ___\   /\  __ \   /\  ___\   /\ \_\ \   /\  == \ /\  __ \   /\  ___\   /\__  _\ 
+                \ \  __\   \ \  __ \  \ \___  \  \ \____ \  \ \  _-/ \ \ \/\ \  \ \___  \  \/_/\ \/ 
+                 \ \_____\  \ \_\ \_\  \/\_____\  \/\_____\  \ \_\    \ \_____\  \/\_____\    \ \_\ 
+                  \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/     \/_____/   \/_____/     \/_/                                                                       
+                
+2024-05-16 17:54:46 [django-main-thread]-[runserver.inner_run:124]-[INFO]:Daphne running, listening on %s:%s
+2024-05-16 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-05-16 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-05-16 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-05-16 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-05-16 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-05-16 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-05-16 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-05-16 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-05-16 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-05-16 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-05-16 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-05-16 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-05-16 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-05-16 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-05-16 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-05-16 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-05-16 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-05-16 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-05-16 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-05-16 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-05-16 17:54:49 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> swagger对象已经在service_registry中注册!
+2024-05-16 17:54:49 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> postman对象已经在service_registry中注册!
+2024-05-16 17:54:49 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-05-16 17:54:49 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-05-16 17:54:49 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-05-16 17:54:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-05-16 17:54:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-05-16 17:54:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-05-16 17:54:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-05-16 17:54:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-05-16 17:54:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-05-16 17:54:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-05-16 17:54:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-05-16 17:54:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-05-16 17:54:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-05-16 17:54:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-05-16 17:54:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-05-16 17:54:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-05-16 17:54:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-05-16 17:54:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-05-16 17:54:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-05-16 17:54:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-05-16 17:54:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-05-16 17:54:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-05-16 17:54:51 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-05-16 17:54:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> swagger对象已经在service_registry中注册!
+2024-05-16 17:54:52 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> postman对象已经在service_registry中注册!
+2024-05-16 17:54:52 [MainThread]-[base.start:181]-[INFO]:Scheduler started
+2024-05-16 17:54:52 [APScheduler]-[base._process_jobs:954]-[DEBUG]:Looking for jobs to run
+2024-05-16 17:54:52 [APScheduler]-[base._process_jobs:1030]-[DEBUG]:No jobs; waiting until a job is added
+2024-05-16 17:54:58 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:54:58 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:54:58 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:54:58 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:54:58 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:54:59 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:54:59 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:54:59 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:54:59 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:54:59 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:55:01 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:55:01 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:55:01 [django-main-thread]-[runserver.log_action:179]-[WARNING]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:55:06 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:55:06 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:55:06 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:55:06 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:55:06 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:55:06 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:55:06 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:55:06 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:55:07 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:55:07 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:55:07 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:55:07 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:55:07 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:55:07 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:55:07 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
+2024-05-16 17:55:07 [django-main-thread]-[runserver.log_action:171]-[INFO]:HTTP %(method)s %(path)s %(status)s [%(time_taken).2f, %(client)s]
