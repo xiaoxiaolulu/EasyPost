@@ -1825,3 +1825,183 @@ WARNING  [2024-05-17 10:21:27,730] [c806c62bae994a9e983dcad4f44f8df9] django.req
 WARNING  [2024-05-17 10:21:30,191] [a742e912b6a84d2282123ac1fab65222] django.request: Not Found: /media/avatar/default.png
 WARNING  [2024-05-17 10:21:31,095] [8bd9a86fbf174a04830b99daba1c025a] django.request: Not Found: /media/avatar/default.png
 WARNING  [2024-05-17 10:33:38,990] [451bbf9def574c289eebabcdb87fec87] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-05-17 14:32:16,317] [a139fa1f81474efb959b77cac608f1f5] django.request: Not Found: /getInfo
+WARNING  [2024-05-17 14:32:16,331] [0519f3edf22c4dbdb1b8b817bbbe9024] django.request: Not Found: /getInfo
+WARNING  [2024-05-17 14:32:16,386] [d5c1cfb226824133bc51c4adeff113a6] django.request: Not Found: /logout
+WARNING  [2024-05-17 14:32:16,422] [5b52f3a6013c422eb895473fa8cba876] django.request: Not Found: /logout
+WARNING  [2024-05-17 14:33:16,603] [4007562bfaaf404cb1806ffec051f609] django.request: Not Found: /getInfo
+WARNING  [2024-05-17 14:33:16,629] [80b48c328106478099027c1f403eb1b8] django.request: Not Found: /getInfo
+WARNING  [2024-05-17 14:33:16,645] [53a7d0e8dce547f9bf242d5d37fa2999] django.request: Not Found: /logout
+WARNING  [2024-05-17 14:33:16,721] [5c191a9b3bfe4cdb90abb210c2a6a3cd] django.request: Not Found: /logout
+WARNING  [2024-05-17 14:35:40,116] [7e07d405fb8947d0b4a9c5836b3f4ff7] django.request: Not Found: /getInfo
+WARNING  [2024-05-17 14:35:40,150] [d6ea8f07139049a187b25bc79d9d8cdc] django.request: Not Found: /logout
+WARNING  [2024-05-17 14:35:40,607] [e14c182a44eb42d5a5d66c71e9d0c4ee] django.request: Not Found: /getInfo
+WARNING  [2024-05-17 14:35:40,649] [1416518485914160bc01c8c8d52ad4a8] django.request: Not Found: /logout
+WARNING  [2024-05-17 14:35:53,924] [5c367287170f4fd4b06bfd5adb22a926] django.request: Not Found: /getInfo
+WARNING  [2024-05-17 14:35:53,963] [14455e3967944c6d91401348fb1306b7] django.request: Not Found: /logout
+WARNING  [2024-05-17 14:36:34,508] [773d3f005f5a40d8812618d636732206] django.request: Not Found: /getInfo
+WARNING  [2024-05-17 14:36:34,526] [6d1b90c603434b138a156215e743ca40] django.request: Not Found: /logout
+WARNING  [2024-05-17 14:39:12,520] [65ef080825094ec5a1534507dd4d12e3] django.request: Not Found: /getInfo
+WARNING  [2024-05-17 14:39:12,553] [ad6634714a6f49e0a675c97e1c64ae30] django.request: Not Found: /logout
+WARNING  [2024-05-17 14:39:12,638] [6fc6b547d4e8435eb968f38aee3eb9ed] django.request: Not Found: /getInfo
+WARNING  [2024-05-17 14:39:12,701] [988bab67bb3b4ba7adf94195d93973ab] django.request: Not Found: /logout
+WARNING  [2024-05-17 14:41:24,595] [5e4ba75ed4f843819d1ff77dd187bd27] django.request: Not Found: /getInfo
+WARNING  [2024-05-17 14:41:24,616] [1c004d39f29446f695f92a72c74a0a43] django.request: Not Found: /getInfo
+WARNING  [2024-05-17 14:41:24,679] [2f7f77f6e3bd46309cde95a9e1be1d2a] django.request: Not Found: /logout
+WARNING  [2024-05-17 14:41:24,692] [765b25c7de704b02b0a409182c97667f] django.request: Not Found: /logout
+WARNING  [2024-05-17 14:43:10,892] [cde7e4b8685c457cad463ccf5dcbee2c] django.request: Not Found: /getInfo
+WARNING  [2024-05-17 14:43:10,915] [fdb01a85391847498d9438d270e5ff09] django.request: Not Found: /logout
+WARNING  [2024-05-17 14:43:13,546] [1480e34946e94045b41b8c5633f98742] django.request: Not Found: /getInfo
+WARNING  [2024-05-17 14:43:13,565] [9e2f4ff6f7344124bd70a8ca7937b4f4] django.request: Not Found: /logout
+WARNING  [2024-05-17 14:43:21,373] [b9a7514b20754bc8b6612ccc8eee8539] django.request: Not Found: /getInfo
+WARNING  [2024-05-17 14:43:21,407] [c770f4fd7a41462296ab96fa0bcc3cb5] django.request: Not Found: /logout
+WARNING  [2024-05-17 14:43:36,128] [6068e9f42a854e2ab67d5cee9651de29] django.request: Not Found: /getInfo
+WARNING  [2024-05-17 14:43:36,152] [1cf8a889c62d4d3b8e6555c0f1c7915b] django.request: Not Found: /logout
+WARNING  [2024-05-17 14:43:43,378] [46793b7a7d03456a8463e3d2e893c559] django.request: Not Found: /getInfo
+WARNING  [2024-05-17 14:43:43,416] [abcaba6088b543379e4ff818b848f5f0] django.request: Not Found: /logout
+INFO     [2024-05-17 14:59:48,106] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\user.py changed, reloading.
+INFO     [2024-05-17 14:59:49,166] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-17 15:00:24,083] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\user.py changed, reloading.
+INFO     [2024-05-17 15:00:24,938] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-17 15:02:56,424] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\user.py changed, reloading.
+INFO     [2024-05-17 15:02:57,314] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-17 15:04:24,092] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\user.py changed, reloading.
+INFO     [2024-05-17 15:04:25,046] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-17 15:08:01,231] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\schema\user.py changed, reloading.
+INFO     [2024-05-17 15:08:02,171] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-17 15:14:36,127] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-05-17 15:14:37,160] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-17 15:15:29,483] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-05-17 15:15:30,458] [none] django.utils.autoreload: Watching for file changes with StatReloader
+WARNING  [2024-05-17 15:17:40,886] [06eda14fd8534f3d9c721870d04ffb8b] django.request: Not Found: /logout
+WARNING  [2024-05-17 15:17:46,589] [6e62b1a212f84c8a9ae0294c6c80a813] django.request: Not Found: /logout
+WARNING  [2024-05-17 15:18:29,149] [6a9be64132cf4e23b29ffc892ca5b624] django.request: Not Found: /logout
+WARNING  [2024-05-17 15:18:45,995] [738f9e419add4903b8c3634174d1bd59] django.request: Not Found: /logout
+INFO     [2024-05-17 15:29:50,609] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\user.py changed, reloading.
+INFO     [2024-05-17 15:29:51,572] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-17 15:33:02,681] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-05-17 15:33:03,638] [none] django.utils.autoreload: Watching for file changes with StatReloader
+WARNING  [2024-05-17 15:33:05,318] [081bab5974494c94ac85d3471ce53074] django.request: Not Found: /logout
+WARNING  [2024-05-17 15:35:51,614] [670ed4d1d265429b9773de8f9023359c] django.request: Not Found: /logout
+WARNING  [2024-05-17 15:36:08,809] [36742073c09c40b4b0df3f20b458ef32] django.request: Not Found: /logout
+WARNING  [2024-05-17 15:38:57,238] [e96ee819ebe449b88a4f8e750998622a] django.request: Not Found: /logout
+WARNING  [2024-05-17 15:40:27,462] [454a46f4f1e842aca70f5e6e67069d4c] django.request: Not Found: /logout
+WARNING  [2024-05-17 15:40:36,420] [1bfddfea57a44b5ebdefdab16028b722] django.request: Not Found: /logout
+WARNING  [2024-05-17 15:41:01,520] [a168940594eb410581878c4fa23ad4b1] django.request: Not Found: /logout
+WARNING  [2024-05-17 15:41:39,372] [95075865ccc34f0d9728cd7df2b5034e] django.request: Not Found: /logout
+WARNING  [2024-05-17 15:42:06,854] [1a438add43b1492ca2f26aac3fef17fd] django.request: Not Found: /logout
+WARNING  [2024-05-17 15:42:31,030] [a8cd1f6c79f5453da5fe2b1a11d86860] django.request: Not Found: /api/user/info/1
+INFO     [2024-05-17 15:43:45,537] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\routers\user.py changed, reloading.
+INFO     [2024-05-17 15:43:46,479] [none] django.utils.autoreload: Watching for file changes with StatReloader
+WARNING  [2024-05-17 15:48:02,550] [ca6bea4dca624261b60a8905fa01afd0] django.request: Not Found: /api/user/info
+WARNING  [2024-05-17 15:48:02,596] [bd9b02472a7043cd982cb2c8a53edf0b] django.request: Not Found: /logout
+WARNING  [2024-05-17 15:51:06,645] [c66543d0c6e44954a289c90efb2e7740] django.request: Not Found: /logout
+WARNING  [2024-05-17 15:51:50,192] [6fc89ee91d074a64ad226c690fc6f963] django.request: Not Found: /logout
+WARNING  [2024-05-17 15:52:07,741] [ceea7feabbdc4cf5b412bca5665e79cb] django.request: Not Found: /api/user/info
+WARNING  [2024-05-17 15:52:07,799] [74726efa16494dc6afa06fcded9a3adb] django.request: Not Found: /logout
+WARNING  [2024-05-17 15:52:34,352] [b9b5c6df990141c6bdfd880875be6f82] django.request: Not Found: /api/user/info
+WARNING  [2024-05-17 15:52:34,387] [4ee5755dd6b04ccbbd08ee5fccb2f37d] django.request: Not Found: /logout
+INFO     [2024-05-17 15:54:24,993] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\schema\user.py changed, reloading.
+INFO     [2024-05-17 15:54:26,301] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-17 15:56:06,569] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\schema\user.py changed, reloading.
+INFO     [2024-05-17 15:56:07,651] [none] django.utils.autoreload: Watching for file changes with StatReloader
+WARNING  [2024-05-17 15:56:09,022] [82c7efc72aba42e783818d808018deca] django.request: Not Found: /api/user/info/1
+INFO     [2024-05-17 15:57:01,185] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\schema\user.py changed, reloading.
+INFO     [2024-05-17 15:57:02,123] [none] django.utils.autoreload: Watching for file changes with StatReloader
+WARNING  [2024-05-17 15:57:55,606] [a2dd5b244c064dc0b6f728027fcbf58e] django.request: Not Found: /api/user/info
+WARNING  [2024-05-17 15:57:55,652] [b588462f209c4b95a72859e485fbb70a] django.request: Not Found: /logout
+WARNING  [2024-05-17 15:58:20,339] [9f548eb5a03342838ed65b9d894c96dc] django.request: Not Found: /api/user/info
+WARNING  [2024-05-17 15:58:20,372] [0488f19ff2ff4a1e89ad38ddeff2abc0] django.request: Not Found: /logout
+WARNING  [2024-05-17 15:58:51,647] [2a23dc7cb9cd4f0cad20850f6ee456b4] django.request: Not Found: /api/user/info
+WARNING  [2024-05-17 15:58:51,669] [aed9313bbbe6463e84c35103e3e64f69] django.request: Not Found: /logout
+WARNING  [2024-05-17 15:59:28,404] [8fb1a6082b3b43f6901a452bd39e1be5] django.request: Not Found: /api/user/info
+WARNING  [2024-05-17 15:59:28,437] [67e1a2ce529647508c5015f7eff4b5ec] django.request: Not Found: /logout
+WARNING  [2024-05-17 16:00:00,799] [3c46e0d294174d77a6bf631ec3b37e6b] django.request: Not Found: /api/user/info
+WARNING  [2024-05-17 16:00:00,831] [574d3c157b0f4f50a9f2a149b092fc9b] django.request: Not Found: /logout
+WARNING  [2024-05-17 16:00:42,663] [74ce6b80e01c4a6fb91c080199b16a9d] django.request: Not Found: /api/user/info
+WARNING  [2024-05-17 16:00:42,686] [b8f18f69610d448aae6195c47a5dfef3] django.request: Not Found: /logout
+WARNING  [2024-05-17 16:01:42,354] [ccbbd6db083f40d7be5c3eb82498282a] django.request: Not Found: /api/user/info
+WARNING  [2024-05-17 16:01:42,389] [bd2460408559453db8d606087013d728] django.request: Not Found: /logout
+WARNING  [2024-05-17 16:02:07,673] [f5cd61a7ed71471d9cef0441cdf332b5] django.request: Not Found: /api/user/info
+WARNING  [2024-05-17 16:02:07,699] [bde575bdc44d4c0db1f9e759cd653a20] django.request: Not Found: /logout
+WARNING  [2024-05-17 16:04:17,301] [98d1718526cb45f78db7739d8b87ed55] django.request: Not Found: /api/user/info
+WARNING  [2024-05-17 16:04:17,340] [b174ad57a0a14cd4827509fa210be0fe] django.request: Not Found: /logout
+WARNING  [2024-05-17 16:04:34,939] [eceb0a3ddfd64629a11576460f3836a4] django.request: Not Found: /api/user/info
+WARNING  [2024-05-17 16:04:34,964] [8ca028757a3346098fbbeb72bbd47ae7] django.request: Not Found: /logout
+WARNING  [2024-05-17 16:05:25,277] [7f8f21a7406144d392dd81f9498063f0] django.request: Not Found: /api/user/info
+WARNING  [2024-05-17 16:05:25,312] [735c3680d54649518d76b812ac9946ef] django.request: Not Found: /logout
+WARNING  [2024-05-17 16:05:40,029] [76a980e500db4194bcba927c1723b785] django.request: Not Found: /api/user/info
+WARNING  [2024-05-17 16:05:40,056] [d54244e88604488b809460ff1878aa88] django.request: Not Found: /logout
+WARNING  [2024-05-17 16:06:14,661] [10c2e9c822004e2f8e687ee53db2923a] django.request: Not Found: /api/user/info/
+WARNING  [2024-05-17 16:06:14,696] [d469c129951a49a5aa3bf7284fe0adba] django.request: Not Found: /logout
+WARNING  [2024-05-17 16:06:28,069] [a826d6044a7640e78fa0b3c1aeb5ba1a] django.request: Not Found: /api/user/info/${data.id}
+WARNING  [2024-05-17 16:06:28,132] [46584b42d3844e1db12140765a9bcd73] django.request: Not Found: /logout
+WARNING  [2024-05-17 16:08:01,006] [b4fe72507c3b43acbed2854d56447a14] django.request: Not Found: /logout
+WARNING  [2024-05-17 16:08:24,048] [d3c3f4c4f25e4082a4629dee2b8a6814] django.request: Not Found: /logout
+WARNING  [2024-05-17 16:10:54,834] [ca25c68dcd9646f18fe9ccce73b2ebe7] django.request: Not Found: /api/user/info
+WARNING  [2024-05-17 16:11:42,479] [b2adae3449cf492aba36a5cf5c2543e2] django.request: Not Found: /getRouters
+WARNING  [2024-05-17 16:12:20,325] [5e4acbc708234ca6b3cd9555b82e8fa1] django.request: Not Found: /getRouters
+WARNING  [2024-05-17 16:12:34,502] [a458103cbabc4729b73de3691235973c] django.request: Not Found: /getRouters
+WARNING  [2024-05-17 16:12:53,352] [6b70d930fb8c440e86e900564046d9cc] django.request: Not Found: /getRouters
+WARNING  [2024-05-17 16:13:09,526] [395bfd8949a64bbab06c7251bda7ecca] django.request: Not Found: /getRouters
+WARNING  [2024-05-17 16:14:02,283] [0292b10241484750a824fd78cff11234] django.request: Not Found: /getRouters
+WARNING  [2024-05-17 16:14:18,272] [5d2ea533d6c44d6bb590344eac892cc6] django.request: Not Found: /getRouters
+WARNING  [2024-05-17 16:15:01,466] [282a4a3bfc9244afa9e8c8b82176478d] django.request: Not Found: /getRouters
+WARNING  [2024-05-17 16:15:01,508] [a4535262924e4bc0b473d251a7d18f29] django.request: Not Found: /favicon.ico
+INFO     [2024-05-17 16:23:11,264] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\schema\user.py changed, reloading.
+INFO     [2024-05-17 16:23:12,508] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-17 16:23:38,510] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\schema\user.py changed, reloading.
+INFO     [2024-05-17 16:23:39,491] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-17 16:23:58,292] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-17 16:24:03,967] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\schema\user.py changed, reloading.
+INFO     [2024-05-17 16:24:04,997] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-17 16:25:12,897] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\schema\user.py changed, reloading.
+INFO     [2024-05-17 16:25:13,852] [none] django.utils.autoreload: Watching for file changes with StatReloader
+WARNING  [2024-05-17 16:25:21,557] [230c9309b5db4f97bed21bc527cce5f0] django.request: Not Found: /api/user/info
+INFO     [2024-05-17 16:25:28,712] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\routers\user.py changed, reloading.
+INFO     [2024-05-17 16:25:29,750] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-17 16:25:48,548] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\schema\user.py changed, reloading.
+INFO     [2024-05-17 16:25:49,590] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-17 16:29:01,045] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\schema\user.py changed, reloading.
+INFO     [2024-05-17 16:29:02,032] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-17 16:29:15,206] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-17 16:29:32,066] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\mixins\magic.py changed, reloading.
+INFO     [2024-05-17 16:29:33,025] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-17 16:30:20,967] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\mixins\magic.py changed, reloading.
+INFO     [2024-05-17 16:30:21,923] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-17 16:31:56,308] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\mixins\magic.py changed, reloading.
+INFO     [2024-05-17 16:31:57,316] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-17 16:34:43,677] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\mixins\magic.py changed, reloading.
+INFO     [2024-05-17 16:34:44,691] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-17 16:35:25,779] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-05-17 16:35:26,785] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-17 16:35:58,330] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-05-17 16:35:59,321] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-17 16:37:41,834] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-05-17 16:37:42,793] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-17 16:39:52,937] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-05-17 16:39:53,954] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-17 16:40:19,738] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-05-17 16:40:20,676] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-17 16:41:44,003] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-05-17 16:41:44,926] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-17 16:44:25,743] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\routers\user.py changed, reloading.
+INFO     [2024-05-17 16:44:26,705] [none] django.utils.autoreload: Watching for file changes with StatReloader
+WARNING  [2024-05-17 16:52:58,196] [5aa13d81e7244836932b79e54949d46c] django.request: Not Found: /api/user/info
+WARNING  [2024-05-17 16:57:07,242] [f1f6edb3195f4b9c85864d05b44e23b1] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-05-17 16:57:12,684] [56307b132f1542729e504446c737d077] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-05-17 16:57:13,404] [b449d02efd784c028e170667149c70af] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-05-17 16:57:14,225] [7ef21303e1084a509e6ef831c4da1ce5] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-05-17 16:57:14,801] [13cf8ebc18f64a348a488c482d47f8c6] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-05-17 16:57:15,652] [24efca7bf57f40cb8781d752715c0918] django.request: Not Found: /media/avatar/default.png
+INFO     [2024-05-17 17:30:12,876] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-05-17 17:30:13,968] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-17 17:30:20,808] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-05-17 17:30:21,754] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-17 17:31:27,380] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-05-17 17:31:28,369] [none] django.utils.autoreload: Watching for file changes with StatReloader
+WARNING  [2024-05-17 17:31:29,464] [b7d16bbc8b7a4086bae200b3112cf80a] django.request: Not Found: /api/user/info/1
+INFO     [2024-05-17 17:32:04,006] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-05-17 17:32:05,049] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-17 17:32:36,299] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
+INFO     [2024-05-17 17:32:37,246] [none] django.utils.autoreload: Watching for file changes with StatReloader

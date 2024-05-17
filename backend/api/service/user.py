@@ -4,12 +4,20 @@ from django.contrib.auth.models import update_last_login
 from django.core.exceptions import ImproperlyConfigured
 from django.db.models import Q
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
+from rest_framework.views import APIView
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.settings import api_settings
 from rest_framework_simplejwt.views import TokenObtainPairView
 from api.dao.user import UserDao
-from api.mixins.magic import MagicListAPI
-from api.schema.user import UserSimpleSerializers
+from api.mixins.magic import (
+    MagicListAPI,
+    MagicRetrieveApi
+)
+from api.schema.user import (
+    UserSimpleSerializers,
+    UserSerializers
+)
 from api.response.fatcory import ResponseStandard
 
 
@@ -45,7 +53,6 @@ class NewTokenObtainPairSerializer(TokenObtainPairSerializer):
         refresh = self.get_token(self.user)
         data['token'] = str(refresh.access_token)
         data['userInfo'] = user_info
-        data['roles'] = [self.user.role]
 
         if api_settings.UPDATE_LAST_LOGIN:
             update_last_login(None, self.user)
@@ -68,3 +75,11 @@ class UserListViewSet(MagicListAPI):
     serializer_class = UserSimpleSerializers
     permission_classes = [IsAuthenticated]
     ordering_fields = ['create_time']
+
+
+class UserRetrieveApi(APIView):
+
+    def get(self, request):
+        user = User.objects.get(pk=self.request.user.pk)
+        serializer = UserSerializers(user)
+        return Response(ResponseStandard.success(serializer.data))

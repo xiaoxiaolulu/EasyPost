@@ -17,7 +17,8 @@ from django.db.models import (
     DateField,
     AutoField,
     IntegerChoices,
-    TextChoices
+    TextChoices,
+    BooleanField, ForeignKey, SET_NULL
 )
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
@@ -82,8 +83,6 @@ class User(AbstractUser):
                      default=UserExtendInformation.DEPT)
     ip_address = CharField(null=True, max_length=125, verbose_name=_('User IpAddress'))
     last_login_time = DateTimeField(default=timezone.now, verbose_name=_('User LastLoginTime'))
-    # 临时
-    role = CharField(max_length=20, null=True, blank=True, verbose_name=_('User Role'))
 
     class Meta:
         verbose_name = _("User")
@@ -97,6 +96,29 @@ class User(AbstractUser):
         if self.nickname:
             return self.nickname
         return self.username
+
+
+class UserRole(Model):
+    """
+    用户权限配置
+    * user: 用户
+    * name: 权限名
+    * key: 权限Key
+    * is_super: 是否管理员
+    """
+    id = AutoField(primary_key=True)
+    name = CharField(max_length=100, null=True, blank=True, verbose_name=_('UserRoleId'))
+    key = CharField(max_length=100, null=True, blank=True, verbose_name=_('UserRoleId'))
+    is_super = BooleanField(default=False, verbose_name=_('UserRoleIsSuper'))
+    user = ForeignKey(User, null=True, on_delete=SET_NULL, related_name='roles', verbose_name=_('User'))
+
+    class Meta:
+        verbose_name = _('UserRole')
+        verbose_name_plural = verbose_name
+        app_label = 'api'
+
+    def __str__(self):
+        return self.name
 
 
 class VerifyCode(Model):

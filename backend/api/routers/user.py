@@ -3,7 +3,8 @@ from rest_framework.routers import DefaultRouter
 from api.emus.RouterConfigEnum import RouterConfigEnum
 from api.service.user import (
     CustomJsonWebToken,
-    UserListViewSet
+    UserListViewSet,
+    UserRetrieveApi
 )
 
 
@@ -12,6 +13,7 @@ router = DefaultRouter()
 app_urls = [
     path("login/", CustomJsonWebToken.as_view()),
     path("list", UserListViewSet.as_view()),
+    path("info", UserRetrieveApi.as_view())
 ]
 
 
