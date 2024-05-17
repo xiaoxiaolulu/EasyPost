@@ -96,7 +96,6 @@ export function dynamicComponent(asyncRoutes) {
                 component: dynamicImport(dynamicViewsModules, child.component),
             }));
         }
-        console.log(tmp)
         return tmp;
     });
 }
