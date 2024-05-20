@@ -1,5 +1,8 @@
 from rest_framework import serializers # noqa
-from api.models.plan import Plan
+from api.models.plan import (
+    Plan,
+    ApschedulerJobs
+)
 from api.schema.user import UserSimpleSerializers
 
 
@@ -12,4 +15,11 @@ class PlanSerializers(serializers.ModelSerializer):
 
     class Meta:
         model = Plan
+        fields = "__all__"
+
+
+class ApschedulerJobsSerializers(serializers.ModelSerializer):
+
+    class Meta:
+        model = ApschedulerJobs
         fields = "__all__"

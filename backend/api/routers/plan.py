@@ -7,7 +7,8 @@ from api.service.plan import (
     RunPlanView,
     DelPlanView,
     PlanDetailView,
-    PlanListViewSet
+    PlanListViewSet,
+    ApschedulerJobsListViewSet
 )
 
 
@@ -20,6 +21,7 @@ app_urls = [
     path('delete/<int:pk>', DelPlanView.as_view()),
     path('detail/<int:pk>', PlanDetailView.as_view()),
     path("list", PlanListViewSet.as_view()),
+    path("record/list", ApschedulerJobsListViewSet.as_view())
 ]
 
 

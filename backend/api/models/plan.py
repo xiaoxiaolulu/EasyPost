@@ -84,6 +84,7 @@ class Plan(Model):
 
 
 class ApschedulerJobs(Model):
+
     id = CharField(primary_key=True, max_length=191)
     job_state = TextField(verbose_name=_('ApschedulerJobs JobState'))
     status = CharField(verbose_name=_('ApschedulerJobs Statue'), max_length=256, blank=True, null=True)
