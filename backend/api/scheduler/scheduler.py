@@ -1,5 +1,5 @@
 from datetime import datetime
-from apscheduler.events import JobExecutionEvent as events
+from apscheduler.events import JobExecutionEvent
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.cron import CronTrigger
 from api.dao.https import HttpDao
@@ -77,30 +77,40 @@ class Scheduler(BaseScheduler):
         cls.scheduler._logger = logging
         cls.scheduler.start()
         cls.scheduler.add_listener(cls._listener)
+        # cls.test_task()
+
+    # @staticmethod
+    # @scheduler.scheduled_job(trigger="interval", seconds=1)
+    # def test_task():
+    #     raise "This is my task"
 
     @classmethod
-    def _listener(cls, event: events):
+    def _listener(cls, event: JobExecutionEvent):
+        """
+        This function is a listener that reacts to job execution events.
+
+        Args:
+            cls (class): The class instance where the listener is attached (usually the scheduler itself).
+            event (JobExecutionEvent): The event object containing details about the job execution.
+        """
+
         code = event.code
         run_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         jobstore = cls.scheduler._jobstores['default']
-        job_history_data = {
-            'job_id': None,
-            'run_time': None,
-            'is_error': 0,
-            'error_msg': None
-        }
+        job_history_data = dict()
 
         if code == EventTypeEum.SCHEDULED_EXECUTE_SUCCESS.value:
-
             job_id = event.job_id
             job_history_data['job_id'] = job_id
             job_history_data['run_time'] = run_time
+            job_history_data['status'] = "SUCCESS"
             jobstore.insert_job_history(job_history_data)
         if code in [EventTypeEum.SCHEDULED_EXECUTE_ERROR.value, EventTypeEum.SCHEDULED_EXECUTE_WRONG.value]:
             job_id = event.job_id
             job_history_data['job_id'] = job_id
             job_history_data['run_time'] = run_time
             job_history_data['is_error'] = 1
+            job_history_data['status'] = "FAILURE"
             job_history_data['error_msg'] = EventTypeEum.SCHEDULED_EXECUTE_ERROR.msg
             jobstore.insert_job_history(job_history_data)
 
