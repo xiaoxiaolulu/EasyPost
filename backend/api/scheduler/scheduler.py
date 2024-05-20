@@ -1,7 +1,11 @@
+from datetime import datetime
+from apscheduler.events import JobExecutionEvent as events
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.cron import CronTrigger
 from api.dao.https import HttpDao
+from api.emus.eventsEvents import EventTypeEum
 from api.scheduler.base import BaseScheduler
+from api.scheduler.config import config
 from utils.logger import logger as logging
 
 
@@ -44,7 +48,7 @@ class Scheduler(BaseScheduler):
     scheduler = BackgroundScheduler()
 
     @classmethod
-    def configure(cls, **kwargs):
+    def configure(cls):
         """
         Configures the scheduler (likely used for scheduling jobs) with the provided keyword arguments.
 
@@ -56,7 +60,7 @@ class Scheduler(BaseScheduler):
         Returns:
             None: The method does not return any value.
         """
-        cls.scheduler.configure(**kwargs)
+        cls.scheduler.configure(config)
 
     @classmethod
     def start(cls):
@@ -69,8 +73,36 @@ class Scheduler(BaseScheduler):
         Returns:
             None: The method does not return any value.
         """
+        cls.configure()
         cls.scheduler._logger = logging
         cls.scheduler.start()
+        cls.scheduler.add_listener(cls._listener)
+
+    @classmethod
+    def _listener(cls, event: events):
+        code = event.code
+        run_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        jobstore = cls.scheduler._jobstores['default']
+        job_history_data = {
+            'job_id': None,
+            'run_time': None,
+            'is_error': 0,
+            'error_msg': None
+        }
+
+        if code == EventTypeEum.SCHEDULED_EXECUTE_SUCCESS.value:
+
+            job_id = event.job_id
+            job_history_data['job_id'] = job_id
+            job_history_data['run_time'] = run_time
+            jobstore.insert_job_history(job_history_data)
+        if code in [EventTypeEum.SCHEDULED_EXECUTE_ERROR.value, EventTypeEum.SCHEDULED_EXECUTE_WRONG.value]:
+            job_id = event.job_id
+            job_history_data['job_id'] = job_id
+            job_history_data['run_time'] = run_time
+            job_history_data['is_error'] = 1
+            job_history_data['error_msg'] = EventTypeEum.SCHEDULED_EXECUTE_ERROR.msg
+            jobstore.insert_job_history(job_history_data)
 
     @classmethod
     def add_test_plan(cls, case_list, plan_id, plan_name, cron):

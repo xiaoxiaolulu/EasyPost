@@ -81,27 +81,3 @@ class Plan(Model):
 
     def __str__(self):
         return self.name
-
-
-class TaskLog(Model):
-    """
-    任务日志
-    * task_id: 任务id
-    * type: 任务类型
-    * user: 用户
-    * create_time: 创建时间
-    * update_time: 更新时间
-    """
-    id = AutoField(primary_key=True)
-    task_id = CharField(max_length=100, null=True, blank=True, verbose_name=_('TaskLog TaskId'))
-    type = CharField(max_length=100, null=True, blank=True, verbose_name=_('TaskLog Type'))
-    user = ForeignKey(User, related_name="taskLog_creator", null=True, on_delete=SET_NULL, verbose_name=_('User'))
-    create_time = DateTimeField(auto_now_add=True, verbose_name=_('TaskLog CreateTime'))
-    update_time = DateTimeField(auto_now=True, verbose_name=_('TaskLog UpdateTime'))
-
-    class Meta:
-        verbose_name = _('TaskLog')
-        verbose_name_plural = verbose_name
-
-    def __str__(self):
-        return self.task_id

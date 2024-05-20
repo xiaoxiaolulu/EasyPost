@@ -2005,3 +2005,106 @@ INFO     [2024-05-17 17:32:04,006] [none] django.utils.autoreload: C:\Users\8613
 INFO     [2024-05-17 17:32:05,049] [none] django.utils.autoreload: Watching for file changes with StatReloader
 INFO     [2024-05-17 17:32:36,299] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\service\user.py changed, reloading.
 INFO     [2024-05-17 17:32:37,246] [none] django.utils.autoreload: Watching for file changes with StatReloader
+WARNING  [2024-05-20 09:44:43,347] [c6ec9ebba7c34878aa55cca6210e8ce3] django.request: Not Found: /api/user/info/1
+WARNING  [2024-05-20 09:49:56,230] [13e10bca674148168cff5c57fd39574f] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-05-20 10:27:53,337] [347785166e1e465298fa621204c804a3] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-05-20 10:27:58,148] [98ff8f69de3f4172b07ba4dc534b104e] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-05-20 10:27:59,127] [f240b69e268d42499c2da094bc990de6] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-05-20 10:27:59,850] [38e4fd93edcc4a4ca590169913226d33] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-05-20 10:28:00,447] [126b22e53d914200b3e1fd74e9f51ee5] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-05-20 10:28:01,186] [078e0f3cc37540ca88abdfb1b9aad70d] django.request: Not Found: /media/avatar/default.png
+INFO     [2024-05-20 11:10:46,259] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\scheduler\scheduler.py changed, reloading.
+INFO     [2024-05-20 11:10:47,425] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 11:15:01,250] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\scheduler\scheduler.py changed, reloading.
+INFO     [2024-05-20 11:15:02,172] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 11:15:16,073] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\scheduler\scheduler.py changed, reloading.
+INFO     [2024-05-20 11:15:17,034] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 11:15:33,741] [none] django.utils.autoreload: Watching for file changes with StatReloader
+WARNING  [2024-05-20 11:16:25,270] [f5dd239f10814e47b1821c44d64c82ec] django.request: Not Found: /media/avatar/default.png
+INFO     [2024-05-20 11:21:32,901] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\scheduler\__init__.py changed, reloading.
+INFO     [2024-05-20 11:21:34,031] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 11:21:39,815] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\scheduler\__init__.py changed, reloading.
+INFO     [2024-05-20 11:21:40,894] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 11:22:08,809] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\scheduler\__init__.py changed, reloading.
+INFO     [2024-05-20 11:22:09,823] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 11:23:09,167] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\scheduler\scheduler.py changed, reloading.
+INFO     [2024-05-20 11:23:10,130] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 11:23:19,784] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\scheduler\scheduler.py changed, reloading.
+INFO     [2024-05-20 11:23:20,811] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 11:26:40,858] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\config\settings.py changed, reloading.
+INFO     [2024-05-20 11:26:41,891] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 11:27:51,874] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\scheduler\scheduler.py changed, reloading.
+INFO     [2024-05-20 11:27:52,870] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 11:29:57,499] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 13:50:56,208] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\config\settings.py changed, reloading.
+INFO     [2024-05-20 13:50:57,412] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 13:51:52,326] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\config\settings.py changed, reloading.
+INFO     [2024-05-20 13:51:53,268] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 13:58:15,392] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 13:58:58,647] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 14:04:09,084] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\routers\__init__.py changed, reloading.
+INFO     [2024-05-20 14:04:10,267] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 14:06:22,656] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\routers\__init__.py changed, reloading.
+INFO     [2024-05-20 14:06:24,280] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 14:07:52,383] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\routers\__init__.py changed, reloading.
+INFO     [2024-05-20 14:07:53,305] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 14:08:12,645] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 14:09:30,474] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\scheduler\scheduler.py changed, reloading.
+INFO     [2024-05-20 14:09:31,592] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 14:09:58,433] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 14:11:07,681] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 14:11:50,378] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 14:11:55,147] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\scheduler\scheduler.py changed, reloading.
+INFO     [2024-05-20 14:11:56,137] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 14:14:26,353] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\scheduler\scheduler.py changed, reloading.
+INFO     [2024-05-20 14:14:27,459] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 14:34:26,125] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 14:41:02,518] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\response\__init__.py changed, reloading.
+INFO     [2024-05-20 14:41:03,485] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 14:41:36,442] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\response\__init__.py changed, reloading.
+INFO     [2024-05-20 14:41:37,525] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 14:41:50,853] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\response\__init__.py changed, reloading.
+INFO     [2024-05-20 14:41:51,854] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 14:41:59,892] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\response\__init__.py changed, reloading.
+INFO     [2024-05-20 14:42:00,973] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 14:55:11,468] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:15:39,138] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:16:57,176] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:17:57,773] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\scheduler\sqlalchemy_store.py changed, reloading.
+INFO     [2024-05-20 15:17:58,740] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:18:18,432] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:21:52,991] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\scheduler\scheduler.py changed, reloading.
+INFO     [2024-05-20 15:21:54,006] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:22:14,520] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:25:19,363] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:26:41,235] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:28:56,358] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:30:44,813] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:31:02,600] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:31:18,173] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:31:41,769] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:32:04,398] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:33:00,456] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\scheduler\sqlalchemy_store.py changed, reloading.
+INFO     [2024-05-20 15:33:01,452] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:35:55,464] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:36:12,651] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:36:41,961] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:37:18,584] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:37:36,225] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:38:27,052] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:38:51,901] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:40:34,523] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\scheduler\sqlalchemy_store.py changed, reloading.
+INFO     [2024-05-20 15:40:35,541] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:40:46,918] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:41:25,219] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:41:55,398] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:42:26,322] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\scheduler\config.py changed, reloading.
+INFO     [2024-05-20 15:42:27,281] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:42:38,079] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:43:16,554] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:43:37,591] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:49:17,724] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:51:56,714] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:53:45,902] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-05-20 15:55:50,268] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\scheduler\scheduler.py changed, reloading.
+INFO     [2024-05-20 15:55:51,263] [none] django.utils.autoreload: Watching for file changes with StatReloader
