@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="The `SQLAlchemyJobStore` class is a subclass of `apscheduler.jobstores">
-      <change afterPath="$PROJECT_DIR$/api/migrations/0036_delete_tasklog.py" afterDir="false" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Updated SQLAlchemyJobStore and added new fields to the job history table.">
+      <change afterPath="$PROJECT_DIR$/api/migrations/0037_apschedulerjobs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/migrations/0038_alter_apschedulerjobs_options.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/migrations/0039_alter_apschedulerjobs_table.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/models/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/plan.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/scheduler/scheduler.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/scheduler/scheduler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/scheduler/sqlalchemy_store.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/scheduler/sqlalchemy_store.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
     </list>
@@ -485,15 +487,7 @@
       <workItem from="1716191310666" duration="711000" />
       <workItem from="1716192029354" duration="106000" />
       <workItem from="1716192141575" duration="118000" />
-      <workItem from="1716192265494" duration="2221000" />
-    </task>
-    <task id="LOCAL-00365" summary="Add SwitchEnvList component with dropdown menu for environment selection, and options to add or edit environments.">
-      <option name="closed" value="true" />
-      <created>1713507537562</created>
-      <option name="number" value="00365" />
-      <option name="presentableId" value="LOCAL-00365" />
-      <option name="project" value="LOCAL" />
-      <updated>1713507537562</updated>
+      <workItem from="1716192265494" duration="4518000" />
     </task>
     <task id="LOCAL-00366" summary="Add SwitchEnvList component with dropdown menu for environment selection, and options to add or edit environments.">
       <option name="closed" value="true" />
@@ -879,7 +873,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716191887312</updated>
     </task>
-    <option name="localTasksCounter" value="414" />
+    <task id="LOCAL-00414" summary="Updated SQLAlchemyJobStore and added new fields to the job history table.">
+      <option name="closed" value="true" />
+      <created>1716194698185</created>
+      <option name="number" value="00414" />
+      <option name="presentableId" value="LOCAL-00414" />
+      <option name="project" value="LOCAL" />
+      <updated>1716194698185</updated>
+    </task>
+    <option name="localTasksCounter" value="415" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -909,23 +911,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="This code appears to be a custom implementation of a job scheduler using the `apscheduler` library. The `SQLAlchemyJobStore` class is a subclass of `apscheduler.jobstores.JobStore` and is designed to store job information in a MySQL database. The `add_job` method is used to add a new job to the job store, while the `get_job` method is used to retrieve information about a specific job. The `delete_job` method is used to delete a job from the job" />
-    <MESSAGE value="This code appears to be a custom implementation of a job scheduler using the `apscheduler` library. The `SQLAlchemyJobStore` class is a subclass of `apscheduler.jobstores.JobStore` and is designed to store job information in a MySQL database. The `add_job` method is used to add a new job to the job store, while the `get_job` method is used to retrieve information about a specific job. The `delete_job` method is used to delete a job from the job store" />
-    <MESSAGE value="This code appears to be a custom implementation of a job scheduler using the `apscheduler` library. The `SQLAlchemyJobStore` class is a subclass of `apscheduler.jobstores.JobStore` and is designed to store job information in a MySQL database. The `add_job` method is used to add a new job to the job store, while the `get_job` method is used to retrieve information about a specific job. The `delete_job` method is used to delete a job from the job store," />
-    <MESSAGE value="This code appears to be a custom implementation of a job scheduler using the `apscheduler` library. The `SQLAlchemyJobStore` class is a subclass of `apscheduler.jobstores.JobStore` and is designed to store job information in a MySQL database. The `add_job` method is used to add a new job to the job store, while the `get_job` method is used to retrieve information about a specific job. The `delete_job` method is used to delete a job from the job store, and" />
-    <MESSAGE value="This code appears to be a custom implementation of a job scheduler using the `apscheduler` library. The `SQLAlchemyJobStore` class is a subclass of `apscheduler.jobstores.JobStore` and is designed to store job information in a MySQL database. The `add_job` method is used to add a new job to the job store, while the `get_job` method is used to retrieve information about a specific job. The `delete_job` method is used to delete a job from the job store, and the" />
-    <MESSAGE value="This code appears to be a custom implementation of a job scheduler using the `apscheduler` library. The `SQLAlchemyJobStore` class is a subclass of `apscheduler.jobstores.JobStore` and is designed to store job information in a MySQL database. The `add_job` method is used to add a new job to the job store, while the `get_job` method is used to retrieve information about a specific job. The `delete_job` method is used to delete a job from the job store, and the `" />
-    <MESSAGE value="This code appears to be a custom implementation of a job scheduler using the `apscheduler` library. The `SQLAlchemyJobStore` class is a subclass of `apscheduler.jobstores.JobStore` and is designed to store job information in a MySQL database. The `add_job` method is used to add a new job to the job store, while the `get_job` method is used to retrieve information about a specific job. The `delete_job` method is used to delete a job from the job store, and the `update" />
-    <MESSAGE value="This code appears to be a custom implementation of a job scheduler using the `apscheduler` library. The `SQLAlchemyJobStore` class is a subclass of `apscheduler.jobstores.JobStore` and is designed to store job information in a MySQL database. The `add_job` method is used to add a new job to the job store, while the `get_job` method is used to retrieve information about a specific job. The `delete_job` method is used to delete a job from the job store, and the `update_" />
-    <MESSAGE value="This code appears to be a custom implementation of a job scheduler using the `apscheduler` library. The `SQLAlchemyJobStore` class is a subclass of `apscheduler.jobstores.JobStore` and is designed to store job information in a MySQL database. The `add_job` method is used to add a new job to the job store, while the `get_job` method is used to retrieve information about a specific job. The `delete_job` method is used to delete a job from the job store, and the `update_job" />
-    <MESSAGE value="This code appears to be a custom implementation of a job scheduler using the `apscheduler` library. The `SQLAlchemyJobStore` class is a subclass of `apscheduler.jobstores.JobStore` and is designed to store job information in a MySQL database. The `add_job` method is used to add a new job to the job store, while the `get_job` method is used to retrieve information about a specific job. The `delete_job` method is used to delete a job from the job store, and the `update_job`" />
-    <MESSAGE value="This code appears to be a custom implementation of a job scheduler using the `apscheduler` library. The `SQLAlchemyJobStore` class is a subclass of `apscheduler.jobstores.JobStore` and is designed to store job information in a MySQL database. The `add_job` method is used to add a new job to the job store, while the `get_job` method is used to retrieve information about a specific job. The `delete_job` method is used to delete a job from the job store, and the `update_job` method" />
-    <MESSAGE value="This code appears to be a custom implementation of a job scheduler using the `apscheduler` library. The `SQLAlchemyJobStore` class is a subclass of `apscheduler.jobstores.JobStore` and is designed to store job information in a MySQL database. The `add_job` method is used to add a new job to the job store, while the `get_job` method is used to retrieve information about a specific job. The `delete_job` method is used to delete a job from the job store, and the `update_job` method is" />
-    <MESSAGE value="This code appears to be a custom implementation of a job scheduler using the `apscheduler` library. The `SQLAlchemyJobStore` class is a subclass of `apscheduler.jobstores.JobStore` and is designed to store job information in a MySQL database. The `add_job` method is used to add a new job to the job store, while the `get_job` method is used to retrieve information about a specific job. The `delete_job` method is used to delete a job from the job store, and the `update_job` method is used" />
-    <MESSAGE value="This code appears to be a custom implementation of a job scheduler using the `apscheduler` library. The `SQLAlchemyJobStore` class is a subclass of `apscheduler.jobstores.JobStore` and is designed to store job information in a MySQL database. The `add_job` method is used to add a new job to the job store, while the `get_job` method is used to retrieve information about a specific job. The `delete_job` method is used to delete a job from the job store, and the `update_job` method is used to" />
-    <MESSAGE value="This code appears to be a custom implementation of a job scheduler using the `apscheduler` library. The `SQLAlchemyJobStore` class is a subclass of `apscheduler.jobstores.JobStore` and is designed to store job information in a MySQL database. The `add_job` method is used to add a new job to the job store, while the `get_job` method is used to retrieve information about a specific job. The `delete_job` method is used to delete a job from the job store, and the `update_job` method is used to update" />
-    <MESSAGE value="This code appears to be a custom implementation of a job scheduler using the `apscheduler` library. The `SQLAlchemyJobStore` class is a subclass of `apscheduler.jobstores.JobStore` and is designed to store job information in a MySQL database. The `add_job` method is used to add a new job to the job store, while the `get_job` method is used to retrieve information about a specific job. The `delete_job` method is used to delete a job from the job store, and the `update_job` method is used to update the" />
-    <MESSAGE value="This code appears to be a custom implementation of a job scheduler using the `apscheduler` library. The `SQLAlchemyJobStore` class is a subclass of `apscheduler.jobstores.JobStore` and is designed to store job information in a MySQL database. The `add_job` method is used to add a new job to the job store, while the `get_job` method is used to retrieve information about a specific job. The `delete_job` method is used to delete a job from the job store, and the `update_job` method is used to update the information" />
     <MESSAGE value="This code appears to be a custom implementation of a job scheduler using the `apscheduler` library. The `SQLAlchemyJobStore` class is a subclass of `apscheduler.jobstores.JobStore` and is designed to store job information in a MySQL database. The `add_job` method is used to add a new job to the job store, while the `get_job` method is used to retrieve information about a specific job. The `delete_job` method is used to delete a job from the job store, and the `update_job` method is used to update the information about" />
     <MESSAGE value="This code appears to be a custom implementation of a job scheduler using the `apscheduler` library. The `SQLAlchemyJobStore` class is a subclass of `apscheduler.jobstores.JobStore` and is designed to store job information in a MySQL database. The `add_job` method is used to add a new job to the job store, while the `get_job` method is used to retrieve information about a specific job. The `delete_job` method is used to delete a job from the job store, and the `update_job` method is used to update the information about a" />
     <MESSAGE value="This code appears to be a custom implementation of a job scheduler using the `apscheduler` library. The `SQLAlchemyJobStore` class is a subclass of `apscheduler.jobstores.JobStore` and is designed to store job information in a MySQL database. The `add_job` method is used to add a new job to the job store, while the `get_job` method is used to retrieve information about a specific job. The `delete_job` method is used to delete a job from the job store, and the `update_job` method is used to update the information about a job" />
@@ -934,7 +919,24 @@
     <MESSAGE value="This code appears to be a custom implementation of a job scheduler using the `apscheduler` library. The `SQLAlchemyJobStore` class is a subclass of `apscheduler.jobstores.JobStore` and is designed to store job information in a MySQL database. The `add_job` method is used to add a new job to the job store, while the `get_job` method is used to retrieve information about a specific job. The `delete_job` method is used to delete a job from the job store, and the `update_job` method is used to update the information about a job in the job" />
     <MESSAGE value="This code appears to be a custom implementation of a job scheduler using the `apscheduler` library. The `SQLAlchemyJobStore` class is a subclass of `apscheduler.jobstores.JobStore` and is designed to store job information in a MySQL database. The `add_job` method is used to add a new job to the job store, while the `get_job` method is used to retrieve information about a specific job. The `delete_job` method is used to delete a job from the job store, and the `update_job` method is used to update the information about a job in the job store" />
     <MESSAGE value="The `SQLAlchemyJobStore` class is a subclass of `apscheduler.jobstores" />
-    <option name="LAST_COMMIT_MESSAGE" value="The `SQLAlchemyJobStore` class is a subclass of `apscheduler.jobstores" />
+    <MESSAGE value="Updated" />
+    <MESSAGE value="Updated SQL" />
+    <MESSAGE value="Updated SQLAl" />
+    <MESSAGE value="Updated SQLAlch" />
+    <MESSAGE value="Updated SQLAlchemy" />
+    <MESSAGE value="Updated SQLAlchemyJob" />
+    <MESSAGE value="Updated SQLAlchemyJobStore" />
+    <MESSAGE value="Updated SQLAlchemyJobStore and" />
+    <MESSAGE value="Updated SQLAlchemyJobStore and added" />
+    <MESSAGE value="Updated SQLAlchemyJobStore and added new" />
+    <MESSAGE value="Updated SQLAlchemyJobStore and added new fields" />
+    <MESSAGE value="Updated SQLAlchemyJobStore and added new fields to" />
+    <MESSAGE value="Updated SQLAlchemyJobStore and added new fields to the" />
+    <MESSAGE value="Updated SQLAlchemyJobStore and added new fields to the job" />
+    <MESSAGE value="Updated SQLAlchemyJobStore and added new fields to the job history" />
+    <MESSAGE value="Updated SQLAlchemyJobStore and added new fields to the job history table" />
+    <MESSAGE value="Updated SQLAlchemyJobStore and added new fields to the job history table." />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -77,12 +77,12 @@ class Scheduler(BaseScheduler):
         cls.scheduler._logger = logging
         cls.scheduler.start()
         cls.scheduler.add_listener(cls._listener)
-        # cls.test_task()
+        cls.test_task()
 
-    # @staticmethod
-    # @scheduler.scheduled_job(trigger="interval", seconds=1)
-    # def test_task():
-    #     raise "This is my task"
+    @staticmethod
+    @scheduler.scheduled_job(trigger="interval", seconds=1)
+    def test_task():
+        raise "This is my task"
 
     @classmethod
     def _listener(cls, event: JobExecutionEvent):

@@ -15,7 +15,7 @@ from django.db.models import (
     SET_NULL,
     AutoField,
     ManyToManyField,
-    IntegerChoices
+    IntegerChoices, IntegerField, FloatField
 )
 from api.models.project import Project
 from django.utils.translation import gettext_lazy as _
@@ -81,3 +81,19 @@ class Plan(Model):
 
     def __str__(self):
         return self.name
+
+
+class ApschedulerJobs(Model):
+    id = CharField(primary_key=True, max_length=191)
+    job_state = TextField(verbose_name=_('ApschedulerJobs JobState'))
+    status = CharField(verbose_name=_('ApschedulerJobs Statue'), max_length=256, blank=True, null=True)
+    is_error = IntegerField(verbose_name=_('ApschedulerJobs IsError'), blank=True, null=True)
+    error_msg = CharField(verbose_name=_('ApschedulerJobs ErrorMsg'), max_length=256, blank=True, null=True)
+    trigger = CharField(verbose_name=_('ApschedulerJobs Trigger'), max_length=256, blank=True, null=True)
+    desc = CharField(verbose_name=_('ApschedulerJobs Desc'), max_length=256, blank=True, null=True)
+    next_run_time = FloatField(verbose_name=_('ApschedulerJobs NextRunTime'), blank=True, null=True)
+    run_time = DateTimeField(verbose_name=_('ApschedulerJobs RunTime'), blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'apscheduler_jobs'
