@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Added ApschedulerJobs model and enabled test_task in scheduler.">
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Add apscheduler jobs list view and router.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/filters/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/filters/plan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/models/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/plan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/routers/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/routers/plan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/emus/CaseBaseEnum.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/emus/CaseBaseEnum.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/scheduler/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/scheduler/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/schema/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/schema/plan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/service/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/plan.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +163,7 @@
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.scheduler">
+  <component name="RunManager" selected="Django Server.backend">
     <configuration name="__init__ (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <option name="ENV_FILES" value="" />
@@ -489,31 +484,7 @@
       <workItem from="1716191310666" duration="711000" />
       <workItem from="1716192029354" duration="106000" />
       <workItem from="1716192141575" duration="118000" />
-      <workItem from="1716192265494" duration="6524000" />
-    </task>
-    <task id="LOCAL-00367" summary="Add SwitchEnvList component with dropdown menu for environment selection, and options to add or edit environments.">
-      <option name="closed" value="true" />
-      <created>1713513006603</created>
-      <option name="number" value="00367" />
-      <option name="presentableId" value="LOCAL-00367" />
-      <option name="project" value="LOCAL" />
-      <updated>1713513006603</updated>
-    </task>
-    <task id="LOCAL-00368" summary="Add SwitchEnvList component with dropdown menu for environment selection, and options to add or edit environments.">
-      <option name="closed" value="true" />
-      <created>1713515133764</created>
-      <option name="number" value="00368" />
-      <option name="presentableId" value="LOCAL-00368" />
-      <option name="project" value="LOCAL" />
-      <updated>1713515133764</updated>
-    </task>
-    <task id="LOCAL-00369" summary="Add SwitchEnvList component with dropdown menu for environment selection, and options to add or edit environments.">
-      <option name="closed" value="true" />
-      <created>1713522487981</created>
-      <option name="number" value="00369" />
-      <option name="presentableId" value="LOCAL-00369" />
-      <option name="project" value="LOCAL" />
-      <updated>1713522487981</updated>
+      <workItem from="1716192265494" duration="9178000" />
     </task>
     <task id="LOCAL-00370" summary="Add SwitchEnvList component with dropdown menu for environment selection, and options to add or edit environments.">
       <option name="closed" value="true" />
@@ -883,7 +854,31 @@
       <option name="project" value="LOCAL" />
       <updated>1716196818448</updated>
     </task>
-    <option name="localTasksCounter" value="416" />
+    <task id="LOCAL-00416" summary="Add apscheduler jobs list view and router.">
+      <option name="closed" value="true" />
+      <created>1716200448888</created>
+      <option name="number" value="00416" />
+      <option name="presentableId" value="LOCAL-00416" />
+      <option name="project" value="LOCAL" />
+      <updated>1716200448888</updated>
+    </task>
+    <task id="LOCAL-00417" summary="Add apscheduler jobs list view and router.">
+      <option name="closed" value="true" />
+      <created>1716200458709</created>
+      <option name="number" value="00417" />
+      <option name="presentableId" value="LOCAL-00417" />
+      <option name="project" value="LOCAL" />
+      <updated>1716200458709</updated>
+    </task>
+    <task id="LOCAL-00418" summary="Add apscheduler jobs list view and router.">
+      <option name="closed" value="true" />
+      <created>1716200486492</created>
+      <option name="number" value="00418" />
+      <option name="presentableId" value="LOCAL-00418" />
+      <option name="project" value="LOCAL" />
+      <updated>1716200486492</updated>
+    </task>
+    <option name="localTasksCounter" value="419" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -913,17 +908,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Updated SQLAlchemyJobStore and added new fields" />
-    <MESSAGE value="Updated SQLAlchemyJobStore and added new fields to" />
-    <MESSAGE value="Updated SQLAlchemyJobStore and added new fields to the" />
-    <MESSAGE value="Updated SQLAlchemyJobStore and added new fields to the job" />
-    <MESSAGE value="Updated SQLAlchemyJobStore and added new fields to the job history" />
-    <MESSAGE value="Updated SQLAlchemyJobStore and added new fields to the job history table" />
-    <MESSAGE value="Updated SQLAlchemyJobStore and added new fields to the job history table." />
-    <MESSAGE value="Add" />
-    <MESSAGE value="Added" />
-    <MESSAGE value="Added A" />
-    <MESSAGE value="Added Aps" />
     <MESSAGE value="Added Apsch" />
     <MESSAGE value="Added Apscheduler" />
     <MESSAGE value="Added ApschedulerJob" />
@@ -938,7 +922,18 @@
     <MESSAGE value="Added ApschedulerJobs model and enabled test_task in sch" />
     <MESSAGE value="Added ApschedulerJobs model and enabled test_task in scheduler" />
     <MESSAGE value="Added ApschedulerJobs model and enabled test_task in scheduler." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added ApschedulerJobs model and enabled test_task in scheduler." />
+    <MESSAGE value="Add" />
+    <MESSAGE value="Add a" />
+    <MESSAGE value="Add aps" />
+    <MESSAGE value="Add apsch" />
+    <MESSAGE value="Add apscheduler" />
+    <MESSAGE value="Add apscheduler jobs" />
+    <MESSAGE value="Add apscheduler jobs list" />
+    <MESSAGE value="Add apscheduler jobs list view" />
+    <MESSAGE value="Add apscheduler jobs list view and" />
+    <MESSAGE value="Add apscheduler jobs list view and router" />
+    <MESSAGE value="Add apscheduler jobs list view and router." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add apscheduler jobs list view and router." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -968,6 +963,7 @@
     <SUITE FILE_PATH="coverage/backend$event_manager.coverage" NAME="event_manager Coverage Results" MODIFIED="1706679188463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/events" />
     <SUITE FILE_PATH="coverage/backend$__init____1_.coverage" NAME="__init__ (1) Coverage Results" MODIFIED="1715397965774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/service" />
     <SUITE FILE_PATH="coverage/backend$Test__api_tests_test_user_list_TestUserListViewSet_test_hello.coverage" NAME="Test: api.tests.test_user_list.TestUserListViewSet.test_hello Coverage Results" MODIFIED="1712039113885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/backend$scheduler.coverage" NAME="scheduler Coverage Results" MODIFIED="1716200276603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/scheduler" />
     <SUITE FILE_PATH="coverage/backend$Test__api_tests_test_custom_token_TestCustomJsonWebToken.coverage" NAME="Test: api.tests.test_custom_token.TestCustomJsonWebToken Coverage Results" MODIFIED="1711522004553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/backend$render_template_obj.coverage" NAME="render_template_obj Coverage Results" MODIFIED="1706090193785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/backend$Test__api_tests_test_project_destory_ProjectDestroyViewSetTests.coverage" NAME="Test: api.tests.test_project_destory.ProjectDestroyViewSetTests Coverage Results" MODIFIED="1711592068338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
