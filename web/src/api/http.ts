@@ -120,22 +120,6 @@ export function planList(params: any) {
         params
     })
 }
-//
-// export function envDelete(data: any) {
-//     return request({
-//         url: `/api/env/delete/${data.id}`,
-//         method: 'delete',
-//         data
-//     })
-// }
-//
-// export function envUpdate(data: any) {
-//     return request({
-//         url: `/api/env/update/${data.id}`,
-//         method: 'put',
-//         data
-//     })
-// }
 
 export function savePlanOrUpdate(data: any) {
     return request({

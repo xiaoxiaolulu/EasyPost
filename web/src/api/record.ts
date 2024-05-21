@@ -15,3 +15,12 @@ export function recordDetail(params: any) {
         params
     })
 }
+
+
+export function taskRecordList(params: any) {
+    return request({
+        url: `/api/plan/record/list`,
+        method: 'get',
+        params
+    })
+}
