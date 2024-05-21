@@ -211,7 +211,7 @@ class DataStructure(Model):
     update_time = DateTimeField(auto_now=True, verbose_name=_('DataStructure UpdateTime'))
 
     class Meta:
-        verbose_name = _('ApiCopy')
+        verbose_name = _('DataStructure')
         verbose_name_plural = verbose_name
 
     def __str__(self):
