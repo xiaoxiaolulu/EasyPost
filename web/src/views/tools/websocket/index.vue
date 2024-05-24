@@ -111,7 +111,6 @@
 </template>
 
 <script setup lang="ts">
-import {ArrowDown, ArrowUp} from "@element-plus/icons-vue";
 import {computed, onMounted, reactive, ref, watch} from "vue";
 import {ElMessage, FormInstance} from "element-plus";
 import MirrorCode from "@/components/MirrorCode/index.vue";
@@ -141,30 +140,12 @@ const ruleForm = reactive({
   'method': 'WS'
 })
 
-const showSetting = ref(false)
-
 const state = reactive({
   api_id: 0,
   rawData: "",
   status: false,
   editorConfig: { language: 'json', theme: 'vs' },
   showDetailInfo: false
-})
-
-const settings = computed(() => {
-  if (showSetting.value == false) {
-    return "更多设置";
-  } else {
-    return "收起设置";
-  }
-})
-
-const closeSetting = () => {
-  showSetting.value = !showSetting.value
-}
-
-const rules = reactive({
-  url: [{required: true, trigger: "blur", message: "请输入接口地址！"}]
 })
 
 const wsSend = (data: any) => {

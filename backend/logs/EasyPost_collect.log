@@ -30,3 +30,6 @@ INFO     [2024-05-21 16:58:40,498] [none] django.utils.autoreload: C:\Users\8613
 INFO     [2024-05-21 16:58:41,533] [none] django.utils.autoreload: Watching for file changes with StatReloader
 INFO     [2024-05-21 17:01:58,876] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\setting.py changed, reloading.
 INFO     [2024-05-21 17:01:59,878] [none] django.utils.autoreload: Watching for file changes with StatReloader
+WARNING  [2024-05-21 18:22:06,352] [b4d632965375482fb8b458c9fc87f5a1] django.request: Not Found: /media/avatar/default.png
+WARNING  [2024-05-22 15:52:44,370] [02f28a4c288a4a3786efde3b6b46dc9d] django.request: Not Found: /
+WARNING  [2024-05-22 15:52:44,447] [8ad73819b37648cf9a9c949a233ad9c4] django.request: Not Found: /favicon.ico
