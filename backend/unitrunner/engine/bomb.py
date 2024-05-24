@@ -167,3 +167,45 @@ class AtomicBombEngine:
             assert_options.append(atomic_bomb_engine.assert_option(jsonpath, reference_object))
 
         return assert_options
+
+
+async def performance(
+        test_data,
+        test_duration_secs=None,
+        concurrent_requests=None,
+        timeout_secs=0,
+        cookie_store_enable=True,
+        verbose=False,
+        increase_step=None,
+        increase_interval=None
+):
+    """
+    Runs a performance test with the provided configuration.
+
+    Args:
+        test_data: Data to be used for the test.
+        test_duration_secs: Optional duration of the test in seconds.
+        concurrent_requests: Optional number of concurrent requests.
+        timeout_secs: Optional timeout in seconds for individual requests.
+        cookie_store_enable: Optional flag to enable cookie storage.
+        verbose: Optional flag to enable verbose logging.
+        increase_step: Optional step size for increasing load (experimental).
+        increase_interval: Optional interval for load increase (experimental).
+
+    Returns:
+        An object representing the test runner (implementation-specific).
+    """
+    try:
+        engine = AtomicBombEngine(
+            test_duration_secs=test_duration_secs,
+            concurrent_requests=concurrent_requests,
+            timeout_secs=timeout_secs,
+            cookie_store_enable=cookie_store_enable,
+            verbose=verbose,
+            increase_step=increase_step,
+            increase_interval=increase_interval,
+        )
+        runner = engine.run(test_data)
+        return runner
+    except (Exception, KeyboardInterrupt):
+        raise Exception("Test runner encountered an exception.")
