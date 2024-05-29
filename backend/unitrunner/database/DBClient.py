@@ -189,7 +189,5 @@ if __name__ == '__main__':
         "port": 3306,
     }
     db = DBMysql(config)
-    connect = db.connect()
-    print(connect)
-    # ret = db.execute("select * from api_api")
-    # print(ret)
+    ret = db.execute("select * from api_api")
+    print(ret)

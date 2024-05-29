@@ -62,7 +62,7 @@ if __name__ == '__main__':
             "reference_object": "操作成功"
         }],
     }
-    results = asyncio.run(performance(
+    main = performance(
         test_data=data,
         test_duration_secs=10,
         concurrent_requests=1,
@@ -71,7 +71,8 @@ if __name__ == '__main__':
         verbose=False,
         increase_step=1,
         increase_interval=3
-    ))
+    )
+    results = asyncio.run(main)
     a = []
     for res in results:
         if res.get("should_wait"):
