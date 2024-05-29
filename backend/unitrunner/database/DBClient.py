@@ -6,7 +6,7 @@ from utils.logger import logger as log
 class DBMysql:
     """mysql databases"""
 
-    def __init__(self, config):
+    def __init__(self, config: dict) -> None:
         """
         Initializes the database connection.
 
@@ -27,7 +27,7 @@ class DBMysql:
         self.cur = None
         self.con = None
 
-    def execute(self, sql):
+    def execute(self, sql: str) -> dict:
         """
         Executes a SQL query and returns the first row of the result.
 
@@ -44,7 +44,7 @@ class DBMysql:
         self.cur.execute(sql)
         return self.cur.fetchone()
 
-    def execute_all(self, sql):
+    def execute_all(self, sql: str) -> dict:
         """
         Executes a SQL query and returns all rows of the result.
 
@@ -181,13 +181,14 @@ if __name__ == '__main__':
         :param str db:          alias of database (deprecated)
         :param int port:        TCP/IP port to connect to
     """
-    config = {
+    setting = {
         "host": "localhost",
         "user": "root",
         "password": "123456",
         "database": "easypost",
         "port": 3306,
     }
-    db = DBMysql(config)
+    db = DBMysql(setting)
     ret = db.execute("select * from api_api")
     print(ret)
+    print(type(ret))

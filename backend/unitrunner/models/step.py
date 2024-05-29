@@ -13,6 +13,7 @@ from unitrunner.models import (
 
 class TStepBase(BaseModel):
     """步骤基类"""
+
     sort: int = Field(0, description="排序")
     case_id: typing.Union[str, int] = Field(None, description="用例id")
     name: Name = Field("", description="步骤名称")
@@ -20,6 +21,7 @@ class TStepBase(BaseModel):
 
 class ExtractData(BaseModel):
     """提取模型"""
+
     rename: str = Field("", description="提取变量命名")
     name: str = Field("", description="提取变量名称")
     path: str = Field("", description="提取路径")
@@ -46,6 +48,7 @@ class Raw(BaseModel):
 
 
 class TRequest(BaseModel):
+
     """api 请求模型"""
     title: Name = Field("", description="接口名称")
     interface: Interface = Field(..., description="接口配置")
@@ -65,5 +68,6 @@ class TStep(TStepBase):
 
 class TestCase(BaseModel):
     """用例模型"""
+
     name: Name = Field("", description="用例名称")
     cases: typing.List[typing.Union[TStep]] = Field(..., description="用例步骤")

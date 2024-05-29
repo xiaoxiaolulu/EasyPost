@@ -4,19 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="&quot;Add performance testing function and update atomic.py&quot;">
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="&quot;Remove unused enum files, add websocket URL pattern, update atomic test and DBClient execution in unit test runner, add performance consumer for websocket&quot;">
+      <change afterPath="$PROJECT_DIR$/api/tests/global_func.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unitrunner/models/report.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/emus/ConstructorEnum.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/emus/ConvertorEnum.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/emus/DatabaseEnum.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/emus/OssEnum.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/emus/RequestTypeEnum.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/routers/websocket.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/routers/websocket.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/service/consumers.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/consumers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/tests/atomic.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/tests/atomic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/tests/engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/tests/engine.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unitrunner/database/DBClient.py" beforeDir="false" afterPath="$PROJECT_DIR$/unitrunner/database/DBClient.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/engine/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/unitrunner/engine/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/engine/engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/unitrunner/engine/engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/engine/runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/unitrunner/engine/runner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/models/step.py" beforeDir="false" afterPath="$PROJECT_DIR$/unitrunner/models/step.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/encoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/encoder.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,77 +97,77 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Django Server.backend.executor&quot;: &quot;Run&quot;,
-    &quot;Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken.executor&quot;: &quot;Run&quot;,
-    &quot;Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken.setUp.executor&quot;: &quot;Run&quot;,
-    &quot;Django tests.Test: api.tests.test_project_destory.ProjectDestroyViewSetTests.executor&quot;: &quot;Run&quot;,
-    &quot;Django tests.Test: api.tests.test_user_list.TestUserListViewSet.executor&quot;: &quot;Run&quot;,
-    &quot;Django tests.Test: api.tests.test_user_list.TestUserListViewSet.test_hello.executor&quot;: &quot;Run&quot;,
-    &quot;Django tests.Test: api.tests.test_user_list.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for MyAssertTest.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for MyAssertTest.test_assertNotEqual.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for Test1.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for Test1.test1.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_assert.MyAssertTest.test_assertNotEqual.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in __init__.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_custom_token.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_engine.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in ws_handler.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.DBClient.executor&quot;: &quot;Run&quot;,
-    &quot;Python.__init__ (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.__init__ (2).executor&quot;: &quot;Run&quot;,
-    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
-    &quot;Python.api_migrate.executor&quot;: &quot;Run&quot;,
-    &quot;Python.atomic.executor&quot;: &quot;Run&quot;,
-    &quot;Python.bomb.executor&quot;: &quot;Run&quot;,
-    &quot;Python.engine.executor&quot;: &quot;Run&quot;,
-    &quot;Python.functions.executor&quot;: &quot;Run&quot;,
-    &quot;Python.initmenus.executor&quot;: &quot;Run&quot;,
-    &quot;Python.manage.executor&quot;: &quot;Run&quot;,
-    &quot;Python.qy.executor&quot;: &quot;Run&quot;,
-    &quot;Python.recursion.executor&quot;: &quot;Run&quot;,
-    &quot;Python.registry.executor&quot;: &quot;Run&quot;,
-    &quot;Python.scheduler.executor&quot;: &quot;Run&quot;,
-    &quot;Python.setting.executor&quot;: &quot;Run&quot;,
-    &quot;Python.time.executor&quot;: &quot;Run&quot;,
-    &quot;Python.websocket.executor&quot;: &quot;Run&quot;,
-    &quot;Python.weixin.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ws_handler.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/86135/Desktop/pymeter&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\Program Files\\JetBrains\\PyCharm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Django Server.backend.executor": "Run",
+    "Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken.executor": "Run",
+    "Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken.setUp.executor": "Run",
+    "Django tests.Test: api.tests.test_project_destory.ProjectDestroyViewSetTests.executor": "Run",
+    "Django tests.Test: api.tests.test_user_list.TestUserListViewSet.executor": "Run",
+    "Django tests.Test: api.tests.test_user_list.TestUserListViewSet.test_hello.executor": "Run",
+    "Django tests.Test: api.tests.test_user_list.executor": "Run",
+    "Python tests.Python tests for MyAssertTest.executor": "Run",
+    "Python tests.Python tests for MyAssertTest.test_assertNotEqual.executor": "Run",
+    "Python tests.Python tests for Test1.executor": "Run",
+    "Python tests.Python tests for Test1.test1.executor": "Run",
+    "Python tests.Python tests for test_assert.MyAssertTest.test_assertNotEqual.executor": "Run",
+    "Python tests.Python tests in __init__.py.executor": "Run",
+    "Python tests.Python tests in test_custom_token.py.executor": "Run",
+    "Python tests.Python tests in test_engine.py.executor": "Run",
+    "Python tests.Python tests in ws_handler.py.executor": "Run",
+    "Python.DBClient.executor": "Run",
+    "Python.__init__ (1).executor": "Run",
+    "Python.__init__ (2).executor": "Run",
+    "Python.__init__.executor": "Run",
+    "Python.api_migrate.executor": "Run",
+    "Python.atomic.executor": "Run",
+    "Python.bomb.executor": "Run",
+    "Python.engine.executor": "Run",
+    "Python.functions.executor": "Run",
+    "Python.initmenus.executor": "Run",
+    "Python.manage.executor": "Run",
+    "Python.qy.executor": "Run",
+    "Python.recursion.executor": "Run",
+    "Python.registry.executor": "Run",
+    "Python.scheduler.executor": "Run",
+    "Python.setting.executor": "Run",
+    "Python.time.executor": "Run",
+    "Python.websocket.executor": "Run",
+    "Python.weixin.executor": "Run",
+    "Python.ws_handler.executor": "Run",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/86135/Desktop/EasyPost/backend/test",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "D:\\Program Files\\JetBrains\\PyCharm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;ChangesTree.GroupingKeys&quot;: [
-      &quot;directory&quot;
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\86135\Desktop\EasyPost\backend\test" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\routers" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\management\commands" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\emus" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\router" />
-      <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\templates\media" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\service" />
@@ -177,7 +177,30 @@
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Django Server.backend">
+  <component name="RunManager" selected="Python.engine">
+    <configuration name="DBClient" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/unitrunner/database" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/unitrunner/database/DBClient.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="__init__ (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <option name="ENV_FILES" value="" />
@@ -193,29 +216,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/schema/__init__.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="backend" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/celery_work/tasks" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/celery_work/tasks/__init__.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -270,7 +270,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="scheduler" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="engine" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -279,12 +279,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api/scheduler" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api/tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/scheduler/scheduler.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/tests/engine.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -321,19 +321,19 @@
     </configuration>
     <list>
       <item itemvalue="Django Server.backend" />
+      <item itemvalue="Python.DBClient" />
+      <item itemvalue="Python.engine" />
       <item itemvalue="Python.__init__ (1)" />
       <item itemvalue="Python.atomic" />
       <item itemvalue="Python.bomb" />
-      <item itemvalue="Python.scheduler" />
-      <item itemvalue="Python.__init__" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.engine" />
+        <item itemvalue="Python.DBClient" />
         <item itemvalue="Python.__init__ (1)" />
         <item itemvalue="Python.atomic" />
         <item itemvalue="Python.bomb" />
-        <item itemvalue="Python.__init__" />
-        <item itemvalue="Python.scheduler" />
       </list>
     </recent_temporary>
   </component>
@@ -503,15 +503,7 @@
       <workItem from="1716778330296" duration="5249000" />
       <workItem from="1716794827452" duration="25000" />
       <workItem from="1716877402125" duration="6788000" />
-      <workItem from="1716963422722" duration="5826000" />
-    </task>
-    <task id="LOCAL-00376" summary="Add Notice API views and serializers for listing, creating, updating, and deleting notices. Also, add filter backends for searching and ordering notices.">
-      <option name="closed" value="true" />
-      <created>1713770838649</created>
-      <option name="number" value="00376" />
-      <option name="presentableId" value="LOCAL-00376" />
-      <option name="project" value="LOCAL" />
-      <updated>1713770838649</updated>
+      <workItem from="1716963422722" duration="10739000" />
     </task>
     <task id="LOCAL-00377" summary="Add Notice API views and serializers for listing, creating, updating, and deleting notices. Also, add filter backends for searching and ordering notices.">
       <option name="closed" value="true" />
@@ -897,7 +889,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716531367957</updated>
     </task>
-    <option name="localTasksCounter" value="425" />
+    <task id="LOCAL-00425" summary="&quot;Remove unused enum files, add websocket URL pattern, update atomic test and DBClient execution in unit test runner, add performance consumer for websocket&quot;">
+      <option name="closed" value="true" />
+      <created>1716972536724</created>
+      <option name="number" value="00425" />
+      <option name="presentableId" value="LOCAL-00425" />
+      <option name="project" value="LOCAL" />
+      <updated>1716972536724</updated>
+    </task>
+    <option name="localTasksCounter" value="426" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -927,32 +927,32 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="&quot;Remove unused API functions and fix" />
-    <MESSAGE value="&quot;Remove unused API functions and fix file" />
-    <MESSAGE value="&quot;Remove unused API functions and fix file format" />
-    <MESSAGE value="&quot;Remove unused API functions and fix file format issues" />
-    <MESSAGE value="&quot;Remove unused API functions and fix file format issues&quot;" />
-    <MESSAGE value="Updated" />
-    <MESSAGE value="Updated code" />
-    <MESSAGE value="Updated codebase" />
-    <MESSAGE value="Updated codebase with" />
-    <MESSAGE value="Updated codebase with new" />
-    <MESSAGE value="Updated codebase with new features" />
-    <MESSAGE value="Updated codebase with new features and" />
-    <MESSAGE value="Updated codebase with new features and changes" />
-    <MESSAGE value="Updated codebase with new features and changes." />
-    <MESSAGE value="&quot;" />
-    <MESSAGE value="&quot;Add" />
-    <MESSAGE value="&quot;Add performance" />
-    <MESSAGE value="&quot;Add performance testing" />
-    <MESSAGE value="&quot;Add performance testing function" />
-    <MESSAGE value="&quot;Add performance testing function and" />
-    <MESSAGE value="&quot;Add performance testing function and update" />
-    <MESSAGE value="&quot;Add performance testing function and update atomic" />
-    <MESSAGE value="&quot;Add performance testing function and update atomic." />
-    <MESSAGE value="&quot;Add performance testing function and update atomic.py" />
-    <MESSAGE value="&quot;Add performance testing function and update atomic.py&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Add performance testing function and update atomic.py&quot;" />
+    <MESSAGE value="&quot;Remove unused enum files, add" />
+    <MESSAGE value="&quot;Remove unused enum files, add web" />
+    <MESSAGE value="&quot;Remove unused enum files, add websocket" />
+    <MESSAGE value="&quot;Remove unused enum files, add websocket URL" />
+    <MESSAGE value="&quot;Remove unused enum files, add websocket URL pattern" />
+    <MESSAGE value="&quot;Remove unused enum files, add websocket URL pattern," />
+    <MESSAGE value="&quot;Remove unused enum files, add websocket URL pattern, update" />
+    <MESSAGE value="&quot;Remove unused enum files, add websocket URL pattern, update atomic" />
+    <MESSAGE value="&quot;Remove unused enum files, add websocket URL pattern, update atomic test" />
+    <MESSAGE value="&quot;Remove unused enum files, add websocket URL pattern, update atomic test and" />
+    <MESSAGE value="&quot;Remove unused enum files, add websocket URL pattern, update atomic test and DB" />
+    <MESSAGE value="&quot;Remove unused enum files, add websocket URL pattern, update atomic test and DBClient" />
+    <MESSAGE value="&quot;Remove unused enum files, add websocket URL pattern, update atomic test and DBClient execution" />
+    <MESSAGE value="&quot;Remove unused enum files, add websocket URL pattern, update atomic test and DBClient execution in" />
+    <MESSAGE value="&quot;Remove unused enum files, add websocket URL pattern, update atomic test and DBClient execution in unit" />
+    <MESSAGE value="&quot;Remove unused enum files, add websocket URL pattern, update atomic test and DBClient execution in unit test" />
+    <MESSAGE value="&quot;Remove unused enum files, add websocket URL pattern, update atomic test and DBClient execution in unit test runner" />
+    <MESSAGE value="&quot;Remove unused enum files, add websocket URL pattern, update atomic test and DBClient execution in unit test runner," />
+    <MESSAGE value="&quot;Remove unused enum files, add websocket URL pattern, update atomic test and DBClient execution in unit test runner, add" />
+    <MESSAGE value="&quot;Remove unused enum files, add websocket URL pattern, update atomic test and DBClient execution in unit test runner, add performance" />
+    <MESSAGE value="&quot;Remove unused enum files, add websocket URL pattern, update atomic test and DBClient execution in unit test runner, add performance consumer" />
+    <MESSAGE value="&quot;Remove unused enum files, add websocket URL pattern, update atomic test and DBClient execution in unit test runner, add performance consumer for" />
+    <MESSAGE value="&quot;Remove unused enum files, add websocket URL pattern, update atomic test and DBClient execution in unit test runner, add performance consumer for web" />
+    <MESSAGE value="&quot;Remove unused enum files, add websocket URL pattern, update atomic test and DBClient execution in unit test runner, add performance consumer for websocket" />
+    <MESSAGE value="&quot;Remove unused enum files, add websocket URL pattern, update atomic test and DBClient execution in unit test runner, add performance consumer for websocket&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Remove unused enum files, add websocket URL pattern, update atomic test and DBClient execution in unit test runner, add performance consumer for websocket&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -977,17 +977,17 @@
     <SUITE FILE_PATH="coverage/backend$http_handler.coverage" NAME="http_handler Coverage Results" MODIFIED="1691322735662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/request" />
     <SUITE FILE_PATH="coverage/http_handler_py$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1699847256865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/backend$ws_handler.coverage" NAME="ws_handler Coverage Results" MODIFIED="1713929054730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/unitrunner/request" />
-    <SUITE FILE_PATH="coverage/backend$DBClient.coverage" NAME="DBClient Coverage Results" MODIFIED="1713167891785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/unitrunner/database" />
+    <SUITE FILE_PATH="coverage/backend$DBClient.coverage" NAME="DBClient Coverage Results" MODIFIED="1716975191473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/unitrunner/database" />
     <SUITE FILE_PATH="coverage/backend$step.coverage" NAME="step Coverage Results" MODIFIED="1705474725686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/models" />
     <SUITE FILE_PATH="coverage/backend$async_mixins.coverage" NAME="async_mixins Coverage Results" MODIFIED="1705914322987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/mixins" />
     <SUITE FILE_PATH="coverage/http_handler_py$__init____1_.coverage" NAME="__init__ (1) Coverage Results" MODIFIED="1695113385741" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
     <SUITE FILE_PATH="coverage/backend$time.coverage" NAME="time Coverage Results" MODIFIED="1712916587385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
-    <SUITE FILE_PATH="coverage/backend$engine.coverage" NAME="engine Coverage Results" MODIFIED="1714385366455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/tests" />
+    <SUITE FILE_PATH="coverage/backend$engine.coverage" NAME="engine Coverage Results" MODIFIED="1716977341857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/tests" />
     <SUITE FILE_PATH="coverage/backend$__init____3_.coverage" NAME="__init__ (3) Coverage Results" MODIFIED="1709112766835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/dao" />
     <SUITE FILE_PATH="coverage/backend$Test__api_tests_test_user_list_TestUserListViewSet.coverage" NAME="Test: api.tests.test_user_list.TestUserListViewSet Coverage Results" MODIFIED="1712038591853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/backend$setting.coverage" NAME="setting Coverage Results" MODIFIED="1712038164027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/dao" />
-    <SUITE FILE_PATH="coverage/backend$manage.coverage" NAME="manage Coverage Results" MODIFIED="1711526108828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/backend$main.coverage" NAME="main Coverage Results" MODIFIED="1706091376465" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/celery_work" />
+    <SUITE FILE_PATH="coverage/backend$manage.coverage" NAME="manage Coverage Results" MODIFIED="1711526108828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/backend$bomb.coverage" NAME="bomb Coverage Results" MODIFIED="1716530569659" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/unitrunner/engine" />
     <SUITE FILE_PATH="coverage/backend$websocket.coverage" NAME="websocket Coverage Results" MODIFIED="1715329332910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/tests" />
     <SUITE FILE_PATH="coverage/backend$decorator.coverage" NAME="decorator Coverage Results" MODIFIED="1706064703211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />

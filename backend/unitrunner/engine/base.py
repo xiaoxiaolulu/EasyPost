@@ -4,11 +4,6 @@ import typing
 from functools import wraps
 from unittest import TestSuite
 import numpy as np
-from pymeter.api.config import (
-    TestPlan,
-    ThreadGroupSimple
-)
-from pymeter.api.samplers import HttpSampler
 from requests import Response
 import json
 import os
@@ -319,31 +314,6 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         # 执行后置脚本
         self.__run_teardown_script(response)
 
-    def perform(self, data):
-        router = data.get('interface').get('url')
-        threads = data.get('threads', 1)
-        iterations = data.get('iterations', 1)
-        http_sampler = HttpSampler(
-            "Demo",
-            router,
-        )
-        tg = ThreadGroupSimple(
-            threads, iterations, http_sampler,
-        )
-        tp = TestPlan(tg)
-        stats = tp.run()
-        response = {
-            "duration": stats.duration_milliseconds,
-            "mean": stats.sample_time_mean_milliseconds,
-            "min": stats.sample_time_min_milliseconds,
-            "median": stats.sample_time_median_milliseconds,
-            "90p": stats.sample_time_90_percentile_milliseconds,
-            "95p": stats.sample_time_95_percentile_milliseconds,
-            "99p": stats.sample_time_99_percentile_milliseconds,
-            "max": stats.sample_time_max_milliseconds
-        }
-        self.__unittest_perform_response = response
-
     def validators(self, response: Any, validate_check) -> None:
         """
         Validates a response against a set of validation checks.
@@ -357,6 +327,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             validate_check (list): A list of validation checks, where each check is a dictionary.
         """
         if isinstance(validate_check, list):
+
             for check in validate_check:
                 methods = check.get('method', None)
                 expect = check.get('expect', None)

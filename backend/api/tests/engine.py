@@ -249,15 +249,15 @@ if __name__ == '__main__':
                     },
                     'setup_script': "print('前置脚本123')",
                     'teardown_script': "ep.assertion('相等',200, 200)",
-                    'validators': [{
-                        'method': '相等',
-                        'actual': 'http://httpbin.org/post',
-                        'expect': '$.url'}],
-                    "extract": {
-                        # 通过jsonpath提取
-                        "routers": ("env", "jsonpath", "$.url"),
-                        # 通过正则表达式提取
-                    }
+                    # 'validators': [{
+                    #     'method': '相等',
+                    #     'actual': 'http://httpbin.org/post',
+                    #     'expect': '$.url'}],
+                    # "extract": {
+                    #     # 通过jsonpath提取
+                    #     "routers": ("env", "jsonpath", "$.url"),
+                    #     # 通过正则表达式提取
+                    # }
                 },
             ]
         }

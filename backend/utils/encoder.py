@@ -1,9 +1,26 @@
 import ast
 import dataclasses
+import datetime
 import typing
-from collections import defaultdict
+from collections import (
+    defaultdict,
+    deque
+)
+from decimal import Decimal
 from enum import Enum
-from pathlib import PurePath
+from ipaddress import (
+    IPv4Address,
+    IPv4Interface,
+    IPv4Network,
+    IPv6Address,
+    IPv6Interface,
+    IPv6Network
+)
+from pathlib import (
+    PurePath,
+    Path
+)
+from re import Pattern
 from types import GeneratorType
 from typing import (
     Any,
@@ -15,13 +32,72 @@ from typing import (
     Callable,
     List
 )
+from uuid import UUID
 from pydantic import BaseModel
-from pydantic.json import ENCODERS_BY_TYPE  # noqa
+from pydantic.color import Color
+from pydantic.networks import NameEmail
+from pydantic.types import (
+    SecretBytes,
+    SecretStr
+)
 
 
 SetIntStr = Set[Union[int, str]]
 DictIntStrAny = Dict[Union[int, str], Any]
 TupleIntStr = Tuple[str]
+
+
+def isoformat(o: Union[datetime.date, datetime.time]) -> str:
+    return o.isoformat()
+
+
+def decimal_encoder(dec_value: Decimal) -> Union[int, float]:
+    """
+    Encodes a Decimal as int of there's no exponent, otherwise float
+
+    This is useful when we use ConstrainedDecimal to represent Numeric(x,0)
+    where a integer (but not int typed) is used. Encoding this as a float
+    results in failed round-tripping between encode and parse.
+    Our Id type is a prime example of this.
+
+    >>> decimal_encoder(Decimal("1.0"))
+    1.0
+
+    >>> decimal_encoder(Decimal("1"))
+    1
+    """
+    if dec_value.as_tuple().exponent >= 0:
+        return int(dec_value)
+    else:
+        return float(dec_value)
+
+
+ENCODERS_BY_TYPE: Dict[typing.Type[Any], Callable[[Any], Any]] = {
+    bytes: lambda o: o.decode(),
+    Color: str,
+    datetime.date: isoformat,
+    datetime.datetime: isoformat,
+    datetime.time: isoformat,
+    datetime.timedelta: lambda td: td.total_seconds(),
+    Decimal: decimal_encoder,
+    Enum: lambda o: o.value,
+    frozenset: list,
+    deque: list,
+    GeneratorType: list,
+    IPv4Address: str,
+    IPv4Interface: str,
+    IPv4Network: str,
+    IPv6Address: str,
+    IPv6Interface: str,
+    IPv6Network: str,
+    NameEmail: str,
+    Path: str,
+    Pattern: lambda o: o.pattern,
+    SecretBytes: str,
+    SecretStr: str,
+    set: list,
+    UUID: str,
+}
 
 
 def generate_encoders_by_class_tuples(

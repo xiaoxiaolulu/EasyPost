@@ -7,14 +7,17 @@ from api.emus.CaseBaseEnum import (
     CaseStatusEnum,
     CaseStatusMessageEnum
 )
+from unitrunner.models.report import (
+    TestCaseResult,
+    TestReport
+)
 
 
 class TestResult(unittest.TestResult):
 
     def __init__(self):
         super().__init__()
-
-        self.result = {
+        self.result: TestCaseResult = {
             "all": 0,
             "success": 0,
             "fail": 0,
@@ -51,7 +54,6 @@ class TestResult(unittest.TestResult):
         self.result['cases'].append(test)
         self.result['all'] += 1
         self.result["name"] = test.__class__.__name__
-        # test.perform = test._BaseTest__unittest_perform_response
 
     def stopTestRun(self, title=None):
         """
@@ -286,7 +288,7 @@ class TestRunner:
         Returns:
             dict: A dictionary containing aggregated test results.
         """
-        result = {
+        result: TestReport = {
             "class_list": [],
             "all": 0,
             "success": 0,
