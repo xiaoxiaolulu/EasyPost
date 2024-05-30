@@ -17,15 +17,7 @@ class TestResult(unittest.TestResult):
 
     def __init__(self):
         super().__init__()
-        self.result: TestCaseResult = {
-            "all": 0,
-            "success": 0,
-            "fail": 0,
-            "error": 0,
-            "cases": [],
-            "res": "",
-            "name": ""
-        }
+        self.result: TestCaseResult = TestCaseResult.parse_obj(TestCaseResult().dict())
 
     def startTest(self, test):
         """
@@ -51,9 +43,9 @@ class TestResult(unittest.TestResult):
             test: The test object that has just finished execution.
         """
         test.run_time = '{:.3}s'.format((time.time() - self.start_time))
-        self.result['cases'].append(test)
-        self.result['all'] += 1
-        self.result["name"] = test.__class__.__name__
+        self.result.cases.append(test)
+        self.result.all += 1
+        self.result.name = test.__class__.__name__
 
     def stopTestRun(self, title=None):
         """
@@ -66,11 +58,11 @@ class TestResult(unittest.TestResult):
             title (str, optional): A title for the test run (defaults to None).
         """
         if len(self.errors) > 0:
-            self.result['state'] = CaseStatusEnum.ERROR
+            self.result.state = CaseStatusEnum.ERROR
         elif len(self.failures) > 0:
-            self.result['state'] = CaseStatusEnum.FAIL
+            self.result.state = CaseStatusEnum.FAIL
         else:
-            self.result['state'] = CaseStatusEnum.SUCCESS
+            self.result.state = CaseStatusEnum.SUCCESS
 
     def addSuccess(self, test):
         """
@@ -82,7 +74,7 @@ class TestResult(unittest.TestResult):
             test: The test object that has just finished execution.
         """
         count = test._testMethodName.split("_").pop()
-        self.result["success"] += 1
+        self.result.success += 1
         test.state = CaseStatusMessageEnum.SUCCESS
         test.tag = f'循环{count}次' if count else '-'
         getattr(test, 'info_log')("{}执行——>【通过】\n".format(getattr(test, '_testMethodDoc')))
@@ -99,7 +91,7 @@ class TestResult(unittest.TestResult):
         """
         count = test._testMethodName.split("_").pop()
         super().addFailure(test, err)
-        self.result["fail"] += 1
+        self.result.fail += 1
         test.state = CaseStatusMessageEnum.FAIL
         test.tag = f'循环{count}次' if count else '-'
         getattr(test, 'warning_log')(err[1])
@@ -118,7 +110,7 @@ class TestResult(unittest.TestResult):
         """
         count = test._testMethodName.split("_").pop()
         super().addError(test, err)
-        self.result["error"] += 1
+        self.result.error += 1
         test.state = CaseStatusMessageEnum.ERROR
         test.tag = f'循环{count}次' if count else '-'
         getattr(test, 'error_log')(str(err[1]))
@@ -288,39 +280,27 @@ class TestRunner:
         Returns:
             dict: A dictionary containing aggregated test results.
         """
-        result: TestReport = {
-            "class_list": [],
-            "all": 0,
-            "success": 0,
-            "error": 0,
-            "fail": 0,
-            "runtime": "",
-            "argtime": "",
-            "begin_time": "",
-            "pass_rate": 0,
-            "state": ""
-        }
+        result: TestReport = TestReport.parse_obj(TestReport().dict())
 
         for cls in self.result_list:
-            cases_info = cls.result['cases']
-            result['all'] += cls.result['all']
-            result['success'] += cls.result['success']
-            result['error'] += cls.result['error']
-            result['fail'] += cls.result['fail']
+            cases_info = cls.result.cases
+            result.all += cls.result.all
+            result.success += cls.result.success
+            result.error += cls.result.error
+            result.fail += cls.result.fail
 
-            cls.result['cases'] = [{k: v for k, v in res.__dict__.items() if not k.startswith('_')} for res in
-                                   cases_info]
-            result['class_list'].append(cls.result)
-        result['runtime'] = '{:.2f}s'.format(time.time() - self.starttime)
-        result['argtime'] = '{:.2f}s'.format(round((time.time() - self.starttime)/result.get('all', 0), 2))
-        result["begin_time"] = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(self.starttime))
-        result["tester"] = self.tester
-        if result['all'] != 0:
-            result['pass_rate'] = "{:.2f}%".format(result['success'] / result['all'] * 100) # noqa
+            cls.result.cases = [{k: v for k, v in res.__dict__.items() if not k.startswith('_')} for res in cases_info]
+            result.class_list.append(cls.result.dict())
+        result.runtime = '{:.2f}s'.format(time.time() - self.starttime)
+        result.argtime = '{:.2f}s'.format(round((time.time() - self.starttime)/result.all, 2))
+        result.begin_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(self.starttime))
+        result.tester = self.tester
+        if result.all != 0:
+            result.pass_rate = "{:.2f}%".format(result.success / result.all * 100) # noqa
         else:
-            result['pass_rate'] = 0
-        result["state"] = "通过" if (result['success'] / result['all']) == 1.0 else "失败"
-        return result
+            result.pass_rate = "0"
+        result.state = "通过" if (result.success / result.all) == 1.0 else "失败"
+        return result.dict()
 
     def run(self, thread_count=1, rerun=0, interval=2):
         """

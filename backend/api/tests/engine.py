@@ -247,8 +247,8 @@ if __name__ == '__main__':
                     "request": {
                         'json': {"mobile_phone": "31313131313131", "pwd": "lemonban"},
                     },
-                    'setup_script': "print('前置脚本123')",
-                    'teardown_script': "ep.assertion('相等',200, 200)",
+                    # 'setup_script': "print('前置脚本123')",
+                    # 'teardown_script': "ep.assertion('相等',200, 200)",
                     # 'validators': [{
                     #     'method': '相等',
                     #     'actual': 'http://httpbin.org/post',
