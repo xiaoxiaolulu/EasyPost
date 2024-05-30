@@ -418,7 +418,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         except (Exception,):
             pass
 
-    def __send_request(self, data) -> Response:
+    def __send_request(self, data: typing.Dict) -> Response:
         """
         Sends an HTTP request and handles the response.
 
@@ -434,15 +434,33 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         request_info = self.__handler_request_data(data)
         self.info_log('发送请求[{}]:{}：\n'.format(request_info['method'].upper(), request_info['url']))
 
-        logger.info(
-            f"--------  request info ----------\n"
-            "{}".format(json.dumps(request_info, indent=4, ensure_ascii=False))
-        )
         client = HttpHandler(request_info)
         response = client.request()
+        self.update_request_info(response, client)
 
-        resp = client.response(response, request_info, response.elapsed)
+        self.__request_log()
+        logger.info(
+            f"--------  request info ----------\n"
+            f"{json.dumps(request_info, indent=4, ensure_ascii=False)}\n"
+            f"--------  response info ----------\n"
+            f"{client.get_response(response)}"
+        )
+        return response
 
+    def update_request_info(self, response: Response, client: HttpHandler):
+        """
+        Updates the internal request information with details from the response object and HttpHandler.
+
+        This function extracts relevant data from the provided response and HttpHandler objects
+        and updates the corresponding attributes within the class instance (self).
+
+        Args:
+            response (Response): The HTTP response object containing details about the response.
+            client (HttpHandler): The HttpHandler object used to send the request.
+
+        Returns:
+            None
+        """
         self.url = response.request.url
         self.method = response.request.method
         self.status_code = response.status_code
@@ -450,22 +468,6 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         self.requests_header = json.dumps(dict(response.request.headers), ensure_ascii=False, indent=2)
         self.response_body = client.get_response(response)
         self.requests_body = client.get_request(response)
-
-        logger.info(
-            f"--------  response info ----------\n"
-            f"status: {resp.get('status', None)}\n"
-            f"msg: {resp.get('msg', None)}\n"
-            f"statusCode: {resp.get('statusCode', None)}\n"
-            f"responseHeaders:\n"
-            f"{resp.get('responseHeaders', {})}\n"
-            f"responseBody:\n"
-            f"{resp.get('responseBody', {})}\n"
-            f"cookies: {resp.get('cookies', None)}\n"
-            f"cost: {resp.get('cost', None)}\n"
-            f"cookie: {resp.get('cookie', None)}"
-        )
-        self.__request_log()
-        return response
 
     def __handler_request_data(self, data) -> dict[str | Any, Any]:
         """
