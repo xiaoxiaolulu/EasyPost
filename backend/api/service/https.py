@@ -26,7 +26,6 @@ from api.schema.https import (
     CaseSerializers
 )
 from config.settings import MEDIA_ROOT
-from unitrunner.request.http_handler import HttpHandler
 from api.response.fatcory import ResponseStandard
 from utils.api_migrate import (
     DataMigrator,
@@ -35,22 +34,6 @@ from utils.api_migrate import (
 from utils.trees import (
     get_tree_max_id
 )
-
-
-class ApiFastView(APIView):
-    permission_classes = [IsAuthenticated]
-
-    @staticmethod
-    def post(request):
-        try:
-            request_body = json.loads(request.body.decode())
-            client = HttpHandler(request_body=request_body)
-            response = client.request()
-            if response.get("status"):
-                return Response(ResponseStandard.success(data=response))
-            return Response(ResponseStandard.failed(response.get("msg"), data=response))
-        except Exception as err:
-            return Response(ResponseStandard.failed(err))
 
 
 class TreeView(APIView):

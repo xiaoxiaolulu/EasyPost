@@ -17,7 +17,6 @@ from config.settings import (
     DATABASES
 )
 from unitrunner.constructor.create_function import create_function_from_parameters
-from unitrunner.request.http_handler import HttpHandler
 from unitrunner.builitin import compares
 from unitrunner.engine.extract import extract_by_object
 from unitrunner.database.db import OperateMysql

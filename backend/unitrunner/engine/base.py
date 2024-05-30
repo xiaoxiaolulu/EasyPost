@@ -29,6 +29,8 @@ from unitrunner.engine.env import (
 from unitrunner.engine.log import CaseRunLog
 from unitrunner.engine.runner import TestRunner
 from unitrunner.models import step
+from unitrunner.request.http_handler import HttpHandler
+from utils.logger import logger
 
 try:
     global_func = importlib.import_module('global_func')
@@ -431,28 +433,37 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         """
         request_info = self.__handler_request_data(data)
         self.info_log('发送请求[{}]:{}：\n'.format(request_info['method'].upper(), request_info['url']))
-        try:
-            response = session.request(**request_info)
-        except Exception as e:
-            raise ValueError('❌请求发送失败，错误信息如下：{}'.format(e))
+
+        logger.info(
+            f"--------  request info ----------\n"
+            "{}".format(json.dumps(request_info, indent=4, ensure_ascii=False))
+        )
+        client = HttpHandler(request_info)
+        response = client.request()
+
+        resp = client.response(response, request_info, response.elapsed)
+
         self.url = response.request.url
         self.method = response.request.method
         self.status_code = response.status_code
-
         self.response_header = json.dumps(dict(response.headers), ensure_ascii=False, indent=2)
         self.requests_header = json.dumps(dict(response.request.headers), ensure_ascii=False, indent=2)
-        try:
-            response_body = response.json()
-            self.response_body = json.dumps(response_body, ensure_ascii=False, indent=2)
-        except (Exception,):
-            body = response.content
-            self.response_body = body.decode('utf-8') if body else ''
-        try:
-            request_body = json.loads(response.request.body.decode('utf-8'))
-            self.requests_body = json.dumps(request_body, ensure_ascii=False, indent=2)
-        except (Exception,):
-            body = response.request.body
-            self.requests_body = body or ''
+        self.response_body = client.get_response(response)
+        self.requests_body = client.get_request(response)
+
+        logger.info(
+            f"--------  response info ----------\n"
+            f"status: {resp.get('status', None)}\n"
+            f"msg: {resp.get('msg', None)}\n"
+            f"statusCode: {resp.get('statusCode', None)}\n"
+            f"responseHeaders:\n"
+            f"{resp.get('responseHeaders', {})}\n"
+            f"responseBody:\n"
+            f"{resp.get('responseBody', {})}\n"
+            f"cookies: {resp.get('cookies', None)}\n"
+            f"cost: {resp.get('cost', None)}\n"
+            f"cookie: {resp.get('cookie', None)}"
+        )
         self.__request_log()
         return response
 
@@ -502,7 +513,9 @@ class BaseTest(unittest.TestCase, CaseRunLog):
 
         params_fields = ['url', 'method', 'params', 'data', 'json', 'files', 'headers', 'cookies', 'auth', 'timeout',
                          'allow_redirects', 'proxies', 'hooks', 'stream', 'verify', 'cert']
+
         for k, v in data['request'].items():
+
             if k in params_fields:
                 request_params[k] = v
 
@@ -514,6 +527,8 @@ class BaseTest(unittest.TestCase, CaseRunLog):
 
         request_params['method'] = data.get('interface').get('method')
         request_params['headers'] = data['headers']
+
+        print(request_params)
         return request_params
 
     def __parser_variable(self, data) -> str | None | Any:
