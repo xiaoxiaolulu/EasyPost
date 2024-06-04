@@ -1,6 +1,7 @@
 from typing import Any
 import jmespath
 import jsonpath
+from unitrunner import exceptions
 
 
 def extract_by_object(response: Any, extract_expression: str) -> Any:
@@ -19,11 +20,11 @@ def extract_by_object(response: Any, extract_expression: str) -> Any:
         try:
             extract_value = jsonpath.jsonpath(response, extract_expression)
             return extract_value
-        except Exception as msg:
-            raise PermissionError(f'❌expression:<{extract_expression}>, error: {msg}')
+        except exceptions.ExtractException as err:
+            raise PermissionError(f'❌expression:<{extract_expression}>, error: {err}')
     else:
         try:
             extract_value = jmespath.search(response, extract_expression)
             return extract_value
-        except Exception as msg:
-            raise PermissionError(f'❌expression:<{extract_expression}>, error: {msg}')
+        except exceptions.ExtractException as err:
+            raise PermissionError(f'❌expression:<{extract_expression}>, error: {err}')

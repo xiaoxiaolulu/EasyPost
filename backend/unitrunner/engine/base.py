@@ -19,6 +19,7 @@ from jsonpath import jsonpath
 from requests_toolbelt import MultipartEncoder
 from api.emus.CaseBaseEnum import RunningTstCasesEnum
 from api.events.registry import registry
+from unitrunner import exceptions
 from unitrunner.engine.env import (
     BaseEnv,
     DEBUG,
@@ -29,8 +30,9 @@ from unitrunner.engine.env import (
 from unitrunner.engine.log import CaseRunLog
 from unitrunner.engine.runner import TestRunner
 from unitrunner.models import step
-from unitrunner.request.http_handler import HttpHandler
+from unitrunner.request.http import HttpHandler
 from utils.logger import logger
+
 
 try:
     global_func = importlib.import_module('global_func')
@@ -412,7 +414,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
                 }
                 ENV.update(query_sql)
                 return query_sql
-            except Exception as err:
+            except exceptions.MysqlConnectionException as err:
                 self.error_log(f"❌Mysql Not connected {err}")
                 return none_obj
         except (Exception,):
@@ -530,7 +532,6 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         request_params['method'] = data.get('interface').get('method')
         request_params['headers'] = data['headers']
 
-        print(request_params)
         return request_params
 
     def __parser_variable(self, data) -> str | None | Any:
@@ -572,7 +573,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
                 attr = res2.group(1)
                 value = ENV.get(attr) if self.env.get(attr) is None else self.env.get(attr)
                 if value is None:
-                    raise ValueError('❌变量引用错误：\n{}\n中的变量{},在当前运行环境中未找到'.format(
+                    raise exceptions.VariableReferencesException('❌变量引用错误：\n{}\n中的变量{},在当前运行环境中未找到'.format(
                         json.dumps(old_data, ensure_ascii=False, indent=2), attr)
                     )
                 if isinstance(value, Number):
@@ -689,7 +690,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         if assert_method:
             try:
                 assert_method(expected, actual)
-            except Exception as err:
+            except exceptions.AssertFailException as err:
                 self.warning_log('❌断言失败!\n')
                 self.save_validators(methods, expected, actual, '【❌】')
                 raise self.failureException(err)
@@ -697,7 +698,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
                 self.info_log("断言通过!\n")
                 self.save_validators(methods, expected, actual, '【✔】')
         else:
-            raise TypeError('❌断言比较方法{},不支持!'.format(methods))
+            raise exceptions.AssertException('❌断言比较方法{},不支持!'.format(methods))
 
     def __run_script(ep, data) -> None:  # noqa
         """
@@ -719,7 +720,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         if setup_script:
             try:
                 exec(setup_script)
-            except Exception as e:
+            except exceptions.RequestPreconditionException as e:
                 ep.error_log('❌前置脚本执行错误: {}\n'.format(e))
                 delattr(ep, 'hook_gen')
                 raise
@@ -729,7 +730,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         if teardown_script:
             try:
                 exec(teardown_script)
-            except Exception as e:
+            except exceptions.ResponsePostconditionException as e:
                 ep.error_log('❌后置脚本执行错误: {}\n'.format(e))
                 raise
         yield
@@ -884,7 +885,7 @@ class GenerateCase:
                 global children  # noqa
                 try:
                     children = case_.get('children', None)
-                except AttributeError:
+                except exceptions.StepMissAttributeError:
                     pass
 
                 if children:

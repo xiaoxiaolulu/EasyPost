@@ -264,4 +264,3 @@ class PytestRunner(object):
             if isinstance(extract_values, dict)
         }
         return extract_collections
-

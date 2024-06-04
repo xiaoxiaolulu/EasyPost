@@ -5,6 +5,7 @@ from typing import (
     Any
 )
 from api.emus.CaseParametersEnum import CaseParametersEnum
+from unitrunner import exceptions
 
 
 class AtomicBombEngine:
@@ -74,7 +75,7 @@ class AtomicBombEngine:
                 "verbose": self.verbose,
             }
             return engine_config
-        except (Exception, ):
+        except exceptions.EngineConfigException:
             raise AttributeError("Could not create engine configuration")
 
     def run(self, data: Dict[str, Any]):
@@ -118,7 +119,7 @@ class AtomicBombEngine:
             ))
             return api_endpoints
 
-        except (AttributeError, TypeError, ValueError):
+        except exceptions.ApiEndpointsEmptyException:
             return api_endpoints
 
     @staticmethod
@@ -207,5 +208,5 @@ async def performance(
         )
         runner = engine.run(test_data)
         return runner
-    except (Exception, KeyboardInterrupt):
-        raise Exception("Test runner encountered an exception.")
+    except exceptions.BomberRunnerException:
+        raise exceptions.BomberRunnerException("Test runner encountered an exception.")

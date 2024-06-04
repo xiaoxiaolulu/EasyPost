@@ -1,4 +1,5 @@
 import requests
+from unitrunner import exceptions
 from utils.logger import logger
 
 
@@ -59,7 +60,7 @@ class FeiShu:
                 json=data
             )
             response.raise_for_status()  # Raise exception for non-2xx status codes
-        except Exception as e:
+        except exceptions.SendMessageException as e:
             # Log error message using the provided logger
             logger.error(f'飞书消息发送异常: {e}')
         else:

@@ -4,6 +4,7 @@ import string
 import time
 import rsa
 from faker import Faker
+from unitrunner import exceptions
 from utils.time import *
 
 __all__ = [
@@ -245,4 +246,4 @@ def get_time_stamp(str_len=13):
     if isinstance(str_len, int) and 0 < str_len < 17:
         return str(time.time()).replace(".", "")[:str_len]
 
-    raise Exception("timestamp length can only between 0 and 16.")
+    raise exceptions.GetTimestampException("timestamp length can only between 0 and 16.")

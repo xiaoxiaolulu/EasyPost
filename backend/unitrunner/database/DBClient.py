@@ -1,5 +1,6 @@
 import MySQLdb
 from api.response.fatcory import ResponseStandard
+from unitrunner import exceptions
 from utils.logger import logger as log
 
 
@@ -83,7 +84,7 @@ class DBMysql:
                     data={"database_status": True},
                     msg="mysql connect success"
                 )
-        except Exception as err:
+        except exceptions.MysqlConnectionException as err:
             log.error(f"mysql connect error -> {err}")
             return ResponseStandard.failed(
                 data={"database_status": False},
@@ -147,12 +148,12 @@ class DBClient:
         if not config:
             return
         if not config.get('name'):
-            raise ValueError('The name field of the database configuration cannot be empty!❌')
+            raise exceptions.MysqlConfigError('The name field of the database configuration cannot be empty!❌')
 
         if config.get('type').lower() == 'mysql' and config.get('config'):
             dbc = DBMysql(config.get('config'))
         else:
-            raise ValueError('The database configuration you passed in is incorrect：{} ❌'.format(config))
+            raise exceptions.MysqlConfigError('The database configuration you passed in is incorrect：{} ❌'.format(config))
 
         setattr(self, config.get('name'), dbc)
 
