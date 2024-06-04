@@ -730,7 +730,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         if teardown_script:
             try:
                 exec(teardown_script)
-            except exceptions.ResponsePostconditionException as e:
+            except exceptions.ResponsePostConditionException as e:
                 ep.error_log('❌后置脚本执行错误: {}\n'.format(e))
                 raise
         yield

@@ -53,7 +53,7 @@ class RequestPreconditionException(BaseError):
     pass
 
 
-class ResponsePostconditionException(BaseError):
+class ResponsePostConditionException(BaseError):
 
     pass
 
