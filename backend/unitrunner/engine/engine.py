@@ -16,6 +16,7 @@ from config.settings import (
     BASE_DIR,
     DATABASES
 )
+from unitrunner import exceptions
 from unitrunner.constructor.create_function import create_function_from_parameters
 from unitrunner.builitin import compares
 from unitrunner.engine.extract import extract_by_object
@@ -75,7 +76,7 @@ class PytestRunner(object):
                     else:
                         try:
                             eval(step_key)(step_value)
-                        except (NameError, KeyError, ValueError, AttributeError):
+                        except exceptions.StepRuntimeError:
                             continue
 
         f = create_function_from_parameters(
@@ -104,7 +105,7 @@ class PytestRunner(object):
             return {
                 "query_sql": db.execute
             }
-        except Exception as err:
+        except exceptions.MysqlConnectionException as err:
             log.error(f"❌Mysql Not connected {err}")
             return none_obj
 

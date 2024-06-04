@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Change type: Reformatting, RefactoringCommit message: Improve code readability and maintainability by adding line breaks and proper indentation.">
-      <change afterPath="$PROJECT_DIR$/unitrunner/exceptions.py" afterDir="false" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Changed codebase to use new custom exception classes for better error handling and debugging.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unitrunner/builitin/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/unitrunner/builitin/functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unitrunner/database/DBClient.py" beforeDir="false" afterPath="$PROJECT_DIR$/unitrunner/database/DBClient.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unitrunner/engine/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/unitrunner/engine/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unitrunner/engine/bomb.py" beforeDir="false" afterPath="$PROJECT_DIR$/unitrunner/engine/bomb.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unitrunner/engine/engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/unitrunner/engine/engine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unitrunner/engine/extract.py" beforeDir="false" afterPath="$PROJECT_DIR$/unitrunner/engine/extract.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unitrunner/msg/feishu.py" beforeDir="false" afterPath="$PROJECT_DIR$/unitrunner/msg/feishu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unitrunner/request/http_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/unitrunner/request/http.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/unitrunner/exceptions.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -489,23 +480,7 @@
       <workItem from="1716877402125" duration="6788000" />
       <workItem from="1716963422722" duration="41689000" />
       <workItem from="1717399881227" duration="10657000" />
-      <workItem from="1717479235850" duration="9600000" />
-    </task>
-    <task id="LOCAL-00381" summary="Changed API endpoints and added new columns in the database for notices.">
-      <option name="closed" value="true" />
-      <created>1714118481733</created>
-      <option name="number" value="00381" />
-      <option name="presentableId" value="LOCAL-00381" />
-      <option name="project" value="LOCAL" />
-      <updated>1714118481733</updated>
-    </task>
-    <task id="LOCAL-00382" summary="Changed API endpoints and added new columns in the database for notices.">
-      <option name="closed" value="true" />
-      <created>1714118681053</created>
-      <option name="number" value="00382" />
-      <option name="presentableId" value="LOCAL-00382" />
-      <option name="project" value="LOCAL" />
-      <updated>1714118681053</updated>
+      <workItem from="1717479235850" duration="11145000" />
     </task>
     <task id="LOCAL-00383" summary="Add debug mode and response panel to HTTP API settings page.">
       <option name="closed" value="true" />
@@ -883,7 +858,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717048860996</updated>
     </task>
-    <option name="localTasksCounter" value="430" />
+    <task id="LOCAL-00430" summary="Changed codebase to use new custom exception classes for better error handling and debugging.">
+      <option name="closed" value="true" />
+      <created>1717495426591</created>
+      <option name="number" value="00430" />
+      <option name="presentableId" value="LOCAL-00430" />
+      <option name="project" value="LOCAL" />
+      <updated>1717495426591</updated>
+    </task>
+    <task id="LOCAL-00431" summary="Changed codebase to use new custom exception classes for better error handling and debugging.">
+      <option name="closed" value="true" />
+      <created>1717496253751</created>
+      <option name="number" value="00431" />
+      <option name="presentableId" value="LOCAL-00431" />
+      <option name="project" value="LOCAL" />
+      <updated>1717496253751</updated>
+    </task>
+    <option name="localTasksCounter" value="432" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -913,22 +904,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Change type: Reformatting, Ref" />
-    <MESSAGE value="Change type: Reformatting, Refactor" />
-    <MESSAGE value="Change type: Reformatting, Refactoring" />
-    <MESSAGE value="Change type: Reformatting, RefactoringCom" />
-    <MESSAGE value="Change type: Reformatting, RefactoringCommit" />
-    <MESSAGE value="Change type: Reformatting, RefactoringCommit message" />
-    <MESSAGE value="Change type: Reformatting, RefactoringCommit message:" />
-    <MESSAGE value="Change type: Reformatting, RefactoringCommit message: Im" />
-    <MESSAGE value="Change type: Reformatting, RefactoringCommit message: Impro" />
-    <MESSAGE value="Change type: Reformatting, RefactoringCommit message: Improve" />
-    <MESSAGE value="Change type: Reformatting, RefactoringCommit message: Improve code" />
-    <MESSAGE value="Change type: Reformatting, RefactoringCommit message: Improve code read" />
-    <MESSAGE value="Change type: Reformatting, RefactoringCommit message: Improve code readability" />
-    <MESSAGE value="Change type: Reformatting, RefactoringCommit message: Improve code readability and" />
-    <MESSAGE value="Change type: Reformatting, RefactoringCommit message: Improve code readability and maintain" />
-    <MESSAGE value="Change type: Reformatting, RefactoringCommit message: Improve code readability and maintainability" />
     <MESSAGE value="Change type: Reformatting, RefactoringCommit message: Improve code readability and maintainability by" />
     <MESSAGE value="Change type: Reformatting, RefactoringCommit message: Improve code readability and maintainability by adding" />
     <MESSAGE value="Change type: Reformatting, RefactoringCommit message: Improve code readability and maintainability by adding line" />
@@ -938,7 +913,23 @@
     <MESSAGE value="Change type: Reformatting, RefactoringCommit message: Improve code readability and maintainability by adding line breaks and proper ind" />
     <MESSAGE value="Change type: Reformatting, RefactoringCommit message: Improve code readability and maintainability by adding line breaks and proper indentation" />
     <MESSAGE value="Change type: Reformatting, RefactoringCommit message: Improve code readability and maintainability by adding line breaks and proper indentation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Change type: Reformatting, RefactoringCommit message: Improve code readability and maintainability by adding line breaks and proper indentation." />
+    <MESSAGE value="Changed" />
+    <MESSAGE value="Changed code" />
+    <MESSAGE value="Changed codebase" />
+    <MESSAGE value="Changed codebase to" />
+    <MESSAGE value="Changed codebase to use" />
+    <MESSAGE value="Changed codebase to use new" />
+    <MESSAGE value="Changed codebase to use new custom" />
+    <MESSAGE value="Changed codebase to use new custom exception" />
+    <MESSAGE value="Changed codebase to use new custom exception classes" />
+    <MESSAGE value="Changed codebase to use new custom exception classes for" />
+    <MESSAGE value="Changed codebase to use new custom exception classes for better" />
+    <MESSAGE value="Changed codebase to use new custom exception classes for better error" />
+    <MESSAGE value="Changed codebase to use new custom exception classes for better error handling" />
+    <MESSAGE value="Changed codebase to use new custom exception classes for better error handling and" />
+    <MESSAGE value="Changed codebase to use new custom exception classes for better error handling and debugging" />
+    <MESSAGE value="Changed codebase to use new custom exception classes for better error handling and debugging." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed codebase to use new custom exception classes for better error handling and debugging." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

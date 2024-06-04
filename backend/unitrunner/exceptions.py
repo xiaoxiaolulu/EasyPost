@@ -86,3 +86,8 @@ class ExtractException(BaseError):
 class GetTimestampException(BaseError):
 
     pass
+
+
+class StepRuntimeError(BaseError):
+
+    pass
