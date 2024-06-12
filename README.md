@@ -47,6 +47,24 @@ UnittestRunner 是一站式开源持续测试平台, 涵盖接口测试、UI 测
 
 ## 快速开始
 
+1. 安装poetry
+
+```bash
+$ pip install poetry
+```
+
+2. 安装依赖
+
+```bash
+$ poetry install
+```
+
+3. 启动项目
+
+```bash
+$  poetry run python .\manage.py runserver
+```
+
 
 ## 技术栈
 

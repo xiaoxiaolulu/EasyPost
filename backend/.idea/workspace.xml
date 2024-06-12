@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Changed codebase to use new custom exception classes for better error handling and debugging.">
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Add backend/pyproject.toml for Python project configuration.">
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +50,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="unittest" />
+        <entry key="$PROJECT_DIR$/.." value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -140,8 +142,8 @@
     &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/ProgramData/miniconda3/condabin/conda.bat&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;python-poetry&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/86135/Desktop/EasyPost&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -305,11 +307,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.DBClient" />
-        <item itemvalue="Python.test" />
         <item itemvalue="Python tests.Python tests in test_a.py" />
         <item itemvalue="Python tests.Python tests in __init__.py" />
         <item itemvalue="Python tests.Python tests for test_simple1" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.DBClient" />
       </list>
     </recent_temporary>
   </component>
@@ -487,23 +489,8 @@
       <workItem from="1718170607662" duration="59000" />
       <workItem from="1718170702226" duration="2024000" />
       <workItem from="1718172746821" duration="333000" />
-      <workItem from="1718173752090" duration="2001000" />
-    </task>
-    <task id="LOCAL-00383" summary="Add debug mode and response panel to HTTP API settings page.">
-      <option name="closed" value="true" />
-      <created>1714122596148</created>
-      <option name="number" value="00383" />
-      <option name="presentableId" value="LOCAL-00383" />
-      <option name="project" value="LOCAL" />
-      <updated>1714122596148</updated>
-    </task>
-    <task id="LOCAL-00384" summary="Add debug mode and response panel to HTTP API settings page.">
-      <option name="closed" value="true" />
-      <created>1714125578769</created>
-      <option name="number" value="00384" />
-      <option name="presentableId" value="LOCAL-00384" />
-      <option name="project" value="LOCAL" />
-      <updated>1714125578769</updated>
+      <workItem from="1718173752090" duration="2837000" />
+      <workItem from="1718176825160" duration="663000" />
     </task>
     <task id="LOCAL-00385" summary="Change websocket consumers import path in asgi.py and rename websocket consumers file.">
       <option name="closed" value="true" />
@@ -881,7 +868,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717496253751</updated>
     </task>
-    <option name="localTasksCounter" value="432" />
+    <task id="LOCAL-00432" summary="Add backend/pyproject.toml for Python project configuration.">
+      <option name="closed" value="true" />
+      <created>1718175886381</created>
+      <option name="number" value="00432" />
+      <option name="presentableId" value="LOCAL-00432" />
+      <option name="project" value="LOCAL" />
+      <updated>1718175886381</updated>
+    </task>
+    <task id="LOCAL-00433" summary="Add backend/pyproject.toml for Python project configuration.">
+      <option name="closed" value="true" />
+      <created>1718176101251</created>
+      <option name="number" value="00433" />
+      <option name="presentableId" value="LOCAL-00433" />
+      <option name="project" value="LOCAL" />
+      <updated>1718176101251</updated>
+    </task>
+    <option name="localTasksCounter" value="434" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -903,7 +906,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="python-poetry" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -911,19 +926,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Change type: Reformatting, RefactoringCommit message: Improve code readability and maintainability by" />
-    <MESSAGE value="Change type: Reformatting, RefactoringCommit message: Improve code readability and maintainability by adding" />
-    <MESSAGE value="Change type: Reformatting, RefactoringCommit message: Improve code readability and maintainability by adding line" />
-    <MESSAGE value="Change type: Reformatting, RefactoringCommit message: Improve code readability and maintainability by adding line breaks" />
-    <MESSAGE value="Change type: Reformatting, RefactoringCommit message: Improve code readability and maintainability by adding line breaks and" />
-    <MESSAGE value="Change type: Reformatting, RefactoringCommit message: Improve code readability and maintainability by adding line breaks and proper" />
-    <MESSAGE value="Change type: Reformatting, RefactoringCommit message: Improve code readability and maintainability by adding line breaks and proper ind" />
-    <MESSAGE value="Change type: Reformatting, RefactoringCommit message: Improve code readability and maintainability by adding line breaks and proper indentation" />
-    <MESSAGE value="Change type: Reformatting, RefactoringCommit message: Improve code readability and maintainability by adding line breaks and proper indentation." />
-    <MESSAGE value="Changed" />
-    <MESSAGE value="Changed code" />
-    <MESSAGE value="Changed codebase" />
-    <MESSAGE value="Changed codebase to" />
     <MESSAGE value="Changed codebase to use" />
     <MESSAGE value="Changed codebase to use new" />
     <MESSAGE value="Changed codebase to use new custom" />
@@ -936,7 +938,20 @@
     <MESSAGE value="Changed codebase to use new custom exception classes for better error handling and" />
     <MESSAGE value="Changed codebase to use new custom exception classes for better error handling and debugging" />
     <MESSAGE value="Changed codebase to use new custom exception classes for better error handling and debugging." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed codebase to use new custom exception classes for better error handling and debugging." />
+    <MESSAGE value="Add" />
+    <MESSAGE value="Add backend" />
+    <MESSAGE value="Add backend/" />
+    <MESSAGE value="Add backend/py" />
+    <MESSAGE value="Add backend/pyproject" />
+    <MESSAGE value="Add backend/pyproject." />
+    <MESSAGE value="Add backend/pyproject.tom" />
+    <MESSAGE value="Add backend/pyproject.toml" />
+    <MESSAGE value="Add backend/pyproject.toml for" />
+    <MESSAGE value="Add backend/pyproject.toml for Python" />
+    <MESSAGE value="Add backend/pyproject.toml for Python project" />
+    <MESSAGE value="Add backend/pyproject.toml for Python project configuration" />
+    <MESSAGE value="Add backend/pyproject.toml for Python project configuration." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add backend/pyproject.toml for Python project configuration." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
