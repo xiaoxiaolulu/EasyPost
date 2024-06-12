@@ -9,8 +9,7 @@ from datetime import (
     timedelta
 )
 from typing import (
-    Any,
-    Optional
+    Any
 )
 from django.core.exceptions import ImproperlyConfigured
 from django.db.models import Q

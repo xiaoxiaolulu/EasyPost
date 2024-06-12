@@ -1,6 +1,7 @@
 from api.scheduler.sqlalchemy_store import SQLAlchemyJobStore
 from config.settings import DATABASES as DB
 
+
 config = {
     'apscheduler.jobstores': {
         'default': SQLAlchemyJobStore(

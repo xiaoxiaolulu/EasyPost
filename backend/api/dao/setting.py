@@ -12,8 +12,7 @@ import types
 import typing
 import uuid
 from typing import (
-    Any,
-    List
+    Any
 )
 from django.core.exceptions import ValidationError
 from django.db import IntegrityError

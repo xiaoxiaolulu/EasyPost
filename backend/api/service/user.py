@@ -11,8 +11,7 @@ from rest_framework_simplejwt.settings import api_settings
 from rest_framework_simplejwt.views import TokenObtainPairView
 from api.dao.user import UserDao
 from api.mixins.magic import (
-    MagicListAPI,
-    MagicRetrieveApi
+    MagicListAPI
 )
 from api.schema.user import (
     UserSimpleSerializers,

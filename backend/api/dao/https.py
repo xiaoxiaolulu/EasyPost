@@ -3,7 +3,6 @@ DESCRIPTION：接口测试数据访问对象
 :Created by Null.
 """
 import json
-import os
 from typing import (
     Any,
     List
@@ -18,7 +17,6 @@ from api.emus.HttpEnum import (
     ApiSnapshotEnum,
     TreeEnum
 )
-from api.events.event_manager import EventManager
 from api.models.https import (
     Relation,
     Api,
@@ -32,10 +30,6 @@ from unitrunner.engine.base import (
     run_api
 )
 from unitrunner.request.parser import HandelTestData
-from utils.api_migrate import (
-    DataMigrator,
-    UitRunnerSource
-)
 from utils.decorator import lock
 from utils.logger import logger
 from utils.trees import (
