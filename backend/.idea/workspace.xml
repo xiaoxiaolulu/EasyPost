@@ -4,21 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Changed codebase to use new custom exception classes for better error handling and debugging.">
-      <change afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/backend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="Add backend/pyproject.toml for Python project configuration.">
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/dao/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/https.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/dao/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/setting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/dao/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/scheduler/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/scheduler/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/service/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/https.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/service/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/service/user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,8 +232,9 @@
         <env name="DJANGO_SETTINGS_MODULE" value="config.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.11" />
       <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
@@ -498,22 +489,9 @@
       <workItem from="1718170702226" duration="2024000" />
       <workItem from="1718172746821" duration="333000" />
       <workItem from="1718173752090" duration="2001000" />
-    </task>
-    <task id="LOCAL-00383" summary="Add debug mode and response panel to HTTP API settings page.">
-      <option name="closed" value="true" />
-      <created>1714122596148</created>
-      <option name="number" value="00383" />
-      <option name="presentableId" value="LOCAL-00383" />
-      <option name="project" value="LOCAL" />
-      <updated>1714122596148</updated>
-    </task>
-    <task id="LOCAL-00384" summary="Add debug mode and response panel to HTTP API settings page.">
-      <option name="closed" value="true" />
-      <created>1714125578769</created>
-      <option name="number" value="00384" />
-      <option name="presentableId" value="LOCAL-00384" />
-      <option name="project" value="LOCAL" />
-      <updated>1714125578769</updated>
+      <workItem from="1718179645339" duration="5180000" />
+      <workItem from="1718243271751" duration="760000" />
+      <workItem from="1718329853695" duration="598000" />
     </task>
     <task id="LOCAL-00385" summary="Change websocket consumers import path in asgi.py and rename websocket consumers file.">
       <option name="closed" value="true" />
@@ -891,7 +869,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717496253751</updated>
     </task>
-    <option name="localTasksCounter" value="432" />
+    <task id="LOCAL-00432" summary="Add backend/pyproject.toml for Python project configuration.">
+      <option name="closed" value="true" />
+      <created>1718178224917</created>
+      <option name="number" value="00432" />
+      <option name="presentableId" value="LOCAL-00432" />
+      <option name="project" value="LOCAL" />
+      <updated>1718178224917</updated>
+    </task>
+    <task id="LOCAL-00433" summary="Add backend/pyproject.toml for Python project configuration.">
+      <option name="closed" value="true" />
+      <created>1718178260031</created>
+      <option name="number" value="00433" />
+      <option name="presentableId" value="LOCAL-00433" />
+      <option name="project" value="LOCAL" />
+      <updated>1718178260031</updated>
+    </task>
+    <option name="localTasksCounter" value="434" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -921,7 +915,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Change type: Reformatting, RefactoringCommit message: Improve code readability and maintainability by" />
     <MESSAGE value="Change type: Reformatting, RefactoringCommit message: Improve code readability and maintainability by adding" />
     <MESSAGE value="Change type: Reformatting, RefactoringCommit message: Improve code readability and maintainability by adding line" />
     <MESSAGE value="Change type: Reformatting, RefactoringCommit message: Improve code readability and maintainability by adding line breaks" />
@@ -946,7 +939,8 @@
     <MESSAGE value="Changed codebase to use new custom exception classes for better error handling and" />
     <MESSAGE value="Changed codebase to use new custom exception classes for better error handling and debugging" />
     <MESSAGE value="Changed codebase to use new custom exception classes for better error handling and debugging." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed codebase to use new custom exception classes for better error handling and debugging." />
+    <MESSAGE value="Add backend/pyproject.toml for Python project configuration." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add backend/pyproject.toml for Python project configuration." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
