@@ -18,7 +18,7 @@ from django.db.models import (
     DateTimeField,
     SET_NULL,
     AutoField,
-    IntegerChoices
+    IntegerChoices, TextChoices
 )
 from api.models.project import Project
 from django.utils.translation import gettext_lazy as _
@@ -53,6 +53,20 @@ class TreeTypeChoices(IntegerChoices):
     API = 0
 
     CASE = 1
+
+
+class ClosedTasksStateChoices(IntegerChoices):
+
+    OPEN = 0
+
+    CLOSED = 1
+
+
+class TestTypeChoices(TextChoices):
+
+    UI = "UI"
+
+    API = "API"
 
 
 class Relation(Model):
@@ -266,6 +280,38 @@ class ApiCopy(Model):
 
     class Meta:
         verbose_name = _('ApiCopy')
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.name
+
+
+class ClosedTasks(Model):
+    """
+    闭环任务
+
+    * name: 接口名称
+    * project:关联项目
+    * runnability: 运行情况
+    * state: 处理状态
+    * detail: 详情
+    * create_time: 创建时间
+    * update_time: 更新时间
+    """
+    id = AutoField(primary_key=True)
+    name = CharField(max_length=250, null=True, blank=True, verbose_name=_('ClosedTasks Name'))
+    runnability = CharField(max_length=250, null=True, blank=True, verbose_name=_('ClosedTasks Runnability'))
+    state = CharField(max_length=50, verbose_name=_('ClosedTasks State'), choices=ClosedTasksStateChoices,
+                      default=ClosedTasksStateChoices.OPEN)
+    test_type = CharField(max_length=50, verbose_name=_('ClosedTasks TestType'), choices=TestTypeChoices,
+                          default=TestTypeChoices.API)
+    detail = TextField(verbose_name=_('ClosedTasks Detail'), null=False, default=[])
+    user = ForeignKey(User, related_name="closed_creator", null=True, on_delete=SET_NULL, verbose_name=_('User'))
+    create_time = DateTimeField(auto_now_add=True, verbose_name=_('ClosedTasks CreateTime'))
+    update_time = DateTimeField(auto_now=True, verbose_name=_('ClosedTasks UpdateTime'))
+
+    class Meta:
+        verbose_name = _('ClosedTasks')
         verbose_name_plural = verbose_name
 
     def __str__(self):

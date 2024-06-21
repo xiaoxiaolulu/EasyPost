@@ -3,7 +3,8 @@ from api.models.https import (
     Relation,
     Api,
     Case,
-    Step
+    Step,
+    ClosedTasks
 )
 from api.schema.user import UserSimpleSerializers
 
@@ -55,3 +56,17 @@ class CaseSerializers(serializers.ModelSerializer):
         read_only_fields = ('name', 'project', 'directory_id', 'priority',
                             'rerun', 'threads', 'user', 'create_time',
                             'update_time', 'desc', 'step')
+
+
+class ClosedTasksSerializers(serializers.ModelSerializer):
+
+    id = serializers.IntegerField(read_only=True)
+    user = UserSimpleSerializers(required=False, default=serializers.CurrentUserDefault())
+    create_time = serializers.DateTimeField(read_only=True)
+    update_time = serializers.DateTimeField(read_only=True)
+
+    class Meta:
+        model = ClosedTasks
+        fields = '__all__'
+        read_only_fields = ('name', 'project', 'runnability', 'state',
+                            'detail', 'user',  'create_time', 'update_time')

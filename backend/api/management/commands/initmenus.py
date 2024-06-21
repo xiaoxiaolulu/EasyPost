@@ -244,4 +244,30 @@ class Command(BaseCommand):
             icon="AddLocation",
             parent_id=config_main_menu.id
         )
+        closed_loop_main_menu, created = Menu.objects.get_or_create(
+            name='closed',
+            path='/closed',
+            component="Layout",
+            redirect="/closed/404",
+            title="闭环",
+            icon="PictureRounded",
+            parent_id=0
+        )
+        Menu.objects.get_or_create(
+            name='loop',
+            path='/closed/loop',
+            component="/closed/loop/index.vue",
+            title="闭环任务",
+            icon="HelpFilled",
+            parent_id=closed_loop_main_menu.id
+        )
+        Menu.objects.get_or_create(
+            name='closedTasksDetail',
+            path='/closedTasks/detail',
+            component="/closed/loop/components/closedTasksDetail.vue",
+            title="闭环任务详情",
+            icon="ElementPlus",
+            hidden=True,
+            parent_id=closed_loop_main_menu.id
+        )
         self.stdout.write('菜单初始化成功！')

@@ -55,6 +55,7 @@ class Project(Model):
     * user: 用户
     * avatar: 项目头像
     * type: 项目类型
+    * test_type: 测试类型
     * desc: 描述
     * private: 是否私有
     * create_time: 创建时间

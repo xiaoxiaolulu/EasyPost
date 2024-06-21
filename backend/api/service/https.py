@@ -1,5 +1,7 @@
 import os
 from django.core.exceptions import ObjectDoesNotExist
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework import filters
 from rest_framework import (
     status,
     mixins,
@@ -10,19 +12,21 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from api.dao.https import HttpDao
 from api.events.registry import registry
+from api.filters.http import ClosedTasksFilter
 from api.mixins.async_generics import AsyncAPIView
 from api.models.https import (
     Relation,
     Api,
-    Case
+    Case, ClosedTasks
 )
 from api.mixins.magic import (
-    MagicRetrieveApi
+    MagicRetrieveApi, MagicListAPI
 )
 from api.schema.https import (
     RelationSerializer,
     ApiSerializer,
-    CaseSerializers
+    CaseSerializers,
+    ClosedTasksSerializers
 )
 from config.settings import MEDIA_ROOT
 from api.response.fatcory import ResponseStandard
@@ -264,3 +268,14 @@ class CaseListView(mixins.ListModelMixin, viewsets.GenericViewSet):
             return Response(serializer.data)
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class ClosedTasksViewSet(MagicListAPI):
+
+    queryset = ClosedTasks.objects.all()
+    serializer_class = ClosedTasksSerializers
+    permission_classes = [IsAuthenticated]
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
+    filterset_class = ClosedTasksFilter
+    search_fields = ['name']
+    ordering_fields = ['create_time']
