@@ -8,7 +8,9 @@ from api.service.https import (
     ApiSnapshotView,
     ApiTestListView,
     ImportApiView,
-    RunApiView, ClosedTasksViewSet
+    RunApiView,
+    ClosedTasksViewSet,
+    ClosedTasksRetrieveApi
 )
 
 
@@ -22,7 +24,8 @@ app_urls = [
     path("list", ApiTestListView.as_view({'get': 'list'})),
     path("importApi/<int:pk>", ImportApiView.as_view()),
     path('run', RunApiView.as_view()),
-    path("closedTasks", ClosedTasksViewSet.as_view())
+    path("closedTasks", ClosedTasksViewSet.as_view()),
+    path("closedTasks/detail/<int:pk>", ClosedTasksRetrieveApi.as_view())
 ]
 
 

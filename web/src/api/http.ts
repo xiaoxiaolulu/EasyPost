@@ -140,3 +140,12 @@ export function getClosedTasksList(params: any) {
         params
     })
 }
+
+
+export function getClosedTasksDetail(data: any) {
+    return request({
+        url: `/api/http/closedTasks/detail/${data.id}`,
+        method: 'get',
+        data
+    })
+}

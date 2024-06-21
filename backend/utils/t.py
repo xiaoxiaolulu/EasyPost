@@ -54,10 +54,10 @@ def get_step_info(step):
     Returns:
         tuple: A tuple containing (context, error_message).
     """
-
+    title = step.get("title")
     context = step.get("context")
     error_message = step.get("err", {}).get("message")
-    return context, error_message
+    return title, context, error_message
 
 
 def print_step_info(step):
@@ -67,8 +67,8 @@ def print_step_info(step):
         step (dict): A dictionary representing a test step.
     """
 
-    context, error_message = get_step_info(step)
-    return context, error_message
+    title, context, error_message = get_step_info(step)
+    return title, context, error_message
 
 
 def main():
@@ -78,13 +78,17 @@ def main():
         collections = []
         content = read_json_file("mochawesome.json")
         suites = get_suites(content)
+
         for suite in suites:
 
+            suite_name = suite.get("title", None)
             for i, step in enumerate(suite["tests"], 1):
-                context, error_message = print_step_info(step)
+                case_title, context, error_message = print_step_info(step)
                 context = eval(context)
 
                 collections.append({
+                    "func_name": suite_name,
+                    "scene_name": case_title,
                     "steps": [x + ("×" if (i == len(context) - 2 and context[-1].endswith(".png")) else "√")
                               for i, x in enumerate(context)
                               if not (i == len(context) - 1 and str(x).endswith(".png"))],
@@ -98,5 +102,5 @@ def main():
 
 if __name__ == "__main__":
     print(main())
-    # for value in main():
-    #     print(value)
+    for value in main():
+        print(value)

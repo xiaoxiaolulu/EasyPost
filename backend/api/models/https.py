@@ -18,7 +18,8 @@ from django.db.models import (
     DateTimeField,
     SET_NULL,
     AutoField,
-    IntegerChoices, TextChoices
+    IntegerChoices,
+    TextChoices
 )
 from api.models.project import Project
 from django.utils.translation import gettext_lazy as _
@@ -67,6 +68,17 @@ class TestTypeChoices(TextChoices):
     UI = "UI"
 
     API = "API"
+
+
+class AnomalousCauseChoices(TextChoices):
+
+    SYSTEM_ERR = "系统异常"
+
+    CASE_ERR = "用例修正"
+
+    ENVIRON_ERR = "环境异常"
+
+    ASSERT_ERR = "断言错误"
 
 
 class Relation(Model):
@@ -294,7 +306,6 @@ class ClosedTasks(Model):
     * project:关联项目
     * runnability: 运行情况
     * state: 处理状态
-    * detail: 详情
     * create_time: 创建时间
     * update_time: 更新时间
     """
@@ -305,7 +316,6 @@ class ClosedTasks(Model):
                       default=ClosedTasksStateChoices.OPEN)
     test_type = CharField(max_length=50, verbose_name=_('ClosedTasks TestType'), choices=TestTypeChoices,
                           default=TestTypeChoices.API)
-    detail = TextField(verbose_name=_('ClosedTasks Detail'), null=False, default=[])
     user = ForeignKey(User, related_name="closed_creator", null=True, on_delete=SET_NULL, verbose_name=_('User'))
     create_time = DateTimeField(auto_now_add=True, verbose_name=_('ClosedTasks CreateTime'))
     update_time = DateTimeField(auto_now=True, verbose_name=_('ClosedTasks UpdateTime'))
@@ -316,3 +326,34 @@ class ClosedTasks(Model):
 
     def __str__(self):
         return self.name
+
+
+class ClosedTasksDetail(Model):
+    """
+    闭环任务详情
+
+    * func_name: 功能名称
+    * scene_name: 场景名称
+    * err_step: 错误步骤
+    * err_type: 错误类型
+    * handler: 处理人
+    * cause: 错误原因
+    * steps: 步骤
+    """
+    task = ForeignKey(ClosedTasks, null=True, on_delete=SET_NULL, related_name='task',
+                      verbose_name=_('ClosedTasksDetail Task'))
+    func_name = CharField(max_length=250, null=True, blank=True, verbose_name=_('ClosedTasksDetail FuncName'))
+    scene_name = CharField(max_length=250, null=True, blank=True, verbose_name=_('ClosedTasksDetail SceneName'))
+    err_step = TextField(verbose_name=_('ClosedTasksDetail ErrStep'), null=False, default="")
+    err_type = CharField(max_length=50, verbose_name=_('ClosedTasksDetail ErrType'), choices=AnomalousCauseChoices,
+                         null=True)
+    handler = CharField(max_length=250, null=True, blank=True, verbose_name=_('ClosedTasksDetail Handler'))
+    cause = TextField(verbose_name=_('ClosedTasksDetail cause'), null=False, default="")
+    steps = TextField(verbose_name=_('ClosedTasksDetail steps'), null=False, default=[])
+
+    class Meta:
+        verbose_name = _('ClosedTasksDetail')
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.func_name

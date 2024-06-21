@@ -279,3 +279,10 @@ class ClosedTasksViewSet(MagicListAPI):
     filterset_class = ClosedTasksFilter
     search_fields = ['name']
     ordering_fields = ['create_time']
+
+
+class ClosedTasksRetrieveApi(MagicRetrieveApi):
+
+    queryset = ClosedTasks.objects.all()
+    serializer_class = ClosedTasksSerializers
+    permission_classes = [IsAuthenticated]
