@@ -131,3 +131,12 @@ export function importApi(data: any) {
         data
     })
 }
+
+
+export function getClosedTasksList(params: any) {
+    return request({
+        url: `/api/http/closedTasks`,
+        method: 'get',
+        params
+    })
+}
