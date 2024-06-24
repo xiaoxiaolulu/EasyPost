@@ -10,7 +10,7 @@
           <div class="headerContent">
             <img
                 class="login-logo"
-                src="https://s11.ax1x.com/2024/01/31/pFKvjUA.png"
+                src="@/assets/image/logo1.png"
                 alt="logo"
             />
 <!--            <span class="title">EasyPost</span>-->

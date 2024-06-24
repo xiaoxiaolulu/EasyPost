@@ -24,7 +24,13 @@
         <el-table-column prop="func_name" label="功能名称"/>
         <el-table-column prop="scene_name" label="场景名称"/>
         <el-table-column prop="err_step" label="异常步骤"/>
-        <el-table-column prop="err_type" label="异常类型"/>
+        <el-table-column prop="err_type" label="异常类型">
+          <template #default="scope">
+            <el-tag type="danger">
+              {{ scope.row.err_type }}
+            </el-tag>
+          </template>
+        </el-table-column>
         <el-table-column prop="handler" label="异常原因"/>
         <el-table-column prop="cause" label="处理人"/>
         <el-table-column label="操作" width="150px" align="center">

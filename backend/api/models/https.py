@@ -74,7 +74,7 @@ class AnomalousCauseChoices(TextChoices):
 
     SYSTEM_ERR = "系统异常"
 
-    CASE_ERR = "用例修正"
+    CASE_ERR = "用例错误"
 
     ENVIRON_ERR = "环境异常"
 
