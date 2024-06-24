@@ -21,24 +21,42 @@
         border
       >
         <el-table-column prop="id" label="序号" width="55" />
-        <el-table-column prop="func_name" label="功能名称"/>
-        <el-table-column prop="scene_name" label="场景名称"/>
-        <el-table-column prop="err_step" label="异常步骤"/>
-        <el-table-column prop="err_type" label="异常类型">
+        <el-table-column prop="func_name" label="功能名称">
+          <template #default="scope">
+            {{ellipsis(scope.row.func_name, 15, 20)}}
+          </template>
+        </el-table-column>
+        <el-table-column prop="scene_name" label="场景名称">
+          <template #default="scope">
+            {{ellipsis(scope.row.scene_name, 15, 20)}}
+          </template>
+        </el-table-column>
+        <el-table-column prop="err_step" label="异常步骤" width="290">
+          <template #default="scope">
+          <span style="display: inline-block">
+            <el-icon style="color: red; margin-right: 5px">
+              <WarningFilled />
+            </el-icon>
+            {{ellipsis(scope.row.err_step, 15, 30)}}
+          </span>
+          </template>
+        </el-table-column>
+        <el-table-column prop="err_type" label="异常类型" width="100">
           <template #default="scope">
             <el-tag type="danger">
               {{ scope.row.err_type }}
             </el-tag>
           </template>
         </el-table-column>
-        <el-table-column prop="handler" label="异常原因"/>
-        <el-table-column prop="cause" label="处理人"/>
+        <el-table-column prop="cause" label="异常原因"/>
+        <el-table-column prop="handler" label="处理人" width="100"/>
         <el-table-column label="操作" width="150px" align="center">
           <template #default="scope">
-            <el-button type="primary" link>查看详情</el-button>
+            <el-button type="primary" link  @click="handle(scope.row)">查看详情</el-button>
           </template>
         </el-table-column>
       </el-table>
+      <step  ref="stepRef" v-model="isShow"  @onChangeDialog="onChangeDialog"/>
     </div>
   </div>
 </template>
@@ -51,14 +69,21 @@ import {useRoute, useRouter} from "vue-router";
 import {ElMessage, FormInstance} from "element-plus";
 import type {UploadInstance} from 'element-plus'
 import CardHeader from '@/components/CardHeader/index.vue'
+import { ellipsis } from "@/utils";
+import Step from "@/views/closed/loop/components/step.vue";
 
 const tableData = reactive([])
+
+const stepRef = ref()
 
 const loading = ref(false)
 
 const router = useRouter()
 
 const route = useRoute()
+
+const rowData = ref({})
+
 
 const queryList = () => {
   const pk = router.currentRoute.value.query.id
@@ -75,6 +100,19 @@ const goBack = () => {
   router.push({name: 'projectList'})
 }
 
+const isShow = ref(false);
+
+const handle = (row: any) => {
+  rowData.value = row
+  isShow.value = true;
+  stepRef.value.setData(row)
+};
+
+const onChangeDialog = (val: any) => {
+  isShow.value = false;
+  queryList()
+};
+
 </script>
 
 <style lang="scss">
@@ -90,43 +128,5 @@ const goBack = () => {
 
 .card-description {
   float: left;
-}
-
-.project-avatar-image {
-  background: transparent;
-  width: 96px !important;
-  height: 96px !important;
-  line-height: 48px;
-  font-size: 18px;
-
-  img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
-.avatar {
-  margin: 0;
-  padding: 0;
-  color: rgba(0, 0, 0, .85);
-  font-size: 13px;
-  font-variant: tabular-nums;
-  line-height: 1.5715;
-  list-style: none;
-  font-feature-settings: "tnum", "tnum";
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-  color: #fff;
-  white-space: nowrap;
-  text-align: center;
-  vertical-align: middle;
-  background: #ccc;
-  width: 32px;
-  height: 32px;
-  line-height: 32px;
-  border-radius: 50%
 }
 </style>

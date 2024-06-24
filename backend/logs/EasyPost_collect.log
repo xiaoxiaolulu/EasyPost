@@ -313,3 +313,42 @@ INFO     [2024-06-24 10:18:45,829] [none] django.utils.autoreload: Watching for 
 WARNING  [2024-06-24 10:18:47,345] [ee7381e2ab474a7cbed2cd774918b350] django.request: Not Found: /media/avatar/default.png
 INFO     [2024-06-24 10:19:29,674] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\config\urls.py changed, reloading.
 INFO     [2024-06-24 10:19:31,738] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-06-24 14:31:17,458] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\__init__.py changed, reloading.
+INFO     [2024-06-24 14:31:19,033] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-06-24 14:32:17,172] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\__init__.py changed, reloading.
+INFO     [2024-06-24 14:32:18,351] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-06-24 14:33:33,319] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\__init__.py changed, reloading.
+INFO     [2024-06-24 14:33:34,526] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-06-24 14:33:51,324] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\__init__.py changed, reloading.
+INFO     [2024-06-24 14:33:52,498] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-06-24 14:39:01,972] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\__init__.py changed, reloading.
+INFO     [2024-06-24 14:39:03,082] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-06-24 14:39:29,711] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\__init__.py changed, reloading.
+INFO     [2024-06-24 14:39:30,812] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-06-24 14:40:09,650] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\__init__.py changed, reloading.
+INFO     [2024-06-24 14:40:10,805] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-06-24 14:43:08,181] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\https.py changed, reloading.
+INFO     [2024-06-24 14:43:09,266] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-06-24 14:58:02,021] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\https.py changed, reloading.
+INFO     [2024-06-24 14:58:03,627] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-06-24 15:00:05,064] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\__init__.py changed, reloading.
+INFO     [2024-06-24 15:00:06,149] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-06-24 15:00:41,638] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\__init__.py changed, reloading.
+INFO     [2024-06-24 15:00:42,744] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-06-24 15:01:48,449] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\__init__.py changed, reloading.
+INFO     [2024-06-24 15:01:49,694] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-06-24 15:02:41,773] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\__init__.py changed, reloading.
+INFO     [2024-06-24 15:02:42,934] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-06-24 15:06:34,949] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\__init__.py changed, reloading.
+INFO     [2024-06-24 15:06:36,019] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-06-24 15:14:15,463] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\__init__.py changed, reloading.
+INFO     [2024-06-24 15:14:16,555] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-06-24 15:15:04,394] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\backend\api\models\https.py changed, reloading.
+INFO     [2024-06-24 15:15:05,474] [none] django.utils.autoreload: Watching for file changes with StatReloader
+WARNING  [2024-06-24 15:34:01,190] [8b3983b8c253460d9f35863566e787d0] django.request: Not Found: /media/avatar/fail.png
+WARNING  [2024-06-24 15:34:02,812] [a0742aac51414d41a572e35d90b5a581] django.request: Not Found: /media/avatar/fail.png
+WARNING  [2024-06-24 15:35:30,654] [8f6e8bed7637412d8fd0a4c0fb36da6e] django.request: Not Found: /media/avatar/fail.png
+WARNING  [2024-06-24 15:35:33,600] [095f511adbcf42bc98bd2b1bd6f109ef] django.request: Not Found: /media/avatar/fail.png
+WARNING  [2024-06-24 15:35:33,789] [f7dc3fb06c87485f85c8904bd8ce31d2] django.request: Not Found: /media/avatar/fail.png
+WARNING  [2024-06-24 15:35:38,439] [9891ff1de40b4c318d01db6290bbc0ea] django.request: Not Found: /media/avatar/failed.png
+WARNING  [2024-06-24 15:35:39,854] [0a6f402203b84eecbfc9cdddce467382] django.request: Not Found: /media/avatar/failed.png

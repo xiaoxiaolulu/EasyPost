@@ -430,13 +430,13 @@ export function getTimeStateStr() {
   if (hours >= 0 && hours <= 6) return `凌晨好`;
 }
 
-export function ellipsis(value: string) {
+export function ellipsis(value: string, length: number, step: number) {
   console.log(value.length)
   if (!value) {
     return "";
   }
-  if (value.length > 15) {
-    return value.slice(0, 35) + "...";
+  if (value.length > length) {
+    return value.slice(0, step) + "...";
   } else {
     return value;
   }

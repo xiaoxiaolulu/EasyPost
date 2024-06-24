@@ -347,6 +347,8 @@ class ClosedTasksDetail(Model):
     err_step = TextField(verbose_name=_('ClosedTasksDetail ErrStep'), null=False, default="")
     err_type = CharField(max_length=50, verbose_name=_('ClosedTasksDetail ErrType'), choices=AnomalousCauseChoices,
                          null=True)
+    err_msg = TextField(verbose_name=_('ClosedTasksDetail ErrMsg'), null=False, default="")
+    err_png = CharField(max_length=250, null=True, blank=True, verbose_name=_('ClosedTasksDetail ErrPng'))
     handler = CharField(max_length=250, null=True, blank=True, verbose_name=_('ClosedTasksDetail Handler'))
     cause = TextField(verbose_name=_('ClosedTasksDetail cause'), null=False, default="")
     steps = TextField(verbose_name=_('ClosedTasksDetail steps'), null=False, default=[])

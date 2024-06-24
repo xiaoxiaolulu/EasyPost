@@ -6,7 +6,7 @@
       </router-link>
       <router-link v-else key="expand" class="sidebar-logo-link" to="/">
         <img src="@/assets/image/logo.png" class="sidebar-logo">
-        <h1 class="sidebar-title">EasyPost</h1>
+        <h1 class="sidebar-title">UnitRunner</h1>
       </router-link>
     </transition>
   </div>
@@ -41,7 +41,6 @@ defineProps<{ isCollapse: boolean }>();
         width: 32px;
         height: 32px;
         vertical-align: middle;
-
       }
       & .sidebar-title {
         display: inline-block;
