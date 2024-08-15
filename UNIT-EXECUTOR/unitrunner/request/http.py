@@ -66,7 +66,7 @@ class HttpHandler(object):
         """
         try:
             requests_body = response.request.body
-            if requests_body:
+            if isinstance(requests_body, bytes):
                 requests_body = json.loads(response.request.body.decode('utf-8'))
                 requests_body = json.dumps(requests_body, ensure_ascii=False, indent=2)
             return requests_body

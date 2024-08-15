@@ -966,3 +966,614 @@
   "origin": "107.172.57.49",
   "url": "http://httpbin.org/post"
 }
+2024-08-15 17:07:32 [ThreadPoolExecutor-3_0]-[base.__send_request:444]-[INFO]:--------  request info ----------
+{
+    "json": {
+        "原高专认": "要决做至史机"
+    },
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "{\"\\u539f\\u9ad8\\u4e13\\u8ba4\": \"\\u8981\\u51b3\\u505a\\u81f3\\u53f2\\u673a\"}",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "68",
+    "Content-Type": "application/json",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66bdc553-2d06485c2e60e2fa52ae8ca4"
+  },
+  "json": {
+    "原高专认": "要决做至史机"
+  },
+  "origin": "107.172.57.49",
+  "url": "http://httpbin.org/post"
+}
+2024-08-15 17:08:03 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-08-15 17:08:03 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-08-15 17:08:03 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-08-15 17:08:03 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-08-15 17:08:03 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-08-15 17:08:03 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-08-15 17:08:03 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-08-15 17:08:03 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-08-15 17:08:03 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-08-15 17:08:03 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-08-15 17:08:03 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-08-15 17:08:03 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-08-15 17:08:03 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-08-15 17:08:03 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-08-15 17:08:03 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-08-15 17:08:03 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-08-15 17:08:03 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-08-15 17:08:03 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-08-15 17:08:03 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-08-15 17:08:03 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-08-15 17:08:03 [MainThread]-[main.main:13]-[INFO]:启动服务: 0.0.0.0:5001
+2024-08-15 17:08:08 [ThreadPoolExecutor-0_0]-[base.__send_request:444]-[INFO]:--------  request info ----------
+{
+    "json": {
+        "原高专认": "要决做至史机"
+    },
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "{\"\\u539f\\u9ad8\\u4e13\\u8ba4\": \"\\u8981\\u51b3\\u505a\\u81f3\\u53f2\\u673a\"}",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "68",
+    "Content-Type": "application/json",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66bdc576-7f2cf98260c5aea86e5d7972"
+  },
+  "json": {
+    "原高专认": "要决做至史机"
+  },
+  "origin": "107.172.57.49",
+  "url": "http://httpbin.org/post"
+}
+2024-08-15 17:08:35 [ThreadPoolExecutor-1_0]-[base.__send_request:444]-[INFO]:--------  request info ----------
+{
+    "json": {
+        "name": "要决做至史机"
+    },
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "{\"name\": \"\\u8981\\u51b3\\u505a\\u81f3\\u53f2\\u673a\"}",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "48",
+    "Content-Type": "application/json",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66bdc592-79063213324455ec56eb4c8d"
+  },
+  "json": {
+    "name": "要决做至史机"
+  },
+  "origin": "107.172.57.49",
+  "url": "http://httpbin.org/post"
+}
+2024-08-15 17:09:25 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-08-15 17:09:25 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-08-15 17:09:25 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-08-15 17:09:25 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-08-15 17:09:25 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-08-15 17:09:25 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-08-15 17:09:25 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-08-15 17:09:25 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-08-15 17:09:25 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-08-15 17:09:25 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-08-15 17:09:25 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-08-15 17:09:25 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-08-15 17:09:25 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-08-15 17:09:25 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-08-15 17:09:25 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-08-15 17:09:25 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-08-15 17:09:25 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-08-15 17:09:25 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-08-15 17:09:25 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-08-15 17:09:25 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-08-15 17:09:25 [MainThread]-[main.main:13]-[INFO]:启动服务: 0.0.0.0:5001
+2024-08-15 17:09:33 [ThreadPoolExecutor-0_0]-[base.__send_request:444]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66bdc5cc-42727ed369306d0c794e008b"
+  },
+  "json": null,
+  "origin": "107.172.57.49",
+  "url": "http://httpbin.org/post"
+}
+2024-08-15 17:09:44 [ThreadPoolExecutor-1_0]-[base.__send_request:444]-[INFO]:--------  request info ----------
+{
+    "json": {
+        "name": "要决做至史机"
+    },
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+
+2024-08-15 17:10:09 [ThreadPoolExecutor-2_0]-[base.__send_request:444]-[INFO]:--------  request info ----------
+{
+    "data": {
+        "领存流二适": "第面感么"
+    },
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {
+    "领存流二适": "第面感么"
+  },
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "82",
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66bdc5ee-5a81c5513f5692945565c762"
+  },
+  "json": null,
+  "origin": "107.172.57.49",
+  "url": "http://httpbin.org/post"
+}
+2024-08-15 17:10:19 [ThreadPoolExecutor-3_0]-[base.__send_request:444]-[INFO]:--------  request info ----------
+{
+    "data": {
+        "name": "第面感么"
+    },
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {
+    "name": "第面感么"
+  },
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "41",
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66bdc5fa-16888214768c6f6466c79023"
+  },
+  "json": null,
+  "origin": "107.172.57.49",
+  "url": "http://httpbin.org/post"
+}
+2024-08-15 17:10:27 [ThreadPoolExecutor-4_0]-[base.__send_request:444]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66bdc602-68caccc338618e1e2e290bd3"
+  },
+  "json": null,
+  "origin": "107.172.57.49",
+  "url": "http://httpbin.org/post"
+}
+2024-08-15 17:10:43 [ThreadPoolExecutor-5_0]-[base.__send_request:444]-[INFO]:--------  request info ----------
+{
+    "json": {
+        "name": "要决做至史机"
+    },
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "{\"name\": \"\\u8981\\u51b3\\u505a\\u81f3\\u53f2\\u673a\"}",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "48",
+    "Content-Type": "application/json",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66bdc613-676a2ae54251aeb02b61fe88"
+  },
+  "json": {
+    "name": "要决做至史机"
+  },
+  "origin": "107.172.57.49",
+  "url": "http://httpbin.org/post"
+}
+2024-08-15 17:11:05 [ThreadPoolExecutor-6_0]-[base.__send_request:444]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66bdc627-07f7a4493037ab4f36c76603"
+  },
+  "json": null,
+  "origin": "107.172.57.49",
+  "url": "http://httpbin.org/post"
+}
+2024-08-15 17:11:14 [ThreadPoolExecutor-7_0]-[base.__send_request:444]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66bdc631-64278fd9504223ad0a461d50"
+  },
+  "json": null,
+  "origin": "107.172.57.49",
+  "url": "http://httpbin.org/post"
+}
+2024-08-15 17:11:24 [ThreadPoolExecutor-8_0]-[base.__send_request:444]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66bdc63b-66061ae97fdea8c5183168ef"
+  },
+  "json": null,
+  "origin": "107.172.57.49",
+  "url": "http://httpbin.org/post"
+}
+2024-08-15 17:11:35 [ThreadPoolExecutor-9_0]-[base.__send_request:444]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66bdc645-4c65d1bd68fa88fc2f952252"
+  },
+  "json": null,
+  "origin": "107.172.57.49",
+  "url": "http://httpbin.org/post"
+}
+2024-08-15 17:11:50 [ThreadPoolExecutor-10_0]-[base.__send_request:444]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66bdc655-496ce49a2a49370a18e23b38"
+  },
+  "json": null,
+  "origin": "107.172.57.49",
+  "url": "http://httpbin.org/post"
+}
+2024-08-15 17:12:07 [ThreadPoolExecutor-11_0]-[base.__send_request:444]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66bdc666-5d2a1a6e760f039f4fa2b919"
+  },
+  "json": null,
+  "origin": "107.172.57.49",
+  "url": "http://httpbin.org/post"
+}
+2024-08-15 17:12:15 [ThreadPoolExecutor-12_0]-[base.__send_request:444]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66bdc66e-22d36d0507508efa4bf67636"
+  },
+  "json": null,
+  "origin": "107.172.57.49",
+  "url": "http://httpbin.org/post"
+}
+2024-08-15 17:12:22 [ThreadPoolExecutor-13_0]-[base.__send_request:444]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66bdc675-7171ead91317fd282f664a7d"
+  },
+  "json": null,
+  "origin": "107.172.57.49",
+  "url": "http://httpbin.org/post"
+}
+2024-08-15 17:12:29 [ThreadPoolExecutor-14_0]-[base.__send_request:444]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66bdc67d-1da183db1676d0ba5ba4407d"
+  },
+  "json": null,
+  "origin": "107.172.57.49",
+  "url": "http://httpbin.org/post"
+}
+2024-08-15 17:12:46 [ThreadPoolExecutor-15_0]-[base.__send_request:444]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66bdc68d-515567265a675fdf5a40538f"
+  },
+  "json": null,
+  "origin": "107.172.57.49",
+  "url": "http://httpbin.org/post"
+}
+2024-08-15 17:16:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-08-15 17:16:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-08-15 17:16:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-08-15 17:16:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-08-15 17:16:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-08-15 17:16:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-08-15 17:16:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-08-15 17:16:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-08-15 17:16:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-08-15 17:16:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-08-15 17:16:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-08-15 17:16:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-08-15 17:16:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-08-15 17:16:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-08-15 17:16:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-08-15 17:16:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-08-15 17:16:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-08-15 17:16:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-08-15 17:16:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-08-15 17:16:19 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-08-15 17:16:20 [MainThread]-[main.main:13]-[INFO]:启动服务: 0.0.0.0:5001
+2024-08-15 17:16:23 [ThreadPoolExecutor-0_0]-[base.__send_request:444]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66bdc766-6c80808c2fc8eb946faab268"
+  },
+  "json": null,
+  "origin": "107.172.57.49",
+  "url": "http://httpbin.org/post"
+}
+2024-08-15 17:17:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-08-15 17:17:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-08-15 17:17:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-08-15 17:17:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-08-15 17:17:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-08-15 17:17:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-08-15 17:17:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-08-15 17:17:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-08-15 17:17:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-08-15 17:17:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-08-15 17:17:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-08-15 17:17:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-08-15 17:17:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-08-15 17:17:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-08-15 17:17:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-08-15 17:17:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-08-15 17:17:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-08-15 17:17:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-08-15 17:17:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-08-15 17:17:12 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-08-15 17:17:12 [MainThread]-[main.main:13]-[INFO]:启动服务: 0.0.0.0:5001
+2024-08-15 17:17:31 [ThreadPoolExecutor-0_0]-[base.__send_request:444]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66bdc7aa-50b9ae4208400463701c63b3"
+  },
+  "json": null,
+  "origin": "107.172.57.49",
+  "url": "http://httpbin.org/post"
+}
