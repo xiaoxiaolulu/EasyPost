@@ -65,8 +65,10 @@ class HttpHandler(object):
             Union[str, dict]: The request body as either a formatted JSON string or raw bytestring.
         """
         try:
-            requests_body = json.loads(response.request.body.decode('utf-8'))
-            requests_body = json.dumps(requests_body, ensure_ascii=False, indent=2)
+            requests_body = response.request.body
+            if requests_body:
+                requests_body = json.loads(response.request.body.decode('utf-8'))
+                requests_body = json.dumps(requests_body, ensure_ascii=False, indent=2)
             return requests_body
         except exceptions.GetRequestException:
             requests_body = response.request.body
