@@ -2491,3 +2491,104 @@
     "tester": "tester"
 }
 
+2024-08-15 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-08-15 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-08-15 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-08-15 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-08-15 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-08-15 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-08-15 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-08-15 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-08-15 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-08-15 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-08-15 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-08-15 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-08-15 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-08-15 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-08-15 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-08-15 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-08-15 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-08-15 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-08-15 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-08-15 17:54:48 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-08-15 17:54:48 [MainThread]-[main.main:13]-[INFO]:启动服务: 0.0.0.0:5001
+2024-08-15 17:54:51 [ThreadPoolExecutor-0_0]-[base.__send_request:444]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66bdd06a-03048edd0cbbdca13980995c"
+  },
+  "json": null,
+  "origin": "107.172.57.49",
+  "url": "http://httpbin.org/post"
+}
+2024-08-15 17:54:51 [asyncio_0]-[executor.RunApiDoc:19]-[INFO]:--------  测试结果 ----------
+{
+    "class_list": [
+        {
+            "all": 1,
+            "success": 1,
+            "fail": 0,
+            "error": 0,
+            "cases": [
+                {
+                    "name": "统须深连",
+                    "log_data": [
+                        "【INFO】 |: 开始执行用例：【统须深连】\n",
+                        "【INFO】 |: 当前运行环境\n临时变量：\n全局变量：\n",
+                        "【INFO】 |: 强制等待:0秒\n",
+                        "【INFO】 |: 执行前置脚本\n",
+                        "【INFO】 |: 发送请求[POST]:http://httpbin.org/post：\n",
+                        "【DEBUG】 |: 请求头：{\n  \"User-Agent\": \"python-requests/2.32.3\",\n  \"Accept-Encoding\": \"gzip, deflate, br\",\n  \"Accept\": \"*/*\",\n  \"Connection\": \"keep-alive\",\n  \"Content-Length\": \"0\"\n}\n",
+                        "【DEBUG】 |: 请求体：None\n",
+                        "【DEBUG】 |: 响应头：{\n  \"Connection\": \"close\",\n  \"Content-Length\": \"402\",\n  \"Access-Control-Allow-Credentials\": \"true\",\n  \"Access-Control-Allow-Origin\": \"*\",\n  \"Content-Type\": \"application/json\",\n  \"Date\": \"Thu, 15 Aug 2024 09:54:50 GMT\",\n  \"Server\": \"gunicorn/19.9.0\"\n}\n",
+                        "【DEBUG】 |: 响应体：{\n  \"args\": {},\n  \"data\": \"\",\n  \"files\": {},\n  \"form\": {},\n  \"headers\": {\n    \"Accept\": \"*/*\",\n    \"Accept-Encoding\": \"gzip, deflate, br\",\n    \"Content-Length\": \"0\",\n    \"Host\": \"httpbin.org\",\n    \"User-Agent\": \"python-requests/2.32.3\",\n    \"X-Amzn-Trace-Id\": \"Root=1-66bdd06a-03048edd0cbbdca13980995c\"\n  },\n  \"json\": null,\n  \"origin\": \"107.172.57.49\",\n  \"url\": \"http://httpbin.org/post\"\n}\n",
+                        "【INFO】 |: 请求响应状态码:200\n",
+                        "【INFO】 |: 执行后置脚本\n",
+                        "【INFO】 |: 统须深连执行——>【通过】\n"
+                    ],
+                    "l_env": [],
+                    "g_env": [],
+                    "url": "http://httpbin.org/post",
+                    "method": "POST",
+                    "status_code": 200,
+                    "response_header": "{\n  \"Connection\": \"close\",\n  \"Content-Length\": \"402\",\n  \"Access-Control-Allow-Credentials\": \"true\",\n  \"Access-Control-Allow-Origin\": \"*\",\n  \"Content-Type\": \"application/json\",\n  \"Date\": \"Thu, 15 Aug 2024 09:54:50 GMT\",\n  \"Server\": \"gunicorn/19.9.0\"\n}",
+                    "requests_header": "{\n  \"User-Agent\": \"python-requests/2.32.3\",\n  \"Accept-Encoding\": \"gzip, deflate, br\",\n  \"Accept\": \"*/*\",\n  \"Connection\": \"keep-alive\",\n  \"Content-Length\": \"0\"\n}",
+                    "response_body": "{\n  \"args\": {},\n  \"data\": \"\",\n  \"files\": {},\n  \"form\": {},\n  \"headers\": {\n    \"Accept\": \"*/*\",\n    \"Accept-Encoding\": \"gzip, deflate, br\",\n    \"Content-Length\": \"0\",\n    \"Host\": \"httpbin.org\",\n    \"User-Agent\": \"python-requests/2.32.3\",\n    \"X-Amzn-Trace-Id\": \"Root=1-66bdd06a-03048edd0cbbdca13980995c\"\n  },\n  \"json\": null,\n  \"origin\": \"107.172.57.49\",\n  \"url\": \"http://httpbin.org/post\"\n}",
+                    "requests_body": null,
+                    "state": "成功",
+                    "tag": "循环1次",
+                    "run_time": "1.12s"
+                }
+            ],
+            "res": "",
+            "name": "Demo",
+            "state": "success"
+        }
+    ],
+    "all": 1,
+    "success": 1,
+    "error": 0,
+    "fail": 0,
+    "runtime": "1.12s",
+    "argtime": "1.12s",
+    "begin_time": "2024-08-15 17:54:50",
+    "pass_rate": "100.00%",
+    "state": "通过",
+    "tester": "tester"
+}
+
