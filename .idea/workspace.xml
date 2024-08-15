@@ -4,11 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="983dbf67-ba8c-45ad-9615-d4837c20cf03" name="Changes" comment="Create SECURITY.md custom exception classes for better error handling and debugging.Add backend/pyproject.toml for Python project configuration." />
+    <list default="true" id="983dbf67-ba8c-45ad-9615-d4837c20cf03" name="Changes" comment="Create SECURITY.md custom exception classes for better error handling and debugging.Add backend/pyproject.toml for Python project configuration.">
+      <change afterPath="$PROJECT_DIR$/UNIT-EXECUTOR/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UNIT-EXECUTOR/protos/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UNIT-EXECUTOR/protos/executor.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/api/migrations/0052_alter_closedtasksdetail_id.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/api/models/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/models/https.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/backend/logs/EasyPost.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/backend/logs/EasyPost_collect.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/layout/components/TagsView/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/layout/components/TagsView/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/closed/loop/components/step.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/closed/loop/components/step.vue" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -34,7 +53,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/codes/xiaoxiaolulu&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/86135/Desktop/EasyPost/UNIT-EXECUTOR&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -63,6 +82,10 @@
       <workItem from="1718243279698" duration="714000" />
       <workItem from="1718329852473" duration="598000" />
       <workItem from="1718699426675" duration="272000" />
+      <workItem from="1723601741149" duration="423000" />
+      <workItem from="1723613850309" duration="502000" />
+      <workItem from="1723614364155" duration="293000" />
+      <workItem from="1723614667070" duration="388000" />
     </task>
     <task id="LOCAL-00001" summary="Create SECURITY.md custom exception classes for better error handling and debugging.Add backend/pyproject.toml for Python project configuration.">
       <option name="closed" value="true" />

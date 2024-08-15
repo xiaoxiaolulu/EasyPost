@@ -97,11 +97,7 @@ const state = ref({
 
 const setData = (rowdata) => {
   state.value = rowdata ? rowdata : "";
-  console.log("测试");
-  console.log(state.value);
   state.value.steps = eval(rowdata.steps);
-  console.log("xxx");
-  console.log(rowdata.err_msg);
 };
 
 // const onSureClick = (formName: FormInstance | undefined) => {

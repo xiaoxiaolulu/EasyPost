@@ -1,0 +1,74 @@
+syntax = "proto3";
+
+
+message Interface {
+  string url = 1;
+  string name = 2;
+  string method = 3;
+}
+
+message Validators{
+  string method = 1;
+  string actual = 2;
+  string expect = 3;
+}
+
+message ApiDocRequest {
+  string mode = 1;
+  string title = 2;
+  Interface interface = 3;
+  map<string, string> headers = 4;
+  map<string, string> data = 5;
+  map<string, string> json = 6;
+  string setup_script = 7;
+  string teardown_script = 8;
+  map<string, string> extract = 9;
+  repeated Validators validators = 10;
+}
+
+message Cases {
+  string name = 1;
+  repeated string log_data = 2;
+  repeated string l_env = 3;
+  repeated string g_env = 4;
+  repeated string hook_gen = 5;
+  string url = 6;
+  string method = 7;
+  string status_code = 8;
+  string response_header = 9;
+  string requests_header = 10;
+  string response_body = 11;
+  int32 count = 12;
+  string state = 13;
+  string tag = 14;
+  string run_time = 15;
+}
+
+message ClassList{
+  int32 all = 1;
+  int32 success = 2;
+  int32 error = 3;
+  int32 fail = 4;
+  repeated Cases cases = 5;
+  string res = 6;
+  string name = 7;
+  string state = 8;
+}
+
+message ApiDocResponse{
+  int32 all = 1;
+  int32 success = 2;
+  int32 error = 3;
+  int32 fail = 4;
+  string runtime = 5;
+  string argtime = 6;
+  string begin_time = 7;
+  string pass_rate = 8;
+  string state = 9;
+  string tester = 10;
+  repeated ClassList class_list = 11;
+}
+
+service ExecutorService{
+  rpc RunApiDoc(ApiDocRequest) returns (ApiDocResponse);
+}

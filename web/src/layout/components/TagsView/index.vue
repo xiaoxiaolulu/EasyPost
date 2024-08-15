@@ -9,10 +9,10 @@
       >
         <el-tab-pane
             v-for="item in visitedViews"
-            :key="item.path"
-            :path="item.path"
+            :key="item.fullPath"
+            :path="item.fullPath"
             :label="item.title"
-            :name="item.path"
+            :name="item.fullPath"
             :closable="!(item.meta&&item.meta.affix)"
         >
           <template #label>
@@ -65,7 +65,7 @@ function filterAffixTags(routes, basePath = '/') {
         fullPath: tagPath,
         path: tagPath,
         name: route.name,
-        meta: { ...route.meta },
+        meta: { ...route.meta }
       })
     }
     if (route.children) {
