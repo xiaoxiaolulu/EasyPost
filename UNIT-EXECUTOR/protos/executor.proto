@@ -13,17 +13,21 @@ message Validators{
   string expect = 3;
 }
 
+message Request {
+  map<string, string> data = 1;
+  map<string, string> json = 2;
+}
+
 message ApiDocRequest {
   string mode = 1;
   string title = 2;
   Interface interface = 3;
   map<string, string> headers = 4;
-  map<string, string> data = 5;
-  map<string, string> json = 6;
-  string setup_script = 7;
-  string teardown_script = 8;
-  map<string, string> extract = 9;
-  repeated Validators validators = 10;
+  Request request = 5;
+  string setup_script = 6;
+  string teardown_script = 7;
+  map<string, string> extract = 8;
+  repeated Validators validators = 9;
 }
 
 message Cases {

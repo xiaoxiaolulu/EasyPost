@@ -531,7 +531,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             request_params['url'] = data.get('interface').get('url')
 
         request_params['method'] = data.get('interface').get('method')
-        request_params['headers'] = data['headers']
+        request_params['headers'] = data.get('headers', None) if data.get('headers', None) else {}
 
         return request_params
 
