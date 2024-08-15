@@ -510,8 +510,9 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             data['data'] = form_data
             data['files'] = None
         else:
-            if data['headers'].get("Content-Type"):
-                del data['headers']["Content-Type"]
+            if data.get("headers", None):
+                if data['headers'].get("Content-Type", None):
+                    del data['headers']["Content-Type"]
 
         request_params = {}
 
