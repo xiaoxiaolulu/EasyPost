@@ -38,7 +38,7 @@ message Cases {
   repeated string hook_gen = 5;
   string url = 6;
   string method = 7;
-  string status_code = 8;
+  int32 status_code = 8;
   string response_header = 9;
   string requests_header = 10;
   string response_body = 11;
