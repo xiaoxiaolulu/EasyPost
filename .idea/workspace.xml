@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="983dbf67-ba8c-45ad-9615-d4837c20cf03" name="Changes" comment="feat: 项目结构微服务化" />
+    <list default="true" id="983dbf67-ba8c-45ad-9615-d4837c20cf03" name="Changes" comment="feat: 项目结构微服务化">
+      <change afterPath="$PROJECT_DIR$/UNIT-EXECUTOR/unitrunner/test/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UNIT-EXECUTOR/unitrunner/test/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UNIT-EXECUTOR/logs/Unit-Executor.log" beforeDir="false" afterPath="$PROJECT_DIR$/UNIT-EXECUTOR/logs/Unit-Executor.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UNIT-EXECUTOR/protos/executor.proto" beforeDir="false" afterPath="$PROJECT_DIR$/UNIT-EXECUTOR/protos/executor.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UNIT-EXECUTOR/protos/executor_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/UNIT-EXECUTOR/protos/executor_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UNIT-EXECUTOR/protos/executor_pb2_grpc.py" beforeDir="false" afterPath="$PROJECT_DIR$/UNIT-EXECUTOR/protos/executor_pb2_grpc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UNIT-EXECUTOR/services/executor.py" beforeDir="false" afterPath="$PROJECT_DIR$/UNIT-EXECUTOR/services/executor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UNIT-EXECUTOR/unitrunner/engine/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/UNIT-EXECUTOR/unitrunner/engine/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UNIT-EXECUTOR/utils/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/UNIT-EXECUTOR/utils/parser.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,20 +47,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/86135/Desktop/EasyPost/UNIT-BACKEND",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/86135/Desktop/EasyPost/UNIT-BACKEND&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -75,6 +86,7 @@
       <workItem from="1723614364155" duration="293000" />
       <workItem from="1723614667070" duration="388000" />
       <workItem from="1723705330964" duration="364000" />
+      <workItem from="1723778604715" duration="2170000" />
     </task>
     <task id="LOCAL-00001" summary="Create SECURITY.md custom exception classes for better error handling and debugging.Add backend/pyproject.toml for Python project configuration.">
       <option name="closed" value="true" />

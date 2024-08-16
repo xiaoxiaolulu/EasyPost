@@ -28,6 +28,7 @@ message ApiDocRequest {
   string teardown_script = 7;
   map<string, string> extract = 8;
   repeated Validators validators = 9;
+  repeated ApiDocRequest children = 10;
 }
 
 message Cases {

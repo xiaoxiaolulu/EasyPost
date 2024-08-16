@@ -33,7 +33,6 @@ from unitrunner.models import step
 from unitrunner.request.http import HttpHandler
 from utils.logger import logger
 
-
 try:
     global_func = importlib.import_module('global_func')
 except ModuleNotFoundError:
@@ -574,8 +573,9 @@ class BaseTest(unittest.TestCase, CaseRunLog):
                 attr = res2.group(1)
                 value = ENV.get(attr) if self.env.get(attr) is None else self.env.get(attr)
                 if value is None:
-                    raise exceptions.VariableReferencesException('❌变量引用错误：\n{}\n中的变量{},在当前运行环境中未找到'.format(
-                        json.dumps(old_data, ensure_ascii=False, indent=2), attr)
+                    raise exceptions.VariableReferencesException(
+                        '❌变量引用错误：\n{}\n中的变量{},在当前运行环境中未找到'.format(
+                            json.dumps(old_data, ensure_ascii=False, indent=2), attr)
                     )
                 if isinstance(value, Number):
                     s = data.find(item)
@@ -923,6 +923,7 @@ class GenerateCase:
                     new_test_func = self.create_test_func(getattr(cls, 'perform'), case_)
                     new_test_func.__doc__ = case_.get('title') or new_test_func.__doc__
                     setattr(cls, test_name, new_test_func)
+
             except (AttributeError, KeyError, Exception):
                 raise AttributeError("❌错误的用例模式，用例模式变量级别只能为normal，或者Perform\n")
 
