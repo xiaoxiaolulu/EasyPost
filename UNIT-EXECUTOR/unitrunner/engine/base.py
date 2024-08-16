@@ -298,6 +298,9 @@ class BaseTest(unittest.TestCase, CaseRunLog):
 
         Returns: None
         """
+        print("测试")
+        print(data)
+        print("测试")
         # 日志记录
         self.__run_log()
         # 数据库查询
@@ -882,47 +885,37 @@ class GenerateCase:
         for index, case_ in enumerate(cases):
 
             try:
-                mode = case_.get('mode', 'normal')
+                global children  # noqa
+                try:
+                    children = case_.get('children', None)
+                except exceptions.StepMissAttributeError:
+                    pass
 
-                if mode == RunningTstCasesEnum.MODE:
-                    global children  # noqa
-                    try:
-                        children = case_.get('children', None)
-                    except exceptions.StepMissAttributeError:
-                        pass
+                if children:
+                    skip_after = case_.get('If', {'condition': False})
+                    loop_after = case_.get('Loop', 1)
+                    skip_collections.append(skip_after)
+                    loop_collections.append(loop_after)
 
-                    if children:
-                        skip_after = case_.get('If', {'condition': False})
-                        loop_after = case_.get('Loop', 1)
-                        skip_collections.append(skip_after)
-                        loop_collections.append(loop_after)
-
-                        self.create_case_content(cls, children, skip_collections, loop_collections)
-                    else:
-                        if_before = case_.get('If', {'condition': False})
-                        loop_before = case_.get('Loop', 1)
-                        skip_collections.append(if_before)
-                        loop_collections.append(loop_before)
-
-                        loop_count = self.controller.loop_strategy(loop_collections)
-                        if_object = self.controller.skip_strategy(skip_collections)
-
-                        test_name = self.create_test_name(index, len(cases))
-                        new_test_func = self.create_test_func(getattr(cls, 'step'), case_)
-                        new_test_func.__doc__ = case_.get('title') or new_test_func.__doc__
-
-                        self.controller.loop(loop_count, cls, test_name, new_test_func)
-
-                        test_name = [name for name in cls.__dict__.keys() if name.__contains__('test_')]
-
-                        self.controller.skipIf(if_object, cls, str(test_name.pop()))
-
+                    self.create_case_content(cls, children, skip_collections, loop_collections)
                 else:
+                    if_before = case_.get('If', {'condition': False})
+                    loop_before = case_.get('Loop', 1)
+                    skip_collections.append(if_before)
+                    loop_collections.append(loop_before)
+
+                    loop_count = self.controller.loop_strategy(loop_collections)
+                    if_object = self.controller.skip_strategy(skip_collections)
 
                     test_name = self.create_test_name(index, len(cases))
-                    new_test_func = self.create_test_func(getattr(cls, 'perform'), case_)
+                    new_test_func = self.create_test_func(getattr(cls, 'step'), case_)
                     new_test_func.__doc__ = case_.get('title') or new_test_func.__doc__
-                    setattr(cls, test_name, new_test_func)
+
+                    self.controller.loop(loop_count, cls, test_name, new_test_func)
+
+                    test_name = [name for name in cls.__dict__.keys() if name.__contains__('test_')]
+
+                    self.controller.skipIf(if_object, cls, str(test_name.pop()))
 
             except (AttributeError, KeyError, Exception):
                 raise AttributeError("❌错误的用例模式，用例模式变量级别只能为normal，或者Perform\n")

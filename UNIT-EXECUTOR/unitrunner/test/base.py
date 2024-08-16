@@ -1,6 +1,7 @@
 import json
 import sys
 from unitrunner.engine.base import run_test, run_api
+from utils.logger import logger
 
 if __name__ == '__main__':
     # "loop/for/while/http/if"
@@ -32,7 +33,34 @@ if __name__ == '__main__':
         'global_func': "print('前置脚本123')",
         'rerun': 1
     }
-    response = run_test(env_config=config, case_data=case_data, debug=False)
-    sys.stdout.write("测试结果\n")
-    sys.stdout.write(str(response))
-    sys.stdout.write("\n测试结果\n")
+    # response = run_test(env_config=config, case_data=case_data, debug=False)
+    # sys.stdout.write("测试结果\n")
+    # sys.stdout.write(str(response))
+    # sys.stdout.write("\n测试结果\n")
+    api_doc = api_data = {
+        "type": "loop",
+        "parameters": {
+            "count": 2
+        },
+        "children": [{
+            "type": "http",
+            "title": "demo",
+            "interface": {
+                "url": "http://httpbin.org/post",
+                "name": "33333",
+                "method": "POST"
+            },
+            "headers": {},
+            "request": {"data": {}},
+            "setup_script": "",
+            "teardown_script": "",
+            "extract": {},
+            "validators": []
+        }]
+    }
+    responses = run_api(api_data=api_doc)
+    sys.stdout.write(str(responses))
+    logger.info(
+        f"--------  测试结果 ----------\n"
+        f"{json.dumps(responses, indent=4, ensure_ascii=False)}\n"
+    )
