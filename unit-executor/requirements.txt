@@ -1,4 +1,4 @@
-atomic_bomb_engine==0.41.3
+atomic_bomb_engine~=0.41.0
 Faker==8.11.0
 grpcio==1.64.1
 jmespath==1.0.1
@@ -7,10 +7,14 @@ loguru==0.6.0
 MySQL-python==1.2.5
 numpy==1.24.2
 protobuf==5.28.0
-pydantic==2.8.2
+pydantic~=2.7.2
 python_dateutil==2.8.2
 Requests==2.32.3
 requests_toolbelt==1.0.0
 rsa==4.7.2
 simplejson==3.17.0
-urllib3==2.2.2
+urllib3~=2.2.1
+typing~=3.7.4.3
+python-dateutil~=2.8.2
+asyncio~=3.4.3
+mysqlclient~=2.1.1

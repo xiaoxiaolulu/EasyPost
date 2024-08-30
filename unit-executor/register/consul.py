@@ -1,8 +1,4 @@
-import uuid
-from abc import ABC
 import consul
-import requests
-import random
 
 
 class ConsulRegister(object):
