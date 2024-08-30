@@ -95,11 +95,11 @@ def build_async_tracer(
         Callable[[str, tuple[Any, ...], dict[str, Any], Any], trace_ok_t]:
     """Return a function that traces task execution.
 
-    Catches all exceptions and updates result UNIT-BACKEND with the
+    Catches all exceptions and updates result unit-backend with the
     state and result.
 
     If the call was successful, it saves the result to the task result
-    UNIT-BACKEND, and sets the task status to `"SUCCESS"`.
+    unit-backend, and sets the task status to `"SUCCESS"`.
 
     If the call raises :exc:`~@Retry`, it extracts
     the original exception, uses that as the result and sets the task state

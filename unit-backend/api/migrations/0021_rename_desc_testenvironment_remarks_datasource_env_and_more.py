@@ -56,9 +56,9 @@ class Migration(migrations.Migration):
             name="avatar",
             field=models.ImageField(
                 blank=True,
-                default="C:\\Users\\86135\\Desktop\\EasyPost\\UNIT-BACKEND\\api\\templates\\media\\default.png",
+                default="C:\\Users\\86135\\Desktop\\EasyPost\\unit-backend\\api\\templates\\media\\default.png",
                 null=True,
-                upload_to="C:\\Users\\86135\\Desktop\\EasyPost\\UNIT-BACKEND\\api\\templates\\media",
+                upload_to="C:\\Users\\86135\\Desktop\\EasyPost\\unit-backend\\api\\templates\\media",
                 verbose_name="User Avatar",
             ),
         ),

@@ -226,11 +226,11 @@ class AsyncGenericAPIView(
 
     async def filter_queryset(self, queryset):
         """
-        Given a queryset, filter it with whichever filter UNIT-BACKEND is in use.
+        Given a queryset, filter it with whichever filter unit-backend is in use.
 
         You are unlikely to want to override this method, although you may need
         to call it either from a list view, or from a custom `get_object`
-        method if you want to apply the configured filtering UNIT-BACKEND to the
+        method if you want to apply the configured filtering unit-backend to the
         default queryset.
         """
         for backend in list(self.filter_backends):
