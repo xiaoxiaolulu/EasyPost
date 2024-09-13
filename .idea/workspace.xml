@@ -5,11 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="983dbf67-ba8c-45ad-9615-d4837c20cf03" name="Changes" comment="style: 服务名称变更">
-      <change afterPath="$PROJECT_DIR$/unit-backend/utils/grpconsul.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unit-backend/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/unit-backend/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unit-executor/register/consul.py" beforeDir="false" afterPath="$PROJECT_DIR$/unit-executor/register/consul.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unit-executor/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/unit-executor/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/image/openapi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/assets/image/postman.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unit-backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/unit-backend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unit-backend/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/unit-backend/logs/EasyPost.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unit-backend/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/unit-backend/logs/EasyPost_collect.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unit-backend/utils/grpconsul.py" beforeDir="false" afterPath="$PROJECT_DIR$/unit-backend/utils/grpconsul.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unit-executor/logs/Unit-Executor.log" beforeDir="false" afterPath="$PROJECT_DIR$/unit-executor/logs/Unit-Executor.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unit-executor/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/unit-executor/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unit-executor/settings/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/unit-executor/settings/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unit-executor/unitrunner/test/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/unit-executor/unitrunner/test/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/https/api/components/importDialog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/https/api/components/importDialog.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,20 +49,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/86135/Desktop/EasyPost/UNIT-BACKEND&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/86135/Desktop/EasyPost/unit-backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -84,6 +91,8 @@
       <workItem from="1723778604715" duration="3980000" />
       <workItem from="1724033976587" duration="1193000" />
       <workItem from="1724312157731" duration="6447000" />
+      <workItem from="1725006482641" duration="1678000" />
+      <workItem from="1726122156677" duration="2517000" />
     </task>
     <task id="LOCAL-00001" summary="Create SECURITY.md custom exception classes for better error handling and debugging.Add backend/pyproject.toml for Python project configuration.">
       <option name="closed" value="true" />

@@ -163,11 +163,11 @@ watch(() => props.rowData, () => {
 }
 
 .opblock-swagger {
-  background: url('https://cdn.eolink.com/saas_10.9.301/ng14/assets/images/logo/swagger.gif') center no-repeat;
+  background: url("@/assets/image/openapi.png") center no-repeat;
 }
 
 .opblock-postman {
-  background: url('https://cdn.eolink.com/saas_11.4.35/ng14/assets/images/logo/postman.gif') center no-repeat;
+  background: url("@/assets/image/postman.png") center no-repeat;
 }
 
 .opblock {

@@ -36,7 +36,8 @@ async def main():
     if not consul.register_consul(
             name=settings.SERVICE_NAME,
             service_id=service_id,
-            address=ip, port=port,
+            address=ip,
+            port=port,
             tags=settings.SERVICE_TAGS
     ):
         logger.info(f"{settings.SERVICE_NAME} 服务注册失败")

@@ -1,7 +1,7 @@
 from django.urls import path
 from rest_framework.routers import DefaultRouter
 from api.emus.RouterConfigEnum import RouterConfigEnum
-from api.service.report import (
+from api.views.report import (
     ReportDetailView,
     ReportListViewSet
 )

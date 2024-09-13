@@ -182,7 +182,7 @@ LOGOUT_URL = "rest_framework:logout"
 
 # Authentication
 AUTHENTICATION_BACKENDS = [
-    "api.service.user.CustomAuthenticateBackend"
+    "api.views.user.CustomAuthenticateBackend"
 ]
 
 # Password validation

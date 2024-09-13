@@ -1,7 +1,7 @@
 from django.urls import path
 from rest_framework.routers import DefaultRouter
 from api.emus.RouterConfigEnum import RouterConfigEnum
-from api.service.setting import (
+from api.views.setting import (
     NoticeListViewSet,
     NoticeDestroyViewSet,
     NoticeDetailView,

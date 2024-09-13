@@ -1,5 +1,5 @@
 from django.urls import path
-from api.service import consumers
+from api.views import consumers
 
 
 socket_urlpatterns = [

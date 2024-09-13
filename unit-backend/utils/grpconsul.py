@@ -2,6 +2,7 @@ import random
 import socket
 from dns import resolver
 from config import settings
+from utils.logger import logger
 
 
 class ServiceConsul(object):
@@ -31,15 +32,15 @@ class ServiceConsul(object):
             ip_address = self.decode_address(selected_rdata.target.to_text())
             return ip_address, selected_rdata.port
         except resolver.NoAnswer as e:
-            print(f"No answer found for the query: {srv_record_name}")
+            logger.error(f"No answer found for the query: {srv_record_name}")
         except resolver.NXDOMAIN as e:
-            print(f"Domain not found: {srv_record_name}")
+            logger.error(f"Domain not found: {srv_record_name}")
         except Exception as e:
-            print(f"Error occurred while resolving DNS: {str(e)}")
+            logger.error(f"Error occurred while resolving DNS: {str(e)}")
 
 
 def main():
-    srv_record_name = 'unit_executor.service.consul'
+    srv_record_name = 'unit_executor.services.consul'
     cons = ServiceConsul()
     address, port = cons.fetch_user_service_addresses(srv_record_name)
     print(address, port)

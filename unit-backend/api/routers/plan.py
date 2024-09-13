@@ -1,7 +1,7 @@
 from django.urls import path
 from rest_framework.routers import DefaultRouter
 from api.emus.RouterConfigEnum import RouterConfigEnum
-from api.service.plan import (
+from api.views.plan import (
     SaveOrUpdatePlanView,
     UpdatePlanStateView,
     RunPlanView,
