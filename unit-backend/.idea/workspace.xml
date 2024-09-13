@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="feat: 服务注册与发现">
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="style: 修改视图目录">
+      <change afterPath="$PROJECT_DIR$/api/services/decorators.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/services/executor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/services/protos/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/services/protos/executor.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/services/protos/executor_pb2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/services/protos/executor_pb2_grpc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/single.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/status_code.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../unit-executor/logs/Unit-Executor.log" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/logs/Unit-Executor.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../unit-executor/settings/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/settings/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../unit-executor/unitrunner/test/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/unitrunner/test/base.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,89 +98,89 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Django Server.backend.executor&quot;: &quot;Run&quot;,
-    &quot;Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken.executor&quot;: &quot;Run&quot;,
-    &quot;Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken.setUp.executor&quot;: &quot;Run&quot;,
-    &quot;Django tests.Test: api.tests.test_project_destory.ProjectDestroyViewSetTests.executor&quot;: &quot;Run&quot;,
-    &quot;Django tests.Test: api.tests.test_user_list.TestUserListViewSet.executor&quot;: &quot;Run&quot;,
-    &quot;Django tests.Test: api.tests.test_user_list.TestUserListViewSet.test_hello.executor&quot;: &quot;Run&quot;,
-    &quot;Django tests.Test: api.tests.test_user_list.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for MyAssertTest.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for MyAssertTest.test_assertNotEqual.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for Test1.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for Test1.test1.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_assert.MyAssertTest.test_assertNotEqual.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_simple1.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in __init__.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_a.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_custom_token.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_engine.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in ws_handler.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.DBClient.executor&quot;: &quot;Run&quot;,
-    &quot;Python.__init__ (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.__init__ (2).executor&quot;: &quot;Run&quot;,
-    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
-    &quot;Python.api_migrate.executor&quot;: &quot;Run&quot;,
-    &quot;Python.atomic.executor&quot;: &quot;Run&quot;,
-    &quot;Python.bomb.executor&quot;: &quot;Run&quot;,
-    &quot;Python.engine.executor&quot;: &quot;Run&quot;,
-    &quot;Python.functions.executor&quot;: &quot;Run&quot;,
-    &quot;Python.grpconsul.executor&quot;: &quot;Run&quot;,
-    &quot;Python.initmenus.executor&quot;: &quot;Run&quot;,
-    &quot;Python.manage.executor&quot;: &quot;Run&quot;,
-    &quot;Python.qy.executor&quot;: &quot;Run&quot;,
-    &quot;Python.recursion.executor&quot;: &quot;Run&quot;,
-    &quot;Python.registry.executor&quot;: &quot;Run&quot;,
-    &quot;Python.scheduler.executor&quot;: &quot;Run&quot;,
-    &quot;Python.setting.executor&quot;: &quot;Run&quot;,
-    &quot;Python.t.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.time.executor&quot;: &quot;Run&quot;,
-    &quot;Python.websocket.executor&quot;: &quot;Run&quot;,
-    &quot;Python.weixin.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ws_handler.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/86135/Desktop/EasyPost/unit-backend&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\Program Files\\JetBrains\\PyCharm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Django Server.backend.executor": "Run",
+    "Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken.executor": "Run",
+    "Django tests.Test: api.tests.test_custom_token.TestCustomJsonWebToken.setUp.executor": "Run",
+    "Django tests.Test: api.tests.test_project_destory.ProjectDestroyViewSetTests.executor": "Run",
+    "Django tests.Test: api.tests.test_user_list.TestUserListViewSet.executor": "Run",
+    "Django tests.Test: api.tests.test_user_list.TestUserListViewSet.test_hello.executor": "Run",
+    "Django tests.Test: api.tests.test_user_list.executor": "Run",
+    "Python tests.Python tests for MyAssertTest.executor": "Run",
+    "Python tests.Python tests for MyAssertTest.test_assertNotEqual.executor": "Run",
+    "Python tests.Python tests for Test1.executor": "Run",
+    "Python tests.Python tests for Test1.test1.executor": "Run",
+    "Python tests.Python tests for test_assert.MyAssertTest.test_assertNotEqual.executor": "Run",
+    "Python tests.Python tests for test_simple1.executor": "Run",
+    "Python tests.Python tests in __init__.py.executor": "Run",
+    "Python tests.Python tests in test_a.py.executor": "Run",
+    "Python tests.Python tests in test_custom_token.py.executor": "Run",
+    "Python tests.Python tests in test_engine.py.executor": "Run",
+    "Python tests.Python tests in ws_handler.py.executor": "Run",
+    "Python.DBClient.executor": "Run",
+    "Python.__init__ (1).executor": "Run",
+    "Python.__init__ (2).executor": "Run",
+    "Python.__init__.executor": "Run",
+    "Python.api_migrate.executor": "Run",
+    "Python.atomic.executor": "Run",
+    "Python.bomb.executor": "Run",
+    "Python.engine.executor": "Run",
+    "Python.functions.executor": "Run",
+    "Python.grpconsul.executor": "Run",
+    "Python.initmenus.executor": "Run",
+    "Python.manage.executor": "Run",
+    "Python.qy.executor": "Run",
+    "Python.recursion.executor": "Run",
+    "Python.registry.executor": "Run",
+    "Python.scheduler.executor": "Run",
+    "Python.setting.executor": "Run",
+    "Python.t.executor": "Run",
+    "Python.test.executor": "Run",
+    "Python.time.executor": "Run",
+    "Python.websocket.executor": "Run",
+    "Python.weixin.executor": "Run",
+    "Python.ws_handler.executor": "Run",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/86135/Desktop/EasyPost/unit-backend/utils",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "ts.external.directory.path": "D:\\Program Files\\JetBrains\\PyCharm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;ChangesTree.GroupingKeys&quot;: [
-      &quot;directory&quot;
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\86135\Desktop\EasyPost\unit-backend\utils" />
+      <recent name="C:\Users\86135\Desktop\EasyPost\unit-backend\api\services" />
+      <recent name="C:\Users\86135\Desktop\EasyPost\unit-backend\api\services\protos" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api" />
-      <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\templates\media" />
-      <recent name="C:\Users\86135\Desktop\EasyPost\backend\media" />
-      <recent name="C:\Users\86135\Desktop\EasyPost\backend\utils" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\86135\Desktop\EasyPost\unit-backend\api\views" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\avatar" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\media\avatar" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\service" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\websocket" />
-      <recent name="C:\Users\86135\Desktop\EasyPost\backend\config" />
     </key>
   </component>
   <component name="RunManager" selected="Python.grpconsul">
@@ -532,14 +538,7 @@
       <workItem from="1723615058064" duration="13500000" />
       <workItem from="1723705475461" duration="20000" />
       <workItem from="1725003165423" duration="3098000" />
-    </task>
-    <task id="LOCAL-00392" summary="&quot;Add DataStructure model and migration, update router&quot;">
-      <option name="closed" value="true" />
-      <created>1714297152812</created>
-      <option name="number" value="00392" />
-      <option name="presentableId" value="LOCAL-00392" />
-      <option name="project" value="LOCAL" />
-      <updated>1714297152812</updated>
+      <workItem from="1726207726818" duration="1445000" />
     </task>
     <task id="LOCAL-00393" summary="&quot;Add DataStructure model and migration, update router&quot;">
       <option name="closed" value="true" />
@@ -925,7 +924,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725005093067</updated>
     </task>
-    <option name="localTasksCounter" value="441" />
+    <task id="LOCAL-00441" summary="style: 修改视图目录">
+      <option name="closed" value="true" />
+      <created>1726208043064</created>
+      <option name="number" value="00441" />
+      <option name="presentableId" value="LOCAL-00441" />
+      <option name="project" value="LOCAL" />
+      <updated>1726208043064</updated>
+    </task>
+    <option name="localTasksCounter" value="442" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -955,7 +962,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Changed project name and logo, updated err_msg and" />
     <MESSAGE value="Changed project name and logo, updated err_msg and err" />
     <MESSAGE value="Changed project name and logo, updated err_msg and err_" />
     <MESSAGE value="Changed project name and logo, updated err_msg and err_png" />
@@ -980,7 +986,8 @@
     <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail model, added ellipsis utility, and modified related UI components" />
     <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail model, added ellipsis utility, and modified related UI components." />
     <MESSAGE value="feat: 服务注册与发现" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 服务注册与发现" />
+    <MESSAGE value="style: 修改视图目录" />
+    <option name="LAST_COMMIT_MESSAGE" value="style: 修改视图目录" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
