@@ -1,3 +1,4 @@
+import asyncio
 import grpc
 from api.services.decorators import grpc_error_handler
 from api.services.protos import (
@@ -8,7 +9,6 @@ from utils.grpconsul import ServiceConsul
 from utils.logger import logger
 from utils.single import SingletonMeta
 
-
 servers_consul = ServiceConsul()
 
 
@@ -18,7 +18,7 @@ class ExecutorStub:
 
     @property
     def unit_executor_service_addr(self):
-        host, port = servers_consul.fetch_user_service_addresses('unit_executor.services.consul')
+        host, port = servers_consul.fetch_user_service_addresses('unit_executor.service.consul')
         logger.info(f"获取到的地址：{host}:{port}")
         return f"{host}:{port}"
 
@@ -31,11 +31,39 @@ class ExecutorStub:
         await self.channel.close()
 
 
-class UserServiceClient(metaclass=SingletonMeta):
+class ExecutorServiceClient(metaclass=SingletonMeta):
 
     @grpc_error_handler
     async def run_api_doc(self, api_doc):
         async with ExecutorStub() as stub:
-            request = executor_pb2.ApiDocRequest(api_doc)
+            request = executor_pb2.ApiDocRequest(
+                **api_doc
+            )
             response = await stub.RunApiDoc(request)
             return response
+
+
+if __name__ == '__main__':
+    data = {
+        "children": [
+            {
+                "title": "demo",
+                "interface": {
+                    "url": "http://httpbin.org/post",
+                    "name": "33333",
+                    "method": "POST"
+                },
+                "headers": {},
+                "request": {
+                    "data": {}
+                },
+                "setup_script": "",
+                "teardown_script": "",
+                "extract": {},
+                "validators": []
+            }
+        ]
+    }
+    executor_service = ExecutorServiceClient()
+    responses = asyncio.run(executor_service.run_api_doc(data))
+    print(responses)

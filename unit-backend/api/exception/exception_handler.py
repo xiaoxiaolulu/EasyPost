@@ -17,6 +17,7 @@ def exception_handler(exc, context):
     :param context: 抛出异常的上下文（包含request请求对象和view视图对象）
     :return: Response响应对象
     """
+
     def inner_exception_handler(inner_exc, inner_context):
         if isinstance(inner_exc, Http404):
             inner_exc = exceptions.NotFound()
@@ -26,7 +27,7 @@ def exception_handler(exc, context):
         if isinstance(inner_exc, exceptions.APIException):
             headers = {}
             if getattr(inner_exc, 'auth_header', None):
-                headers['WWW-Authenticate'] = inner_exc.auth_header # noqa
+                headers['WWW-Authenticate'] = inner_exc.auth_header  # noqa
             if getattr(inner_exc, 'wait', None):
                 headers['Retry-After'] = '%d' % inner_exc.wait  # noqa
 

@@ -5001,3 +5001,790 @@
 2024-09-05 13:51:40 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
 2024-09-05 13:51:40 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
 2024-09-05 13:51:40 [MainThread]-[main.main:48]-[INFO]:gRPC服务已经启动：172.31.22.169:63877
+2024-09-19 13:37:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-09-19 13:37:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-09-19 13:37:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-09-19 13:37:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-09-19 13:37:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-09-19 13:37:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-09-19 13:37:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-09-19 13:37:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-09-19 13:37:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-09-19 13:37:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-09-19 13:37:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-09-19 13:37:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-09-19 13:37:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-09-19 13:37:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-09-19 13:37:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-09-19 13:37:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-09-19 13:37:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-09-19 13:37:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-09-19 13:37:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-09-19 13:37:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-09-19 13:37:59 [MainThread]-[main.main:48]-[INFO]:gRPC服务已经启动：172.31.22.169:50948
+2024-09-19 13:40:26 [ThreadPoolExecutor-2_0]-[base.__send_request:446]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66ebb949-6876602e7243b9ab39a5a1cc"
+  },
+  "json": null,
+  "origin": "222.72.165.166",
+  "url": "http://httpbin.org/post"
+}
+2024-09-19 13:40:26 [asyncio_0]-[executor.RunApiDoc:16]-[INFO]:--------  测试结果 ----------
+{
+    "class_list": [
+        {
+            "all": 1,
+            "success": 1,
+            "fail": 0,
+            "error": 0,
+            "cases": [
+                {
+                    "name": "demo",
+                    "log_data": [
+                        "【INFO】 |: 开始执行用例：【demo】\n",
+                        "【INFO】 |: 当前运行环境\n临时变量：\n全局变量：\n",
+                        "【INFO】 |: 强制等待:0秒\n",
+                        "【INFO】 |: 执行前置脚本\n",
+                        "【INFO】 |: 发送请求[POST]:http://httpbin.org/post：\n",
+                        "【DEBUG】 |: 请求头：{\n  \"User-Agent\": \"python-requests/2.32.3\",\n  \"Accept-Encoding\": \"gzip, deflate, br\",\n  \"Accept\": \"*/*\",\n  \"Connection\": \"keep-alive\",\n  \"Content-Length\": \"0\"\n}\n",
+                        "【DEBUG】 |: 请求体：None\n",
+                        "【DEBUG】 |: 响应头：{\n  \"Date\": \"Thu, 19 Sep 2024 05:40:25 GMT\",\n  \"Content-Type\": \"application/json\",\n  \"Content-Length\": \"403\",\n  \"Connection\": \"keep-alive\",\n  \"Server\": \"gunicorn/19.9.0\",\n  \"Access-Control-Allow-Origin\": \"*\",\n  \"Access-Control-Allow-Credentials\": \"true\"\n}\n",
+                        "【DEBUG】 |: 响应体：{\n  \"args\": {},\n  \"data\": \"\",\n  \"files\": {},\n  \"form\": {},\n  \"headers\": {\n    \"Accept\": \"*/*\",\n    \"Accept-Encoding\": \"gzip, deflate, br\",\n    \"Content-Length\": \"0\",\n    \"Host\": \"httpbin.org\",\n    \"User-Agent\": \"python-requests/2.32.3\",\n    \"X-Amzn-Trace-Id\": \"Root=1-66ebb949-6876602e7243b9ab39a5a1cc\"\n  },\n  \"json\": null,\n  \"origin\": \"222.72.165.166\",\n  \"url\": \"http://httpbin.org/post\"\n}\n",
+                        "【INFO】 |: 请求响应状态码:200\n",
+                        "【INFO】 |: 执行后置脚本\n",
+                        "【INFO】 |: demo执行——>【通过】\n"
+                    ],
+                    "l_env": [],
+                    "g_env": [],
+                    "url": "http://httpbin.org/post",
+                    "method": "POST",
+                    "status_code": 200,
+                    "response_header": "{\n  \"Date\": \"Thu, 19 Sep 2024 05:40:25 GMT\",\n  \"Content-Type\": \"application/json\",\n  \"Content-Length\": \"403\",\n  \"Connection\": \"keep-alive\",\n  \"Server\": \"gunicorn/19.9.0\",\n  \"Access-Control-Allow-Origin\": \"*\",\n  \"Access-Control-Allow-Credentials\": \"true\"\n}",
+                    "requests_header": "{\n  \"User-Agent\": \"python-requests/2.32.3\",\n  \"Accept-Encoding\": \"gzip, deflate, br\",\n  \"Accept\": \"*/*\",\n  \"Connection\": \"keep-alive\",\n  \"Content-Length\": \"0\"\n}",
+                    "response_body": "{\n  \"args\": {},\n  \"data\": \"\",\n  \"files\": {},\n  \"form\": {},\n  \"headers\": {\n    \"Accept\": \"*/*\",\n    \"Accept-Encoding\": \"gzip, deflate, br\",\n    \"Content-Length\": \"0\",\n    \"Host\": \"httpbin.org\",\n    \"User-Agent\": \"python-requests/2.32.3\",\n    \"X-Amzn-Trace-Id\": \"Root=1-66ebb949-6876602e7243b9ab39a5a1cc\"\n  },\n  \"json\": null,\n  \"origin\": \"222.72.165.166\",\n  \"url\": \"http://httpbin.org/post\"\n}",
+                    "requests_body": null,
+                    "state": "成功",
+                    "tag": "循环1次",
+                    "run_time": "0.686s"
+                }
+            ],
+            "res": "",
+            "name": "Demo",
+            "state": "success"
+        }
+    ],
+    "all": 1,
+    "success": 1,
+    "error": 0,
+    "fail": 0,
+    "runtime": "0.69s",
+    "argtime": "0.69s",
+    "begin_time": "2024-09-19 13:40:25",
+    "pass_rate": "100.00%",
+    "state": "通过",
+    "tester": "tester"
+}
+
+2024-09-19 13:51:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-09-19 13:51:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-09-19 13:51:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-09-19 13:51:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-09-19 13:51:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-09-19 13:51:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-09-19 13:51:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-09-19 13:51:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-09-19 13:51:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-09-19 13:51:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-09-19 13:51:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-09-19 13:51:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-09-19 13:51:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-09-19 13:51:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-09-19 13:51:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-09-19 13:51:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-09-19 13:51:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-09-19 13:51:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-09-19 13:51:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-09-19 13:51:01 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-09-19 13:51:01 [MainThread]-[main.main:48]-[INFO]:gRPC服务已经启动：172.31.22.169:51454
+2024-09-19 13:51:13 [ThreadPoolExecutor-0_0]-[base.__send_request:446]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66ebbbd0-201c642861a5b97e45ddc587"
+  },
+  "json": null,
+  "origin": "222.72.165.166",
+  "url": "http://httpbin.org/post"
+}
+2024-09-19 13:51:13 [asyncio_0]-[executor.RunApiDoc:16]-[INFO]:--------  测试结果 ----------
+{
+    "class_list": [
+        {
+            "all": 1,
+            "success": 1,
+            "fail": 0,
+            "error": 0,
+            "cases": [
+                {
+                    "name": "demo",
+                    "log_data": [
+                        "【INFO】 |: 开始执行用例：【demo】\n",
+                        "【INFO】 |: 当前运行环境\n临时变量：\n全局变量：\n",
+                        "【INFO】 |: 强制等待:0秒\n",
+                        "【INFO】 |: 执行前置脚本\n",
+                        "【INFO】 |: 发送请求[POST]:http://httpbin.org/post：\n",
+                        "【DEBUG】 |: 请求头：{\n  \"User-Agent\": \"python-requests/2.32.3\",\n  \"Accept-Encoding\": \"gzip, deflate, br\",\n  \"Accept\": \"*/*\",\n  \"Connection\": \"keep-alive\",\n  \"Content-Length\": \"0\"\n}\n",
+                        "【DEBUG】 |: 请求体：None\n",
+                        "【DEBUG】 |: 响应头：{\n  \"Date\": \"Thu, 19 Sep 2024 05:51:12 GMT\",\n  \"Content-Type\": \"application/json\",\n  \"Content-Length\": \"403\",\n  \"Connection\": \"keep-alive\",\n  \"Server\": \"gunicorn/19.9.0\",\n  \"Access-Control-Allow-Origin\": \"*\",\n  \"Access-Control-Allow-Credentials\": \"true\"\n}\n",
+                        "【DEBUG】 |: 响应体：{\n  \"args\": {},\n  \"data\": \"\",\n  \"files\": {},\n  \"form\": {},\n  \"headers\": {\n    \"Accept\": \"*/*\",\n    \"Accept-Encoding\": \"gzip, deflate, br\",\n    \"Content-Length\": \"0\",\n    \"Host\": \"httpbin.org\",\n    \"User-Agent\": \"python-requests/2.32.3\",\n    \"X-Amzn-Trace-Id\": \"Root=1-66ebbbd0-201c642861a5b97e45ddc587\"\n  },\n  \"json\": null,\n  \"origin\": \"222.72.165.166\",\n  \"url\": \"http://httpbin.org/post\"\n}\n",
+                        "【INFO】 |: 请求响应状态码:200\n",
+                        "【INFO】 |: 执行后置脚本\n",
+                        "【INFO】 |: demo执行——>【通过】\n"
+                    ],
+                    "l_env": [],
+                    "g_env": [],
+                    "url": "http://httpbin.org/post",
+                    "method": "POST",
+                    "status_code": 200,
+                    "response_header": "{\n  \"Date\": \"Thu, 19 Sep 2024 05:51:12 GMT\",\n  \"Content-Type\": \"application/json\",\n  \"Content-Length\": \"403\",\n  \"Connection\": \"keep-alive\",\n  \"Server\": \"gunicorn/19.9.0\",\n  \"Access-Control-Allow-Origin\": \"*\",\n  \"Access-Control-Allow-Credentials\": \"true\"\n}",
+                    "requests_header": "{\n  \"User-Agent\": \"python-requests/2.32.3\",\n  \"Accept-Encoding\": \"gzip, deflate, br\",\n  \"Accept\": \"*/*\",\n  \"Connection\": \"keep-alive\",\n  \"Content-Length\": \"0\"\n}",
+                    "response_body": "{\n  \"args\": {},\n  \"data\": \"\",\n  \"files\": {},\n  \"form\": {},\n  \"headers\": {\n    \"Accept\": \"*/*\",\n    \"Accept-Encoding\": \"gzip, deflate, br\",\n    \"Content-Length\": \"0\",\n    \"Host\": \"httpbin.org\",\n    \"User-Agent\": \"python-requests/2.32.3\",\n    \"X-Amzn-Trace-Id\": \"Root=1-66ebbbd0-201c642861a5b97e45ddc587\"\n  },\n  \"json\": null,\n  \"origin\": \"222.72.165.166\",\n  \"url\": \"http://httpbin.org/post\"\n}",
+                    "requests_body": null,
+                    "state": "成功",
+                    "tag": "循环1次",
+                    "run_time": "0.693s"
+                }
+            ],
+            "res": "",
+            "name": "Demo",
+            "state": "success"
+        }
+    ],
+    "all": 1,
+    "success": 1,
+    "error": 0,
+    "fail": 0,
+    "runtime": "0.69s",
+    "argtime": "0.69s",
+    "begin_time": "2024-09-19 13:51:12",
+    "pass_rate": "100.00%",
+    "state": "通过",
+    "tester": "tester"
+}
+
+2024-09-19 13:54:33 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-09-19 13:54:33 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-09-19 13:54:33 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-09-19 13:54:33 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-09-19 13:54:33 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-09-19 13:54:33 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-09-19 13:54:33 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-09-19 13:54:33 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-09-19 13:54:33 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-09-19 13:54:33 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-09-19 13:54:33 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-09-19 13:54:33 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-09-19 13:54:33 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-09-19 13:54:33 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-09-19 13:54:33 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-09-19 13:54:33 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-09-19 13:54:33 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-09-19 13:54:33 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-09-19 13:54:33 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-09-19 13:54:33 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-09-19 13:54:33 [MainThread]-[main.main:48]-[INFO]:gRPC服务已经启动：172.31.22.169:51673
+2024-09-19 13:55:58 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-09-19 13:55:58 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-09-19 13:55:58 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-09-19 13:55:58 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-09-19 13:55:58 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-09-19 13:55:58 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-09-19 13:55:58 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-09-19 13:55:58 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-09-19 13:55:58 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-09-19 13:55:58 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-09-19 13:55:58 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-09-19 13:55:58 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-09-19 13:55:58 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-09-19 13:55:58 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-09-19 13:55:58 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-09-19 13:55:58 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-09-19 13:55:58 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-09-19 13:55:58 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-09-19 13:55:58 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-09-19 13:55:58 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-09-19 13:55:58 [MainThread]-[main.main:48]-[INFO]:gRPC服务已经启动：172.31.22.169:51747
+2024-09-19 14:04:55 [ThreadPoolExecutor-1_0]-[base.__send_request:446]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66ebbf06-6cfe9b286be782992869e8ef"
+  },
+  "json": null,
+  "origin": "222.72.165.166",
+  "url": "http://httpbin.org/post"
+}
+2024-09-19 14:04:55 [asyncio_0]-[executor.RunApiDoc:16]-[INFO]:--------  测试结果 ----------
+{
+    "class_list": [
+        {
+            "all": 1,
+            "success": 1,
+            "fail": 0,
+            "error": 0,
+            "cases": [
+                {
+                    "name": "demo",
+                    "log_data": [
+                        "【INFO】 |: 开始执行用例：【demo】\n",
+                        "【INFO】 |: 当前运行环境\n临时变量：\n全局变量：\n",
+                        "【INFO】 |: 强制等待:0秒\n",
+                        "【INFO】 |: 执行前置脚本\n",
+                        "【INFO】 |: 发送请求[POST]:http://httpbin.org/post：\n",
+                        "【DEBUG】 |: 请求头：{\n  \"User-Agent\": \"python-requests/2.32.3\",\n  \"Accept-Encoding\": \"gzip, deflate, br\",\n  \"Accept\": \"*/*\",\n  \"Connection\": \"keep-alive\",\n  \"Content-Length\": \"0\"\n}\n",
+                        "【DEBUG】 |: 请求体：None\n",
+                        "【DEBUG】 |: 响应头：{\n  \"Date\": \"Thu, 19 Sep 2024 06:04:54 GMT\",\n  \"Content-Type\": \"application/json\",\n  \"Content-Length\": \"403\",\n  \"Connection\": \"keep-alive\",\n  \"Server\": \"gunicorn/19.9.0\",\n  \"Access-Control-Allow-Origin\": \"*\",\n  \"Access-Control-Allow-Credentials\": \"true\"\n}\n",
+                        "【DEBUG】 |: 响应体：{\n  \"args\": {},\n  \"data\": \"\",\n  \"files\": {},\n  \"form\": {},\n  \"headers\": {\n    \"Accept\": \"*/*\",\n    \"Accept-Encoding\": \"gzip, deflate, br\",\n    \"Content-Length\": \"0\",\n    \"Host\": \"httpbin.org\",\n    \"User-Agent\": \"python-requests/2.32.3\",\n    \"X-Amzn-Trace-Id\": \"Root=1-66ebbf06-6cfe9b286be782992869e8ef\"\n  },\n  \"json\": null,\n  \"origin\": \"222.72.165.166\",\n  \"url\": \"http://httpbin.org/post\"\n}\n",
+                        "【INFO】 |: 请求响应状态码:200\n",
+                        "【INFO】 |: 执行后置脚本\n",
+                        "【INFO】 |: demo执行——>【通过】\n"
+                    ],
+                    "l_env": [],
+                    "g_env": [],
+                    "url": "http://httpbin.org/post",
+                    "method": "POST",
+                    "status_code": 200,
+                    "response_header": "{\n  \"Date\": \"Thu, 19 Sep 2024 06:04:54 GMT\",\n  \"Content-Type\": \"application/json\",\n  \"Content-Length\": \"403\",\n  \"Connection\": \"keep-alive\",\n  \"Server\": \"gunicorn/19.9.0\",\n  \"Access-Control-Allow-Origin\": \"*\",\n  \"Access-Control-Allow-Credentials\": \"true\"\n}",
+                    "requests_header": "{\n  \"User-Agent\": \"python-requests/2.32.3\",\n  \"Accept-Encoding\": \"gzip, deflate, br\",\n  \"Accept\": \"*/*\",\n  \"Connection\": \"keep-alive\",\n  \"Content-Length\": \"0\"\n}",
+                    "response_body": "{\n  \"args\": {},\n  \"data\": \"\",\n  \"files\": {},\n  \"form\": {},\n  \"headers\": {\n    \"Accept\": \"*/*\",\n    \"Accept-Encoding\": \"gzip, deflate, br\",\n    \"Content-Length\": \"0\",\n    \"Host\": \"httpbin.org\",\n    \"User-Agent\": \"python-requests/2.32.3\",\n    \"X-Amzn-Trace-Id\": \"Root=1-66ebbf06-6cfe9b286be782992869e8ef\"\n  },\n  \"json\": null,\n  \"origin\": \"222.72.165.166\",\n  \"url\": \"http://httpbin.org/post\"\n}",
+                    "requests_body": null,
+                    "state": "成功",
+                    "tag": "循环1次",
+                    "run_time": "0.535s"
+                }
+            ],
+            "res": "",
+            "name": "Demo",
+            "state": "success"
+        }
+    ],
+    "all": 1,
+    "success": 1,
+    "error": 0,
+    "fail": 0,
+    "runtime": "0.53s",
+    "argtime": "0.53s",
+    "begin_time": "2024-09-19 14:04:54",
+    "pass_rate": "100.00%",
+    "state": "通过",
+    "tester": "tester"
+}
+
+2024-09-19 14:05:50 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-09-19 14:05:50 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-09-19 14:05:50 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-09-19 14:05:50 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-09-19 14:05:50 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-09-19 14:05:50 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-09-19 14:05:50 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-09-19 14:05:50 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-09-19 14:05:50 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-09-19 14:05:50 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-09-19 14:05:50 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-09-19 14:05:50 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-09-19 14:05:50 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-09-19 14:05:50 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-09-19 14:05:50 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-09-19 14:05:50 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-09-19 14:05:50 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-09-19 14:05:50 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-09-19 14:05:50 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-09-19 14:05:50 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-09-19 14:05:51 [MainThread]-[main.main:48]-[INFO]:gRPC服务已经启动：172.31.22.169:52302
+2024-09-19 14:06:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-09-19 14:06:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-09-19 14:06:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-09-19 14:06:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-09-19 14:06:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-09-19 14:06:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-09-19 14:06:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-09-19 14:06:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-09-19 14:06:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-09-19 14:06:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-09-19 14:06:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-09-19 14:06:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-09-19 14:06:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-09-19 14:06:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-09-19 14:06:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-09-19 14:06:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-09-19 14:06:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-09-19 14:06:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-09-19 14:06:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-09-19 14:06:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-09-19 14:06:21 [MainThread]-[main.main:48]-[INFO]:gRPC服务已经启动：172.31.22.169:52324
+2024-09-19 14:06:29 [ThreadPoolExecutor-0_0]-[base.__send_request:446]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66ebbf64-513556df3aa22545652a78bb"
+  },
+  "json": null,
+  "origin": "222.72.165.166",
+  "url": "http://httpbin.org/post"
+}
+2024-09-19 14:06:29 [asyncio_0]-[executor.RunApiDoc:17]-[INFO]:--------  测试结果 ----------
+{
+    "class_list": [
+        {
+            "all": 1,
+            "success": 1,
+            "fail": 0,
+            "error": 0,
+            "cases": [
+                {
+                    "name": "demo",
+                    "log_data": [
+                        "【INFO】 |: 开始执行用例：【demo】\n",
+                        "【INFO】 |: 当前运行环境\n临时变量：\n全局变量：\n",
+                        "【INFO】 |: 强制等待:0秒\n",
+                        "【INFO】 |: 执行前置脚本\n",
+                        "【INFO】 |: 发送请求[POST]:http://httpbin.org/post：\n",
+                        "【DEBUG】 |: 请求头：{\n  \"User-Agent\": \"python-requests/2.32.3\",\n  \"Accept-Encoding\": \"gzip, deflate, br\",\n  \"Accept\": \"*/*\",\n  \"Connection\": \"keep-alive\",\n  \"Content-Length\": \"0\"\n}\n",
+                        "【DEBUG】 |: 请求体：None\n",
+                        "【DEBUG】 |: 响应头：{\n  \"Date\": \"Thu, 19 Sep 2024 06:06:28 GMT\",\n  \"Content-Type\": \"application/json\",\n  \"Content-Length\": \"403\",\n  \"Connection\": \"keep-alive\",\n  \"Server\": \"gunicorn/19.9.0\",\n  \"Access-Control-Allow-Origin\": \"*\",\n  \"Access-Control-Allow-Credentials\": \"true\"\n}\n",
+                        "【DEBUG】 |: 响应体：{\n  \"args\": {},\n  \"data\": \"\",\n  \"files\": {},\n  \"form\": {},\n  \"headers\": {\n    \"Accept\": \"*/*\",\n    \"Accept-Encoding\": \"gzip, deflate, br\",\n    \"Content-Length\": \"0\",\n    \"Host\": \"httpbin.org\",\n    \"User-Agent\": \"python-requests/2.32.3\",\n    \"X-Amzn-Trace-Id\": \"Root=1-66ebbf64-513556df3aa22545652a78bb\"\n  },\n  \"json\": null,\n  \"origin\": \"222.72.165.166\",\n  \"url\": \"http://httpbin.org/post\"\n}\n",
+                        "【INFO】 |: 请求响应状态码:200\n",
+                        "【INFO】 |: 执行后置脚本\n",
+                        "【INFO】 |: demo执行——>【通过】\n"
+                    ],
+                    "l_env": [],
+                    "g_env": [],
+                    "url": "http://httpbin.org/post",
+                    "method": "POST",
+                    "status_code": 200,
+                    "response_header": "{\n  \"Date\": \"Thu, 19 Sep 2024 06:06:28 GMT\",\n  \"Content-Type\": \"application/json\",\n  \"Content-Length\": \"403\",\n  \"Connection\": \"keep-alive\",\n  \"Server\": \"gunicorn/19.9.0\",\n  \"Access-Control-Allow-Origin\": \"*\",\n  \"Access-Control-Allow-Credentials\": \"true\"\n}",
+                    "requests_header": "{\n  \"User-Agent\": \"python-requests/2.32.3\",\n  \"Accept-Encoding\": \"gzip, deflate, br\",\n  \"Accept\": \"*/*\",\n  \"Connection\": \"keep-alive\",\n  \"Content-Length\": \"0\"\n}",
+                    "response_body": "{\n  \"args\": {},\n  \"data\": \"\",\n  \"files\": {},\n  \"form\": {},\n  \"headers\": {\n    \"Accept\": \"*/*\",\n    \"Accept-Encoding\": \"gzip, deflate, br\",\n    \"Content-Length\": \"0\",\n    \"Host\": \"httpbin.org\",\n    \"User-Agent\": \"python-requests/2.32.3\",\n    \"X-Amzn-Trace-Id\": \"Root=1-66ebbf64-513556df3aa22545652a78bb\"\n  },\n  \"json\": null,\n  \"origin\": \"222.72.165.166\",\n  \"url\": \"http://httpbin.org/post\"\n}",
+                    "requests_body": null,
+                    "state": "成功",
+                    "tag": "循环1次",
+                    "run_time": "0.5s"
+                }
+            ],
+            "res": "",
+            "name": "Demo",
+            "state": "success"
+        }
+    ],
+    "all": 1,
+    "success": 1,
+    "error": 0,
+    "fail": 0,
+    "runtime": "0.50s",
+    "argtime": "0.50s",
+    "begin_time": "2024-09-19 14:06:28",
+    "pass_rate": "100.00%",
+    "state": "通过",
+    "tester": "tester"
+}
+
+2024-09-19 14:11:17 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-09-19 14:11:17 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-09-19 14:11:17 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-09-19 14:11:17 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-09-19 14:11:17 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-09-19 14:11:17 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-09-19 14:11:17 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-09-19 14:11:17 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-09-19 14:11:17 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-09-19 14:11:17 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-09-19 14:11:17 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-09-19 14:11:17 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-09-19 14:11:17 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-09-19 14:11:17 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-09-19 14:11:17 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-09-19 14:11:17 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-09-19 14:11:17 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-09-19 14:11:17 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-09-19 14:11:17 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-09-19 14:11:17 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-09-19 14:11:17 [MainThread]-[main.main:48]-[INFO]:gRPC服务已经启动：172.31.22.169:52499
+2024-09-19 14:11:26 [ThreadPoolExecutor-0_0]-[base.__send_request:446]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66ebc08d-7feefae85f222748797ac1b9"
+  },
+  "json": null,
+  "origin": "222.72.165.166",
+  "url": "http://httpbin.org/post"
+}
+2024-09-19 14:11:26 [asyncio_0]-[executor.RunApiDoc:17]-[INFO]:--------  测试结果 ----------
+{
+    "class_list": [
+        {
+            "all": 1,
+            "success": 1,
+            "fail": 0,
+            "error": 0,
+            "cases": [
+                {
+                    "name": "demo",
+                    "log_data": [
+                        "【INFO】 |: 开始执行用例：【demo】\n",
+                        "【INFO】 |: 当前运行环境\n临时变量：\n全局变量：\n",
+                        "【INFO】 |: 强制等待:0秒\n",
+                        "【INFO】 |: 执行前置脚本\n",
+                        "【INFO】 |: 发送请求[POST]:http://httpbin.org/post：\n",
+                        "【DEBUG】 |: 请求头：{\n  \"User-Agent\": \"python-requests/2.32.3\",\n  \"Accept-Encoding\": \"gzip, deflate, br\",\n  \"Accept\": \"*/*\",\n  \"Connection\": \"keep-alive\",\n  \"Content-Length\": \"0\"\n}\n",
+                        "【DEBUG】 |: 请求体：None\n",
+                        "【DEBUG】 |: 响应头：{\n  \"Date\": \"Thu, 19 Sep 2024 06:11:25 GMT\",\n  \"Content-Type\": \"application/json\",\n  \"Content-Length\": \"403\",\n  \"Connection\": \"keep-alive\",\n  \"Server\": \"gunicorn/19.9.0\",\n  \"Access-Control-Allow-Origin\": \"*\",\n  \"Access-Control-Allow-Credentials\": \"true\"\n}\n",
+                        "【DEBUG】 |: 响应体：{\n  \"args\": {},\n  \"data\": \"\",\n  \"files\": {},\n  \"form\": {},\n  \"headers\": {\n    \"Accept\": \"*/*\",\n    \"Accept-Encoding\": \"gzip, deflate, br\",\n    \"Content-Length\": \"0\",\n    \"Host\": \"httpbin.org\",\n    \"User-Agent\": \"python-requests/2.32.3\",\n    \"X-Amzn-Trace-Id\": \"Root=1-66ebc08d-7feefae85f222748797ac1b9\"\n  },\n  \"json\": null,\n  \"origin\": \"222.72.165.166\",\n  \"url\": \"http://httpbin.org/post\"\n}\n",
+                        "【INFO】 |: 请求响应状态码:200\n",
+                        "【INFO】 |: 执行后置脚本\n",
+                        "【INFO】 |: demo执行——>【通过】\n"
+                    ],
+                    "l_env": [],
+                    "g_env": [],
+                    "url": "http://httpbin.org/post",
+                    "method": "POST",
+                    "status_code": 200,
+                    "response_header": "{\n  \"Date\": \"Thu, 19 Sep 2024 06:11:25 GMT\",\n  \"Content-Type\": \"application/json\",\n  \"Content-Length\": \"403\",\n  \"Connection\": \"keep-alive\",\n  \"Server\": \"gunicorn/19.9.0\",\n  \"Access-Control-Allow-Origin\": \"*\",\n  \"Access-Control-Allow-Credentials\": \"true\"\n}",
+                    "requests_header": "{\n  \"User-Agent\": \"python-requests/2.32.3\",\n  \"Accept-Encoding\": \"gzip, deflate, br\",\n  \"Accept\": \"*/*\",\n  \"Connection\": \"keep-alive\",\n  \"Content-Length\": \"0\"\n}",
+                    "response_body": "{\n  \"args\": {},\n  \"data\": \"\",\n  \"files\": {},\n  \"form\": {},\n  \"headers\": {\n    \"Accept\": \"*/*\",\n    \"Accept-Encoding\": \"gzip, deflate, br\",\n    \"Content-Length\": \"0\",\n    \"Host\": \"httpbin.org\",\n    \"User-Agent\": \"python-requests/2.32.3\",\n    \"X-Amzn-Trace-Id\": \"Root=1-66ebc08d-7feefae85f222748797ac1b9\"\n  },\n  \"json\": null,\n  \"origin\": \"222.72.165.166\",\n  \"url\": \"http://httpbin.org/post\"\n}",
+                    "requests_body": null,
+                    "state": "成功",
+                    "tag": "循环1次",
+                    "run_time": "0.466s"
+                }
+            ],
+            "res": "",
+            "name": "Demo",
+            "state": "success"
+        }
+    ],
+    "all": 1,
+    "success": 1,
+    "error": 0,
+    "fail": 0,
+    "runtime": "0.47s",
+    "argtime": "0.47s",
+    "begin_time": "2024-09-19 14:11:25",
+    "pass_rate": "100.00%",
+    "state": "通过",
+    "tester": "tester"
+}
+
+2024-09-19 14:20:04 [ThreadPoolExecutor-5_0]-[base.__send_request:446]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66ebc293-43686500015f7cd4462cd8ce"
+  },
+  "json": null,
+  "origin": "222.72.165.166",
+  "url": "http://httpbin.org/post"
+}
+2024-09-19 14:20:04 [asyncio_0]-[executor.RunApiDoc:17]-[INFO]:--------  测试结果 ----------
+{
+    "class_list": [
+        {
+            "all": 1,
+            "success": 1,
+            "fail": 0,
+            "error": 0,
+            "cases": [
+                {
+                    "name": "demo",
+                    "log_data": [
+                        "【INFO】 |: 开始执行用例：【demo】\n",
+                        "【INFO】 |: 当前运行环境\n临时变量：\n全局变量：\n",
+                        "【INFO】 |: 强制等待:0秒\n",
+                        "【INFO】 |: 执行前置脚本\n",
+                        "【INFO】 |: 发送请求[POST]:http://httpbin.org/post：\n",
+                        "【DEBUG】 |: 请求头：{\n  \"User-Agent\": \"python-requests/2.32.3\",\n  \"Accept-Encoding\": \"gzip, deflate, br\",\n  \"Accept\": \"*/*\",\n  \"Connection\": \"keep-alive\",\n  \"Content-Length\": \"0\"\n}\n",
+                        "【DEBUG】 |: 请求体：None\n",
+                        "【DEBUG】 |: 响应头：{\n  \"Date\": \"Thu, 19 Sep 2024 06:20:03 GMT\",\n  \"Content-Type\": \"application/json\",\n  \"Content-Length\": \"403\",\n  \"Connection\": \"keep-alive\",\n  \"Server\": \"gunicorn/19.9.0\",\n  \"Access-Control-Allow-Origin\": \"*\",\n  \"Access-Control-Allow-Credentials\": \"true\"\n}\n",
+                        "【DEBUG】 |: 响应体：{\n  \"args\": {},\n  \"data\": \"\",\n  \"files\": {},\n  \"form\": {},\n  \"headers\": {\n    \"Accept\": \"*/*\",\n    \"Accept-Encoding\": \"gzip, deflate, br\",\n    \"Content-Length\": \"0\",\n    \"Host\": \"httpbin.org\",\n    \"User-Agent\": \"python-requests/2.32.3\",\n    \"X-Amzn-Trace-Id\": \"Root=1-66ebc293-43686500015f7cd4462cd8ce\"\n  },\n  \"json\": null,\n  \"origin\": \"222.72.165.166\",\n  \"url\": \"http://httpbin.org/post\"\n}\n",
+                        "【INFO】 |: 请求响应状态码:200\n",
+                        "【INFO】 |: 执行后置脚本\n",
+                        "【INFO】 |: demo执行——>【通过】\n"
+                    ],
+                    "l_env": [],
+                    "g_env": [],
+                    "url": "http://httpbin.org/post",
+                    "method": "POST",
+                    "status_code": 200,
+                    "response_header": "{\n  \"Date\": \"Thu, 19 Sep 2024 06:20:03 GMT\",\n  \"Content-Type\": \"application/json\",\n  \"Content-Length\": \"403\",\n  \"Connection\": \"keep-alive\",\n  \"Server\": \"gunicorn/19.9.0\",\n  \"Access-Control-Allow-Origin\": \"*\",\n  \"Access-Control-Allow-Credentials\": \"true\"\n}",
+                    "requests_header": "{\n  \"User-Agent\": \"python-requests/2.32.3\",\n  \"Accept-Encoding\": \"gzip, deflate, br\",\n  \"Accept\": \"*/*\",\n  \"Connection\": \"keep-alive\",\n  \"Content-Length\": \"0\"\n}",
+                    "response_body": "{\n  \"args\": {},\n  \"data\": \"\",\n  \"files\": {},\n  \"form\": {},\n  \"headers\": {\n    \"Accept\": \"*/*\",\n    \"Accept-Encoding\": \"gzip, deflate, br\",\n    \"Content-Length\": \"0\",\n    \"Host\": \"httpbin.org\",\n    \"User-Agent\": \"python-requests/2.32.3\",\n    \"X-Amzn-Trace-Id\": \"Root=1-66ebc293-43686500015f7cd4462cd8ce\"\n  },\n  \"json\": null,\n  \"origin\": \"222.72.165.166\",\n  \"url\": \"http://httpbin.org/post\"\n}",
+                    "requests_body": null,
+                    "state": "成功",
+                    "tag": "循环1次",
+                    "run_time": "0.487s"
+                }
+            ],
+            "res": "",
+            "name": "Demo",
+            "state": "success"
+        }
+    ],
+    "all": 1,
+    "success": 1,
+    "error": 0,
+    "fail": 0,
+    "runtime": "0.49s",
+    "argtime": "0.49s",
+    "begin_time": "2024-09-19 14:20:03",
+    "pass_rate": "100.00%",
+    "state": "通过",
+    "tester": "tester"
+}
+
+2024-09-19 14:20:20 [ThreadPoolExecutor-6_0]-[base.__send_request:446]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66ebc2a4-74f8ee6a64543b5d7684950a"
+  },
+  "json": null,
+  "origin": "222.72.165.166",
+  "url": "http://httpbin.org/post"
+}
+2024-09-19 14:20:20 [asyncio_0]-[executor.RunApiDoc:17]-[INFO]:--------  测试结果 ----------
+{
+    "class_list": [
+        {
+            "all": 1,
+            "success": 1,
+            "fail": 0,
+            "error": 0,
+            "cases": [
+                {
+                    "name": "demo",
+                    "log_data": [
+                        "【INFO】 |: 开始执行用例：【demo】\n",
+                        "【INFO】 |: 当前运行环境\n临时变量：\n全局变量：\n",
+                        "【INFO】 |: 强制等待:0秒\n",
+                        "【INFO】 |: 执行前置脚本\n",
+                        "【INFO】 |: 发送请求[POST]:http://httpbin.org/post：\n",
+                        "【DEBUG】 |: 请求头：{\n  \"User-Agent\": \"python-requests/2.32.3\",\n  \"Accept-Encoding\": \"gzip, deflate, br\",\n  \"Accept\": \"*/*\",\n  \"Connection\": \"keep-alive\",\n  \"Content-Length\": \"0\"\n}\n",
+                        "【DEBUG】 |: 请求体：None\n",
+                        "【DEBUG】 |: 响应头：{\n  \"Date\": \"Thu, 19 Sep 2024 06:20:20 GMT\",\n  \"Content-Type\": \"application/json\",\n  \"Content-Length\": \"403\",\n  \"Connection\": \"keep-alive\",\n  \"Server\": \"gunicorn/19.9.0\",\n  \"Access-Control-Allow-Origin\": \"*\",\n  \"Access-Control-Allow-Credentials\": \"true\"\n}\n",
+                        "【DEBUG】 |: 响应体：{\n  \"args\": {},\n  \"data\": \"\",\n  \"files\": {},\n  \"form\": {},\n  \"headers\": {\n    \"Accept\": \"*/*\",\n    \"Accept-Encoding\": \"gzip, deflate, br\",\n    \"Content-Length\": \"0\",\n    \"Host\": \"httpbin.org\",\n    \"User-Agent\": \"python-requests/2.32.3\",\n    \"X-Amzn-Trace-Id\": \"Root=1-66ebc2a4-74f8ee6a64543b5d7684950a\"\n  },\n  \"json\": null,\n  \"origin\": \"222.72.165.166\",\n  \"url\": \"http://httpbin.org/post\"\n}\n",
+                        "【INFO】 |: 请求响应状态码:200\n",
+                        "【INFO】 |: 执行后置脚本\n",
+                        "【INFO】 |: demo执行——>【通过】\n"
+                    ],
+                    "l_env": [],
+                    "g_env": [],
+                    "url": "http://httpbin.org/post",
+                    "method": "POST",
+                    "status_code": 200,
+                    "response_header": "{\n  \"Date\": \"Thu, 19 Sep 2024 06:20:20 GMT\",\n  \"Content-Type\": \"application/json\",\n  \"Content-Length\": \"403\",\n  \"Connection\": \"keep-alive\",\n  \"Server\": \"gunicorn/19.9.0\",\n  \"Access-Control-Allow-Origin\": \"*\",\n  \"Access-Control-Allow-Credentials\": \"true\"\n}",
+                    "requests_header": "{\n  \"User-Agent\": \"python-requests/2.32.3\",\n  \"Accept-Encoding\": \"gzip, deflate, br\",\n  \"Accept\": \"*/*\",\n  \"Connection\": \"keep-alive\",\n  \"Content-Length\": \"0\"\n}",
+                    "response_body": "{\n  \"args\": {},\n  \"data\": \"\",\n  \"files\": {},\n  \"form\": {},\n  \"headers\": {\n    \"Accept\": \"*/*\",\n    \"Accept-Encoding\": \"gzip, deflate, br\",\n    \"Content-Length\": \"0\",\n    \"Host\": \"httpbin.org\",\n    \"User-Agent\": \"python-requests/2.32.3\",\n    \"X-Amzn-Trace-Id\": \"Root=1-66ebc2a4-74f8ee6a64543b5d7684950a\"\n  },\n  \"json\": null,\n  \"origin\": \"222.72.165.166\",\n  \"url\": \"http://httpbin.org/post\"\n}",
+                    "requests_body": null,
+                    "state": "成功",
+                    "tag": "循环1次",
+                    "run_time": "0.225s"
+                }
+            ],
+            "res": "",
+            "name": "Demo",
+            "state": "success"
+        }
+    ],
+    "all": 1,
+    "success": 1,
+    "error": 0,
+    "fail": 0,
+    "runtime": "0.23s",
+    "argtime": "0.23s",
+    "begin_time": "2024-09-19 14:20:20",
+    "pass_rate": "100.00%",
+    "state": "通过",
+    "tester": "tester"
+}
+
+2024-09-19 14:20:38 [ThreadPoolExecutor-7_0]-[base.__send_request:446]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66ebc2b5-6c96616e6b8590c933a285c1"
+  },
+  "json": null,
+  "origin": "222.72.165.166",
+  "url": "http://httpbin.org/post"
+}
+2024-09-19 14:20:38 [asyncio_0]-[executor.RunApiDoc:17]-[INFO]:--------  测试结果 ----------
+{
+    "class_list": [
+        {
+            "all": 1,
+            "success": 1,
+            "fail": 0,
+            "error": 0,
+            "cases": [
+                {
+                    "name": "demo",
+                    "log_data": [
+                        "【INFO】 |: 开始执行用例：【demo】\n",
+                        "【INFO】 |: 当前运行环境\n临时变量：\n全局变量：\n",
+                        "【INFO】 |: 强制等待:0秒\n",
+                        "【INFO】 |: 执行前置脚本\n",
+                        "【INFO】 |: 发送请求[POST]:http://httpbin.org/post：\n",
+                        "【DEBUG】 |: 请求头：{\n  \"User-Agent\": \"python-requests/2.32.3\",\n  \"Accept-Encoding\": \"gzip, deflate, br\",\n  \"Accept\": \"*/*\",\n  \"Connection\": \"keep-alive\",\n  \"Content-Length\": \"0\"\n}\n",
+                        "【DEBUG】 |: 请求体：None\n",
+                        "【DEBUG】 |: 响应头：{\n  \"Date\": \"Thu, 19 Sep 2024 06:20:37 GMT\",\n  \"Content-Type\": \"application/json\",\n  \"Content-Length\": \"403\",\n  \"Connection\": \"keep-alive\",\n  \"Server\": \"gunicorn/19.9.0\",\n  \"Access-Control-Allow-Origin\": \"*\",\n  \"Access-Control-Allow-Credentials\": \"true\"\n}\n",
+                        "【DEBUG】 |: 响应体：{\n  \"args\": {},\n  \"data\": \"\",\n  \"files\": {},\n  \"form\": {},\n  \"headers\": {\n    \"Accept\": \"*/*\",\n    \"Accept-Encoding\": \"gzip, deflate, br\",\n    \"Content-Length\": \"0\",\n    \"Host\": \"httpbin.org\",\n    \"User-Agent\": \"python-requests/2.32.3\",\n    \"X-Amzn-Trace-Id\": \"Root=1-66ebc2b5-6c96616e6b8590c933a285c1\"\n  },\n  \"json\": null,\n  \"origin\": \"222.72.165.166\",\n  \"url\": \"http://httpbin.org/post\"\n}\n",
+                        "【INFO】 |: 请求响应状态码:200\n",
+                        "【INFO】 |: 执行后置脚本\n",
+                        "【INFO】 |: demo执行——>【通过】\n"
+                    ],
+                    "l_env": [],
+                    "g_env": [],
+                    "url": "http://httpbin.org/post",
+                    "method": "POST",
+                    "status_code": 200,
+                    "response_header": "{\n  \"Date\": \"Thu, 19 Sep 2024 06:20:37 GMT\",\n  \"Content-Type\": \"application/json\",\n  \"Content-Length\": \"403\",\n  \"Connection\": \"keep-alive\",\n  \"Server\": \"gunicorn/19.9.0\",\n  \"Access-Control-Allow-Origin\": \"*\",\n  \"Access-Control-Allow-Credentials\": \"true\"\n}",
+                    "requests_header": "{\n  \"User-Agent\": \"python-requests/2.32.3\",\n  \"Accept-Encoding\": \"gzip, deflate, br\",\n  \"Accept\": \"*/*\",\n  \"Connection\": \"keep-alive\",\n  \"Content-Length\": \"0\"\n}",
+                    "response_body": "{\n  \"args\": {},\n  \"data\": \"\",\n  \"files\": {},\n  \"form\": {},\n  \"headers\": {\n    \"Accept\": \"*/*\",\n    \"Accept-Encoding\": \"gzip, deflate, br\",\n    \"Content-Length\": \"0\",\n    \"Host\": \"httpbin.org\",\n    \"User-Agent\": \"python-requests/2.32.3\",\n    \"X-Amzn-Trace-Id\": \"Root=1-66ebc2b5-6c96616e6b8590c933a285c1\"\n  },\n  \"json\": null,\n  \"origin\": \"222.72.165.166\",\n  \"url\": \"http://httpbin.org/post\"\n}",
+                    "requests_body": null,
+                    "state": "成功",
+                    "tag": "循环1次",
+                    "run_time": "0.231s"
+                }
+            ],
+            "res": "",
+            "name": "Demo",
+            "state": "success"
+        }
+    ],
+    "all": 1,
+    "success": 1,
+    "error": 0,
+    "fail": 0,
+    "runtime": "0.23s",
+    "argtime": "0.23s",
+    "begin_time": "2024-09-19 14:20:37",
+    "pass_rate": "100.00%",
+    "state": "通过",
+    "tester": "tester"
+}
+

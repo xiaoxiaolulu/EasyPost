@@ -40,7 +40,7 @@ class ServiceConsul(object):
 
 
 def main():
-    srv_record_name = 'unit_executor.services.consul'
+    srv_record_name = 'unit_executor.service.consul'
     cons = ServiceConsul()
     address, port = cons.fetch_user_service_addresses(srv_record_name)
     print(address, port)

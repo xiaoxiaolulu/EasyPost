@@ -12,6 +12,7 @@ from utils.parser import Parser
 class ApiRunServer(executor_pb2_grpc.ExecutorService):
 
     def RunApiDoc(self, request, context):
+        print(type(request))
         response = run_api(MessageToDict(request))
         logger.info(
             f"--------  测试结果 ----------\n"
