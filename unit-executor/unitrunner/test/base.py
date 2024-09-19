@@ -38,17 +38,11 @@ if __name__ == '__main__':
     # sys.stdout.write(str(response))
     # sys.stdout.write("\n测试结果\n")
     api_doc = api_data = {
-        "type": "loop",
-        "parameters": {
-            "count": 2
-        },
-        "children": [{
-            "type": "http",
             "title": "demo",
             "interface": {
-                "url": "http://httpbin.org/post",
+                "url": "www.baidu.com",
                 "name": "33333",
-                "method": "POST"
+                "method": "GET"
             },
             "headers": {},
             "request": {"data": {}},
@@ -56,11 +50,6 @@ if __name__ == '__main__':
             "teardown_script": "",
             "extract": {},
             "validators": []
-        }]
-    }
+        }
     responses = run_api(api_data=api_doc)
-    sys.stdout.write(str(responses))
-    logger.info(
-        f"--------  测试结果 ----------\n"
-        f"{json.dumps(responses, indent=4, ensure_ascii=False)}\n"
-    )
+    # sys.stdout.write(str(responses))
