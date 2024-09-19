@@ -329,6 +329,7 @@ DRF_VIEWSET_PROFILER = {
 
 ASGI_APPLICATION = "config.asgi.application"
 
+# consul配置
 CONSUL_HOST = "127.0.0.1"
 CONSUL_PORT = 8500
 CONSUL_DNS_PORT = 8600

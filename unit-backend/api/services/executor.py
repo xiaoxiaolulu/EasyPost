@@ -1,10 +1,9 @@
 import grpc
-from api.services.decorators import grpc_error_handler
+from api.services import ServiceConsul
 from api.services.protos import (
     executor_pb2_grpc,
     executor_pb2
 )
-from utils.grpconsul import ServiceConsul
 from utils.logger import logger
 from utils.single import SingletonMeta
 
@@ -32,7 +31,6 @@ class ExecutorStub:
 
 class ExecutorServiceClient(metaclass=SingletonMeta):
 
-    @grpc_error_handler
     async def run_api_doc(self, api_doc):
         async with ExecutorStub() as stub:
             request = executor_pb2.ApiDocRequest(
