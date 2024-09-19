@@ -1,6 +1,7 @@
 import os
 from django.core.exceptions import ObjectDoesNotExist
 from django_filters.rest_framework import DjangoFilterBackend
+from google.protobuf.json_format import MessageToDict
 from rest_framework import filters
 from rest_framework import (
     status,
@@ -145,15 +146,15 @@ class SaveOrUpdateApiView(APIView):
             return Response(ResponseStandard.failed(msg=str(err)))
 
 
-class RunApiView(APIView):
+class RunApiView(AsyncAPIView):
     permission_classes = [IsAuthenticated]
 
     @staticmethod
-    def post(request, **kwargs):
+    async def post(request, **kwargs):
 
         try:
-            response = HttpDao.run_api_doc(request.data)
-            return Response(ResponseStandard.success(data=response))
+            response = await HttpDao.run_api_doc(request.data)
+            return Response(ResponseStandard.success(data=MessageToDict(response)))
         except Exception as err:
             return Response(ResponseStandard.failed(msg=str(err)))
 

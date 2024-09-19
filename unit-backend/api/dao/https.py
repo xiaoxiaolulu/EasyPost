@@ -25,6 +25,7 @@ from api.models.https import (
     ApiCopy
 )
 from api.models.project import Project
+from api.services.executor import ExecutorServiceClient
 from unitrunner.engine.base import (
     run_test,
     run_api
@@ -222,7 +223,7 @@ class HttpDao:
             raise Exception(f"{err} ❌")
 
     @classmethod
-    def run_api_doc(cls, api: dict):
+    async def run_api_doc(cls, api: dict):
         """
         Runs an API test case based on the provided API data.
 
@@ -235,10 +236,11 @@ class HttpDao:
         Raises:
             Exception: If an error occurs during the API test run.
         """
+        executor_service = ExecutorServiceClient()
         try:
             api = HandelTestData(api)
             api_data = api.get_api_template()
-            result = run_api(api_data=api_data)
+            result = await executor_service.run_api_doc(api_data)
             return result
         except Exception as err:
             logger.debug(

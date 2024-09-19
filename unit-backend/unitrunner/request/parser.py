@@ -329,11 +329,11 @@ class HandelTestData(object):
             # Attempt safer evaluation using ast.literal_eval (assumes dictionary)
             extract_dict = ast.literal_eval(extract)
         except (SyntaxError, ValueError):
-            return []
+            return {}
 
         # Validate required keys in the extract dictionary
         if not isinstance(extract_dict, dict) or any(key not in extract_dict for key in ('name', 'type', 'value')):
-            return []
+            return {}
 
         extract_items = extract_dict.items()
         extract_data = {item[0]: (env, item[1]['type'], item[1]['value']) for item in extract_items}
