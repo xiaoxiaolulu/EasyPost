@@ -1,4 +1,3 @@
-import asyncio
 import grpc
 from api.services.decorators import grpc_error_handler
 from api.services.protos import (
@@ -41,14 +40,3 @@ class ExecutorServiceClient(metaclass=SingletonMeta):
             )
             response = await stub.RunApiDoc(request)
             return response
-
-
-if __name__ == '__main__':
-    # data = {'mode': 'normal', 'title': '31313', 'interface': {'url': 'http://httpbin.org/post', 'name': '31313', 'method': 'POST'}, 'headers': {}, 'request': {'data': {}}, 'setup_script': '', 'teardown_script': '', 'extract': {}, 'validators': []}
-    # data = {'mode': 'normal', 'title': '31333', 'interface': {'url': 'https://www.baidu.com/', 'name': '31333', 'method': 'POST'}, 'headers': {}, 'request': {'data': {}}, 'setup_script': '', 'teardown_script': '', 'extract': {}, 'validators': []}
-    # executor_service = ExecutorServiceClient()
-    # responses = asyncio.run(executor_service.run_api_doc(data))
-    # print(responses)
-    import requests  # 引入requests库
-    response = requests.post('https://www.baidu.com/')
-    print(response.text)
