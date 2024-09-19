@@ -183,45 +183,6 @@
                 <extract ref="RequestExtractor"></extract>
               </div>
             </el-tab-pane>
-<!-- TODO 待优化           -->
-<!--            <el-tab-pane name='ApiRequestPerform'>-->
-<!--              <template #label>-->
-<!--                <strong>一键压测</strong>-->
-<!--              </template>-->
-<!--              <div>-->
-<!--                <el-form :inline="true" autoComplete="on" :model="ruleForm" :rules="rules" ref="ruleFormRef"-->
-<!--                         label-width="auto"-->
-<!--                         label-position="right">-->
-<!--                  <el-form-item label="并发数" prop="">-->
-<!--                    <el-input-->
-<!--                        size="small"-->
-<!--                        v-model="ruleForm.threads"-->
-<!--                        placeholder=""-->
-<!--                    ></el-input>-->
-<!--                  </el-form-item>-->
-<!--                  <el-form-item label="轮次" prop="">-->
-<!--                    <el-input-->
-<!--                        size="small"-->
-<!--                        v-model="ruleForm.iter"-->
-<!--                        placeholder=""-->
-<!--                    ></el-input>-->
-<!--                  </el-form-item>-->
-<!--                  <el-form-item>-->
-<!--                    <el-button size="small" type="primary" @click="debug(ruleFormRef)">开始压测</el-button>-->
-<!--                  </el-form-item>-->
-<!--                </el-form>-->
-<!--                <el-table v-loading="performLoading" :data="performData" class="custom-table" v-show="performResponseShow">-->
-<!--                  <el-table-column prop="duration" label="duration"></el-table-column>-->
-<!--                  <el-table-column prop="mean" label="mean"></el-table-column>-->
-<!--                  <el-table-column prop="min" label="min"></el-table-column>-->
-<!--                  <el-table-column prop="median" label="median"></el-table-column>-->
-<!--                  <el-table-column prop="90p" label="90p"></el-table-column>-->
-<!--                  <el-table-column prop="95p" label="95p"></el-table-column>-->
-<!--                  <el-table-column prop="99p" label="99p"></el-table-column>-->
-<!--                  <el-table-column prop="max" label="max"></el-table-column>-->
-<!--                </el-table>-->
-<!--              </div>-->
-<!--            </el-tab-pane>-->
           </el-tabs>
         </div>
       </el-card>
@@ -284,8 +245,6 @@ const ruleForm = reactive({
   'name': '',
   'status': '',
   'remarks': '',
-  'threads': '',
-  'iter': '',
   'priority': '',
 })
 
@@ -320,8 +279,6 @@ const status = ref([{
   type: "normal"
 }])
 
-const performData = ref()
-
 const statusCode = ref()
 
 const statusClass = ref()
@@ -347,10 +304,6 @@ const RequestValidators = ref()
 const RequestTeardown = ref()
 
 const RequestSetup = ref()
-
-const performResponseShow = ref(false)
-
-const performLoading = ref(false)
 
 const state = reactive({
   api_id: 0
@@ -490,14 +443,6 @@ const debug = (formName: FormInstance | undefined) => {
   formName.validate(async (valid) => {
     if (valid) {
       try{
-        let mode = 'normal'
-        if (ruleForm.iter && ruleForm.threads){
-          mode = 'perform'
-        }else {
-          mode = 'normal'
-        }
-        performLoading.value = true
-        performResponseShow.value = false
         let ApiRequestHeader = RequestHeadersRef.value.getData()
         let ApiRequestQuery = RequestQueryRef.value.getData()
         let ApiRequestBody = RequestBodyRef.value.getData()
@@ -506,15 +451,9 @@ const debug = (formName: FormInstance | undefined) => {
         let ApiRequestValidators = RequestValidators.value.getData()
         let ApiRequestExtractor = RequestExtractor.value.getData()
         let apiData = {
-          mode: mode,
-          threads: ruleForm.threads,
-          iterations: ruleForm.iter,
-          directory_id: route.query.node,
-          project: route.query.project,
           name: ruleForm.name,
           url: ruleForm.url,
           method: ruleForm.method,
-          tags: '',
           status: ruleForm.status,
           desc: ruleForm.remarks,
           headers: ApiRequestHeader,
@@ -527,13 +466,10 @@ const debug = (formName: FormInstance | undefined) => {
         }
         const ret = await runApi(apiData)
         const {code, data, msg} = ret.data
-        const res = data['class_list'][0]['cases'][0]
-        statusCode.value = res['status_code']
-        runTime.value = res['run_time']
+        const res = data['classList'][0]['cases'][0]
+        statusCode.value = res['statusCode']
+        runTime.value = res['runTime']
         ResponseRef.value.setData(res)
-        performData.value = [res['perform']]
-        performResponseShow.value = true
-        performLoading.value = false
         responseReport.value = true
         toResponse()
         showErrMessage(code.toString(), msg)
