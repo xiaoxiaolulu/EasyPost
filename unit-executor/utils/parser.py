@@ -59,7 +59,6 @@ class Parser:
                 cases=cls.create_detail_step(class_item, cases_collection)
             )
             class_collection.append(class_data)
-
             return class_collection
         except Exception as err:
             logger.error(f"创建报告详情失败 -> {err}")
@@ -82,6 +81,7 @@ class Parser:
         """
         try:
             for index, case_item in enumerate(class_item.get('cases', [])):
+                print(case_item)
                 cases_collection.append(executor_pb2.Cases(
                     name=case_item.get('name', 'Demo'),
                     log_data=case_item.get('log_data', []),

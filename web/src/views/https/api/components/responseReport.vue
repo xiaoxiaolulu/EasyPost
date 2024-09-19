@@ -18,11 +18,11 @@
   // init
   const setData = (data) => {
     if (data){
-      state.runLog = data['log_data'].join('')
-      state.status_code = data['status_code']
-      state.response_time = data['run_time']
-      state.responseBody = data['requests_body']
-      state.headers = JSON.parse(data['requests_header'])
+      state.runLog = data['logData'].join('')
+      state.status_code = data['statusCode']
+      state.response_time = data['runTime']
+      state.responseBody = data['responseBody']
+      state.headers = JSON.parse(data['requestsHeader'])
     }
   }
 
@@ -66,14 +66,14 @@
       </el-tab-pane>
 
       <!--请求信息-->
-      <el-tab-pane name='ApiRequest'>
+      <el-tab-pane name='ApiResponseHeaders'>
         <template #label>
           <strong>请求头</strong>
         </template>
         <div>
           <div v-for="(value, key) in state.headers" :key="key">
           <span style="font-size: 12px">
-          <span style="font-weight: 600">{{ key }}: </span><span>{{ value }}</span>
+          <span style="font-weight: 600">{{ key}}: </span><span>{{ value }}</span>
           </span>
           </div>
         </div>
