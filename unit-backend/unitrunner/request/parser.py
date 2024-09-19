@@ -1,6 +1,5 @@
 import ast
 import json
-import sys
 from typing import (
     List,
     Dict,

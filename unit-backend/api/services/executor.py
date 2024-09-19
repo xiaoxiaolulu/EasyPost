@@ -17,7 +17,7 @@ class ExecutorStub:
     @property
     def unit_executor_service_addr(self):
         host, port = servers_consul.fetch_user_service_addresses('unit_executor.service.consul')
-        logger.info(f"获取到的地址：{host}:{port}")
+        logger.info(f"Service unit_executor 服务发现：{host}:{port}")
         return f"{host}:{port}"
 
     async def __aenter__(self):

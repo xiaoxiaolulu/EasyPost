@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="feat: 用例执行器客户端封装">
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="style: 执行器服务发现代码调整">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/services/executor.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/services/executor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/request/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/unitrunner/request/parser.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -530,23 +534,7 @@
       <workItem from="1723615058064" duration="13500000" />
       <workItem from="1723705475461" duration="20000" />
       <workItem from="1725003165423" duration="3098000" />
-      <workItem from="1726207726818" duration="16666000" />
-    </task>
-    <task id="LOCAL-00395" summary="Add DataStructure API and routers, refine Notice API.">
-      <option name="closed" value="true" />
-      <created>1714298703169</created>
-      <option name="number" value="00395" />
-      <option name="presentableId" value="LOCAL-00395" />
-      <option name="project" value="LOCAL" />
-      <updated>1714298703169</updated>
-    </task>
-    <task id="LOCAL-00396" summary="Updated CaseParametersEnum and DataStructureType to use the same constants for data structure types.">
-      <option name="closed" value="true" />
-      <created>1714298966583</created>
-      <option name="number" value="00396" />
-      <option name="presentableId" value="LOCAL-00396" />
-      <option name="project" value="LOCAL" />
-      <updated>1714298966583</updated>
+      <workItem from="1726207726818" duration="19670000" />
     </task>
     <task id="LOCAL-00397" summary="Updated CaseParametersEnum and DataStructureType to use the same constants for data structure types.">
       <option name="closed" value="true" />
@@ -924,7 +912,23 @@
       <option name="project" value="LOCAL" />
       <updated>1726726868697</updated>
     </task>
-    <option name="localTasksCounter" value="444" />
+    <task id="LOCAL-00444" summary="feat: 用例执行器客户端封装">
+      <option name="closed" value="true" />
+      <created>1726737033460</created>
+      <option name="number" value="00444" />
+      <option name="presentableId" value="LOCAL-00444" />
+      <option name="project" value="LOCAL" />
+      <updated>1726737033460</updated>
+    </task>
+    <task id="LOCAL-00445" summary="style: 执行器服务发现代码调整">
+      <option name="closed" value="true" />
+      <created>1726738258050</created>
+      <option name="number" value="00445" />
+      <option name="presentableId" value="LOCAL-00445" />
+      <option name="project" value="LOCAL" />
+      <updated>1726738258050</updated>
+    </task>
+    <option name="localTasksCounter" value="446" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -954,7 +958,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Changed project name and logo, updated err_msg and err_" />
     <MESSAGE value="Changed project name and logo, updated err_msg and err_png" />
     <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields" />
     <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in" />
@@ -979,7 +982,8 @@
     <MESSAGE value="feat: 服务注册与发现" />
     <MESSAGE value="style: 修改视图目录" />
     <MESSAGE value="feat: 用例执行器客户端封装" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 用例执行器客户端封装" />
+    <MESSAGE value="style: 执行器服务发现代码调整" />
+    <option name="LAST_COMMIT_MESSAGE" value="style: 执行器服务发现代码调整" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
