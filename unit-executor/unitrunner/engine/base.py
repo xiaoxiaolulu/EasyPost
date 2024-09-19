@@ -298,9 +298,6 @@ class BaseTest(unittest.TestCase, CaseRunLog):
 
         Returns: None
         """
-        print("测试")
-        print(data)
-        print("测试")
         # 日志记录
         self.__run_log()
         # 数据库查询
@@ -312,11 +309,16 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         self.__run_setup_script(data)
         # 发送请求
         response = self.__send_request(data)
+
         # 数据提取
-        self.data_extraction(response.json(), data)
+        if data.get('extract'):
+            self.data_extraction(response.json(), data)
+
         # 断言
         checks = data.get('validators')
-        self.validators(response.json(), checks)
+        if checks:
+            self.validators(response.json(), checks)
+
         # 执行后置脚本
         self.__run_teardown_script(response)
 
