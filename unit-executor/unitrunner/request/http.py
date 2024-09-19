@@ -19,7 +19,7 @@ urllib3.disable_warnings(InsecureRequestWarning)
 
 class HttpHandler(object):
 
-    def __init__(self, request_body: dict):
+    def __init__(self, request_body: dict = None):
         self.request_body = request_body
 
     @staticmethod

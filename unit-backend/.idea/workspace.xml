@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="feat: 用例执行器客户端封装">
-      <change beforePath="$PROJECT_DIR$/api/exception/exception_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/exception/exception_handler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/services/decorators.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/services/decorators.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/services/executor.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/services/executor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/grpconsul.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/grpconsul.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/status_code.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../unit-executor/logs/Unit-Executor.log" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/logs/Unit-Executor.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../unit-executor/services/executor.py" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/services/executor.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -538,15 +530,7 @@
       <workItem from="1723615058064" duration="13500000" />
       <workItem from="1723705475461" duration="20000" />
       <workItem from="1725003165423" duration="3098000" />
-      <workItem from="1726207726818" duration="8418000" />
-    </task>
-    <task id="LOCAL-00394" summary="Add DataStructure API and routers, refine Notice API.">
-      <option name="closed" value="true" />
-      <created>1714298549994</created>
-      <option name="number" value="00394" />
-      <option name="presentableId" value="LOCAL-00394" />
-      <option name="project" value="LOCAL" />
-      <updated>1714298549994</updated>
+      <workItem from="1726207726818" duration="16666000" />
     </task>
     <task id="LOCAL-00395" summary="Add DataStructure API and routers, refine Notice API.">
       <option name="closed" value="true" />
@@ -932,7 +916,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726209202444</updated>
     </task>
-    <option name="localTasksCounter" value="443" />
+    <task id="LOCAL-00443" summary="feat: 用例执行器客户端封装">
+      <option name="closed" value="true" />
+      <created>1726726868697</created>
+      <option name="number" value="00443" />
+      <option name="presentableId" value="LOCAL-00443" />
+      <option name="project" value="LOCAL" />
+      <updated>1726726868697</updated>
+    </task>
+    <option name="localTasksCounter" value="444" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1049,7 +1041,7 @@
     <SUITE FILE_PATH="coverage/backend$qy.coverage" NAME="qy Coverage Results" MODIFIED="1713753970534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/unitrunner/msg" />
     <SUITE FILE_PATH="coverage/backend$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1718701260377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/dao" />
     <SUITE FILE_PATH="coverage/backend$initmenus.coverage" NAME="initmenus Coverage Results" MODIFIED="1715588930195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/management/commands" />
-    <SUITE FILE_PATH="coverage/unit_backend$executor.coverage" NAME="executor Coverage Results" MODIFIED="1726726837732" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/services" />
+    <SUITE FILE_PATH="coverage/unit_backend$executor.coverage" NAME="executor Coverage Results" MODIFIED="1726735595256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/services" />
     <SUITE FILE_PATH="coverage/backend$init_task.coverage" NAME="init_task Coverage Results" MODIFIED="1705894334573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/events" />
     <SUITE FILE_PATH="coverage/backend$snowflake.coverage" NAME="snowflake Coverage Results" MODIFIED="1705989296959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/backend$atomic.coverage" NAME="atomic Coverage Results" MODIFIED="1716778766035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/tests" />

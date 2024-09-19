@@ -309,15 +309,11 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         self.__run_setup_script(data)
         # 发送请求
         response = self.__send_request(data)
-
         # 数据提取
-        if data.get('extract'):
-            self.data_extraction(response.json(), data)
-
+        self.data_extraction(response, data)
         # 断言
         checks = data.get('validators')
-        if checks:
-            self.validators(response.json(), checks)
+        self.validators(response, checks)
 
         # 执行后置脚本
         self.__run_teardown_script(response)
@@ -334,6 +330,9 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             response (Any): The response object to validate.
             validate_check (list): A list of validation checks, where each check is a dictionary.
         """
+        client = HttpHandler()
+        response = client.get_response(response)
+
         if isinstance(validate_check, list):
 
             for check in validate_check:
@@ -650,7 +649,11 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         exts = case.get('extract') or getattr(self, 'extract', None)  # noqa
         if not (isinstance(exts, dict) and exts): return
         self.info_log("从响应结果中开始提取数据\n")
+
         self.extras = []
+
+        client = HttpHandler()
+        response = client.get_response(response)
         # 遍历要提取的数据
         for name, ext in exts.items():
             # 判断提取数据的方式
