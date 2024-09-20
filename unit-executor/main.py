@@ -1,3 +1,4 @@
+import datetime
 import socket
 import sys
 import uuid
@@ -45,7 +46,11 @@ async def main():
         sys.exit(0)
 
     await server.start()
-    logger.info(f"gRPC服务已经启动：{ip}:{port}")
+
+    now = datetime.datetime.now().strftime("%B %d, %Y - %X")
+    logger.info(now)
+    logger.info(f"Starting Grpc development server at {ip}:{port}\n")
+
     try:
         await server.wait_for_termination()
     finally:
