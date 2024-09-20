@@ -5,8 +5,6 @@ DESCRIPTION：Http(s)请求公共方法封装
 """
 import datetime
 import json
-import socket
-import time
 from typing import Union
 import urllib3
 import requests
@@ -95,48 +93,6 @@ class HttpHandler(object):
         if timer.seconds > 0:
             return f"{timer.seconds}.{timer.microseconds // 1000}s"
         return f"{timer.microseconds // 100}ms"
-
-    @staticmethod
-    def measure_dns_resolution(host: str) -> float:
-        """Measures the DNS resolution time for a given host.
-
-        Args:
-            host (str): The hostname to resolve.
-
-        Returns:
-            float: The DNS resolution time in seconds.
-        """
-        try:
-            start_time = time.time()
-            socket.getaddrinfo(host, None)
-            end_time = time.time()
-            dns_resolution_time = (end_time - start_time) * 1000
-            return dns_resolution_time
-        except exceptions.DnsConnectException as err:
-            raise exceptions.TcpConnectException('❌Dns连接失败，错误信息如下：{}'.format(err))
-
-    @staticmethod
-    def measure_tcp_connection_time(host: str) -> float:
-        """Measures the TCP connection time for a given host.
-
-        Args:
-            host (str): The hostname to connect to.
-
-        Returns:
-            float: The TCP connection time in seconds.
-
-        Raises:
-            TcpConnectException: If the connection fails.
-        """
-        start_time = time.time()
-        try:
-            sock = socket.create_connection((host, 80))
-            sock.close()
-            end_time = time.time()
-            connection_time = (end_time - start_time) * 1000
-            return connection_time
-        except exceptions.TcpConnectException as err:
-            raise exceptions.TcpConnectException('❌Tcp连接失败，错误信息如下：{}'.format(err))
 
     def response(
             self,

@@ -469,6 +469,8 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         self.url = response.request.url
         self.method = response.request.method
         self.status_code = response.status_code
+        self.content_length = len(response.content)
+        self.content_type = response.headers.get('Content-Type')
         self.response_header = json.dumps(dict(response.headers), ensure_ascii=False, indent=2)
         self.requests_header = json.dumps(dict(response.request.headers), ensure_ascii=False, indent=2)
         self.response_body = client.get_response(response)

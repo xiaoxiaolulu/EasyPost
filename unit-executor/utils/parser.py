@@ -91,6 +91,8 @@ class Parser:
                     url=case_item.get('url', ''),
                     method=case_item.get('method', ''),
                     status_code=case_item.get("status_code", 200),
+                    content_length=case_item.get('content_length', 0),
+                    content_type=case_item.get('content_type', ''),
                     response_header=case_item.get('response_header', ''),
                     requests_header=case_item.get("requests_header", ''),
                     response_body=case_item.get('response_body', ''),

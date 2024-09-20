@@ -40,7 +40,7 @@ if __name__ == '__main__':
     api_doc = api_data = {
             "title": "demo",
             "interface": {
-                "url": "www.baidu.com",
+                "url": "https://www.baidu.com/",
                 "name": "33333",
                 "method": "GET"
             },
@@ -52,4 +52,5 @@ if __name__ == '__main__':
             "validators": []
         }
     responses = run_api(api_data=api_doc)
-    # sys.stdout.write(str(responses))
+    print(responses)
+    print(json.dumps(dict(responses), ensure_ascii=False, indent=2))

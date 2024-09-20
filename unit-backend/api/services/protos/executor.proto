@@ -1,4 +1,5 @@
 syntax = "proto3";
+import "google/protobuf/any.proto";
 
 
 message Interface {
@@ -26,7 +27,7 @@ message ApiDocRequest {
   Request request = 5;
   string setup_script = 6;
   string teardown_script = 7;
-  map<string, string> extract = 8;
+  map<string, google.protobuf.Any> extract = 8;
   repeated Validators validators = 9;
   repeated ApiDocRequest children = 10;
 }
@@ -40,13 +41,15 @@ message Cases {
   string url = 6;
   string method = 7;
   int32 status_code = 8;
-  string response_header = 9;
-  string requests_header = 10;
-  string response_body = 11;
-  int32 count = 12;
-  string state = 13;
-  string tag = 14;
-  string run_time = 15;
+  int64 content_length = 9;
+  string content_type = 10;
+  string response_header = 11;
+  string requests_header = 12;
+  string response_body = 13;
+  int32 count = 14;
+  string state = 15;
+  string tag = 16;
+  string run_time = 17;
 }
 
 message ClassList{
