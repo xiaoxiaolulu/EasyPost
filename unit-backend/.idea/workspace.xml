@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="style: 执行器服务发现代码调整">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/services/executor.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/services/executor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unitrunner/request/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/unitrunner/request/parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unit-executor/logs/Unit-Executor.log" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/logs/Unit-Executor.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unit-executor/unitrunner/request/http.py" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/unitrunner/request/http.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +143,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/86135/Desktop/EasyPost/unit-backend/utils",
+    "last_opened_file_path": "E:/codes/pity",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.stylelint": "true",
     "node.js.detected.package.tslint": "true",
@@ -323,10 +321,10 @@
     </configuration>
     <list>
       <item itemvalue="Django Server.backend" />
+      <item itemvalue="Python.__init__ (1)" />
+      <item itemvalue="Python.engine" />
       <item itemvalue="Python.executor" />
       <item itemvalue="Python.grpconsul" />
-      <item itemvalue="Python.engine" />
-      <item itemvalue="Python.__init__ (1)" />
       <item itemvalue="Python.t" />
     </list>
     <recent_temporary>
@@ -535,6 +533,7 @@
       <workItem from="1723705475461" duration="20000" />
       <workItem from="1725003165423" duration="3098000" />
       <workItem from="1726207726818" duration="19670000" />
+      <workItem from="1726798058849" duration="1326000" />
     </task>
     <task id="LOCAL-00397" summary="Updated CaseParametersEnum and DataStructureType to use the same constants for data structure types.">
       <option name="closed" value="true" />

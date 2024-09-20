@@ -18,6 +18,16 @@ class SendRequestException(BaseError):
     pass
 
 
+class TcpConnectException(BaseError):
+
+    pass
+
+
+class DnsConnectException(BaseError):
+
+    pass
+
+
 class SendMessageException(BaseError):
 
     pass
