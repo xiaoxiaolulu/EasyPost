@@ -473,6 +473,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         self.content_type = response.headers.get('Content-Type')
         self.response_header = json.dumps(dict(response.headers), ensure_ascii=False, indent=2)
         self.requests_header = json.dumps(dict(response.request.headers), ensure_ascii=False, indent=2)
+        self.performance_figure = json.dumps(dict(client.performance_figure(response.request.url)), ensure_ascii=False, indent=2)
         self.response_body = client.get_response(response)
         self.requests_body = client.get_request(response)
 

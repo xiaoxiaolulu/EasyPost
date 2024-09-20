@@ -5,7 +5,9 @@ DESCRIPTION：Http(s)请求公共方法封装
 """
 import datetime
 import json
-from typing import Union
+import re
+import subprocess
+from typing import Union, Dict
 import urllib3
 import requests
 import simplejson
@@ -93,6 +95,40 @@ class HttpHandler(object):
         if timer.seconds > 0:
             return f"{timer.seconds}.{timer.microseconds // 1000}s"
         return f"{timer.microseconds // 100}ms"
+
+    @staticmethod
+    def performance_figure(url: str) -> Dict[str, str]:
+        """
+        Parses httpstat output and returns a dictionary containing timing data.
+
+        Args:
+            url: The URL to be used with the httpstat command.
+
+        Returns:
+            A dictionary containing timing data for DNS lookup, TCP connection,
+            TLS handshake, server processing, content transfer, and total time.
+
+        Raises:
+            ValueError: If the httpstat output format is invalid.
+        """
+
+        command = f"httpstat {url}"
+        result = subprocess.run(command, shell=True, capture_output=True, text=True)
+        httpstat_output = result.stdout
+
+        match = re.search(r'\[([^]]+)\]', httpstat_output, re.MULTILINE)
+        if not match:
+            raise ValueError("Invalid httpstat output format: Timing data not found.")
+
+        timing_data = dict(zip(
+            ["DNS 查询", "TCP 连接", "TCP 握手", "等待中 (TTFB)", "下载内容"],
+            [t.strip() for t in match.group(1).split("|") if t.strip()]
+        ))
+
+        total_time = sum(int(t.strip('ms')) for t in timing_data.values())
+        # timing_data["total"] = f"{total_time}ms"
+
+        return timing_data
 
     def response(
             self,

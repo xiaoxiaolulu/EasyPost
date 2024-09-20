@@ -46,10 +46,11 @@ message Cases {
   string response_header = 11;
   string requests_header = 12;
   string response_body = 13;
-  int32 count = 14;
-  string state = 15;
-  string tag = 16;
-  string run_time = 17;
+  string performance_figure = 14;
+  int32 count = 15;
+  string state = 16;
+  string tag = 17;
+  string run_time = 18;
 }
 
 message ClassList{

@@ -8,6 +8,8 @@
   const state = reactive({
     runLog: "",
     status_code: "",
+    content_length: "",
+    content_type: "",
     response_time: "",
     content_type: "",
     responseBody: "",
@@ -20,6 +22,8 @@
     if (data){
       state.runLog = data['logData'].join('')
       state.status_code = data['statusCode']
+      state.content_length = data['contentLength']
+      state.content_type = data['contentType']
       state.response_time = data['runTime']
       state.responseBody = data['responseBody']
       state.headers = JSON.parse(data['requestsHeader'])
@@ -52,6 +56,16 @@
                     class="response-info__item">
               响应时间：{{ state.response_time }} ms
             </el-tag>
+            <el-tag type="primary"
+                    effect="plain"
+                    class="response-info__item">
+              contentLength：{{ state.content_length }}
+            </el-tag>
+            <el-tag type="info"
+                    effect="plain"
+                    class="response-info__item">
+              contentType：{{ state.content_type }}
+            </el-tag>
           </div>
         </div>
         <div>
@@ -72,9 +86,9 @@
         </template>
         <div>
           <div v-for="(value, key) in state.headers" :key="key">
-          <span style="font-size: 12px">
-          <span style="font-weight: 600">{{ key}}: </span><span>{{ value }}</span>
-          </span>
+            <span style="font-size: 12px">
+            <span style="font-weight: 600">{{ key}}: </span><span>{{ value }}</span>
+            </span>
           </div>
         </div>
       </el-tab-pane>

@@ -195,12 +195,23 @@
             </div>
             <div style="font-size: 12px">
               <span style="padding-left: 10px">
-                <span style="color:#67c23a">
+                Status: <span style="color:#67c23a">
                   {{statusCode}}
                 </span>
               </span>
               <span style="padding-left: 10px">
-                Time: <span style="color:#67c23a;">{{runTime}}</span>
+                <el-popover placement="bottom" :width="100" trigger="click">
+                  <template #reference>
+                    <el-button style="margin-right: 16px" link>
+                      Time: <span style="color:#67c23a;">{{runTime}}</span>
+                    </el-button>
+                  </template>
+                  <div v-for="(value, key) in performanceFigure" :key="key">
+                    <span style="font-size: 12px">
+                      <span style="font-weight: 600">{{ key}}: </span><span style="float: right">{{ value }}</span>
+                    </span>
+                  </div>
+                </el-popover>
               </span>
             </div>
           </div>
@@ -284,6 +295,8 @@ const statusCode = ref()
 const statusClass = ref()
 
 const runTime = ref()
+
+const performanceFigure = ref()
 
 const showSetting = ref(false)
 
@@ -469,6 +482,7 @@ const debug = (formName: FormInstance | undefined) => {
         const res = data['classList'][0]['cases'][0]
         statusCode.value = res['statusCode']
         runTime.value = res['runTime']
+        performanceFigure.value = JSON.parse(res["performanceFigure"])
         ResponseRef.value.setData(res)
         responseReport.value = true
         toResponse()
