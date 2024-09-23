@@ -612,7 +612,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         """
         self.info_log('jsonpath提取数据\n')
         value = jsonpath(json.loads(obj), str(ext))
-        value = value[0] if value else ''
+        value = value[0] if value else '-'
         self.info_log('提取表达式：{}\n'.format(ext), '提取结果:{}\n'.format(value))
         return value
 

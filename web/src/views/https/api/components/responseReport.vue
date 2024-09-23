@@ -138,8 +138,8 @@ import { computed, ref } from "vue";
           >
             <el-table-column prop="expect" label="断言表达式" show-overflow-tooltip=""></el-table-column>
             <el-table-column prop="methods" label="断言方式" show-overflow-tooltip=""></el-table-column>
-            <el-table-column prop="expected" label="期望值" show-overflow-tooltip=""></el-table-column>
-            <el-table-column prop="actual" label="实际结果" show-overflow-tooltip=""></el-table-column>
+            <el-table-column prop="actual" label="期望值" show-overflow-tooltip=""></el-table-column>
+            <el-table-column prop="expected" label="实际结果" show-overflow-tooltip=""></el-table-column>
             <el-table-column prop="result" label="断言结果" show-overflow-tooltip="">
               <template #default="{ row }">
                 <el-tag :type="row.result === '【✔】'? 'success': 'danger'">{{ row.result }}</el-tag>
