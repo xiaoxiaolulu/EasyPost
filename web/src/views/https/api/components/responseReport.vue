@@ -37,9 +37,6 @@ import { computed, ref } from "vue";
   }
 
   const getValidatorsResultStatus = computed(() => {
-    if (state.validateExtractor.length === 0) {
-      return null
-    }
     let failList = state.validateExtractor.filter((e) => {
       return e.state !== '1'
     })

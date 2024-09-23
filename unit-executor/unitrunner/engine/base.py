@@ -699,11 +699,12 @@ class BaseTest(unittest.TestCase, CaseRunLog):
 
         self.info_log('断言方法:{} 预期结果:{} 实际结果:{}\n'.format(methods, expected, actual))
         assert_method = registry.get(methods)
+
         global result  # noqa
         if assert_method:
             try:
                 assert_method(expected, actual)
-            except exceptions.AssertFailException as err:
+            except (exceptions.AssertFailException, AssertionError) as err:
                 self.warning_log('❌断言失败!\n')
                 self.save_validators(methods, expected, actual, '【❌】', '0', expect)
                 raise self.failureException(err)

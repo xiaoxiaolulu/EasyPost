@@ -86,7 +86,7 @@ class Parser:
                     log_data=case_item.get('log_data', []),
                     l_env=case_item.get('l_env', []),
                     g_env=case_item.get('g_env', []),
-                    hook_gen=case_item.get('hook_gen', []),
+                    hook_gen=str(case_item.get('hook_gen', [])),
                     url=case_item.get('url', ''),
                     method=case_item.get('method', ''),
                     status_code=case_item.get("status_code", 200),

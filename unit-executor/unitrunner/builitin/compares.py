@@ -94,7 +94,7 @@ def less_or_equals(
     assert check_value <= expect_value, message
 
 
-@registry.register("不等于")
+@registry.register("不相等")
 def not_equal(check_value: typing.Any, expect_value: typing.Any, message: str = ""):
     """
     Asserts that two values are not equal, raising an AssertionError if they are equal.

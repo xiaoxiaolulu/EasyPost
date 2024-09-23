@@ -22801,3 +22801,1707 @@ input::-ms-clear{display:none}
   "origin": "45.145.154.18",
   "url": "http://httpbin.org/post"
 }
+2024-09-23 14:11:54 [ThreadPoolExecutor-9_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f106a8-5a7fc00435f2bf552be2dcfb"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:11:54 [asyncio_0]-[parser.create_detail_step:106]-[ERROR]:创建报告详情步骤数据失败 -> bad argument type for built-in operation
+2024-09-23 14:11:54 [asyncio_0]-[parser.create_report_detail:64]-[ERROR]:创建报告详情失败 -> 创建报告详情步骤数据失败❌
+2024-09-23 14:12:13 [ThreadPoolExecutor-10_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f106bc-1db69c3b7b0d71be77b6ab30"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:12:13 [asyncio_0]-[parser.create_detail_step:106]-[ERROR]:创建报告详情步骤数据失败 -> bad argument type for built-in operation
+2024-09-23 14:12:13 [asyncio_0]-[parser.create_report_detail:64]-[ERROR]:创建报告详情失败 -> 创建报告详情步骤数据失败❌
+2024-09-23 14:13:14 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-09-23 14:13:14 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-09-23 14:13:14 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-09-23 14:13:14 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-09-23 14:13:14 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-09-23 14:13:14 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-09-23 14:13:14 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-09-23 14:13:14 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-09-23 14:13:14 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-09-23 14:13:14 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-09-23 14:13:14 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-09-23 14:13:14 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-09-23 14:13:14 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-09-23 14:13:14 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-09-23 14:13:14 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-09-23 14:13:14 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-09-23 14:13:14 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-09-23 14:13:14 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-09-23 14:13:14 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-09-23 14:13:14 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-09-23 14:13:18 [ThreadPoolExecutor-0_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "data": {},
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f106fb-1786f2d84652c65d4bc7c4a5"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:13:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-09-23 14:13:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-09-23 14:13:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-09-23 14:13:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-09-23 14:13:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-09-23 14:13:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-09-23 14:13:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-09-23 14:13:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-09-23 14:13:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-09-23 14:13:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-09-23 14:13:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-09-23 14:13:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-09-23 14:13:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-09-23 14:13:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-09-23 14:13:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-09-23 14:13:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-09-23 14:13:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-09-23 14:13:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-09-23 14:13:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-09-23 14:13:32 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-09-23 14:13:34 [ThreadPoolExecutor-0_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "data": {},
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f1070d-19096cc2141712b90cd3306b"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:16:43 [ThreadPoolExecutor-11_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f107ca-661f6c182563cf1a2775c264"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:16:43 [asyncio_0]-[parser.create_detail_step:106]-[ERROR]:创建报告详情步骤数据失败 -> bad argument type for built-in operation
+2024-09-23 14:16:43 [asyncio_0]-[parser.create_report_detail:64]-[ERROR]:创建报告详情失败 -> 创建报告详情步骤数据失败❌
+2024-09-23 14:16:49 [ThreadPoolExecutor-12_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f107d0-7af1a7d4016a38621c906043"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:16:49 [asyncio_0]-[parser.create_detail_step:106]-[ERROR]:创建报告详情步骤数据失败 -> bad argument type for built-in operation
+2024-09-23 14:16:49 [asyncio_0]-[parser.create_report_detail:64]-[ERROR]:创建报告详情失败 -> 创建报告详情步骤数据失败❌
+2024-09-23 14:16:58 [ThreadPoolExecutor-14_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f107d8-736875764f7b9481158c44cb"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:16:59 [ThreadPoolExecutor-13_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f107d6-1cd167f15d61539d616f58c2"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:17:17 [ThreadPoolExecutor-15_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f107ec-2b8578e466bab2f9071cdaf4"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:17:17 [asyncio_1]-[parser.create_detail_step:106]-[ERROR]:创建报告详情步骤数据失败 -> bad argument type for built-in operation
+2024-09-23 14:17:17 [asyncio_1]-[parser.create_report_detail:64]-[ERROR]:创建报告详情失败 -> 创建报告详情步骤数据失败❌
+2024-09-23 14:17:27 [ThreadPoolExecutor-16_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f107f6-38d8679d76cae35b0c959884"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:17:27 [asyncio_0]-[parser.create_detail_step:106]-[ERROR]:创建报告详情步骤数据失败 -> bad argument type for built-in operation
+2024-09-23 14:17:27 [asyncio_0]-[parser.create_report_detail:64]-[ERROR]:创建报告详情失败 -> 创建报告详情步骤数据失败❌
+2024-09-23 14:19:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-09-23 14:19:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-09-23 14:19:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-09-23 14:19:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-09-23 14:19:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-09-23 14:19:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-09-23 14:19:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-09-23 14:19:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-09-23 14:19:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-09-23 14:19:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-09-23 14:19:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-09-23 14:19:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-09-23 14:19:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-09-23 14:19:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-09-23 14:19:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-09-23 14:19:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-09-23 14:19:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-09-23 14:19:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-09-23 14:19:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-09-23 14:19:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-09-23 14:19:04 [MainThread]-[main.main:51]-[INFO]:September 23, 2024 - 14:19:04
+2024-09-23 14:19:04 [MainThread]-[main.main:52]-[INFO]:Starting Grpc development server at 172.31.22.169:60610
+
+2024-09-23 14:19:05 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-09-23 14:19:05 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-09-23 14:19:05 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-09-23 14:19:05 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-09-23 14:19:05 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-09-23 14:19:05 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-09-23 14:19:05 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-09-23 14:19:05 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-09-23 14:19:05 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-09-23 14:19:05 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-09-23 14:19:05 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-09-23 14:19:05 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-09-23 14:19:05 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-09-23 14:19:05 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-09-23 14:19:05 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-09-23 14:19:05 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-09-23 14:19:05 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-09-23 14:19:05 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-09-23 14:19:05 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-09-23 14:19:05 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-09-23 14:19:07 [ThreadPoolExecutor-0_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "data": {},
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f1085a-12d1332e35ded70d02c958d9"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:19:21 [ThreadPoolExecutor-0_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+
+2024-09-23 14:19:21 [asyncio_0]-[parser.create_detail_step:106]-[ERROR]:创建报告详情步骤数据失败 -> bad argument type for built-in operation
+2024-09-23 14:19:21 [asyncio_0]-[parser.create_report_detail:64]-[ERROR]:创建报告详情失败 -> 创建报告详情步骤数据失败❌
+2024-09-23 14:20:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-09-23 14:20:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-09-23 14:20:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-09-23 14:20:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-09-23 14:20:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-09-23 14:20:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不相等对象已经在service_registry中注册!
+2024-09-23 14:20:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-09-23 14:20:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-09-23 14:20:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-09-23 14:20:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-09-23 14:20:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-09-23 14:20:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-09-23 14:20:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-09-23 14:20:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-09-23 14:20:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-09-23 14:20:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-09-23 14:20:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-09-23 14:20:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-09-23 14:20:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-09-23 14:20:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-09-23 14:20:45 [ThreadPoolExecutor-0_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "data": {},
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f108bb-3ba7be8b002ef14d23a78901"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:20:49 [ThreadPoolExecutor-1_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f108bf-5f3edc7f486de11744e777ff"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:20:49 [asyncio_0]-[parser.create_detail_step:106]-[ERROR]:创建报告详情步骤数据失败 -> bad argument type for built-in operation
+2024-09-23 14:20:49 [asyncio_0]-[parser.create_report_detail:64]-[ERROR]:创建报告详情失败 -> 创建报告详情步骤数据失败❌
+2024-09-23 14:21:26 [ThreadPoolExecutor-2_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f108e5-1fd96a3b2df9be89687b33fa"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:21:26 [asyncio_0]-[parser.create_detail_step:106]-[ERROR]:创建报告详情步骤数据失败 -> bad argument type for built-in operation
+2024-09-23 14:21:26 [asyncio_0]-[parser.create_report_detail:64]-[ERROR]:创建报告详情失败 -> 创建报告详情步骤数据失败❌
+2024-09-23 14:21:42 [ThreadPoolExecutor-3_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f108f5-5d86a707591ce3f21e32f799"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:21:42 [asyncio_0]-[parser.create_detail_step:106]-[ERROR]:创建报告详情步骤数据失败 -> bad argument type for built-in operation
+2024-09-23 14:21:42 [asyncio_0]-[parser.create_report_detail:64]-[ERROR]:创建报告详情失败 -> 创建报告详情步骤数据失败❌
+2024-09-23 14:22:08 [ThreadPoolExecutor-4_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f1090e-20a4c6812b6811910a17708d"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:22:08 [asyncio_0]-[parser.create_detail_step:106]-[ERROR]:创建报告详情步骤数据失败 -> bad argument type for built-in operation
+2024-09-23 14:22:08 [asyncio_0]-[parser.create_report_detail:64]-[ERROR]:创建报告详情失败 -> 创建报告详情步骤数据失败❌
+2024-09-23 14:23:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-09-23 14:23:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-09-23 14:23:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-09-23 14:23:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-09-23 14:23:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-09-23 14:23:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不相等对象已经在service_registry中注册!
+2024-09-23 14:23:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-09-23 14:23:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-09-23 14:23:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-09-23 14:23:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-09-23 14:23:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-09-23 14:23:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-09-23 14:23:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-09-23 14:23:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-09-23 14:23:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-09-23 14:23:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-09-23 14:23:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-09-23 14:23:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-09-23 14:23:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-09-23 14:23:43 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-09-23 14:23:44 [ThreadPoolExecutor-0_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "data": {},
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f1096f-1431094b4f4a39cc6f5ccec9"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:26:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-09-23 14:26:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-09-23 14:26:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-09-23 14:26:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-09-23 14:26:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-09-23 14:26:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不相等对象已经在service_registry中注册!
+2024-09-23 14:26:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-09-23 14:26:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-09-23 14:26:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-09-23 14:26:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-09-23 14:26:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-09-23 14:26:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-09-23 14:26:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-09-23 14:26:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-09-23 14:26:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-09-23 14:26:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-09-23 14:26:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-09-23 14:26:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-09-23 14:26:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-09-23 14:26:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-09-23 14:26:08 [ThreadPoolExecutor-0_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "data": {},
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f109ff-2ea22fb44971a7aa73cb5ec5"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:26:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-09-23 14:26:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-09-23 14:26:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-09-23 14:26:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-09-23 14:26:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-09-23 14:26:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不相等对象已经在service_registry中注册!
+2024-09-23 14:26:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-09-23 14:26:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-09-23 14:26:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-09-23 14:26:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-09-23 14:26:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-09-23 14:26:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-09-23 14:26:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-09-23 14:26:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-09-23 14:26:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-09-23 14:26:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-09-23 14:26:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-09-23 14:26:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-09-23 14:26:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-09-23 14:26:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-09-23 14:26:43 [ThreadPoolExecutor-0_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "data": {},
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f10a22-7bedcd915feabf184a489b3d"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:26:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-09-23 14:26:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-09-23 14:26:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-09-23 14:26:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-09-23 14:26:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-09-23 14:26:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不相等对象已经在service_registry中注册!
+2024-09-23 14:26:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-09-23 14:26:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-09-23 14:26:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-09-23 14:26:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-09-23 14:26:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-09-23 14:26:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-09-23 14:26:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-09-23 14:26:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-09-23 14:26:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-09-23 14:26:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-09-23 14:26:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-09-23 14:26:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-09-23 14:26:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-09-23 14:26:59 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-09-23 14:27:00 [ThreadPoolExecutor-0_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "data": {},
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f10a33-0aca1385095e8ac053e4c640"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:28:16 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-09-23 14:28:16 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-09-23 14:28:16 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-09-23 14:28:16 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-09-23 14:28:16 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-09-23 14:28:16 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不相等对象已经在service_registry中注册!
+2024-09-23 14:28:16 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-09-23 14:28:16 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-09-23 14:28:16 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-09-23 14:28:16 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-09-23 14:28:16 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-09-23 14:28:16 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-09-23 14:28:16 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-09-23 14:28:16 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-09-23 14:28:16 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-09-23 14:28:16 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-09-23 14:28:16 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-09-23 14:28:16 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-09-23 14:28:16 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-09-23 14:28:16 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-09-23 14:28:18 [ThreadPoolExecutor-0_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "data": {},
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f10a80-3670e2fa092a1d1d408adfe9"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:36:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-09-23 14:36:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-09-23 14:36:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-09-23 14:36:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-09-23 14:36:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-09-23 14:36:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不相等对象已经在service_registry中注册!
+2024-09-23 14:36:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-09-23 14:36:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-09-23 14:36:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-09-23 14:36:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-09-23 14:36:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-09-23 14:36:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-09-23 14:36:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-09-23 14:36:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-09-23 14:36:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-09-23 14:36:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-09-23 14:36:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-09-23 14:36:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-09-23 14:36:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-09-23 14:36:04 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-09-23 14:36:05 [ThreadPoolExecutor-0_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "data": {},
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f10c54-236d31317b42dd9c5f721447"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:36:20 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-09-23 14:36:20 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-09-23 14:36:20 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-09-23 14:36:20 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-09-23 14:36:20 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-09-23 14:36:20 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不相等对象已经在service_registry中注册!
+2024-09-23 14:36:20 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-09-23 14:36:20 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-09-23 14:36:20 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-09-23 14:36:20 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-09-23 14:36:20 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-09-23 14:36:20 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-09-23 14:36:20 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-09-23 14:36:20 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-09-23 14:36:20 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-09-23 14:36:20 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-09-23 14:36:20 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-09-23 14:36:20 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-09-23 14:36:20 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-09-23 14:36:20 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-09-23 14:36:20 [MainThread]-[main.main:51]-[INFO]:September 23, 2024 - 14:36:20
+2024-09-23 14:36:21 [MainThread]-[main.main:52]-[INFO]:Starting Grpc development server at 172.31.22.169:62665
+
+2024-09-23 14:36:32 [ThreadPoolExecutor-0_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f10c6f-1425899f11827da926950ba8"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:36:32 [asyncio_0]-[parser.create_detail_step:106]-[ERROR]:创建报告详情步骤数据失败 -> bad argument type for built-in operation
+2024-09-23 14:36:32 [asyncio_0]-[parser.create_report_detail:64]-[ERROR]:创建报告详情失败 -> 创建报告详情步骤数据失败❌
+2024-09-23 14:36:41 [ThreadPoolExecutor-0_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "data": {},
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f10c77-265d85ba0bf89048784854c4"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:37:34 [ThreadPoolExecutor-0_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "data": {},
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f10cad-0f91782761c75b4714c478f8"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:37:58 [ThreadPoolExecutor-0_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "data": {},
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f10cc4-76ed5bb444bc74b30216081f"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:38:18 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-09-23 14:38:18 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-09-23 14:38:18 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-09-23 14:38:18 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-09-23 14:38:18 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-09-23 14:38:18 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不相等对象已经在service_registry中注册!
+2024-09-23 14:38:18 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-09-23 14:38:18 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-09-23 14:38:18 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-09-23 14:38:18 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-09-23 14:38:18 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-09-23 14:38:18 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-09-23 14:38:18 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-09-23 14:38:18 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-09-23 14:38:18 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-09-23 14:38:18 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-09-23 14:38:18 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-09-23 14:38:18 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-09-23 14:38:18 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-09-23 14:38:18 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-09-23 14:38:20 [ThreadPoolExecutor-0_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "data": {},
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f10cdb-792a14dd7bd450c750581751"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:38:44 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-09-23 14:38:44 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-09-23 14:38:44 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-09-23 14:38:44 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-09-23 14:38:44 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-09-23 14:38:44 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不相等对象已经在service_registry中注册!
+2024-09-23 14:38:44 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-09-23 14:38:44 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-09-23 14:38:44 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-09-23 14:38:44 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-09-23 14:38:44 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-09-23 14:38:44 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-09-23 14:38:44 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-09-23 14:38:44 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-09-23 14:38:44 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-09-23 14:38:44 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-09-23 14:38:44 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-09-23 14:38:44 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-09-23 14:38:44 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-09-23 14:38:44 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-09-23 14:38:45 [MainThread]-[main.main:51]-[INFO]:September 23, 2024 - 14:38:45
+2024-09-23 14:38:45 [MainThread]-[main.main:52]-[INFO]:Starting Grpc development server at 172.31.22.169:62928
+
+2024-09-23 14:39:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-09-23 14:39:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-09-23 14:39:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-09-23 14:39:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-09-23 14:39:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-09-23 14:39:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不相等对象已经在service_registry中注册!
+2024-09-23 14:39:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-09-23 14:39:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-09-23 14:39:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-09-23 14:39:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-09-23 14:39:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-09-23 14:39:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-09-23 14:39:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-09-23 14:39:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-09-23 14:39:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-09-23 14:39:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-09-23 14:39:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-09-23 14:39:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-09-23 14:39:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-09-23 14:39:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-09-23 14:39:00 [MainThread]-[main.main:51]-[INFO]:September 23, 2024 - 14:39:00
+2024-09-23 14:39:00 [MainThread]-[main.main:52]-[INFO]:Starting Grpc development server at 172.31.22.169:62949
+
+2024-09-23 14:39:10 [ThreadPoolExecutor-0_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f10d0d-45e874b86dfcb87e4cd09136"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:39:10 [asyncio_0]-[parser.create_detail_step:106]-[ERROR]:创建报告详情步骤数据失败 -> bad argument type for built-in operation
+2024-09-23 14:39:10 [asyncio_0]-[parser.create_report_detail:64]-[ERROR]:创建报告详情失败 -> 创建报告详情步骤数据失败❌
+2024-09-23 14:40:57 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-09-23 14:40:57 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-09-23 14:40:57 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-09-23 14:40:57 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-09-23 14:40:57 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-09-23 14:40:57 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不相等对象已经在service_registry中注册!
+2024-09-23 14:40:57 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-09-23 14:40:57 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-09-23 14:40:57 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-09-23 14:40:57 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-09-23 14:40:57 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-09-23 14:40:57 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-09-23 14:40:57 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-09-23 14:40:57 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-09-23 14:40:57 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-09-23 14:40:57 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-09-23 14:40:57 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-09-23 14:40:57 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-09-23 14:40:57 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-09-23 14:40:57 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-09-23 14:40:58 [MainThread]-[main.main:51]-[INFO]:September 23, 2024 - 14:40:58
+2024-09-23 14:40:58 [MainThread]-[main.main:52]-[INFO]:Starting Grpc development server at 172.31.22.169:63169
+
+2024-09-23 14:41:10 [ThreadPoolExecutor-0_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f10d84-60617c623686059c65c9c629"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:41:10 [asyncio_0]-[parser.create_detail_step:106]-[ERROR]:创建报告详情步骤数据失败 -> bad argument type for built-in operation
+2024-09-23 14:41:10 [asyncio_0]-[parser.create_report_detail:64]-[ERROR]:创建报告详情失败 -> 创建报告详情步骤数据失败❌
+2024-09-23 14:41:36 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-09-23 14:41:36 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-09-23 14:41:36 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-09-23 14:41:36 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-09-23 14:41:36 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-09-23 14:41:36 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-09-23 14:41:36 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-09-23 14:41:36 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-09-23 14:41:36 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-09-23 14:41:36 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-09-23 14:41:36 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-09-23 14:41:36 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-09-23 14:41:36 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-09-23 14:41:36 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-09-23 14:41:36 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-09-23 14:41:36 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-09-23 14:41:36 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-09-23 14:41:36 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-09-23 14:41:36 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-09-23 14:41:36 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-09-23 14:41:36 [MainThread]-[main.main:51]-[INFO]:September 23, 2024 - 14:41:36
+2024-09-23 14:41:36 [MainThread]-[main.main:52]-[INFO]:Starting Grpc development server at 172.31.22.169:63227
+
+2024-09-23 14:41:48 [ThreadPoolExecutor-0_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f10daa-580e57140ece1a2e634109f8"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:41:48 [asyncio_0]-[parser.create_detail_step:106]-[ERROR]:创建报告详情步骤数据失败 -> bad argument type for built-in operation
+2024-09-23 14:41:48 [asyncio_0]-[parser.create_report_detail:64]-[ERROR]:创建报告详情失败 -> 创建报告详情步骤数据失败❌
+2024-09-23 14:41:59 [ThreadPoolExecutor-1_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f10db5-4b63a16c296ee8727b924a76"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:42:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-09-23 14:42:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-09-23 14:42:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-09-23 14:42:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-09-23 14:42:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-09-23 14:42:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-09-23 14:42:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-09-23 14:42:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-09-23 14:42:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-09-23 14:42:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-09-23 14:42:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-09-23 14:42:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-09-23 14:42:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-09-23 14:42:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-09-23 14:42:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-09-23 14:42:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-09-23 14:42:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-09-23 14:42:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-09-23 14:42:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-09-23 14:42:42 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-09-23 14:42:43 [MainThread]-[main.main:51]-[INFO]:September 23, 2024 - 14:42:43
+2024-09-23 14:42:43 [MainThread]-[main.main:52]-[INFO]:Starting Grpc development server at 172.31.22.169:63327
+
+2024-09-23 14:42:48 [ThreadPoolExecutor-0_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f10de7-456488fa4becc1a86a3c5f31"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:42:59 [ThreadPoolExecutor-1_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f10df2-6ac158dd4f0afe4d6b2211dc"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:43:14 [ThreadPoolExecutor-2_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f10e00-05ad66b1062f2ea870101b07"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:43:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-09-23 14:43:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-09-23 14:43:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-09-23 14:43:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-09-23 14:43:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-09-23 14:43:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-09-23 14:43:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-09-23 14:43:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-09-23 14:43:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-09-23 14:43:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-09-23 14:43:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-09-23 14:43:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-09-23 14:43:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-09-23 14:43:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-09-23 14:43:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-09-23 14:43:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-09-23 14:43:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-09-23 14:43:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-09-23 14:43:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-09-23 14:43:21 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-09-23 14:43:21 [MainThread]-[main.main:51]-[INFO]:September 23, 2024 - 14:43:21
+2024-09-23 14:43:21 [MainThread]-[main.main:52]-[INFO]:Starting Grpc development server at 172.31.22.169:63411
+
+2024-09-23 14:43:30 [ThreadPoolExecutor-0_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f10e10-1306b2526c07663b2c972289"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:44:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-09-23 14:44:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-09-23 14:44:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-09-23 14:44:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-09-23 14:44:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-09-23 14:44:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-09-23 14:44:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-09-23 14:44:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-09-23 14:44:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-09-23 14:44:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-09-23 14:44:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-09-23 14:44:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-09-23 14:44:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-09-23 14:44:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-09-23 14:44:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-09-23 14:44:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-09-23 14:44:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-09-23 14:44:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-09-23 14:44:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-09-23 14:44:06 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-09-23 14:44:06 [MainThread]-[main.main:51]-[INFO]:September 23, 2024 - 14:44:06
+2024-09-23 14:44:06 [MainThread]-[main.main:52]-[INFO]:Starting Grpc development server at 172.31.22.169:63496
+
+2024-09-23 14:44:16 [ThreadPoolExecutor-0_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f10e3e-4ef2b354610552de7fe748d9"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:44:16 [asyncio_0]-[parser.create_detail_step:106]-[ERROR]:创建报告详情步骤数据失败 -> bad argument type for built-in operation
+2024-09-23 14:44:16 [asyncio_0]-[parser.create_report_detail:64]-[ERROR]:创建报告详情失败 -> 创建报告详情步骤数据失败❌
+2024-09-23 14:44:17 [ThreadPoolExecutor-1_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f10e40-1fadd7140b27896f5066f831"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:44:17 [asyncio_0]-[parser.create_detail_step:106]-[ERROR]:创建报告详情步骤数据失败 -> bad argument type for built-in operation
+2024-09-23 14:44:17 [asyncio_0]-[parser.create_report_detail:64]-[ERROR]:创建报告详情失败 -> 创建报告详情步骤数据失败❌
+2024-09-23 14:46:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-09-23 14:46:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-09-23 14:46:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-09-23 14:46:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-09-23 14:46:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-09-23 14:46:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-09-23 14:46:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-09-23 14:46:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-09-23 14:46:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-09-23 14:46:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-09-23 14:46:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-09-23 14:46:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-09-23 14:46:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-09-23 14:46:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-09-23 14:46:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-09-23 14:46:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-09-23 14:46:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-09-23 14:46:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-09-23 14:46:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-09-23 14:46:00 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-09-23 14:46:00 [MainThread]-[main.main:51]-[INFO]:September 23, 2024 - 14:46:00
+2024-09-23 14:46:00 [MainThread]-[main.main:52]-[INFO]:Starting Grpc development server at 172.31.22.169:63711
+
+2024-09-23 14:46:05 [ThreadPoolExecutor-0_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f10eac-778eebde56242cdf7bb51735"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:46:45 [ThreadPoolExecutor-1_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f10ed3-5796fdda6b7a3be45e946e56"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:46:51 [ThreadPoolExecutor-2_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f10ed9-0c8a36f2333c809653c01fd2"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:46:56 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-09-23 14:46:56 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-09-23 14:46:56 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-09-23 14:46:56 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-09-23 14:46:56 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-09-23 14:46:56 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不等于对象已经在service_registry中注册!
+2024-09-23 14:46:56 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-09-23 14:46:56 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-09-23 14:46:56 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-09-23 14:46:56 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-09-23 14:46:56 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-09-23 14:46:56 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-09-23 14:46:56 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-09-23 14:46:56 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-09-23 14:46:56 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-09-23 14:46:56 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-09-23 14:46:56 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-09-23 14:46:56 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-09-23 14:46:56 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-09-23 14:46:56 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-09-23 14:46:56 [MainThread]-[main.main:51]-[INFO]:September 23, 2024 - 14:46:56
+2024-09-23 14:46:56 [MainThread]-[main.main:52]-[INFO]:Starting Grpc development server at 172.31.22.169:63810
+
+2024-09-23 14:47:36 [ThreadPoolExecutor-0_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f10f06-2875d53b75c2d58375e539c5"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:47:42 [ThreadPoolExecutor-1_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f10f0d-5efd99f91c38ee176c5c22fe"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:48:23 [ThreadPoolExecutor-2_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f10f36-3a1cb4ad3543bb325dc61199"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:48:46 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 相等对象已经在service_registry中注册!
+2024-09-23 14:48:46 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于对象已经在service_registry中注册!
+2024-09-23 14:48:46 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于对象已经在service_registry中注册!
+2024-09-23 14:48:46 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 大于等于对象已经在service_registry中注册!
+2024-09-23 14:48:46 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 小于等于对象已经在service_registry中注册!
+2024-09-23 14:48:46 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不相等对象已经在service_registry中注册!
+2024-09-23 14:48:46 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 不为空对象已经在service_registry中注册!
+2024-09-23 14:48:46 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 为空对象已经在service_registry中注册!
+2024-09-23 14:48:46 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 字符串类型相等对象已经在service_registry中注册!
+2024-09-23 14:48:46 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度相等对象已经在service_registry中注册!
+2024-09-23 14:48:46 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于对象已经在service_registry中注册!
+2024-09-23 14:48:46 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度大于等于对象已经在service_registry中注册!
+2024-09-23 14:48:46 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于对象已经在service_registry中注册!
+2024-09-23 14:48:46 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 长度小于等于对象已经在service_registry中注册!
+2024-09-23 14:48:46 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含对象已经在service_registry中注册!
+2024-09-23 14:48:46 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 包含常见类型对象已经在service_registry中注册!
+2024-09-23 14:48:46 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 类型匹配对象已经在service_registry中注册!
+2024-09-23 14:48:46 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 正则匹配对象已经在service_registry中注册!
+2024-09-23 14:48:46 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 前缀相等对象已经在service_registry中注册!
+2024-09-23 14:48:46 [MainThread]-[registry._register:39]-[INFO]:组件注册 -> 后缀相等对象已经在service_registry中注册!
+2024-09-23 14:48:46 [MainThread]-[main.main:51]-[INFO]:September 23, 2024 - 14:48:46
+2024-09-23 14:48:46 [MainThread]-[main.main:52]-[INFO]:Starting Grpc development server at 172.31.22.169:64061
+
+2024-09-23 14:48:51 [ThreadPoolExecutor-0_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f10f51-6cd110655f724d151aa8815e"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:50:33 [ThreadPoolExecutor-1_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f10fb7-7a70317e7956864541e73767"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:51:58 [ThreadPoolExecutor-2_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f1100d-1625420e5c857b3d7513f4ec"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:52:32 [ThreadPoolExecutor-3_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f1102f-67a25c36061a2e792df22769"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}
+2024-09-23 14:52:43 [ThreadPoolExecutor-4_0]-[base.__send_request:447]-[INFO]:--------  request info ----------
+{
+    "url": "http://httpbin.org/post",
+    "method": "POST",
+    "headers": {}
+}
+--------  response info ----------
+{
+  "args": {},
+  "data": "",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Length": "0",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.3",
+    "X-Amzn-Trace-Id": "Root=1-66f1103a-2615ba790f0a574962880fec"
+  },
+  "json": null,
+  "origin": "45.145.154.18",
+  "url": "http://httpbin.org/post"
+}

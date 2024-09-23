@@ -37,8 +37,8 @@ if __name__ == '__main__':
     # sys.stdout.write("测试结果\n")
     # sys.stdout.write(str(response))
     # sys.stdout.write("\n测试结果\n")
-    api_doc = api_data = {'mode': 'normal', 'title': '33', 'interface': {'url': 'http://httpbin.org/post', 'name': '33', 'method': 'POST'}, 'headers': {}, 'request': {'data': {}}, 'setup_script': '', 'teardown_script': '', 'extract': {}, 'validators': [{'method': '相等', 'actual': 'http://httpbin.org/post', 'expect': '$.url'}]}
+    api_doc = api_data = {'mode': 'normal', 'title': '33', 'interface': {'url': 'http://httpbin.org/post', 'name': '33', 'method': 'POST'}, 'headers': {}, 'request': {'data': {}}, 'setup_script': '', 'teardown_script': '', 'extract': {}, 'validators': [{'method': '相等', 'actual': 'http://httpbin.org333/post', 'expect': '$.url'}]}
 
     responses = run_api(api_data=api_doc)
     print(responses)
-    print(json.dumps(dict(responses), ensure_ascii=False, indent=2))
+    # print(json.dumps(dict(responses), ensure_ascii=False, indent=2))
