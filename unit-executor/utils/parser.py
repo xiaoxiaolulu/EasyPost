@@ -81,7 +81,6 @@ class Parser:
         """
         try:
             for index, case_item in enumerate(class_item.get('cases', [])):
-                print(case_item)
                 cases_collection.append(executor_pb2.Cases(
                     name=case_item.get('name', 'Demo'),
                     log_data=case_item.get('log_data', []),
@@ -99,7 +98,8 @@ class Parser:
                     count=case_item.get('count', 0),
                     state=case_item.get('state', ''),
                     tag=case_item.get('tag', ''),
-                    run_time=case_item.get('run_time', '')
+                    run_time=case_item.get('run_time', ''),
+                    validate_extractor=case_item.get('validate_extractor', '')
                 ))
                 return cases_collection
         except Exception as err:

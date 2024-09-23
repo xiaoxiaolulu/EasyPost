@@ -1632,3 +1632,84 @@ INFO     [2024-09-20 16:16:03,032] [none] django.utils.autoreload: C:\Users\8613
 INFO     [2024-09-20 16:16:03,246] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\services\protos\executor_pb2.py changed, reloading.
 INFO     [2024-09-20 16:16:04,427] [none] django.utils.autoreload: Watching for file changes with StatReloader
 INFO     [2024-09-20 16:16:04,538] [none] django.utils.autoreload: Watching for file changes with StatReloader
+ERROR    [2024-09-23 10:00:07,541] [598b1174750e43adb2fe6fed692cf5ed] django.security.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+Traceback (most recent call last):
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\static.py", line 45, in serve
+    fullpath = Path(safe_join(document_root, path))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+WARNING  [2024-09-23 10:00:07,602] [598b1174750e43adb2fe6fed692cf5ed] django.request: Bad Request: /media/C:/Users/86135/Desktop/EasyPost/backend/api/templates/media/default.png
+INFO     [2024-09-23 10:22:38,706] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\unitrunner\request\parser.py changed, reloading.
+INFO     [2024-09-23 10:22:40,059] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-23 10:22:40,060] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-23 10:23:37,331] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\unitrunner\request\parser.py changed, reloading.
+INFO     [2024-09-23 10:23:38,751] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-23 10:23:40,918] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-23 10:24:34,118] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-09-23 10:24:35,533] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-23 10:24:38,707] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-23 10:26:05,781] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\unitrunner\request\parser.py changed, reloading.
+INFO     [2024-09-23 10:26:07,106] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-23 10:26:07,581] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-23 10:27:31,291] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\unitrunner\request\parser.py changed, reloading.
+INFO     [2024-09-23 10:27:32,691] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-23 10:27:33,805] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-23 10:28:30,964] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\unitrunner\request\parser.py changed, reloading.
+INFO     [2024-09-23 10:28:32,173] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-23 10:28:33,781] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-23 10:31:56,181] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\unitrunner\request\parser.py changed, reloading.
+INFO     [2024-09-23 10:31:57,595] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-23 10:31:58,034] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-23 10:32:46,333] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\unitrunner\request\parser.py changed, reloading.
+INFO     [2024-09-23 10:32:46,511] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\unitrunner\request\parser.py changed, reloading.
+INFO     [2024-09-23 10:32:47,675] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-23 10:32:47,825] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-23 10:45:05,083] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-09-23 10:45:05,192] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-09-23 10:45:06,288] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-23 10:45:06,404] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-23 10:45:11,463] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-09-23 10:45:12,417] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-09-23 10:45:12,864] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-23 10:45:13,591] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-23 10:45:28,768] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-09-23 10:45:30,199] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-23 10:45:30,597] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-23 10:57:32,847] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\services\protos\executor_pb2.py changed, reloading.
+INFO     [2024-09-23 10:57:32,859] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\services\protos\executor_pb2.py changed, reloading.
+INFO     [2024-09-23 10:57:34,200] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-23 10:57:34,200] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-23 10:57:40,779] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-23 11:12:17,322] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-09-23 11:12:17,547] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-09-23 11:12:18,577] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-23 11:12:18,724] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-23 11:40:14,019] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\services\protos\executor_pb2_grpc.py changed, reloading.
+INFO     [2024-09-23 11:40:14,536] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\services\protos\executor_pb2_grpc.py changed, reloading.
+INFO     [2024-09-23 11:40:15,328] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-23 11:40:15,722] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-23 13:37:42,163] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\services\protos\executor_pb2.py changed, reloading.
+INFO     [2024-09-23 13:37:42,941] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\services\protos\executor_pb2.py changed, reloading.
+INFO     [2024-09-23 13:37:43,628] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-23 13:37:44,132] [none] django.utils.autoreload: Watching for file changes with StatReloader

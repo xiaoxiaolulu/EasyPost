@@ -13,6 +13,7 @@ class ApiRunServer(executor_pb2_grpc.ExecutorService):
 
     def RunApiDoc(self, request, context):
         response = run_api(MessageToDict(request))
+        print(response)
         responses = executor_pb2.ApiDocResponse()
         Parser.create_report(response, responses)
         return responses

@@ -474,7 +474,7 @@ const debug = (formName: FormInstance | undefined) => {
           params: ApiRequestQuery,
           setup_script: ApiRequestSetup,
           teardown_script: ApiRequestTeardown,
-          validate: ApiRequestValidators,
+          validators: ApiRequestValidators,
           extract: ApiRequestExtractor
         }
         const ret = await runApi(apiData)

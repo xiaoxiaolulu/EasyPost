@@ -32,6 +32,15 @@ message ApiDocRequest {
   repeated ApiDocRequest children = 10;
 }
 
+message ValidateExtractor {
+  string expected = 1;
+  string methods = 2;
+  string actual = 3;
+  string result = 4;
+  string state = 5;
+  string expect = 6;
+}
+
 message Cases {
   string name = 1;
   repeated string log_data = 2;
@@ -51,6 +60,7 @@ message Cases {
   string state = 16;
   string tag = 17;
   string run_time = 18;
+  repeated ValidateExtractor validate_extractor = 19;
 }
 
 message ClassList{

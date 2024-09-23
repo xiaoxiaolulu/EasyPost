@@ -97,7 +97,7 @@ class HttpHandler(object):
         return f"{timer.microseconds // 100}ms"
 
     @staticmethod
-    def performance_figure(url: str) -> Dict[str, str]:
+    def httpx(url: str) -> Dict[str, str]:
         """
         Parses httpstat output and returns a dictionary containing timing data.
 

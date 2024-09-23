@@ -77,7 +77,7 @@ class HandelTestData(object):
             self.params = json.dumps(request_body.get('params', []))
             self.setup_script = request_body.get('setup_script', None)
             self.teardown_script = request_body.get('teardown_script', None)
-            self.validate = json.dumps(request_body.get('validate', []))
+            self.validate = json.dumps(request_body.get('validators', []))
             self.extract = json.dumps(request_body.get('extract', []))
 
             # 一键压测
@@ -370,17 +370,13 @@ class HandelTestData(object):
 
         try:
             # Attempt safer evaluation using ast.literal_eval (assumes dictionary)
-            validate_dict = ast.literal_eval(validate)
+            validate_item = ast.literal_eval(validate)
         except (SyntaxError, ValueError):
             return []
 
-        # Validate required keys in the validate dictionary
-        if not isinstance(validate_dict, dict) or any(key not in validate_dict for key in ('type', 'value', 'name')):
-            return []
+        validate_data = [{'method': item['type'], 'actual': item['value'], 'expect': item['name']}
+                         for item in validate_item]
 
-        validate_items = validate_dict.items()
-        validate_data = [{'method': item[1]['type'], 'actual': item[1]['value'], 'expect': item[1]['name']} for item in
-                         validate_items]
         return validate_data
 
     def get_api_template(self):
@@ -397,6 +393,8 @@ class HandelTestData(object):
         Returns:
             A dictionary representing the API template with various configuration details.
         """
+
+        print(self.validate)
         api_doc_template = {
             "mode": self.mode,
             "title": self.name,

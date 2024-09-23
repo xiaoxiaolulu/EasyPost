@@ -21,7 +21,7 @@ class CaseRunLog:
         info = "【{}】 |: {}".format(level, message)
         getattr(self, 'log_data').append(info)
 
-    def save_validators(self, methods, expected, actual, result) -> None:
+    def save_validators(self, methods, expected, actual, result, state, expect) -> None:
         """
         Saves validation information for later retrieval.
 
@@ -32,6 +32,8 @@ class CaseRunLog:
         - `expected`: The expected value for the validation.
         - `actual`: The actual value obtained during validation.
         - `result`: The validation result (True for success, False for failure).
+        - `state`
+        - `expect`
 
         The information is stored in a list named `validate_extractor` as dictionaries.
         If the `validate_extractor` attribute doesn't exist yet, it's created as an empty list first.
@@ -44,7 +46,7 @@ class CaseRunLog:
         """
         if not hasattr(self, 'validate_extractor'):
             setattr(self, 'validate_extractor', [])
-        info = {"expected": expected, "methods": methods, "actual": actual, "result": result}
+        info = {"expected": expected, "methods": methods, "actual": actual, "result": result, 'state': state, 'expect': expect}
         getattr(self, 'validate_extractor').append(info)
 
     def save_ife(self, info) -> None:

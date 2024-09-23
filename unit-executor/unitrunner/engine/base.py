@@ -340,7 +340,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
                 expect = check.get('expect', None)
                 expect_result = self.json_extract(response, expect)
                 actual = check.get('actual', None)
-                self.assertion(methods, expect_result, actual)
+                self.assertion(methods, expect_result, actual, expect)
 
     def __run_log(self) -> None:
         """
@@ -473,7 +473,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         self.content_type = response.headers.get('Content-Type')
         self.response_header = json.dumps(dict(response.headers), ensure_ascii=False, indent=2)
         self.requests_header = json.dumps(dict(response.request.headers), ensure_ascii=False, indent=2)
-        self.performance_figure = json.dumps(dict(client.performance_figure(response.request.url)), ensure_ascii=False, indent=2)
+        self.performance_figure = json.dumps(dict(client.httpx(response.request.url)), ensure_ascii=False, indent=2)
         self.response_body = client.get_response(response)
         self.requests_body = client.get_request(response)
 
@@ -611,7 +611,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             Any: The extracted value if found, otherwise an empty string.
         """
         self.info_log('jsonpath提取数据\n')
-        value = jsonpath(obj, ext)
+        value = jsonpath(json.loads(obj), str(ext))
         value = value[0] if value else ''
         self.info_log('提取表达式：{}\n'.format(ext), '提取结果:{}\n'.format(value))
         return value
@@ -678,7 +678,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             self.extras.append((name, ext, value))
             self.info_log("✴️提取变量：{},提取方式【{}】,提取表达式:{},提取值为:{}\n".format(name, ext[1], ext[2], value))
 
-    def assertion(self, methods, expected, actual) -> None:
+    def assertion(self, methods, expected, actual, expect) -> None:
         """
         Performs an assertion based on the provided method and validates the results.
 
@@ -691,6 +691,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             methods (str): The name of the assertion method to use.
             expected (Any): The expected value for the assertion.
             actual (Any): The actual value to be compared against.
+            expect
 
         Returns:
             None
@@ -704,11 +705,11 @@ class BaseTest(unittest.TestCase, CaseRunLog):
                 assert_method(expected, actual)
             except exceptions.AssertFailException as err:
                 self.warning_log('❌断言失败!\n')
-                self.save_validators(methods, expected, actual, '【❌】')
+                self.save_validators(methods, expected, actual, '【❌】', '0', expect)
                 raise self.failureException(err)
             else:
                 self.info_log("断言通过!\n")
-                self.save_validators(methods, expected, actual, '【✔】')
+                self.save_validators(methods, expected, actual, '【✔】', '1', expect)
         else:
             raise exceptions.AssertException('❌断言比较方法{},不支持!'.format(methods))
 

@@ -78,7 +78,7 @@ class HandelTestData(object):
             self.params = json.dumps(request_body.get('params', []))
             self.setup_script = request_body.get('setup_script', None)
             self.teardown_script = request_body.get('teardown_script', None)
-            self.validate = json.dumps(request_body.get('validate', []))
+            self.validate = json.dumps(request_body.get('validates', []))
             self.extract = json.dumps(request_body.get('extract', []))
 
             # 一键压测

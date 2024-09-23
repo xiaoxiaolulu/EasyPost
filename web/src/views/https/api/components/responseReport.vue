@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import {ref} from "vue";
+import { computed, ref } from "vue";
   import {reactive} from 'vue';
   import MirrorCode from "@/components/MirrorCode/index.vue";
 
@@ -13,6 +13,7 @@
     response_time: "",
     content_type: "",
     responseBody: "",
+    validateExtractor: [],
     headers: "",
     editorConfig: { language: 'python', theme: 'vs' },
   })
@@ -27,8 +28,24 @@
       state.response_time = data['runTime']
       state.responseBody = data['responseBody']
       state.headers = JSON.parse(data['requestsHeader'])
+      console.log("测试")
+      console.log(data['validateExtractor'])
+      console.log("测试")
+      state.validateExtractor = data['validateExtractor']
+      console.log(state.validateExtractor)
     }
   }
+
+  const getValidatorsResultStatus = computed(() => {
+    if (state.validateExtractor.length === 0) {
+      return null
+    }
+    let failList = state.validateExtractor.filter((e) => {
+      return e.state !== '1'
+    })
+    return failList.length === 0
+  })
+
 
   defineExpose({
     setData
@@ -59,12 +76,12 @@
             <el-tag type="primary"
                     effect="plain"
                     class="response-info__item">
-              contentLength：{{ state.content_length }}
+              ContentLength：{{ state.content_length }}
             </el-tag>
             <el-tag type="info"
                     effect="plain"
                     class="response-info__item">
-              contentType：{{ state.content_type }}
+              ContentType：{{ state.content_type }}
             </el-tag>
           </div>
         </div>
@@ -106,6 +123,32 @@
               :editorConfig="state.editorConfig"
           >
           </mirror-code>
+        </div>
+      </el-tab-pane>
+
+      <!--结果断言-->
+      <el-tab-pane name='ApiValidateExtractor'>
+        <template #label>
+          <strong>结果断言</strong>
+          <el-icon v-show="getValidatorsResultStatus !== null">
+            <CircleCheck v-if="getValidatorsResultStatus" style="color: #0cbb52"></CircleCheck>
+            <CircleClose v-else style="color: red"></CircleClose>
+          </el-icon>
+        </template>
+        <div>
+          <el-table :data="state.validateExtractor"
+                    :header-cell-style="{ color: '#adaaaa', fontSize: '13px', fontWeight: 'bold'}"
+          >
+            <el-table-column prop="expect" label="断言表达式" show-overflow-tooltip=""></el-table-column>
+            <el-table-column prop="methods" label="断言方式" show-overflow-tooltip=""></el-table-column>
+            <el-table-column prop="expected" label="期望值" show-overflow-tooltip=""></el-table-column>
+            <el-table-column prop="actual" label="实际结果" show-overflow-tooltip=""></el-table-column>
+            <el-table-column prop="result" label="断言结果" show-overflow-tooltip="">
+              <template #default="{ row }">
+                <el-tag :type="row.result === '【✔】'? 'success': 'danger'">{{ row.result }}</el-tag>
+              </template>
+            </el-table-column>
+          </el-table>
         </div>
       </el-tab-pane>
     </el-tabs>
