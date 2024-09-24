@@ -1,5 +1,4 @@
 syntax = "proto3";
-import "google/protobuf/any.proto";
 
 
 message Interface {
@@ -19,6 +18,13 @@ message Request {
   map<string, string> json = 2;
 }
 
+message Extract {
+  string name = 1;
+  string type = 2;
+  string description = 3;
+}
+
+
 message ApiDocRequest {
   string mode = 1;
   string title = 2;
@@ -27,7 +33,7 @@ message ApiDocRequest {
   Request request = 5;
   string setup_script = 6;
   string teardown_script = 7;
-  map<string, google.protobuf.Any> extract = 8;
+  repeated Extract extract = 8;
   repeated Validators validators = 9;
   repeated ApiDocRequest children = 10;
 }
@@ -39,6 +45,13 @@ message ValidateExtractor {
   string result = 4;
   string state = 5;
   string expect = 6;
+}
+
+message DataExtractor {
+  string vars_name = 1;
+  string type = 2;
+  string expression = 3;
+  string result = 4;
 }
 
 message Cases {
@@ -61,6 +74,7 @@ message Cases {
   string tag = 17;
   string run_time = 18;
   repeated ValidateExtractor validate_extractor = 19;
+  repeated DataExtractor data_extractor = 20;
 }
 
 message ClassList{

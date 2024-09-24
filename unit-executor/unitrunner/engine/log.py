@@ -52,7 +52,7 @@ class CaseRunLog:
     def save_extractors(self, name, ext, value) -> None:
         if not hasattr(self, 'data_extractor'):
             setattr(self, 'data_extractor', [])
-        info = {"varsName": name, "type": ext[1], "expression": ext[2], "result": value}
+        info = {"vars_name": name, "type": ext[1], "expression": ext[2], "result": value}
         getattr(self, 'data_extractor').append(info)
 
     def save_ife(self, info) -> None:

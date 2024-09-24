@@ -326,16 +326,13 @@ class HandelTestData(object):
 
         try:
             # Attempt safer evaluation using ast.literal_eval (assumes dictionary)
-            extract_dict = ast.literal_eval(extract)
+            extract_items = ast.literal_eval(extract)
         except (SyntaxError, ValueError):
-            return {}
+            return []
 
-        # Validate required keys in the extract dictionary
-        if not isinstance(extract_dict, dict) or any(key not in extract_dict for key in ('name', 'type', 'value')):
-            return {}
+        extract_data = [{'name': item['name'], 'type': item['type'], 'description': item['description']}
+                        for item in extract_items]
 
-        extract_items = extract_dict.items()
-        extract_data = {item[0]: (env, item[1]['type'], item[1]['value']) for item in extract_items}
         return extract_data
 
     @staticmethod
@@ -394,7 +391,6 @@ class HandelTestData(object):
             A dictionary representing the API template with various configuration details.
         """
 
-        print(self.validate)
         api_doc_template = {
             "mode": self.mode,
             "title": self.name,

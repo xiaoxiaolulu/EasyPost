@@ -99,7 +99,8 @@ class Parser:
                     state=case_item.get('state', ''),
                     tag=case_item.get('tag', ''),
                     run_time=case_item.get('run_time', ''),
-                    validate_extractor=case_item.get('validate_extractor', '')
+                    validate_extractor=case_item.get('validate_extractor', ''),
+                    data_extractor=case_item.get('data_extractor', '')
                 ))
                 return cases_collection
         except Exception as err:
