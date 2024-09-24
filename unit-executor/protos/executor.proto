@@ -75,6 +75,7 @@ message Cases {
   string run_time = 18;
   repeated ValidateExtractor validate_extractor = 19;
   repeated DataExtractor data_extractor = 20;
+  string error_msg = 21;
 }
 
 message ClassList{

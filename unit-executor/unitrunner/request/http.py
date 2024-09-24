@@ -49,6 +49,8 @@ class HttpHandler(object):
             response_body = response.content
             response_body = response_body.decode('utf-8') if response_body else ''
             return response_body
+        except AttributeError:
+            return response
 
     @staticmethod
     def get_request(response: requests.Response) -> Union[str, dict]:

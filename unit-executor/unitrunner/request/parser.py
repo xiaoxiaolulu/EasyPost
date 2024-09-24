@@ -1,12 +1,8 @@
 import ast
 import json
-import sys
 from typing import (
-    List,
-    Dict,
-    Any
+    Dict
 )
-from emus.CaseParametersEnum import CaseParametersEnum
 
 
 class HandelTestData(object):
@@ -17,7 +13,6 @@ class HandelTestData(object):
             self.request_body = request_body
 
         except (KeyError, ValueError, AttributeError):
-            sys.stdout.write(f"步骤N")
             pass
 
     @staticmethod
@@ -73,5 +68,5 @@ class HandelTestData(object):
             A dictionary representing the API template with various configuration details.
         """
         api_doc_template = self.request_body
-        api_doc_template.update({'extract': self.resolve_extract(extract=self.extract)})
+        api_doc_template = {**api_doc_template, **{'extract': self.resolve_extract(extract=self.extract)}}
         return api_doc_template

@@ -311,7 +311,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         response = self.__send_request(data)
         # 数据提取
         self.data_extraction(response, data)
-        # 断言
+        # 断言hook_gen
         checks = data.get('validators')
         self.validators(response, checks)
 
@@ -419,9 +419,10 @@ class BaseTest(unittest.TestCase, CaseRunLog):
                 return query_sql
             except exceptions.MysqlConnectionException as err:
                 self.error_log(f"❌Mysql Not connected {err}")
+                self.error_msg = str(err)
                 return none_obj
-        except (Exception,):
-            pass
+        except Exception as err:
+            self.error_msg = str(err)
 
     def __send_request(self, data: typing.Dict) -> Response:
         """
@@ -436,21 +437,27 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         Returns:
             Response: The HTTP response object.
         """
-        request_info = self.__handler_request_data(data)
-        self.info_log('发送请求[{}]:{}：\n'.format(request_info['method'].upper(), request_info['url']))
+        try:
+            request_info = self.__handler_request_data(data)
+            self.info_log('发送请求[{}]:{}：\n'.format(request_info['method'].upper(), request_info['url']))
 
-        client = HttpHandler(request_info)
-        response = client.request()
-        self.update_request_info(response, client)
+            client = HttpHandler(request_info)
+            response = client.request()
+            self.update_request_info(response, client)
 
-        self.__request_log()
-        logger.info(
-            f"--------  request info ----------\n"
-            f"{json.dumps(request_info, indent=4, ensure_ascii=False)}\n"
-            f"--------  response info ----------\n"
-            f"{client.get_response(response)}"
-        )
-        return response
+            self.__request_log()
+            logger.info(
+                f"--------  request info ----------\n"
+                f"{json.dumps(request_info, indent=4, ensure_ascii=False)}\n"
+                f"--------  response info ----------\n"
+                f"{client.get_response(response)}"
+            )
+            return response
+
+        except Exception as error:
+            self.error_msg = str(error)
+            self.error_log(f"发送请求失败, 错误信息如下 {str(error)}")
+            raise
 
     def update_request_info(self, response: Response, client: HttpHandler):
         """
@@ -567,6 +574,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
                 attr = res2.group(1)
                 value = ENV.get(attr) if self.env.get(attr) is None else self.env.get(attr)
                 if value is None:
+                    self.error_msg = str('❌变量引用错误:\n{}中的变量{},在当前运行环境中未找到'.format(data, attr))
                     raise ValueError('❌变量引用错误:\n{}中的变量{},在当前运行环境中未找到'.format(data, attr))
                 if item == data:
                     return value
@@ -580,6 +588,8 @@ class BaseTest(unittest.TestCase, CaseRunLog):
                 attr = res2.group(1)
                 value = ENV.get(attr) if self.env.get(attr) is None else self.env.get(attr)
                 if value is None:
+                    self.error_msg = str('❌变量引用错误：\n{}\n中的变量{},在当前运行环境中未找到'.format(
+                            json.dumps(old_data, ensure_ascii=False, indent=2), attr))
                     raise exceptions.VariableReferencesException(
                         '❌变量引用错误：\n{}\n中的变量{},在当前运行环境中未找到'.format(
                             json.dumps(old_data, ensure_ascii=False, indent=2), attr)
@@ -667,6 +677,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             else:
                 self.error_log("变量{},的提取表达式 :{}格式不对！\n".format(name, ext))
                 self.save_extractors(name, ext, '-')
+                self.error_msg = "变量{},的提取表达式 :{}格式不对！\n".format(name, ext)
                 # self.extras.append((name, ext, '提取失败！'))
                 break
             if ext[0] == RunningTstCasesEnum.ENV_BIG:
@@ -676,6 +687,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             else:
                 self.error_log("❌错误的变量级别，变量提取表达式中的变量级别只能为ENV，或者env\n".format(ext[1]))
                 self.save_extractors(name, ext, '-')
+                self.error_msg = "❌错误的变量级别，变量提取表达式中的变量级别只能为ENV，或者env\n".format(ext[1])
                 continue
             # self.extras.append((name, ext, value))
             self.info_log("✴️提取变量：{},提取方式【{}】,提取表达式:{},提取值为:{}\n".format(name, ext[1], ext[2], value))
@@ -709,12 +721,14 @@ class BaseTest(unittest.TestCase, CaseRunLog):
                 assert_method(expected, actual)
             except (exceptions.AssertFailException, AssertionError) as err:
                 self.warning_log('❌断言失败!\n')
+                self.error_msg = f"断言失败, 断言方式{methods}, 断言表达式{expect}, 预期结果{expected}, 实际结果{actual}"
                 self.save_validators(methods, expected, actual, '【❌】', '0', expect)
                 raise self.failureException(err)
             else:
                 self.info_log("断言通过!\n")
                 self.save_validators(methods, expected, actual, '【✔】', '1', expect)
         else:
+            self.error_msg = '❌断言比较方法{},不支持!'.format(methods)
             raise exceptions.AssertException('❌断言比较方法{},不支持!'.format(methods))
 
     def __run_script(ep, data) -> None:  # noqa
