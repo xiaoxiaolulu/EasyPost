@@ -12,6 +12,8 @@ from utils.parser import Parser
 class ApiRunServer(executor_pb2_grpc.ExecutorService):
 
     def RunApiDoc(self, request, context):
+        print(request)
+        print(MessageToDict(request))
         response = run_api(MessageToDict(request))
         print(response)
         responses = executor_pb2.ApiDocResponse()

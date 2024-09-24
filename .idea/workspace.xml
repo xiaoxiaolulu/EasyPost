@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="983dbf67-ba8c-45ad-9615-d4837c20cf03" name="Changes" comment="style: 服务名称变更">
-      <change beforePath="$PROJECT_DIR$/unit-backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/unit-backend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unit-backend/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/unit-backend/logs/EasyPost.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unit-executor/logs/Unit-Executor.log" beforeDir="false" afterPath="$PROJECT_DIR$/unit-executor/logs/Unit-Executor.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unit-executor/services/executor.py" beforeDir="false" afterPath="$PROJECT_DIR$/unit-executor/services/executor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unit-executor/unitrunner/engine/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/unit-executor/unitrunner/engine/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unit-executor/unitrunner/engine/log.py" beforeDir="false" afterPath="$PROJECT_DIR$/unit-executor/unitrunner/engine/log.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unit-executor/unitrunner/request/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/unit-executor/unitrunner/request/parser.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +48,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/86135/Desktop/EasyPost/unit-backend",
+    "last_opened_file_path": "C:/Users/86135/Desktop/EasyPost",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -82,6 +87,7 @@
       <workItem from="1724312157731" duration="6447000" />
       <workItem from="1725006482641" duration="1678000" />
       <workItem from="1726122156677" duration="5500000" />
+      <workItem from="1727082624442" duration="639000" />
     </task>
     <task id="LOCAL-00001" summary="Create SECURITY.md custom exception classes for better error handling and debugging.Add backend/pyproject.toml for Python project configuration.">
       <option name="closed" value="true" />

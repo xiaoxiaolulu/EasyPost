@@ -28,15 +28,17 @@ import { computed, ref } from "vue";
       state.response_time = data['runTime']
       state.responseBody = data['responseBody']
       state.headers = JSON.parse(data['requestsHeader'])
-      console.log("测试")
-      console.log(data['validateExtractor'])
-      console.log("测试")
       state.validateExtractor = data['validateExtractor']
-      console.log(state.validateExtractor)
     }
   }
 
   const getValidatorsResultStatus = computed(() => {
+    if (!state.validateExtractor) {
+      return null
+    }
+    if (state.validateExtractor.length === 0) {
+      return null
+    }
     let failList = state.validateExtractor.filter((e) => {
       return e.state !== '1'
     })
@@ -124,7 +126,7 @@ import { computed, ref } from "vue";
       </el-tab-pane>
 
       <!--结果断言-->
-      <el-tab-pane name='ApiValidateExtractor'>
+      <el-tab-pane name='ApiValidateExtractor' v-show="state.validateExtractor">
         <template #label>
           <strong>结果断言</strong>
           <el-icon v-show="getValidatorsResultStatus !== null">

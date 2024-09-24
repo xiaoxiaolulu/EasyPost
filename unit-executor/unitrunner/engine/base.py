@@ -666,6 +666,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
                 value = self.re_extract(response, ext[2])
             else:
                 self.error_log("变量{},的提取表达式 :{}格式不对！\n".format(name, ext))
+                self.save_extractors(name, ext, '-')
                 self.extras.append((name, ext, '提取失败！'))
                 break
             if ext[0] == RunningTstCasesEnum.ENV_BIG:
@@ -674,9 +675,11 @@ class BaseTest(unittest.TestCase, CaseRunLog):
                 self.env[name] = value
             else:
                 self.error_log("❌错误的变量级别，变量提取表达式中的变量级别只能为ENV，或者env\n".format(ext[1]))
+                self.save_extractors(name, ext, '-')
                 continue
             self.extras.append((name, ext, value))
             self.info_log("✴️提取变量：{},提取方式【{}】,提取表达式:{},提取值为:{}\n".format(name, ext[1], ext[2], value))
+            self.save_extractors(name, ext, value)
 
     def assertion(self, methods, expected, actual, expect) -> None:
         """

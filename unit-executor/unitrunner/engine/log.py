@@ -49,6 +49,12 @@ class CaseRunLog:
         info = {"expected": expected, "methods": methods, "actual": actual, "result": result, 'state': state, 'expect': expect}
         getattr(self, 'validate_extractor').append(info)
 
+    def save_extractors(self, name, ext, value) -> None:
+        if not hasattr(self, 'data_extractor'):
+            setattr(self, 'data_extractor', [])
+        info = {"varsName": name, "type": ext[1], "expression": ext[2], "result": value}
+        getattr(self, 'data_extractor').append(info)
+
     def save_ife(self, info) -> None:
         """
         Saves information for later retrieval with a descriptive name.

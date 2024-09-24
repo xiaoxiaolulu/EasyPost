@@ -416,6 +416,7 @@ class HandelTestData(object):
             'extract': self.resolve_extract(extract=self.extract),
             'validators': self.resolve_validators(self.validate)
         }
+
         return api_doc_template
 
     def get_step_template(self, step):
