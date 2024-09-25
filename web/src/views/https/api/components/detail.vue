@@ -245,6 +245,7 @@ import ResponseReport from "@/views/https/api/components/responseReport.vue";
 import CardHeader from "@/components/CardHeader/index.vue";
 
 const route = useRoute()
+
 const router = useRouter()
 
 const methodRef = ref()
@@ -554,6 +555,7 @@ const initApi = () => {
       ruleForm.name = data.name
       ruleForm.status = data.status
       ruleForm.remarks = data.desc
+      ruleForm.priority = data.priority
       RequestHeadersRef.value.setData(eval(data.headers))
       RequestQueryRef.value.setData(eval(data.params))
       RequestBodyRef.value.setData(JSON.parse(data.raw))

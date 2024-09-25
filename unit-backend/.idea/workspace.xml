@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="fix: 修复接口测试详情页错误">
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/src/views/https/api/components/detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/api/components/detail.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/https/api/components/responseReport.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/api/components/responseReport.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -535,15 +536,7 @@
       <workItem from="1725003165423" duration="3098000" />
       <workItem from="1726207726818" duration="19670000" />
       <workItem from="1726798058849" duration="25949000" />
-      <workItem from="1727230274850" duration="11385000" />
-    </task>
-    <task id="LOCAL-00408" summary="&quot;Remove projectRouter and recordRouter, update backend/api/dao/setting.py and backend/api/routers/system.py, modify backend/api/service/setting.py and web/src/utils/routers.ts&quot;">
-      <option name="closed" value="true" />
-      <created>1715586326685</created>
-      <option name="number" value="00408" />
-      <option name="presentableId" value="LOCAL-00408" />
-      <option name="project" value="LOCAL" />
-      <updated>1715586326685</updated>
+      <workItem from="1727230274850" duration="12620000" />
     </task>
     <task id="LOCAL-00409" summary="Delete system router, add menuList API, and update user store.">
       <option name="closed" value="true" />
@@ -929,7 +922,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727253449827</updated>
     </task>
-    <option name="localTasksCounter" value="457" />
+    <task id="LOCAL-00457" summary="fix: 修复接口测试详情页错误">
+      <option name="closed" value="true" />
+      <created>1727255168580</created>
+      <option name="number" value="00457" />
+      <option name="presentableId" value="LOCAL-00457" />
+      <option name="project" value="LOCAL" />
+      <updated>1727255168580</updated>
+    </task>
+    <option name="localTasksCounter" value="458" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
