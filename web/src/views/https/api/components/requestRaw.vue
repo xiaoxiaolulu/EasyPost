@@ -7,10 +7,10 @@
             v-model="mode"
             @change="radioChange"
         >
-          <el-radio label="none">none</el-radio>
-          <el-radio label="form_data">form-data</el-radio>
-          <el-radio label="x_www_form_urlencoded">x-www-form-urlencoded</el-radio>
-          <el-radio label="raw">raw</el-radio>
+          <el-radio value="none">none</el-radio>
+          <el-radio value="form_data">form-data</el-radio>
+          <el-radio value="x_www_form_urlencoded">x-www-form-urlencoded</el-radio>
+          <el-radio value="raw">raw</el-radio>
           <el-dropdown @command="handleLanguage"
                        trigger="click"
                        v-if="mode === 'raw'"
