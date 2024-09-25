@@ -151,6 +151,7 @@
                 <request-raw ref="RequestBodyRef" @updateContentType="updateContentType"></request-raw>
               </div>
             </el-tab-pane>
+
             <el-tab-pane name='ApiRequestSetup'>
               <template #label>
                 <strong>前置脚本</strong>
@@ -159,6 +160,7 @@
                 <api-script ref="RequestSetup" use-type="setup"></api-script>
               </div>
             </el-tab-pane>
+
             <el-tab-pane name='ApiRequestTeardown'>
               <template #label>
                 <strong>后置脚本</strong>
@@ -167,6 +169,7 @@
                 <api-script ref="RequestTeardown" use-type="teardown"></api-script>
               </div>
             </el-tab-pane>
+
             <el-tab-pane name='ApiRequestValidators'>
               <template #label>
                 <strong>断言</strong>
@@ -175,6 +178,7 @@
                 <validator ref="RequestValidators"></validator>
               </div>
             </el-tab-pane>
+
             <el-tab-pane name='ApiRequestExtractor'>
               <template #label>
                 <strong>变量提取</strong>

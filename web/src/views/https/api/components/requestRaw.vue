@@ -313,9 +313,7 @@ const setData = (data) => {
 
   // 根据模式设置 mode.value
   mode.value =
-      ['none', 'form_data', 'x_www_form_urlencoded'].includes(modeObj) ? modeObj : 'raw';
-
-  if (!data) return;
+      ['none', 'form_data', 'x_www_form_urlencoded'].includes(modeObj) ? modeObj : 'none';
 
   // 根据 mode.value 处理数据
   if (mode.value === 'form_data') {
@@ -325,6 +323,8 @@ const setData = (data) => {
   } else if (mode.value === 'raw') {
     state.rawData = data[Object.keys(data)[0]];
     state.language = Object.keys(data)[0];
+  }{
+    return
   }
 }
 

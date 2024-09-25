@@ -76,7 +76,6 @@
 
 <script setup lang="ts">
 import {reactive} from "vue";
-import ws from 'ws';
 
 const sate = reactive({
   params: []

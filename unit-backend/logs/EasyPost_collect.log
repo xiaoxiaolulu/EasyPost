@@ -3313,3 +3313,51 @@ WARNING  [2024-09-25 15:30:26,429] [75bde18f57554cc6b7639b6d44241491] django.req
 WARNING  [2024-09-25 15:30:41,347] [313f97ce89a845448b17b06eaa99eb81] django.request: Not Found: /media/C:/Users/86135/Desktop/EasyPost/unit-backend/api/templates/media/default.png
 WARNING  [2024-09-25 15:34:30,359] [3aefd3fe46a34ae4801c510f260860a8] django.request: Not Found: /media/C:/Users/86135/Desktop/EasyPost/unit-backend/api/templates/media/default.png
 WARNING  [2024-09-25 15:34:36,018] [5255aee990a04cadbf5a831e9272bdcc] django.request: Not Found: /media/C:/Users/86135/Desktop/EasyPost/unit-backend/api/templates/media/default.png
+WARNING  [2024-09-25 15:35:12,611] [9277e9a64c9949418fa04d88378051aa] django.request: Not Found: /media/C:/Users/86135/Desktop/EasyPost/unit-backend/api/templates/media/default.png
+ERROR    [2024-09-25 15:35:17,077] [86e8e38052fb4771a2d161c7e888e080] django.security.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+Traceback (most recent call last):
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\static.py", line 45, in serve
+    fullpath = Path(safe_join(document_root, path))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+WARNING  [2024-09-25 15:35:17,134] [8acda7f1f2df4303b3a665a23d48a6bd] django.request: Not Found: /media/C:/Users/86135/Desktop/EasyPost/unit-backend/api/templates/media/default.png
+WARNING  [2024-09-25 15:35:17,136] [86e8e38052fb4771a2d161c7e888e080] django.request: Bad Request: /media/C:/Users/86135/Desktop/EasyPost/backend/api/templates/media/default.png
+WARNING  [2024-09-25 15:35:37,151] [eeca4a90abd34cf995b41be6ecda3701] django.request: Not Found: /media/C:/Users/86135/Desktop/EasyPost/unit-backend/api/templates/media/default.png
+WARNING  [2024-09-25 15:55:50,356] [1d43e1703d0747e5a259f066b9659f23] django.request: Not Found: /media/C:/Users/86135/Desktop/EasyPost/unit-backend/api/templates/media/default.png
+WARNING  [2024-09-25 15:56:10,871] [fbe8b50cd48b4b1fbc3e01f2cf04861f] django.request: Not Found: /media/C:/Users/86135/Desktop/EasyPost/unit-backend/api/templates/media/default.png
+WARNING  [2024-09-25 15:57:33,585] [071d14d73b9e43d78f230bfd211480cf] django.request: Not Found: /media/C:/Users/86135/Desktop/EasyPost/unit-backend/api/templates/media/default.png
+WARNING  [2024-09-25 15:59:55,402] [987e82ebf6464bedac1c29572437b84e] django.request: Not Found: /media/C:/Users/86135/Desktop/EasyPost/unit-backend/api/templates/media/default.png
+WARNING  [2024-09-25 16:01:05,574] [ac2839a3a7a644f7b01a734ba0b76275] django.request: Not Found: /media/C:/Users/86135/Desktop/EasyPost/unit-backend/api/templates/media/default.png
+WARNING  [2024-09-25 16:10:19,570] [7d17d74dcf4e4d7fb5b0f8991dbfb193] django.request: Not Found: /media/C:/Users/86135/Desktop/EasyPost/unit-backend/api/templates/media/default.png
+WARNING  [2024-09-25 16:10:28,400] [0f80c528b6104504ab1582312089588f] django.request: Not Found: /media/C:/Users/86135/Desktop/EasyPost/unit-backend/api/templates/media/default.png
+INFO     [2024-09-25 16:12:03,831] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\unitrunner\request\parser.py changed, reloading.
+INFO     [2024-09-25 16:12:04,390] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\unitrunner\request\parser.py changed, reloading.
+INFO     [2024-09-25 16:12:05,434] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-25 16:12:05,939] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-25 16:12:24,903] [none] django.utils.autoreload: Watching for file changes with StatReloader
+WARNING  [2024-09-25 16:12:30,091] [7b9ed8fe5ff142d4b70ad41e6f3a6753] django.request: Not Found: /media/C:/Users/86135/Desktop/EasyPost/unit-backend/api/templates/media/default.png
+WARNING  [2024-09-25 16:12:42,682] [5a523154bd1a419182b0c2b7033b7b32] django.request: Not Found: /media/C:/Users/86135/Desktop/EasyPost/unit-backend/api/templates/media/default.png
+WARNING  [2024-09-25 16:13:12,196] [309f8c2fd72b48db8faf36b492e01026] django.request: Not Found: /media/C:/Users/86135/Desktop/EasyPost/unit-backend/api/templates/media/default.png
+WARNING  [2024-09-25 16:13:43,343] [d53dc24f2d5640c5927b79144486b708] django.request: Not Found: /media/C:/Users/86135/Desktop/EasyPost/unit-backend/api/templates/media/default.png
+WARNING  [2024-09-25 16:16:43,905] [02a23deb2e8649cc989ed6fd3a4fefb4] django.request: Not Found: /media/C:/Users/86135/Desktop/EasyPost/unit-backend/api/templates/media/default.png

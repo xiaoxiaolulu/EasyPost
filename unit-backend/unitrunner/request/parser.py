@@ -73,7 +73,7 @@ class HandelTestData(object):
 
             # 请求体
             self.headers = json.dumps(request_body.get('headers', []))
-            self.raw = json.dumps(request_body.get('raw', {}))
+            self.raw = json.dumps(request_body.get('raw', {'data': {}}))
             self.params = json.dumps(request_body.get('params', []))
             self.setup_script = request_body.get('setup_script', None)
             self.teardown_script = request_body.get('teardown_script', None)
