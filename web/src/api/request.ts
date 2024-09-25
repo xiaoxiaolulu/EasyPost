@@ -1,9 +1,7 @@
-import axios, {AxiosInstance, AxiosError, AxiosRequestConfig, AxiosResponse} from 'axios'
+import axios, {AxiosError} from 'axios'
 import {useUserStore} from "@/store/modules/user"
 import {ElMessageBox, ElMessage} from "element-plus";
-import {useRouter} from "vue-router";
 
-const router = useRouter()
 
 // 创建axios实例 进行基本参数配置
 const service = axios.create({
@@ -16,7 +14,7 @@ const service = axios.create({
 })
 
 //  request interceptor 接口请求拦截
-service.interceptors.request.use((config: AxiosRequestConfig) => {
+service.interceptors.request.use((config) => {
     /**
      * 用户登录之后获取服务端返回的token,后面每次请求都在请求头中带上token进行JWT校验
      * token 存储在本地储存中（storage）、vuex、pinia

@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="983dbf67-ba8c-45ad-9615-d4837c20cf03" name="Changes" comment="style: 服务名称变更">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unit-backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/unit-backend/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unit-backend/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/unit-backend/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unit-executor/logs/Unit-Executor.log" beforeDir="false" afterPath="$PROJECT_DIR$/unit-executor/logs/Unit-Executor.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unit-executor/unitrunner/engine/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/unit-executor/unitrunner/engine/base.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +86,7 @@
       <workItem from="1726122156677" duration="5500000" />
       <workItem from="1727082624442" duration="639000" />
       <workItem from="1727158789836" duration="1917000" />
+      <workItem from="1727243268355" duration="954000" />
     </task>
     <task id="LOCAL-00001" summary="Create SECURITY.md custom exception classes for better error handling and debugging.Add backend/pyproject.toml for Python project configuration.">
       <option name="closed" value="true" />

@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="style: 优化接口详情页面头部样式" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="fix: 修复接口测试保存接口错误">
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/api/request.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/api/request.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/vite.config.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -530,15 +536,7 @@
       <workItem from="1725003165423" duration="3098000" />
       <workItem from="1726207726818" duration="19670000" />
       <workItem from="1726798058849" duration="25949000" />
-      <workItem from="1727230274850" duration="4533000" />
-    </task>
-    <task id="LOCAL-00403" summary="Change assert method and add registry system.">
-      <option name="closed" value="true" />
-      <created>1714446782878</created>
-      <option name="number" value="00403" />
-      <option name="presentableId" value="LOCAL-00403" />
-      <option name="project" value="LOCAL" />
-      <updated>1714446782878</updated>
+      <workItem from="1727230274850" duration="8113000" />
     </task>
     <task id="LOCAL-00404" summary="Update dependencies to latest versions">
       <option name="closed" value="true" />
@@ -924,7 +922,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727242854513</updated>
     </task>
-    <option name="localTasksCounter" value="452" />
+    <task id="LOCAL-00452" summary="fix: 修复接口测试保存接口错误">
+      <option name="closed" value="true" />
+      <created>1727243094976</created>
+      <option name="number" value="00452" />
+      <option name="presentableId" value="LOCAL-00452" />
+      <option name="project" value="LOCAL" />
+      <updated>1727243094976</updated>
+    </task>
+    <option name="localTasksCounter" value="453" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -954,7 +960,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail" />
     <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail model" />
     <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail model," />
     <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail model, added" />
@@ -979,7 +984,8 @@
     <MESSAGE value="fix: 优化提取参数方法，提高程序运行速度" />
     <MESSAGE value="fix: 修复面板错误信息" />
     <MESSAGE value="style: 优化接口详情页面头部样式" />
-    <option name="LAST_COMMIT_MESSAGE" value="style: 优化接口详情页面头部样式" />
+    <MESSAGE value="fix: 修复接口测试保存接口错误" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: 修复接口测试保存接口错误" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
