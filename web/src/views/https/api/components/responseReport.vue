@@ -14,7 +14,9 @@ import { computed, ref } from "vue";
     content_type: "",
     responseBody: "",
     validateExtractor: [],
+    dataExtractor: [],
     headers: "",
+    errMessage: "",
     editorConfig: { language: 'python', theme: 'vs' },
   })
 
@@ -29,6 +31,8 @@ import { computed, ref } from "vue";
       state.responseBody = data['responseBody']
       state.headers = JSON.parse(data['requestsHeader'])
       state.validateExtractor = data['validateExtractor']
+      state.dataExtractor = data['dataExtractor']
+      state.errMessage = data['errorMsg']
     }
   }
 
@@ -44,6 +48,20 @@ import { computed, ref } from "vue";
     })
     return failList.length === 0
   })
+
+
+const getDataExtractorResultStatus = computed(() => {
+  if (!state.dataExtractor) {
+    return null
+  }
+  if (state.dataExtractor.length === 0) {
+    return null
+  }
+  let failList = state.dataExtractor.filter((e) => {
+    return e.state !== '1'
+  })
+  return failList.length === 0
+})
 
 
   defineExpose({
@@ -148,6 +166,45 @@ import { computed, ref } from "vue";
               </template>
             </el-table-column>
           </el-table>
+        </div>
+      </el-tab-pane>
+
+      <!--参数提取-->
+      <el-tab-pane name='ApiDataExtractor' v-show="state.dataExtractor">
+        <template #label>
+          <strong>参数提取</strong>
+          <el-icon v-show="getDataExtractorResultStatus !== null">
+            <CircleCheck v-if="getDataExtractorResultStatus" style="color: #0cbb52"></CircleCheck>
+            <CircleClose v-else style="color: red"></CircleClose>
+          </el-icon>
+        </template>
+        <div>
+          <el-table :data="state.dataExtractor"
+                    :header-cell-style="{ color: '#adaaaa', fontSize: '13px', fontWeight: 'bold'}"
+          >
+            <el-table-column prop="varsName" label="变量名" show-overflow-tooltip=""></el-table-column>
+            <el-table-column prop="type" label="提取类型" show-overflow-tooltip=""></el-table-column>
+            <el-table-column prop="expression" label="提取表达式" show-overflow-tooltip=""></el-table-column>
+            <el-table-column prop="resultVal" label="提取值" show-overflow-tooltip=""></el-table-column>
+            <el-table-column prop="result" label="提取结果" show-overflow-tooltip="">
+              <template #default="{ row }">
+                <el-tag :type="row.result === '【✔】'? 'success': 'danger'">{{ row.result }}</el-tag>
+              </template>
+            </el-table-column>
+          </el-table>
+        </div>
+      </el-tab-pane>
+
+      <!--错误信息-->
+      <el-tab-pane name='ApiErrorMessage'>
+        <template #label>
+          <strong>错误信息</strong>
+          <el-icon v-if="state.errMessage !== ''">
+            <CircleClose style="color: red"></CircleClose>
+          </el-icon>
+        </template>
+        <div>
+          <pre>{{ state.errMessage }}</pre>
         </div>
       </el-tab-pane>
     </el-tabs>
