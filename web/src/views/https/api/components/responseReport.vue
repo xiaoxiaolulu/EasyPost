@@ -29,7 +29,7 @@ import { computed, ref } from "vue";
       state.content_type = data['contentType']
       state.response_time = data['runTime']
       state.responseBody = data['responseBody']
-      state.headers = JSON.parse(data['requestsHeader'])
+      state.headers =  (data['requestsHeader'] !== undefined && data['requestsHeader'] !== '') ? JSON.parse(data['requestsHeader']) : '';
       state.validateExtractor = data['validateExtractor']
       state.dataExtractor = data['dataExtractor']
       state.errMessage = data['errorMsg']

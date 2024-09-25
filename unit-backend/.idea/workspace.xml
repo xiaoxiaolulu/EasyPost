@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="fix: 修复接口测试列表页面报错信息">
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="fix: 修复接口测试详情页错误">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unitrunner/request/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/unitrunner/request/parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../web/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../web/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/src/views/https/api/components/detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/api/components/detail.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/https/api/components/extract.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/api/components/extract.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/https/api/components/requestRaw.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/api/components/requestRaw.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/https/api/components/responseReport.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/api/components/responseReport.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -540,23 +535,7 @@
       <workItem from="1725003165423" duration="3098000" />
       <workItem from="1726207726818" duration="19670000" />
       <workItem from="1726798058849" duration="25949000" />
-      <workItem from="1727230274850" duration="10457000" />
-    </task>
-    <task id="LOCAL-00406" summary="Change the menu structure to include a parent menu with submenus, and add a new menu item for the API documentation. Update the corresponding API endpoints to return the new menu structure, and modify the frontend code to display the updated menu structure.">
-      <option name="closed" value="true" />
-      <created>1715399092890</created>
-      <option name="number" value="00406" />
-      <option name="presentableId" value="LOCAL-00406" />
-      <option name="project" value="LOCAL" />
-      <updated>1715399092890</updated>
-    </task>
-    <task id="LOCAL-00407" summary="chore: remove unused files and code, cleanup imports and unused variables, update menu and router configurations, fix bugs, add tests.">
-      <option name="closed" value="true" />
-      <created>1715586294192</created>
-      <option name="number" value="00407" />
-      <option name="presentableId" value="LOCAL-00407" />
-      <option name="project" value="LOCAL" />
-      <updated>1715586294192</updated>
+      <workItem from="1727230274850" duration="11385000" />
     </task>
     <task id="LOCAL-00408" summary="&quot;Remove projectRouter and recordRouter, update backend/api/dao/setting.py and backend/api/routers/system.py, modify backend/api/service/setting.py and web/src/utils/routers.ts&quot;">
       <option name="closed" value="true" />
@@ -934,7 +913,23 @@
       <option name="project" value="LOCAL" />
       <updated>1727249700925</updated>
     </task>
-    <option name="localTasksCounter" value="455" />
+    <task id="LOCAL-00455" summary="fix: 修复接口测试详情页错误">
+      <option name="closed" value="true" />
+      <created>1727253242020</created>
+      <option name="number" value="00455" />
+      <option name="presentableId" value="LOCAL-00455" />
+      <option name="project" value="LOCAL" />
+      <updated>1727253242020</updated>
+    </task>
+    <task id="LOCAL-00456" summary="fix: 修复接口测试详情页错误">
+      <option name="closed" value="true" />
+      <created>1727253449827</created>
+      <option name="number" value="00456" />
+      <option name="presentableId" value="LOCAL-00456" />
+      <option name="project" value="LOCAL" />
+      <updated>1727253449827</updated>
+    </task>
+    <option name="localTasksCounter" value="457" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -964,7 +959,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail model, added" />
     <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail model, added elli" />
     <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail model, added ellips" />
     <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail model, added ellipsis" />
@@ -989,7 +983,8 @@
     <MESSAGE value="fix: 修复接口测试保存接口错误" />
     <MESSAGE value="fix: 修复首页报错信息" />
     <MESSAGE value="fix: 修复接口测试列表页面报错信息" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: 修复接口测试列表页面报错信息" />
+    <MESSAGE value="fix: 修复接口测试详情页错误" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: 修复接口测试详情页错误" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

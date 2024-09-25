@@ -191,7 +191,7 @@
         </div>
       </el-card>
 
-      <el-card style="margin-top: 20px" v-show="responseReport">
+      <el-card style="margin-top: 20px" v-show="responseReport" ref="ApiResponsePoint">
         <template #header>
           <div style="display: flex; justify-content: space-between">
             <div>
@@ -307,6 +307,8 @@ const showSetting = ref(false)
 
 const activeName =  ref('ApiRequestBody')
 
+const ApiResponsePoint = ref()
+
 const ResponseRef = ref()
 
 const RequestHeadersRef = ref()
@@ -337,7 +339,7 @@ const settings = computed(() => {
 
 const toResponse = () => {
   nextTick(() => {
-    ResponseRef.value.$el.scrollIntoView({
+    ApiResponsePoint.value.$el.scrollIntoView({
       behavior: "smooth",
       // 定义动画过渡效果， "auto"或 "smooth" 之一。默认为 "auto"
       block: "center",
@@ -487,7 +489,7 @@ const debug = (formName: FormInstance | undefined) => {
         const res = data['classList'][0]['cases'][0]
         statusCode.value = res['statusCode']
         runTime.value = res['runTime']
-        performanceFigure.value = JSON.parse(res["performanceFigure"])
+        performanceFigure.value =  (res["performanceFigure"] !== undefined && res["performanceFigure"] !== '') ? JSON.parse(res["performanceFigure"]) : '';
         ResponseRef.value.setData(res)
         responseReport.value = true
         toResponse()
