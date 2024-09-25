@@ -403,26 +403,22 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             A dictionary containing the query results on success, or a placeholder object
             indicating a connection or execution failure.
         """
-        try:
-            setting = ENV.get('db') if self.env.get('db') is None else self.env.get('db')
-            none_obj = self.none_connect_obj()
+        setting = ENV.get('db', None) if self.env.get('db', None) is None else self.env.get('db', None)
+        none_obj = self.none_connect_obj()
 
-            setting_obj = type('Setting', (object,), setting)
-            if not hasattr(setting_obj, 'database'):
-                return none_obj
-            try:
-                database = db(setting)
-                query_sql = {
-                    "query_sql": database.execute(sql)
-                }
-                ENV.update(query_sql)
-                return query_sql
-            except exceptions.MysqlConnectionException as err:
-                self.error_log(f"❌Mysql Not connected {err}")
-                self.error_msg = str(err)
-                return none_obj
-        except Exception as err:
-            self.error_msg = str(err)
+        if not setting:
+            return none_obj
+        try:
+            database = db(setting)
+            query_sql = {
+                "query_sql": database.execute(sql)
+            }
+            ENV.update(query_sql)
+            return query_sql
+        except exceptions.MysqlConnectionException as err:
+            self.error_msg = f"❌Mysql Not connected {str(err)}"
+            self.error_log(f"❌Mysql Not connected {str(err)}")
+            return none_obj
 
     def __send_request(self, data: typing.Dict) -> Response:
         """
@@ -455,7 +451,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             return response
 
         except Exception as error:
-            self.error_msg = str(error)
+            self.error_msg = f"发送请求失败, 错误信息如下 {str(error)}"
             self.error_log(f"发送请求失败, 错误信息如下 {str(error)}")
             raise
 
