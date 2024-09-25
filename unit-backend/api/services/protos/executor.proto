@@ -51,7 +51,9 @@ message DataExtractor {
   string vars_name = 1;
   string type = 2;
   string expression = 3;
-  string result = 4;
+  string result_val = 4;
+  string result = 5;
+  string state = 6;
 }
 
 message Cases {

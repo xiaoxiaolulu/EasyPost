@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="983dbf67-ba8c-45ad-9615-d4837c20cf03" name="Changes" comment="style: 服务名称变更">
-      <change beforePath="$PROJECT_DIR$/unit-backend/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/unit-backend/logs/EasyPost.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unit-backend/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/unit-backend/logs/EasyPost_collect.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unit-executor/logs/Unit-Executor.log" beforeDir="false" afterPath="$PROJECT_DIR$/unit-executor/logs/Unit-Executor.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unit-executor/services/executor.py" beforeDir="false" afterPath="$PROJECT_DIR$/unit-executor/services/executor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unit-executor/unitrunner/engine/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/unit-executor/unitrunner/engine/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unit-executor/unitrunner/engine/log.py" beforeDir="false" afterPath="$PROJECT_DIR$/unit-executor/unitrunner/engine/log.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unit-executor/unitrunner/request/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/unit-executor/unitrunner/request/parser.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,20 +40,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/86135/Desktop/EasyPost",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/86135/Desktop/EasyPost&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -88,6 +85,7 @@
       <workItem from="1725006482641" duration="1678000" />
       <workItem from="1726122156677" duration="5500000" />
       <workItem from="1727082624442" duration="639000" />
+      <workItem from="1727158789836" duration="1917000" />
     </task>
     <task id="LOCAL-00001" summary="Create SECURITY.md custom exception classes for better error handling and debugging.Add backend/pyproject.toml for Python project configuration.">
       <option name="closed" value="true" />

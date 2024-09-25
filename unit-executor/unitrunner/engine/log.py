@@ -49,10 +49,10 @@ class CaseRunLog:
         info = {"expected": expected, "methods": methods, "actual": actual, "result": result, 'state': state, 'expect': expect}
         getattr(self, 'validate_extractor').append(info)
 
-    def save_extractors(self, name, ext, value) -> None:
+    def save_extractors(self, name, ext, value, result, state) -> None:
         if not hasattr(self, 'data_extractor'):
             setattr(self, 'data_extractor', [])
-        info = {"vars_name": name, "type": ext[1], "expression": ext[2], "result": value}
+        info = {"vars_name": name, "type": ext[1], "expression": ext[2], "result_val": value, 'result': result, 'state': state}
         getattr(self, 'data_extractor').append(info)
 
     def save_ife(self, info) -> None:

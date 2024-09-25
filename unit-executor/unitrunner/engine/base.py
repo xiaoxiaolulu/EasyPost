@@ -663,8 +663,6 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         if not (isinstance(exts, dict) and exts): return
         self.info_log("从响应结果中开始提取数据\n")
 
-        # self.extras = []
-
         client = HttpHandler()
         response = client.get_response(response)
         # 遍历要提取的数据
@@ -676,9 +674,8 @@ class BaseTest(unittest.TestCase, CaseRunLog):
                 value = self.re_extract(response, ext[2])
             else:
                 self.error_log("变量{},的提取表达式 :{}格式不对！\n".format(name, ext))
-                self.save_extractors(name, ext, '-')
+                self.save_extractors(name, ext, '-', '【❌】', '0')
                 self.error_msg = "变量{},的提取表达式 :{}格式不对！\n".format(name, ext)
-                # self.extras.append((name, ext, '提取失败！'))
                 break
             if ext[0] == RunningTstCasesEnum.ENV_BIG:
                 ENV[name] = value
@@ -686,12 +683,11 @@ class BaseTest(unittest.TestCase, CaseRunLog):
                 self.env[name] = value
             else:
                 self.error_log("❌错误的变量级别，变量提取表达式中的变量级别只能为ENV，或者env\n".format(ext[1]))
-                self.save_extractors(name, ext, '-')
+                self.save_extractors(name, ext, '-', '【❌】','0')
                 self.error_msg = "❌错误的变量级别，变量提取表达式中的变量级别只能为ENV，或者env\n".format(ext[1])
                 continue
-            # self.extras.append((name, ext, value))
             self.info_log("✴️提取变量：{},提取方式【{}】,提取表达式:{},提取值为:{}\n".format(name, ext[1], ext[2], value))
-            self.save_extractors(name, ext, value)
+            self.save_extractors(name, ext, value, '【✔】', '1', )
 
     def assertion(self, methods, expected, actual, expect) -> None:
         """
