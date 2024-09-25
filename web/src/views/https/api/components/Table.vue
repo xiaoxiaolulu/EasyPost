@@ -124,7 +124,7 @@ const tags =  reactive([
 ])
 
 const methods = reactive([
-  { id: 0, type: '', name: 'POST' },
+  { id: 0, type: 'primary', name: 'POST' },
   { id: 1, type: 'success', name: 'GET' },
   { id: 2, type: 'warning', name: 'PUT' },
   { id: 3, type: 'danger', name: 'DELETE' }

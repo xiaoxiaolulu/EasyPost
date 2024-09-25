@@ -10,20 +10,10 @@ import Layout from '@/layout/index.vue'
 interface extendRoute {
   hidden?: boolean
 }
-import systemRouter from './modules/system'
 import othersRouter from './modules/other'
-import projectRouter from './modules/project'
-import httpsRouter from './modules/https'
-import recordRouter from './modules/record'
-import toolsRouter from './modules/tools'
 
 // 异步组件
 export const asyncRoutes = [
-  // ...projectRouter,
-  // ...systemRouter,
-  // ...httpsRouter,
-  // ...recordRouter,
-  // ...toolsRouter,
   ...othersRouter,
 ]
 
@@ -67,7 +57,8 @@ export const notFoundRouter: Array<RouteRecordRaw & extendRoute> = [
   {
     path: '/:pathMatch(.*)',
     name: 'notFound',
-    redirect: '/404',
+    component: () => import((`@/views/errorPages/404.vue`)),
+    hidden: true
   },
   {
     path: '/403',
