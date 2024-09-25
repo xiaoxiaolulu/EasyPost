@@ -3,14 +3,14 @@
     <div class="header-container">
       <div class="card-head-title">
         <div class="card-description">
-          <span class="page-header-back-button el-icon-back" @click="goBack">
-                      <el-icon>
-                        <component :is="Back"/>
-                      </el-icon>
-                    </span>
-          <span class="page-header-heading-title">
-            {{ route.query.editType === 'update' ? "更新" : "新增" }}
-          </span>
+          <CardHeader
+            style="margin: 5px 0;"
+            @back="goBack"
+          >
+            <template #content>
+              <span style="padding-right: 10px;">{{ route.query.editType === 'update' ? "更新" : "新增" }}</span>
+            </template>
+          </CardHeader>
         </div>
       </div>
     </div>
@@ -238,6 +238,7 @@ import ApiScript from "@/views/https/api/components/apiScript.vue";
 import {saveOrUpdate, runApi, getHttpDetail, httpSnapshot} from "@/api/http";
 import {showErrMessage} from "@/utils/element";
 import ResponseReport from "@/views/https/api/components/responseReport.vue";
+import CardHeader from "@/components/CardHeader/index.vue";
 
 const route = useRoute()
 const router = useRouter()

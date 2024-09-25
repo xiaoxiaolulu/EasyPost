@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="fix: 优化提取参数方法，提高程序运行速度">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../unit-executor/logs/Unit-Executor.log" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/logs/Unit-Executor.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../unit-executor/unitrunner/engine/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/unitrunner/engine/base.py" afterDir="false" />
-    </list>
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="style: 优化接口详情页面头部样式" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -534,23 +530,7 @@
       <workItem from="1725003165423" duration="3098000" />
       <workItem from="1726207726818" duration="19670000" />
       <workItem from="1726798058849" duration="25949000" />
-      <workItem from="1727230274850" duration="4233000" />
-    </task>
-    <task id="LOCAL-00401" summary="Change assert method and add registry system.">
-      <option name="closed" value="true" />
-      <created>1714385438219</created>
-      <option name="number" value="00401" />
-      <option name="presentableId" value="LOCAL-00401" />
-      <option name="project" value="LOCAL" />
-      <updated>1714385438219</updated>
-    </task>
-    <task id="LOCAL-00402" summary="Change assert method and add registry system.">
-      <option name="closed" value="true" />
-      <created>1714442568838</created>
-      <option name="number" value="00402" />
-      <option name="presentableId" value="LOCAL-00402" />
-      <option name="project" value="LOCAL" />
-      <updated>1714442568838</updated>
+      <workItem from="1727230274850" duration="4533000" />
     </task>
     <task id="LOCAL-00403" summary="Change assert method and add registry system.">
       <option name="closed" value="true" />
@@ -928,7 +908,23 @@
       <option name="project" value="LOCAL" />
       <updated>1727234045736</updated>
     </task>
-    <option name="localTasksCounter" value="450" />
+    <task id="LOCAL-00450" summary="fix: 修复面板错误信息">
+      <option name="closed" value="true" />
+      <created>1727242610306</created>
+      <option name="number" value="00450" />
+      <option name="presentableId" value="LOCAL-00450" />
+      <option name="project" value="LOCAL" />
+      <updated>1727242610306</updated>
+    </task>
+    <task id="LOCAL-00451" summary="style: 优化接口详情页面头部样式">
+      <option name="closed" value="true" />
+      <created>1727242854513</created>
+      <option name="number" value="00451" />
+      <option name="presentableId" value="LOCAL-00451" />
+      <option name="project" value="LOCAL" />
+      <updated>1727242854513</updated>
+    </task>
+    <option name="localTasksCounter" value="452" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -958,8 +954,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in Closed" />
-    <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasks" />
     <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail" />
     <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail model" />
     <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail model," />
@@ -983,7 +977,9 @@
     <MESSAGE value="feat: 响应面板参数提取" />
     <MESSAGE value="feat: 响应面板错误信息" />
     <MESSAGE value="fix: 优化提取参数方法，提高程序运行速度" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: 优化提取参数方法，提高程序运行速度" />
+    <MESSAGE value="fix: 修复面板错误信息" />
+    <MESSAGE value="style: 优化接口详情页面头部样式" />
+    <option name="LAST_COMMIT_MESSAGE" value="style: 优化接口详情页面头部样式" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

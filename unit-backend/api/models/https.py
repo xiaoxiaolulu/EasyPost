@@ -147,7 +147,6 @@ class Api(Model):
     validate = TextField(verbose_name=_('Api Validate'), null=False, default=None)
     extract = TextField(verbose_name=_('Api Extract'), null=False, default=None)
     user = ForeignKey(User, related_name="api_creator", null=True, on_delete=SET_NULL, verbose_name=_('User'))
-    source = TextField(verbose_name=_('Api Source'), null=False, default=None)
     create_time = DateTimeField(auto_now_add=True, verbose_name=_('Api CreateTime'))
     update_time = DateTimeField(auto_now=True, verbose_name=_('Api UpdateTime'))
 
