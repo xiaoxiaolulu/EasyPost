@@ -22,6 +22,7 @@ message Extract {
   string name = 1;
   string type = 2;
   string description = 3;
+  string env = 4;
 }
 
 

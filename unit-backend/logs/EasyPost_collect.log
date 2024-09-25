@@ -2546,3 +2546,268 @@ Traceback (most recent call last):
     raise SuspiciousFileOperation(
 django.core.exceptions.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
 WARNING  [2024-09-25 10:24:35,228] [97304c76b884426cb68248f2e91632fa] django.request: Bad Request: /media/C:/Users/86135/Desktop/EasyPost/backend/api/templates/media/default.png
+ERROR    [2024-09-25 10:34:10,944] [96b81420e29a4649a5d25d242f9490d2] django.security.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+Traceback (most recent call last):
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\static.py", line 45, in serve
+    fullpath = Path(safe_join(document_root, path))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+WARNING  [2024-09-25 10:34:10,982] [96b81420e29a4649a5d25d242f9490d2] django.request: Bad Request: /media/C:/Users/86135/Desktop/EasyPost/backend/api/templates/media/default.png
+ERROR    [2024-09-25 10:34:13,474] [7cba2c8076a043edbb74d8a6dc713bc5] django.security.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+Traceback (most recent call last):
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\static.py", line 45, in serve
+    fullpath = Path(safe_join(document_root, path))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+WARNING  [2024-09-25 10:34:13,518] [7cba2c8076a043edbb74d8a6dc713bc5] django.request: Bad Request: /media/C:/Users/86135/Desktop/EasyPost/backend/api/templates/media/default.png
+ERROR    [2024-09-25 10:34:17,675] [ae8388918b504bedba7b64629963c7d6] django.security.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+Traceback (most recent call last):
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\static.py", line 45, in serve
+    fullpath = Path(safe_join(document_root, path))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+WARNING  [2024-09-25 10:34:17,717] [ae8388918b504bedba7b64629963c7d6] django.request: Bad Request: /media/C:/Users/86135/Desktop/EasyPost/backend/api/templates/media/default.png
+ERROR    [2024-09-25 10:37:33,416] [37d72ae8996b4d299110b842acc1a006] django.security.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+Traceback (most recent call last):
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\static.py", line 45, in serve
+    fullpath = Path(safe_join(document_root, path))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+WARNING  [2024-09-25 10:37:33,442] [37d72ae8996b4d299110b842acc1a006] django.request: Bad Request: /media/C:/Users/86135/Desktop/EasyPost/backend/api/templates/media/default.png
+ERROR    [2024-09-25 10:37:38,429] [4683a432b62b41afb6d99f7112b51726] django.security.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+Traceback (most recent call last):
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\static.py", line 45, in serve
+    fullpath = Path(safe_join(document_root, path))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+WARNING  [2024-09-25 10:37:38,466] [4683a432b62b41afb6d99f7112b51726] django.request: Bad Request: /media/C:/Users/86135/Desktop/EasyPost/backend/api/templates/media/default.png
+ERROR    [2024-09-25 10:37:40,059] [aaad19a32688411583b0a4e286edf2b0] django.security.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+Traceback (most recent call last):
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\static.py", line 45, in serve
+    fullpath = Path(safe_join(document_root, path))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+WARNING  [2024-09-25 10:37:40,110] [aaad19a32688411583b0a4e286edf2b0] django.request: Bad Request: /media/C:/Users/86135/Desktop/EasyPost/backend/api/templates/media/default.png
+ERROR    [2024-09-25 10:38:46,246] [c8bc3a5d30c945cea1e594dcb2965249] django.security.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+Traceback (most recent call last):
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\static.py", line 45, in serve
+    fullpath = Path(safe_join(document_root, path))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+WARNING  [2024-09-25 10:38:46,279] [c8bc3a5d30c945cea1e594dcb2965249] django.request: Bad Request: /media/C:/Users/86135/Desktop/EasyPost/backend/api/templates/media/default.png
+ERROR    [2024-09-25 10:40:07,870] [a586a6e7f66443f59f80e3b6a5f31f8c] django.security.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+Traceback (most recent call last):
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\static.py", line 45, in serve
+    fullpath = Path(safe_join(document_root, path))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+WARNING  [2024-09-25 10:40:07,898] [a586a6e7f66443f59f80e3b6a5f31f8c] django.request: Bad Request: /media/C:/Users/86135/Desktop/EasyPost/backend/api/templates/media/default.png
+ERROR    [2024-09-25 11:03:06,881] [66337fdabe574d1e8ff785dcab8489cb] django.security.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+Traceback (most recent call last):
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\static.py", line 45, in serve
+    fullpath = Path(safe_join(document_root, path))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+WARNING  [2024-09-25 11:03:06,899] [66337fdabe574d1e8ff785dcab8489cb] django.request: Bad Request: /media/C:/Users/86135/Desktop/EasyPost/backend/api/templates/media/default.png
+INFO     [2024-09-25 11:08:33,709] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\unitrunner\request\parser.py changed, reloading.
+INFO     [2024-09-25 11:08:34,025] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\unitrunner\request\parser.py changed, reloading.
+INFO     [2024-09-25 11:08:34,388] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\unitrunner\request\parser.py changed, reloading.
+INFO     [2024-09-25 11:08:35,065] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-25 11:08:35,383] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-25 11:08:35,701] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-25 11:09:12,036] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-25 11:11:10,330] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\services\protos\executor_pb2_grpc.py changed, reloading.
+INFO     [2024-09-25 11:11:10,879] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\services\protos\executor_pb2_grpc.py changed, reloading.
+INFO     [2024-09-25 11:11:10,902] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\services\protos\executor_pb2_grpc.py changed, reloading.
+INFO     [2024-09-25 11:11:11,727] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-25 11:11:12,104] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-25 11:11:12,129] [none] django.utils.autoreload: Watching for file changes with StatReloader

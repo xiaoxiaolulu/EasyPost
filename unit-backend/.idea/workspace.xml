@@ -4,18 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="feat: 接口耗时新增">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="feat: 响应面板错误信息">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/services/protos/executor.proto" beforeDir="false" afterPath="$PROJECT_DIR$/api/services/protos/executor.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/services/protos/executor_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/services/protos/executor_pb2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/request/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/unitrunner/request/parser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../unit-executor/logs/Unit-Executor.log" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/logs/Unit-Executor.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../unit-executor/protos/executor.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/protos/executor.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../unit-executor/protos/executor_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/protos/executor_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unit-executor/services/executor.py" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/services/executor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../unit-executor/unitrunner/engine/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/unitrunner/engine/base.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../unit-executor/unitrunner/engine/log.py" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/unitrunner/engine/log.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unit-executor/unitrunner/request/parser.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -542,23 +544,7 @@
       <workItem from="1725003165423" duration="3098000" />
       <workItem from="1726207726818" duration="19670000" />
       <workItem from="1726798058849" duration="25949000" />
-      <workItem from="1727230274850" duration="780000" />
-    </task>
-    <task id="LOCAL-00398" summary="Changed CaseParametersEnum to use strings instead of ints and updated related code.">
-      <option name="closed" value="true" />
-      <created>1714358964630</created>
-      <option name="number" value="00398" />
-      <option name="presentableId" value="LOCAL-00398" />
-      <option name="project" value="LOCAL" />
-      <updated>1714358964630</updated>
-    </task>
-    <task id="LOCAL-00399" summary="Changed CaseParametersEnum to use strings instead of ints and updated related code.">
-      <option name="closed" value="true" />
-      <created>1714370941309</created>
-      <option name="number" value="00399" />
-      <option name="presentableId" value="LOCAL-00399" />
-      <option name="project" value="LOCAL" />
-      <updated>1714370941309</updated>
+      <workItem from="1727230274850" duration="2820000" />
     </task>
     <task id="LOCAL-00400" summary="&quot;Refactor code for data source registry and fix API endpoint&quot;">
       <option name="closed" value="true" />
@@ -936,7 +922,23 @@
       <option name="project" value="LOCAL" />
       <updated>1726821042977</updated>
     </task>
-    <option name="localTasksCounter" value="447" />
+    <task id="LOCAL-00447" summary="feat: 响应面板参数提取">
+      <option name="closed" value="true" />
+      <created>1727231191334</created>
+      <option name="number" value="00447" />
+      <option name="presentableId" value="LOCAL-00447" />
+      <option name="project" value="LOCAL" />
+      <updated>1727231191334</updated>
+    </task>
+    <task id="LOCAL-00448" summary="feat: 响应面板错误信息">
+      <option name="closed" value="true" />
+      <created>1727231578036</created>
+      <option name="number" value="00448" />
+      <option name="presentableId" value="LOCAL-00448" />
+      <option name="project" value="LOCAL" />
+      <updated>1727231578036</updated>
+    </task>
+    <option name="localTasksCounter" value="449" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -966,8 +968,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields" />
-    <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in" />
     <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in Cl" />
     <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in Closed" />
     <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasks" />
@@ -991,7 +991,9 @@
     <MESSAGE value="feat: 用例执行器客户端封装" />
     <MESSAGE value="style: 执行器服务发现代码调整" />
     <MESSAGE value="feat: 接口耗时新增" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 接口耗时新增" />
+    <MESSAGE value="feat: 响应面板参数提取" />
+    <MESSAGE value="feat: 响应面板错误信息" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 响应面板错误信息" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

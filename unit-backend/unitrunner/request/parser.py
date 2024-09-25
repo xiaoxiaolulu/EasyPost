@@ -330,7 +330,7 @@ class HandelTestData(object):
         except (SyntaxError, ValueError):
             return []
 
-        extract_data = [{'name': item['name'], 'type': item['type'], 'description': item['description']}
+        extract_data = [{'name': item['name'], 'type': item['type'], 'description': item['description'], 'env': item.get('env', 'ENV')}
                         for item in extract_items]
 
         return extract_data

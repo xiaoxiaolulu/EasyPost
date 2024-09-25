@@ -660,34 +660,65 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             Any: The extracted data.
         """
         exts = case.get('extract') or getattr(self, 'extract', None)  # noqa
-        if not (isinstance(exts, dict) and exts): return
+        if not (isinstance(exts, list) and exts): return
         self.info_log("从响应结果中开始提取数据\n")
 
         client = HttpHandler()
         response = client.get_response(response)
+
         # 遍历要提取的数据
-        for name, ext in exts.items():
+        for exts_item in exts:
+
+            name = exts_item['name']
+            exts_type = exts_item['type']
+            expression = exts_item['description']
+            env = exts_item.get('env', 'ENV')
+
             # 判断提取数据的方式
-            if len(ext) == 3 and ext[1] == RunningTstCasesEnum.EXTRACT_JSON_PATH:
-                value = self.json_extract(response, ext[2])
-            elif len(ext) == 3 and ext[1] == RunningTstCasesEnum.EXTRACT_RE:
-                value = self.re_extract(response, ext[2])
+            if exts_type == RunningTstCasesEnum.EXTRACT_JSON_PATH:
+                value = self.json_extract(response, expression)
+            elif exts_type == RunningTstCasesEnum.EXTRACT_RE:
+                value = self.re_extract(response, expression)
             else:
-                self.error_log("变量{},的提取表达式 :{}格式不对！\n".format(name, ext))
-                self.save_extractors(name, ext, '-', '【❌】', '0')
-                self.error_msg = "变量{},的提取表达式 :{}格式不对！\n".format(name, ext)
+                self.error_log("变量{},的提取表达式 :{}格式不对！\n".format(name, expression))
+                self.save_extractors(name, exts_type, expression, '-', '【❌】', '0')
+                self.error_msg = "变量{},的提取表达式 :{}格式不对！\n".format(name, expression)
                 break
-            if ext[0] == RunningTstCasesEnum.ENV_BIG:
+            if env == RunningTstCasesEnum.ENV_BIG:
                 ENV[name] = value
-            elif ext[0] == RunningTstCasesEnum.ENV_LITTLE:
+            elif env == RunningTstCasesEnum.ENV_LITTLE:
                 self.env[name] = value
+
             else:
-                self.error_log("❌错误的变量级别，变量提取表达式中的变量级别只能为ENV，或者env\n".format(ext[1]))
-                self.save_extractors(name, ext, '-', '【❌】','0')
-                self.error_msg = "❌错误的变量级别，变量提取表达式中的变量级别只能为ENV，或者env\n".format(ext[1])
+                self.error_log(f"❌错误的变量级别，{exts_type} 变量提取表达式中的变量级别只能为ENV，或者env\n")
+                self.save_extractors(name, exts_type, expression, '-', '【❌】', '0')
+                self.error_msg = f"❌错误的变量级别，{exts_type} 变量提取表达式中的变量级别只能为ENV，或者env\n"
                 continue
-            self.info_log("✴️提取变量：{},提取方式【{}】,提取表达式:{},提取值为:{}\n".format(name, ext[1], ext[2], value))
-            self.save_extractors(name, ext, value, '【✔】', '1', )
+            self.info_log(f"✴️提取变量：{name},提取方式【{exts_type}】,提取表达式:{expression},提取值为:{value}\n")
+            self.save_extractors(name, exts_type, expression, value, '【✔】', '1')
+
+        # for name, ext in exts.items():
+        #     # 判断提取数据的方式
+        #     if len(ext) == 3 and ext[1] == RunningTstCasesEnum.EXTRACT_JSON_PATH:
+        #         value = self.json_extract(response, ext[2])
+        #     elif len(ext) == 3 and ext[1] == RunningTstCasesEnum.EXTRACT_RE:
+        #         value = self.re_extract(response, ext[2])
+        #     else:
+        #         self.error_log("变量{},的提取表达式 :{}格式不对！\n".format(name, ext))
+        #         self.save_extractors(name, ext, '-', '【❌】', '0')
+        #         self.error_msg = "变量{},的提取表达式 :{}格式不对！\n".format(name, ext)
+        #         break
+        #     if ext[0] == RunningTstCasesEnum.ENV_BIG:
+        #         ENV[name] = value
+        #     elif ext[0] == RunningTstCasesEnum.ENV_LITTLE:
+        #         self.env[name] = value
+        #     else:
+        #         self.error_log("❌错误的变量级别，变量提取表达式中的变量级别只能为ENV，或者env\n".format(ext[1]))
+        #         self.save_extractors(name, ext, '-', '【❌】','0')
+        #         self.error_msg = "❌错误的变量级别，变量提取表达式中的变量级别只能为ENV，或者env\n".format(ext[1])
+        #         continue
+        #     self.info_log("✴️提取变量：{},提取方式【{}】,提取表达式:{},提取值为:{}\n".format(name, ext[1], ext[2], value))
+        #     self.save_extractors(name, ext, value, '【✔】', '1', )
 
     def assertion(self, methods, expected, actual, expect) -> None:
         """
