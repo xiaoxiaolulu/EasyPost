@@ -17,9 +17,3 @@ class ApiRunServer(executor_pb2_grpc.ExecutorService):
         responses = executor_pb2.ApiDocResponse()
         Parser.create_report(response, responses)
         return responses
-
-    async def RunCase(self, request, context):
-        response = run_test(MessageToDict(request))
-        responses = executor_pb2_grpc.ApiDocResponse()
-        Parser.create_report(response, responses)
-        return responses

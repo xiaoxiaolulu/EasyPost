@@ -39,11 +39,3 @@ class ExecutorServiceClient(metaclass=SingletonMeta):
             )
             response = await stub.RunApiDoc(request)
             return response
-
-    async def run_case(self, steps_data):
-        async with ExecutorStub() as stub:
-            request = executor_pb2.CaseStepsRequest(
-                **steps_data
-            )
-            response = await stub.RunCase(request)
-            return response

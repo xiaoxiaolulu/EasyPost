@@ -192,14 +192,14 @@ class CaseDetailView(MagicRetrieveApi):
     permission_classes = [IsAuthenticated]
 
 
-class RunCaseView(AsyncAPIView):
+class RunCaseView(APIView):
     permission_classes = [IsAuthenticated]
 
     @staticmethod
-    async def post(request, **kwargs):
+    def post(request, **kwargs):
 
         try:
-            response = await HttpDao.run_case_steps(request.data)
+            response = HttpDao.run_case_steps(request.data)
             return Response(ResponseStandard.success(data=response))
         except Exception as err:
             return Response(ResponseStandard.failed(msg=str(err)))

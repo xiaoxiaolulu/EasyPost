@@ -55,7 +55,7 @@ if __name__ == '__main__':
         "validators": [
             {
                 "method": "相等",
-                "actual": "http://httpbin.org333/post",
+                "actual": "http://httpbin.org/post",
                 "expect": "$.url"
             }
         ]
@@ -63,3 +63,27 @@ if __name__ == '__main__':
     # responses = run_api(api_data=api_doc)
     # print(responses)
     # print(json.dumps(dict(responses), ensure_ascii=False, indent=2))
+    cases = {
+        "name": "3",
+        "cases": [
+            {
+                "title": "333333",
+                "interface": {
+                    "url": "http://httpbin.org/post",
+                    "name": "333333",
+                    "method": "POST"
+                },
+                "headers": {},
+                "request": {
+                    "data": {}
+                },
+                "setup_script": "",
+                "teardown_script": "",
+                "extract": [],
+                "validators": []
+            }
+        ]
+    }
+    responses = run_test(case_data=cases)
+    print(responses)
+    print(json.dumps(responses, ensure_ascii=False, indent=2))

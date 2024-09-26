@@ -4,19 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="fix: 修复项目icon默认图片显示问题">
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="feat: 用例调试功能微服务化">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/https.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/services/executor.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/services/executor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/services/protos/executor.proto" beforeDir="false" afterPath="$PROJECT_DIR$/api/services/protos/executor.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/services/protos/executor_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/services/protos/executor_pb2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/services/protos/executor_pb2_grpc.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/services/protos/executor_pb2_grpc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/views/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views/https.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../unit-executor/logs/Unit-Executor.log" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/logs/Unit-Executor.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../unit-executor/protos/executor.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/protos/executor.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../unit-executor/protos/executor_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/protos/executor_pb2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../unit-executor/protos/executor_pb2_grpc.py" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/protos/executor_pb2_grpc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unit-executor/protos/executor_pb2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unit-executor/protos/executor_pb2_grpc.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../unit-executor/services/executor.py" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/services/executor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../unit-executor/unitrunner/test/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/unitrunner/test/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unit-executor/utils/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/utils/parser.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -543,23 +547,7 @@
       <workItem from="1725003165423" duration="3098000" />
       <workItem from="1726207726818" duration="19670000" />
       <workItem from="1726798058849" duration="25949000" />
-      <workItem from="1727230274850" duration="16562000" />
-    </task>
-    <task id="LOCAL-00411" summary="Changes made to the code">
-      <option name="closed" value="true" />
-      <created>1715853358262</created>
-      <option name="number" value="00411" />
-      <option name="presentableId" value="LOCAL-00411" />
-      <option name="project" value="LOCAL" />
-      <updated>1715853358262</updated>
-    </task>
-    <task id="LOCAL-00412" summary="&quot;Remove iconfont files and components&quot;">
-      <option name="closed" value="true" />
-      <created>1715915645980</created>
-      <option name="number" value="00412" />
-      <option name="presentableId" value="LOCAL-00412" />
-      <option name="project" value="LOCAL" />
-      <updated>1715915645980</updated>
+      <workItem from="1727230274850" duration="21281000" />
     </task>
     <task id="LOCAL-00413" summary="The `SQLAlchemyJobStore` class is a subclass of `apscheduler.jobstores">
       <option name="closed" value="true" />
@@ -937,7 +925,23 @@
       <option name="project" value="LOCAL" />
       <updated>1727317446270</updated>
     </task>
-    <option name="localTasksCounter" value="460" />
+    <task id="LOCAL-00460" summary="feat: 用例调试功能微服务化">
+      <option name="closed" value="true" />
+      <created>1727329347070</created>
+      <option name="number" value="00460" />
+      <option name="presentableId" value="LOCAL-00460" />
+      <option name="project" value="LOCAL" />
+      <updated>1727329347070</updated>
+    </task>
+    <task id="LOCAL-00461" summary="feat: 用例调试功能微服务化">
+      <option name="closed" value="true" />
+      <created>1727329385470</created>
+      <option name="number" value="00461" />
+      <option name="presentableId" value="LOCAL-00461" />
+      <option name="project" value="LOCAL" />
+      <updated>1727329385470</updated>
+    </task>
+    <option name="localTasksCounter" value="462" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -967,7 +971,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail model, added ellipsis" />
     <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail model, added ellipsis utility" />
     <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail model, added ellipsis utility," />
     <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail model, added ellipsis utility, and" />
@@ -992,7 +995,8 @@
     <MESSAGE value="fix: 修复接口测试详情页错误" />
     <MESSAGE value="fix: 修复接口测试详情优先级字段缺失" />
     <MESSAGE value="fix: 修复项目icon默认图片显示问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: 修复项目icon默认图片显示问题" />
+    <MESSAGE value="feat: 用例调试功能微服务化" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 用例调试功能微服务化" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
