@@ -68,7 +68,7 @@ class Project(Model):
                      default=ProjectTypeChoices.WEB)
     private = CharField(max_length=50, verbose_name=_('Project private'), choices=ProjectOwnerShipChoices,
                         default=ProjectOwnerShipChoices.PUBLIC)
-    avatar = ImageField(upload_to=MEDIA_ROOT, default=path.join(MEDIA_ROOT, 'default.png'), null=True, blank=True,
+    avatar = ImageField(upload_to=MEDIA_ROOT, default='avatar/default.png', null=True, blank=True,
                         verbose_name=_('Project Avatar'))
     desc = TextField(null=True, blank=True, verbose_name=_('Project Desc'))
     create_time = DateTimeField(auto_now_add=True, verbose_name=_('Project CreateTime'))

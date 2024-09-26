@@ -19,7 +19,7 @@
           <el-icon>
             <Plus/>
           </el-icon>
-          新建接口
+          新建用例
         </el-button>
       </div>
       <div class="table-inner">
