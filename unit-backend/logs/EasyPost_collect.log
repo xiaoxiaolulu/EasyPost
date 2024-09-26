@@ -3564,3 +3564,9 @@ Traceback (most recent call last):
 django.core.exceptions.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
 WARNING  [2024-09-26 10:23:31,136] [58b782256439499585a4469d4c4848ba] django.request: Not Found: /media/C:/Users/86135/Desktop/EasyPost/unit-backend/api/templates/media/default.png
 WARNING  [2024-09-26 10:23:31,152] [e586f3be2c734cd4a5dad6a1aaecdc5f] django.request: Bad Request: /media/C:/Users/86135/Desktop/EasyPost/backend/api/templates/media/default.png
+INFO     [2024-09-26 10:40:01,373] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\services\protos\executor_pb2_grpc.py changed, reloading.
+INFO     [2024-09-26 10:40:01,427] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\services\protos\executor_pb2.py changed, reloading.
+INFO     [2024-09-26 10:40:01,695] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\services\protos\executor_pb2_grpc.py changed, reloading.
+INFO     [2024-09-26 10:40:02,821] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-26 10:40:02,824] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-26 10:40:02,972] [none] django.utils.autoreload: Watching for file changes with StatReloader

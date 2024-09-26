@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="fix: 修复接口测试详情优先级字段缺失">
-      <change beforePath="$PROJECT_DIR$/api/models/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/project.py" afterDir="false" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="fix: 修复项目icon默认图片显示问题">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/services/protos/executor.proto" beforeDir="false" afterPath="$PROJECT_DIR$/api/services/protos/executor.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/services/protos/executor_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/services/protos/executor_pb2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/https/case/components/Table.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/case/components/Table.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unit-executor/protos/executor.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/protos/executor.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unit-executor/protos/executor_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/protos/executor_pb2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -534,15 +537,7 @@
       <workItem from="1725003165423" duration="3098000" />
       <workItem from="1726207726818" duration="19670000" />
       <workItem from="1726798058849" duration="25949000" />
-      <workItem from="1727230274850" duration="13587000" />
-    </task>
-    <task id="LOCAL-00410" summary="Delete system router, add menuList API, and update user store.">
-      <option name="closed" value="true" />
-      <created>1715849805458</created>
-      <option name="number" value="00410" />
-      <option name="presentableId" value="LOCAL-00410" />
-      <option name="project" value="LOCAL" />
-      <updated>1715849805458</updated>
+      <workItem from="1727230274850" duration="14908000" />
     </task>
     <task id="LOCAL-00411" summary="Changes made to the code">
       <option name="closed" value="true" />
@@ -928,7 +923,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727259278112</updated>
     </task>
-    <option name="localTasksCounter" value="459" />
+    <task id="LOCAL-00459" summary="fix: 修复项目icon默认图片显示问题">
+      <option name="closed" value="true" />
+      <created>1727317446270</created>
+      <option name="number" value="00459" />
+      <option name="presentableId" value="LOCAL-00459" />
+      <option name="project" value="LOCAL" />
+      <updated>1727317446270</updated>
+    </task>
+    <option name="localTasksCounter" value="460" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -958,7 +961,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail model, added ellips" />
     <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail model, added ellipsis" />
     <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail model, added ellipsis utility" />
     <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail model, added ellipsis utility," />
@@ -983,7 +985,8 @@
     <MESSAGE value="fix: 修复接口测试列表页面报错信息" />
     <MESSAGE value="fix: 修复接口测试详情页错误" />
     <MESSAGE value="fix: 修复接口测试详情优先级字段缺失" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: 修复接口测试详情优先级字段缺失" />
+    <MESSAGE value="fix: 修复项目icon默认图片显示问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: 修复项目icon默认图片显示问题" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

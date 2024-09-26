@@ -25,18 +25,27 @@ message Extract {
   string env = 4;
 }
 
+message Parameters {
+  string count = 1;
+  string key_variable = 2;
+  string operator = 3;
+  string value_variable = 4;
+  string timeout = 5;
+}
 
 message ApiDocRequest {
-  string mode = 1;
-  string title = 2;
-  Interface interface = 3;
-  map<string, string> headers = 4;
-  Request request = 5;
-  string setup_script = 6;
-  string teardown_script = 7;
-  repeated Extract extract = 8;
-  repeated Validators validators = 9;
-  repeated ApiDocRequest children = 10;
+  string type = 1;
+  string mode = 2;
+  string title = 3;
+  Interface interface = 4;
+  map<string, string> headers = 5;
+  Request request = 6;
+  string setup_script = 7;
+  string teardown_script = 8;
+  repeated Extract extract = 9;
+  repeated Validators validators = 10;
+  repeated ApiDocRequest children = 11;
+  Parameters parameters = 12;
 }
 
 message ValidateExtractor {
