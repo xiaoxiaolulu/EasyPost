@@ -7,7 +7,6 @@ from typing import (
     Any,
     List
 )
-
 from channels.db import database_sync_to_async
 from django.db.models import Q
 from django.forms import model_to_dict
