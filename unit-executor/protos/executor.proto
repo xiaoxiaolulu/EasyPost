@@ -48,6 +48,11 @@ message ApiDocRequest {
   Parameters parameters = 12;
 }
 
+message CaseStepsRequest {
+  string name = 1;
+  repeated ApiDocRequest step_data = 2;
+}
+
 message ValidateExtractor {
   string expected = 1;
   string methods = 2;
@@ -117,4 +122,5 @@ message ApiDocResponse{
 
 service ExecutorService{
   rpc RunApiDoc(ApiDocRequest) returns (ApiDocResponse);
+  rpc RunCase(CaseStepsRequest) returns (ApiDocResponse);
 }

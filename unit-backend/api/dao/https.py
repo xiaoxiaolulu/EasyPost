@@ -403,7 +403,7 @@ class HttpDao:
             raise Exception("解析测试用例失败 ❌")
 
     @classmethod
-    def run_case_steps(cls, data: dict):
+    async def run_case_steps(cls, data: dict):
         """
         Runs a test case based on the provided data and associated step data.
 
@@ -417,12 +417,13 @@ class HttpDao:
             Exception: If an error occurs during the test case run.
         """
 
+        executor_service = ExecutorServiceClient()
         try:
             runner = HandelTestData()
             steps = data.get('step_data', [])
             name = data.get('name', 'Demo')
             case_data = runner.get_case_template(steps, name)
-            result = run_test(case_data)
+            result = await executor_service.run_case(case_data)
             return result
         except Exception as e:
             logger.debug(

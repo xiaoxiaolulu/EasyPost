@@ -44,6 +44,11 @@ class ExecutorServiceStub(object):
                 request_serializer=executor__pb2.ApiDocRequest.SerializeToString,
                 response_deserializer=executor__pb2.ApiDocResponse.FromString,
                 _registered_method=True)
+        self.RunCase = channel.unary_unary(
+                '/ExecutorService/RunCase',
+                request_serializer=executor__pb2.CaseStepsRequest.SerializeToString,
+                response_deserializer=executor__pb2.ApiDocResponse.FromString,
+                _registered_method=True)
 
 
 class ExecutorServiceServicer(object):
@@ -55,12 +60,23 @@ class ExecutorServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def RunCase(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_ExecutorServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'RunApiDoc': grpc.unary_unary_rpc_method_handler(
                     servicer.RunApiDoc,
                     request_deserializer=executor__pb2.ApiDocRequest.FromString,
+                    response_serializer=executor__pb2.ApiDocResponse.SerializeToString,
+            ),
+            'RunCase': grpc.unary_unary_rpc_method_handler(
+                    servicer.RunCase,
+                    request_deserializer=executor__pb2.CaseStepsRequest.FromString,
                     response_serializer=executor__pb2.ApiDocResponse.SerializeToString,
             ),
     }
@@ -90,6 +106,33 @@ class ExecutorService(object):
             target,
             '/ExecutorService/RunApiDoc',
             executor__pb2.ApiDocRequest.SerializeToString,
+            executor__pb2.ApiDocResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def RunCase(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/ExecutorService/RunCase',
+            executor__pb2.CaseStepsRequest.SerializeToString,
             executor__pb2.ApiDocResponse.FromString,
             options,
             channel_credentials,
