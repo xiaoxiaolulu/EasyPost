@@ -137,4 +137,4 @@ class Parser:
             logger.debug(
                 f"🏓生成测试报告失败 -> {err}"
             )
-            raise Exception(f"{err} ❌")
+            raise Exception(f"生成测试报告失败 -> {err} ❌")

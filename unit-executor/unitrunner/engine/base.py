@@ -289,7 +289,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         else:
             cls.session = requests.Session()
 
-    def step(self, data) -> None:
+    def step(self, data):
         """
         Executes a single test step.
 
@@ -314,7 +314,6 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         # 断言hook_gen
         checks = data.get('validators')
         self.validators(response, checks)
-
         # 执行后置脚本
         self.__run_teardown_script(response)
 
@@ -453,7 +452,6 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         except Exception as error:
             self.error_msg = f"发送请求失败, 错误信息如下 {str(error)}"
             self.error_log(f"发送请求失败, 错误信息如下 {str(error)}")
-            raise
 
     def update_request_info(self, response: Response, client: HttpHandler):
         """
@@ -469,6 +467,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
         Returns:
             None
         """
+
         self.url = response.request.url
         self.method = response.request.method
         self.status_code = response.status_code
@@ -570,8 +569,8 @@ class BaseTest(unittest.TestCase, CaseRunLog):
                 attr = res2.group(1)
                 value = ENV.get(attr) if self.env.get(attr) is None else self.env.get(attr)
                 if value is None:
-                    self.error_msg = str('❌变量引用错误:\n{}中的变量{},在当前运行环境中未找到'.format(data, attr))
-                    raise ValueError('❌变量引用错误:\n{}中的变量{},在当前运行环境中未找到'.format(data, attr))
+                    self.error_msg = str(f'❌变量引用错误:\n{data}中的变量{attr},在当前运行环境中未找到')
+                    raise ValueError(f'❌变量引用错误:\n{data}中的变量{attr},在当前运行环境中未找到')
                 if item == data:
                     return value
                 data = data.replace(item, str(value))
@@ -584,12 +583,9 @@ class BaseTest(unittest.TestCase, CaseRunLog):
                 attr = res2.group(1)
                 value = ENV.get(attr) if self.env.get(attr) is None else self.env.get(attr)
                 if value is None:
-                    self.error_msg = str('❌变量引用错误：\n{}\n中的变量{},在当前运行环境中未找到'.format(
-                            json.dumps(old_data, ensure_ascii=False, indent=2), attr))
+                    self.error_msg = str(f'❌变量引用错误：\n{str(old_data)}\n中的变量{attr},在当前运行环境中未找到')
                     raise exceptions.VariableReferencesException(
-                        '❌变量引用错误：\n{}\n中的变量{},在当前运行环境中未找到'.format(
-                            json.dumps(old_data, ensure_ascii=False, indent=2), attr)
-                    )
+                        f'❌变量引用错误：\n{str(old_data)}\n中的变量{attr},在当前运行环境中未找到')
                 if isinstance(value, Number):
                     s = data.find(item)
                     dd = data[s - 1:s + len(item) + 1]
@@ -656,7 +652,8 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             Any: The extracted data.
         """
         exts = case.get('extract') or getattr(self, 'extract', None)  # noqa
-        if not (isinstance(exts, list) and exts): return
+        if not (isinstance(exts, list) and exts):
+            return
         self.info_log("从响应结果中开始提取数据\n")
 
         client = HttpHandler()
@@ -678,7 +675,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             else:
                 self.error_log("变量{},的提取表达式 :{}格式不对！\n".format(name, expression))
                 self.save_extractors(name, exts_type, expression, '-', '【❌】', '0')
-                self.error_msg = "变量{},的提取表达式 :{}格式不对！\n".format(name, expression)
+                self.error_msg = f"变量{name},的提取表达式 :{expression}格式不对！\n"
                 break
             if env == RunningTstCasesEnum.ENV_BIG:
                 ENV[name] = value
@@ -746,13 +743,13 @@ class BaseTest(unittest.TestCase, CaseRunLog):
                 self.warning_log('❌断言失败!\n')
                 self.error_msg = f"断言失败, 断言方式{methods}, 断言表达式{expect}, 预期结果{expected}, 实际结果{actual}"
                 self.save_validators(methods, expected, actual, '【❌】', '0', expect)
-                raise self.failureException(err)
+                raise self.failureException(f'❌断言失败! {str(err)}\n')
             else:
                 self.info_log("断言通过!\n")
                 self.save_validators(methods, expected, actual, '【✔】', '1', expect)
         else:
-            self.error_msg = '❌断言比较方法{},不支持!'.format(methods)
-            raise exceptions.AssertException('❌断言比较方法{},不支持!'.format(methods))
+            self.error_msg = f'❌断言比较方法{methods},不支持!'
+            raise exceptions.AssertException(f'❌断言比较方法{methods},不支持!')
 
     def __run_script(ep, data) -> None:  # noqa
         """
@@ -777,7 +774,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
             except exceptions.RequestPreconditionException as e:
                 ep.error_log('❌前置脚本执行错误: {}\n'.format(e))
                 delattr(ep, 'hook_gen')
-                raise
+                raise Exception('❌前置脚本执行错误: {}\n'.format(e))
 
         response = yield  # noqa
         teardown_script = data.get('teardown_script', '')
@@ -786,7 +783,7 @@ class BaseTest(unittest.TestCase, CaseRunLog):
                 exec(teardown_script)
             except exceptions.ResponsePostConditionException as e:
                 ep.error_log('❌后置脚本执行错误: {}\n'.format(e))
-                raise
+                raise Exception('❌后置脚本执行错误: {}\n'.format(e))
         yield
 
     def __run_teardown_script(self, response) -> None:

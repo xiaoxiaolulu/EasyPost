@@ -39,6 +39,11 @@ message ApiDocRequest {
   repeated ApiDocRequest children = 10;
 }
 
+message CaseRequest {
+  string name = 1;
+  repeated ApiDocRequest cases = 2;
+}
+
 message ValidateExtractor {
   string expected = 1;
   string methods = 2;
@@ -92,7 +97,7 @@ message ClassList{
   string state = 8;
 }
 
-message ApiDocResponse{
+message ExecutorResponse{
   int32 all = 1;
   int32 success = 2;
   int32 error = 3;
@@ -107,5 +112,6 @@ message ApiDocResponse{
 }
 
 service ExecutorService{
-  rpc RunApiDoc(ApiDocRequest) returns (ApiDocResponse);
+  rpc RunApiDoc(ApiDocRequest) returns (ExecutorResponse);
+  rpc RunCase(CaseRequest) returns (ExecutorResponse);
 }

@@ -330,9 +330,9 @@ def type_match(check_value: typing.Any, expect_value: typing.Any, message: str =
             try:
                 return __builtins__[name]
             except KeyError:
-                raise ValueError(name)
+                raise ValueError(f"ValueError Asserts that a value has the expected type {name}")
         else:
-            raise ValueError(name)
+            raise ValueError(f"ValueError Asserts that a value has the expected type {name}")
 
     if expect_value in ["None", "NoneType", None]:
         assert check_value is None, message

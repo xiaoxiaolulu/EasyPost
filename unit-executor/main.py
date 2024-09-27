@@ -9,6 +9,7 @@ from register.consul import ConsulRegister
 from services.executor import ApiRunServer
 from protos import executor_pb2_grpc
 import asyncio
+from services.interceptors import ExecutorInterceptor
 from utils.logger import logger
 
 
@@ -28,6 +29,7 @@ def get_ip_port() -> Tuple[str, int]:
 async def main():
     ip, port = get_ip_port()
     server = grpc.aio.server()
+    server = grpc.aio.server(interceptors=[ExecutorInterceptor()])
     executor_pb2_grpc.add_ExecutorServiceServicer_to_server(ApiRunServer(), server)
     server.add_insecure_port(f"{ip}:{port}")
 

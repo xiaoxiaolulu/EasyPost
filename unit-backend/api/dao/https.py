@@ -3,6 +3,7 @@ DESCRIPTION：接口测试数据访问对象
 :Created by Null.
 """
 import json
+import sys
 from typing import (
     Any,
     List
@@ -37,6 +38,9 @@ from utils.trees import (
     collections_directory_id,
     get_relation_tree
 )
+
+
+executor_service = ExecutorServiceClient()
 
 
 class HttpDao:
@@ -236,7 +240,6 @@ class HttpDao:
         Raises:
             Exception: If an error occurs during the API test run.
         """
-        executor_service = ExecutorServiceClient()
         try:
             api = HandelTestData(api)
             api_data = api.get_api_template()
@@ -403,7 +406,7 @@ class HttpDao:
             raise Exception("解析测试用例失败 ❌")
 
     @classmethod
-    def run_case_steps(cls, data: dict):
+    async def run_case_steps(cls, data: dict):
         """
         Runs a test case based on the provided data and associated step data.
 
@@ -416,13 +419,12 @@ class HttpDao:
         Raises:
             Exception: If an error occurs during the test case run.
         """
-
         try:
             runner = HandelTestData()
             steps = data.get('step_data', [])
             name = data.get('name', 'Demo')
             case_data = runner.get_case_template(steps, name)
-            result = run_test(case_data)
+            result = await executor_service.run_case(case_data)
             return result
         except Exception as e:
             logger.debug(
