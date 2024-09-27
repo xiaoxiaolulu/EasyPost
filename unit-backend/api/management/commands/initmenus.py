@@ -42,7 +42,7 @@ class Command(BaseCommand):
             name='caseDetail',
             path='/case/detail',
             component="/https/case/components/detail.vue",
-            title="接口详情",
+            title="用例详情",
             hidden=True,
             icon="ElementPlus",
             parent_id=http_main_menu.id

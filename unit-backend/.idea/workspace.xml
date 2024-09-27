@@ -4,26 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="fix: 回滚">
-      <change afterPath="$PROJECT_DIR$/../unit-executor/protos/executor_pb2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../unit-executor/protos/executor_pb2_grpc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../unit-executor/services/interceptors.py" afterDir="false" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="fix: 修复用例执行返回体错误问题">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/dao/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/https.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/management/commands/initmenus.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/management/commands/initmenus.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/services/executor.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/services/executor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/services/protos/executor.proto" beforeDir="false" afterPath="$PROJECT_DIR$/api/services/protos/executor.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/services/protos/executor_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/services/protos/executor_pb2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/services/protos/executor_pb2_grpc.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/services/protos/executor_pb2_grpc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/views/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views/https.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../unit-executor/logs/Unit-Executor.log" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/logs/Unit-Executor.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../unit-executor/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../unit-executor/protos/executor.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/protos/executor.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../unit-executor/services/executor.py" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/services/executor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../unit-executor/unitrunner/builitin/compares.py" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/unitrunner/builitin/compares.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../unit-executor/unitrunner/engine/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/unitrunner/engine/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../unit-executor/utils/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/utils/parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/https/case/components/detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/case/components/detail.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +149,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/86135/Desktop/EasyPost/unit-backend/api/services/protos&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/86135/Desktop/EasyPost/unit-backend/api/services&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -179,9 +169,9 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\86135\Desktop\EasyPost\unit-backend\api\services" />
       <recent name="C:\Users\86135\Desktop\EasyPost\unit-backend\api\services\protos" />
       <recent name="C:\Users\86135\Desktop\EasyPost\unit-backend\utils" />
-      <recent name="C:\Users\86135\Desktop\EasyPost\unit-backend\api\services" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api" />
     </key>
@@ -193,7 +183,7 @@
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\websocket" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.__init__">
+  <component name="RunManager" selected="Python.initmenus">
     <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <option name="ENV_FILES" value="" />
@@ -286,7 +276,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="t" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="initmenus" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -295,12 +285,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api/management/commands" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/t.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/management/commands/initmenus.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -337,19 +327,19 @@
     </configuration>
     <list>
       <item itemvalue="Django Server.backend" />
+      <item itemvalue="Python.initmenus" />
       <item itemvalue="Python.__init__" />
       <item itemvalue="Python.engine" />
       <item itemvalue="Python.executor" />
       <item itemvalue="Python.grpconsul" />
-      <item itemvalue="Python.t" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.initmenus" />
         <item itemvalue="Python.__init__" />
         <item itemvalue="Python.executor" />
         <item itemvalue="Python.grpconsul" />
         <item itemvalue="Python.engine" />
-        <item itemvalue="Python.t" />
       </list>
     </recent_temporary>
   </component>
@@ -550,15 +540,8 @@
       <workItem from="1725003165423" duration="3098000" />
       <workItem from="1726207726818" duration="19670000" />
       <workItem from="1726798058849" duration="25949000" />
-      <workItem from="1727230274850" duration="33682000" />
-    </task>
-    <task id="LOCAL-00414" summary="Updated SQLAlchemyJobStore and added new fields to the job history table.">
-      <option name="closed" value="true" />
-      <created>1716194698185</created>
-      <option name="number" value="00414" />
-      <option name="presentableId" value="LOCAL-00414" />
-      <option name="project" value="LOCAL" />
-      <updated>1716194698185</updated>
+      <workItem from="1727230274850" duration="39175000" />
+      <workItem from="1727423396190" duration="1283000" />
     </task>
     <task id="LOCAL-00415" summary="Added ApschedulerJobs model and enabled test_task in scheduler.">
       <option name="closed" value="true" />
@@ -944,7 +927,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727335542159</updated>
     </task>
-    <option name="localTasksCounter" value="463" />
+    <task id="LOCAL-00463" summary="fix: 修复用例执行返回体错误问题">
+      <option name="closed" value="true" />
+      <created>1727417802331</created>
+      <option name="number" value="00463" />
+      <option name="presentableId" value="LOCAL-00463" />
+      <option name="project" value="LOCAL" />
+      <updated>1727417802331</updated>
+    </task>
+    <option name="localTasksCounter" value="464" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -974,7 +965,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail model, added ellipsis utility," />
     <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail model, added ellipsis utility, and" />
     <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail model, added ellipsis utility, and modified" />
     <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail model, added ellipsis utility, and modified related" />
@@ -999,7 +989,8 @@
     <MESSAGE value="fix: 修复项目icon默认图片显示问题" />
     <MESSAGE value="feat: 用例调试功能微服务化" />
     <MESSAGE value="fix: 回滚" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: 回滚" />
+    <MESSAGE value="fix: 修复用例执行返回体错误问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: 修复用例执行返回体错误问题" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1035,8 +1026,8 @@
     <SUITE FILE_PATH="coverage/backend$__init____3_.coverage" NAME="__init__ (3) Coverage Results" MODIFIED="1709112766835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/dao" />
     <SUITE FILE_PATH="coverage/backend$Test__api_tests_test_user_list_TestUserListViewSet.coverage" NAME="Test: api.tests.test_user_list.TestUserListViewSet Coverage Results" MODIFIED="1712038591853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/backend$setting.coverage" NAME="setting Coverage Results" MODIFIED="1712038164027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/dao" />
-    <SUITE FILE_PATH="coverage/backend$manage.coverage" NAME="manage Coverage Results" MODIFIED="1711526108828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/backend$main.coverage" NAME="main Coverage Results" MODIFIED="1706091376465" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/celery_work" />
+    <SUITE FILE_PATH="coverage/backend$manage.coverage" NAME="manage Coverage Results" MODIFIED="1711526108828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/backend$bomb.coverage" NAME="bomb Coverage Results" MODIFIED="1716530569659" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/unitrunner/engine" />
     <SUITE FILE_PATH="coverage/backend$websocket.coverage" NAME="websocket Coverage Results" MODIFIED="1715329332910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/tests" />
     <SUITE FILE_PATH="coverage/backend$decorator.coverage" NAME="decorator Coverage Results" MODIFIED="1706064703211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
@@ -1057,6 +1048,7 @@
     <SUITE FILE_PATH="coverage/backend$Test__api_tests_test_project_destory_ProjectDestroyViewSetTests.coverage" NAME="Test: api.tests.test_project_destory.ProjectDestroyViewSetTests Coverage Results" MODIFIED="1711592068338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/http_handler_py$qy.coverage" NAME="qy Coverage Results" MODIFIED="1697537050749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/msg" />
     <SUITE FILE_PATH="coverage/http_handler_py$global_func.coverage" NAME="global_func Coverage Results" MODIFIED="1699843223150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/unit_backend$initmenus.coverage" NAME="initmenus Coverage Results" MODIFIED="1727424063592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/management/commands" />
     <SUITE FILE_PATH="coverage/backend$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1707391988545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/backend$qy.coverage" NAME="qy Coverage Results" MODIFIED="1713753970534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/unitrunner/msg" />
     <SUITE FILE_PATH="coverage/backend$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1718701260377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/dao" />

@@ -1,3 +1,5 @@
+import asyncio
+import time
 import grpc
 from api.services import ServiceConsul
 from api.services.protos import (
@@ -41,7 +43,6 @@ class ExecutorServiceClient(metaclass=SingletonMeta):
             return response
 
     async def run_case(self, case_data):
-
         async with ExecutorStub() as stub:
             request = executor_pb2.CaseRequest(
                 **case_data

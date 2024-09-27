@@ -12,6 +12,7 @@ from typing import (
 from channels.db import database_sync_to_async
 from django.db.models import Q
 from django.forms import model_to_dict
+from api.dao import executor_service_client
 from api.dao.report import ReportDao
 from api.emus import treesEnum
 from api.emus.HttpEnum import (
@@ -26,7 +27,6 @@ from api.models.https import (
     ApiCopy
 )
 from api.models.project import Project
-from api.services.executor import ExecutorServiceClient
 from unitrunner.engine.base import (
     run_test,
     run_api
@@ -38,9 +38,6 @@ from utils.trees import (
     collections_directory_id,
     get_relation_tree
 )
-
-
-executor_service = ExecutorServiceClient()
 
 
 class HttpDao:
@@ -243,7 +240,7 @@ class HttpDao:
         try:
             api = HandelTestData(api)
             api_data = api.get_api_template()
-            result = await executor_service.run_api_doc(api_data)
+            result = await executor_service_client.run_api_doc(api_data)
             return result
         except Exception as err:
             logger.debug(
@@ -424,7 +421,7 @@ class HttpDao:
             steps = data.get('step_data', [])
             name = data.get('name', 'Demo')
             case_data = runner.get_case_template(steps, name)
-            result = await executor_service.run_case(case_data)
+            result = await executor_service_client.run_case(case_data)
             return result
         except Exception as e:
             logger.debug(

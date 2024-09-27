@@ -3,62 +3,20 @@
     <div class="header-container">
       <div class="card-head-title">
         <div class="card-description">
-          <span class="el-icon-back" @click="goBack">
-            <el-icon>
-              <component :is="Back"/>
-            </el-icon>
-          </span>
-          <span class="page-header-heading-title">
-            {{ route.query.editType === 'update' ? "更新" : "新增" }}
-          </span>
+          <CardHeader
+            style="margin: 5px 0;"
+            @back="goBack"
+          >
+            <template #content>
+              <span style="padding-right: 10px;">{{ route.query.editType === 'update' ? "更新" : "新增" }}</span>
+            </template>
+          </CardHeader>
         </div>
       </div>
     </div>
     <div class="container">
       <el-row :gutter="12">
-        <el-col :span="8">
-          <el-card style="height:100%;min-height: 600px;overflow:scroll;">
-            <template #header>
-              <div>
-                <span style="margin-right:8px;color: #7a8b9a"><el-icon><component :is="Odometer"/></el-icon></span>
-                <span style="font-size: 18px; color: #7a8b9a">用例配置</span>
-              </div>
-            </template>
-            <div>
-              <el-form :inline="true" autoComplete="on" :model="state.form" :rules="rules" ref="ruleFormRef"
-                       label-width="auto"
-                       label-position="top"
-                       size="small"
-              >
-                <el-form-item label="用例名称：" prop="name" :required="true">
-                  <el-input v-model.trim="state.form.name"
-                            style="width: 100%;"
-                            size="small"
-                            placeholder="请输入用例名称"></el-input>
-                </el-form-item>
-                <el-form-item label="优先级：" prop="priority" :required="true">
-                  <el-select v-model="state.form.priority" filterable placeholder="请选择接口优先级" size="small">
-                    <el-option
-                        v-for="item in priority"
-                        :key="item.value"
-                        :label="item.label"
-                        :value="item.value">
-                    </el-option>
-                  </el-select>
-                </el-form-item>
-                <el-form-item label="描述：" prop="">
-                  <el-input v-model.trim="state.form.remarks"
-                            style="width: 100%;"
-                            size="small"
-                            placeholder="请输入用例描述"></el-input>
-                </el-form-item>
-              </el-form>
-              <el-button type="success" @click="debug(ruleFormRef)" size="small">调试</el-button>
-              <el-button type="primary" @click="onSureClick(ruleFormRef)" size="small">保存</el-button>
-            </div>
-          </el-card>
-        </el-col>
-        <el-col :span="16">
+        <el-col :span="18">
           <el-card style="height:100%;min-height: 600px;overflow:scroll;">
             <template #header>
               <div>
@@ -68,18 +26,18 @@
             <div>
               <div style="margin-top: 15px">
                 <el-table
-                    :data="tableData"
-                    :header-cell-style="{ background: '#F2F3F8', color: '#1D2129' }"
-                    style="width: 100%"
-                    ref="dragTable"
-                    row-key="id"
-                    :show-header="false"
+                  :data="tableData"
+                  :header-cell-style="{ background: '#F2F3F8', color: '#1D2129' }"
+                  style="width: 100%"
+                  ref="dragTable"
+                  row-key="id"
+                  :show-header="false"
                 >
                   <el-table-column width="30">
                     <template #default>
                       <span
-                          :class="getStepTypeInfo('api','icon')" class="fab-icons move"
-                          :style="{color:getStepTypeInfo('api','color')}"
+                        :class="getStepTypeInfo('api','icon')" class="fab-icons move"
+                        :style="{color:getStepTypeInfo('api','color')}"
                       ></span>
                     </template>
                   </el-table-column>
@@ -130,13 +88,59 @@
               </div>
             </div>
             <step
-                ref="stepControllerRef"
-                use_type="case"
-                style="margin-bottom: 10px"
-                v-model="state.form.step_data"
-                @change="changeAction"
+              ref="stepControllerRef"
+              use_type="case"
+              style="margin-bottom: 10px"
+              v-model="state.form.step_data"
+              @change="changeAction"
             >
             </step>
+          </el-card>
+        </el-col>
+        <el-col :span="6">
+          <el-card style="height:100%;min-height: 600px;overflow:scroll;">
+            <template #header>
+              <div>
+                <span style="margin-right:8px;color: #7a8b9a"><el-icon><component :is="Odometer"/></el-icon></span>
+                <span style="font-size: 18px; color: #7a8b9a">用例配置</span>
+              </div>
+            </template>
+            <div>
+              <el-form
+                  autoComplete="on"
+                  :model="state.form"
+                  :rules="rules"
+                  ref="ruleFormRef"
+                  label-position="right"
+                  label-width="auto"
+                  size="small"
+              >
+                <el-form-item label="用例名称：" prop="name" :required="true">
+                  <el-input v-model.trim="state.form.name"
+                            style="width: 100%;"
+                            size="small"
+                            placeholder="请输入用例名称"></el-input>
+                </el-form-item>
+                <el-form-item label="优先级：" prop="priority" :required="true">
+                  <el-select v-model="state.form.priority" filterable placeholder="请选择接口优先级" size="small">
+                    <el-option
+                        v-for="item in priority"
+                        :key="item.value"
+                        :label="item.label"
+                        :value="item.value">
+                    </el-option>
+                  </el-select>
+                </el-form-item>
+                <el-form-item label="用例描述：" prop="">
+                  <el-input v-model.trim="state.form.remarks"
+                            style="width: 100%;"
+                            size="small"
+                            placeholder="请输入用例描述"></el-input>
+                </el-form-item>
+              </el-form>
+              <el-button type="success" @click="debug(ruleFormRef)" size="small" :loading="loading">调试</el-button>
+              <el-button type="primary" @click="onSureClick(ruleFormRef)" size="small">保存</el-button>
+            </div>
           </el-card>
         </el-col>
       </el-row>
@@ -154,6 +158,7 @@ import {showErrMessage} from "@/utils/element";
 import {getStepTypesByUse, getStepTypeInfo, parseTime} from '@/utils/index'
 import Step from "@/views/https/case/components/step.vue";
 import Sortable from "sortablejs"
+import CardHeader from "@/components/CardHeader/index.vue";
 
 const route = useRoute()
 const router = useRouter()
@@ -267,6 +272,7 @@ const debug = (formName: FormInstance | undefined) => {
   if (!formName) return
   formName.validate(async (valid) => {
     if (valid) {
+      loading.value = true
       try{
         let caseData = {
           name: state.form.name,
@@ -284,7 +290,9 @@ const debug = (formName: FormInstance | undefined) => {
         // responseReport.value = true
         // toResponse()
         showErrMessage(code.toString(), msg)
+        loading.value = false
       } catch (e) {
+        loading.value = false
         console.log(e)
       }
 
