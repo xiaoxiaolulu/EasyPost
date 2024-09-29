@@ -239,12 +239,18 @@ import RequestHeaders from "@/views/https/api/components/requestHeaders.vue";
 import Extract from "@/views/https/api/components/extract.vue";
 import Validator from "@/views/https/api/components/validator.vue";
 import ApiScript from "@/views/https/api/components/apiScript.vue";
-import {saveOrUpdate, runApi, getHttpDetail, httpSnapshot} from "@/api/http";
+import {saveOrUpdate, runApi, getHttpDetail, httpSnapshot, getCaseStepDetail} from "@/api/http";
 import {showErrMessage} from "@/utils/element";
 import ResponseReport from "@/views/https/api/components/responseReport.vue";
 import CardHeader from "@/components/CardHeader/index.vue";
 
 const props = defineProps({
+  api_id: {
+    type: [String, Number],
+    default: () => {
+      return null;
+    },
+  },
   isView: {
     type: Boolean,
     default: () => {
@@ -554,18 +560,34 @@ const Snapshot = () => {
 
 const initApi = () => {
 
-  // let api_id = route.query.id
-  // if(api_id){
-  //   state.api_id = api_id
-  // }
-  let api_id = 1145
-  console.log("api_id------>", api_id)
-  if (api_id) {
+  if(route.query.httpId) {
+    let api_id = route.query.httpId
+    state.api_id = api_id
+    console.log("api_id------>", api_id)
     getHttpDetail({id: api_id}).then((response) => {
       const {data, code, msg} = response.data
-      console.log("测试")
-      console.log(data)
-      console.log("测试")
+      ruleForm.url = data.url
+      ruleForm.method = data.method
+      ruleForm.name = data.name
+      ruleForm.status = data.status
+      ruleForm.remarks = data.desc
+      ruleForm.priority = data.priority
+      RequestHeadersRef.value.setData(eval(data.headers))
+      RequestQueryRef.value.setData(eval(data.params))
+      RequestBodyRef.value.setData(JSON.parse(data.raw))
+      RequestExtractor.value.setData(eval(data.extract))
+      RequestValidators.value.setData(eval(data.validate))
+      RequestTeardown.value.setData(data.setup_script)
+      RequestSetup.value.setData(data.teardown_script)
+      showErrMessage(code.toString(), msg)
+    })
+  }
+  if (props.api_id) {
+    let api_id = props.api_id
+    state.api_id = api_id
+    console.log("api_id------>", api_id)
+    getCaseStepDetail({id: api_id}).then((response) => {
+      const {data, code, msg} = response.data
       ruleForm.url = data.url
       ruleForm.method = data.method
       ruleForm.name = data.name

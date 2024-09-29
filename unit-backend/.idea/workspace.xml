@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="style: 调整用例详情页基础布局">
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="feat: 步骤栏添加详情页">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/dao/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/https.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/routers/case.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/routers/case.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/views/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views/https.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/styles/element.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/styles/element.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/https/api/components/detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/api/components/detail.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/src/views/https/case/components/detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/case/components/detail.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -537,23 +540,7 @@
       <workItem from="1726207726818" duration="19670000" />
       <workItem from="1726798058849" duration="25949000" />
       <workItem from="1727230274850" duration="39175000" />
-      <workItem from="1727423396190" duration="8659000" />
-    </task>
-    <task id="LOCAL-00417" summary="Add apscheduler jobs list view and router.">
-      <option name="closed" value="true" />
-      <created>1716200458709</created>
-      <option name="number" value="00417" />
-      <option name="presentableId" value="LOCAL-00417" />
-      <option name="project" value="LOCAL" />
-      <updated>1716200458709</updated>
-    </task>
-    <task id="LOCAL-00418" summary="Add apscheduler jobs list view and router.">
-      <option name="closed" value="true" />
-      <created>1716200486492</created>
-      <option name="number" value="00418" />
-      <option name="presentableId" value="LOCAL-00418" />
-      <option name="project" value="LOCAL" />
-      <updated>1716200486492</updated>
+      <workItem from="1727423396190" duration="12984000" />
     </task>
     <task id="LOCAL-00419" summary="Update scheduler config and fix enum error.">
       <option name="closed" value="true" />
@@ -931,7 +918,23 @@
       <option name="project" value="LOCAL" />
       <updated>1727426711745</updated>
     </task>
-    <option name="localTasksCounter" value="466" />
+    <task id="LOCAL-00466" summary="feat: 步骤栏添加删除功能">
+      <option name="closed" value="true" />
+      <created>1727580957830</created>
+      <option name="number" value="00466" />
+      <option name="presentableId" value="LOCAL-00466" />
+      <option name="project" value="LOCAL" />
+      <updated>1727580957830</updated>
+    </task>
+    <task id="LOCAL-00467" summary="feat: 步骤栏添加详情页">
+      <option name="closed" value="true" />
+      <created>1727591878870</created>
+      <option name="number" value="00467" />
+      <option name="presentableId" value="LOCAL-00467" />
+      <option name="project" value="LOCAL" />
+      <updated>1727591878870</updated>
+    </task>
+    <option name="localTasksCounter" value="468" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -961,8 +964,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail model, added ellipsis utility, and modified" />
-    <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail model, added ellipsis utility, and modified related" />
     <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail model, added ellipsis utility, and modified related UI" />
     <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail model, added ellipsis utility, and modified related UI components" />
     <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail model, added ellipsis utility, and modified related UI components." />
@@ -986,7 +987,9 @@
     <MESSAGE value="fix: 回滚" />
     <MESSAGE value="fix: 修复用例执行返回体错误问题" />
     <MESSAGE value="style: 调整用例详情页基础布局" />
-    <option name="LAST_COMMIT_MESSAGE" value="style: 调整用例详情页基础布局" />
+    <MESSAGE value="feat: 步骤栏添加删除功能" />
+    <MESSAGE value="feat: 步骤栏添加详情页" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 步骤栏添加详情页" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -8,7 +8,7 @@
             @back="goBack"
           >
             <template #content>
-              <span style="padding-right: 10px;">{{ route.query.editType === 'update' ? "更新" : "新增" }}</span>
+              <span style="padding-right: 10px;">{{ route.query.editType === "update" ? "更新" : "新增" }}</span>
             </template>
           </CardHeader>
         </div>
@@ -46,9 +46,8 @@
                           <div>
                             <div>
                           <span :class="`opblock-${scope.row.method.toLowerCase()}`">
-                              {{ scope.row.method }}
+                              {{ scope.row.method.toUpperCase() }}
                           </span>
-
                             </div>
                           </div>
                         </template>
@@ -66,12 +65,12 @@
                         <template #default="scope">
                           <el-button type="danger" circle size="small" @click="del(scope)">
                             <el-icon>
-                              <Delete/>
+                              <Delete />
                             </el-icon>
                           </el-button>
                           <el-button type="primary" circle size="small" @click="nodeClick(scope.row)">
                             <el-icon>
-                              <Setting/>
+                              <Setting />
                             </el-icon>
                           </el-button>
                         </template>
@@ -80,7 +79,7 @@
                     <el-dropdown :hide-on-click="false" style="width: 100%">
                       <el-button size="small" style="width: 100%">
                         <el-icon style="margin-right: 4px">
-                          <plus/>
+                          <plus />
                         </el-icon>
                         添加步骤
                       </el-button>
@@ -189,42 +188,41 @@
 </template>
 
 <script setup lang="ts">
-import {Delete, Setting} from "@element-plus/icons-vue";
-import {useRoute, useRouter} from "vue-router";
-import {computed, onMounted, reactive, ref, watch, nextTick} from "vue";
+import { Delete, Setting } from "@element-plus/icons-vue";
+import { useRoute, useRouter } from "vue-router";
+import { computed, onMounted, reactive, ref, watch, nextTick } from "vue";
 import { ElMessage, ElMessageBox, FormInstance } from "element-plus";
 import { saveCaseOrUpdate, runCase, getCaseDetail, getHttpDetail, deleteCase } from "@/api/http";
-import {showErrMessage} from "@/utils/element";
-import {getStepTypesByUse, getStepTypeInfo, parseTime} from '@/utils/index'
+import { showErrMessage } from "@/utils/element";
+import { getStepTypesByUse, getStepTypeInfo, parseTime } from "@/utils/index";
 import Step from "@/views/https/case/components/step.vue";
 import ApiInfoController from "@/views/https/case/components/apiInfoController.vue";
 import CardHeader from "@/components/CardHeader/index.vue";
-import Sortable from "sortablejs"
+import Sortable from "sortablejs";
 
-const route = useRoute()
-const router = useRouter()
+const route = useRoute();
+const router = useRouter();
 
-const ruleFormRef = ref<FormInstance>()
+const ruleFormRef = ref<FormInstance>();
 
-const tableData = reactive([
-])
+const tableData = reactive([]);
 
-const TestActiveName =  ref('FunctionalTests')
+const TestActiveName = ref("FunctionalTests");
 
-const SettingActiveName =  ref('TestConfiguration')
+const SettingActiveName = ref("TestConfiguration");
 
-const loading = ref(false)
+const loading = ref(false);
 
-const ApiInfoControllerRef = ref()
+const ApiInfoControllerRef = ref();
 
 const createForm = () => {
   return {
-    name: '',
-    remarks: '',
-    priority: '',
+    name: "",
+    remarks: "",
+    priority: "",
     step_data: []
-  }
-}
+  };
+};
 
 const priority = ref([{
   value: 0,
@@ -241,32 +239,32 @@ const priority = ref([{
 }, {
   value: 4,
   label: "P4"
-}])
+}]);
 
-const stepControllerRef = ref()
+const stepControllerRef = ref();
 
-const selectApiData = ref()
+const selectApiData = ref();
 
 const state = reactive({
   optTypes: getStepTypesByUse("case"),
   form: createForm(),
   case_id: 0
-})
+});
 
 const handleAddData = (optType) => {
-  stepControllerRef.value.handleAddData(optType)
-}
+  stepControllerRef.value.handleAddData(optType);
+};
 
 const goBack = () => {
   router.push({
-    name: "apis",
-  })
-}
+    name: "apis"
+  });
+};
 
-const rules = reactive({})
+const rules = reactive({});
 
 const onSureClick = (formName: FormInstance | undefined) => {
-  if (!formName) return
+  if (!formName) return;
   formName.validate(async (valid) => {
     if (valid) {
       try {
@@ -278,55 +276,55 @@ const onSureClick = (formName: FormInstance | undefined) => {
           step_data: tableData,
           directory_id: route.query.node,
           project: route.query.project
-        }
-        const ret = await saveCaseOrUpdate(caseData)
-        const {code, data, msg} = ret.data
-        state.case_id = data.case_id
-        showErrMessage(code.toString(), msg)
+        };
+        const ret = await saveCaseOrUpdate(caseData);
+        const { code, data, msg } = ret.data;
+        state.case_id = data.case_id;
+        showErrMessage(code.toString(), msg);
       } catch (e) {
-        console.log(e)
+        console.log(e);
       }
 
     } else {
-      console.log('error submit!')
-      ElMessage.error("新增接口失败请重试!")
-      return false
+      console.log("error submit!");
+      ElMessage.error("新增接口失败请重试!");
+      return false;
     }
-  })
-}
+  });
+};
 
 
 const initApi = () => {
-  let case_id = route.query.id
-  if(case_id){
-    state.case_id = case_id
-  }
-  console.log("api_id------>", case_id)
+  let case_id = route.query.caseId;
   if (case_id) {
-    getCaseDetail({id: case_id}).then((response) => {
-      const {data, code, msg} = response.data
-      state.form.name = data.name
-      state.form.remarks = data.desc
-      state.form.priority = data.priority
-      setStepData(eval(data.step))
-      showErrMessage(code.toString(), msg)
-    })
+    state.case_id = case_id;
   }
-}
+  console.log("api_id------>", case_id);
+  if (case_id) {
+    getCaseDetail({ id: case_id }).then((response) => {
+      const { data, code, msg } = response.data;
+      state.form.name = data.name;
+      state.form.remarks = data.desc;
+      state.form.priority = data.priority;
+      setStepData(eval(data.step));
+      showErrMessage(code.toString(), msg);
+    });
+  }
+};
 
 
 const debug = (formName: FormInstance | undefined) => {
-  if (!formName) return
+  if (!formName) return;
   formName.validate(async (valid) => {
     if (valid) {
-      loading.value = true
-      try{
+      loading.value = true;
+      try {
         let caseData = {
           name: state.form.name,
           step_data: tableData
-        }
-        const ret = await runCase(caseData)
-        const {code, data, msg} = ret.data
+        };
+        const ret = await runCase(caseData);
+        const { code, data, msg } = ret.data;
         // const res = data['class_list'][0]['cases'][0]
         // statusCode.value = res['status_code']
         // runTime.value = res['run_time']
@@ -336,87 +334,86 @@ const debug = (formName: FormInstance | undefined) => {
         // performLoading.value = false
         // responseReport.value = true
         // toResponse()
-        showErrMessage(code.toString(), msg)
-        loading.value = false
+        showErrMessage(code.toString(), msg);
+        loading.value = false;
       } catch (e) {
-        loading.value = false
-        console.log(e)
+        loading.value = false;
+        console.log(e);
       }
 
     } else {
-      console.log('error submit!')
-      ElMessage.error("新增接口失败请重试!")
-      return false
+      console.log("error submit!");
+      ElMessage.error("新增接口失败请重试!");
+      return false;
     }
-  })
-}
+  });
+};
 
 
-const dragTable = ref()
+const dragTable = ref();
 const initDropTable = () => {
-  const el = dragTable.value.$el.querySelector('.el-table__body tbody')
+  const el = dragTable.value.$el.querySelector(".el-table__body tbody");
   Sortable.create(el, {
     animation: 150, //动画
     disabled: false,
-    handle: '.move', //指定列拖拽
-    filter: '.disabled',
+    handle: ".move", //指定列拖拽
+    filter: ".disabled",
     // 设置拖拽样式类名
-    dragClass: 'drop-dragClass',
+    dragClass: "drop-dragClass",
     // 设置拖拽停靠样式类名
-    ghostClass: 'drop-ghostClass',
+    ghostClass: "drop-ghostClass",
     // 设置选中样式类名
-    chosenClass: 'drop-chosenClass',
+    chosenClass: "drop-chosenClass",
 
     onStart: () => {
-      console.log('开始拖动')
+      console.log("开始拖动");
     },
 
     onEnd(evt: any) {
-      const { newIndex, oldIndex } = evt
-      const currRow = tableData.splice(oldIndex, 1)[0]
-      tableData.splice(newIndex, 0, currRow)
+      const { newIndex, oldIndex } = evt;
+      const currRow = tableData.splice(oldIndex, 1)[0];
+      tableData.splice(newIndex, 0, currRow);
     }
-  })
-}
+  });
+};
 
 const changeAction = (data) => {
-  selectApiData.value = data
-  setStepData(data)
-}
+  selectApiData.value = data;
+  setStepData(data);
+};
 
 const setStepData = (data) => {
   for (let i = 0; i < data.length; i++) {
-    tableData.push(data[i])
+    tableData.push(data[i]);
   }
-}
+};
 
 const del = (scope) => {
-  ElMessageBox.confirm('你确定要删除当前项吗?', '温馨提示', {
-    confirmButtonText: '确定',
-    cancelButtonText: '取消',
-    type: 'warning',
-    draggable: true,
+  ElMessageBox.confirm("你确定要删除当前项吗?", "温馨提示", {
+    confirmButtonText: "确定",
+    cancelButtonText: "取消",
+    type: "warning",
+    draggable: true
   }).then(() => {
-    tableData.splice(scope.$index, 1)
+    tableData.splice(scope.$index, 1);
   }).catch(() => {
     ElMessage.error("步骤删除失败请重试");
-  })
-}
+  });
+};
 
 const nodeClick = (data) => {
-  ApiInfoControllerRef.value.onOpenApiInfoPage(data)
-}
+  ApiInfoControllerRef.value.onOpenApiInfoPage(data);
+};
 
 
 onMounted(() => {
-  initApi()
+  initApi();
   nextTick(() => {
-    initDropTable()
-  })
-})
+    initDropTable();
+  });
+});
 
-defineExpose({
-})
+defineExpose({});
 
 </script>
 <style lang="scss">
@@ -513,7 +510,7 @@ defineExpose({
   color: #7a8b9a;
 }
 
-.opblock-get{
+.opblock-get {
   color: #122de1;
 }
 
@@ -540,11 +537,13 @@ defineExpose({
   background: #e4e4ee !important;
   opacity: 0.5 !important;
 }
+
 // 停靠
 .drop-ghostClass {
   background: #C0C0C0 !important;
   opacity: 0.5 !important;
 }
+
 // 选择
 .drop-chosenClass:hover > td {
   background: #e4e4ee !important;

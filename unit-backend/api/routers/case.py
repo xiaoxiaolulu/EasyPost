@@ -6,7 +6,8 @@ from api.views.https import (
     DelCaseView,
     CaseDetailView,
     CaseListView,
-    RunCaseView
+    RunCaseView,
+    CaseStepDetailView
 )
 
 
@@ -18,6 +19,7 @@ app_urls = [
     path('delete/<int:pk>', DelCaseView.as_view()),
     path('detail/<int:pk>', CaseDetailView.as_view()),
     path("list", CaseListView.as_view({'get': 'list'})),
+    path('step/detail/<int:pk>', CaseStepDetailView.as_view())
 ]
 
 

@@ -18,16 +18,20 @@ from api.mixins.async_generics import AsyncAPIView
 from api.models.https import (
     Relation,
     Api,
-    Case, ClosedTasks
+    Case,
+    ClosedTasks,
+    Step
 )
 from api.mixins.magic import (
-    MagicRetrieveApi, MagicListAPI
+    MagicRetrieveApi,
+    MagicListAPI
 )
 from api.schema.https import (
     RelationSerializer,
     ApiSerializer,
     CaseSerializers,
-    ClosedTasksSerializers
+    ClosedTasksSerializers,
+    CaseStepSerializers
 )
 from config.settings import MEDIA_ROOT
 from api.response.fatcory import ResponseStandard
@@ -189,6 +193,13 @@ class DelCaseView(APIView):
 class CaseDetailView(MagicRetrieveApi):
     serializer_class = CaseSerializers
     queryset = Case.objects.all()
+    permission_classes = [IsAuthenticated]
+
+
+class CaseStepDetailView(MagicRetrieveApi):
+
+    serializer_class = CaseStepSerializers
+    queryset = Step.objects.all()
     permission_classes = [IsAuthenticated]
 
 
