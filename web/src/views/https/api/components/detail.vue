@@ -1,6 +1,6 @@
 <template>
-  <div class="app-container">
-    <div class="header-container">
+  <div class="app-container" >
+    <div class="header-container" v-if="!isView">
       <div class="card-head-title">
         <div class="card-description">
           <CardHeader
@@ -244,6 +244,15 @@ import {showErrMessage} from "@/utils/element";
 import ResponseReport from "@/views/https/api/components/responseReport.vue";
 import CardHeader from "@/components/CardHeader/index.vue";
 
+const props = defineProps({
+  isView: {
+    type: Boolean,
+    default: () => {
+      return false;
+    },
+  },
+});
+
 const route = useRoute()
 
 const router = useRouter()
@@ -384,8 +393,10 @@ const getMethodColor = (method: any) => {
 }
 
 const methodChange = (method: any) => {
-  let selectInputEl = methodRef.value.$el.getElementsByTagName("input")
-  if (selectInputEl.length > 0) selectInputEl[0].style.color = getMethodColor(method)
+  if (methodRef.value && methodRef.value.$el) {
+    let selectInputEl = methodRef.value.$el.getElementsByTagName("input")
+    if (selectInputEl.length > 0) selectInputEl[0].style.color = getMethodColor(method)
+  }
 }
 
 const setData = (form: any) => {
@@ -542,14 +553,19 @@ const Snapshot = () => {
 
 
 const initApi = () => {
-  let api_id = route.query.id
-  if(api_id){
-    state.api_id = api_id
-  }
+
+  // let api_id = route.query.id
+  // if(api_id){
+  //   state.api_id = api_id
+  // }
+  let api_id = 1145
   console.log("api_id------>", api_id)
   if (api_id) {
     getHttpDetail({id: api_id}).then((response) => {
       const {data, code, msg} = response.data
+      console.log("测试")
+      console.log(data)
+      console.log("测试")
       ruleForm.url = data.url
       ruleForm.method = data.method
       ruleForm.name = data.name

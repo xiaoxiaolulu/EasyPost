@@ -62,11 +62,16 @@
                           </div>
                         </template>
                       </el-table-column>
-                      <el-table-column fixed="right" width="50px">
+                      <el-table-column fixed="right" width="100px">
                         <template #default="scope">
                           <el-button type="danger" circle size="small" @click="del(scope)">
                             <el-icon>
                               <Delete/>
+                            </el-icon>
+                          </el-button>
+                          <el-button type="primary" circle size="small" @click="nodeClick(scope.row)">
+                            <el-icon>
+                              <Setting/>
                             </el-icon>
                           </el-button>
                         </template>
@@ -179,11 +184,12 @@
         </el-col>
       </el-row>
     </div>
+    <api-info-controller ref="ApiInfoControllerRef"></api-info-controller>
   </div>
 </template>
 
 <script setup lang="ts">
-import {Delete} from "@element-plus/icons-vue";
+import {Delete, Setting} from "@element-plus/icons-vue";
 import {useRoute, useRouter} from "vue-router";
 import {computed, onMounted, reactive, ref, watch, nextTick} from "vue";
 import { ElMessage, ElMessageBox, FormInstance } from "element-plus";
@@ -191,8 +197,9 @@ import { saveCaseOrUpdate, runCase, getCaseDetail, getHttpDetail, deleteCase } f
 import {showErrMessage} from "@/utils/element";
 import {getStepTypesByUse, getStepTypeInfo, parseTime} from '@/utils/index'
 import Step from "@/views/https/case/components/step.vue";
-import Sortable from "sortablejs"
+import ApiInfoController from "@/views/https/case/components/apiInfoController.vue";
 import CardHeader from "@/components/CardHeader/index.vue";
+import Sortable from "sortablejs"
 
 const route = useRoute()
 const router = useRouter()
@@ -207,6 +214,8 @@ const TestActiveName =  ref('FunctionalTests')
 const SettingActiveName =  ref('TestConfiguration')
 
 const loading = ref(false)
+
+const ApiInfoControllerRef = ref()
 
 const createForm = () => {
   return {
@@ -364,8 +373,6 @@ const initDropTable = () => {
 
     onEnd(evt: any) {
       const { newIndex, oldIndex } = evt
-      console.log(newIndex)
-      console.log(oldIndex)
       const currRow = tableData.splice(oldIndex, 1)[0]
       tableData.splice(newIndex, 0, currRow)
     }
@@ -395,6 +402,11 @@ const del = (scope) => {
     ElMessage.error("步骤删除失败请重试");
   })
 }
+
+const nodeClick = (data) => {
+  ApiInfoControllerRef.value.onOpenApiInfoPage(data)
+}
+
 
 onMounted(() => {
   initApi()
