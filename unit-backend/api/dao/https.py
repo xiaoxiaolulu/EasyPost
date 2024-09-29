@@ -3,7 +3,6 @@ DESCRIPTION：接口测试数据访问对象
 :Created by Null.
 """
 import json
-import sys
 from typing import (
     Any,
     List

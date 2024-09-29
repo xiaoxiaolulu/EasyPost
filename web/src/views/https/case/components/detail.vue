@@ -62,6 +62,15 @@
                           </div>
                         </template>
                       </el-table-column>
+                      <el-table-column fixed="right" width="50px">
+                        <template #default="scope">
+                          <el-button type="danger" circle size="small" @click="del(scope)">
+                            <el-icon>
+                              <Delete/>
+                            </el-icon>
+                          </el-button>
+                        </template>
+                      </el-table-column>
                     </el-table>
                     <el-dropdown :hide-on-click="false" style="width: 100%">
                       <el-button size="small" style="width: 100%">
@@ -174,11 +183,11 @@
 </template>
 
 <script setup lang="ts">
-import {ArrowDown, Switch, Back, Odometer} from "@element-plus/icons-vue";
+import {Delete} from "@element-plus/icons-vue";
 import {useRoute, useRouter} from "vue-router";
 import {computed, onMounted, reactive, ref, watch, nextTick} from "vue";
-import {ElMessage, FormInstance} from "element-plus";
-import {saveCaseOrUpdate, runCase, getCaseDetail, getHttpDetail} from "@/api/http";
+import { ElMessage, ElMessageBox, FormInstance } from "element-plus";
+import { saveCaseOrUpdate, runCase, getCaseDetail, getHttpDetail, deleteCase } from "@/api/http";
 import {showErrMessage} from "@/utils/element";
 import {getStepTypesByUse, getStepTypeInfo, parseTime} from '@/utils/index'
 import Step from "@/views/https/case/components/step.vue";
@@ -372,6 +381,19 @@ const setStepData = (data) => {
   for (let i = 0; i < data.length; i++) {
     tableData.push(data[i])
   }
+}
+
+const del = (scope) => {
+  ElMessageBox.confirm('你确定要删除当前项吗?', '温馨提示', {
+    confirmButtonText: '确定',
+    cancelButtonText: '取消',
+    type: 'warning',
+    draggable: true,
+  }).then(() => {
+    tableData.splice(scope.$index, 1)
+  }).catch(() => {
+    ElMessage.error("步骤删除失败请重试");
+  })
 }
 
 onMounted(() => {

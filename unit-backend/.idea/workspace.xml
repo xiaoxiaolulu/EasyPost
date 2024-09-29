@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="style: 调整用例详情页基础布局">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/https.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/src/views/https/case/components/detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/case/components/detail.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -534,15 +537,7 @@
       <workItem from="1726207726818" duration="19670000" />
       <workItem from="1726798058849" duration="25949000" />
       <workItem from="1727230274850" duration="39175000" />
-      <workItem from="1727423396190" duration="2771000" />
-    </task>
-    <task id="LOCAL-00416" summary="Add apscheduler jobs list view and router.">
-      <option name="closed" value="true" />
-      <created>1716200448888</created>
-      <option name="number" value="00416" />
-      <option name="presentableId" value="LOCAL-00416" />
-      <option name="project" value="LOCAL" />
-      <updated>1716200448888</updated>
+      <workItem from="1727423396190" duration="8659000" />
     </task>
     <task id="LOCAL-00417" summary="Add apscheduler jobs list view and router.">
       <option name="closed" value="true" />
@@ -928,7 +923,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727425071732</updated>
     </task>
-    <option name="localTasksCounter" value="465" />
+    <task id="LOCAL-00465" summary="style: 调整用例详情页基础布局">
+      <option name="closed" value="true" />
+      <created>1727426711745</created>
+      <option name="number" value="00465" />
+      <option name="presentableId" value="LOCAL-00465" />
+      <option name="project" value="LOCAL" />
+      <updated>1727426711745</updated>
+    </task>
+    <option name="localTasksCounter" value="466" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
