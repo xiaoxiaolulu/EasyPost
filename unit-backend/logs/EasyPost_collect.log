@@ -120,3 +120,5 @@ Traceback (most recent call last):
 django.core.exceptions.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
 WARNING  [2024-09-29 15:21:09,690] [bb7df0740a0e4edcb213e12285c041bd] django.request: Not Found: /media/C:/Users/86135/Desktop/EasyPost/unit-backend/api/templates/media/default.png
 WARNING  [2024-09-29 15:21:09,702] [ab57d2e8b2084a0ea66dd99d4d2d853a] django.request: Bad Request: /media/C:/Users/86135/Desktop/EasyPost/backend/api/templates/media/default.png
+INFO     [2024-09-30 10:53:47,869] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\models\https.py changed, reloading.
+INFO     [2024-09-30 10:53:49,728] [none] django.utils.autoreload: Watching for file changes with StatReloader

@@ -11,7 +11,6 @@
     </template>
     <ApiDetail :isView="true" :api_id="state.data.id"></ApiDetail>
   </el-drawer>
-
 </template>
 
 <script setup name="apiInfoController">

@@ -164,7 +164,7 @@ const editHandler = (row) => {
   if (row) {
     router.push({
       name: "caseDetail",
-      query: {editType: 'update', id: row.id}
+      query: {editType: 'update', caseId: row.id}
     });
   } else {
     ElMessage.error("编辑用例异常请重试!");

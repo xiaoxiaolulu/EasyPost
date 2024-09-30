@@ -106,6 +106,14 @@ export function getCaseDetail(data: any) {
     })
 }
 
+export function getCaseStepDetail(data: any) {
+    return request({
+        url: `/api/case/step/detail/${data.id}`,
+        method: 'get',
+        data
+    })
+}
+
 export function planList(params: any) {
     return request({
         url: `/api/plan/list`,

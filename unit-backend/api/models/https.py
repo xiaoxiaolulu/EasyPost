@@ -221,6 +221,10 @@ class Step(Model):
     name = CharField(max_length=50, null=True, blank=True, verbose_name=_('Step Name'))
     method = CharField(max_length=50, null=True, blank=True, verbose_name=_('Step Method'))
     url = TextField(verbose_name=_('Step Url'), null=False, default=None)
+    priority = CharField(max_length=50, verbose_name=_('Step Priority'), choices=ApiPriorityChoices,
+                         default=ApiPriorityChoices.P0)
+    status = CharField(max_length=50, verbose_name=_('Step Status'), choices=ApiStatusChoices,
+                       default=ApiStatusChoices.DEBUGGING)
     desc = TextField(null=True, blank=True, verbose_name=_('Step Desc'))
     headers = TextField(verbose_name=_('Step Headers'), null=False, default=None)
     params = TextField(verbose_name=_('Step Params'), null=False, default=None)

@@ -197,7 +197,7 @@ const editHandler = (row) => {
   if (row) {
     router.push({
       name: "httpDetail",
-      query: {editType: 'update', id: row.id}
+      query: {editType: 'update', httpId: row.id}
     });
   } else {
     ElMessage.error("编辑接口异常请重试!");
