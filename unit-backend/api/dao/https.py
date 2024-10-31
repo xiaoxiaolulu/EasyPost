@@ -3,13 +3,16 @@ DESCRIPTION：接口测试数据访问对象
 :Created by Null.
 """
 import json
+import sys
 from typing import (
     Any,
     List
 )
-
 from channels.db import database_sync_to_async
-from django.db.models import Q
+from django.db.models import (
+    Q,
+    Model
+)
 from django.forms import model_to_dict
 from api.dao import executor_service_client
 from api.dao.report import ReportDao
@@ -138,14 +141,59 @@ class HttpDao:
                 raise Exception(f"获取测试接口失败❌ {err}")
 
     @staticmethod
-    def parser_api_data(request: Any, pk=None):
+    def parser_api_data_pattern(models, project, directory_id, handel, request) -> dict:
+        """
+        Parses API data from a model instance (`models`), project, directory ID, handler object (`handel`), and request object (`request`).
+
+        Args:
+            models: The model class representing the API data.
+            project: The project name associated with the API data.
+            directory_id: The directory ID for the API data (if applicable).
+            handel: A handler object containing various API data attributes.
+            request: The request object containing user information.
+
+        Returns:
+            A dictionary containing the parsed API data.
+        """
+
+        table_name = models._meta.model_name
+
+        request_body = {
+            "name": handel.name,
+            "method": handel.method,
+            "url": handel.url,
+            "priority": handel.priority,
+            "status": handel.status,
+            "desc": handel.desc,
+            "headers": handel.headers,
+            "raw": handel.raw,
+            "params": handel.params,
+            "setup_script": handel.setup_script,
+            "teardown_script": handel.teardown_script,
+            "validate": handel.validate,
+            "extract": handel.extract,
+            "user": request.user,
+            **(
+                {
+                    "project": project,
+                    "directory_id": directory_id,
+                }
+                if table_name != "step"
+                else {}
+            ),
+        }
+
+        return request_body
+
+    @classmethod
+    def parser_api_data(cls, request: Any, pk=None, models=None):
         """
         Parses test API data from a request object and project ID (optional for update).
 
         Args:
             request: The Django request object containing the data to be parsed.
             pk (int, optional): The primary key of the API object for update (if provided).
-
+            models
         Returns:
             A dictionary containing the parsed test API data.
 
@@ -155,31 +203,14 @@ class HttpDao:
         api = HandelTestData(request.data)  # noqa
 
         if pk:
-            update_obj = Api.objects.get(id=pk)
-            project = update_obj.project
-            directory_id = update_obj.directory_id
+            update_obj = models.objects.get(id=pk)
+            project = getattr(update_obj, 'project', None)
+            directory_id = getattr(update_obj, 'directory_id', None)
         else:
-            project = Project.objects.get(id=api.project)
+            project = models.objects.get(id=api.project)
             directory_id = api.directory_id
 
-        request_body = {
-            'name': api.name,
-            'project': project,
-            'directory_id': directory_id,
-            'method': api.method,
-            'url': api.url,
-            'priority': api.priority,
-            'status': api.status,
-            'desc': api.desc,
-            'headers': api.headers,
-            'raw': api.raw,
-            'params': api.params,
-            'setup_script': api.setup_script,
-            'teardown_script': api.teardown_script,
-            'validate': api.validate,
-            'extract': api.extract,
-            'user': request.user
-        }
+        request_body = cls.parser_api_data_pattern(models, project, directory_id, api, request)
         try:
             return request_body
         except (Exception,) as err:
@@ -189,13 +220,14 @@ class HttpDao:
             raise Exception("解析测试接口失败❌")
 
     @classmethod
-    def create_or_update_api(cls, request: Any, pk):
+    def create_or_update_api(cls, request: Any, pk, models: Model):
         """
         Creates a new API object or updates an existing one based on provided data.
 
         Args:
             request: The Django request object containing the API data.
             pk (int): The primary key of the API object to update (if provided).
+            models:
 
         Returns:
             The ID of the created or updated API object.
@@ -206,13 +238,13 @@ class HttpDao:
         try:
 
             if pk:
-                update_obj = Api.objects.filter(id=pk)
-                request_body = cls.parser_api_data(request, pk=pk)
+                update_obj = models.objects.filter(id=pk)
+                request_body = cls.parser_api_data(request, pk=pk, models=models)
                 update_obj.update(**request_body)
                 update_pk = pk
             else:
-                request_body = cls.parser_api_data(request)
-                create_obj = Api.objects.create(**request_body)
+                request_body = cls.parser_api_data(request, models=models)
+                create_obj = models.objects.create(**request_body)
                 update_pk = create_obj.id
 
             return update_pk

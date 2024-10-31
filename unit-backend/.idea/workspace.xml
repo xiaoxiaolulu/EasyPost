@@ -5,14 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="feat: 步骤栏添加详情页">
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/https.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/filters/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/filters/report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/models/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/plan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/routers/case.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/routers/case.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/views/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views/https.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/styles/element.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/styles/element.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/https/api/components/detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/api/components/detail.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/https/case/components/detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/case/components/detail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/t.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/t.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unit-executor/logs/Unit-Executor.log" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/logs/Unit-Executor.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/layout/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/layout/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +153,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/86135/Desktop/EasyPost/unit-backend/api/services&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/86135/Desktop/EasyPost/unit-executor&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -182,7 +187,30 @@
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\websocket" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.initmenus">
+  <component name="RunManager" selected="Django Server.backend">
+    <configuration name="__init__ (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api/emus" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/emus/__init__.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <option name="ENV_FILES" value="" />
@@ -198,29 +226,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/services/protos/__init__.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="engine" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="backend" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/tests/engine.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -326,19 +331,19 @@
     </configuration>
     <list>
       <item itemvalue="Django Server.backend" />
-      <item itemvalue="Python.initmenus" />
+      <item itemvalue="Python.__init__ (1)" />
       <item itemvalue="Python.__init__" />
-      <item itemvalue="Python.engine" />
       <item itemvalue="Python.executor" />
       <item itemvalue="Python.grpconsul" />
+      <item itemvalue="Python.initmenus" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.__init__ (1)" />
         <item itemvalue="Python.initmenus" />
         <item itemvalue="Python.__init__" />
         <item itemvalue="Python.executor" />
         <item itemvalue="Python.grpconsul" />
-        <item itemvalue="Python.engine" />
       </list>
     </recent_temporary>
   </component>
@@ -540,15 +545,11 @@
       <workItem from="1726207726818" duration="19670000" />
       <workItem from="1726798058849" duration="25949000" />
       <workItem from="1727230274850" duration="39175000" />
-      <workItem from="1727423396190" duration="12984000" />
-    </task>
-    <task id="LOCAL-00419" summary="Update scheduler config and fix enum error.">
-      <option name="closed" value="true" />
-      <created>1716261802475</created>
-      <option name="number" value="00419" />
-      <option name="presentableId" value="LOCAL-00419" />
-      <option name="project" value="LOCAL" />
-      <updated>1716261802475</updated>
+      <workItem from="1727423396190" duration="17127000" />
+      <workItem from="1728895744404" duration="65000" />
+      <workItem from="1728898533972" duration="17095000" />
+      <workItem from="1730358706607" duration="217000" />
+      <workItem from="1730359474223" duration="3271000" />
     </task>
     <task id="LOCAL-00420" summary="Update scheduler config and fix enum error.">
       <option name="closed" value="true" />
@@ -934,7 +935,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727591878870</updated>
     </task>
-    <option name="localTasksCounter" value="468" />
+    <task id="LOCAL-00468" summary="feat: 步骤栏添加详情页">
+      <option name="closed" value="true" />
+      <created>1727602597773</created>
+      <option name="number" value="00468" />
+      <option name="presentableId" value="LOCAL-00468" />
+      <option name="project" value="LOCAL" />
+      <updated>1727602597773</updated>
+    </task>
+    <option name="localTasksCounter" value="469" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1024,6 +1033,7 @@
     <SUITE FILE_PATH="coverage/backend$engine.coverage" NAME="engine Coverage Results" MODIFIED="1723693463496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/tests" />
     <SUITE FILE_PATH="coverage/backend$__init____3_.coverage" NAME="__init__ (3) Coverage Results" MODIFIED="1709112766835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/dao" />
     <SUITE FILE_PATH="coverage/backend$Test__api_tests_test_user_list_TestUserListViewSet.coverage" NAME="Test: api.tests.test_user_list.TestUserListViewSet Coverage Results" MODIFIED="1712038591853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/unit_backend$__init____1_.coverage" NAME="__init__ (1) Coverage Results" MODIFIED="1729588304339" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/emus" />
     <SUITE FILE_PATH="coverage/backend$setting.coverage" NAME="setting Coverage Results" MODIFIED="1712038164027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/dao" />
     <SUITE FILE_PATH="coverage/backend$main.coverage" NAME="main Coverage Results" MODIFIED="1706091376465" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/celery_work" />
     <SUITE FILE_PATH="coverage/backend$manage.coverage" NAME="manage Coverage Results" MODIFIED="1711526108828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

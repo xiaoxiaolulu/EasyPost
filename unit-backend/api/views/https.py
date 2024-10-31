@@ -15,6 +15,7 @@ from api.dao.https import HttpDao
 from api.events.registry import registry
 from api.filters.http import ClosedTasksFilter
 from api.mixins.async_generics import AsyncAPIView
+from api.models import https
 from api.models.https import (
     Relation,
     Api,
@@ -136,13 +137,14 @@ class DelApiView(APIView):
 
 
 class SaveOrUpdateApiView(APIView):
+
     permission_classes = [IsAuthenticated]
 
     @staticmethod
     def post(request, **kwargs):
 
         try:
-            response = HttpDao.create_or_update_api(request, pk=kwargs['pk'])
+            response = HttpDao.create_or_update_api(request, pk=kwargs['pk'], models=https.Api)
             return Response(ResponseStandard.success(
                 data={"api_id": response}
             ))
@@ -201,6 +203,22 @@ class CaseStepDetailView(MagicRetrieveApi):
     serializer_class = CaseStepSerializers
     queryset = Step.objects.all()
     permission_classes = [IsAuthenticated]
+
+
+class SaveOrUpdateStepView(APIView):
+
+    permission_classes = [IsAuthenticated]
+
+    @staticmethod
+    def post(request, **kwargs):
+
+        try:
+            response = HttpDao.create_or_update_api(request, pk=kwargs['pk'], models=https.Step)
+            return Response(ResponseStandard.success(
+                data={"api_id": response}
+            ))
+        except Exception as err:
+            return Response(ResponseStandard.failed(msg=str(err)))
 
 
 class RunCaseView(AsyncAPIView):

@@ -15,7 +15,9 @@ from django.db.models import (
     SET_NULL,
     AutoField,
     ManyToManyField,
-    IntegerChoices, IntegerField, FloatField
+    IntegerChoices,
+    IntegerField,
+    FloatField
 )
 from api.models.project import Project
 from django.utils.translation import gettext_lazy as _

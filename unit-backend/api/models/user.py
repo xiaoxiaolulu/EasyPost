@@ -18,7 +18,9 @@ from django.db.models import (
     AutoField,
     IntegerChoices,
     TextChoices,
-    BooleanField, ForeignKey, SET_NULL
+    BooleanField,
+    ForeignKey,
+    SET_NULL
 )
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _

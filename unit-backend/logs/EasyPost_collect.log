@@ -122,3 +122,344 @@ WARNING  [2024-09-29 15:21:09,690] [bb7df0740a0e4edcb213e12285c041bd] django.req
 WARNING  [2024-09-29 15:21:09,702] [ab57d2e8b2084a0ea66dd99d4d2d853a] django.request: Bad Request: /media/C:/Users/86135/Desktop/EasyPost/backend/api/templates/media/default.png
 INFO     [2024-09-30 10:53:47,869] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\models\https.py changed, reloading.
 INFO     [2024-09-30 10:53:49,728] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-09-30 13:30:39,210] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\routers\case.py changed, reloading.
+INFO     [2024-09-30 13:30:40,623] [none] django.utils.autoreload: Watching for file changes with StatReloader
+ERROR    [2024-10-10 17:41:04,388] [424153126a674a988fab7d52dce3bfa4] django.security.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+Traceback (most recent call last):
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\static.py", line 45, in serve
+    fullpath = Path(safe_join(document_root, path))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+WARNING  [2024-10-10 17:41:04,432] [ec1aad4dd4414e6abdfbe549bd53bdba] django.request: Not Found: /media/C:/Users/86135/Desktop/EasyPost/unit-backend/api/templates/media/default.png
+WARNING  [2024-10-10 17:41:04,471] [424153126a674a988fab7d52dce3bfa4] django.request: Bad Request: /media/C:/Users/86135/Desktop/EasyPost/backend/api/templates/media/default.png
+ERROR    [2024-10-10 17:41:07,725] [61d0d7e9955b4bd19d7c5f03f378be85] django.security.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+Traceback (most recent call last):
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\static.py", line 45, in serve
+    fullpath = Path(safe_join(document_root, path))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+WARNING  [2024-10-10 17:41:07,747] [120fa97843e84b7b8001f5631a675238] django.request: Not Found: /media/C:/Users/86135/Desktop/EasyPost/unit-backend/api/templates/media/default.png
+WARNING  [2024-10-10 17:41:07,768] [61d0d7e9955b4bd19d7c5f03f378be85] django.request: Bad Request: /media/C:/Users/86135/Desktop/EasyPost/backend/api/templates/media/default.png
+ERROR    [2024-10-10 17:41:14,554] [a74866e59e434c3ca5b244e224b987c2] django.security.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+Traceback (most recent call last):
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\static.py", line 45, in serve
+    fullpath = Path(safe_join(document_root, path))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+WARNING  [2024-10-10 17:41:14,578] [87bab061eb904b3cb24b84c81ed10d97] django.request: Not Found: /media/C:/Users/86135/Desktop/EasyPost/unit-backend/api/templates/media/default.png
+WARNING  [2024-10-10 17:41:14,597] [a74866e59e434c3ca5b244e224b987c2] django.request: Bad Request: /media/C:/Users/86135/Desktop/EasyPost/backend/api/templates/media/default.png
+ERROR    [2024-10-10 17:41:56,391] [f3896f34b0914ab1b92a165bffb64b05] django.security.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+Traceback (most recent call last):
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\static.py", line 45, in serve
+    fullpath = Path(safe_join(document_root, path))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+WARNING  [2024-10-10 17:41:56,422] [f3896f34b0914ab1b92a165bffb64b05] django.request: Bad Request: /media/C:/Users/86135/Desktop/EasyPost/backend/api/templates/media/default.png
+ERROR    [2024-10-10 17:42:19,688] [e3dcf34fd9744ec09e638d7c28e601bc] django.security.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+Traceback (most recent call last):
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\static.py", line 45, in serve
+    fullpath = Path(safe_join(document_root, path))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+WARNING  [2024-10-10 17:42:19,709] [9dfe91c0618a448ca0b2c80bea9e015d] django.request: Not Found: /media/C:/Users/86135/Desktop/EasyPost/unit-backend/api/templates/media/default.png
+WARNING  [2024-10-10 17:42:19,729] [e3dcf34fd9744ec09e638d7c28e601bc] django.request: Bad Request: /media/C:/Users/86135/Desktop/EasyPost/backend/api/templates/media/default.png
+INFO     [2024-10-10 17:47:00,222] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-10 17:47:01,758] [none] django.utils.autoreload: Watching for file changes with StatReloader
+ERROR    [2024-10-11 10:00:28,800] [4625b5982912419e9783c642c8269d86] django.security.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+Traceback (most recent call last):
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\static.py", line 45, in serve
+    fullpath = Path(safe_join(document_root, path))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+WARNING  [2024-10-11 10:00:28,967] [4625b5982912419e9783c642c8269d86] django.request: Bad Request: /media/C:/Users/86135/Desktop/EasyPost/backend/api/templates/media/default.png
+INFO     [2024-10-14 16:49:33,457] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-14 17:35:54,200] [none] django.utils.autoreload: Watching for file changes with StatReloader
+ERROR    [2024-10-14 18:26:56,495] [0b68167153554e9ab4f0f577bd65cb9f] django.security.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+Traceback (most recent call last):
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\static.py", line 45, in serve
+    fullpath = Path(safe_join(document_root, path))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+WARNING  [2024-10-14 18:26:56,512] [1ec1d92c4b8d42cdb135bb315987041a] django.request: Not Found: /media/C:/Users/86135/Desktop/EasyPost/unit-backend/api/templates/media/default.png
+WARNING  [2024-10-14 18:26:56,528] [0b68167153554e9ab4f0f577bd65cb9f] django.request: Bad Request: /media/C:/Users/86135/Desktop/EasyPost/backend/api/templates/media/default.png
+ERROR    [2024-10-17 15:58:44,794] [bd485613bea44e8285adeb4aa42a5d95] django.security.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+Traceback (most recent call last):
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\static.py", line 45, in serve
+    fullpath = Path(safe_join(document_root, path))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\86135\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\default.png) is located outside of the base path component (C:\Users\86135\Desktop\EasyPost\unit-backend\api\templates\media)
+WARNING  [2024-10-17 15:58:44,810] [1ddcc8c45de04165a3ff04729bdfd52c] django.request: Not Found: /media/C:/Users/86135/Desktop/EasyPost/unit-backend/api/templates/media/default.png
+WARNING  [2024-10-17 15:58:44,822] [bd485613bea44e8285adeb4aa42a5d95] django.request: Bad Request: /media/C:/Users/86135/Desktop/EasyPost/backend/api/templates/media/default.png
+INFO     [2024-10-18 13:49:37,361] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\emus\__init__.py changed, reloading.
+INFO     [2024-10-18 13:49:37,756] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\emus\__init__.py changed, reloading.
+INFO     [2024-10-18 13:49:39,160] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-18 13:49:39,199] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 15:12:10,984] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\emus\__init__.py changed, reloading.
+INFO     [2024-10-31 15:12:14,819] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 15:30:33,834] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\views\https.py changed, reloading.
+INFO     [2024-10-31 15:30:35,133] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 15:31:01,947] [none] django.utils.autoreload: Watching for file changes with StatReloader
+WARNING  [2024-10-31 15:49:26,313] [b59d93b7a3c5470aad370bd0397faff7] django.request: Not Found: /api/http/step/saveOrUpdate/17
+WARNING  [2024-10-31 15:49:29,073] [8460b9f3942845368629b46b90eaaa1a] django.request: Not Found: /api/http/step/saveOrUpdate/17
+INFO     [2024-10-31 15:51:15,173] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\routers\case.py changed, reloading.
+INFO     [2024-10-31 15:51:15,905] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\routers\case.py changed, reloading.
+INFO     [2024-10-31 15:51:16,460] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 15:51:17,191] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 15:52:12,249] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\routers\case.py changed, reloading.
+INFO     [2024-10-31 15:52:13,091] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\routers\case.py changed, reloading.
+INFO     [2024-10-31 15:52:13,561] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 15:52:14,267] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 15:54:00,337] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 15:54:01,052] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 15:54:01,958] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 15:54:02,517] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 15:54:10,929] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 15:54:11,648] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 15:54:12,380] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 15:54:12,924] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 15:54:15,396] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 15:55:25,762] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 15:55:26,519] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 15:55:27,034] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 15:55:27,822] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 15:55:29,151] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 15:56:16,726] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 15:56:16,961] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 15:56:17,364] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 15:56:18,674] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 15:56:20,111] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 15:57:37,235] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 15:57:37,683] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 15:57:38,528] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 15:57:38,939] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 15:58:05,888] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 15:58:06,330] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 15:58:07,183] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 15:58:07,592] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 15:58:11,560] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 16:01:02,432] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 16:01:03,774] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 16:01:04,297] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 16:01:45,061] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 16:01:46,578] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 16:01:46,977] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 16:04:16,140] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 16:04:16,270] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 16:04:17,495] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 16:04:19,986] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 16:04:55,787] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 16:04:56,159] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 16:04:57,084] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 16:04:57,422] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 16:07:21,225] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 16:07:22,682] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 16:07:23,237] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 16:08:31,797] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 16:08:33,263] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 16:08:33,731] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 16:09:28,889] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 16:09:28,948] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 16:09:30,264] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 16:09:30,287] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 16:10:16,579] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 16:10:17,567] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 16:10:17,954] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 16:10:18,804] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 16:10:56,402] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 16:10:57,705] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 16:10:59,341] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 16:11:01,884] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 16:11:22,422] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 16:11:23,617] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 16:11:24,367] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 16:12:09,557] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 16:12:09,608] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 16:12:10,745] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 16:12:10,809] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 16:13:30,636] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 16:13:31,087] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 16:13:31,945] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 16:13:32,338] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 16:15:06,919] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 16:15:07,295] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 16:15:08,265] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 16:15:08,608] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 16:16:14,061] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 16:16:14,219] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 16:16:15,332] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 16:16:15,470] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 16:22:23,520] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 16:22:23,904] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 16:22:24,809] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 16:22:25,186] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 16:24:31,535] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\https.py changed, reloading.
+INFO     [2024-10-31 16:24:32,984] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-10-31 16:24:33,531] [none] django.utils.autoreload: Watching for file changes with StatReloader

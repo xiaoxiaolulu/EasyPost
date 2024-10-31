@@ -1,5 +1,8 @@
 import django_filters.rest_framework as filters
-from api.models.report import Main, Detail
+from api.models.report import (
+    Main,
+    Detail
+)
 
 
 class ReportFilter(filters.FilterSet):
