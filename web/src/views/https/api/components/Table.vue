@@ -186,7 +186,7 @@ const add = () => {
   if (node && project) {
     router.push({
       name: "httpDetail",
-      query: {editType: 'save', project: project, node: node}
+      query: {editType: 'saveApi', project: project, node: node}
     });
   } else {
     ElMessage.error("项目未选择或未选择相关目录树节点, 无法添加接口!");
@@ -197,7 +197,7 @@ const editHandler = (row) => {
   if (row) {
     router.push({
       name: "httpDetail",
-      query: {editType: 'update', httpId: row.id}
+      query: {editType: 'updateApi', httpId: row.id}
     });
   } else {
     ElMessage.error("编辑接口异常请重试!");

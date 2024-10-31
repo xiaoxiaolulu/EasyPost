@@ -8,7 +8,7 @@
             @back="goBack"
           >
             <template #content>
-              <span style="padding-right: 10px;">{{ route.query.editType === "update" ? "更新" : "新增" }}</span>
+              <span style="padding-right: 10px;">{{ route.query.editType === "updateCase" ? "更新" : "新增" }}</span>
             </template>
           </CardHeader>
         </div>

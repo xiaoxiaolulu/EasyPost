@@ -8,7 +8,7 @@
             @back="goBack"
           >
             <template #content>
-              <span style="padding-right: 10px;">{{ route.query.editType === 'update' ? "更新" : "新增" }}</span>
+              <span style="padding-right: 10px;">{{ route.query.editType === 'updateApi' ? "更新" : "新增" }}</span>
             </template>
           </CardHeader>
         </div>
@@ -239,7 +239,7 @@ import RequestHeaders from "@/views/https/api/components/requestHeaders.vue";
 import Extract from "@/views/https/api/components/extract.vue";
 import Validator from "@/views/https/api/components/validator.vue";
 import ApiScript from "@/views/https/api/components/apiScript.vue";
-import {saveOrUpdate, runApi, getHttpDetail, httpSnapshot, getCaseStepDetail} from "@/api/http";
+import { saveOrUpdate, runApi, getHttpDetail, httpSnapshot, getCaseStepDetail, saveOrUpdateStep } from "@/api/http";
 import {showErrMessage} from "@/utils/element";
 import ResponseReport from "@/views/https/api/components/responseReport.vue";
 import CardHeader from "@/components/CardHeader/index.vue";
@@ -461,7 +461,8 @@ const onSureClick = (formName: FormInstance | undefined) => {
           validate: ApiRequestValidators,
           extract: ApiRequestExtractor
         }
-        const ret = await saveOrUpdate(apiData)
+        const condition = route.query.editType
+        const ret = condition == 'updateApi'?await saveOrUpdate(apiData):await saveOrUpdateStep(apiData)
         const {code, data, msg} = ret.data
         state.api_id = data.api_id
         showErrMessage(code.toString(), msg)

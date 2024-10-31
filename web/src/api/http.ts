@@ -114,6 +114,15 @@ export function getCaseStepDetail(data: any) {
     })
 }
 
+
+export function saveOrUpdateStep(data: any) {
+    return request({
+        url: `/api/case/step/saveOrUpdate/${data.id}`,
+        method: 'post',
+        data
+    })
+}
+
 export function planList(params: any) {
     return request({
         url: `/api/plan/list`,

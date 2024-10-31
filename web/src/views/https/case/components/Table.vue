@@ -153,7 +153,7 @@ const add = () => {
   if (node && project) {
     router.push({
       name: "caseDetail",
-      query: {editType: 'save', project: project, node: node}
+      query: {editType: 'saveCase', project: project, node: node}
     });
   } else {
     ElMessage.error("项目未选择或未选择相关目录树节点, 无法添加接口!");
@@ -164,7 +164,7 @@ const editHandler = (row) => {
   if (row) {
     router.push({
       name: "caseDetail",
-      query: {editType: 'update', caseId: row.id}
+      query: {editType: 'updateCase', caseId: row.id}
     });
   } else {
     ElMessage.error("编辑用例异常请重试!");
