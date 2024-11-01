@@ -1,3 +1,5 @@
+import sys
+
 import grpc
 from google.protobuf.json_format import MessageToDict
 from protos import (
@@ -34,3 +36,15 @@ class ApiRunServer(executor_pb2_grpc.ExecutorService):
         except Exception as err:
             context.set_code(grpc.StatusCode.FAILED_PRECONDITION)
             context.set_details(f'接口用例调试失败 {str(err)}!')
+
+    async def RunPlan(self, request: executor_pb2.PlanRequest, context):
+        try:
+
+            plan_data = MessageToDict(request).get("plans", None)
+            response = run_test(plan_data)
+            responses = executor_pb2.ExecutorResponse()
+            Parser.create_report(response, responses)
+            return responses
+        except Exception as err:
+            context.set_code(grpc.StatusCode.FAILED_PRECONDITION)
+            context.set_details(f'测试计划调试失败 {str(err)}!')

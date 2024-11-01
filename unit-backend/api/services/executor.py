@@ -49,3 +49,11 @@ class ExecutorServiceClient(metaclass=SingletonMeta):
             )
             response = await stub.RunCase(request)
             return response
+
+    async def run_plan(self, case_plan):
+        async with ExecutorStub() as stub:
+            request = executor_pb2.PlanRequest(
+                **case_plan
+            )
+            response = await stub.RunPlan(request)
+            return response

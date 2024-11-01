@@ -44,6 +44,10 @@ message CaseRequest {
   repeated ApiDocRequest cases = 2;
 }
 
+message PlanRequest {
+  repeated CaseRequest plans = 1;
+}
+
 message ValidateExtractor {
   string expected = 1;
   string methods = 2;
@@ -114,4 +118,5 @@ message ExecutorResponse{
 service ExecutorService{
   rpc RunApiDoc(ApiDocRequest) returns (ExecutorResponse);
   rpc RunCase(CaseRequest) returns (ExecutorResponse);
+  rpc RunPlan(PlanRequest) returns (ExecutorResponse);
 }

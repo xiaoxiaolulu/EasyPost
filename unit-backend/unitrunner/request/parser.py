@@ -513,4 +513,6 @@ class HandelTestData(object):
                 'cases': case_steps
             })
 
-        return plan_templates
+        return {
+            'plans': plan_templates
+        }

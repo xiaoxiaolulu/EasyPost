@@ -2,6 +2,7 @@
 DESCRIPTION：接口测试数据访问对象
 :Created by Null.
 """
+import asyncio
 import json
 import sys
 from typing import (
@@ -14,6 +15,7 @@ from django.db.models import (
     Model
 )
 from django.forms import model_to_dict
+from google.protobuf.json_format import MessageToDict
 from api.dao import executor_service_client
 from api.dao.report import ReportDao
 from api.emus import treesEnum
@@ -578,13 +580,13 @@ class HttpDao:
             runner = HandelTestData()
             case_list = cls.get_case_list(case)
             case_data = runner.get_plan_template(case_list)
-            result = run_test(case_data)
 
-            logger.debug(
-                f"--------  response info ----------\n"
-                f"{json.dumps(result, indent=4, ensure_ascii=False)}\n"
-                f"--------  response info ----------\n"
-            )
+            result = asyncio.run(executor_service_client.run_plan(case_data))
+            result = MessageToDict(result)
+
+            logger.debug(f"--------  response info ----------\n")
+            logger.debug(json.dumps(dict(result), ensure_ascii=False, indent=4))
+            logger.debug(f"--------  response info ----------\n")
 
             ReportDao.create_report(
                 plan_name=report_name,
