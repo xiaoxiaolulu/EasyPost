@@ -2,6 +2,8 @@
 DESCRIPTION：测试报告数据访问对象
 :Created by Null.
 """
+import sys
+
 from api.models.report import (
     Main,
     Detail,
@@ -142,18 +144,18 @@ class ReportDao:
                     sort=(index + 1),
                     detail=Detail.objects.get(id=model.id),
                     name=case_item.get('name', 'Demo'),
-                    log_data=case_item.get('log_data', []),
+                    log_data=case_item.get('logData', []),
                     url=case_item.get('url', ''),
                     method=case_item.get('method', ''),
-                    status_code=case_item.get('status_code', ''),
-                    response_header=case_item.get('response_header', ''),
-                    requests_header=case_item.get("requests_header", ''),
-                    response_body=case_item.get('response_body', ''),
-                    requests_body=case_item.get('requests_body', ''),
+                    status_code=case_item.get('statusCode', ''),
+                    response_header=case_item.get('responseHeader', ''),
+                    requests_header=case_item.get("requestsHeader", ''),
+                    response_body=case_item.get('responseBody', ''),
+                    requests_body=case_item.get('requestsBody', ''),
                     extras=case_item.get('extras', []),
-                    validate_extractor=case_item.get('validate_extractor', []),
+                    validate_extractor=case_item.get('validateExtractor', []),
                     state=case_item.get('state', ''),
-                    run_time=case_item.get('run_time', '')
+                    run_time=case_item.get('runTime', '')
                 )
         except Exception as err:
             logger.error(f"创建报告详情步骤数据失败 -> {err}")
@@ -174,8 +176,7 @@ class ReportDao:
         try:
             report_main = cls.parser_report_main(plan_name, result_list)
             report_obj = Main.objects.create(**report_main)
-
-            for class_item in result_list.get('class_list', []):
+            for class_item in result_list.get('classList', []):
                 detail_obj = cls.create_report_detail(report_obj, class_item)
                 cls.create_detail_step(class_item, detail_obj)
 

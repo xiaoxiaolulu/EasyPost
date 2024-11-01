@@ -3,14 +3,14 @@
     <div class="header-container">
       <div class="card-head-title">
         <div class="card-description">
-          <span class="el-icon-back" @click="goBack">
-            <el-icon>
-              <component :is="Back"/>
-            </el-icon>
-          </span>
-          <span class="page-header-heading-title">
-            {{ route.query.editType === 'update' ? "更新" : "新增" }}
-          </span>
+          <CardHeader
+            style="margin: 5px 0;"
+            @back="goBack"
+          >
+            <template #content>
+              <span style="padding-right: 10px;">{{ route.query.editType === "update" ? "更新" : "新增" }}</span>
+            </template>
+          </CardHeader>
         </div>
       </div>
     </div>
@@ -18,23 +18,24 @@
       <el-row :gutter="12">
         <el-col :span="6">
           <el-card style="height:100%;min-height: 600px;overflow:scroll;">
-            <template #header>
-              <div>
-                <span style="margin-right:8px;color: #7a8b9a"><el-icon><component :is="Odometer"/></el-icon></span>
-                <span style="font-size: 18px; color: #7a8b9a">计划配置</span>
-              </div>
-            </template>
+            <el-tabs v-model="PlanActiveName" style="overflow-y: auto">
+              <el-tab-pane name='PlanConfiguration'>
+                <template #label>
+                  <strong>计划配置</strong>
+                </template>
+              </el-tab-pane>
+            </el-tabs>
             <div>
               <el-form autoComplete="on" :model="state.form" :rules="rules" ref="ruleFormRef"
                        label-width="auto"
                        label-position="top"
                        size="small"
               >
-                <el-form-item label="用例名称：" prop="name" :required="true">
+                <el-form-item label="任务名称：" prop="name" :required="true">
                   <el-input v-model.trim="state.form.name"
                             style="width: 100%;"
                             size="small"
-                            placeholder="请输入用例名称"></el-input>
+                            placeholder="请输入任务名称"></el-input>
                 </el-form-item>
                 <el-form-item label="所属项目" :required="true" prop="project">
                   <el-select
@@ -50,7 +51,7 @@
                     </el-option>
                   </el-select>
                 </el-form-item>
-                <el-form-item label="优先级：" prop="priority" :required="true">
+                <el-form-item label="任务优先级：" prop="priority" :required="true">
                   <el-select v-model="state.form.priority" filterable placeholder="请选择接口优先级" size="small">
                     <el-option
                         v-for="item in priority"
@@ -87,71 +88,73 @@
         </el-col>
         <el-col :span="18">
           <el-card style="height:100%;min-height: 600px;overflow:scroll;">
-            <template #header>
-              <div>
-                <span style="font-size: 18px; color: #7a8b9a">用例配置</span>
-              </div>
-            </template>
-            <div>
-              <div style="margin-top: 15px">
-                <el-table
-                    :data="tableData"
-                    :header-cell-style="{ background: '#F2F3F8', color: '#1D2129' }"
-                    style="width: 100%"
-                    ref="dragTable"
-                    row-key="id"
-                    :show-header="false"
-                >
-                  <el-table-column width="30">
-                    <template #default>
+            <el-tabs v-model="PlanStepActiveName" style="overflow-y: auto">
+              <el-tab-pane name='FunctionalPlans'>
+                <template #label>
+                  <strong>测试场景</strong>
+                </template>
+                <div>
+                  <div style="margin-top: 15px">
+                    <el-table
+                      :data="tableData"
+                      :header-cell-style="{ background: '#F2F3F8', color: '#1D2129' }"
+                      style="width: 100%"
+                      ref="dragTable"
+                      row-key="id"
+                      :show-header="false"
+                    >
+                      <el-table-column width="30">
+                        <template #default>
                       <span
-                          :class="getStepTypeInfo('api','icon')" class="fab-icons move"
-                          :style="{color:getStepTypeInfo('api','color')}"
+                        :class="getStepTypeInfo('api','icon')" class="fab-icons move"
+                        :style="{color:getStepTypeInfo('api','color')}"
                       ></span>
-                    </template>
-                  </el-table-column>
-                  <el-table-column>
-                    <template #default="scope">
-                      <div>
+                        </template>
+                      </el-table-column>
+                      <el-table-column>
+                        <template #default="scope">
+                          <div>
                         <span class="opblock-summary-description">
                             {{ scope.row.name }}
                         </span>
-                      </div>
-                    </template>
-                  </el-table-column>
-                </el-table>
-                <el-dropdown :hide-on-click="false" style="width: 100%">
-                  <el-button size="small" style="width: 100%">
-                    <el-icon style="margin-right: 4px">
-                      <plus/>
-                    </el-icon>
-                    添加用例
-                  </el-button>
-                  <template #dropdown>
-                    <el-dropdown-menu>
-                      <el-dropdown-item v-for="(value, key)  in state.optTypes"
-                                        :key="key"
-                                        style="margin: 5px 0"
-                                        :style="{ color: getStepTypeInfo(key,'color')}"
-                                        @click="handleAddData(key)">
+                          </div>
+                        </template>
+                      </el-table-column>
+                    </el-table>
+                    <el-dropdown :hide-on-click="false" style="width: 100%">
+                      <el-button size="small" style="width: 100%">
+                        <el-icon style="margin-right: 4px">
+                          <plus/>
+                        </el-icon>
+                        添加用例
+                      </el-button>
+                      <template #dropdown>
+                        <el-dropdown-menu>
+                          <el-dropdown-item v-for="(value, key)  in state.optTypes"
+                                            :key="key"
+                                            style="margin: 5px 0"
+                                            :style="{ color: getStepTypeInfo(key,'color')}"
+                                            @click="handleAddData(key)">
 
-                        <i :class="getStepTypeInfo(key,'icon')" class="fab-icons"
-                           :style="{color:getStepTypeInfo(key,'color')}"></i>
-                        {{ value }}
-                      </el-dropdown-item>
-                    </el-dropdown-menu>
-                  </template>
-                </el-dropdown>
-              </div>
-            </div>
-            <step
-                ref="stepControllerRef"
-                use_type="case"
-                style="margin-bottom: 10px"
-                v-model="state.form.case_data"
-                @change="changeAction"
-            >
-            </step>
+                            <i :class="getStepTypeInfo(key,'icon')" class="fab-icons"
+                               :style="{color:getStepTypeInfo(key,'color')}"></i>
+                            {{ value }}
+                          </el-dropdown-item>
+                        </el-dropdown-menu>
+                      </template>
+                    </el-dropdown>
+                  </div>
+                </div>
+                <step
+                  ref="stepControllerRef"
+                  use_type="case"
+                  style="margin-bottom: 10px"
+                  v-model="state.form.case_data"
+                  @change="changeAction"
+                >
+                </step>
+              </el-tab-pane>
+            </el-tabs>
           </el-card>
         </el-col>
       </el-row>
@@ -171,6 +174,7 @@ import {getStepTypesByUse, getStepTypeInfo, parseTime} from '@/utils/index'
 import Step from "@/views/https/plan/components/step.vue";
 import Sortable from "sortablejs"
 import noCron from "@/components/no-cron/index.vue";
+import CardHeader from "@/components/CardHeader/index.vue";
 
 const route = useRoute()
 const router = useRouter()
@@ -181,6 +185,10 @@ const tableData = reactive([
 ])
 
 const loading = ref(false)
+
+const PlanActiveName = ref("PlanConfiguration");
+
+const PlanStepActiveName = ref("FunctionalPlans");
 
 const createForm = () => {
   return {

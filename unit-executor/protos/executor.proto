@@ -101,7 +101,7 @@ message ClassList{
   string state = 8;
 }
 
-message ExecutorResponse{
+message ExecutorResponse {
   int32 all = 1;
   int32 success = 2;
   int32 error = 3;
