@@ -5,7 +5,7 @@ import time
 import rsa
 from faker import Faker
 from common import exceptions
-from utils.time import *
+from common.attach.time import *
 
 __all__ = [
     "now_time",

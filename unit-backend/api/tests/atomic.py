@@ -17,14 +17,14 @@ from common.engine.bomb import AtomicBombEngine, performance
 #         increase_interval=3
 #     )
 #     validators = [{
-#         "jsonpath": "$.msg",
+#         "jsonpath": "$.message",
 #         "reference_object": "操作成功"
 #     }]
 #     runner = engine.run(data={
 #         "name": "test-1",
 #         "url": "https://www.baidu.com/",
 #         "method": "POST",
-#         "form_data": {"name": "{{api-test-msg-1}}", "number": "{{api-test-num}}"},
+#         "form_data": {"name": "{{api-test-message-1}}", "number": "{{api-test-num}}"},
 #         "validators": validators,
 #     })
 #     # runner = atomic_bomb_engine.BatchRunner()
@@ -41,10 +41,10 @@ from common.engine.bomb import AtomicBombEngine, performance
 #     #             name="test-1",
 #     #             url="https://www.baidu.com/",
 #     #             method="POST",
-#     #             form_data={"name": "{{api-test-msg-1}}", "number": "{{api-test-num}}"},
+#     #             form_data={"name": "{{api-test-message-1}}", "number": "{{api-test-num}}"},
 #     #             weight=100,
 #     #             assert_options=[
-#     #                 atomic_bomb_engine.assert_option(jsonpath="$.msg", reference_object="操作成功"),
+#     #                 atomic_bomb_engine.assert_option(jsonpath="$.message", reference_object="操作成功"),
 #     #             ],
 #     #         ),
 #     #     ])
@@ -56,9 +56,9 @@ if __name__ == '__main__':
         "name": "test-1",
         "url": "https://www.baidu.com/",
         "method": "POST",
-        "form_data": {"name": "{{api-test-msg-1}}", "number": "{{api-test-num}}"},
+        "form_data": {"name": "{{api-test-message-1}}", "number": "{{api-test-num}}"},
         "validators": [{
-            "jsonpath": "$.msg",
+            "jsonpath": "$.message",
             "reference_object": "操作成功"
         }],
     }

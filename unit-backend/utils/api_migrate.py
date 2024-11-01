@@ -12,7 +12,7 @@ from api.events.registry import registry
 from api.models.https import Api
 from api.models.project import Project
 from utils.logger import logger
-from utils.recursion import GetJsonParams
+from common.process.recursion import GetJsonParams
 
 
 def load(filepath):

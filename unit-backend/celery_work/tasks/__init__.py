@@ -20,7 +20,7 @@ async def batch_async():
         json={"name": "test-1", "number": 1},
         weight=100,
         assert_options=[
-          atomic_bomb_engine.assert_option(jsonpath="$.msg", reference_object="操作成功"),
+          atomic_bomb_engine.assert_option(jsonpath="$.message", reference_object="操作成功"),
         ],
       ),
     ])

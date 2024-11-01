@@ -13,7 +13,7 @@ from api.models.plan import Plan
 from api.models.report import Main
 from api.models.user import User
 from utils.logger import logger
-from utils import time
+from common.attach import time
 
 
 class DashboardDao:
