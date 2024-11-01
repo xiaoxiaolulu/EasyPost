@@ -4,20 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="feat: 步骤栏添加详情页">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="fix: 分离测试步骤与接口管理的数据，并根据不同的存储路径单独存储数据">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/dao/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/https.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/filters/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/filters/report.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/models/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/plan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/routers/case.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/routers/case.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/views/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views/https.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/t.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/t.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../unit-executor/logs/Unit-Executor.log" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/logs/Unit-Executor.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/layout/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/layout/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -549,23 +541,7 @@
       <workItem from="1728895744404" duration="65000" />
       <workItem from="1728898533972" duration="17095000" />
       <workItem from="1730358706607" duration="217000" />
-      <workItem from="1730359474223" duration="3271000" />
-    </task>
-    <task id="LOCAL-00420" summary="Update scheduler config and fix enum error.">
-      <option name="closed" value="true" />
-      <created>1716270986156</created>
-      <option name="number" value="00420" />
-      <option name="presentableId" value="LOCAL-00420" />
-      <option name="project" value="LOCAL" />
-      <updated>1716270986156</updated>
-    </task>
-    <task id="LOCAL-00421" summary="&quot;Remove unused API functions and fix file format issues&quot;">
-      <option name="closed" value="true" />
-      <created>1716271035285</created>
-      <option name="number" value="00421" />
-      <option name="presentableId" value="LOCAL-00421" />
-      <option name="project" value="LOCAL" />
-      <updated>1716271035285</updated>
+      <workItem from="1730359474223" duration="10536000" />
     </task>
     <task id="LOCAL-00422" summary="&quot;Remove unused API functions and fix file format issues&quot;">
       <option name="closed" value="true" />
@@ -943,7 +919,23 @@
       <option name="project" value="LOCAL" />
       <updated>1727602597773</updated>
     </task>
-    <option name="localTasksCounter" value="469" />
+    <task id="LOCAL-00469" summary="fix: 分离测试步骤与接口管理的数据，并根据不同的存储路径单独存储数据">
+      <option name="closed" value="true" />
+      <created>1730363225586</created>
+      <option name="number" value="00469" />
+      <option name="presentableId" value="LOCAL-00469" />
+      <option name="project" value="LOCAL" />
+      <updated>1730363225586</updated>
+    </task>
+    <task id="LOCAL-00470" summary="fix: 分离测试步骤与接口管理的数据，并根据不同的存储路径单独存储数据">
+      <option name="closed" value="true" />
+      <created>1730363312706</created>
+      <option name="number" value="00470" />
+      <option name="presentableId" value="LOCAL-00470" />
+      <option name="project" value="LOCAL" />
+      <updated>1730363312707</updated>
+    </task>
+    <option name="localTasksCounter" value="471" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -973,7 +965,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail model, added ellipsis utility, and modified related UI" />
     <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail model, added ellipsis utility, and modified related UI components" />
     <MESSAGE value="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail model, added ellipsis utility, and modified related UI components." />
     <MESSAGE value="feat: 服务注册与发现" />
@@ -998,7 +989,8 @@
     <MESSAGE value="style: 调整用例详情页基础布局" />
     <MESSAGE value="feat: 步骤栏添加删除功能" />
     <MESSAGE value="feat: 步骤栏添加详情页" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 步骤栏添加详情页" />
+    <MESSAGE value="fix: 分离测试步骤与接口管理的数据，并根据不同的存储路径单独存储数据" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: 分离测试步骤与接口管理的数据，并根据不同的存储路径单独存储数据" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

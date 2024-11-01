@@ -204,6 +204,14 @@ class CaseStepDetailView(MagicRetrieveApi):
     queryset = Step.objects.all()
     permission_classes = [IsAuthenticated]
 
+    def get_object(self):
+        queryset = self.get_queryset()
+        try:
+            obj = queryset.get(pk=self.kwargs['pk'])
+        except Step.DoesNotExist:
+            obj = Api.objects.get(pk=self.kwargs['pk'])
+        return obj
+
 
 class SaveOrUpdateStepView(APIView):
 

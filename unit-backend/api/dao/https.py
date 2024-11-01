@@ -201,16 +201,25 @@ class HttpDao:
             Exception: If an error occurs during data parsing.
         """
         api = HandelTestData(request.data)  # noqa
+        project = None
+        directory_id = None
 
-        if pk:
-            update_obj = models.objects.get(id=pk)
-            project = getattr(update_obj, 'project', None)
-            directory_id = getattr(update_obj, 'directory_id', None)
-        else:
-            project = models.objects.get(id=api.project)
-            directory_id = api.directory_id
+        try:
+            if pk:
+                update_obj = models.objects.get(id=pk)
+                project = getattr(update_obj, 'project', None)
+                directory_id = getattr(update_obj, 'directory_id', None)
+            else:
+                project = models.objects.get(id=api.project)
+                directory_id = api.directory_id
+
+        except (Exception, models.DoesNotExist):
+            # 当添加测试步骤 在接口面板中保存, 根据当前的接口主键查询不到数据,
+            # 则重新构建步骤的参数, 将数据存储在步骤表中
+            pass
 
         request_body = cls.parser_api_data_pattern(models, project, directory_id, api, request)
+
         try:
             return request_body
         except (Exception,) as err:
@@ -238,21 +247,75 @@ class HttpDao:
         try:
 
             if pk:
-                update_obj = models.objects.filter(id=pk)
-                request_body = cls.parser_api_data(request, pk=pk, models=models)
-                update_obj.update(**request_body)
-                update_pk = pk
+                update_pk = cls.update_api_or_step(pk, models, request)
             else:
-                request_body = cls.parser_api_data(request, models=models)
-                create_obj = models.objects.create(**request_body)
-                update_pk = create_obj.id
+                update_pk = cls.create_api_or_step(request, models)
 
             return update_pk
+        except (Exception, models.DoesNotExist):
+            update_pk = cls.create_api_or_step(request, models)
+            return update_pk
+
         except Exception as err:
             logger.debug(
                 f"🏓编辑测试接口数据失败 -> {err}"
             )
             raise Exception(f"{err} ❌")
+
+    @classmethod
+    def update_api_or_step(cls, pk, models, request):
+        """
+           Updates an existing API object or creates a new one if it doesn't exist.
+
+           Args:
+               pk: The primary key of the API object to update.
+               models: The model class representing the API object.
+               request: The Django request object containing the data to be updated.
+
+           Returns:
+               The primary key of the updated or created API object.
+
+           Raises:
+               ObjectDoesNotExist: If the API object with the given PK doesn't exist.
+               Exception: If an error occurs during the update or creation process.
+        """
+        try:
+            obj = models.objects.filter(id=pk)
+            request_body = cls.parser_api_data(request, pk=pk, models=models)
+            for key, value in request_body.items():
+                setattr(obj, key, value)
+            obj.save()
+            return pk
+        except models.DoesNotExist:
+            return cls.create_api_or_step(request, models)
+
+    @classmethod
+    def create_api_or_step(cls, request, models):
+        """
+           Creates a new API object or step in the specified model, handling potential validation errors.
+
+           Args:
+               cls: The class representing the current implementation.
+               request: The Django request object containing the data to be parsed.
+               models: The model class for the API object or step (e.g., models.API or models.Step).
+
+           Returns:
+               The primary key of the newly created object.
+
+           Raises:
+               ValidationError: If data validation fails during creation.
+               Exception: If a generic error occurs during creation.
+        """
+
+        try:
+            request_body = cls.parser_api_data(request, models=models)
+            create_obj = models.objects.create(**request_body)
+            update_pk = create_obj.id
+
+            return update_pk
+        except (models.DoesNotExist, Exception):
+
+            raise Exception(f"创建测试步骤或接口失败!")
 
     @classmethod
     async def run_api_doc(cls, api: dict):
