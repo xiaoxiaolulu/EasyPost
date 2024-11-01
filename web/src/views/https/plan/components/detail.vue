@@ -66,18 +66,28 @@
                             style="width: 100%;"
                             size="small">
                     <template #append>
-                      <el-popover v-model:visible="state.cronPopover" width="700px" trigger="manual">
-                        <no-cron
+                      <el-drawer
+                        v-model="state.cronPopover"
+                        size="38%"
+                        append-to-body
+                        direction="rtl"
+                        destroy-on-close
+                        :with-header="true">
+                        <template #header>
+                          <span>
+                            <strong class="pr10">运行周期</strong>
+                          </span>
+                        </template>
+                        <div style="height: 100%; overflow-y: auto">
+                          <no-cron
                             :cron-value="state.form.cron"
                             @change="changeCron"
                             @close="state.cronPopover=false"
-                            max-height="400px"
                             i18n="cn"
-                        ></no-cron>
-                        <template #reference>
-                          <el-button @click="state.cronPopover = !state.cronPopover">设置</el-button>
-                        </template>
-                      </el-popover>
+                          ></no-cron>
+                        </div>
+                      </el-drawer>
+                      <el-button @click="state.cronPopover = !state.cronPopover">设置</el-button>
                     </template>
                   </el-input>
                 </el-form-item>
@@ -175,6 +185,7 @@ import Step from "@/views/https/plan/components/step.vue";
 import Sortable from "sortablejs"
 import noCron from "@/components/no-cron/index.vue";
 import CardHeader from "@/components/CardHeader/index.vue";
+import CaseStepDetail from "@/views/record/build/components/caseStepDetail.vue";
 
 const route = useRoute()
 const router = useRouter()

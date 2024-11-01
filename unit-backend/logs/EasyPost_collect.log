@@ -989,3 +989,9 @@ INFO     [2024-11-01 17:05:06,772] [none] django.utils.autoreload: Watching for 
 INFO     [2024-11-01 17:05:25,878] [none] django.utils.autoreload: Watching for file changes with StatReloader
 INFO     [2024-11-01 17:09:54,226] [none] django.utils.autoreload: Watching for file changes with StatReloader
 INFO     [2024-11-01 17:11:58,372] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-11-01 17:13:41,734] [none] django.utils.autoreload: Watching for file changes with StatReloader
+WARNING  [2024-11-01 17:30:59,414] [355d0d3015da4cf787bedef9e6241557] django.request: Not Found: /api/plan/SaveOrUpdate/undefined
+WARNING  [2024-11-01 17:31:00,894] [060be4e8926344bcaf04560cdc041450] django.request: Not Found: /api/plan/SaveOrUpdate/undefined
+WARNING  [2024-11-01 17:31:02,863] [22452aa20f864dcb8e0e1ec71b5f1e08] django.request: Not Found: /api/plan/SaveOrUpdate/undefined
+WARNING  [2024-11-01 17:31:03,037] [a718d74577664853adc3c0cdfd797830] django.request: Not Found: /api/plan/SaveOrUpdate/undefined
+WARNING  [2024-11-01 17:31:03,227] [96294050aed64981b013e586b80cbb9f] django.request: Not Found: /api/plan/SaveOrUpdate/undefined

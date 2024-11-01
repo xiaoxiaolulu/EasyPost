@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="fixed: 定时任务异步调用微服务报错修复">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/dao/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/report.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../unit-executor/logs/Unit-Executor.log" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/logs/Unit-Executor.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../unit-executor/protos/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/protos/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../unit-executor/protos/executor.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/protos/executor.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/src/views/https/plan/components/detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/plan/components/detail.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -544,15 +540,7 @@
       <workItem from="1728895744404" duration="65000" />
       <workItem from="1728898533972" duration="17095000" />
       <workItem from="1730358706607" duration="217000" />
-      <workItem from="1730359474223" duration="22794000" />
-    </task>
-    <task id="LOCAL-00425" summary="&quot;Remove unused enum files, add websocket URL pattern, update atomic test and DBClient execution in unit test runner, add performance consumer for websocket&quot;">
-      <option name="closed" value="true" />
-      <created>1716972536724</created>
-      <option name="number" value="00425" />
-      <option name="presentableId" value="LOCAL-00425" />
-      <option name="project" value="LOCAL" />
-      <updated>1716972536724</updated>
+      <workItem from="1730359474223" duration="24436000" />
     </task>
     <task id="LOCAL-00426" summary="Updated test case and report models, added new fields and methods for test execution and extraction.">
       <option name="closed" value="true" />
@@ -938,7 +926,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730444145759</updated>
     </task>
-    <option name="localTasksCounter" value="474" />
+    <task id="LOCAL-00474" summary="fixed: 定时任务异步调用微服务报错修复">
+      <option name="closed" value="true" />
+      <created>1730452391651</created>
+      <option name="number" value="00474" />
+      <option name="presentableId" value="LOCAL-00474" />
+      <option name="project" value="LOCAL" />
+      <updated>1730452391651</updated>
+    </task>
+    <option name="localTasksCounter" value="475" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
