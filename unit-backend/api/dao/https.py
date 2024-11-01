@@ -220,13 +220,7 @@ class HttpDao:
 
         request_body = cls.parser_api_data_pattern(models, project, directory_id, api, request)
 
-        try:
-            return request_body
-        except (Exception,) as err:
-            logger.debug(
-                f"🏓解析测试接口数据失败 -> {err}"
-            )
-            raise Exception("解析测试接口失败❌")
+        return request_body
 
     @classmethod
     def create_or_update_api(cls, request: Any, pk, models: Model):
