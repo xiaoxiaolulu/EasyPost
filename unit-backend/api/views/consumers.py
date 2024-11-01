@@ -3,7 +3,7 @@ import time
 import websockets
 from channels.generic.websocket import AsyncWebsocketConsumer
 from django.core.exceptions import SuspiciousOperation
-from unitrunner.engine.bomb import performance
+from common.engine.bomb import performance
 from utils.logger import logger
 
 

@@ -1,5 +1,5 @@
 import requests
-from unitrunner import exceptions
+from common import exceptions
 from utils.logger import logger
 
 

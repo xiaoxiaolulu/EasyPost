@@ -2,7 +2,7 @@ import asyncio
 import time
 import atomic_bomb_engine
 from atomic_bomb_engine import server
-from unitrunner.engine.bomb import AtomicBombEngine, performance
+from common.engine.bomb import AtomicBombEngine, performance
 
 
 # @server.ui(port=8880)

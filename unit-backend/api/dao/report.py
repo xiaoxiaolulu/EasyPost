@@ -2,8 +2,6 @@
 DESCRIPTION：测试报告数据访问对象
 :Created by Null.
 """
-import sys
-
 from api.models.report import (
     Main,
     Detail,

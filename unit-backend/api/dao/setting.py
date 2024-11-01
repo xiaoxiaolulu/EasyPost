@@ -26,8 +26,8 @@ from api.models.setting import (
 )
 from api.response.fatcory import ResponseStandard
 from config.settings import BASE_DIR
-from unitrunner.database.DBClient import DBMysql
-from unitrunner import builitin
+from common.database.DBClient import DBMysql
+from common import builitin
 from utils.encoder import parse_string_value
 from utils.logger import logger
 
@@ -95,7 +95,7 @@ class SettingDao:
             cannot be read due to errors.
         """
 
-        func_path = os.path.join(BASE_DIR, 'unitrunner', 'builitin', 'functions.py')
+        func_path = os.path.join(BASE_DIR, 'common', 'builitin', 'functions.py')
 
         try:
             with open(func_path, encoding='utf8') as file:

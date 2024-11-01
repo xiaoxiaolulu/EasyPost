@@ -1,6 +1,6 @@
 import MySQLdb
 from api.response.fatcory import ResponseStandard
-from unitrunner import exceptions
+from common import exceptions
 from utils.logger import logger as log
 
 

@@ -4,7 +4,6 @@ DESCRIPTION：接口测试数据访问对象
 """
 import asyncio
 import json
-import sys
 from typing import (
     Any,
     List
@@ -25,17 +24,12 @@ from api.emus.HttpEnum import (
 )
 from api.models.https import (
     Relation,
-    Api,
     Case,
     Step,
     ApiCopy
 )
 from api.models.project import Project
-from unitrunner.engine.base import (
-    run_test,
-    run_api
-)
-from unitrunner.request.parser import HandelTestData
+from common.request.parser import HandelTestData
 from utils.decorator import lock
 from utils.logger import logger
 from utils.trees import (

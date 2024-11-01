@@ -4,11 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="fixed: 定时任务异步调用微服务报错修复">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="fix: 页面调整">
+      <change beforePath="$PROJECT_DIR$/api/dao/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/https.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/plan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/setting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/tests/atomic.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/tests/atomic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/tests/engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/tests/engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/views/consumers.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views/consumers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/https/plan/components/detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/plan/components/detail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/builitin/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/builitin/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/builitin/compares.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/builitin/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/builitin/functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/constructor/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/constructor/create_function.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/database/DBClient.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/database/DBClient.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/database/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/database/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/engine/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/msg/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/engine/base.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/engine/bomb.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/engine/engine.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/engine/env.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/engine/extract.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/engine/log.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/engine/paramster.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/engine/runner.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/exceptions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/models/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/models/report.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/models/step.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/msg/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/request/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/msg/dingtalk.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/msg/dingtalk.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/msg/feishu.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/msg/feishu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/msg/webhook.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/msg/webhook.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/msg/weixin.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/msg/weixin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/request/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/request/http.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unitrunner/request/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/request/parser.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -540,15 +573,7 @@
       <workItem from="1728895744404" duration="65000" />
       <workItem from="1728898533972" duration="17095000" />
       <workItem from="1730358706607" duration="217000" />
-      <workItem from="1730359474223" duration="24436000" />
-    </task>
-    <task id="LOCAL-00426" summary="Updated test case and report models, added new fields and methods for test execution and extraction.">
-      <option name="closed" value="true" />
-      <created>1716977468984</created>
-      <option name="number" value="00426" />
-      <option name="presentableId" value="LOCAL-00426" />
-      <option name="project" value="LOCAL" />
-      <updated>1716977468984</updated>
+      <workItem from="1730359474223" duration="25069000" />
     </task>
     <task id="LOCAL-00427" summary="&quot;Remove step implementation, update test case structure, and improve code readability.&quot;">
       <option name="closed" value="true" />
@@ -934,7 +959,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730452391651</updated>
     </task>
-    <option name="localTasksCounter" value="475" />
+    <task id="LOCAL-00475" summary="fix: 页面调整">
+      <option name="closed" value="true" />
+      <created>1730455025867</created>
+      <option name="number" value="00475" />
+      <option name="presentableId" value="LOCAL-00475" />
+      <option name="project" value="LOCAL" />
+      <updated>1730455025867</updated>
+    </task>
+    <option name="localTasksCounter" value="476" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -964,7 +997,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: 服务注册与发现" />
     <MESSAGE value="style: 修改视图目录" />
     <MESSAGE value="feat: 用例执行器客户端封装" />
     <MESSAGE value="style: 执行器服务发现代码调整" />
@@ -989,7 +1021,8 @@
     <MESSAGE value="fix: 分离测试步骤与接口管理的数据，并根据不同的存储路径单独存储数据" />
     <MESSAGE value="fix: 当首次选择接口管理中的数据添加步骤后在接口面板中点击保存，根据接口主键在步骤表中查询不到数据，则重新创建新的步骤" />
     <MESSAGE value="fixed: 定时任务异步调用微服务报错修复" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed: 定时任务异步调用微服务报错修复" />
+    <MESSAGE value="fix: 页面调整" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: 页面调整" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
