@@ -30,7 +30,7 @@ from api.models.https import (
 )
 from api.models.project import Project
 from common.process.parser import HandelTestData
-from utils.decorator import lock
+from common.attach.decorator import lock
 from utils.logger import logger
 from common.process.trees import (
     collections_directory_id,
