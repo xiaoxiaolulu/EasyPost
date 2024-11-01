@@ -11,7 +11,7 @@ from api.models.plan import Plan
 from api.models.project import Project
 from api.response.fatcory import ResponseStandard
 from api.scheduler.scheduler import Scheduler
-from common.request.parser import HandelTestData
+from common.process.parser import HandelTestData
 from utils.logger import logger
 
 
@@ -20,10 +20,10 @@ class PlanDao:
     @staticmethod
     def parser_plan_data(request: Any, pk=None):
         """
-        Parses test plan data from a request object and project ID (optional for update).
+        Parses test plan data from a process object and project ID (optional for update).
 
         Args:
-            request: The Django request object containing the data to be parsed.
+            request: The Django process object containing the data to be parsed.
             pk (int, optional): The primary key of the plan for update (if provided).
 
         Returns:
@@ -67,7 +67,7 @@ class PlanDao:
         Creates a new test plan or updates an existing one based on the provided data.
 
         Args:
-            request: The Django request object containing the data to be used.
+            request: The Django process object containing the data to be used.
             pk (int): The primary key of the plan to update (if provided).
 
         Returns:

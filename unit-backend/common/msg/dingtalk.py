@@ -19,7 +19,7 @@ class DingTalk:
 
         Args:
             url (str): The URL of the DingTalk notification endpoint.
-            data (dict): The data to be sent in the request body (usually JSON format).
+            data (dict): The data to be sent in the process body (usually JSON format).
             secret (str, optional): The secret key for signing requests. Defaults to None.
         """
         self.url = url
@@ -56,7 +56,7 @@ class DingTalk:
             requests.Response: The response object from the API call.
 
         Raises:
-            requests.exceptions.RequestException: If the API request fails.
+            requests.exceptions.RequestException: If the API process fails.
         """
         if self.secret:
             params = self.get_stamp()

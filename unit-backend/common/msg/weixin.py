@@ -15,7 +15,7 @@ class WeiXin:
 
         Args:
             base_url (str): The base URL of the WeChat Enterprise API endpoint.
-            data (dict): The data to be sent in the request body (usually JSON format).
+            data (dict): The data to be sent in the process body (usually JSON format).
             access_token (str, optional): A pre-obtained access token. Defaults to None.
             corpid (str, optional): The corpid of your WeChat Enterprise account. Defaults to None.
             corpsecret (str, optional): The corpsecret of your WeChat Enterprise account. Defaults to None.
@@ -48,7 +48,7 @@ class WeiXin:
             str: The newly obtained access token.
 
         Raises:
-            ValueError: If the API request fails or returns an error code.
+            ValueError: If the API process fails or returns an error code.
         """
         url = "https://qyapi.weixin.qq.com/cgi-bin/gettoken"
         params = {
@@ -66,7 +66,7 @@ class WeiXin:
         """
         Sends data to the specified WeChat Enterprise API endpoint.
 
-        Uses the stored access token to authenticate the request.
+        Uses the stored access token to authenticate the process.
 
         Args:
             None
@@ -75,7 +75,7 @@ class WeiXin:
             requests.Response: The response object from the API call.
 
         Raises:
-            requests.exceptions.RequestException: If the API request fails.
+            requests.exceptions.RequestException: If the API process fails.
         """
         url = f"{self.base_url}?{self.access_token}"
         response = requests.post(url, json=self.data)

@@ -29,7 +29,7 @@ from api.models.https import (
     ApiCopy
 )
 from api.models.project import Project
-from common.request.parser import HandelTestData
+from common.process.parser import HandelTestData
 from utils.decorator import lock
 from utils.logger import logger
 from utils.trees import (
@@ -139,14 +139,14 @@ class HttpDao:
     @staticmethod
     def parser_api_data_pattern(models, project, directory_id, handel, request) -> dict:
         """
-        Parses API data from a model instance (`models`), project, directory ID, handler object (`handel`), and request object (`request`).
+        Parses API data from a model instance (`models`), project, directory ID, handler object (`handel`), and process object (`process`).
 
         Args:
             models: The model class representing the API data.
             project: The project name associated with the API data.
             directory_id: The directory ID for the API data (if applicable).
             handel: A handler object containing various API data attributes.
-            request: The request object containing user information.
+            request: The process object containing user information.
 
         Returns:
             A dictionary containing the parsed API data.
@@ -184,10 +184,10 @@ class HttpDao:
     @classmethod
     def parser_api_data(cls, request: Any, pk=None, models=None):
         """
-        Parses test API data from a request object and project ID (optional for update).
+        Parses test API data from a process object and project ID (optional for update).
 
         Args:
-            request: The Django request object containing the data to be parsed.
+            request: The Django process object containing the data to be parsed.
             pk (int, optional): The primary key of the API object for update (if provided).
             models
         Returns:
@@ -224,7 +224,7 @@ class HttpDao:
         Creates a new API object or updates an existing one based on provided data.
 
         Args:
-            request: The Django request object containing the API data.
+            request: The Django process object containing the API data.
             pk (int): The primary key of the API object to update (if provided).
             models:
 
@@ -260,7 +260,7 @@ class HttpDao:
            Args:
                pk: The primary key of the API object to update.
                models: The model class representing the API object.
-               request: The Django request object containing the data to be updated.
+               request: The Django process object containing the data to be updated.
 
            Returns:
                The primary key of the updated or created API object.
@@ -286,7 +286,7 @@ class HttpDao:
 
            Args:
                cls: The class representing the current implementation.
-               request: The Django request object containing the data to be parsed.
+               request: The Django process object containing the data to be parsed.
                models: The model class for the API object or step (e.g., models.API or models.Step).
 
            Returns:
@@ -405,7 +405,7 @@ class HttpDao:
         Creates a new test case or updates an existing one based on provided data and associated steps.
 
         Args:
-            request (Any): The Django request object containing the case data.
+            request (Any): The Django process object containing the case data.
             pk (int, optional): The primary key of the test case to update (if provided).
 
         Returns:
@@ -446,10 +446,10 @@ class HttpDao:
     @staticmethod
     def parser_case_data(request: Any, pk=None):
         """
-        Parses test case data and associated step data from a request object.
+        Parses test case data and associated step data from a process object.
 
         Args:
-            request (Any): The Django request object containing the test case data.
+            request (Any): The Django process object containing the test case data.
             pk (int, optional): The primary key of the test case to update (if provided).
 
         Returns:
@@ -600,7 +600,7 @@ class HttpDao:
         Creates an API snapshot asynchronously, managing a maximum of 100 snapshots per user.
 
         Args:
-            request (Any): The request object containing API data.
+            request (Any): The process object containing API data.
 
         Raises:
             Exception: If an error occurs during snapshot creation.
@@ -622,7 +622,7 @@ class HttpDao:
             raise Exception(f"{e} ❌")
 
     # @staticmethod
-    # def import_api_docs(request, pk, filepath, files, import_type):
+    # def import_api_docs(process, pk, filepath, files, import_type):
     #
     #     if not pk:
     #         raise ValueError("Invalid api docs PK provided.")
@@ -644,7 +644,7 @@ class HttpDao:
     #             raise ValueError(f"Invalid import type: {import_type}")
     #
     #         migrator = DataMigrator(import_objects, UitRunnerSource())
-    #         migrator.migrate(filename=filepath, request=request, pk=pk, type=import_type)
+    #         migrator.migrate(filename=filepath, process=process, pk=pk, type=import_type)
     #
     #     except (FileNotFoundError, PermissionError, FileExistsError) as e:
     #         logger.error(f"{e}")

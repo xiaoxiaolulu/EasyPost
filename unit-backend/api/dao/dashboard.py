@@ -360,12 +360,12 @@ class DashboardDao:
         """
         Retrieves the last login timestamp for the currently logged-in user.
 
-        This function extracts the user's primary key from the request object
+        This function extracts the user's primary key from the process object
         and uses it to fetch the corresponding user record from the `User` model.
         It then returns the `last_login_time` attribute from the retrieved user object.
 
         Parameters:
-            request: The HTTP request object containing user information.
+            request: The HTTP process object containing user information.
 
         Returns:
             datetime: The last login timestamp for the current user, or None if an error occurs.
@@ -390,11 +390,11 @@ class DashboardDao:
 
         This function assumes that the `ip_address` field is present on the `User`
          model and that it stores the user's IP address. It extracts the user's
-          primary key from the request object and uses it to fetch the corresponding
+          primary key from the process object and uses it to fetch the corresponding
            user record. It then returns the `ip_address` attribute from the retrieved user object.
 
         Parameters:
-            request: The HTTP request object containing user information.
+            request: The HTTP process object containing user information.
 
         Returns:
             str: The IP address associated with the current user, or None if an error occurs.
@@ -416,11 +416,11 @@ class DashboardDao:
         """
         Retrieves the username of the currently logged-in user.
 
-        This function assumes that the `username` attribute is accessible on the request
+        This function assumes that the `username` attribute is accessible on the process
         object and contains the user's username. It directly returns the `username` attribute.
 
         Parameters:
-            request: The HTTP request object containing user information.
+            request: The HTTP process object containing user information.
 
         Returns:
             str: The username of the current user, or None if an error occurs.
@@ -479,23 +479,23 @@ class DashboardDao:
         Generates a summary dictionary containing user and unit statistics for the dashboard.
 
         This function retrieves various information related to the currently logged-in user
-         (if `request` is provided) and unit-level statistics for the dashboard. It calls helper methods to:
+         (if `process` is provided) and unit-level statistics for the dashboard. It calls helper methods to:
 
-        - Get username (if request object is available).
-        - Get user's IP address (if request object is available).
-        - Get the user's last login timestamp (if request object is available).
+        - Get username (if process object is available).
+        - Get user's IP address (if process object is available).
+        - Get the user's last login timestamp (if process object is available).
         - Retrieve unit statistics like API/case counts and their increments.
 
         The retrieved information is then combined into a dictionary for easier access and representation.
 
         Parameters:
-            request (optional): The HTTP request object containing user information.
+            request (optional): The HTTP process object containing user information.
 
         Returns:
             dict: A dictionary containing user and unit statistics. Keys include:
-                - "username": Username of the logged-in user (if request provided).
-                - "ip_address": IP address of the logged-in user (if request provided).
-                - "last_login": Last login timestamp of the logged-in user (if request provided).
+                - "username": Username of the logged-in user (if process provided).
+                - "ip_address": IP address of the logged-in user (if process provided).
+                - "last_login": Last login timestamp of the logged-in user (if process provided).
                 - "unit_statistics": A dictionary containing various unit statistics for the dashboard
                 (refer to `get_unit_statistics` docstring for details).
 

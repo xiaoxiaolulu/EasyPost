@@ -113,7 +113,7 @@ def build_async_tracer(
         uuid: The id of the task.
         args: List of positional args to pass on to the function.
         kwargs: Keyword arguments mapping to pass on to the function.
-        request: Request dict.
+        process: Request dict.
     """
 
     # pylint: disable=too-many-statements

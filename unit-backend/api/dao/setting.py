@@ -409,7 +409,7 @@ class SettingDao:
         """Binds database configurations to a specific test environment.
 
         Args:
-            request (HttpRequest): The Django request object.
+            request (HttpRequest): The Django process object.
             environment_pk (int): The primary key of the TestEnvironment object.
 
         Raises:
@@ -452,7 +452,7 @@ class SettingDao:
         """Saves test environment data.
 
         Args:
-            request (HttpRequest): The Django request object.
+            request (HttpRequest): The Django process object.
             pk (int): The primary key of the TestEnvironment object (or None for creation).
 
         Returns:
@@ -497,7 +497,7 @@ class SettingDao:
         Saves or updates a Notice object based on the provided data.
 
         Args:
-            request (Any): The Django request object containing form data.
+            request (Any): The Django process object containing form data.
             pk (int, optional): The primary key of the Notice object to update. Defaults to None (create new).
 
         Returns:

@@ -12,7 +12,7 @@ class HandelTestData(object):
 
     def __init__(self, request_body: Dict = None) -> None:
         """
-        Initializes the object attributes based on a provided request body dictionary.
+        Initializes the object attributes based on a provided process body dictionary.
 
         This method is the constructor for the class. It takes an optional
         `request_body` dictionary and attempts to assign its values to corresponding
@@ -33,7 +33,7 @@ class HandelTestData(object):
                 - desc (str, optional): Description of the API or test case.
 
                 - headers (List[Dict], optional): Request headers (converted to JSON string).
-                - raw (Dict, optional): Raw request data (converted to JSON string).
+                - raw (Dict, optional): Raw process data (converted to JSON string).
                 - params (List, optional): URL parameters (converted to JSON string).
                 - setup_script (str, optional): Setup script for the API call/test case.
                 - teardown_script (str, optional): Teardown script for the API call/test case.
@@ -403,7 +403,7 @@ class HandelTestData(object):
             # "threads": int(self.threads),  # Number of threads for concurrent execution (optional)
             # "iterations": int(self.iterations),  # Number of iterations to run (optional)
             "headers": self.resolve_headers(self.headers),
-            "request": self.raw_conversion(self.raw),
+            "process": self.raw_conversion(self.raw),
             'setup_script': self.resolve_script(setup_script=self.setup_script),
             'teardown_script': self.resolve_script(use='teardown_script', teardown_script=self.teardown_script),
             'extract': self.resolve_extract(extract=self.extract),
@@ -436,7 +436,7 @@ class HandelTestData(object):
                 "method": step.get('method', None)
             },
             "headers": self.resolve_headers(step.get('headers', [])),
-            "request": self.raw_conversion(step.get('raw', {})),
+            "process": self.raw_conversion(step.get('raw', {})),
             'setup_script': self.resolve_script(setup_script=step.get('setup_script', None)),
             'teardown_script': self.resolve_script(use='teardown_script',
                                                    teardown_script=step.get('teardown_script', None)),

@@ -88,7 +88,7 @@ class SwaggerDataSource(DataSource):
         Args:
             t_collection (dict): The overall test collection data.
             main (dict): The main test case data for the current path.
-            severs (dict): (Optional) Servers dictionary for request servers.
+            severs (dict): (Optional) Servers dictionary for process servers.
             item (str): The API endpoint name (key) from the collection.
 
         Returns:
@@ -105,14 +105,14 @@ class SwaggerDataSource(DataSource):
 
     def make_request_body(self, t_collection, main):
         """
-        Constructs the request body based on content type and data from test collection.
+        Constructs the process body based on content type and data from test collection.
 
         Args:
             test_collection (dict): The overall test collection data.
             main (dict): The main test case data for the current path.
 
         Returns:
-            dict: A dictionary representing the request body structure.
+            dict: A dictionary representing the process body structure.
 
         Raises:
             ValueError: If an unsupported content type is encountered.
@@ -132,14 +132,14 @@ class SwaggerDataSource(DataSource):
     @staticmethod
     def make_request_content(t_collection, main):
         """
-        Extracts request content parameters from test case data.
+        Extracts process content parameters from test case data.
 
         Args:
             t_collection (dict): The overall test collection data.
             main (dict): The main test case data for the current path.
 
         Returns:
-            list: A list of dictionaries representing request content parameters.
+            list: A list of dictionaries representing process content parameters.
 
         Raises:
             KeyError: If a required key is missing in the test data.
@@ -163,23 +163,23 @@ class SwaggerDataSource(DataSource):
                     for k, v in GetJsonParams.get_value(parameters, "properties").items()
                 ]
             except (KeyError, AttributeError):
-                raise KeyError("Missing or invalid request content data")
+                raise KeyError("Missing or invalid process content data")
 
         return parameters
 
     @staticmethod
     def make_request_method(main):
         """
-        Extracts the HTTP request method from the main test case data.
+        Extracts the HTTP process method from the main test case data.
 
         Args:
             main (dict): The main test case data for the current path.
 
         Returns:
-            str: The HTTP request method (e.g., GET, POST).
+            str: The HTTP process method (e.g., GET, POST).
 
         Raises:
-            KeyError: If the main data doesn't contain a request method.
+            KeyError: If the main data doesn't contain a process method.
         """
         method = list(main.keys()).pop()
         return method
@@ -227,13 +227,13 @@ class SwaggerDataSource(DataSource):
     @staticmethod
     def make_request_headers(main):
         """
-        Constructs request headers, primarily focusing on the Content-Type header.
+        Constructs process headers, primarily focusing on the Content-Type header.
 
         Args:
             main (dict): The main test case data for the current path.
 
         Returns:
-            list: A list of dictionaries representing request headers.
+            list: A list of dictionaries representing process headers.
         """
         try:
             header_value = GetJsonParams.get_value(main, 'consumes').pop()
@@ -246,14 +246,14 @@ class SwaggerDataSource(DataSource):
     @staticmethod
     def make_request_url(severs, item):
         """
-        Constructs the complete request URL by combining base URL and API endpoint path.
+        Constructs the complete process URL by combining base URL and API endpoint path.
 
         Args:
             severs (str): The base URL for requests (potentially from servers dictionary).
             item (str): The API endpoint path (key) from the test collection.
 
         Returns:
-            str: The complete and validated request URL.
+            str: The complete and validated process URL.
 
         Raises:
             ValueError: If the URL parsing fails.
@@ -348,16 +348,16 @@ class PostManDataSource(DataSource):
 
     def make_request_body(self, item):
         """
-        Constructs the request body based on the body definition in the test item.
+        Constructs the process body based on the body definition in the test item.
 
         Args:
             item (dict): A dictionary representing a test item from the test collection.
 
         Returns:
-            dict: A dictionary representing the request body structure.
+            dict: A dictionary representing the process body structure.
 
         Raises:
-            ValueError: If an unsupported request body mode is encountered.
+            ValueError: If an unsupported process body mode is encountered.
         """
 
         request_body = GetJsonParams.get_value(item, 'body')
@@ -374,15 +374,15 @@ class PostManDataSource(DataSource):
             body_mode = request_body.get('mode')
             build_body_func = body_builders.get(body_mode)
 
-            # Validate and build the request body using the appropriate function
+            # Validate and build the process body using the appropriate function
             if build_body_func:
                 return build_body_func(request_body)
             else:
-                raise ValueError(f"Unsupported request body mode: {body_mode}")
+                raise ValueError(f"Unsupported process body mode: {body_mode}")
 
         except (AttributeError, KeyError) as e:
             # Handle potential errors like missing keys or attributes
-            logger.warning(f"Error processing request body data: {e}")
+            logger.warning(f"Error processing process body data: {e}")
             return {"data": {}}
 
     @staticmethod
@@ -391,7 +391,7 @@ class PostManDataSource(DataSource):
         Builds a dictionary representing form data based on the provided data.
 
         Args:
-            request_body (dict): The request body dictionary containing form data information.
+            request_body (dict): The process body dictionary containing form data information.
 
         Returns:
             dict: A dictionary representing the form data structure.
@@ -403,13 +403,13 @@ class PostManDataSource(DataSource):
     @staticmethod
     def _build_raw_body(request_body):
         """
-        Builds a dictionary representing a raw request body based on the provided data.
+        Builds a dictionary representing a raw process body based on the provided data.
 
         Args:
-            request_body (dict): The request body dictionary containing raw data.
+            request_body (dict): The process body dictionary containing raw data.
 
         Returns:
-            dict: A dictionary representing the raw request body structure.
+            dict: A dictionary representing the raw process body structure.
         """
 
         return {"json": {request_body.get("raw")}}
@@ -431,13 +431,13 @@ class PostManDataSource(DataSource):
     @staticmethod
     def make_request_method(item):
         """
-        Extracts the request method from the test item.
+        Extracts the process method from the test item.
 
         Args:
             item (dict): A dictionary representing a test item from the test collection.
 
         Returns:
-            str: The request method (e.g., GET, POST, etc.).
+            str: The process method (e.g., GET, POST, etc.).
         """
         method = GetJsonParams.get_value(item, 'method')
         return method
@@ -445,13 +445,13 @@ class PostManDataSource(DataSource):
     @staticmethod
     def make_request_url(item):
         """
-        Extracts the request URL from the test item.
+        Extracts the process URL from the test item.
 
         Args:
             item (dict): A dictionary representing a test item from the test collection.
 
         Returns:
-            str: The request URL.
+            str: The process URL.
         """
         url = GetJsonParams.get_value(item, 'url').get('raw', '')
         return url
@@ -459,13 +459,13 @@ class PostManDataSource(DataSource):
     @staticmethod
     def make_request_headers(item):
         """
-        Constructs request headers based on the header definition in the test item.
+        Constructs process headers based on the header definition in the test item.
 
         Args:
             item (dict): A dictionary representing a test item from the test collection.
 
         Returns:
-            list: A list of dictionaries representing request headers (empty list if no headers defined).
+            list: A list of dictionaries representing process headers (empty list if no headers defined).
         """
 
         try:
@@ -479,7 +479,7 @@ class PostManDataSource(DataSource):
                 return headers
 
         except AttributeError as e:
-            logger.warning(f"Error processing request header data: {e}")
+            logger.warning(f"Error processing process header data: {e}")
 
         return []
 
@@ -537,7 +537,7 @@ class UitRunnerSource(DataSource):
                     validate="",
                     extract="",
                     source=ctx.get("type"),
-                    user=ctx.get('request').user
+                    user=ctx.get('process').user
                 )
 
             except (Api.DoesNotExist, Project.DoesNotExist) as e:
@@ -560,7 +560,7 @@ class DataMigrator:
         Args:
             type: file type to migrate
             filename: filepath
-            request (HttpRequest, optional): The Django request object (if applicable).
+            request (HttpRequest, optional): The Django process object (if applicable).
             pk (int, optional): Primary key of the project (if applicable).
 
         Raises:
@@ -570,9 +570,9 @@ class DataMigrator:
         try:
             # Read test case data from the source (assuming 'middle.json')
             ctx = self.source.read(filename)
-            # Add request and pk information to each context dictionary
+            # Add process and pk information to each context dictionary
             ctx = [
-                {**c, **{'request': request, 'pk': pk, "type": type}} for c in ctx
+                {**c, **{'process': request, 'pk': pk, "type": type}} for c in ctx
             ]
 
             self.target.write(ctx)

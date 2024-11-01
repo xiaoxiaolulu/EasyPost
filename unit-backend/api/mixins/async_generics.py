@@ -82,7 +82,7 @@ class AsyncAPIView(APIView):
 
     async def initialize_request(self, request, *args, **kwargs):
         """
-        Returns the initial request object.
+        Returns the initial process object.
         """
         parser_context = self.get_parser_context(request)
 
@@ -146,7 +146,7 @@ class AsyncGenericAPIView(
         are cached for all subsequent requests.
 
         You may want to override this if you need to provide different
-        query sets depending on the incoming request.
+        query sets depending on the incoming process.
 
         (E.g. return a list of items that is specific to the user)
         """
@@ -157,7 +157,7 @@ class AsyncGenericAPIView(
 
         queryset = self.queryset
         if isinstance(queryset, QuerySet):
-            # Ensure queryset is re-evaluated on each request.
+            # Ensure queryset is re-evaluated on each process.
             queryset = queryset.all()
         return queryset
 
@@ -206,7 +206,7 @@ class AsyncGenericAPIView(
         Defaults to using `self.serializer_class`.
 
         You may want to override this if you need to provide different
-        serializations depending on the incoming request.
+        serializations depending on the incoming process.
 
         (E.g. admins get full serialization, others get basic serialization)
         """
