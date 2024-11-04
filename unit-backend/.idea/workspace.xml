@@ -5,26 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="fix: 页面调整">
-      <change afterPath="$PROJECT_DIR$/common/message/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/dao/dashboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/dashboard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/dao/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/https.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/response/fatcory.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/response/fatcory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/tests/atomic.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/tests/atomic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/views/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views/https.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/celery_work/tasks/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/celery_work/tasks/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/builitin/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/builitin/functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/msg/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/attach/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/msg/dingtalk.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/message/dingtalk.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/msg/feishu.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/message/feishu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/msg/webhook.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/message/webhook.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/msg/weixin.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/message/weixin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/services/executor.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/services/executor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/api_migrate.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/api_migrate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/recursion.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/process/recursion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/time.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/attach/time.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/trees.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/process/trees.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,8 +171,8 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\86135\Desktop\EasyPost\unit-backend\common\attach" />
-      <recent name="C:\Users\86135\Desktop\EasyPost\unit-backend\common\builitin" />
       <recent name="C:\Users\86135\Desktop\EasyPost\unit-backend\common\process" />
+      <recent name="C:\Users\86135\Desktop\EasyPost\unit-backend\common\builitin" />
       <recent name="C:\Users\86135\Desktop\EasyPost\unit-backend\api\views" />
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\avatar" />
     </key>
@@ -556,23 +539,7 @@
       <workItem from="1728895744404" duration="65000" />
       <workItem from="1728898533972" duration="17095000" />
       <workItem from="1730358706607" duration="217000" />
-      <workItem from="1730359474223" duration="25682000" />
-    </task>
-    <task id="LOCAL-00429" summary="Change type: Reformatting, RefactoringCommit message: Improve code readability and maintainability by adding line breaks and proper indentation.">
-      <option name="closed" value="true" />
-      <created>1717048860996</created>
-      <option name="number" value="00429" />
-      <option name="presentableId" value="LOCAL-00429" />
-      <option name="project" value="LOCAL" />
-      <updated>1717048860996</updated>
-    </task>
-    <task id="LOCAL-00430" summary="Changed codebase to use new custom exception classes for better error handling and debugging.">
-      <option name="closed" value="true" />
-      <created>1717495426591</created>
-      <option name="number" value="00430" />
-      <option name="presentableId" value="LOCAL-00430" />
-      <option name="project" value="LOCAL" />
-      <updated>1717495426591</updated>
+      <workItem from="1730359474223" duration="26400000" />
     </task>
     <task id="LOCAL-00431" summary="Changed codebase to use new custom exception classes for better error handling and debugging.">
       <option name="closed" value="true" />
@@ -950,7 +917,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730455767022</updated>
     </task>
-    <option name="localTasksCounter" value="478" />
+    <task id="LOCAL-00478" summary="fix: 页面调整">
+      <option name="closed" value="true" />
+      <created>1730456271219</created>
+      <option name="number" value="00478" />
+      <option name="presentableId" value="LOCAL-00478" />
+      <option name="project" value="LOCAL" />
+      <updated>1730456271219</updated>
+    </task>
+    <task id="LOCAL-00479" summary="fix: 页面调整">
+      <option name="closed" value="true" />
+      <created>1730456440575</created>
+      <option name="number" value="00479" />
+      <option name="presentableId" value="LOCAL-00479" />
+      <option name="project" value="LOCAL" />
+      <updated>1730456440575</updated>
+    </task>
+    <option name="localTasksCounter" value="480" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

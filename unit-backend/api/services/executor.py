@@ -1,5 +1,3 @@
-import asyncio
-import time
 import grpc
 from api.services import ServiceConsul
 from api.services.protos import (
