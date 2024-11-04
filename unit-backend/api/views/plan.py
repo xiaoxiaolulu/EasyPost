@@ -50,9 +50,7 @@ class UpdatePlanStateView(APIView):
         try:
             response = PlanDao.update_test_plan_state(task_id, target_status)
 
-            return Response(ResponseStandard.success(
-                data=response
-            ))
+            return Response(response)
         except Exception as err:
             return Response(ResponseStandard.failed(msg=str(err)))
 
@@ -80,7 +78,7 @@ class DelPlanView(APIView):
     def delete(request, **kwargs):
         try:
             response = PlanDao.delete_test_plan(kwargs['pk'])
-            return Response(ResponseStandard.success(data=response))
+            return Response(response)
         except Exception as err:
             return Response(ResponseStandard.failed(data=str(err)))
 
