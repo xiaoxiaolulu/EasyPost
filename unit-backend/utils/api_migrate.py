@@ -537,7 +537,7 @@ class UitRunnerSource(DataSource):
                     validate="",
                     extract="",
                     source=ctx.get("type"),
-                    user=ctx.get('process').user
+                    user=ctx.get('request').user
                 )
 
             except (Api.DoesNotExist, Project.DoesNotExist) as e:
@@ -572,7 +572,7 @@ class DataMigrator:
             ctx = self.source.read(filename)
             # Add process and pk information to each context dictionary
             ctx = [
-                {**c, **{'process': request, 'pk': pk, "type": type}} for c in ctx
+                {**c, **{'request': request, 'pk': pk, "type": type}} for c in ctx
             ]
 
             self.target.write(ctx)

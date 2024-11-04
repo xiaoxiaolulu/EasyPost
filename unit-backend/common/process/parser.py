@@ -403,7 +403,7 @@ class HandelTestData(object):
             # "threads": int(self.threads),  # Number of threads for concurrent execution (optional)
             # "iterations": int(self.iterations),  # Number of iterations to run (optional)
             "headers": self.resolve_headers(self.headers),
-            "process": self.raw_conversion(self.raw),
+            "request": self.raw_conversion(self.raw),
             'setup_script': self.resolve_script(setup_script=self.setup_script),
             'teardown_script': self.resolve_script(use='teardown_script', teardown_script=self.teardown_script),
             'extract': self.resolve_extract(extract=self.extract),
@@ -436,7 +436,7 @@ class HandelTestData(object):
                 "method": step.get('method', None)
             },
             "headers": self.resolve_headers(step.get('headers', [])),
-            "process": self.raw_conversion(step.get('raw', {})),
+            "request": self.raw_conversion(step.get('raw', {})),
             'setup_script': self.resolve_script(setup_script=step.get('setup_script', None)),
             'teardown_script': self.resolve_script(use='teardown_script',
                                                    teardown_script=step.get('teardown_script', None)),

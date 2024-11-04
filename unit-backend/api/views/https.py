@@ -90,13 +90,14 @@ class TreeView(APIView):
 
 
 class ApiTestListView(mixins.ListModelMixin, viewsets.GenericViewSet):
+
     serializer_class = ApiSerializer
     queryset = Api.objects
     permission_classes = [IsAuthenticated]
 
     def list(self, request, *args, **kwargs):
         context = {
-            "process": request,
+            "request": request,
         }
         serializer = ApiSerializer(data=request.query_params, context=context)
         if serializer.is_valid():  # noqa
@@ -285,7 +286,7 @@ class CaseListView(mixins.ListModelMixin, viewsets.GenericViewSet):
 
     def list(self, request, *args, **kwargs):
         context = {
-            "process": request,
+            "request": request,
         }
         serializer = CaseSerializers(data=request.query_params, context=context)
 

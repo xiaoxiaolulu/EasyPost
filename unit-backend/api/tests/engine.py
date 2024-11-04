@@ -26,7 +26,7 @@ if __name__ == '__main__':
         #         #     #             "headers": {
         #         #     #                 'content-Type': "application/json"
         #         #     #             },
-        #         #     #             "process": {
+        #         #     #             "request": {
         #         #     #                 'json': {"mobile_phone": "3333", "pwd": "lemonban"},
         #         #     #             },
         #         #     #             # 'setup_script': "print('前置脚本123')",
@@ -61,7 +61,7 @@ if __name__ == '__main__':
         #         #     #     #     "headers": {
         #         #     #     #         'content-Type': "application/json"
         #         #     #     #     },
-        #         #     #     #     "process": {
+        #         #     #     #     "request": {
         #         #     #     #         'json': {"mobile_phone": "13564957378", "pwd": "lemonban"},
         #         #     #     #     },
         #         #     #     #     'setup_script': "print('前置脚本123')",
@@ -82,7 +82,7 @@ if __name__ == '__main__':
         #         #     # "headers": {
         #         #     #     'content-Type': "application/json"
         #         #     # },
-        #         #     # "process": {
+        #         #     # "request": {
         #         #     #     'json': {"mobile_phone": "${{user_mobile}}", "pwd": "lemonban"},
         #         #     # },
         #         #     # 'setup_script': "print('前置脚本123')",
@@ -115,7 +115,7 @@ if __name__ == '__main__':
         #             "headers": {
         #                 'content-Type': "application/json"
         #             },
-        #             "process": {
+        #             "request": {
         #                 'json': {"mobile_phone": "${{user_mobile}}", "pwd": "lemonban"},
         #             },
         #             'setup_script': "global_func.get_timestamp()",
@@ -154,7 +154,7 @@ if __name__ == '__main__':
                 #     #             "headers": {
                 #     #                 'content-Type': "application/json"
                 #     #             },
-                #     #             "process": {
+                #     #             "request": {
                 #     #                 'json': {"mobile_phone": "3333", "pwd": "lemonban"},
                 #     #             },
                 #     #             # 'setup_script': "print('前置脚本123')",
@@ -189,7 +189,7 @@ if __name__ == '__main__':
                 #     #     #     "headers": {
                 #     #     #         'content-Type': "application/json"
                 #     #     #     },
-                #     #     #     "process": {
+                #     #     #     "request": {
                 #     #     #         'json': {"mobile_phone": "13564957378", "pwd": "lemonban"},
                 #     #     #     },
                 #     #     #     'setup_script': "print('前置脚本123')",
@@ -210,7 +210,7 @@ if __name__ == '__main__':
                 #     # "headers": {
                 #     #     'content-Type': "application/json"
                 #     # },
-                #     # "process": {
+                #     # "request": {
                 #     #     'json': {"mobile_phone": "${{user_mobile}}", "pwd": "lemonban"},
                 #     # },
                 #     # 'setup_script': "print('前置脚本123')",
@@ -243,7 +243,7 @@ if __name__ == '__main__':
                     "headers": {
                         'content-Type': "application/json"
                     },
-                    "process": {
+                    "request": {
                         'json': {"mobile_phone": "31313131313131", "pwd": "lemonban"},
                     },
                     # 'setup_script': "print('前置脚本123')",
@@ -286,7 +286,7 @@ if __name__ == '__main__':
     #     "headers": {
     #         'content-Type': "application/json"
     #     },
-    #     "process": {
+    #     "request": {
     #         'json': {"mobile_phone": "13564957378", "pwd": "lemonban"},
     #     },
     #     #'setup_script': "print('前置脚本123')",
@@ -302,7 +302,7 @@ if __name__ == '__main__':
     #         'expect': '$.url'}]
     # }
     # result = run_test(env_config=config, case_data=case_data, debug=False)
-    result = run_api(api_data={'mode': 'normal', 'title': '33333', 'interface': {'url': 'http://httpbin.org/post', 'name': '33333', 'method': 'POST'}, 'headers': {}, 'process': {'data': {}}, 'setup_script': '', 'teardown_script': '', 'extract': {}, 'validators': []})
+    result = run_api(api_data={'mode': 'normal', 'title': '33333', 'interface': {'url': 'http://httpbin.org/post', 'name': '33333', 'method': 'POST'}, 'headers': {}, 'request': {'data': {}}, 'setup_script': '', 'teardown_script': '', 'extract': {}, 'validators': []})
     import json
 
     r = json.dumps(ResponseStandard.encode_json(result), ensure_ascii=False)

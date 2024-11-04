@@ -32,7 +32,7 @@ class ReportDetailView(mixins.ListModelMixin, viewsets.GenericViewSet):
 
     def list(self, request, *args, **kwargs):
         context = {
-            "process": request,
+            "request": request,
         }
         serializer = ReportDetailSerializers(data=request.query_params, context=context)
         if serializer.is_valid():

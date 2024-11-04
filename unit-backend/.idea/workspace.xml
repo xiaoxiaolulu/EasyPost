@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="fix: 页面调整">
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="fix: 删除执行器代码">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/services/executor.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/services/executor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/https.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/tests/engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/tests/engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/views/https.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views/https.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/views/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views/project.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/views/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views/report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/process/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/process/parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/api_migrate.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/api_migrate.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -539,15 +546,7 @@
       <workItem from="1728895744404" duration="65000" />
       <workItem from="1728898533972" duration="17095000" />
       <workItem from="1730358706607" duration="217000" />
-      <workItem from="1730359474223" duration="26400000" />
-    </task>
-    <task id="LOCAL-00431" summary="Changed codebase to use new custom exception classes for better error handling and debugging.">
-      <option name="closed" value="true" />
-      <created>1717496253751</created>
-      <option name="number" value="00431" />
-      <option name="presentableId" value="LOCAL-00431" />
-      <option name="project" value="LOCAL" />
-      <updated>1717496253751</updated>
+      <workItem from="1730359474223" duration="27880000" />
     </task>
     <task id="LOCAL-00432" summary="Add backend/pyproject.toml for Python project configuration.">
       <option name="closed" value="true" />
@@ -933,7 +932,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730456440575</updated>
     </task>
-    <option name="localTasksCounter" value="480" />
+    <task id="LOCAL-00480" summary="fix: 删除执行器代码">
+      <option name="closed" value="true" />
+      <created>1730698709418</created>
+      <option name="number" value="00480" />
+      <option name="presentableId" value="LOCAL-00480" />
+      <option name="project" value="LOCAL" />
+      <updated>1730698709418</updated>
+    </task>
+    <option name="localTasksCounter" value="481" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -963,7 +970,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="style: 修改视图目录" />
     <MESSAGE value="feat: 用例执行器客户端封装" />
     <MESSAGE value="style: 执行器服务发现代码调整" />
     <MESSAGE value="feat: 接口耗时新增" />
@@ -988,7 +994,8 @@
     <MESSAGE value="fix: 当首次选择接口管理中的数据添加步骤后在接口面板中点击保存，根据接口主键在步骤表中查询不到数据，则重新创建新的步骤" />
     <MESSAGE value="fixed: 定时任务异步调用微服务报错修复" />
     <MESSAGE value="fix: 页面调整" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: 页面调整" />
+    <MESSAGE value="fix: 删除执行器代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: 删除执行器代码" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

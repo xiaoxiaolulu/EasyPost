@@ -66,7 +66,7 @@ class ProjectUpdateViewSet(MagicUpdateApi):
     permission_classes = [IsAuthenticated]
 
     # def get_serializer_class(self):
-    #     if 'avatar' in self.process.data:
+    #     if 'avatar' in self.request.data:
     #         return UpdateAvatarSerializers
     #     return ProjectSerializers
 
@@ -131,7 +131,7 @@ class ProjectRoleUpdateViewSet(APIView):
                     user_id=user_pk,
                     rode_id=roles
                 )
-                serializer = ProjectRoleSerializers(ret, context={'process': request})
+                serializer = ProjectRoleSerializers(ret, context={'request': request})
                 return Response(ResponseStandard.success(data=serializer.data))
         except Exception as err:
             return Response(ResponseStandard.failed(msg=str(err)))

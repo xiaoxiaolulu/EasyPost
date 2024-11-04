@@ -622,7 +622,7 @@ class HttpDao:
             raise Exception(f"{e} ❌")
 
     # @staticmethod
-    # def import_api_docs(process, pk, filepath, files, import_type):
+    # def import_api_docs(request, pk, filepath, files, import_type):
     #
     #     if not pk:
     #         raise ValueError("Invalid api docs PK provided.")
@@ -644,7 +644,7 @@ class HttpDao:
     #             raise ValueError(f"Invalid import type: {import_type}")
     #
     #         migrator = DataMigrator(import_objects, UitRunnerSource())
-    #         migrator.migrate(filename=filepath, process=process, pk=pk, type=import_type)
+    #         migrator.migrate(filename=filepath, request=request, pk=pk, type=import_type)
     #
     #     except (FileNotFoundError, PermissionError, FileExistsError) as e:
     #         logger.error(f"{e}")
