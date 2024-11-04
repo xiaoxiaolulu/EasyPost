@@ -131,6 +131,15 @@ export function planList(params: any) {
     })
 }
 
+export function getPlanDetail(data: any) {
+    return request({
+        url: `/api/plan/detail/${data.id}`,
+        method: 'get',
+        data
+    })
+}
+
+
 export function savePlanOrUpdate(data: any) {
     return request({
         url: `/api/plan/SaveOrUpdate/${data.id}`,

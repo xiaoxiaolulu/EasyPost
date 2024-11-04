@@ -177,7 +177,7 @@ import {Back, Odometer} from "@element-plus/icons-vue";
 import {useRoute, useRouter} from "vue-router";
 import {computed, onMounted, reactive, ref, watch, nextTick} from "vue";
 import {ElMessage, FormInstance} from "element-plus";
-import {savePlanOrUpdate, getCaseDetail} from "@/api/http";
+import {savePlanOrUpdate, getPlanDetail} from "@/api/http";
 import {projectList} from "@/api/project";
 import {showErrMessage} from "@/utils/element";
 import {getStepTypesByUse, getStepTypeInfo, parseTime} from '@/utils/index'
@@ -294,7 +294,7 @@ const onSureClick = (formName: FormInstance | undefined) => {
         }
         const ret = await savePlanOrUpdate(caseData)
         const {code, data, msg} = ret.data
-        state.case_id = data.case_id
+        state.case_id = data.plan_id
         showErrMessage(code.toString(), msg)
       } catch (e) {
         console.log(e)
@@ -302,7 +302,7 @@ const onSureClick = (formName: FormInstance | undefined) => {
 
     } else {
       console.log('error submit!')
-      ElMessage.error("新增接口失败请重试!")
+      ElMessage.error("新增计划失败请重试!")
       return false
     }
   })
@@ -310,18 +310,19 @@ const onSureClick = (formName: FormInstance | undefined) => {
 
 
 const initApi = () => {
-  let case_id = route.query.id
+  let case_id = route.query.planId
   if(case_id){
     state.case_id = case_id
   }
   console.log("api_id------>", case_id)
   if (case_id) {
-    getCaseDetail({id: case_id}).then((response) => {
+    getPlanDetail({id: case_id}).then((response) => {
       const {data, code, msg} = response.data
       state.form.name = data.name
       state.form.remarks = data.desc
       state.form.priority = data.priority
-      setStepData(eval(data.step))
+      state.form.project = data.project
+      setStepData(eval(data.case_list))
       showErrMessage(code.toString(), msg)
     })
   }
