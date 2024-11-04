@@ -79,8 +79,8 @@ class DelPlanView(APIView):
     @staticmethod
     def delete(request, **kwargs):
         try:
-            Plan.objects.filter(id=kwargs['pk']).delete()
-            return Response(ResponseStandard.success())
+            response = PlanDao.delete_test_plan(kwargs['pk'])
+            return Response(ResponseStandard.success(data=response))
         except Exception as err:
             return Response(ResponseStandard.failed(data=str(err)))
 

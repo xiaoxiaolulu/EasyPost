@@ -180,3 +180,34 @@ class PlanDao:
                 f"🎯执行测试计划失败 -> {e}"
             )
             raise Exception(f"执行测试计划: 【{plan.name}】失败: {str(e)} ❌")
+
+    @classmethod
+    def delete_test_plan(cls, plan_id: int) -> Any:
+        """Deletes a test plan.
+
+        Args:
+            plan_id: The ID of the test plan to delete.
+
+        Returns:
+            A Response object indicating success or failure.
+
+        Raises:
+            Exception: If the plan is not found or an error occurs during deletion.
+        """
+        try:
+            plan = Plan.objects.get(pk=plan_id)
+
+            if plan is None:
+                raise Exception("测试计划不存在 ❌")
+
+            else:
+                plan.delete()
+                Scheduler.remove(plan_id)
+
+            return ResponseStandard.success()
+
+        except Exception as e:
+            logger.debug(
+                f"🎯删除测试计划数据失败 -> {e}"
+            )
+            raise Exception(f"删除测试计划状态失败: {e} ❌")

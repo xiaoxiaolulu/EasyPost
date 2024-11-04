@@ -319,9 +319,9 @@ const initApi = () => {
     getPlanDetail({id: case_id}).then((response) => {
       const {data, code, msg} = response.data
       state.form.name = data.name
-      state.form.remarks = data.desc
       state.form.priority = data.priority
       state.form.project = data.project
+      state.form.cron = data.cron
       setStepData(eval(data.case_list))
       showErrMessage(code.toString(), msg)
     })

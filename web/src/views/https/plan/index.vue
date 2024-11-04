@@ -74,7 +74,7 @@ import {envDelete} from "@/api/setting";
 import {parseTime} from "@/utils";
 import {ElMessage, ElMessageBox, ElPagination} from "element-plus";
 import {showErrMessage} from "@/utils/element";
-import {planList} from "@/api/http";
+import {planList, deletePlan} from "@/api/http";
 
 const queryParams = reactive({
   name: '',
@@ -141,14 +141,14 @@ const handlePageChange = (newPage: any) => {
 }
 
 const deleteData = (row: any) => {
-  ElMessageBox.confirm(`确认删除环境数据 - ${row.name}?`).then(_ => {
-    envDelete({id: row.id}).then((response) => {
+  ElMessageBox.confirm(`确认删除计划数据 - ${row.name}?`).then(_ => {
+    deletePlan({id: row.id}).then((response) => {
       const {data, code, msg} = response.data
       showErrMessage(code.toString(), msg)
       queryList();
     })
   }).catch(_ => {
-    ElMessage.error("环境删除失败请重试");
+    ElMessage.error("计划删除失败请重试");
   })
 }
 

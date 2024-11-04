@@ -9,6 +9,7 @@ export function getTree(data: any) {
     })
 }
 
+
 export function updateTree(data: any) {
     return request({
         url: `/api/tree/${data.id}&${data.use_type}`,
@@ -16,6 +17,7 @@ export function updateTree(data: any) {
         data
     })
 }
+
 
 export function runApi(data: any) {
     return request({
@@ -25,6 +27,7 @@ export function runApi(data: any) {
     })
 }
 
+
 export function saveOrUpdate(data: any) {
     return request({
         url: `/api/http/saveOrUpdate/${data.id}`,
@@ -32,6 +35,7 @@ export function saveOrUpdate(data: any) {
         data
     })
 }
+
 
 export function getHttpList(params: any) {
     return request({
@@ -41,6 +45,7 @@ export function getHttpList(params: any) {
     })
 }
 
+
 export function getHttpDetail(data: any) {
     return request({
         url: `/api/http/detail/${data.id}`,
@@ -48,6 +53,7 @@ export function getHttpDetail(data: any) {
         data
     })
 }
+
 
 export function deleteHttp(data: any) {
     return request({
@@ -57,6 +63,7 @@ export function deleteHttp(data: any) {
     })
 }
 
+
 export function saveCaseOrUpdate(data: any) {
     return request({
         url: `/api/case/SaveOrUpdate/${data.id}`,
@@ -65,6 +72,7 @@ export function saveCaseOrUpdate(data: any) {
     })
 }
 
+
 export function runCase(data: any) {
     return request({
         url: '/api/case/run',
@@ -72,6 +80,7 @@ export function runCase(data: any) {
         data
     })
 }
+
 
 export function httpSnapshot(data: any) {
     return request({
@@ -98,6 +107,7 @@ export function deleteCase(data: any) {
     })
 }
 
+
 export function getCaseDetail(data: any) {
     return request({
         url: `/api/case/detail/${data.id}`,
@@ -105,6 +115,7 @@ export function getCaseDetail(data: any) {
         data
     })
 }
+
 
 export function getCaseStepDetail(data: any) {
     return request({
@@ -123,6 +134,7 @@ export function saveOrUpdateStep(data: any) {
     })
 }
 
+
 export function planList(params: any) {
     return request({
         url: `/api/plan/list`,
@@ -131,10 +143,20 @@ export function planList(params: any) {
     })
 }
 
+
 export function getPlanDetail(data: any) {
     return request({
         url: `/api/plan/detail/${data.id}`,
         method: 'get',
+        data
+    })
+}
+
+
+export function deletePlan(data: any) {
+    return request({
+        url: `/api/plan/delete/${data.id}`,
+        method: 'delete',
         data
     })
 }

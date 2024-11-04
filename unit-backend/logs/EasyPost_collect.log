@@ -1047,3 +1047,15 @@ django.core.exceptions.SuspiciousFileOperation: The joined path (C:\Users\86135\
 WARNING  [2024-11-04 13:59:29,456] [f1a7c60528fa4ce6ba9db3b5276367b5] django.request: Not Found: /media/C:/Users/86135/Desktop/EasyPost/unit-backend/api/templates/media/default.png
 WARNING  [2024-11-04 13:59:29,480] [c640f2a33b3e4704851b21cbdbecca93] django.request: Bad Request: /media/C:/Users/86135/Desktop/EasyPost/backend/api/templates/media/default.png
 INFO     [2024-11-04 14:19:41,323] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-11-04 14:47:51,042] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\plan.py changed, reloading.
+INFO     [2024-11-04 14:47:51,525] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\plan.py changed, reloading.
+INFO     [2024-11-04 14:47:52,959] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-11-04 14:47:53,307] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-11-04 14:50:19,994] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\dao\plan.py changed, reloading.
+INFO     [2024-11-04 14:50:20,224] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\views\plan.py changed, reloading.
+INFO     [2024-11-04 14:50:21,951] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-11-04 14:50:22,110] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-11-04 14:51:07,096] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-11-04 14:51:34,553] [none] django.utils.autoreload: C:\Users\86135\Desktop\EasyPost\unit-backend\api\views\plan.py changed, reloading.
+INFO     [2024-11-04 14:51:36,284] [none] django.utils.autoreload: Watching for file changes with StatReloader
+INFO     [2024-11-04 14:51:37,060] [none] django.utils.autoreload: Watching for file changes with StatReloader
