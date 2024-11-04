@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="fix: 修复删除代码引发的错误">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="feat: 编辑计划">
       <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/api/http.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/api/http.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/https/plan/components/detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/plan/components/detail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/https/plan/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/plan/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -541,15 +538,7 @@
       <workItem from="1728895744404" duration="65000" />
       <workItem from="1728898533972" duration="17095000" />
       <workItem from="1730358706607" duration="217000" />
-      <workItem from="1730359474223" duration="29373000" />
-    </task>
-    <task id="LOCAL-00433" summary="Add backend/pyproject.toml for Python project configuration.">
-      <option name="closed" value="true" />
-      <created>1718178260031</created>
-      <option name="number" value="00433" />
-      <option name="presentableId" value="LOCAL-00433" />
-      <option name="project" value="LOCAL" />
-      <updated>1718178260031</updated>
+      <workItem from="1730359474223" duration="30008000" />
     </task>
     <task id="LOCAL-00434" summary="Changed test type in ClosedTasks model, removed test type in Project model, and updated corresponding migrations.">
       <option name="closed" value="true" />
@@ -935,7 +924,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730700004025</updated>
     </task>
-    <option name="localTasksCounter" value="482" />
+    <task id="LOCAL-00482" summary="feat: 编辑计划">
+      <option name="closed" value="true" />
+      <created>1730701658478</created>
+      <option name="number" value="00482" />
+      <option name="presentableId" value="LOCAL-00482" />
+      <option name="project" value="LOCAL" />
+      <updated>1730701658478</updated>
+    </task>
+    <option name="localTasksCounter" value="483" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -965,7 +962,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="style: 执行器服务发现代码调整" />
     <MESSAGE value="feat: 接口耗时新增" />
     <MESSAGE value="feat: 响应面板参数提取" />
     <MESSAGE value="feat: 响应面板错误信息" />
@@ -990,7 +986,8 @@
     <MESSAGE value="fix: 页面调整" />
     <MESSAGE value="fix: 删除执行器代码" />
     <MESSAGE value="fix: 修复删除代码引发的错误" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: 修复删除代码引发的错误" />
+    <MESSAGE value="feat: 编辑计划" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 编辑计划" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -48,8 +48,8 @@
         </el-table-column>
         <el-table-column label="操作" width="150px" align="center">
           <template #default="scope">
-            <el-button @click="editEnv(scope.row)" type="primary" link>编辑</el-button>
-            <el-button @click="deleteEnvData(scope.row)" type="primary" link>删除</el-button>
+            <el-button @click="edit(scope.row)" type="primary" link>编辑</el-button>
+            <el-button @click="deleteData(scope.row)" type="primary" link>删除</el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -104,9 +104,15 @@ const addPlan = () => {
   });
 };
 
-const editEnv = (row: any) => {
-  editShow.value = true
-  rowData.value = row
+const edit = (row: any) => {
+  if (row) {
+    router.push({
+      name: "planDetail",
+      query: {editType: 'updatePlan', planId: row.id}
+    });
+  } else {
+    ElMessage.error("编辑计划异常请重试!");
+  }
 };
 
 const onChangeDialog = (val: any) => {
@@ -134,7 +140,7 @@ const handlePageChange = (newPage: any) => {
   queryList()
 }
 
-const deleteEnvData = (row: any) => {
+const deleteData = (row: any) => {
   ElMessageBox.confirm(`确认删除环境数据 - ${row.name}?`).then(_ => {
     envDelete({id: row.id}).then((response) => {
       const {data, code, msg} = response.data
