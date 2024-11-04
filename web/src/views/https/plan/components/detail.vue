@@ -315,6 +315,7 @@ const initApi = () => {
     state.case_id = case_id
   }
   console.log("api_id------>", case_id)
+
   if (case_id) {
     getPlanDetail({id: case_id}).then((response) => {
       const {data, code, msg} = response.data
@@ -365,7 +366,7 @@ const changeAction = (data) => {
 const setStepData = (data) => {
   for (let i = 0; i < data.length; i++) {
     tableData.push(data[i])
-    state.form.case_list.push(data[i]['id'])
+    state.form.case_list.push(data[i])
   }
 }
 

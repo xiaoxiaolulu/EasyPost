@@ -2,6 +2,7 @@
 DESCRIPTION：测试计划数据访问对象
 :Created by Null.
 """
+import sys
 from typing import Any
 from channels.db import database_sync_to_async
 from django.forms import model_to_dict
@@ -80,7 +81,8 @@ class PlanDao:
             request_body = cls.parser_plan_data(request, pk=pk)
 
             if pk:
-                plan = Plan.objects.filter(id=pk).update(**request_body)
+                plan = Plan.objects.get(id=pk)
+                plan.__dict__.update(**request_body)
                 Scheduler.remove(pk)
                 Scheduler.add_test_plan(
                     case_list=plan.case_list,

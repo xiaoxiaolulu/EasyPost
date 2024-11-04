@@ -1,4 +1,5 @@
 from datetime import datetime
+import apscheduler
 from apscheduler.events import JobExecutionEvent
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.cron import CronTrigger
@@ -186,7 +187,10 @@ class Scheduler(BaseScheduler):
             cls: The class itself.
             plan_id: The unique identifier of the test plan to be removed.
         """
-        cls.scheduler.remove_job(str(plan_id))
+        try:
+            cls.scheduler.remove_job(str(plan_id))
+        except (Exception, AttributeError, apscheduler.jobstores.base.JobLookupError):
+            pass
 
     # @staticmethod
     # def list_test_plan(data: List):

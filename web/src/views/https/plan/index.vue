@@ -28,9 +28,22 @@
                 style="width: 100%">
         <el-table-column type="index" width="55" label="id"></el-table-column>
         <el-table-column prop="name" label="测试计划名称"></el-table-column>
-        <el-table-column prop="priority" label="优先级"></el-table-column>
+        <el-table-column prop="priority" label="优先级">
+          <template #default="scope">
+            <el-tag v-show="tag.id === scope.row.priority" v-for="tag in planPriority" :key="tag.id" :type="tag.type">
+              {{ tag.name }}
+            </el-tag>
+          </template>
+        </el-table-column>
         <el-table-column prop="cron" label="cron表达式"></el-table-column>
-        <el-table-column prop="state" label="状态"></el-table-column>
+        <el-table-column prop="state" label="状态">
+          <template #default="scope">
+            <div v-show="tag.id === scope.row.state" v-for="tag in planState" :key="tag.id">
+              <span :class="`status-${tag.status}`"></span>
+              <span>&nbsp;&nbsp;{{ tag.name }}</span>
+            </div>
+          </template>
+        </el-table-column>
         <el-table-column prop="user.username" label="创建者">
           <template #default="scope">
             <div style="margin-inline-end:16px;display:inline">
@@ -70,7 +83,6 @@
 import {Plus, Search} from "@element-plus/icons-vue";
 import {ref, reactive} from 'vue'
 import {useRouter} from "vue-router";
-import {envDelete} from "@/api/setting";
 import {parseTime} from "@/utils";
 import {ElMessage, ElMessageBox, ElPagination} from "element-plus";
 import {showErrMessage} from "@/utils/element";
@@ -96,6 +108,19 @@ const isShow = ref(false);
 const editShow = ref(false);
 
 const rowData = ref({})
+
+const planPriority = reactive([
+  { id: 0, type: 'primary', name: 'P0' },
+  { id: 1, type: 'success', name: 'P1' },
+  { id: 2, type: 'warning', name: 'P2' },
+  { id: 3, type: 'danger', name: 'P3' },
+  { id: 4, type: 'danger', name: 'P4' },
+])
+
+const planState =  reactive([
+  { id: 0, name: '停止', status: 'discard'},
+  { id: 1, name: '运行' , status: 'normal'}
+])
 
 const addPlan = () => {
   router.push({
@@ -187,5 +212,29 @@ const deleteData = (row: any) => {
   height: 32px;
   line-height: 32px;
   border-radius: 50%
+}
+
+.status-discard {
+  position: relative;
+  background-color: #d92911;
+  top: -1px;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  vertical-align: middle;
+  border-radius: 50%;
+  animation: fade 600ms infinite;
+}
+
+.status-normal {
+  position: relative;
+  background-color: #83f106;
+  top: -1px;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  vertical-align: middle;
+  border-radius: 50%;
+  animation: fade 600ms infinite;
 }
 </style>

@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="feat: 删除计划">
-      <change beforePath="$PROJECT_DIR$/api/views/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views/plan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/plan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/scheduler/scheduler.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/scheduler/scheduler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/https/plan/components/detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/plan/components/detail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/https/plan/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/plan/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -537,15 +543,7 @@
       <workItem from="1728895744404" duration="65000" />
       <workItem from="1728898533972" duration="17095000" />
       <workItem from="1730358706607" duration="217000" />
-      <workItem from="1730359474223" duration="31124000" />
-    </task>
-    <task id="LOCAL-00436" summary="Add closed tasks list page and related API endpoints.">
-      <option name="closed" value="true" />
-      <created>1718958585780</created>
-      <option name="number" value="00436" />
-      <option name="presentableId" value="LOCAL-00436" />
-      <option name="project" value="LOCAL" />
-      <updated>1718958585780</updated>
+      <workItem from="1730359474223" duration="35324000" />
     </task>
     <task id="LOCAL-00437" summary="Changes made to the code:1. Added a new model `ClosedTasksDetail` to store details of each closed task.2. Updated the `ClosedTasks` model to include a foreign key to `ClosedTasksDetail`.3. Added a new serializer `ClosedTasksDetailSerializers` to handle the new model.4. Updated the `ClosedTasksSerializers` to include the new foreign key field.5. Updated the `getClosedTasksDetail` function to include the new foreign key field in the response.6. Updated the front-end to display the new foreign key field in the table.">
       <option name="closed" value="true" />
@@ -931,7 +929,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730703180082</updated>
     </task>
-    <option name="localTasksCounter" value="485" />
+    <task id="LOCAL-00485" summary="feat: 删除计划">
+      <option name="closed" value="true" />
+      <created>1730703322351</created>
+      <option name="number" value="00485" />
+      <option name="presentableId" value="LOCAL-00485" />
+      <option name="project" value="LOCAL" />
+      <updated>1730703322351</updated>
+    </task>
+    <option name="localTasksCounter" value="486" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
