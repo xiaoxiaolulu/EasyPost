@@ -6,12 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="fix: 修复编辑计划用例场景取值问题">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/dao/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/plan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/emus/PlanEnum.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/emus/PlanEnum.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/routers/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/routers/plan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/views/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views/plan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/api/http.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/api/http.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/src/views/https/plan/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/plan/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -544,15 +538,7 @@
       <workItem from="1728895744404" duration="65000" />
       <workItem from="1728898533972" duration="17095000" />
       <workItem from="1730358706607" duration="217000" />
-      <workItem from="1730359474223" duration="40379000" />
-    </task>
-    <task id="LOCAL-00439" summary="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail model, added ellipsis utility, and modified related UI components.">
-      <option name="closed" value="true" />
-      <created>1719214755643</created>
-      <option name="number" value="00439" />
-      <option name="presentableId" value="LOCAL-00439" />
-      <option name="project" value="LOCAL" />
-      <updated>1719214755643</updated>
+      <workItem from="1730359474223" duration="42660000" />
     </task>
     <task id="LOCAL-00440" summary="feat: 服务注册与发现">
       <option name="closed" value="true" />
@@ -938,7 +924,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730772233094</updated>
     </task>
-    <option name="localTasksCounter" value="488" />
+    <task id="LOCAL-00488" summary="fix: 修复编辑计划用例场景取值问题">
+      <option name="closed" value="true" />
+      <created>1730775793091</created>
+      <option name="number" value="00488" />
+      <option name="presentableId" value="LOCAL-00488" />
+      <option name="project" value="LOCAL" />
+      <updated>1730775793091</updated>
+    </task>
+    <option name="localTasksCounter" value="489" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

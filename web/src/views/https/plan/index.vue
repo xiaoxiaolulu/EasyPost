@@ -64,7 +64,7 @@
             <el-button @click="edit(scope.row)" type="primary" link>编辑</el-button>
             <el-button @click="deleteData(scope.row)" type="primary" link>删除</el-button>
             <el-button @click="updateState(scope.row)" type="primary" link>
-                <div v-show="tag.id === scope.row.state" v-for="tag in planState" :key="tag.id">
+                <div v-show="tag.id === scope.row.state" v-for="tag in planStateButton" :key="tag.id">
                   <span>{{ tag.name }}</span>
                 </div>
             </el-button>
@@ -108,12 +108,6 @@ const tableLoading = ref(false)
 
 const count = ref(0)
 
-const isShow = ref(false);
-
-const editShow = ref(false);
-
-const rowData = ref({})
-
 const planPriority = reactive([
   { id: 0, type: 'primary', name: 'P0' },
   { id: 1, type: 'success', name: 'P1' },
@@ -125,6 +119,11 @@ const planPriority = reactive([
 const planState =  reactive([
   { id: 0, name: '停止', status: 'discard'},
   { id: 1, name: '运行' , status: 'normal'}
+])
+
+const planStateButton =  reactive([
+  { id: 1, name: '停止'},
+  { id: 0, name: '运行'}
 ])
 
 const addPlan = () => {
@@ -143,12 +142,6 @@ const edit = (row: any) => {
   } else {
     ElMessage.error("编辑计划异常请重试!");
   }
-};
-
-const onChangeDialog = (val: any) => {
-  isShow.value = false;
-  editShow.value = false;
-  queryList()
 };
 
 const queryList = () => {
