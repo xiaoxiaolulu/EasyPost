@@ -323,7 +323,7 @@ const initApi = () => {
       state.form.priority = data.priority
       state.form.project = data.project
       state.form.cron = data.cron
-      setStepData(eval(data.case_list))
+      setStepData(eval(data.case_list), false)
       showErrMessage(code.toString(), msg)
     })
   }
@@ -360,13 +360,18 @@ const initDropTable = () => {
 
 const changeAction = (data) => {
   selectCaseData.value = data
-  setStepData(eval(data))
+  setStepData(eval(data), true)
 }
 
-const setStepData = (data) => {
+const setStepData = (data, type) => {
   for (let i = 0; i < data.length; i++) {
-    tableData.push(data[i])
-    state.form.case_list.push(data[i])
+    if (type){
+      tableData.push(data[i])
+      state.form.case_list.push(data[i]["id"])
+    } else {
+      tableData.push(data[i])
+      state.form.case_list.push(data[i])
+    }
   }
 }
 

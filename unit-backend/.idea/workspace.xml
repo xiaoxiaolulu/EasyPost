@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="feat: 删除计划">
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="fix: 修复计划对应任务不存在保存更新错误问题">
+      <change afterPath="$PROJECT_DIR$/api/migrations/0055_alter_plan_state.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/dao/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/plan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/scheduler/scheduler.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/scheduler/scheduler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/models/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/plan.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/autoplay.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/t.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/src/views/https/plan/components/detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/plan/components/detail.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/https/plan/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/plan/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -543,15 +542,7 @@
       <workItem from="1728895744404" duration="65000" />
       <workItem from="1728898533972" duration="17095000" />
       <workItem from="1730358706607" duration="217000" />
-      <workItem from="1730359474223" duration="35324000" />
-    </task>
-    <task id="LOCAL-00437" summary="Changes made to the code:1. Added a new model `ClosedTasksDetail` to store details of each closed task.2. Updated the `ClosedTasks` model to include a foreign key to `ClosedTasksDetail`.3. Added a new serializer `ClosedTasksDetailSerializers` to handle the new model.4. Updated the `ClosedTasksSerializers` to include the new foreign key field.5. Updated the `getClosedTasksDetail` function to include the new foreign key field in the response.6. Updated the front-end to display the new foreign key field in the table.">
-      <option name="closed" value="true" />
-      <created>1718965363629</created>
-      <option name="number" value="00437" />
-      <option name="presentableId" value="LOCAL-00437" />
-      <option name="project" value="LOCAL" />
-      <updated>1718965363629</updated>
+      <workItem from="1730359474223" duration="37055000" />
     </task>
     <task id="LOCAL-00438" summary="Updated code for user interface and added new images for login page and avatar.">
       <option name="closed" value="true" />
@@ -937,7 +928,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730703322351</updated>
     </task>
-    <option name="localTasksCounter" value="486" />
+    <task id="LOCAL-00486" summary="fix: 修复计划对应任务不存在保存更新错误问题">
+      <option name="closed" value="true" />
+      <created>1730708175854</created>
+      <option name="number" value="00486" />
+      <option name="presentableId" value="LOCAL-00486" />
+      <option name="project" value="LOCAL" />
+      <updated>1730708175854</updated>
+    </task>
+    <option name="localTasksCounter" value="487" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -967,7 +966,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: 响应面板参数提取" />
     <MESSAGE value="feat: 响应面板错误信息" />
     <MESSAGE value="fix: 优化提取参数方法，提高程序运行速度" />
     <MESSAGE value="fix: 修复面板错误信息" />
@@ -992,7 +990,8 @@
     <MESSAGE value="fix: 修复删除代码引发的错误" />
     <MESSAGE value="feat: 编辑计划" />
     <MESSAGE value="feat: 删除计划" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 删除计划" />
+    <MESSAGE value="fix: 修复计划对应任务不存在保存更新错误问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: 修复计划对应任务不存在保存更新错误问题" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

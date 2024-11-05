@@ -69,7 +69,7 @@ class Plan(Model):
                          default=PlanPriorityChoices.P0)
     case_list = TextField(verbose_name=_('Plan CaseList'), null=False, default=None)
     state = CharField(max_length=50, verbose_name=_('Plan State'), choices=PlanStateChoices,
-                      default=PlanStateChoices.STOP)
+                      default=PlanStateChoices.RUNNING)
     pass_rate = CharField(max_length=50, null=True, blank=True, verbose_name=_('Plan PassRate'))
     msg_type = CharField(max_length=50, null=True, blank=True, verbose_name=_('Plan MsgType'))
     receiver = TextField(verbose_name=_('Plan Receiver'), null=False, default=None)
