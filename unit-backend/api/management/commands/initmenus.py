@@ -191,7 +191,7 @@ class Command(BaseCommand):
             path='/system/notice',
             component="/system/notice/index.vue",
             title="通知设置",
-            icon="AddLocation",
+            icon="Bell",
             parent_id=system_main_menu.id
         )
 

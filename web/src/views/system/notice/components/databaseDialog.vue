@@ -11,34 +11,34 @@
       <el-form-item label="通知名称" :required="true" prop="name">
         <el-input v-model="form.name" placeholder="写一个第三方通知名称，标记用途"></el-input>
       </el-form-item>
-      <el-form-item label="触发事件" prop="project">
-        <el-select
-          popper-class="custom-header"
-          multiple
-          clearable
-          collapse-tags
-          :max-collapse-tags="1"
-          class="selectOpt" v-model="form.trigger_events" placeholder="请选择触发项目"
-          :popper-append-to-body="false"
-          style="width: 150px;"
-        >
-          <template #header>
-            <el-checkbox
-              v-model="checkAll"
-              :indeterminate="indeterminate"
-              @change="handleCheckAll"
-            >
-              全选
-            </el-checkbox>
-          </template>
-          <el-option
-            v-for="item in projectOption"
-            :key="item.value"
-            :label="item.label"
-            :value="item.value">
-          </el-option>
-        </el-select>
-      </el-form-item>
+<!--      <el-form-item label="触发事件" prop="project">-->
+<!--        <el-select-->
+<!--          popper-class="custom-header"-->
+<!--          multiple-->
+<!--          clearable-->
+<!--          collapse-tags-->
+<!--          :max-collapse-tags="1"-->
+<!--          class="selectOpt" v-model="form.trigger_events" placeholder="请选择触发项目"-->
+<!--          :popper-append-to-body="false"-->
+<!--          style="width: 150px;"-->
+<!--        >-->
+<!--          <template #header>-->
+<!--            <el-checkbox-->
+<!--              v-model="checkAll"-->
+<!--              :indeterminate="indeterminate"-->
+<!--              @change="handleCheckAll"-->
+<!--            >-->
+<!--              全选-->
+<!--            </el-checkbox>-->
+<!--          </template>-->
+<!--          <el-option-->
+<!--            v-for="item in projectOption"-->
+<!--            :key="item.value"-->
+<!--            :label="item.label"-->
+<!--            :value="item.value">-->
+<!--          </el-option>-->
+<!--        </el-select>-->
+<!--      </el-form-item>-->
       <el-form-item label="通知渠道" prop="msg_type">
         <el-space :size="10" class="button-container">
           <el-check-tag
@@ -82,7 +82,7 @@ const queryParams = reactive({
 
 let form = reactive({
   name: '',
-  trigger_events: [],
+  // trigger_events: [],
   url: '',
   msg_type: 'qiyeweixin'
 })
@@ -117,14 +117,14 @@ function close() {
   emits('queryList');
 }
 
-const handleCheckAll = (val: CheckboxValueType) => {
-  indeterminate.value = false
-  if (val) {
-    form.trigger_events = projectOption.value.map((_) => _.value)
-  } else {
-    form.trigger_events = []
-  }
-}
+// const handleCheckAll = (val: CheckboxValueType) => {
+//   indeterminate.value = false
+//   if (val) {
+//     form.trigger_events = projectOption.value.map((_) => _.value)
+//   } else {
+//     form.trigger_events = []
+//   }
+// }
 
 const onChange = (button) => {
 
@@ -142,37 +142,37 @@ const onChange = (button) => {
   form.msg_type = button.svg
 }
 
-const initProjectList = () => {
-  projectList().then((response) => {
-    let res = response.data.results
-    for (let i = 0; i < res.length; i++) {
-      projectOption.value.push({
-        "label": res[i]["name"],
-        "value": res[i]["id"],
-        "avatar": res[i]["avatar"]
-      })
-    }
-  }).catch((error) => {
-  })
-}
+// const initProjectList = () => {
+//   projectList().then((response) => {
+//     let res = response.data.results
+//     for (let i = 0; i < res.length; i++) {
+//       projectOption.value.push({
+//         "label": res[i]["name"],
+//         "value": res[i]["id"],
+//         "avatar": res[i]["avatar"]
+//       })
+//     }
+//   }).catch((error) => {
+//   })
+// }
 
-const initTriggerEvents = () => {
-  for (let i = 0; i < queryParams.id.length; i++) {
-
-    projectDetail({id: queryParams.id[i]}).then((response) => {
-      let res = response.data.data
-      console.log(res['name'])
-      console.log(res['id'])
-      form.trigger_events.push({
-        "label": res["name"],
-        "value": res["id"],
-        "avatar": res["avatar"]
-      })
-      console.log(form.trigger_events)
-    }).catch((error) => {
-    })
-  }
-}
+// const initTriggerEvents = () => {
+//   for (let i = 0; i < queryParams.id.length; i++) {
+//
+//     projectDetail({id: queryParams.id[i]}).then((response) => {
+//       let res = response.data.data
+//       console.log(res['name'])
+//       console.log(res['id'])
+//       form.trigger_events.push({
+//         "label": res["name"],
+//         "value": res["id"],
+//         "avatar": res["avatar"]
+//       })
+//       console.log(form.trigger_events)
+//     }).catch((error) => {
+//     })
+//   }
+// }
 
 const onSureClick = (formName: FormInstance | undefined) => {
   if (!formName) return
@@ -196,36 +196,36 @@ const onSureClick = (formName: FormInstance | undefined) => {
 const show = (item = {}) => {
   title.value = '新增通知事件'
   queryParams.id = []
-  form.trigger_events = []
+  // form.trigger_events = []
   if (item.id) {
     title.value = '编辑通知事件'
     pk.value = item.id
     Object.keys(item).forEach(key => {
       form.name = item.name
       form.msg_type = item.msg_type
-      queryParams.id = eval(item.trigger_events)
+      // queryParams.id = eval(item.trigger_events)
       form.url = item.url
-      initTriggerEvents()
+      // initTriggerEvents()
     })
   }
   dialog.value = true
 }
 
 onMounted(() => {
-  initProjectList()
+  // initProjectList()
 })
 
-watch(form.project, (val) => {
-  if (val.length === 0) {
-    checkAll.value = false
-    indeterminate.value = false
-  } else if (val.length === cities.value.length) {
-    checkAll.value = true
-    indeterminate.value = false
-  } else {
-    indeterminate.value = true
-  }
-})
+// watch(form.project, (val) => {
+//   if (val.length === 0) {
+//     checkAll.value = false
+//     indeterminate.value = false
+//   } else if (val.length === cities.value.length) {
+//     checkAll.value = true
+//     indeterminate.value = false
+//   } else {
+//     indeterminate.value = true
+//   }
+// })
 
 defineExpose({
   show,
@@ -236,7 +236,7 @@ defineExpose({
 <style lang="scss">
 .databaseWidth {
   width: 30%;
-  height: 60%
+  height: 55%
 }
 
 .pull-right {

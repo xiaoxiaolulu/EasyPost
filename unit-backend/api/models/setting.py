@@ -136,7 +136,7 @@ class Notice(Model):
     """
     id = AutoField(primary_key=True)
     name = CharField(max_length=50, null=True, blank=True, verbose_name=_('Notice Name'))
-    trigger_events = TextField(null=True, blank=True, verbose_name=_('Notice TriggerEvent'))
+    # trigger_events = TextField(null=True, blank=True, verbose_name=_('Notice TriggerEvent'))
     msg_type = CharField(max_length=50, null=True, blank=True, verbose_name=_('Notice MsgType'))
     url = TextField(null=True, blank=True, verbose_name=_('Notice Url'))
     creator = ForeignKey(User, related_name="notice_creator", null=True, on_delete=SET_NULL,
