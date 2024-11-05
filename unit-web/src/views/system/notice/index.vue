@@ -28,13 +28,13 @@
                 style="width: 100%">
         <el-table-column prop="index" label="序号" width="55" />
         <el-table-column prop="name" label="通知名称"></el-table-column>
-        <el-table-column prop="msg_type" label="通知渠道" width="100">
+        <el-table-column prop="msg_type" label="通知渠道">
           <template #default="scope">
             <SvgIcon :icon-class="scope.row.msg_type"
                      style="width: 20px; height: 20px;"/>
           </template>
         </el-table-column>
-        <el-table-column prop="url" label="服务URL" width="300"></el-table-column>
+        <el-table-column prop="url" label="服务URL"></el-table-column>
         <el-table-column prop="creator.username" label="创建者" width="150">
           <template #default="scope">
             <div style="margin-inline-end:16px;display:inline">
@@ -43,6 +43,11 @@
             <div style="display:inline;color: rgba(0, 0, 0, 0.88);">
               <span style="color:rgb(22, 119, 255)">{{ scope.row.creator.username }}</span>
             </div>
+          </template>
+        </el-table-column>
+        <el-table-column prop="create_time" label="创建时间" width="200px">
+          <template #default="scope">
+            <span>{{parseTime(scope.row.create_time)}}</span>
           </template>
         </el-table-column>
         <el-table-column prop="update_time" label="更新时间" width="200px">

@@ -23,77 +23,77 @@
                 <template #label>
                   <strong>计划配置</strong>
                 </template>
-              </el-tab-pane>
-            </el-tabs>
-            <div>
-              <el-form autoComplete="on" :model="state.form" :rules="rules" ref="ruleFormRef"
-                       label-width="auto"
-                       label-position="top"
-                       size="small"
-              >
-                <el-form-item label="任务名称：" prop="name" :required="true">
-                  <el-input v-model.trim="state.form.name"
-                            style="width: 100%;"
-                            size="small"
-                            placeholder="请输入任务名称"></el-input>
-                </el-form-item>
-                <el-form-item label="所属项目" :required="true" prop="project">
-                  <el-select
-                      class="selectOpt" v-model="state.form.project" placeholder="请选择"
-                      :popper-append-to-body="false"
-                      style="width: 150px;"
+                <div>
+                  <el-form autoComplete="on" :model="state.form" :rules="rules" ref="ruleFormRef"
+                           label-width="auto"
+                           label-position="top"
+                           size="small"
                   >
-                    <el-option
-                        v-for="item in projectOption"
-                        :key="item.value"
-                        :label="item.label"
-                        :value="item.value">
-                    </el-option>
-                  </el-select>
-                </el-form-item>
-                <el-form-item label="任务优先级：" prop="priority" :required="true">
-                  <el-select v-model="state.form.priority" filterable placeholder="请选择接口优先级" size="small">
-                    <el-option
-                        v-for="item in priority"
-                        :key="item.value"
-                        :label="item.label"
-                        :value="item.value">
-                    </el-option>
-                  </el-select>
-                </el-form-item>
-                <el-form-item label="cron表达式：" prop="">
-                  <el-input v-model.trim="state.form.cron"
-                            style="width: 100%;"
-                            size="small">
-                    <template #append>
-                      <el-drawer
-                        v-model="state.cronPopover"
-                        size="38%"
-                        append-to-body
-                        direction="rtl"
-                        destroy-on-close
-                        :with-header="true">
-                        <template #header>
+                    <el-form-item label="任务名称：" prop="name" :required="true">
+                      <el-input v-model.trim="state.form.name"
+                                style="width: 100%;"
+                                size="small"
+                                placeholder="请输入任务名称"></el-input>
+                    </el-form-item>
+                    <el-form-item label="所属项目" :required="true" prop="project">
+                      <el-select
+                        class="selectOpt" v-model="state.form.project" placeholder="请选择"
+                        :popper-append-to-body="false"
+                        style="width: 150px;"
+                      >
+                        <el-option
+                          v-for="item in projectOption"
+                          :key="item.value"
+                          :label="item.label"
+                          :value="item.value">
+                        </el-option>
+                      </el-select>
+                    </el-form-item>
+                    <el-form-item label="任务优先级：" prop="priority" :required="true">
+                      <el-select v-model="state.form.priority" filterable placeholder="请选择接口优先级" size="small">
+                        <el-option
+                          v-for="item in priority"
+                          :key="item.value"
+                          :label="item.label"
+                          :value="item.value">
+                        </el-option>
+                      </el-select>
+                    </el-form-item>
+                    <el-form-item label="cron表达式：" prop="">
+                      <el-input v-model.trim="state.form.cron"
+                                style="width: 100%;"
+                                size="small">
+                        <template #append>
+                          <el-drawer
+                            v-model="state.cronPopover"
+                            size="38%"
+                            append-to-body
+                            direction="rtl"
+                            destroy-on-close
+                            :with-header="true">
+                            <template #header>
                           <span>
                             <strong class="pr10">运行周期</strong>
                           </span>
+                            </template>
+                            <div style="height: 100%; overflow-y: auto">
+                              <no-cron
+                                :cron-value="state.form.cron"
+                                @change="changeCron"
+                                @close="state.cronPopover=false"
+                                i18n="cn"
+                              ></no-cron>
+                            </div>
+                          </el-drawer>
+                          <el-button @click="state.cronPopover = !state.cronPopover">设置</el-button>
                         </template>
-                        <div style="height: 100%; overflow-y: auto">
-                          <no-cron
-                            :cron-value="state.form.cron"
-                            @change="changeCron"
-                            @close="state.cronPopover=false"
-                            i18n="cn"
-                          ></no-cron>
-                        </div>
-                      </el-drawer>
-                      <el-button @click="state.cronPopover = !state.cronPopover">设置</el-button>
-                    </template>
-                  </el-input>
-                </el-form-item>
-              </el-form>
-              <el-button type="primary" @click="onSureClick(ruleFormRef)" size="small">保存</el-button>
-            </div>
+                      </el-input>
+                    </el-form-item>
+                  </el-form>
+                  <el-button type="primary" @click="onSureClick(ruleFormRef)" size="small">保存</el-button>
+                </div>
+              </el-tab-pane>
+            </el-tabs>
           </el-card>
         </el-col>
         <el-col :span="18">
