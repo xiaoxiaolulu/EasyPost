@@ -16,7 +16,7 @@ router = DefaultRouter()
 
 app_urls = [
     path("SaveOrUpdate/<int:pk>", SaveOrUpdatePlanView.as_view()),
-    path("UpdatePlanState/<int:task_id>/<int:target_status>", UpdatePlanStateView.as_view()),
+    path("UpdatePlanState/<int:pk>/<int:state>", UpdatePlanStateView.as_view()),
     path("run", RunPlanView.as_view()),
     path('delete/<int:pk>', DelPlanView.as_view()),
     path('detail/<int:pk>', PlanDetailView.as_view()),

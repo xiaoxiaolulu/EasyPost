@@ -110,11 +110,12 @@ class PlanDao:
             raise Exception(f"创建或更新测试计划失败: {e} ❌")
 
     @classmethod
-    def update_test_plan_state(cls, plan_id: int, target_state: int) -> Any:
+    def update_test_plan_state(cls, request: Any, plan_id: int, target_state: int) -> Any:
         """
         Updates the state of a test plan.
 
         Args:
+            request
             plan_id (int): The ID of the plan to update.
             target_state (int): The target state to set for the plan.
 
@@ -126,7 +127,6 @@ class PlanDao:
         """
         try:
             plan = Plan.objects.get(pk=plan_id)
-            plan_parser_data = cls.parser_plan_data(model_to_dict(plan), pk=plan_id)
 
             if plan is None:
                 raise Exception("测试计划不存在 ❌")
@@ -135,11 +135,12 @@ class PlanDao:
                 return ResponseStandard.resp_400()
 
             if target_state == PlanType.START:
+                Scheduler.remove(plan_id)
                 Scheduler.add_test_plan(
-                    plan_parser_data.get("case_list", []),
-                    plan.name,
-                    plan.id,
-                    plan_parser_data.get("cron", "")
+                    case_list=plan.case_list,
+                    plan_id=plan.id,
+                    plan_name=plan.name,
+                    cron=plan.cron
                 )
             else:
                 Scheduler.remove(plan_id)

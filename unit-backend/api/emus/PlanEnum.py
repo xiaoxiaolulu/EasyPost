@@ -3,6 +3,6 @@ from enum import IntEnum
 
 class PlanType(IntEnum):
 
-    START = 0
-    STOP = 1
+    START = 1
+    STOP = 0
 

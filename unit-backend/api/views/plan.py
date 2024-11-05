@@ -46,9 +46,9 @@ class UpdatePlanStateView(APIView):
     permission_classes = [IsAuthenticated]
 
     @staticmethod
-    def post(request, task_id, target_status):
+    def post(request, pk, state):
         try:
-            response = PlanDao.update_test_plan_state(task_id, target_status)
+            response = PlanDao.update_test_plan_state(request, pk, state)
 
             return Response(response)
         except Exception as err:

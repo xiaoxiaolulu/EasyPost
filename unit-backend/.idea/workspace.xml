@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="fix: 修复计划对应任务不存在保存更新错误问题">
-      <change afterPath="$PROJECT_DIR$/api/migrations/0055_alter_plan_state.py" afterDir="false" />
+    <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="fix: 修复编辑计划用例场景取值问题">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/models/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/plan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/dao/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/dao/plan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/emus/PlanEnum.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/emus/PlanEnum.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/routers/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/routers/plan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/views/plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views/plan.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/autoplay.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/t.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/https/plan/components/detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/plan/components/detail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/api/http.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/api/http.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/src/views/https/plan/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/https/plan/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -542,15 +544,7 @@
       <workItem from="1728895744404" duration="65000" />
       <workItem from="1728898533972" duration="17095000" />
       <workItem from="1730358706607" duration="217000" />
-      <workItem from="1730359474223" duration="37055000" />
-    </task>
-    <task id="LOCAL-00438" summary="Updated code for user interface and added new images for login page and avatar.">
-      <option name="closed" value="true" />
-      <created>1719195825102</created>
-      <option name="number" value="00438" />
-      <option name="presentableId" value="LOCAL-00438" />
-      <option name="project" value="LOCAL" />
-      <updated>1719195825102</updated>
+      <workItem from="1730359474223" duration="40379000" />
     </task>
     <task id="LOCAL-00439" summary="Changed project name and logo, updated err_msg and err_png fields in ClosedTasksDetail model, added ellipsis utility, and modified related UI components.">
       <option name="closed" value="true" />
@@ -936,7 +930,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730708175854</updated>
     </task>
-    <option name="localTasksCounter" value="487" />
+    <task id="LOCAL-00487" summary="fix: 修复编辑计划用例场景取值问题">
+      <option name="closed" value="true" />
+      <created>1730772233094</created>
+      <option name="number" value="00487" />
+      <option name="presentableId" value="LOCAL-00487" />
+      <option name="project" value="LOCAL" />
+      <updated>1730772233094</updated>
+    </task>
+    <option name="localTasksCounter" value="488" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -966,7 +968,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: 响应面板错误信息" />
     <MESSAGE value="fix: 优化提取参数方法，提高程序运行速度" />
     <MESSAGE value="fix: 修复面板错误信息" />
     <MESSAGE value="style: 优化接口详情页面头部样式" />
@@ -991,7 +992,8 @@
     <MESSAGE value="feat: 编辑计划" />
     <MESSAGE value="feat: 删除计划" />
     <MESSAGE value="fix: 修复计划对应任务不存在保存更新错误问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: 修复计划对应任务不存在保存更新错误问题" />
+    <MESSAGE value="fix: 修复编辑计划用例场景取值问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: 修复编辑计划用例场景取值问题" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -162,6 +162,15 @@ export function deletePlan(data: any) {
 }
 
 
+export function updatePlanState(data: any) {
+    return request({
+        url: `/api/plan/UpdatePlanState/${data.id}/${data.state}`,
+        method: 'post',
+        data
+    })
+}
+
+
 export function savePlanOrUpdate(data: any) {
     return request({
         url: `/api/plan/SaveOrUpdate/${data.id}`,

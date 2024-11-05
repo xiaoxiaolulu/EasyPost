@@ -59,10 +59,15 @@
             <span>{{ parseTime(scope.row.update_time) }}</span>
           </template>
         </el-table-column>
-        <el-table-column label="操作" width="150px" align="center">
+        <el-table-column label="操作" width="180px" align="center">
           <template #default="scope">
             <el-button @click="edit(scope.row)" type="primary" link>编辑</el-button>
             <el-button @click="deleteData(scope.row)" type="primary" link>删除</el-button>
+            <el-button @click="updateState(scope.row)" type="primary" link>
+                <div v-show="tag.id === scope.row.state" v-for="tag in planState" :key="tag.id">
+                  <span>{{ tag.name }}</span>
+                </div>
+            </el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -81,12 +86,12 @@
 
 <script lang="ts" setup>
 import {Plus, Search} from "@element-plus/icons-vue";
-import {ref, reactive} from 'vue'
+import { ref, reactive, onMounted, nextTick } from "vue";
 import {useRouter} from "vue-router";
 import {parseTime} from "@/utils";
 import {ElMessage, ElMessageBox, ElPagination} from "element-plus";
 import {showErrMessage} from "@/utils/element";
-import {planList, deletePlan} from "@/api/http";
+import {planList, deletePlan, updatePlanState} from "@/api/http";
 
 const queryParams = reactive({
   name: '',
@@ -177,6 +182,19 @@ const deleteData = (row: any) => {
   })
 }
 
+const updateState = (row: any) => {
+
+  ElMessageBox.confirm(`确认修改计划状态 - ${row.name}?`).then(_ => {
+    let state = (row.state == 1) ? 0 : 1
+    updatePlanState({id: row.id, state: state}).then((response) => {
+      const {data, code, msg} = response.data
+      showErrMessage(code.toString(), msg)
+      queryList();
+    })
+  }).catch(_ => {
+    ElMessage.error("计划状态修改失败请重试");
+  })
+}
 </script>
 
 <style lang="scss" scoped>
