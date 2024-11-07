@@ -1,8 +1,11 @@
 import requests
+
+from api.events.registry import registry
 from common import exceptions
 from utils.logger import logger
 
 
+@registry.register("FEISHU")
 class FeiShu:
     """
     This class provides a wrapper for sending messages to FeiShu.
@@ -21,7 +24,7 @@ class FeiShu:
         self.base_url = base_url
         self.content = content
 
-    def send(self) -> None:
+    def send_info(self) -> None:
         """
         Sends a FeiShu message using the provided content.
 

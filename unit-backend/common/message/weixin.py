@@ -1,6 +1,8 @@
 import requests
+from api.events.registry import registry
 
 
+@registry.register("WEIXIN")
 class WeiXin:
     """
     This class provides a wrapper for interacting with the WeChat Enterprise API.

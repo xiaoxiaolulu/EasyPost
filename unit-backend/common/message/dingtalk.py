@@ -4,8 +4,10 @@ import hmac
 import time
 import urllib.parse
 import requests
+from api.events.registry import registry
 
 
+@registry.register("DINGDING")
 class DingTalk:
     """
     This class provides a wrapper for sending notifications to DingTalk groups.

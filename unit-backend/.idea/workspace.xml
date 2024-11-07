@@ -7,11 +7,13 @@
     <list default="true" id="655d96d8-eed0-4ef3-a2e5-e0dd82ec341a" name="Changes" comment="fix: 修复更新计划状态按钮显示问题">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/management/commands/initmenus.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/management/commands/initmenus.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/models/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/setting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/EasyPost_collect.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost_collect.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../unit-executor/logs/Unit-Executor.log" beforeDir="false" afterPath="$PROJECT_DIR$/../unit-executor/logs/Unit-Executor.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/src/views/system/notice/components/databaseDialog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../web/src/views/system/notice/components/databaseDialog.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/emus/NoticeEnum.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/emus/NoticeEnum.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/message/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/message/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/message/dingtalk.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/message/dingtalk.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/message/feishu.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/message/feishu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/message/webhook.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/message/webhook.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/message/weixin.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/message/weixin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/EasyPost.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/EasyPost.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +183,7 @@
       <recent name="C:\Users\86135\Desktop\EasyPost\backend\api\templates\media\avatar" />
     </key>
   </component>
-  <component name="RunManager" selected="Django Server.backend">
+  <component name="RunManager" selected="Python.__init__ (2)">
     <configuration name="__init__ (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <option name="ENV_FILES" value="" />
@@ -197,6 +199,29 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/emus/__init__.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="__init__ (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common/message" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/message/__init__.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -243,29 +268,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/services/executor.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="grpconsul" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="backend" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/grpconsul.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -324,20 +326,20 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Django Server.backend" />
+      <item itemvalue="Python.__init__ (2)" />
       <item itemvalue="Python.__init__ (1)" />
       <item itemvalue="Python.__init__" />
       <item itemvalue="Python.executor" />
-      <item itemvalue="Python.grpconsul" />
       <item itemvalue="Python.initmenus" />
-      <item itemvalue="Django Server.backend" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.__init__ (2)" />
         <item itemvalue="Python.__init__ (1)" />
         <item itemvalue="Python.initmenus" />
         <item itemvalue="Python.__init__" />
         <item itemvalue="Python.executor" />
-        <item itemvalue="Python.grpconsul" />
       </list>
     </recent_temporary>
   </component>
@@ -545,6 +547,7 @@
       <workItem from="1730358706607" duration="217000" />
       <workItem from="1730359474223" duration="42806000" />
       <workItem from="1730786175642" duration="1247000" />
+      <workItem from="1730789421413" duration="5030000" />
     </task>
     <task id="LOCAL-00441" summary="style: 修改视图目录">
       <option name="closed" value="true" />
@@ -1011,6 +1014,7 @@
     <SUITE FILE_PATH="coverage/backend$cl.coverage" NAME="cl Coverage Results" MODIFIED="1692972573609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/protobuf_test" />
     <SUITE FILE_PATH="coverage/backend$api_migrate.coverage" NAME="api_migrate Coverage Results" MODIFIED="1712728494452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/backend$test.coverage" NAME="test Coverage Results" MODIFIED="1718161412200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/unit_backend$__init____2_.coverage" NAME="__init__ (2) Coverage Results" MODIFIED="1730947218111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common/message" />
     <SUITE FILE_PATH="coverage/backend$__init____1_.coverage" NAME="__init__ (1) Coverage Results" MODIFIED="1718792021417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/backend$Test__api_tests_test_user_list_TestUserListViewSet_test_hello.coverage" NAME="Test: api.tests.test_user_list.TestUserListViewSet.test_hello Coverage Results" MODIFIED="1712039113885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/backend$scheduler.coverage" NAME="scheduler Coverage Results" MODIFIED="1716200276603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/scheduler" />

@@ -1,7 +1,9 @@
 import requests
+from api.events.registry import registry
 from utils.logger import logger
 
 
+@registry.register("WEBHOOK")
 class Webhook:
     """
     This class provides a wrapper for sending data to a webhook URL.
@@ -20,7 +22,7 @@ class Webhook:
         self.base_url = base_url
         self.data = data
 
-    def send(self) -> None:
+    def send_info(self) -> None:
         """
         Sends data to the specified webhook URL using a POST process.
 

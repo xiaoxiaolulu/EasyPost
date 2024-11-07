@@ -1,9 +1,14 @@
-# 通知类型
-from enum import IntEnum
 
 
-class NoticeType(IntEnum):
-    EMAIL = 0
-    DINGDING = 1
-    WECHAT = 2
-    FEISHU = 3
+class NoticeType:
+
+    WEBHOOK = "WEBHOOK"
+    DINGDING = "DINGDING"
+    WEIXIN = "WEIXIN"
+    FEISHU = "FEISHU"
+
+
+class NoticeEvents:
+
+    COMPLETED = "TEST_CASE_COMPLETED"
+    COMPLETED_WITH_FAILURE = "TEST_CASE_COMPLETED_WITH_FAILURE"
